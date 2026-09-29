@@ -119,7 +119,8 @@ def validate_file(path: Path) -> list[str]:
 
 
 def daily_files() -> list[Path]:
-    return sorted(DAILY_ROOT.glob("[0-9][0-9][0-9][0-9]/*/*.md"))
+    return sorted(path for path in DAILY_ROOT.glob("[0-9][0-9][0-9][0-9]/*/*.md")
+                  if re.fullmatch(r"\d{4}-\d{2}-\d{2}\.md", path.name))
 
 
 def validate_global_duplicates(paths: list[Path]) -> list[str]:
