@@ -1,0 +1,16 @@
+schema_version: 1
+
+sources:
+  - id: arxiv-gaussian-splatting
+    type: arxiv-api
+    enabled: true
+    query: 'all:"gaussian splatting"'
+    max_results: 100
+    lookback_days: 7
+    notes: >
+      One serialized request per Daily run. Keep usage within arXiv API terms.
+
+  - id: manual-inbox
+    type: future
+    enabled: false
+    notes: Reserved for manually curated project/demo/tool links.
