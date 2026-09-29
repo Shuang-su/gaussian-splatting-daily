@@ -19,8 +19,8 @@ ATOM = {"a": "http://www.w3.org/2005/Atom"}
 ARXIV_API = "https://export.arxiv.org/api/query"
 QUERY = 'all:"gaussian splatting"'
 USER_AGENT = "gaussian-splatting-daily/0.1 (https://github.com/Shuang-su/gaussian-splatting-daily)"
-ARXIV_MARKER_RE = re.compile(r"<!--\\s*arxiv:([^\\s>]+)\\s*-->")
-VERSION_RE = re.compile(r"v\\d+$")
+ARXIV_MARKER_RE = re.compile(r"<!--\s*arxiv:([^\s>]+)\s*-->")
+VERSION_RE = re.compile(r"v\d+$")
 
 
 def collapse(text: str | None) -> str:
@@ -140,7 +140,7 @@ def extract_output_text(response: dict) -> str:
         for content in item.get("content", []):
             if content.get("type") == "output_text" and content.get("text"):
                 parts.append(content["text"])
-    return "\\n".join(parts).strip()
+    return "\n".join(parts).strip()
 
 
 def ai_editorial(items: list[dict]) -> tuple[str, dict[str, str], str] | None:
@@ -166,7 +166,7 @@ def ai_editorial(items: list[dict]) -> tuple[str, dict[str, str], str] | None:
         "代码仓库、项目主页、会议录用情况或作者动机。"
         "返回 JSON，格式为 {overview: string, summaries: {arxiv_id: string}}。"
         "overview 不超过 180 个中文字符；每条 summary 不超过 220 个中文字符。"
-        "summaries 只能使用给出的 arXiv ID 作为 key；区分作者声明与已验证事实；不要输出 Markdown。\\n\\n"
+        "summaries 只能使用给出的 arXiv ID 作为 key；区分作者声明与已验证事实；不要输出 Markdown。\n\n"
         + json.dumps(compact_items, ensure_ascii=False)
     )
     body = json.dumps(
@@ -289,7 +289,7 @@ def render_daily(logical_date: date, items: list[dict]) -> str:
             "",
         ]
     )
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def main() -> None:
