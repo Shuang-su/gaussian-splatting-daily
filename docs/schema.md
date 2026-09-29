@@ -53,3 +53,21 @@ After a Daily is merged, factual corrections should:
 2. update the original Daily through a PR;
 3. add an entry to `docs/corrections.md`;
 4. preserve the original source/provenance context.
+
+
+## Optional image fields
+
+A paper entry may include a remote Markdown image discovered from the paper source:
+
+```markdown
+![Figure caption](https://arxiv.org/html/YYMM.NNNNN/...)
+> 图片来源：arXiv HTML，论文 YYMM.NNNNN 的首个 figure。
+```
+
+Rules:
+
+- image discovery is best-effort and must never block the Daily;
+- prefer the paper/project's own image over third-party screenshots;
+- keep the source attribution adjacent to the image;
+- do not copy large paper assets into Git merely to render a thumbnail;
+- the website must tolerate missing or broken remote images and fall back to a text card/poster.
