@@ -154,5 +154,9 @@ jobs:
             PR_URL="$(
               gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "docs(daily): $DATE"                 --body-file /tmp/daily-pr.md
             )"
+            PR_NUMBER="${PR_URL##*/}"
             gh issue comment "$ISSUE_NUMBER"               --repo "$GITHUB_REPOSITORY"               --body "Daily PR opened: $PR_URL"
           fi
+
+          echo "Daily content was validated in this workflow; squash-merging PR #$PR_NUMBER."
+          gh pr merge "$PR_NUMBER"             --repo "$GITHUB_REPOSITORY"             --squash             --delete-branch
