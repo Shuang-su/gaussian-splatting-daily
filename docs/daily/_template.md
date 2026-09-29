@@ -26,6 +26,9 @@ ai_model: ""
 - **Published:** YYYY-MM-DD
 - **Categories:** cs.CV
 
+![Figure caption](https://arxiv.org/html/YYMM.NNNNN/...)
+> 图片来源：arXiv HTML，论文 YYMM.NNNNN 的首个 figure。
+
 **编辑摘要：** ...
 
 ## 自动化说明
