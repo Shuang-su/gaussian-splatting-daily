@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DAILY_ROOT = ROOT / "docs" / "daily"
 ARXIV_RE = re.compile(r"<!--\s*arxiv:([^\s>]+)\s*-->")
+VERSION_RE = re.compile(r"v\d+$")
 FIELD_RE = re.compile(r"^([a-z_]+):\s*(.*)$")
 REQUIRED = {
     "schema_version",
@@ -73,7 +74,13 @@ def validate_file(path: Path) -> list[str]:
         errors.append(f"{path}: schema_version must be 1")
 
     markers = ARXIV_RE.findall(text)
-    if len(markers) != len(set(markers)):
+    versioned = [marker for marker in markers if VERSION_RE.search(marker)]
+    if versioned:
+        errors.append(
+            f"{path}: arXiv markers must omit version suffixes: {', '.join(versioned)}"
+        )
+    canonical_markers = [VERSION_RE.sub("", marker) for marker in markers]
+    if len(canonical_markers) != len(set(canonical_markers)):
         errors.append(f"{path}: duplicate arXiv markers inside file")
 
     try:
@@ -101,7 +108,8 @@ def validate_global_duplicates(paths: list[Path]) -> list[str]:
     owners: dict[str, Path] = {}
     errors: list[str] = []
     for path in paths:
-        for arxiv_id in ARXIV_RE.findall(path.read_text("utf-8")):
+        for raw_arxiv_id in ARXIV_RE.findall(path.read_text("utf-8")):
+            arxiv_id = VERSION_RE.sub("", raw_arxiv_id)
             previous = owners.get(arxiv_id)
             if previous and previous != path:
                 errors.append(
