@@ -295,3 +295,25 @@ V1 can use human merge. Mature automation can switch to a dedicated GitHub App a
 - Next.js static export: https://nextjs.org/docs/app/guides/static-exports
 - PlayCanvas Gaussian Splatting: https://developer.playcanvas.com/user-manual/gaussian-splatting/
 - OpenAI Responses API: https://developers.openai.com/api/docs/guides/text
+
+
+## 12. Image discovery
+
+Daily entries may render source-owned research figures.
+
+V1 image policy:
+
+1. fetch the paper's arXiv HTML page only for selected Daily items;
+2. discover the first usable image inside the first figure;
+3. keep the image remote rather than copying paper assets into Git;
+4. store/render the figure caption as alt text when available;
+5. place source attribution directly below the image;
+6. treat image discovery as best-effort: failure must not fail the Daily.
+
+The site must use a text/poster fallback when a remote figure is unavailable. Future adapters can prefer an official project-page OpenGraph/hero image before falling back to the arXiv figure.
+
+## 13. Automatic merge policy
+
+A Daily PR is still created for provenance, discussion, and rollback, but the scheduled workflow may squash-merge it automatically after the publication-critical validator succeeds inside the same workflow.
+
+This deliberately keeps the Issue/PR audit trail while removing a daily manual merge requirement. Workflow/schema/security changes remain normal human-reviewed repository changes and are not produced by the Daily generator.
