@@ -6,8 +6,9 @@ A Git-backed daily feed for **3D Gaussian Splatting (3DGS)**, **4D Gaussian Spla
 
 - Archives each logical day as `docs/daily/YYYY/MM/YYYY-MM-DD.md`.
 - Uses GitHub Actions to ingest recent Gaussian Splatting research every day.
+- Discovers the first usable figure from arXiv HTML and embeds it as an attributed remote image when available.
 - Keeps source metadata deterministic and auditable.
-- Opens a tracking Issue and a Pull Request for each Daily run.
+- Opens a tracking Issue and a Pull Request for each Daily run, then automatically squash-merges it after in-workflow validation.
 - Never requires the website to be the source of truth: the site is rebuilt from `docs/`.
 - Optionally enriches the Daily with OpenAI summaries when `OPENAI_API_KEY` is configured.
 
