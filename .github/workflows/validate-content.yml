@@ -1,0 +1,33 @@
+name: Validate Daily Content
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - "data/**"
+      - "state/**"
+      - "scripts/**"
+      - ".github/workflows/**"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Validate all Daily files
+        run: python scripts/validate_daily.py --all
+
+      - name: Verify generated index is current
+        run: |
+          python scripts/build_index.py
+          git diff --exit-code -- data/daily-index.json
