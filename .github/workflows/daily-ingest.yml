@@ -64,12 +64,14 @@ jobs:
         env:
           BRANCH: ${{ steps.meta.outputs.branch }}
         run: |
+          git config user.name "gaussian-splatting-daily[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
             git fetch origin "$BRANCH"
             git switch -C "$BRANCH" "origin/$BRANCH"
-            if ! git rebase origin/main; then
-              git rebase --abort
+            if ! git merge --no-edit origin/main; then
+              git merge --abort
               echo "Automation branch conflicts with main." >&2
               exit 42
             fi
@@ -104,12 +106,17 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "docs(daily): $DATE"
-            git push --force-with-lease --set-upstream origin "$BRANCH"
             echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+          if [[ "$(git rev-list --count origin/main..HEAD)" -gt 0 ]]; then
+            git push --set-upstream origin "$BRANCH"
+            echo "publishable=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publishable=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Create, record, and merge Daily PR
-        if: steps.commit.outputs.changed == 'true'
+        if: steps.commit.outputs.publishable == 'true'
         shell: bash
         env:
           DATE: ${{ steps.meta.outputs.date }}
@@ -118,7 +125,7 @@ jobs:
           MARKER="<!-- daily-key:$DATE -->"
 
           ISSUE_NUMBER="$(
-            gh issue list               --repo "$GITHUB_REPOSITORY"               --state all               --limit 100               --json number,body               --jq ".[] | select(.body != null and (.body | contains(\"$MARKER\"))) | .number"               | head -n 1
+            gh issue list               --repo "$GITHUB_REPOSITORY"               --state all               --limit 1000               --json number,body               --jq ".[] | select(.body != null and (.body | contains(\"$MARKER\"))) | .number"               | head -n 1
           )"
 
           if [[ -z "$ISSUE_NUMBER" ]]; then

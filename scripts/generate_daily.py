@@ -33,7 +33,7 @@ def bare_arxiv_id(value: str) -> str:
     return VERSION_RE.sub("", value.rsplit("/", 1)[-1])
 
 
-def http_get(url: str, attempts: int = 3) -> bytes:
+def http_get(url: str, attempts: int = 3, timeout: int = 45) -> bytes:
     delay = 4
     last_error: Exception | None = None
     for attempt in range(attempts):
@@ -45,7 +45,7 @@ def http_get(url: str, attempts: int = 3) -> bytes:
             },
         )
         try:
-            with urllib.request.urlopen(req, timeout=45) as response:
+            with urllib.request.urlopen(req, timeout=timeout) as response:
                 return response.read()
         except urllib.error.HTTPError as exc:
             last_error = exc
@@ -142,7 +142,7 @@ class FirstFigureParser(HTMLParser):
 def discover_arxiv_image(arxiv_id: str) -> tuple[str, str]:
     html_url = f"https://arxiv.org/html/{arxiv_id}"
     try:
-        raw = http_get(html_url).decode("utf-8", errors="replace")
+        raw = http_get(html_url, attempts=1, timeout=5).decode("utf-8", errors="replace")
         parser = FirstFigureParser()
         parser.feed(raw)
         if not parser.image_url:
@@ -158,7 +158,11 @@ def discover_arxiv_image(arxiv_id: str) -> tuple[str, str]:
 
 
 def enrich_images(items: list[dict]) -> None:
+    deadline = time.monotonic() + 90
     for index, item in enumerate(items):
+        if time.monotonic() + 6 > deadline:
+            print("warning: image discovery budget reached; continuing without remaining images")
+            break
         if index:
             time.sleep(1)
         image_url, image_alt = discover_arxiv_image(item["arxiv_id"])
@@ -383,16 +387,10 @@ def main() -> None:
     output = ROOT / "docs" / "daily" / f"{logical_date.year:04d}" / f"{logical_date.month:02d}" / f"{logical_date.isoformat()}.md"
     output.parent.mkdir(parents=True, exist_ok=True)
 
-    if output.exists() and not args.replace_existing:
-        existing_text = output.read_text("utf-8")
-        existing_markers = ARXIV_MARKER_RE.findall(existing_text)
-        if existing_markers:
-            print(
-                f"preserving existing {output.relative_to(ROOT)} "
-                f"with {len(existing_markers)} archived item(s); "
-                "pass --replace-existing to replace it explicitly"
-            )
-            return
+    if output.exists() and output.stat().st_size and not args.replace_existing:
+        print(f"preserving existing {output.relative_to(ROOT)}; "
+              "pass --replace-existing to replace it explicitly")
+        return
 
     candidates = fetch_arxiv()
     items = select_items(
