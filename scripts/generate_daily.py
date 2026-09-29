@@ -10,6 +10,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from html import unescape
+from html.parser import HTMLParser
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -100,6 +102,68 @@ def fetch_arxiv(max_results: int = 100) -> list[dict]:
             }
         )
     return items
+
+
+
+class FirstFigureParser(HTMLParser):
+    def __init__(self) -> None:
+        super().__init__()
+        self.in_figure = False
+        self.in_caption = False
+        self.image_url = ""
+        self.image_alt = ""
+        self.caption_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = {key: value or "" for key, value in attrs}
+        if tag == "figure" and not self.image_url:
+            self.in_figure = True
+        elif self.in_figure and tag == "img" and not self.image_url:
+            self.image_url = values.get("src") or values.get("data-src") or ""
+            self.image_alt = values.get("alt", "")
+        elif self.in_figure and tag == "figcaption":
+            self.in_caption = True
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "figcaption":
+            self.in_caption = False
+        elif tag == "figure":
+            self.in_figure = False
+
+    def handle_data(self, data: str) -> None:
+        if self.in_caption and data.strip():
+            self.caption_parts.append(data.strip())
+
+    @property
+    def caption(self) -> str:
+        return collapse(unescape(" ".join(self.caption_parts)))
+
+
+def discover_arxiv_image(arxiv_id: str) -> tuple[str, str]:
+    html_url = f"https://arxiv.org/html/{arxiv_id}"
+    try:
+        raw = http_get(html_url).decode("utf-8", errors="replace")
+        parser = FirstFigureParser()
+        parser.feed(raw)
+        if not parser.image_url:
+            return "", ""
+        image_url = urllib.parse.urljoin(html_url, unescape(parser.image_url))
+        if not image_url.startswith(("https://", "http://")):
+            return "", ""
+        alt = parser.caption or collapse(unescape(parser.image_alt)) or f"{arxiv_id} first figure"
+        return image_url, alt
+    except Exception as exc:
+        print(f"warning: image discovery failed for {arxiv_id}: {exc}")
+        return "", ""
+
+
+def enrich_images(items: list[dict]) -> None:
+    for index, item in enumerate(items):
+        if index:
+            time.sleep(1)
+        image_url, image_alt = discover_arxiv_image(item["arxiv_id"])
+        item["image_url"] = image_url
+        item["image_alt"] = image_alt
 
 
 def seen_arxiv_ids(exclude: Path) -> set[str]:
@@ -272,6 +336,16 @@ def render_daily(logical_date: date, items: list[dict]) -> str:
                 "",
             ]
         )
+        if item.get("image_url"):
+            alt = item.get("image_alt") or f"{arxiv_id} first figure"
+            lines.extend(
+                [
+                    f"![{alt}]({item['image_url']})",
+                    "",
+                    f"> 图片来源：arXiv HTML，论文 {arxiv_id} 的首个 figure。",
+                    "",
+                ]
+            )
         summary = summaries.get(arxiv_id)
         if summary:
             lines.extend([f"**编辑摘要：** {summary}", ""])
@@ -312,6 +386,7 @@ def main() -> None:
         lookback_days=args.lookback_days,
         limit=args.limit,
     )
+    enrich_images(items)
     output.write_text(render_daily(logical_date, items), "utf-8")
     print(f"generated {output.relative_to(ROOT)} with {len(items)} new item(s)")
 
