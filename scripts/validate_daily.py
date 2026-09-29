@@ -5,6 +5,7 @@ import argparse
 import json
 import re
 import sys
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,6 +62,16 @@ def validate_file(path: Path) -> list[str]:
         return errors
 
     logical_date = meta["date"]
+    try:
+        date.fromisoformat(logical_date)
+    except ValueError:
+        errors.append(f"{path}: date must be a valid ISO calendar date")
+    try:
+        generated = datetime.fromisoformat(meta["generated_at"])
+        if generated.tzinfo is None:
+            raise ValueError("missing offset")
+    except ValueError:
+        errors.append(f"{path}: generated_at must be an ISO timestamp with timezone")
     expected_suffix = f"/{logical_date[:4]}/{logical_date[5:7]}/{logical_date}.md"
     normalized = "/" + str(path.relative_to(DAILY_ROOT)).replace("\\", "/")
     if not normalized.endswith(expected_suffix):
@@ -72,6 +83,10 @@ def validate_file(path: Path) -> list[str]:
         errors.append(f"{path}: timezone must be Asia/Tokyo")
     if meta["schema_version"] != "1":
         errors.append(f"{path}: schema_version must be 1")
+    if meta["status"] not in {"draft", "no-data", "published", "corrected"}:
+        errors.append(f"{path}: invalid status {meta['status']}")
+    if meta["ai_enrichment"] not in {"true", "false"}:
+        errors.append(f"{path}: ai_enrichment must be true or false")
 
     markers = ARXIV_RE.findall(text)
     versioned = [marker for marker in markers if VERSION_RE.search(marker)]
@@ -93,9 +108,12 @@ def validate_file(path: Path) -> list[str]:
                 f"{path}: source_count={source_count}, but found {len(markers)} arXiv marker(s)"
             )
 
-    for heading in ("# 今日概览", "## 论文与研究", "## 自动化说明"):
-        if heading not in text:
-            errors.append(f"{path}: missing section {heading}")
+    if "# 今日概览" in text:
+        for heading in ("## 论文与研究", "## 自动化说明"):
+            if heading not in text:
+                errors.append(f"{path}: missing section {heading}")
+    elif not re.search(r"^# 3DGS / 4DGS / Gaussian Splatting 深度情报日报", text, re.M):
+        errors.append(f"{path}: missing a recognized Daily report structure")
 
     return errors
 

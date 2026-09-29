@@ -19,7 +19,7 @@ The path date and the frontmatter `date` must match.
 | `generated_at` | ISO-8601 string | Generation timestamp |
 | `status` | enum-like string | `draft`, `published`, `no-data`, or `corrected` |
 | `title` | string | Human-readable title |
-| `source_count` | integer | Number of newly archived source items |
+| `source_count` | integer | Number of canonical arXiv markers in this file; other primary links are not counted |
 | `ai_enrichment` | boolean | Whether AI editorial enrichment succeeded |
 | `ai_model` | string | Model ID, or empty when AI was not used |
 
@@ -43,7 +43,7 @@ The version suffix is stripped before the marker is written so later revisions d
 ## 自动化说明
 ```
 
-A `no-data` Daily is valid and intentionally distinguishes “the automation ran and found nothing new” from “the automation failed”.
+A deep research Daily may instead start with `# 3DGS / 4DGS / Gaussian Splatting 深度情报日报` and contain its topic sections. A `no-data` Daily is valid and intentionally distinguishes “the automation ran and found nothing new” from “the automation failed”.
 
 ## Corrections
 
