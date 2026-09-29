@@ -371,12 +371,28 @@ def main() -> None:
     parser.add_argument("--date", help="Logical date YYYY-MM-DD")
     parser.add_argument("--lookback-days", type=int, default=7)
     parser.add_argument("--limit", type=int, default=12)
+    parser.add_argument(
+        "--replace-existing",
+        action="store_true",
+        help="Allow replacing an existing Daily that already contains archived items",
+    )
     args = parser.parse_args()
 
     tz = ZoneInfo("Asia/Tokyo")
     logical_date = date.fromisoformat(args.date) if args.date else datetime.now(tz).date()
     output = ROOT / "docs" / "daily" / f"{logical_date.year:04d}" / f"{logical_date.month:02d}" / f"{logical_date.isoformat()}.md"
     output.parent.mkdir(parents=True, exist_ok=True)
+
+    if output.exists() and not args.replace_existing:
+        existing_text = output.read_text("utf-8")
+        existing_markers = ARXIV_MARKER_RE.findall(existing_text)
+        if existing_markers:
+            print(
+                f"preserving existing {output.relative_to(ROOT)} "
+                f"with {len(existing_markers)} archived item(s); "
+                "pass --replace-existing to replace it explicitly"
+            )
+            return
 
     candidates = fetch_arxiv()
     items = select_items(
