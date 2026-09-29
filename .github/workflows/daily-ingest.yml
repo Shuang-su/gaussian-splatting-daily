@@ -123,52 +123,33 @@ jobs:
           BRANCH: ${{ steps.meta.outputs.branch }}
         run: |
           MARKER="<!-- daily-key:$DATE -->"
+          python scripts/publish_summary.py --date "$DATE" --output-dir /tmp/daily-summary
 
           ISSUE_NUMBER="$(
             gh issue list               --repo "$GITHUB_REPOSITORY"               --state all               --limit 1000               --json number,body               --jq ".[] | select(.body != null and (.body | contains(\"$MARKER\"))) | .number"               | head -n 1
           )"
 
           if [[ -z "$ISSUE_NUMBER" ]]; then
-            cat > /tmp/daily-issue.md <<EOF
-          $MARKER
-
-          Automated ingestion tracking for **$DATE**.
-
-          - Branch: $BRANCH
-          - Daily: docs/daily/${DATE:0:4}/${DATE:5:2}/$DATE.md
-          - Workflow run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
-
-          This Issue is closed by the corresponding Daily PR.
-          EOF
             ISSUE_URL="$(
-              gh issue create                 --repo "$GITHUB_REPOSITORY"                 --title "[Daily] $DATE ingestion"                 --body-file /tmp/daily-issue.md
+              gh issue create                 --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/issue-title.txt)"                 --body-file /tmp/daily-summary/issue-body.md
             )"
             ISSUE_NUMBER="${ISSUE_URL##*/}"
+          else
+            gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/issue-title.txt)"                 --body-file /tmp/daily-summary/issue-body.md
           fi
+          python scripts/publish_summary.py --date "$DATE" --output-dir /tmp/daily-summary --issue-number "$ISSUE_NUMBER"
 
           PR_NUMBER="$(
             gh pr list               --repo "$GITHUB_REPOSITORY"               --state open               --head "$BRANCH"               --base main               --limit 10               --json number               --jq '.[0].number // empty'
           )"
 
           if [[ -z "$PR_NUMBER" ]]; then
-            cat > /tmp/daily-pr.md <<EOF
-          $MARKER
-
-          Automated Gaussian Splatting Daily update for **$DATE**.
-
-          Closes #$ISSUE_NUMBER
-
-          ### Automated checks
-          - source normalization and cross-day arXiv deduplication
-          - Daily schema/path validation
-          - generated index rebuild
-          - validation completed before PR creation
-          EOF
             PR_URL="$(
-              gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "docs(daily): $DATE"                 --body-file /tmp/daily-pr.md
+              gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "$(cat /tmp/daily-summary/pr-title.txt)"                 --body-file /tmp/daily-summary/pr-body.md
             )"
             PR_NUMBER="${PR_URL##*/}"
-            gh issue comment "$ISSUE_NUMBER"               --repo "$GITHUB_REPOSITORY"               --body "Daily PR opened: $PR_URL"
+          else
+            gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/pr-title.txt)"                 --body-file /tmp/daily-summary/pr-body.md
           fi
 
           echo "Daily content was validated in this workflow; squash-merging PR #$PR_NUMBER."
