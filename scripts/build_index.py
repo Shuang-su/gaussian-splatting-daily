@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DAILY_ROOT = ROOT / "docs" / "daily"
 OUTPUT = ROOT / "data" / "daily-index.json"
-FIELD_RE = re.compile(r"^([a-z_]+):\\s*(.*)$")
+FIELD_RE = re.compile(r"^([a-z_]+):\s*(.*)$")
 
 
 def unquote(value: str) -> str:
@@ -23,9 +23,9 @@ def unquote(value: str) -> str:
 
 def frontmatter(path: Path) -> dict[str, str]:
     text = path.read_text("utf-8")
-    if not text.startswith("---\\n"):
+    if not text.startswith("---\n"):
         return {}
-    parts = text.split("---\\n", 2)
+    parts = text.split("---\n", 2)
     if len(parts) < 3:
         return {}
     result: dict[str, str] = {}
@@ -52,7 +52,7 @@ def main() -> None:
                 "title": meta.get("title", f"Gaussian Splatting Daily — {meta['date']}"),
                 "status": meta.get("status", "unknown"),
                 "source_count": source_count,
-                "path": str(path.relative_to(ROOT)).replace("\\\\", "/"),
+                "path": str(path.relative_to(ROOT)).replace("\\", "/"),
             }
         )
 
@@ -71,7 +71,7 @@ def main() -> None:
             ensure_ascii=False,
             indent=2,
         )
-        + "\\n",
+        + "\n",
         "utf-8",
     )
     print(f"indexed {len(items)} Daily file(s)")
