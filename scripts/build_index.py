@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -63,8 +62,11 @@ def main() -> None:
         json.dumps(
             {
                 "schema_version": 1,
-                "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                "items": items,
+                "generated_at": max((item["generated_at"] for item in items), default=None),
+                "items": [
+                    {key: value for key, value in item.items() if key != "generated_at"}
+                    for item in items
+                ],
             },
             ensure_ascii=False,
             indent=2,
