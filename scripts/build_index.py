@@ -52,6 +52,7 @@ def main() -> None:
                 "title": meta.get("title", f"Gaussian Splatting Daily — {meta['date']}"),
                 "status": meta.get("status", "unknown"),
                 "source_count": source_count,
+                "generated_at": meta.get("generated_at", ""),
                 "path": str(path.relative_to(ROOT)).replace("\\", "/"),
             }
         )
