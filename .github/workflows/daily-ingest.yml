@@ -45,8 +45,10 @@ jobs:
       - name: Resolve logical date
         id: meta
         shell: bash
+        env:
+          DISPATCH_DATE: ${{ inputs.date }}
         run: |
-          DATE="${{ inputs.date }}"
+          DATE="$DISPATCH_DATE"
           if [[ -z "$DATE" ]]; then
             DATE="$(TZ=Asia/Tokyo date +%F)"
           fi
