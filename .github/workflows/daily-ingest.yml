@@ -1,0 +1,168 @@
+name: Daily Gaussian Splatting Ingest
+
+on:
+  schedule:
+    - cron: "17 8 * * *"
+      timezone: "Asia/Tokyo"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Logical date YYYY-MM-DD; blank = today in Asia/Tokyo"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: gaussian-splatting-daily-ingest
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ secrets.GSD_BOT_TOKEN || secrets.GITHUB_TOKEN }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+      TZ: Asia/Tokyo
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GSD_BOT_TOKEN || github.token }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Resolve logical date
+        id: meta
+        shell: bash
+        env:
+          DISPATCH_DATE: ${{ inputs.date }}
+        run: |
+          DATE="$DISPATCH_DATE"
+          if [[ -z "$DATE" ]]; then
+            DATE="$(TZ=Asia/Tokyo date +%F)"
+          fi
+          if [[ ! "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid date: $DATE" >&2
+            exit 2
+          fi
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          echo "branch=automation/daily/$DATE" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare deterministic automation branch
+        shell: bash
+        env:
+          BRANCH: ${{ steps.meta.outputs.branch }}
+        run: |
+          git fetch origin main
+          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
+            git fetch origin "$BRANCH"
+            git switch -C "$BRANCH" "origin/$BRANCH"
+            if ! git rebase origin/main; then
+              git rebase --abort
+              echo "Automation branch conflicts with main." >&2
+              exit 42
+            fi
+          else
+            git switch -c "$BRANCH" origin/main
+          fi
+
+      - name: Generate Daily
+        env:
+          DATE: ${{ steps.meta.outputs.date }}
+        run: python scripts/generate_daily.py --date "$DATE"
+
+      - name: Build site/search index
+        run: python scripts/build_index.py
+
+      - name: Validate before publishing
+        env:
+          DATE: ${{ steps.meta.outputs.date }}
+        run: python scripts/validate_daily.py --date "$DATE"
+
+      - name: Commit and push Daily branch
+        id: commit
+        env:
+          DATE: ${{ steps.meta.outputs.date }}
+          BRANCH: ${{ steps.meta.outputs.branch }}
+        run: |
+          git config user.name "gaussian-splatting-daily[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data state
+          if git diff --cached --quiet; then
+            echo "No content changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "docs(daily): $DATE"
+            git push --force-with-lease --set-upstream origin "$BRANCH"
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create, record, and merge Daily PR
+        if: steps.commit.outputs.changed == 'true'
+        shell: bash
+        env:
+          DATE: ${{ steps.meta.outputs.date }}
+          BRANCH: ${{ steps.meta.outputs.branch }}
+        run: |
+          MARKER="<!-- daily-key:$DATE -->"
+
+          ISSUE_NUMBER="$(
+            gh issue list               --repo "$GITHUB_REPOSITORY"               --state all               --limit 100               --json number,body               --jq ".[] | select(.body != null and (.body | contains(\"$MARKER\"))) | .number"               | head -n 1
+          )"
+
+          if [[ -z "$ISSUE_NUMBER" ]]; then
+            cat > /tmp/daily-issue.md <<EOF
+          $MARKER
+
+          Automated ingestion tracking for **$DATE**.
+
+          - Branch: $BRANCH
+          - Daily: docs/daily/${DATE:0:4}/${DATE:5:2}/$DATE.md
+          - Workflow run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          This Issue is closed by the corresponding Daily PR.
+          EOF
+            ISSUE_URL="$(
+              gh issue create                 --repo "$GITHUB_REPOSITORY"                 --title "[Daily] $DATE ingestion"                 --body-file /tmp/daily-issue.md
+            )"
+            ISSUE_NUMBER="${ISSUE_URL##*/}"
+          fi
+
+          PR_NUMBER="$(
+            gh pr list               --repo "$GITHUB_REPOSITORY"               --state open               --head "$BRANCH"               --base main               --limit 10               --json number               --jq '.[0].number // empty'
+          )"
+
+          if [[ -z "$PR_NUMBER" ]]; then
+            cat > /tmp/daily-pr.md <<EOF
+          $MARKER
+
+          Automated Gaussian Splatting Daily update for **$DATE**.
+
+          Closes #$ISSUE_NUMBER
+
+          ### Automated checks
+          - source normalization and cross-day arXiv deduplication
+          - Daily schema/path validation
+          - generated index rebuild
+          - validation completed before PR creation
+          EOF
+            PR_URL="$(
+              gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "docs(daily): $DATE"                 --body-file /tmp/daily-pr.md
+            )"
+            PR_NUMBER="${PR_URL##*/}"
+            gh issue comment "$ISSUE_NUMBER"               --repo "$GITHUB_REPOSITORY"               --body "Daily PR opened: $PR_URL"
+          fi
+
+          echo "Daily content was validated in this workflow; squash-merging PR #$PR_NUMBER."
+          gh pr merge "$PR_NUMBER"             --repo "$GITHUB_REPOSITORY"             --squash             --delete-branch
