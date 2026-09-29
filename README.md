@@ -5,6 +5,7 @@ A Git-backed daily feed for **3D Gaussian Splatting (3DGS)**, **4D Gaussian Spla
 ## What this repository does
 
 - Archives each logical day as `docs/daily/YYYY/MM/YYYY-MM-DD.md`.
+- Preserves the 2026-09-18–29 deep research reports by logical day; the earlier 22-paper bootstrap collection is preserved under `docs/research/` rather than attributed to one day.
 - Uses GitHub Actions to ingest recent Gaussian Splatting research every day.
 - Discovers the first usable figure from arXiv HTML and embeds it as an attributed remote image when available.
 - Keeps source metadata deterministic and auditable.
