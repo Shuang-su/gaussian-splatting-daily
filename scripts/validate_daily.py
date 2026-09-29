@@ -9,8 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DAILY_ROOT = ROOT / "docs" / "daily"
-ARXIV_RE = re.compile(r"<!--\\s*arxiv:([^\\s>]+)\\s*-->")
-FIELD_RE = re.compile(r"^([a-z_]+):\\s*(.*)$")
+ARXIV_RE = re.compile(r"<!--\s*arxiv:([^\s>]+)\s*-->")
+FIELD_RE = re.compile(r"^([a-z_]+):\s*(.*)$")
 REQUIRED = {
     "schema_version",
     "id",
@@ -36,9 +36,9 @@ def unquote(value: str) -> str:
 
 
 def parse_frontmatter(text: str) -> dict[str, str]:
-    if not text.startswith("---\\n"):
+    if not text.startswith("---\n"):
         return {}
-    parts = text.split("---\\n", 2)
+    parts = text.split("---\n", 2)
     if len(parts) < 3:
         return {}
     result: dict[str, str] = {}
@@ -61,7 +61,7 @@ def validate_file(path: Path) -> list[str]:
 
     logical_date = meta["date"]
     expected_suffix = f"/{logical_date[:4]}/{logical_date[5:7]}/{logical_date}.md"
-    normalized = "/" + str(path.relative_to(DAILY_ROOT)).replace("\\\\", "/")
+    normalized = "/" + str(path.relative_to(DAILY_ROOT)).replace("\\", "/")
     if not normalized.endswith(expected_suffix):
         errors.append(f"{path}: path does not match frontmatter date {logical_date}")
 
