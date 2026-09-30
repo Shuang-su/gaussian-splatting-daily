@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-30T11:06:35+09:00",
+  "generated_at": "2026-09-30T18:56:38+09:00",
   "items": [
     {
       "date": "2026-09-30",
-      "title": "Gaussian Splatting Daily — 2026-09-30",
-      "status": "draft",
+      "title": "3DGS / 4DGS 深度情报日报 — 2026-09-30",
+      "status": "published",
       "source_count": 12,
       "path": "docs/daily/2026/09/2026-09-30.md"
     },
