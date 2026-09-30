@@ -1,12 +1,16 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { REPO } from "../lib/catalog";
+import BrandMark from "./BrandMark";
+import Icon from "./Icon";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("system");
   const pathname = usePathname();
+  const menuButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => { setOpen(false); }, [pathname]);
   useEffect(() => {
     try {
       const saved = localStorage.getItem("gsd-theme");
@@ -21,14 +25,15 @@ export default function Header() {
     } catch {}
   }
   return (
-    <header className="site-header">
+    <header className="site-header" onKeyDown={(event) => {
+      if (event.key === "Escape" && open) {
+        setOpen(false);
+        menuButton.current?.focus();
+      }
+    }}>
       <div className="header-inner">
         <Link href="/" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
+          <BrandMark />
           高斯日报
         </Link>
         <nav
@@ -47,7 +52,7 @@ export default function Header() {
               key={href}
               href={href}
               aria-current={
-                pathname === href || pathname === href.slice(0, -1)
+                pathname === href || pathname === href.slice(0, -1) || (href !== "/" && pathname.startsWith(href))
                   ? "page"
                   : undefined
               }
@@ -59,7 +64,7 @@ export default function Header() {
         </nav>
         <div className="header-actions">
           <label className="theme-select">
-            <span aria-hidden="true">◐</span>
+            <Icon name="theme" />
             <select
               aria-label="显示主题"
               value={theme}
@@ -70,11 +75,8 @@ export default function Header() {
               <option value="dark">暗色</option>
             </select>
           </label>
-          <Link href="/search/" className="search-link" aria-label="搜索">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="10.5" cy="10.5" r="6.5" />
-              <path d="m16 16 5 5" />
-            </svg>
+          <Link href="/search/" className="search-link" aria-label="搜索" onClick={() => setOpen(false)}>
+            <Icon name="search" />
             <span>搜索</span>
           </Link>
           <a
@@ -83,20 +85,17 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            GitHub ↗
+            GitHub
           </a>
           <button
+            ref={menuButton}
             className="menu-toggle"
             aria-label={open ? "关闭导航" : "打开导航"}
             aria-expanded={open}
             aria-controls="main-nav"
             onClick={() => setOpen(!open)}
           >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d={open ? "M5 5l14 14M5 19 19 5" : "M4 6h16M4 12h16M4 18h16"}
-              />
-            </svg>
+            <Icon name={open ? "close" : "menu"} />
           </button>
         </div>
       </div>

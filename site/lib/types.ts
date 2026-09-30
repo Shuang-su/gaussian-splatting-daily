@@ -6,6 +6,10 @@ export interface SourceImage {
   credit: string;
   position?: string;
   fit?: "cover" | "contain";
+  originalUrl?: string;
+  width?: number;
+  height?: number;
+  variants?: { url: string; width: number }[];
 }
 export interface Entry {
   id: string;
@@ -40,9 +44,14 @@ export interface Daily {
 }
 export interface Article extends Daily {
   html: string;
+  bodyHtml: string;
   text: string;
   toc: { id: string; title: string; depth: number }[];
+  targets: string[];
   images: SourceImage[];
+  introductionHtml: string;
+  archiveHtml: string;
+  paperSummaries: Record<string, string>;
   readingGuide?: {
     id: string;
     title: string;

@@ -13,6 +13,7 @@ import { visit } from "unist-util-visit";
 import type { Root as HastRoot, Element } from "hast";
 import type { Root as MdRoot, RootContent } from "mdast";
 import type { Article, Daily, Entry, PortalIndex, SourceImage } from "./types";
+import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
@@ -30,22 +31,49 @@ export function plain(node: unknown): string {
 function topicsFor(text: string) {
   return TOPICS.filter((t) => t.pattern.test(text)).map((t) => t.slug);
 }
-function imageFromNode(node: RootContent): SourceImage | undefined {
+type ImageManifest = Record<string, SourceImage>;
+const NON_CATALOGUE_FIGURES = new Set([
+  "https://arxiv.org/html/2609.36969v1/figures/ladybug6.jpg",
+  "https://arxiv.org/html/2609.35619v1/figures/pr_curve-new.png",
+]);
+// These legacy section headings are editorial labels; catalogue titles use the
+// paper names already recorded in their canonical report, without changing IDs.
+const LEGACY_PAPER_TITLES: Record<string, string> = {
+  "COSA-GS：今天最值得看的论文+代码压缩路线": "COSA-GS",
+  "φ-RIE：这条对“从实景到可交互世界”很值得关注": "φ-RIE: From Photorealistic Reconstruction to Interactive Environments",
+  "Dynamic Thermal Gaussians：本轮最值得看的 4DGS 项目": "Dynamic Thermal Gaussians: Multimodal 4D Gaussian Splatting",
+  "EliGSiR：很值得加入 Continual GS Mapping 监控": "EliGSiR: Continual RGB-D Mapping with Gaussian Splatting under Bounded Compute",
+  "PlenoCI：变化检测不是比较 Gaussian primitive": "PlenoCI: Plenoptic CharacterIstics for View Dependence Aware Change Classification",
+  "GaussPDE：把 Gaussian 本身当 PDE 离散域": "GaussPDE: Graph-Based Partial Differential Equation-Driven Rendering for 3D Gaussian Splatting",
+  "GS-PI：把 baked-radiance GS 变成 PBR Gaussian Asset": "GS-PI: An Optimization-Decoupled Appearance Decomposition Approach for Generating PBR Gaussian Assets",
+};
+function loadImageManifest(root: string): ImageManifest {
+  const file = path.join(root, "site/public/media/manifest.json");
+  if (!fs.existsSync(file)) return {};
+  return (JSON.parse(fs.readFileSync(file, "utf8")) as { images?: ImageManifest }).images || {};
+}
+function resolveImage(image: SourceImage, media: ImageManifest): SourceImage {
+  const mapped = media[image.originalUrl || image.url];
+  return mapped ? { ...image, ...mapped, alt: mapped.alt || image.alt } : image;
+}
+function imageFromNode(node: RootContent, media: ImageManifest): SourceImage | undefined {
   let image: SourceImage | undefined;
   visit(node, "image", (n) => {
-    if (!image && /^https:\/\//.test(n.url))
-      image = {
+    // Equipment photos and benchmark plots stay in the article, not its listing.
+    if (!image && /^https:\/\//.test(n.url) && !NON_CATALOGUE_FIGURES.has(n.url))
+      image = resolveImage({
         url: n.url,
         alt: n.alt || "论文或项目官方图示",
         source: n.url,
         credit: "原论文作者",
-      };
+      }, media);
   });
   return image;
 }
 export async function parseArticle(
   markdown: string,
   filePath: string,
+  media: ImageManifest = loadImageManifest(ROOT),
 ): Promise<Article> {
   const { data: meta, content } = matter(markdown);
   const tree = unified()
@@ -55,196 +83,252 @@ export async function parseArticle(
   const reportIndex = tree.children.findIndex(
     (n) => n.type === "heading" && /深度情报日报|今日概览/.test(plain(n)),
   );
-  const bodyNodes = tree.children.slice(Math.max(0, reportIndex + 1));
+  const bodyNodes = tree.children.filter((_, i) => i !== reportIndex);
   const text = bodyNodes.map(plain).join("\n");
   const date =
     typeof meta.date === "string"
       ? meta.date
       : meta.date.toISOString().slice(0, 10);
   const portal = meta.portal || {};
+  const paperSummaries: Record<string, string> = portal.paperSummaries || {};
+  for (const [id, summary] of Object.entries(paperSummaries)) {
+    if (!/^\d{4}\.\d{4,5}$/.test(id) || typeof summary !== "string" || !summary.trim())
+      throw Error(`${filePath}: invalid paper summary ${id}`);
+  }
   const toc: Article["toc"] = [];
   const images: SourceImage[] = [];
+  const targets = new Set<string>();
+  const eventAnchors = new Map<string, string>();
+  let introductionHtml = "";
+  let archiveHtml = "";
   let readingGuide: Article["readingGuide"];
   const serialize = (children: HastRoot["children"]) =>
     String(
       unified().use(rehypeStringify).stringify({ type: "root", children }),
     );
   let tableIndex = 0;
+  let bodyHtml = "";
+  const rawHighlights = (portal.highlights || []) as (Entry & { section?: string })[];
   const collect = () => (root: HastRoot) => {
     visit(root, "element", (node: Element) => {
       if (/^h[1-6]$/.test(node.tagName)) {
         const depth = Number(node.tagName[1]);
-        // Historical reports used H1 for their columns. Keep one document H1.
+        // Keep every historical heading ID, including the afternoon increment.
         if (depth === 1) node.tagName = "h2";
-        toc.push({
-          id: String(node.properties.id),
-          title: plain(node),
-          depth: Math.max(2, depth),
-        });
+        const id = String(node.properties.id);
+        targets.add(id);
+        toc.push({ id, title: plain(node), depth: Math.max(2, depth) });
       }
-      if (
-        node.tagName === "a" &&
-        typeof node.properties.href === "string" &&
-        /^https?:/.test(node.properties.href)
-      )
-        node.properties.rel = ["noopener", "noreferrer"];
-      if (
-        node.tagName === "a" &&
-        typeof node.properties.href === "string" &&
-        /\.md(?:#.*)?$/.test(node.properties.href) &&
-        !/^https?:/.test(node.properties.href)
-      ) {
-        node.properties.href = `${REPO}/blob/main/${path.posix.normalize(path.posix.join(path.posix.dirname(filePath), node.properties.href))}`;
+      if (node.tagName === "a" && typeof node.properties.href === "string") {
+        if (/^https?:/.test(node.properties.href)) node.properties.rel = ["noopener", "noreferrer"];
+        if (/\.md(?:#.*)?$/.test(node.properties.href) && !/^https?:/.test(node.properties.href)) {
+          node.properties.href = `${REPO}/blob/main/${path.posix.normalize(path.posix.join(path.posix.dirname(filePath), node.properties.href))}`;
+        }
       }
       if (node.tagName === "img") {
-        node.properties.loading = "lazy";
-        node.properties.decoding = "async";
         const url = String(node.properties.src || "");
         const paper = url.match(/arxiv\.org\/html\/(\d{4}\.\d{4,5})/)?.[1];
-        if (/^https:\/\//.test(url))
-          images.push({
+        if (/^https:\/\//.test(url)) {
+          const image = resolveImage({
             url,
             alt: String(node.properties.alt || "原文图示"),
             source: paper ? `https://arxiv.org/abs/${paper}` : url,
-            credit: paper
-              ? `论文 ${paper} 作者（arXiv HTML）`
-              : "图片归属与说明见正文图注",
-          });
+            credit: paper ? `论文 ${paper} 作者` : "原文图片",
+          }, media);
+          images.push(image);
+          if (image.alt !== node.properties.alt) node.properties.dataOriginalAlt = String(node.properties.alt || "");
+          node.properties.alt = image.alt;
+          node.properties.src = assetUrl(image.url);
+          node.properties.srcSet = imageSrcSet(image);
+          node.properties.sizes = "(max-width: 780px) calc(100vw - 48px), 680px";
+          node.properties.width = image.width;
+          node.properties.height = image.height;
+          node.properties.dataPreviewKey = imageKey(image);
+          node.properties.dataImageSource = image.source;
+          node.properties.dataImageCredit = image.credit;
+        }
+        node.properties.loading = "lazy";
+        node.properties.decoding = "async";
       }
       if (node.tagName === "table" && tableIndex++ === 0) {
         node.properties.className = ["overview-table"];
         const labels: string[] = [];
-        visit(node, "element", (cell: Element) => {
-          if (cell.tagName === "th") labels.push(plain(cell));
-        });
+        visit(node, "element", (cell: Element) => { if (cell.tagName === "th") labels.push(plain(cell)); });
         visit(node, "element", (row: Element) => {
           if (row.tagName !== "tr") return;
           let column = 0;
-          for (const child of row.children) {
-            if (child.type === "element" && child.tagName === "td") {
-              child.properties.dataLabel = labels[column++] || "";
-            }
-          }
+          for (const child of row.children) if (child.type === "element" && child.tagName === "td") child.properties.dataLabel = labels[column++] || "";
         });
       }
     });
-    const start = root.children.findIndex(
-      (n) =>
-        n.type === "element" &&
-        n.tagName === "h2" &&
-        /今日最值得看/.test(plain(n)),
-    );
-    if (start < 0) return;
-    let end = start + 1;
-    while (
-      end < root.children.length &&
-      !(
-        root.children[end].type === "element" &&
-        (root.children[end] as Element).tagName === "h2"
-      )
-    )
-      end++;
-    const section = root.children.slice(start + 1, end);
-    const table = section.find(
-      (n) => n.type === "element" && n.tagName === "table",
-    ) as Element | undefined;
-    if (!table) return;
+
+    const headingOffset = reportIndex < 0 ? -1 : tree.children[reportIndex].position?.start.offset ?? -1;
+    const prefix = new Set(root.children.filter((node) => node.position?.start.offset !== undefined && node.position.start.offset < headingOffset));
+    const start = root.children.findIndex((node) => node.type === "element" && node.tagName === "h2" && /今日最值得看/.test(plain(node)));
+    let end = start < 0 ? 0 : start + 1;
+    while (end < root.children.length && !(root.children[end].type === "element" && (root.children[end] as Element).tagName === "h2")) end++;
+    const section = start < 0 ? [] : root.children.slice(start + 1, end);
+    const table = section.find((node) => node.type === "element" && node.tagName === "table") as Element | undefined;
     const labels: string[] = [];
     const rows: NonNullable<Article["readingGuide"]>["rows"] = [];
-    visit(table, "element", (node: Element) => {
+    const overview = new Set(start < 0 ? [] : root.children.slice(start, end));
+    const archivedSections = new Set<HastRoot["children"][number]>();
+    for (let index = 0; index < root.children.length; index++) {
+      const node = root.children[index];
+      if (node.type !== "element" || !/^h[2-6]$/.test(node.tagName) || plain(node) !== "记录与校验口径") continue;
+      const depth = Number(node.tagName[1]);
+      let stop = index + 1;
+      while (stop < root.children.length) {
+        const next = root.children[stop];
+        if (next.type === "element" && /^h[2-6]$/.test(next.tagName) && Number(next.tagName[1]) <= depth) break;
+        stop++;
+      }
+      for (const archived of root.children.slice(index, stop)) archivedSections.add(archived);
+    }
+    const contentNodes = root.children.filter((node, index) => !prefix.has(node) && !overview.has(node) && !archivedSections.has(node) && (start < 0 || index >= end));
+    const candidates = contentNodes.filter((node): node is Element => node.type === "element");
+    const additions = new Map<HastRoot["children"][number], Element[]>();
+    const notes = new Map<HastRoot["children"][number], Element[]>();
+    const targetNodes = new Map<string, HastRoot["children"][number]>();
+    function sourceKey(url: string): string {
+      const paper = url.match(/^https:\/\/(?:www\.)?arxiv\.org\/abs\/(\d{4}\.\d{4,5})(?:v\d+)?(?:[#?].*)?$/);
+      return paper ? `arxiv:${paper[1]}` : url.replace(/#.*$/, "").replace(/\/$/, "");
+    }
+    function findTarget(sources: string[], title: string, sectionTitle?: string): Element | undefined {
+      const keys = sources.map(sourceKey);
+      const repository = sources.map((source) => source.match(/^https:\/\/github\.com\/[^/]+\/([^/#?]+)\/?(?:#.*)?$/)?.[1]).find(Boolean);
+      if (repository) {
+        const name = repository.toLowerCase().replace(/[^a-z0-9]/g, "");
+        const named = candidates.find((candidate) => candidate.tagName === "p" && candidate.children.some((child) => child.type === "element" && child.tagName === "strong" && plain(child).toLowerCase().replace(/[^a-z0-9]/g, "").startsWith(name)));
+        if (named) return named;
+      }
+      const linked = candidates.find((candidate) => {
+        let found = false;
+        visit(candidate, "element", (node: Element) => {
+          if (node.tagName === "a" && keys.includes(sourceKey(String(node.properties.href || "")))) found = true;
+        });
+        return found;
+      });
+      if (linked) return linked;
+      const ticket = title.match(/#(\d+)/)?.[1];
+      if (ticket) {
+        const numbered = candidates.find((node) => /^h[2-6]$/.test(node.tagName) && new RegExp(`#${ticket}(?!\\d)`).test(plain(node)));
+        if (numbered) return numbered;
+      }
+      const named = sectionTitle && candidates.find((node) => /^h[2-6]$/.test(node.tagName) && plain(node) === sectionTitle.replace(/[*`]/g, ""));
+      return named || candidates.find((node) => /^h[2-6]$/.test(node.tagName)) || candidates[0];
+    }
+    function bindEvent(identity: string, sources: string[], title: string, sectionTitle?: string, explicit?: string): string {
+      if (explicit && targets.has(explicit)) {
+        const node = candidates.find((node) => node.properties.id === explicit);
+        if (node) targetNodes.set(explicit, node);
+        return explicit;
+      }
+      const node = findTarget(sources, title, sectionTitle);
+      if (!node) return "";
+      const id = explicit || `event-${createHash("sha256").update(identity).digest("hex").slice(0, 12)}`;
+      if (!/^[a-zA-Z][a-zA-Z0-9_.:-]*$/.test(id)) throw Error(`${filePath}: invalid event anchor ${id}`);
+      if (!targets.has(id)) {
+        const marker: Element = { type: "element", tagName: "span", properties: { id, className: ["event-anchor"], ariaHidden: "true" }, children: [] };
+        additions.set(node, [...(additions.get(node) || []), marker]);
+        targets.add(id);
+      }
+      targetNodes.set(id, node);
+      return id;
+    }
+    for (const entry of rawHighlights) {
+      eventAnchors.set(entry.id, bindEvent(entry.id, [entry.source], entry.title, entry.section, entry.anchor));
+    }
+    if (table) visit(table, "element", (node: Element) => {
       if (node.tagName === "th") labels.push(plain(node));
       if (node.tagName !== "tr") return;
-      const cells = node.children.filter(
-        (n) => n.type === "element" && n.tagName === "td",
-      ) as Element[];
+      const cells = node.children.filter((child): child is Element => child.type === "element" && child.tagName === "td");
       if (cells.length < 2) return;
       const sources: string[] = [];
-      visit(cells[1], "element", (n: Element) => {
-        if (n.tagName === "a" && /^https:\/\//.test(String(n.properties.href)))
-          sources.push(String(n.properties.href));
-      });
-      let anchor = "";
-      let heading = "";
-      for (const child of root.children.slice(end)) {
-        if (child.type === "element" && /^h[23]$/.test(child.tagName))
-          heading = String(child.properties.id);
-        visit(child, "element", (n: Element) => {
-          if (n.tagName !== "a" || !sources.includes(String(n.properties.href)))
-            return;
-          // Prefer the paper's detailed heading; tools use their first analysis.
-          if (
-            !anchor ||
-            (String(n.properties.href).includes("arxiv.org/abs/") &&
-              toc.find((t) => t.id === heading)?.depth === 3)
-          )
-            anchor = heading;
-        });
-      }
+      visit(cells[1], "element", (link: Element) => { if (link.tagName === "a" && /^https:\/\//.test(String(link.properties.href))) sources.push(String(link.properties.href)); });
+      const entry = rawHighlights.find((entry) => sources.some((source) => sourceKey(source) === sourceKey(entry.source)));
+      const title = entry?.title || plain(cells[1]);
+      const anchor = entry ? eventAnchors.get(entry.id) || "" : bindEvent(`overview:${sources[0] || title}`, sources, title);
       rows.push({
-        priority: plain(cells[0]),
-        title: plain(cells[1]),
-        anchor,
-        sources,
-        details: cells
-          .slice(2)
-          .map((cell, i) => ({
-            label: labels[i + 2] || "说明",
-            html: serialize(cell.children),
-          })),
+        priority: plain(cells[0]), title, anchor, sources,
+        details: cells.slice(2).map((cell, i) => ({ label: labels[i + 2] || "说明", html: serialize(cell.children) })),
       });
+      const target = targetNodes.get(anchor);
+      if (target) {
+        // Preserve every overview-cell statement at the corresponding event.
+        // The short guide itself only needs the editorial title and the target.
+        const context: Element = { type: "element", tagName: "div", properties: { className: ["event-summary"] }, children: [
+          { type: "element", tagName: "p", properties: {}, children: [
+            ...cells[1].children,
+            { type: "text", value: " " },
+            { type: "element", tagName: "small", properties: { className: ["event-priority"] }, children: cells[0].children },
+          ] },
+          ...cells.slice(2).map((cell) => ({ type: "element" as const, tagName: "p", properties: {}, children: cell.children })),
+        ] };
+        notes.set(target, [...(notes.get(target) || []), context]);
+      }
     });
-    if (!rows.length || !/优先级/.test(labels[0] || "")) return;
-    const heading = root.children[start] as Element;
-    readingGuide = {
-      id: String(heading.properties.id),
-      title: plain(heading),
-      rows,
-      leadingHtml: serialize(root.children.slice(0, start)),
-      bodyHtml: serialize(root.children.slice(end)),
-      afterHtml: serialize(section.filter((n) => n !== table)),
-    };
+    const hasGuide = Boolean(table && rows.length && /优先级/.test(labels[0] || ""));
+    const leading = hasGuide ? root.children.slice(0, start).filter((node) => !prefix.has(node)) : [];
+    const introduction: HastRoot["children"] = [];
+    const archive: HastRoot["children"] = [...prefix];
+    function splitProcessParagraph(node: HastRoot["children"][number]): HastRoot["children"][number] | undefined {
+      if (node.type !== "element" || node.tagName !== "p") return node;
+      const kept: Element["children"] = [];
+      const moved: Element["children"] = [];
+      for (const child of node.children) {
+        if (child.type !== "text") { kept.push(child); continue; }
+        // Only these existing publication-process sentences move to the archive.
+        for (const sentence of child.value.split(/(?<=[。！？])/)) {
+          const destination = ["原自动化已于今日上午", "此版在同一日期正文里", "以下保留 PR #30 原始 canonical arXiv ID"].some((text) => sentence.trim().startsWith(text)) ? moved : kept;
+          if (sentence) destination.push({ type: "text", value: sentence });
+        }
+      }
+      if (!moved.length) return node;
+      archive.push({ ...node, children: moved });
+      return kept.some((child) => child.type !== "text" || child.value.trim()) ? { ...node, children: kept } : undefined;
+    }
+    for (const node of leading) {
+      const retained = splitProcessParagraph(node);
+      if (retained) introduction.push(retained);
+    }
+    introductionHtml = serialize([...introduction, ...(hasGuide ? section.filter((node) => node !== table) : [])]);
+    const displayed = root.children.filter((node, index) => (!hasGuide || index >= end) && !prefix.has(node) && !archivedSections.has(node));
+    bodyHtml = serialize(displayed.flatMap((node) => {
+      const retained = splitProcessParagraph(node);
+      // Keep the original heading ID while removing its publishing-process suffix.
+      const rendered = retained?.type === "element" && /^h[2-6]$/.test(retained.tagName) && plain(retained) === "10. 论文与研究：保留上午自动归档的 12 条"
+        ? { ...retained, children: [{ type: "text" as const, value: "10. 论文与研究" }] }
+        : retained;
+      return [...(additions.get(node) || []), ...(rendered ? [rendered] : []), ...(hasGuide ? notes.get(node) || [] : [])];
+    }));
+    archiveHtml = serialize([...archive, ...archivedSections]);
+    if (hasGuide) {
+      const heading = root.children[start] as Element;
+      readingGuide = { id: String(heading.properties.id), title: "今日最值得看", rows, leadingHtml: "", bodyHtml, afterHtml: "" };
+    }
+    root.children = root.children.flatMap((node) => [...(additions.get(node) || []), node]);
   };
-  const html = String(
-    await unified()
-      .use(remarkParse)
-      .use(remarkGfm)
-      .use(remarkRehype)
-      .use(rehypeSanitize, {
-        ...defaultSchema,
-        clobberPrefix: "",
-        attributes: {
-          ...defaultSchema.attributes,
-          img: [
-            ...(defaultSchema.attributes?.img || []),
-            "loading",
-            "decoding",
-          ],
-        },
-      })
-      .use(rehypeSlug, { prefix: "section-" })
-      .use(collect)
-      .use(rehypeStringify)
-      .process(
-        bodyNodes.length
-          ? content.slice(
-              content.indexOf(
-                "\n",
-                content.indexOf(plain(tree.children[Math.max(0, reportIndex)])),
-              ),
-            )
-          : content,
-      ),
-  );
-  const highlights: Entry[] = (portal.highlights || []).map(
+  const renderer = unified()
+    .use(remarkRehype)
+    .use(rehypeSanitize, { ...defaultSchema, clobberPrefix: "" })
+    .use(rehypeSlug, { prefix: "section-" })
+    .use(collect)
+    .use(rehypeStringify);
+  const rendered = await renderer.run({ type: "root", children: bodyNodes } as MdRoot);
+  const html = String(renderer.stringify(rendered));
+  const highlights: Entry[] = rawHighlights.map(
     (e: Entry & { section?: string }) => ({
       ...e,
       date,
       anchor:
-        toc.find((t) => t.title === e.section?.replace(/[*`]/g, ""))?.id ||
         e.anchor ||
+        eventAnchors.get(e.id) ||
+        toc.find((t) => t.title === e.section?.replace(/[*`]/g, ""))?.id ||
         toc[0]?.id ||
         "",
       topics: e.topics || topicsFor(`${e.title} ${e.summary}`),
+      image: e.image ? resolveImage(e.image, media) : undefined,
     }),
   );
   for (const e of highlights) {
@@ -256,7 +340,7 @@ export async function parseArticle(
       !/^https:\/\//.test(e.source)
     )
       throw Error(`${filePath}: invalid portal entry ${e.id}`);
-    if (!toc.some((t) => t.id === e.anchor))
+    if (!targets.has(e.anchor))
       throw Error(`${filePath}: missing entry anchor ${e.anchor}`);
     if (e.topics.some((t) => !TOPICS.some((known) => known.slug === t)))
       throw Error(`${filePath}: unknown entry topic`);
@@ -264,18 +348,20 @@ export async function parseArticle(
       e.image &&
       (!e.image.alt ||
         !e.image.credit ||
-        !/^https:\/\//.test(e.image.url) ||
+        !validImageUrl(e.image.url) ||
+        (e.image.originalUrl && !validImageUrl(e.image.originalUrl)) ||
         !/^https:\/\//.test(e.image.source))
     )
       throw Error(`${filePath}: invalid image attribution`);
   }
   // Cover selection is editorial metadata. A paper's first figure is not a daily cover.
-  const image = portal.image;
+  const image = portal.image ? resolveImage(portal.image, media) : undefined;
   if (
     image &&
     (!image.alt ||
       !image.credit ||
-      !/^https:\/\//.test(image.url) ||
+      !validImageUrl(image.url) ||
+      (image.originalUrl && !validImageUrl(image.originalUrl)) ||
       !/^https:\/\//.test(image.source))
   )
     throw Error(`${filePath}: invalid cover attribution`);
@@ -320,9 +406,14 @@ export async function parseArticle(
     unresolvedSources: (content.match(/原始聊天工具引用，需补一手链接|原始引用待复核/g) || [])
       .length,
     html,
+    bodyHtml,
     text,
     toc,
+    targets: [...targets],
     images,
+    introductionHtml,
+    archiveHtml,
+    paperSummaries,
     readingGuide,
   };
 }
@@ -333,6 +424,7 @@ export function loadArchive() {
   return (archivePromise ||= buildArchive());
 }
 export async function buildArchive(root = ROOT) {
+  const media = loadImageManifest(root);
   const dailyRoot = path.join(root, "docs/daily");
   const files = fs
     .readdirSync(dailyRoot, { recursive: true })
@@ -344,6 +436,7 @@ export async function buildArchive(root = ROOT) {
       parseArticle(
         fs.readFileSync(path.join(dailyRoot, p), "utf8"),
         `docs/daily/${p}`,
+        media,
       ),
     ),
   );
@@ -375,11 +468,12 @@ export async function buildArchive(root = ROOT) {
       while (end < nodes.length && nodes[end].type !== "heading") end++;
       const section = nodes.slice(i + 1, end);
       const specific = section.find((n) => plain(n).startsWith("编辑摘要："));
-      const summary = specific
+      const editorialSummary = article.paperSummaries[id];
+      const summary = editorialSummary || (specific
         ? plain(specific).replace(/^编辑摘要：\s*/, "")
         : section.map(plain).find((t) => t.length > 30) ||
-          "研究条目；可运行性与来源限制见当日日报。";
-      const paperImage = section.map(imageFromNode).find(Boolean);
+          "研究条目；可运行性与来源限制见当日日报。");
+      const paperImage = section.map((node) => imageFromNode(node, media)).find(Boolean);
       if (paperImage) {
         paperImage.source = `https://arxiv.org/abs/${id}`;
         paperImage.credit = `论文 ${id} 作者（arXiv HTML）`;
@@ -397,17 +491,17 @@ export async function buildArchive(root = ROOT) {
             plain(n).length > 20 &&
             /[A-Za-z]{4}/.test(plain(n)),
         );
-      const paperTitle = descriptiveHeading
+      const paperTitle = LEGACY_PAPER_TITLES[heading] || (descriptiveHeading
         ? heading.replace(/^P[012][+\-]?\s*[—:：-]?\s*/, "")
         : legacyTitle
           ? plain(legacyTitle).split("\n")[0]
-          : `arXiv ${id}`;
+          : `arXiv ${id}`);
       entries.set(`arxiv:${id}`, {
         id: `arxiv:${id}`,
         kind: "paper",
         date: article.date,
         title: paperTitle,
-        summary: summary.slice(0, 350),
+        summary: editorialSummary ? summary : summary.slice(0, 350),
         source: `https://arxiv.org/abs/${id}`,
         anchor,
         topics: topicsFor(`${heading} ${summary}`),
@@ -419,7 +513,7 @@ export async function buildArchive(root = ROOT) {
     (a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id),
   );
   const daily: Daily[] = published.map(
-    ({ html, text, toc, images, readingGuide, ...d }) => d,
+    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, ...d }) => d,
   );
   const index: PortalIndex = {
     schemaVersion: 1,

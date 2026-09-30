@@ -29,6 +29,10 @@ class Links(HTMLParser):
             self.urls.append(attrs['href'])
         if tag in {'img', 'script'} and attrs.get('src'):
             self.urls.append(attrs['src'])
+        if tag == 'img' and attrs.get('srcset'):
+            self.urls.extend(part.strip().split()[0] for part in attrs['srcset'].split(',') if part.strip())
+        if tag == 'meta' and (attrs.get('property') == 'og:image' or attrs.get('name') == 'twitter:image') and attrs.get('content'):
+            self.urls.append(attrs['content'])
 
 
 def verify(root=ROOT):
@@ -40,7 +44,7 @@ def verify(root=ROOT):
     for source, page in pages.items():
         for url in page.urls:
             parsed = urlsplit(url)
-            if parsed.scheme or parsed.netloc:
+            if (parsed.scheme or parsed.netloc) and parsed.netloc != 'shuang-su.github.io':
                 continue
             if parsed.path == BASE or parsed.path.startswith(BASE + '/'):
                 destination = output / unquote(parsed.path[len(BASE):].lstrip('/'))

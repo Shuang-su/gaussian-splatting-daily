@@ -11,7 +11,7 @@
 - 已有 2026-09-18 至 09-30 共 13 份日报；18 日上午正文、下午增量和人工分析保留。
 - 论文按无版本 arXiv marker 首次归档；后续更新引用原条目。工具用仓库与 Release / PR / commit 标识去重。
 - 来源无法从原聊天内部引用恢复时，正文和核验记录明确标为待复核。
-- 图片从官方来源逐日选择，并标注归属；编辑示意图明确说明性质，图片加载失败保留文字与来源。
+- 图片从官方来源逐日选择，并标注归属；当前 9 期有真实封面，09-20、09-25、09-26、09-28 使用文字展示。采用素材的原图与无放大的 WebP 保存本地，加载失败保留文字与来源。详见 [配图来源](docs/cover-selection.md)。
 - 文章全文、目录、表格、来源、纠错和 GitHub Issue / PR 均可从门户访问。手机、平板、桌面使用不同布局，支持浅色、暗色和系统主题。
 
 ## 每日发布
@@ -36,11 +36,15 @@ python3 scripts/check_editorial.py --all
 python3 -m unittest discover -s scripts/tests -v
 npm ci --prefix site
 npm test --prefix site
+npm run typecheck --prefix site
 npm run build --prefix site
+python3 scripts/verify_export.py
 npm run dev --prefix site
 ```
 
 入口为 `http://127.0.0.1:4317/gaussian-splatting-daily/`。构建输出在 `site/out/`，项目路径前缀、尾斜杠、详情静态参数和图片加载已配置；GitHub Pages 应选择 **GitHub Actions**。
+
+媒体可以用 `npm run media --prefix site` 从本地原图离线重建。分享图随内容构建生成；字体及许可在 `site/assets/fonts/`。本地静态文件验收与公开发布、真实手机触控分别记录在 [本轮完成记录](docs/changes/20261001-sspai-portal/completion.md)。
 
 ## 仓库入口
 

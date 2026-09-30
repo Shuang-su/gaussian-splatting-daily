@@ -28,7 +28,7 @@ export default async function Page({
     <>
       <Catalogue
         title={t.label}
-        description="相关研究、项目与工具更新，以及收录这些变化的完整日报。"
+        description=""
         entries={index.entries.filter((e) => e.topics.includes(slug))}
       />
       <section className="shell related-daily">

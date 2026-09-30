@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { BASE, TOPICS } from "../lib/catalog";
 import { searchItems } from "../lib/search";
 import type { PortalIndex } from "../lib/types";
+import Icon from "./Icon";
 export default function Search() {
   const [index, setIndex] = useState<PortalIndex>();
   const [error, setError] = useState(false);
@@ -11,7 +12,12 @@ export default function Search() {
   const [kind, setKind] = useState("");
   const [topic, setTopic] = useState("");
   useEffect(() => {
-    setQuery(new URLSearchParams(location.search).get("q") || "");
+    const params = new URLSearchParams(location.search);
+    setQuery(params.get("q") || "");
+    const savedKind = params.get("kind") || "";
+    setKind(["daily", "paper", "tool", "news"].includes(savedKind) ? savedKind : "");
+    const savedTopic = params.get("topic") || "";
+    setTopic(TOPICS.some((item) => item.slug === savedTopic) ? savedTopic : "");
     fetch(`${BASE}/content-index.json`)
       .then((r) => {
         if (!r.ok) throw Error();
@@ -27,11 +33,12 @@ export default function Search() {
         className="search-form"
         onSubmit={(e) => {
           e.preventDefault();
-          history.replaceState(
-            null,
-            "",
-            `${location.pathname}${query ? "?q=" + encodeURIComponent(query) : ""}`,
-          );
+          const params = new URLSearchParams();
+          if (query) params.set("q", query);
+          if (kind) params.set("kind", kind);
+          if (topic) params.set("topic", topic);
+          const suffix = params.toString();
+          history.replaceState(null, "", `${location.pathname}${suffix ? "?" + suffix : ""}`);
         }}
       >
         <label htmlFor="query">关键词</label>
@@ -43,7 +50,7 @@ export default function Search() {
             placeholder="搜索中文关键词、项目名或论文标题"
             type="search"
           />
-          <button type="submit">搜索 →</button>
+          <button type="submit">搜索 <Icon name="arrow" /></button>
         </div>
         <div className="search-filters">
           <label>
@@ -77,7 +84,7 @@ export default function Search() {
             : "正在加载搜索索引…"}
       </p>
       <div className="search-results">
-        {results.slice(0, 100).map((r) => (
+        {results.map((r) => (
           <article key={r.id}>
             <p className="eyebrow">
               {r.date} ·{" "}

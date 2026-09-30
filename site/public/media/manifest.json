@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 1,
+  "images": {
+    "https://developer.blender.org/docs/release_notes/5.3/images/render_gsplat.png": {
+      "alt": "Blender 高斯渲染示例中的织物帽子",
+      "source": "https://developer.blender.org/docs/release_notes/5.3/rendering/",
+      "credit": "Blender Foundation",
+      "url": "/media/images/blender-gaussian-480.webp",
+      "originalUrl": "/media/originals/blender-gaussian.png",
+      "width": 480,
+      "height": 270,
+      "variants": [
+        {
+          "url": "/media/images/blender-gaussian-480.webp",
+          "width": 480
+        }
+      ]
+    },
+    "https://lichtfeld.io/static/botanics/preview.webp": {
+      "alt": "温室中的仙人掌与植物园通道",
+      "source": "https://lichtfeld.io/",
+      "credit": "LichtFeld 项目演示",
+      "position": "50% 50%",
+      "url": "/media/images/lichtfeld-botanics-960.webp",
+      "originalUrl": "/media/originals/lichtfeld-botanics.webp",
+      "width": 1024,
+      "height": 683,
+      "variants": [
+        {
+          "url": "/media/images/lichtfeld-botanics-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/lichtfeld-botanics-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/lichtfeld-botanics-1024.webp",
+          "width": 1024
+        }
+      ]
+    },
+    "https://lichtfeld.io/videos/meihogen-homepage-poster.jpg": {
+      "alt": "LichtFeld Studio 中的林间木屋训练界面",
+      "source": "https://lichtfeld.io/",
+      "credit": "LichtFeld 项目演示",
+      "position": "42% 50%",
+      "url": "/media/images/lichtfeld-meihogen-960.webp",
+      "originalUrl": "/media/originals/lichtfeld-meihogen.jpg",
+      "width": 960,
+      "height": 540,
+      "variants": [
+        {
+          "url": "/media/images/lichtfeld-meihogen-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/lichtfeld-meihogen-960.webp",
+          "width": 960
+        }
+      ]
+    },
+    "https://github.com/user-attachments/assets/15d2c654-9484-4265-a279-99acb65e38c9": {
+      "alt": "SuperSplat Viewer 中的教堂与相机时间线",
+      "source": "https://github.com/playcanvas/supersplat-viewer",
+      "credit": "SuperSplat 项目演示",
+      "position": "50% 48%",
+      "url": "/media/images/supersplat-viewer-960.webp",
+      "originalUrl": "/media/originals/supersplat-viewer.png",
+      "width": 2228,
+      "height": 1478,
+      "variants": [
+        {
+          "url": "/media/images/supersplat-viewer-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/supersplat-viewer-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/supersplat-viewer-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://rocm.blogs.amd.com/_images/GS_num.png": {
+      "alt": "同一庭院在不同高斯数量下的重建对比",
+      "source": "https://rocm.blogs.amd.com/software-tools-optimization/point-2-gaussian/README.html",
+      "credit": "AMD ROCm 博客",
+      "fit": "contain",
+      "url": "/media/images/amd-gsplat-counts-960.webp",
+      "originalUrl": "/media/originals/amd-gsplat-counts.png",
+      "width": 4252,
+      "height": 1475,
+      "variants": [
+        {
+          "url": "/media/images/amd-gsplat-counts-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/amd-gsplat-counts-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/amd-gsplat-counts-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://blog.playcanvas.com/img/supersplat3-stochastic-alpha.mp4": {
+      "alt": "SuperSplat 随机透明度演示中的温室与仙人掌",
+      "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+      "credit": "SuperSplat 项目演示",
+      "position": "65% 50%",
+      "url": "/media/images/supersplat-stochastic-960.webp",
+      "originalUrl": "/media/originals/supersplat-stochastic.png",
+      "width": 1600,
+      "height": 1058,
+      "variants": [
+        {
+          "url": "/media/images/supersplat-stochastic-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/supersplat-stochastic-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/supersplat-stochastic-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://blog.playcanvas.com/img/editor-2-32-gsplat-lod-controls.mp4": {
+      "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+      "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+      "credit": "PlayCanvas 项目演示",
+      "position": "55% 42%",
+      "url": "/media/images/supersplat-lod-controls-960.webp",
+      "originalUrl": "/media/originals/supersplat-lod-controls.png",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "url": "/media/images/supersplat-lod-controls-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/supersplat-lod-controls-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/supersplat-lod-controls-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://blog.playcanvas.com/img/supersplat3-webgpu-editor.mp4": {
+      "alt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+      "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+      "credit": "SuperSplat 项目演示",
+      "position": "62% 50%",
+      "url": "/media/images/supersplat-webgpu-editor-960.webp",
+      "originalUrl": "/media/originals/supersplat-webgpu-editor.png",
+      "width": 1600,
+      "height": 1058,
+      "variants": [
+        {
+          "url": "/media/images/supersplat-webgpu-editor-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/supersplat-webgpu-editor-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/supersplat-webgpu-editor-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://spirula.studio/assets/video/spirula-studio-hero.webp?md5=0ff79909f5c779509664da20b9f9dd61": {
+      "alt": "Spirula Studio 中的车库重建与训练界面",
+      "source": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+      "credit": "Spirula 项目演示 · Simon Bethke / Garage",
+      "position": "62% 35%",
+      "url": "/media/images/spirula-hero-960.webp",
+      "originalUrl": "/media/originals/spirula-hero.png",
+      "width": 1280,
+      "height": 720,
+      "variants": [
+        {
+          "url": "/media/images/spirula-hero-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/spirula-hero-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/spirula-hero-1280.webp",
+          "width": 1280
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/MrNeRF/LichtFeld-Studio/master/docs/viewer_demo.gif": {
+      "alt": "LichtFeld Viewer 中的建筑与道路重建",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+      "credit": "LichtFeld 项目演示",
+      "position": "50% 45%",
+      "url": "/media/images/lichtfeld-viewer-600.webp",
+      "originalUrl": "/media/originals/lichtfeld-viewer.png",
+      "width": 600,
+      "height": 338,
+      "variants": [
+        {
+          "url": "/media/images/lichtfeld-viewer-600.webp",
+          "width": 600
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.38177v1/ThinkingLLM_FIg1_3.png": {
+      "alt": "高斯摘要标记参与多视图推理与场景重建的模型结构",
+      "source": "https://arxiv.org/abs/2609.38177",
+      "credit": "Imagine3D-LLM 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-38177-960.webp",
+      "originalUrl": "/media/originals/paper-2609-38177.png",
+      "width": 1417,
+      "height": 590,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-38177-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-38177-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-38177-1417.webp",
+          "width": 1417
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.37874v1/intro_relayout_2x6_moderate_vertical_labels.png": {
+      "alt": "内镜组织在高光、暗部和边界处的渲染对比",
+      "source": "https://arxiv.org/abs/2609.37874",
+      "credit": "EndoPrior-GS 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-37874-960.webp",
+      "originalUrl": "/media/originals/paper-2609-37874.png",
+      "width": 1257,
+      "height": 395,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-37874-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-37874-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-37874-1257.webp",
+          "width": 1257
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.37816v1/diagram_method.png": {
+      "alt": "高斯场景补洞的编码、结构补全与解码流程",
+      "source": "https://arxiv.org/abs/2609.37816",
+      "credit": "WINGS 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-37816-658.webp",
+      "originalUrl": "/media/originals/paper-2609-37816.png",
+      "width": 658,
+      "height": 293,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-37816-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-37816-658.webp",
+          "width": 658
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.37115v1/images/intro_crop/gt.JPG": {
+      "alt": "庭院图像中的桌面与砖墙细节放大图",
+      "source": "https://arxiv.org/abs/2609.37115",
+      "credit": "NRF-GS 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-37115-960.webp",
+      "originalUrl": "/media/originals/paper-2609-37115.jpg",
+      "width": 966,
+      "height": 840,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-37115-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-37115-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-37115-966.webp",
+          "width": 966
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.36969v1/figures/ladybug6.jpg": {
+      "alt": "Ladybug 6 全景相机",
+      "source": "https://arxiv.org/abs/2609.36969",
+      "credit": "Prior-Driven Enhancements 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-36969-226.webp",
+      "originalUrl": "/media/originals/paper-2609-36969.jpg",
+      "width": 226,
+      "height": 227,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-36969-226.webp",
+          "width": 226
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.36940v1/DispFlowgs-teaser-vertical.png": {
+      "alt": "浇水动作中场景运动与相机运动的拆分流程",
+      "source": "https://arxiv.org/abs/2609.36940",
+      "credit": "DispFlow-GS 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-36940-960.webp",
+      "originalUrl": "/media/originals/paper-2609-36940.png",
+      "width": 1032,
+      "height": 852,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-36940-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-36940-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-36940-1032.webp",
+          "width": 1032
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.36693v1/figures/teaser.png": {
+      "alt": "室内与灯塔新视角渲染结果及性能对比",
+      "source": "https://arxiv.org/abs/2609.36693",
+      "credit": "AESplat 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-36693-960.webp",
+      "originalUrl": "/media/originals/paper-2609-36693.png",
+      "width": 3717,
+      "height": 1498,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-36693-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-36693-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-36693-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.36520v1/images/thumbnail/thumbnail_v6.png": {
+      "alt": "机器人绕开行人的安全过滤器开关对比",
+      "source": "https://arxiv.org/abs/2609.36520",
+      "credit": "RGB-Only Safety Filters 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-36520-806.webp",
+      "originalUrl": "/media/originals/paper-2609-36520.png",
+      "width": 806,
+      "height": 733,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-36520-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-36520-806.webp",
+          "width": 806
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.35619v1/figures/pr_curve-new.png": {
+      "alt": "CollisionSplatting 与其他方法的精确率召回率曲线",
+      "source": "https://arxiv.org/abs/2609.35619",
+      "credit": "CollisionSplatting 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-35619-960.webp",
+      "originalUrl": "/media/originals/paper-2609-35619.png",
+      "width": 1452,
+      "height": 1152,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-35619-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-35619-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-35619-1452.webp",
+          "width": 1452
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.35612v1/first_fig.png": {
+      "alt": "遥感城市重建结果与性能对比",
+      "source": "https://arxiv.org/abs/2609.35612",
+      "credit": "Remote Sensing Sparse-View 3DGS 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-35612-960.webp",
+      "originalUrl": "/media/originals/paper-2609-35612.png",
+      "width": 1600,
+      "height": 900,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-35612-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-35612-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-35612-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://arxiv.org/html/2609.35573v1/Figures/fig_pipeline.png": {
+      "alt": "遗传搜索、训练蒸馏与图像帧选择流程",
+      "source": "https://arxiv.org/abs/2609.35573",
+      "credit": "Less Is More 论文",
+      "fit": "contain",
+      "url": "/media/images/paper-2609-35573-960.webp",
+      "originalUrl": "/media/originals/paper-2609-35573.png",
+      "width": 3300,
+      "height": 1249,
+      "variants": [
+        {
+          "url": "/media/images/paper-2609-35573-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/paper-2609-35573-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/paper-2609-35573-1600.webp",
+          "width": 1600
+        }
+      ]
+    }
+  },
+  "assets": [
+    {
+      "key": "blender-gaussian",
+      "remoteUrl": "https://developer.blender.org/docs/release_notes/5.3/images/render_gsplat.png",
+      "original": "/media/originals/blender-gaussian.png",
+      "originalSha256": "bd91bee3b48eea0625423899e7961be0d6fa2b3bb8358a7c0c05bc9f825333f5",
+      "sourceSha256": "bd91bee3b48eea0625423899e7961be0d6fa2b3bb8358a7c0c05bc9f825333f5",
+      "image": {
+        "alt": "Blender 高斯渲染示例中的织物帽子",
+        "source": "https://developer.blender.org/docs/release_notes/5.3/rendering/",
+        "credit": "Blender Foundation"
+      }
+    },
+    {
+      "key": "lichtfeld-botanics",
+      "remoteUrl": "https://lichtfeld.io/static/botanics/preview.webp",
+      "original": "/media/originals/lichtfeld-botanics.webp",
+      "originalSha256": "5ca4b8ba6325b4187feaf0b87ba3dd6007636b3c5184f017de8ed888cc3376f4",
+      "sourceSha256": "5ca4b8ba6325b4187feaf0b87ba3dd6007636b3c5184f017de8ed888cc3376f4",
+      "image": {
+        "alt": "温室中的仙人掌与植物园通道",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "position": "50% 50%"
+      }
+    },
+    {
+      "key": "lichtfeld-meihogen",
+      "remoteUrl": "https://lichtfeld.io/videos/meihogen-homepage-poster.jpg",
+      "original": "/media/originals/lichtfeld-meihogen.jpg",
+      "originalSha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5",
+      "sourceSha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5",
+      "image": {
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "position": "42% 50%"
+      }
+    },
+    {
+      "key": "supersplat-viewer",
+      "remoteUrl": "https://github.com/user-attachments/assets/15d2c654-9484-4265-a279-99acb65e38c9",
+      "original": "/media/originals/supersplat-viewer.png",
+      "originalSha256": "fd7b6f6b597ea46652d20f1de49aabf7062487f6951ab68f133892d37c3cc7cf",
+      "sourceSha256": "fd7b6f6b597ea46652d20f1de49aabf7062487f6951ab68f133892d37c3cc7cf",
+      "image": {
+        "alt": "SuperSplat Viewer 中的教堂与相机时间线",
+        "source": "https://github.com/playcanvas/supersplat-viewer",
+        "credit": "SuperSplat 项目演示",
+        "position": "50% 48%"
+      }
+    },
+    {
+      "key": "amd-gsplat-counts",
+      "remoteUrl": "https://rocm.blogs.amd.com/_images/GS_num.png",
+      "original": "/media/originals/amd-gsplat-counts.png",
+      "originalSha256": "5093e4d75687df3c0cc0d1b3207e936035ce8fff241e9231a6d09a537f1d5312",
+      "sourceSha256": "5093e4d75687df3c0cc0d1b3207e936035ce8fff241e9231a6d09a537f1d5312",
+      "image": {
+        "alt": "同一庭院在不同高斯数量下的重建对比",
+        "source": "https://rocm.blogs.amd.com/software-tools-optimization/point-2-gaussian/README.html",
+        "credit": "AMD ROCm 博客",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "supersplat-stochastic",
+      "remoteUrl": "https://blog.playcanvas.com/img/supersplat3-stochastic-alpha.mp4",
+      "original": "/media/originals/supersplat-stochastic.png",
+      "originalSha256": "e007472e971ea7991b07a1161e61106d2e4377ffc09b522a5cbc3336e79142e8",
+      "sourceSha256": "3c82de02815b4f609f9c8c997146e7873248eeaffe1abb99dc87852580a39802",
+      "image": {
+        "alt": "SuperSplat 随机透明度演示中的温室与仙人掌",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "credit": "SuperSplat 项目演示",
+        "position": "65% 50%"
+      },
+      "frame": {
+        "seconds": 4
+      }
+    },
+    {
+      "key": "supersplat-lod-controls",
+      "remoteUrl": "https://blog.playcanvas.com/img/editor-2-32-gsplat-lod-controls.mp4",
+      "original": "/media/originals/supersplat-lod-controls.png",
+      "originalSha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0",
+      "sourceSha256": "ae85db39f15401fde99a472ee4ffe7af9897a03b64386a5f9ec8da33348c28d0",
+      "image": {
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "credit": "PlayCanvas 项目演示",
+        "position": "55% 42%"
+      },
+      "frame": {
+        "seconds": 2
+      }
+    },
+    {
+      "key": "supersplat-webgpu-editor",
+      "remoteUrl": "https://blog.playcanvas.com/img/supersplat3-webgpu-editor.mp4",
+      "original": "/media/originals/supersplat-webgpu-editor.png",
+      "originalSha256": "bc8ad8523309b497f28b6c81a8839948bc800a4919d696de4f9d395f237fc3c3",
+      "sourceSha256": "eaf0495e9515f5730e2fd3a4c7db5d395244f617bda5ef83c74e594b7551d390",
+      "image": {
+        "alt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "credit": "SuperSplat 项目演示",
+        "position": "62% 50%"
+      },
+      "frame": {
+        "seconds": 1
+      }
+    },
+    {
+      "key": "spirula-hero",
+      "remoteUrl": "https://spirula.studio/assets/video/spirula-studio-hero.webp?md5=0ff79909f5c779509664da20b9f9dd61",
+      "original": "/media/originals/spirula-hero.png",
+      "originalSha256": "255bb38076db20162ed3b3a33bafeb6d892c18ddac7fd1281736ebf20a2b579d",
+      "sourceSha256": "d83186d9926c5d59b79b06491bf8eaed6a5f7508a996b6819c46913753af1fb7",
+      "image": {
+        "alt": "Spirula Studio 中的车库重建与训练界面",
+        "source": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+        "credit": "Spirula 项目演示 · Simon Bethke / Garage",
+        "position": "62% 35%"
+      },
+      "frame": {
+        "index": 30,
+        "seconds": 6
+      }
+    },
+    {
+      "key": "lichtfeld-viewer",
+      "remoteUrl": "https://raw.githubusercontent.com/MrNeRF/LichtFeld-Studio/master/docs/viewer_demo.gif",
+      "original": "/media/originals/lichtfeld-viewer.png",
+      "originalSha256": "b84dd8d8ec73a32336979c57395838884be59a528b60e1002afe0624cc55ae56",
+      "sourceSha256": "8b696f4a59595922fc81d04d1ffb1cac6c99f62a4f211dc58ef302e60f0d0235",
+      "image": {
+        "alt": "LichtFeld Viewer 中的建筑与道路重建",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "credit": "LichtFeld 项目演示",
+        "position": "50% 45%"
+      },
+      "frame": {
+        "index": 150
+      }
+    },
+    {
+      "key": "paper-2609-38177",
+      "remoteUrl": "https://arxiv.org/html/2609.38177v1/ThinkingLLM_FIg1_3.png",
+      "original": "/media/originals/paper-2609-38177.png",
+      "originalSha256": "d6a2529b4c92d20d0ce4dac080de561dd7bbf72301c2822bfea5ebf23011c9f6",
+      "sourceSha256": "d6a2529b4c92d20d0ce4dac080de561dd7bbf72301c2822bfea5ebf23011c9f6",
+      "image": {
+        "alt": "高斯摘要标记参与多视图推理与场景重建的模型结构",
+        "source": "https://arxiv.org/abs/2609.38177",
+        "credit": "Imagine3D-LLM 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-37874",
+      "remoteUrl": "https://arxiv.org/html/2609.37874v1/intro_relayout_2x6_moderate_vertical_labels.png",
+      "original": "/media/originals/paper-2609-37874.png",
+      "originalSha256": "1d56bfc11dc08101b1b649b1b20d5423cc568fbc98d23956bfef9960db20a9a6",
+      "sourceSha256": "1d56bfc11dc08101b1b649b1b20d5423cc568fbc98d23956bfef9960db20a9a6",
+      "image": {
+        "alt": "内镜组织在高光、暗部和边界处的渲染对比",
+        "source": "https://arxiv.org/abs/2609.37874",
+        "credit": "EndoPrior-GS 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-37816",
+      "remoteUrl": "https://arxiv.org/html/2609.37816v1/diagram_method.png",
+      "original": "/media/originals/paper-2609-37816.png",
+      "originalSha256": "08b012d3f0ac9780d3a1baa2ae5d5be7e08ec0e89c90f1004ac5fa915e8207cc",
+      "sourceSha256": "08b012d3f0ac9780d3a1baa2ae5d5be7e08ec0e89c90f1004ac5fa915e8207cc",
+      "image": {
+        "alt": "高斯场景补洞的编码、结构补全与解码流程",
+        "source": "https://arxiv.org/abs/2609.37816",
+        "credit": "WINGS 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-37115",
+      "remoteUrl": "https://arxiv.org/html/2609.37115v1/images/intro_crop/gt.JPG",
+      "original": "/media/originals/paper-2609-37115.jpg",
+      "originalSha256": "441155098f0a7d31160cbe151dec5f39b9fc276d71dd625d896f45df12c416cb",
+      "sourceSha256": "441155098f0a7d31160cbe151dec5f39b9fc276d71dd625d896f45df12c416cb",
+      "image": {
+        "alt": "庭院图像中的桌面与砖墙细节放大图",
+        "source": "https://arxiv.org/abs/2609.37115",
+        "credit": "NRF-GS 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-36969",
+      "remoteUrl": "https://arxiv.org/html/2609.36969v1/figures/ladybug6.jpg",
+      "original": "/media/originals/paper-2609-36969.jpg",
+      "originalSha256": "a71e2b3677df2f0d490f9aa9659a85ef675edf2cb1faa6430b58c25e213c6217",
+      "sourceSha256": "a71e2b3677df2f0d490f9aa9659a85ef675edf2cb1faa6430b58c25e213c6217",
+      "image": {
+        "alt": "Ladybug 6 全景相机",
+        "source": "https://arxiv.org/abs/2609.36969",
+        "credit": "Prior-Driven Enhancements 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-36940",
+      "remoteUrl": "https://arxiv.org/html/2609.36940v1/DispFlowgs-teaser-vertical.png",
+      "original": "/media/originals/paper-2609-36940.png",
+      "originalSha256": "65bbf2e63c44b6dfd48c94990b774a8815693aa395415162ee99d60acd37b6e8",
+      "sourceSha256": "65bbf2e63c44b6dfd48c94990b774a8815693aa395415162ee99d60acd37b6e8",
+      "image": {
+        "alt": "浇水动作中场景运动与相机运动的拆分流程",
+        "source": "https://arxiv.org/abs/2609.36940",
+        "credit": "DispFlow-GS 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-36693",
+      "remoteUrl": "https://arxiv.org/html/2609.36693v1/figures/teaser.png",
+      "original": "/media/originals/paper-2609-36693.png",
+      "originalSha256": "464e7e47e710e0e517779b7876e97bac1508f76e83aeffd64d861fe98a7fadaa",
+      "sourceSha256": "464e7e47e710e0e517779b7876e97bac1508f76e83aeffd64d861fe98a7fadaa",
+      "image": {
+        "alt": "室内与灯塔新视角渲染结果及性能对比",
+        "source": "https://arxiv.org/abs/2609.36693",
+        "credit": "AESplat 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-36520",
+      "remoteUrl": "https://arxiv.org/html/2609.36520v1/images/thumbnail/thumbnail_v6.png",
+      "original": "/media/originals/paper-2609-36520.png",
+      "originalSha256": "cfe48ae0e74373e1cb9192727afd3d91d78f2edadb84b48cd447835aa9dd2568",
+      "sourceSha256": "cfe48ae0e74373e1cb9192727afd3d91d78f2edadb84b48cd447835aa9dd2568",
+      "image": {
+        "alt": "机器人绕开行人的安全过滤器开关对比",
+        "source": "https://arxiv.org/abs/2609.36520",
+        "credit": "RGB-Only Safety Filters 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-35619",
+      "remoteUrl": "https://arxiv.org/html/2609.35619v1/figures/pr_curve-new.png",
+      "original": "/media/originals/paper-2609-35619.png",
+      "originalSha256": "caf1ce0739c8c58e60af90b53fd300381d77534bd8faa3b64b00fcea8bdc3fec",
+      "sourceSha256": "caf1ce0739c8c58e60af90b53fd300381d77534bd8faa3b64b00fcea8bdc3fec",
+      "image": {
+        "alt": "CollisionSplatting 与其他方法的精确率召回率曲线",
+        "source": "https://arxiv.org/abs/2609.35619",
+        "credit": "CollisionSplatting 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-35612",
+      "remoteUrl": "https://arxiv.org/html/2609.35612v1/first_fig.png",
+      "original": "/media/originals/paper-2609-35612.png",
+      "originalSha256": "ed4f71fe0c4aa36c6be34dea7ba682845d2407c1dd9859cfb7cdb9f7ef6905b1",
+      "sourceSha256": "ed4f71fe0c4aa36c6be34dea7ba682845d2407c1dd9859cfb7cdb9f7ef6905b1",
+      "image": {
+        "alt": "遥感城市重建结果与性能对比",
+        "source": "https://arxiv.org/abs/2609.35612",
+        "credit": "Remote Sensing Sparse-View 3DGS 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "paper-2609-35573",
+      "remoteUrl": "https://arxiv.org/html/2609.35573v1/Figures/fig_pipeline.png",
+      "original": "/media/originals/paper-2609-35573.png",
+      "originalSha256": "9d25670f360aab70a9cdfb6c8f249547d8cf87eef13effb989a49416c30159b8",
+      "sourceSha256": "9d25670f360aab70a9cdfb6c8f249547d8cf87eef13effb989a49416c30159b8",
+      "image": {
+        "alt": "遗传搜索、训练蒸馏与图像帧选择流程",
+        "source": "https://arxiv.org/abs/2609.35573",
+        "credit": "Less Is More 论文",
+        "fit": "contain"
+      }
+    }
+  ]
+}

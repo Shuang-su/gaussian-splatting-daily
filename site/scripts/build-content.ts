@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import { buildArchive, ROOT } from "../lib/content";
+import { buildShareImages } from "./build-share";
 
 const { index } = await buildArchive();
 const output = JSON.stringify(index, null, 2) + "\n";
@@ -31,3 +32,5 @@ fs.writeFileSync(
     2,
   ) + "\n",
 );
+
+await buildShareImages(index);
