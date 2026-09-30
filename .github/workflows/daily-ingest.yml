@@ -152,5 +152,9 @@ jobs:
             gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/pr-title.txt)"                 --body-file /tmp/daily-summary/pr-body.md
           fi
 
-          echo "Daily content was validated in this workflow; squash-merging PR #$PR_NUMBER."
-          gh pr merge "$PR_NUMBER"             --repo "$GITHUB_REPOSITORY"             --squash             --delete-branch
+          if python scripts/check_editorial.py --date "$DATE"; then
+            echo "The full Daily was validated; squash-merging PR #$PR_NUMBER."
+            gh pr merge "$PR_NUMBER"             --repo "$GITHUB_REPOSITORY"             --squash             --delete-branch
+          else
+            echo "The arXiv research draft remains in PR #$PR_NUMBER for the 13-section editorial pass."
+          fi
