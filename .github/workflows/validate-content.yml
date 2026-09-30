@@ -10,6 +10,7 @@ on:
       - "state/**"
       - "scripts/**"
       - ".github/workflows/**"
+      - "site/**"
 
 permissions:
   contents: read
@@ -19,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
@@ -27,7 +30,46 @@ jobs:
       - name: Validate all Daily files
         run: python scripts/validate_daily.py --all
 
+      - name: Validate editorial completeness
+        run: python scripts/check_editorial.py --all
+
+      - name: Reject changed Daily drafts from publication
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python - <<'PY'
+          import os,re,subprocess
+          paths=subprocess.check_output(['git','diff','--name-only',os.environ['BASE_SHA'],os.environ['HEAD_SHA']],text=True).splitlines()
+          for path in paths:
+            match=re.fullmatch(r'docs/daily/\d{4}/\d{2}/(\d{4}-\d{2}-\d{2})\.md',path)
+            if match:subprocess.run(['python','scripts/check_editorial.py','--date',match.group(1)],check=True)
+          PY
+
+      - name: Check publication failure and retry rules
+        run: python -m unittest discover -s scripts/tests -v
+
       - name: Verify generated index is current
         run: |
           python scripts/build_index.py
           git diff --exit-code -- data/daily-index.json
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install portal dependencies
+        run: npm ci --prefix site
+
+      - name: Verify content links and browser search
+        run: npm test --prefix site
+
+      - name: Build static portal and verify derived metadata
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: |
+          npm run build --prefix site
+          python scripts/verify_export.py
+          git diff --exit-code -- data/portal-index.json

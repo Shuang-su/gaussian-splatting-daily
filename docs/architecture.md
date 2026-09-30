@@ -1,319 +1,47 @@
-# Gaussian Splatting Daily — Product & Automation Architecture
+# 内容门户与每日发布架构
 
-## 1. Product thesis
-
-`gaussian-splatting-daily` should be a **research signal portal**, not just a folder of notes.
-
-The durable contract is:
-
-> **Git is the source of truth, Markdown is the archive, Issues are the run/correction log, Pull Requests are the publication boundary, and the website is a rebuildable presentation layer.**
-
-This keeps the content readable and auditable even if the frontend framework, hosting provider, search engine, or AI layer changes later.
-
-## 2. Core pipeline
+Markdown 是唯一正文；Issue 记录当日研究及失败，PR 是归档边界，Pages 是可重建的展示层。
 
 ```mermaid
 flowchart LR
-    A[Sources] --> B[Normalize + dedupe]
-    B --> C[Optional AI editorial]
-    C --> D[docs/daily/YYYY/MM/date.md]
-    D --> E[Validate]
-    E --> F[Daily Issue]
-    E --> G[automation/daily/date]
-    G --> H[Pull Request]
-    H --> I[Review / Merge]
-    I --> J[Website / Search / Viewer]
+  A[ChatGPT 每天北京时间 08:00] --> B[多源检索与完整中文编辑]
+  B --> C[当日 Markdown 与 Issue]
+  C --> D[内容 PR 与衍生索引]
+  D --> E[校验与静态构建]
+  E --> F[受限 squash merge]
+  F --> G[GitHub Pages]
+  G --> H[公开 SHA 与正文读回]
+  H --> I[成功窗口与前三次观察]
+  J[手动 arXiv 采集] --> K[研究底稿 PR]
+  K --> B
 ```
 
-### Source layer
+## 正文与接口
 
-V1 starts with the arXiv API query for `"gaussian splatting"`. The collector is intentionally small and deterministic. More source adapters can be added later for:
+一个逻辑日期只对应一个 `docs/daily/YYYY/MM/YYYY-MM-DD.md`。首次论文 marker 不含版本号；后续跨日更新链接原论文并说明新增。schema v1 保留 Asia/Tokyo 与 source_count 的原义；调度和日期决策使用北京时间。portal 是可选兼容元数据，摘要、主题、重点、封面、Issue / PR 全部在原 Markdown 中，详见 [schema](schema.md)。
 
-- project/research lab feeds;
-- GitHub repositories and releases;
-- conference project pages;
-- demos and datasets;
-- manually curated links in an inbox.
+构建程序解析 GFM、清理 HTML、生成稳定栏目锚点，将历史 H1 栏目降为 H2；全文、目录、论文、工具、主题、搜索均从同一来源生成。外部链接保留，历史内部 Markdown 链接指回 GitHub；远程图片失败显示可读回退。
 
-Source adapters must normalize into stable IDs before AI processing. The model must never invent canonical IDs, URLs, dates, or repository names.
+## 静态门户
 
-## 3. Repository contract
+Next.js App Router / TypeScript，`output: export`、项目 basePath、trailingSlash 和原生图片。路由为 `/`、`/daily/`、`/daily/YYYY/MM/DD/`、`/papers/`、`/tools/`、`/topics/`、`/topics/[slug]/`、`/search/`。详情和主题预生成，搜索在浏览器读取静态 JSON，支持中文、项目名、论文题名和主题组合筛选，无服务端请求 API。
 
-```text
-gaussian-splatting-daily/
-├── .github/
-│   ├── workflows/
-│   │   ├── daily-ingest.yml
-│   │   └── validate-content.yml
-│   ├── ISSUE_TEMPLATE/
-│   │   └── correction.yml
-│   └── pull_request_template.md
-├── docs/
-│   ├── index.md
-│   ├── architecture.md
-│   ├── schema.md
-│   ├── corrections.md
-│   └── daily/
-│       ├── _template.md
-│       └── YYYY/MM/YYYY-MM-DD.md
-├── data/
-│   ├── sources.yml
-│   └── daily-index.json
-├── state/
-│   └── checkpoint.json
-└── scripts/
-    ├── generate_daily.py
-    ├── validate_daily.py
-    └── build_index.py
-```
+文章优先参考少数派日报的通栏封面、日期牌、导语、重点导读与完整目录和 680px 阅读栏。桌面显示侧边目录；手机收起完整目录，今日重点作为跳转导读，证据与影响按需展开。移动端头条与紧凑图文列表、平板双栏、浅色 / 暗色 / 系统主题按实际视口验证。封面只接受明确选图元数据，不自动把论文第一张图当日报封面。
 
-### Rules
+## 发布边界
 
-1. One canonical Daily file per `Asia/Tokyo` logical date.
-2. Once published, the Daily path does not change.
-3. Published factual corrections use a Correction Issue/PR instead of silent rewriting.
-4. Generated indexes are derivative and must be rebuildable from `docs/`.
-5. Large `.ply`, `.splat`, `.spz`, video and model files do not belong in Git; store URLs/checksums/license metadata instead.
-6. Automation branches are deterministic: `automation/daily/YYYY-MM-DD`.
-7. A rerun for the same day reuses the same Issue/branch/PR where possible.
+`validate-content.yml` 校验 schema、13 栏编辑完整性、占位、无新增说明、来源、索引、锚点和静态构建。历史 09-18–29 兼容原栏目结构；09-30 起要求原 13 类栏目，真实无新增或检索失败允许简短说明检查范围。
 
-## 4. Daily content model
+`daily-automerge.yml` 不 checkout 或执行 PR 代码。只处理同仓库可信作者、main 目标、automation/daily 分支及 daily-publish 标签；文件 allowlist 排除网站代码、schema 与工作流。成功 workflow run 的 head 必须等于 PR 当前 head；通过 validate job 后以 SHA 锁定 squash merge，再显式 dispatch Pages。
 
-Each Daily has YAML frontmatter plus human-readable Markdown.
+`pages.yml` 在 main push 或手动 dispatch 构建部署。部署成果带 deployment.json 的 commit、updatedThrough、dailyCount 及逐日报告源文件 SHA256。`record_publication.py` 仅在已合并完整报告、公开部署 SHA、首页 / 详情 HTML 的身份及源文件 hash 一致，并再次确认 main 未变化后更新成功记录；失败保留窗口。详细运行、切换和回退见 [publication.md](publication.md)。
 
-Stable metadata:
+旧 arXiv 定时入口在 ChatGPT 完整发布实测前暂留；采集器仅形成底稿，不能自动标记完整日报。日常编辑使用 ChatGPT，不依赖 OpenAI API Key。Dot 是可选协调入口，不作为权限绕过或每日依赖。
 
-```yaml
-schema_version: 1
-id: "gsd-2026-09-29"
-date: "2026-09-29"
-timezone: "Asia/Tokyo"
-generated_at: "2026-09-29T08:17:00+09:00"
-status: "draft"
-title: "Gaussian Splatting Daily — 2026-09-29"
-source_count: 8
-ai_enrichment: true
-ai_model: "gpt-5.6-luna"
-```
+## 资料
 
-Each paper block also carries a machine-readable marker:
-
-```html
-<!-- arxiv:2609.12345 -->
-```
-
-That marker is used for cross-day deduplication.
-
-## 5. Daily automation
-
-The scheduled workflow runs at **08:17 Asia/Tokyo** and can also be invoked manually.
-
-Normal success path:
-
-```text
-schedule / manual dispatch
-  -> sync latest main
-  -> reuse/create automation/daily/YYYY-MM-DD
-  -> query arXiv
-  -> exclude IDs already archived on other days
-  -> optional OpenAI enrichment
-  -> write Daily Markdown
-  -> rebuild data/daily-index.json
-  -> validate
-  -> commit + push branch
-  -> reuse/create [Daily] YYYY-MM-DD Issue
-  -> reuse/create PR
-```
-
-### Why validate before opening the PR
-
-Automated PRs created with the repository `GITHUB_TOKEN` can require approval before a `pull_request` workflow runs. Therefore the ingest workflow performs the publication-critical validation **before** creating/updating the PR. A second read-only PR validator remains useful as defense in depth.
-
-## 6. AI boundary
-
-AI is an editorial layer, not the source of truth.
-
-### Program-owned facts
-
-- arXiv ID;
-- canonical URL;
-- title;
-- author list;
-- categories;
-- published/updated timestamps;
-- Daily logical date;
-- GitHub branch/Issue/PR identity.
-
-### Model-owned output
-
-- concise Chinese overview;
-- per-item summary;
-- topic grouping;
-- editorial explanation of why an item matters.
-
-The V1 generator sends only the fetched candidate metadata/abstracts to the model and asks for JSON. If the AI request fails, the run falls back to deterministic metadata instead of blocking the archive.
-
-## 7. Website direction
-
-The intended experience borrows the **information architecture** of research/news portals such as Radiance Fields without cloning its implementation or visual identity.
-
-Recommended routes:
-
-```text
-/
-├── /daily
-├── /daily/YYYY/MM/DD
-├── /papers
-├── /tools
-├── /demos
-├── /topics/3dgs
-├── /topics/4dgs
-├── /topics/rendering
-├── /search
-└── /ask
-```
-
-### Homepage
-
-The homepage should feel like a professional research signal dashboard:
-
-- **Today** — current Daily lead stories;
-- **Featured** — high-signal papers/tools/demos;
-- **Latest papers** — compact research cards;
-- **Tools & viewers** — practical ecosystem updates;
-- **Demos** — visual/interactive items;
-- **Topic chips** — 3DGS, 4DGS, compression, SLAM, dynamic scenes, relighting, avatars, rendering;
-- global search.
-
-### Detail page
-
-```text
-Title
-One-line editorial summary
-Paper / Repo / Demo / 3D badges
-Source metadata
-Editorial body
-Optional interactive Gaussian Splat viewer
-Technical metadata / license / asset format
-Related items
-Ask about this item
-Correction + GitHub provenance
-```
-
-The 3D canvas is progressive enhancement. Titles, authors, summaries, sources and controls must remain semantic HTML for SEO and accessibility.
-
-## 8. Frontend architecture
-
-Long-term target:
-
-```text
-GitHub docs/
-   -> build-time content parser
-   -> search/index data
-   -> Next.js
-       -> static article/topic pages
-       -> search
-       -> OpenGraph/SEO
-       -> optional PlayCanvas/Three.js GS viewer
-       -> optional server-side /api/ask
-```
-
-Start static-first. Dynamic server features should be added only when they provide clear value.
-
-### 3D assets
-
-Large Gaussian Splat assets should live in object storage/CDN. Git stores:
-
-- public asset URL;
-- poster image;
-- format (`spz`, `ply`, `splat`);
-- byte size;
-- checksum;
-- license;
-- source attribution.
-
-On mobile, show the poster first and load the 3D asset only after user interaction.
-
-## 9. Governance
-
-Recommended `main` rules:
-
-- PR required;
-- no force-push;
-- required content validation;
-- CODEOWNER review for workflows/schema/security-sensitive scripts;
-- squash merge for Daily PRs.
-
-V1 can use human merge. Mature automation can switch to a dedicated GitHub App and auto-merge only after required checks.
-
-## 10. Rollout
-
-### Phase 1 — repository baseline
-
-- docs contract;
-- source config;
-- generator;
-- validator;
-- Daily Issue/PR automation.
-
-### Phase 2 — editorial quality
-
-- add `OPENAI_API_KEY`;
-- tune summary prompts;
-- add source adapters;
-- add correction workflow.
-
-### Phase 3 — site
-
-- choose visual direction;
-- build Next.js static frontend from `docs/`;
-- add topic/paper/tool indexes and search.
-
-### Phase 4 — rich research portal
-
-- Gaussian Splat viewer;
-- object storage/CDN;
-- Ask/search assistant;
-- richer demos and project metadata.
-
-## 11. Operational constraints
-
-- arXiv legacy API usage should remain polite and serialized; this project makes one small query per Daily run.
-- Scheduled workflows only become effective after the workflow exists on the default branch.
-- A newly created GitHub repository may require enabling Actions to create pull requests, or supplying a bot token.
-- Public repositories can have inactive scheduled workflows disabled after prolonged repository inactivity.
-- The Daily archive should remain useful even when AI, the website, or a source API is temporarily unavailable.
-
-## References
-
-- GitHub Actions workflow syntax: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
-- GitHub GITHUB_TOKEN behavior: https://docs.github.com/en/actions/concepts/security/github_token
-- GitHub CLI PR creation: https://cli.github.com/manual/gh_pr_create
-- arXiv API manual: https://info.arxiv.org/help/api/user-manual.html
-- arXiv API terms: https://info.arxiv.org/help/api/tou.html
-- Radiance Fields: https://radiancefields.com/
-- Next.js static export: https://nextjs.org/docs/app/guides/static-exports
-- PlayCanvas Gaussian Splatting: https://developer.playcanvas.com/user-manual/gaussian-splatting/
-- OpenAI Responses API: https://developers.openai.com/api/docs/guides/text
-
-
-## 12. Image discovery
-
-Daily entries may render source-owned research figures.
-
-V1 image policy:
-
-1. fetch the paper's arXiv HTML page only for selected Daily items;
-2. discover the first usable image inside the first figure;
-3. keep the image remote rather than copying paper assets into Git;
-4. store/render the figure caption as alt text when available;
-5. place source attribution directly below the image;
-6. treat image discovery as best-effort: failure must not fail the Daily.
-
-The site must use a text/poster fallback when a remote figure is unavailable. Future adapters can prefer an official project-page OpenGraph/hero image before falling back to the arXiv figure.
-
-## 13. Automatic merge policy
-
-A Daily PR is still created for provenance, discussion, and rollback, but the scheduled workflow may squash-merge it automatically after the publication-critical validator succeeds inside the same workflow.
-
-This deliberately keeps the Issue/PR audit trail while removing a daily manual merge requirement. Workflow/schema/security changes remain normal human-reviewed repository changes and are not produced by the Daily generator.
+- [少数派日报文章](https://sspai.com/post/115197)、[派早报列表](https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5)
+- [Radiance Fields](https://radiancefields.com/)
+- [Next.js 静态导出](https://nextjs.org/docs/app/guides/static-exports)
+- [GitHub Pages 自定义工作流](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [GITHUB_TOKEN 触发限制](https://docs.github.com/en/actions/concepts/security/github_token)

@@ -15,7 +15,7 @@ Closes #
 ## Checklist
 
 - [ ] Daily frontmatter / path validation 通过
-- [ ] 逻辑日期使用 Asia/Tokyo
+- [ ] 报告日期按北京时间判断；schema v1 timezone 兼容 Asia/Tokyo
 - [ ] canonical arXiv IDs 无跨日重复
 - [ ] 关键事实可追溯到 primary source
 - [ ] 未提交大型 .ply/.splat/.spz/video 二进制
