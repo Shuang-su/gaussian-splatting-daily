@@ -150,7 +150,7 @@ export default function ImageGallery({ images, children }: { images: SourceImage
     if (!strip || !selected) return;
     const stripRect = strip.getBoundingClientRect();
     const selectedRect = selected.getBoundingClientRect();
-    if (selectedRect.left < stripRect.left || selectedRect.right > stripRect.right) strip.scrollTo({ left: strip.scrollLeft + selectedRect.left - stripRect.left - (strip.clientWidth - selected.clientWidth) / 2, behavior: "smooth" });
+    if (selectedRect.left < stripRect.left || selectedRect.right > stripRect.right) strip.scrollTo({ left: strip.scrollLeft + selectedRect.left - stripRect.left - (strip.clientWidth - selected.clientWidth) / 2, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
   }, [index, isOpen]);
   useEffect(() => () => {
     if (animation.current !== null) {
