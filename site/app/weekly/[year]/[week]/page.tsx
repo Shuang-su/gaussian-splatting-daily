@@ -7,11 +7,11 @@ import Subscription from "../../../../components/Subscription";
 export const dynamicParams = false;
 type RouteParams = Promise<{ year: string; week: string }>;
 export async function generateStaticParams() {
-  return buildWeekly((await loadArchive()).index.daily).map(week => ({ year: String(week.year), week: String(week.week).padStart(2,"0") }));
+  return buildWeekly((await loadArchive()).articles).map(week => ({ year: String(week.year), week: String(week.week).padStart(2,"0") }));
 }
 async function digest(params: RouteParams) {
   const p = await params;
-  return buildWeekly((await loadArchive()).index.daily).find(week => String(week.year) === p.year && String(week.week).padStart(2,"0") === p.week);
+  return buildWeekly((await loadArchive()).articles).find(week => String(week.year) === p.year && String(week.week).padStart(2,"0") === p.week);
 }
 export async function generateMetadata({ params }: { params: RouteParams }) {
   const week = await digest(params);

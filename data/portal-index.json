@@ -4,7 +4,7 @@
   "daily": [
     {
       "id": "gsd-2026-09-30",
-      "contentHash": "0a62c26db41637abb455c04f03619e9a8659a9a17153cf5e8ef37616bd53d2ac",
+      "contentHash": "1c5259195c2c7ac3fa5ad64340de2c5a67d03e8e042de34fa2ea4b302f767b9a",
       "date": "2026-09-30",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-30",
       "headline": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
@@ -153,7 +153,7 @@
     },
     {
       "id": "gsd-2026-09-29",
-      "contentHash": "d2a0d86268a4c51c7a3c4150c7aad70520e4c0f0bcb25dc678c4b47b653e8805",
+      "contentHash": "6e81b2b664cf8ce848e9bd360c4f86db0e597da969f23add3ebb174fac508f84",
       "date": "2026-09-29",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-29",
       "headline": "PlayCanvas 调整流式 LOD，SuperSplat Viewer 1.36 发布",
@@ -251,7 +251,7 @@
     },
     {
       "id": "gsd-2026-09-28",
-      "contentHash": "8e8d2d133bc166065545088fab2fbd3da1407223ccded1023292273ccc94f62c",
+      "contentHash": "e3ba33aefbf845ce5fdcbf09efc051592a9ff0c01d3c48c2500e49546b12f1b7",
       "date": "2026-09-28",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-28",
       "headline": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
@@ -350,7 +350,7 @@
     },
     {
       "id": "gsd-2026-09-27",
-      "contentHash": "5dda4a8acf285b76fbfd354e7c018f866aa588cb1c5057ec7242bfc58390aa2a",
+      "contentHash": "e9d32564ab05cc5218bbdadf7a1c294067957999faa30babe6c48d49229445e5",
       "date": "2026-09-27",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-27",
       "headline": "SuperSplat 合入随机渲染，LichtFeld 降低训练显存",
@@ -467,7 +467,7 @@
     },
     {
       "id": "gsd-2026-09-26",
-      "contentHash": "23b5d5803aa9db48e3948e59da42b3c784153e37a42089e15e56ccc843483f38",
+      "contentHash": "0ef1b50a8d186d133bdb3c59907352c1e381fa2bbdced561c32ef08e15dc31b6",
       "date": "2026-09-26",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-26",
       "headline": "LichtFeld 开发分支加入 Metal 张量后端",
@@ -510,7 +510,7 @@
     },
     {
       "id": "gsd-2026-09-25",
-      "contentHash": "c96c1e042b3cad52d39400bc6439c12c8dfd4c3292d07c73341680aed0af0f04",
+      "contentHash": "d8826a413434b2846b35525e0953c9bba7a593714f662bbd3a6d29acb6cf0f40",
       "date": "2026-09-25",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-25",
       "headline": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
@@ -598,7 +598,7 @@
     },
     {
       "id": "gsd-2026-09-24",
-      "contentHash": "97b19ca819ef00b455e5c4856fb38aaa71f41cefd3573e0953bb40f86d12205f",
+      "contentHash": "fd241575b72fd2c96ce494cac64307eeac20a23335dcb0cb4cfb2ace8ad914e6",
       "date": "2026-09-24",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-24",
       "headline": "ROCm GSplat 已可安装，SuperSplat Viewer 1.35 发布",
@@ -650,7 +650,7 @@
     },
     {
       "id": "gsd-2026-09-23",
-      "contentHash": "7770dfcdb4bbfbb0f984d578048136f0220331b04f1c0605ca241ade0dff1599",
+      "contentHash": "286cd062fa244812516ee1dfa56eefcaabec2e05d17fe1dca0a90b0f0c5d01e5",
       "date": "2026-09-23",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-23",
       "headline": "SuperSplat 优化大 PLY 加载，SplatTransform 3.6 改进 SOG 写入",
@@ -717,7 +717,7 @@
     },
     {
       "id": "gsd-2026-09-22",
-      "contentHash": "733095d25c8444809e80933505b41c7a89db5dd3e414f659634ccbb725050477",
+      "contentHash": "98d72c4280af4c67e474843394b6e339416bc241177473d4196c5fda4ed5bef5",
       "date": "2026-09-22",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-22",
       "headline": "SuperSplat Viewer 1.32 发布，SplatTransform 支持轨迹渲染",
@@ -769,7 +769,7 @@
     },
     {
       "id": "gsd-2026-09-21",
-      "contentHash": "8a8dbf1123540f43222fc1faa1be772d6d8c19eddc2d154c5bf4a8249ab936a2",
+      "contentHash": "258e1ab22123ea25b350c9c16c09633bf3fdce5a37d13632bd67efee5d9afdc2",
       "date": "2026-09-21",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-21",
       "headline": "LichtFeld 提前启动大数据集训练，Spirula 发布正式版",
@@ -880,7 +880,7 @@
     },
     {
       "id": "gsd-2026-09-20",
-      "contentHash": "dd246e0a83b93dede0cf244368e1017c798f74e77528e3f872f3d988b81cebcc",
+      "contentHash": "db2e6d8a727b06fdbc5d2f2d98dcd0751d413f5214ae2554cc69f1f9f7db697a",
       "date": "2026-09-20",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-20",
       "headline": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
@@ -978,7 +978,7 @@
     },
     {
       "id": "gsd-2026-09-19",
-      "contentHash": "191779b7d9ff384f0984ab0053bbefd5917ba1dc89fe06bb9e152f9e8e4200de",
+      "contentHash": "b65a651512220848eba914fc101a459cd458abdc06de2f688ea9b8904e90a767",
       "date": "2026-09-19",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-19",
       "headline": "PlayCanvas 加入随机透明度，Blender 支持 OpenUSD 高斯",
@@ -1060,7 +1060,7 @@
     },
     {
       "id": "gsd-2026-09-18",
-      "contentHash": "547145b231edf635ad84e16cd8cb9158867136f5b51034d387fd6764ce6cba9d",
+      "contentHash": "0417e49b33cc3c6fb3d03d24a1d3c1418eb22ab87c374cfa57b72c0e76272e2f",
       "date": "2026-09-18",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-18",
       "headline": "Blender 修复高斯导入，PlayCanvas 减少阴影计算",

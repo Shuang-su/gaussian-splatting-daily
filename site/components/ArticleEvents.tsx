@@ -1,0 +1,23 @@
+import type { Article, ArticleEvent } from "../lib/types";
+import ArticleBody from "./ArticleBody";
+import Discussion from "./Discussion";
+import EventTags from "./EventTags";
+import SourceImage from "./SourceImage";
+export const EVENT_GROUPS = {main:"主要新闻",brief:"简讯",paper:"论文",analysis:"分析与实践"};
+export default function ArticleEvents({article}:{article:Article}) {
+  return <div className="article-events">{(Object.keys(EVENT_GROUPS) as ArticleEvent["group"][]).map(group => {
+    const events=article.events?.filter(event=>event.group===group) || [];
+    if (!events.length) return null;
+    return <section key={group} className={`event-group group-${group}`} id={`group-${group}`}>
+      {group!=="main" && <h2 className="event-group-title">{EVENT_GROUPS[group]}</h2>}
+      {group==='analysis' && article.introductionHtml && <div className="analysis-introduction"><ArticleBody html={article.introductionHtml}/></div>}
+      {events.map(event=><section className="news-event" key={event.id} id={event.anchor} data-event-id={event.id}>
+        {!(group==='analysis' && events.length===1 && event.title===EVENT_GROUPS.analysis) && <h2 className="event-title">{event.title}</h2>}
+        <ArticleBody html={event.html}/>
+        {event.images?.map(image=><div className="event-figure" key={image.originalUrl || image.url}><SourceImage image={image} caption sizes="(max-width: 767px) calc(100vw - 48px), 680px" /></div>)}
+        <EventTags tags={event.tags}/>
+        <Discussion dailyId={article.id} date={article.date} eventId={event.id} anchor={event.anchor}/>
+      </section>)}
+    </section>;
+  })}</div>;
+}

@@ -15,6 +15,7 @@ import type { Root as MdRoot, RootContent } from "mdast";
 import type { Article, Daily, Entry, PortalIndex, SourceImage } from "./types";
 import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
+import { renderEvents } from "./editorial";
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { SITE_URL } from "./catalog";
@@ -49,8 +50,14 @@ const LEGACY_PAPER_TITLES: Record<string, string> = {
 };
 function loadImageManifest(root: string): ImageManifest {
   const file = path.join(root, "site/public/media/manifest.json");
-  if (!fs.existsSync(file)) return {};
-  return (JSON.parse(fs.readFileSync(file, "utf8")) as { images?: ImageManifest }).images || {};
+  const read = (file: string) => (JSON.parse(fs.readFileSync(file,"utf8")) as {images?:ImageManifest}).images || {};
+  const images = fs.existsSync(file) ? read(file) : {};
+  const dailyRoot = path.join(root,"site/public/daily-media");
+  if (fs.existsSync(dailyRoot)) for (const date of fs.readdirSync(dailyRoot).sort()) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) throw Error(`Invalid daily-media directory: ${date}`);
+    Object.assign(images, read(path.join(dailyRoot,date,"manifest.json")));
+  }
+  return images;
 }
 function resolveImage(image: SourceImage, media: ImageManifest): SourceImage {
   const mapped = media[image.originalUrl || image.url];
@@ -102,6 +109,7 @@ export async function parseArticle(
   let introductionHtml = "";
   let archiveHtml = "";
   let readingGuide: Article["readingGuide"];
+  let events: Article["events"];
   const serialize = (children: HastRoot["children"]) =>
     String(
       unified().use(rehypeStringify).stringify({ type: "root", children }),
@@ -307,6 +315,16 @@ export async function parseArticle(
       const heading = root.children[start] as Element;
       readingGuide = { id: String(heading.properties.id), title: "今日最值得看", rows, leadingHtml: "", bodyHtml, afterHtml: "" };
     }
+    if (portal.layout === "events") {
+      if (!portal.editorial || portal.editorial.version !== 1) throw Error(`${filePath}: invalid editorial layout`);
+      const eventNodes = root.children.map(splitProcessParagraph).filter((node): node is HastRoot["children"][number] => Boolean(node));
+      const layout = renderEvents(portal.editorial, tree.children, content, eventNodes, readingGuide, filePath);
+      events = layout.events.map(event => ({...event, images: event.images?.map(image => resolveImage(image, media))}));
+      introductionHtml = layout.introductionHtml;
+      archiveHtml = layout.archiveHtml + serialize([...new Map(archive.filter(node => !prefix.has(node)).map(node => [serialize([node]), node])).values()]);
+      for (const event of events) { targets.add(event.anchor); for (const alias of event.aliases || []) targets.add(alias); }
+      bodyHtml = events.map(event => `<section id="${event.anchor}">${event.html}</section>`).join("\n");
+    }
     root.children = root.children.flatMap((node) => [...(additions.get(node) || []), node]);
   };
   const renderer = unified()
@@ -415,6 +433,7 @@ export async function parseArticle(
     archiveHtml,
     paperSummaries,
     readingGuide,
+    events,
   };
 }
 let archivePromise:
@@ -513,7 +532,7 @@ export async function buildArchive(root = ROOT) {
     (a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id),
   );
   const daily: Daily[] = published.map(
-    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, ...d }) => d,
+    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, events, ...d }) => d,
   );
   const index: PortalIndex = {
     schemaVersion: 1,

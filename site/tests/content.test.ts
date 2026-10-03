@@ -56,10 +56,11 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
   const latest=articles.find(a=>a.date==='2026-09-30')!;
   assert.equal(latest.readingGuide?.rows.length,7);
   const guideHtml = renderToStaticMarkup(createElement(ReadingGuide, { article: latest }));
-  const columns = latest.toc.filter(t => t.depth === 2 && /^\d+\./.test(t.title));
-  assert.equal(columns.length, 13);
-  for (const column of columns) assert.ok(guideHtml.includes(`href="#${column.id}"`), `full contents omits ${column.title}`);
-  for(const row of latest.readingGuide!.rows){assert.ok(latest.targets.includes(row.anchor));assert.equal(row.details.length,2);assert.ok(row.sources.length);assert.ok(`${latest.introductionHtml}${latest.bodyHtml}`.includes(`id="${row.anchor}"`));}
+  for (const event of latest.events!.filter(e => e.group === 'main')) {
+    assert.ok(guideHtml.includes(`href="#${event.anchor}"`));
+    assert.ok(guideHtml.includes(event.judgment));
+  }
+  assert.ok(!guideHtml.includes('完整目录'));
   assert.ok(!latest.readingGuide!.bodyHtml.includes('overview-table'));
   assert.equal(latest.readingGuide!.leadingHtml, '');
   assert.ok(latest.introductionHtml.includes('观察截至'));

@@ -10,7 +10,7 @@ const output = JSON.stringify(index, null, 2) + "\n";
 fs.mkdirSync(path.join(ROOT, "site/public"), { recursive: true });
 fs.writeFileSync(path.join(ROOT, "data/portal-index.json"), output);
 fs.writeFileSync(path.join(ROOT, "site/public/content-index.json"), output);
-const weeks = buildWeekly(index.daily);
+const weeks = buildWeekly(articles);
 const feeds = buildFeeds(articles, weeks);
 fs.mkdirSync(path.join(ROOT, "site/public/feeds"), { recursive: true });
 for (const [kind, xml] of Object.entries(feeds)) fs.writeFileSync(path.join(ROOT, `site/public/feeds/${kind}.xml`), xml);

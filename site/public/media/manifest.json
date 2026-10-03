@@ -467,6 +467,150 @@
           "width": 1600
         }
       ]
+    },
+    "https://raw.githubusercontent.com/xiaobiaodu/Mobile-4DGS/675f0a827764383edd749d2c98906761e0fc28fd/assets/method.png": {
+      "alt": "Mobile-4DGS 的二阶时间运动与高斯时间激活窗口",
+      "source": "https://github.com/xiaobiaodu/Mobile-4DGS/tree/675f0a827764383edd749d2c98906761e0fc28fd",
+      "credit": "Mobile-4DGS 作者 · 9 月 29 日仓库版本的方法图",
+      "fit": "contain",
+      "url": "/media/images/mobile-4dgs-method-960.webp",
+      "originalUrl": "/media/originals/mobile-4dgs-method.png",
+      "width": 1214,
+      "height": 498,
+      "variants": [
+        {
+          "url": "/media/images/mobile-4dgs-method-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/mobile-4dgs-method-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/mobile-4dgs-method-1214.webp",
+          "width": 1214
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/001-Wang/PrecisionReach-GS/da67eefe089ebdaffb33d72e628f2ba533827586/assets/images/workflow.png": {
+      "alt": "PrecisionReach-GS 工作流",
+      "source": "https://github.com/001-Wang/PrecisionReach-GS/tree/da67eefe089ebdaffb33d72e628f2ba533827586",
+      "credit": "PrecisionReach-GS 作者 · 9 月 17 日仓库版本",
+      "fit": "contain",
+      "url": "/media/images/precisionreach-workflow-960.webp",
+      "originalUrl": "/media/originals/precisionreach-workflow.png",
+      "width": 2400,
+      "height": 1350,
+      "variants": [
+        {
+          "url": "/media/images/precisionreach-workflow-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/precisionreach-workflow-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/precisionreach-workflow-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/by-lastime/IA-GS/58278f55c3c0325d12c9e628edec0eb18438eca5/assets/screenshots/studio.png": {
+      "alt": "IA’GS 的照片导入与新建重建任务界面",
+      "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+      "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+      "fit": "contain",
+      "url": "/media/images/iags-studio-960.webp",
+      "originalUrl": "/media/originals/iags-studio.png",
+      "width": 1500,
+      "height": 850,
+      "variants": [
+        {
+          "url": "/media/images/iags-studio-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/iags-studio-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/iags-studio-1500.webp",
+          "width": 1500
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/ooolabdev/ooosplat/0e19a3b74122c3bab0103bc2ad3140da0853c74f/assets/screenshots/task-workspace.png": {
+      "alt": "OOOSplat 创建新任务与历史任务界面",
+      "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+      "credit": "OOOSplat 0.3.0 任务界面（后续 README 沿用）；用于说明任务创建，不展示新版补拍功能",
+      "fit": "contain",
+      "url": "/media/images/ooosplat-workspace-960.webp",
+      "originalUrl": "/media/originals/ooosplat-workspace.png",
+      "width": 2560,
+      "height": 1393,
+      "variants": [
+        {
+          "url": "/media/images/ooosplat-workspace-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/ooosplat-workspace-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/ooosplat-workspace-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/ooolabdev/ooosplat/0e19a3b74122c3bab0103bc2ad3140da0853c74f/assets/screenshots/gaussian-preview.png": {
+      "alt": "OOOSplat 高斯模型预览与变换调整界面",
+      "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+      "credit": "OOOSplat 既有预览界面 · 不作为 Auto Optimize 的性能结果",
+      "fit": "contain",
+      "url": "/media/images/ooosplat-preview-960.webp",
+      "originalUrl": "/media/originals/ooosplat-preview.png",
+      "width": 2560,
+      "height": 1393,
+      "variants": [
+        {
+          "url": "/media/images/ooosplat-preview-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/ooosplat-preview-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/ooosplat-preview-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://raw.githubusercontent.com/openvdb/fvdb-core/3c9e2727678faafa88a0e9589de831c290c37133/docs/imgs/fvdb_teaser.jpg": {
+      "alt": "fVDB 将稀疏体素与 AI 运算用于三维生成、重建和场景分割",
+      "source": "https://github.com/openvdb/fvdb-core/tree/3c9e2727678faafa88a0e9589de831c290c37133",
+      "credit": "fVDB 项目概览 · 用于说明数据表示，非 0.6.0 性能结果",
+      "fit": "contain",
+      "url": "/media/images/fvdb-overview-960.webp",
+      "originalUrl": "/media/originals/fvdb-overview.jpg",
+      "width": 2880,
+      "height": 1620,
+      "variants": [
+        {
+          "url": "/media/images/fvdb-overview-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/fvdb-overview-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/fvdb-overview-1600.webp",
+          "width": 1600
+        }
+      ]
     }
   },
   "assets": [
@@ -755,6 +899,84 @@
         "alt": "遗传搜索、训练蒸馏与图像帧选择流程",
         "source": "https://arxiv.org/abs/2609.35573",
         "credit": "Less Is More 论文",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "mobile-4dgs-method",
+      "remoteUrl": "https://raw.githubusercontent.com/xiaobiaodu/Mobile-4DGS/675f0a827764383edd749d2c98906761e0fc28fd/assets/method.png",
+      "original": "/media/originals/mobile-4dgs-method.png",
+      "originalSha256": "e2c3da5fe84e8c61a13e5aa41e8edf5255bee7bfed74780ede33e653f3023bb2",
+      "sourceSha256": "e2c3da5fe84e8c61a13e5aa41e8edf5255bee7bfed74780ede33e653f3023bb2",
+      "image": {
+        "alt": "Mobile-4DGS 的二阶时间运动与高斯时间激活窗口",
+        "source": "https://github.com/xiaobiaodu/Mobile-4DGS/tree/675f0a827764383edd749d2c98906761e0fc28fd",
+        "credit": "Mobile-4DGS 作者 · 9 月 29 日仓库版本的方法图",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "precisionreach-workflow",
+      "remoteUrl": "https://raw.githubusercontent.com/001-Wang/PrecisionReach-GS/da67eefe089ebdaffb33d72e628f2ba533827586/assets/images/workflow.png",
+      "original": "/media/originals/precisionreach-workflow.png",
+      "originalSha256": "56ea6de04ad536d4f30067e0b41a9a33ee037a8d51316411754d9d0592b3cb70",
+      "sourceSha256": "56ea6de04ad536d4f30067e0b41a9a33ee037a8d51316411754d9d0592b3cb70",
+      "image": {
+        "alt": "PrecisionReach-GS 工作流",
+        "source": "https://github.com/001-Wang/PrecisionReach-GS/tree/da67eefe089ebdaffb33d72e628f2ba533827586",
+        "credit": "PrecisionReach-GS 作者 · 9 月 17 日仓库版本",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "iags-studio",
+      "remoteUrl": "https://raw.githubusercontent.com/by-lastime/IA-GS/58278f55c3c0325d12c9e628edec0eb18438eca5/assets/screenshots/studio.png",
+      "original": "/media/originals/iags-studio.png",
+      "originalSha256": "16ed64047bb31aedf540aae5e04660a460d4ec1c8107caa8b7dc495eaf0035ef",
+      "sourceSha256": "16ed64047bb31aedf540aae5e04660a460d4ec1c8107caa8b7dc495eaf0035ef",
+      "image": {
+        "alt": "IA’GS 的照片导入与新建重建任务界面",
+        "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+        "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "ooosplat-workspace",
+      "remoteUrl": "https://raw.githubusercontent.com/ooolabdev/ooosplat/0e19a3b74122c3bab0103bc2ad3140da0853c74f/assets/screenshots/task-workspace.png",
+      "original": "/media/originals/ooosplat-workspace.png",
+      "originalSha256": "c7486c75b2201d83b75004248d2e1705dac7d6a78dcbf668ec5754c4069d9698",
+      "sourceSha256": "c7486c75b2201d83b75004248d2e1705dac7d6a78dcbf668ec5754c4069d9698",
+      "image": {
+        "alt": "OOOSplat 创建新任务与历史任务界面",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "credit": "OOOSplat 0.3.0 任务界面（后续 README 沿用）；用于说明任务创建，不展示新版补拍功能",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "ooosplat-preview",
+      "remoteUrl": "https://raw.githubusercontent.com/ooolabdev/ooosplat/0e19a3b74122c3bab0103bc2ad3140da0853c74f/assets/screenshots/gaussian-preview.png",
+      "original": "/media/originals/ooosplat-preview.png",
+      "originalSha256": "0583a5f03b1e29e6b37db244c25ff298ff0adaf6cdfe0513ad2356a6b7e6a1ae",
+      "sourceSha256": "0583a5f03b1e29e6b37db244c25ff298ff0adaf6cdfe0513ad2356a6b7e6a1ae",
+      "image": {
+        "alt": "OOOSplat 高斯模型预览与变换调整界面",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "credit": "OOOSplat 既有预览界面 · 不作为 Auto Optimize 的性能结果",
+        "fit": "contain"
+      }
+    },
+    {
+      "key": "fvdb-overview",
+      "remoteUrl": "https://raw.githubusercontent.com/openvdb/fvdb-core/3c9e2727678faafa88a0e9589de831c290c37133/docs/imgs/fvdb_teaser.jpg",
+      "original": "/media/originals/fvdb-overview.jpg",
+      "originalSha256": "a585bc8f2e603c0a18744b3d3da3a1dedac902d08dd91252b4fdc809e3258cd5",
+      "sourceSha256": "a585bc8f2e603c0a18744b3d3da3a1dedac902d08dd91252b4fdc809e3258cd5",
+      "image": {
+        "alt": "fVDB 将稀疏体素与 AI 运算用于三维生成、重建和场景分割",
+        "source": "https://github.com/openvdb/fvdb-core/tree/3c9e2727678faafa88a0e9589de831c290c37133",
+        "credit": "fVDB 项目概览 · 用于说明数据表示，非 0.6.0 性能结果",
         "fit": "contain"
       }
     }

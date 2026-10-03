@@ -37,15 +37,25 @@ export function isoWeek(date: string) {
 export const weeklyUrl = (digest: Pick<WeeklyDigest, "year" | "week">) => `/weekly/${digest.year}/${String(digest.week).padStart(2,"0")}/`;
 export const weeklyTitle = (digest: WeeklyDigest) => `${digest.year} 年第 ${digest.week} 周 · 高斯日报周汇总`;
 export const coverageLabel = (digest: WeeklyDigest) => `${digest.coverageStart} — ${digest.coverageEnd} · ${digest.reports.length} 期日报`;
-type FeedReport = Daily & Partial<Pick<Article, "readingGuide">>;
+type FeedReport = Daily & Partial<Pick<Article, "readingGuide" | "events">>;
+const plainText = (html: string) => html.replace(/<[^>]+>/g," ").replaceAll("&amp;","&").replaceAll("&lt;","<").replaceAll("&gt;",">").replaceAll("&quot;",'"').replace(/\s+/g," ").trim();
+export function editorialHighlights(report: FeedReport): Entry[] {
+  if (!report.events) return report.highlights;
+  const entries = report.events.filter(event=>event.group === "main").map(event=>{
+    const old = report.highlights.find(entry=>entry.id === event.id);
+    const links = [...event.sourceText.matchAll(/https:\/\/[^\s)<>"。]+/g)].map(match=>match[0]);
+    return { id:event.id,kind:old?.kind || "news",title:event.title,summary:plainText(event.judgment),date:report.date,source:old?.source || links.find(url=>!url.startsWith("https://chatgpt.com/")) || links[0] || SITE_URL + dailyUrl(report.date),anchor:event.anchor,topics:old?.topics || report.topics,priority:event.priority,image:event.images?.[0] || old?.image } satisfies Entry;
+  });
+  return [...entries,...report.highlights.filter(old=>!entries.some(entry=>entry.id === old.id))];
+}
 function published<T extends Daily>(daily: T[]) {
   return daily.filter(d => ["published","corrected"].includes(d.status)).sort((a,b) => b.date.localeCompare(a.date));
 }
-export function buildWeekly(daily: Daily[]): WeeklyDigest[] {
+export function buildWeekly(daily: FeedReport[]): WeeklyDigest[] {
   const reports = published(daily);
   if (!reports.length) return [];
   const latestMonday = monday(reports[0].date);
-  const groups = new Map<string, Daily[]>();
+  const groups = new Map<string, FeedReport[]>();
   for (const report of reports) {
     const start = monday(report.date);
     if (start >= latestMonday) continue;
@@ -56,7 +66,7 @@ export function buildWeekly(daily: Daily[]): WeeklyDigest[] {
   return [...groups.entries()].map(([startDate, reports]) => {
     const week = isoWeek(startDate);
     const seen = new Set<string>();
-    const highlights = reports.flatMap(report => report.highlights).filter(entry => { if (seen.has(entry.id)) return false; seen.add(entry.id); return true; });
+    const highlights = reports.flatMap(report => editorialHighlights(report)).filter(entry => { if (seen.has(entry.id)) return false; seen.add(entry.id); return true; });
     const releaseDate = published(daily).filter(report => report.date > week.endDate).at(-1)!.date;
     return { ...week, id: `gsd-weekly-${week.year}-${String(week.week).padStart(2,"0")}`, coverageStart: reports.at(-1)!.date, coverageEnd: reports[0].date, releaseDate, reports, highlights };
   }).sort((a,b) => b.startDate.localeCompare(a.startDate));
@@ -67,8 +77,8 @@ export function escapeXml(text: string) {
 const htmlLink = (url: string, title: string) => `<a href="${escapeXml(url)}">${escapeXml(title)}</a>`;
 const reportDate = (date: string) => new Date(`${date}T00:00:00+08:00`).toUTCString();
 export function dailyDescription(daily: FeedReport) {
-  const events = daily.readingGuide?.rows.map(row => ({ title: row.title, url: `${dailyUrl(daily.date)}#${row.anchor}` })) || daily.highlights.map(entry => ({ title: entry.title, url: entryUrl(entry) }));
-  return `<p>${escapeXml(daily.summary)}</p>${events.length ? `<h2>今日最值得看</h2><ol>${events.map(entry => `<li>${htmlLink(SITE_URL + entry.url,entry.title)}</li>`).join("")}</ol>` : ""}<p>${htmlLink(SITE_URL + dailyUrl(daily.date),"阅读全文")}</p>`;
+  const events = daily.events?.filter(event=>event.group === "main").map(event=>({ title:event.title,summary:plainText(event.judgment),url:`${dailyUrl(daily.date)}#${event.anchor}` })) || daily.readingGuide?.rows.map(row => ({ title: row.title, summary: "", url: `${dailyUrl(daily.date)}#${row.anchor}` })) || daily.highlights.map(entry => ({ title: entry.title, summary: "", url: entryUrl(entry) }));
+  return `<p>${escapeXml(daily.summary)}</p>${events.length ? `<h2>今日最值得看</h2><ol>${events.map(entry => `<li>${htmlLink(SITE_URL + entry.url,entry.title)}${entry.summary ? `<p>${escapeXml(entry.summary)}</p>` : ""}</li>`).join("")}</ol>` : ""}<p>${htmlLink(SITE_URL + dailyUrl(daily.date),"阅读全文")}</p>`;
 }
 export function weeklyDescription(week: WeeklyDigest) {
   return `<p>${escapeXml(coverageLabel(week))}</p><h2>本周日报</h2>${week.reports.map(report => `<p>${escapeXml(report.date)} · ${htmlLink(SITE_URL + dailyUrl(report.date),report.headline)}</p><p>${escapeXml(report.summary)}</p>`).join("")}${week.highlights.length ? `<h2>本周事件</h2><ul>${week.highlights.map(entry => `<li>${escapeXml(entry.date)} · ${htmlLink(SITE_URL + entryUrl(entry),entry.title)} — ${escapeXml(entry.summary)}</li>`).join("")}</ul>` : ""}<p>${htmlLink(SITE_URL + weeklyUrl(week),"阅读全文")}</p>`;

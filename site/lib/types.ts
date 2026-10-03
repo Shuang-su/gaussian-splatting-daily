@@ -43,6 +43,7 @@ export interface Daily {
   unresolvedSources: number;
 }
 export interface Article extends Daily {
+  events?: ArticleEvent[];
   html: string;
   bodyHtml: string;
   text: string;
@@ -82,4 +83,39 @@ export interface PortalIndex {
     url: string;
     text: string;
   }[];
+}
+
+export interface EventTags {
+  techniques: string[];
+  projects: string[];
+  content: string[];
+  sources: string[];
+}
+export interface EditorialEvent {
+  id: string;
+  anchor: string;
+  title: string;
+  group: "main" | "brief" | "paper" | "analysis";
+  blocks: string[];
+  aliases?: string[];
+  guideRows?: number[];
+  judgment?: string;
+  priority?: string;
+  tags: EventTags;
+  hideFirstHeading?: boolean;
+  images?: SourceImage[];
+}
+export interface ArticleEvent extends EditorialEvent {
+  html: string;
+  judgment: string;
+  context: {label: string; html: string}[];
+  sourceText: string;
+  sections: {id:string; title:string}[];
+}
+export interface EditorialLayout {
+  version: 1;
+  events: EditorialEvent[];
+  introduction: string[];
+  archive: string[];
+  omit: string[];
 }

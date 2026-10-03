@@ -23,22 +23,27 @@ interface MediaManifest {
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = path.join(siteRoot, "public");
-const mediaRoot = path.join(publicRoot, "media");
+const dateArg = process.argv.indexOf("--date");
+const reportDate = dateArg < 0 ? undefined : process.argv[dateArg + 1];
+if (dateArg >= 0 && !/^\d{4}-\d{2}-\d{2}$/.test(reportDate || "")) throw Error("Provide --date YYYY-MM-DD");
+const mediaRoot = reportDate ? path.join(publicRoot,"daily-media",reportDate) : path.join(publicRoot, "media");
+const prefix = reportDate ? `/daily-media/${reportDate}` : "/media";
+const outputRoot = reportDate ? mediaRoot : path.join(mediaRoot,"images");
 const manifestFile = path.join(mediaRoot, "manifest.json");
 const manifest: MediaManifest = JSON.parse(await fs.readFile(manifestFile, "utf8"));
 const images: Record<string, SourceImage> = {};
 
-await fs.mkdir(path.join(mediaRoot, "images"), { recursive: true });
+await fs.mkdir(outputRoot, { recursive: true });
 
 for (const asset of manifest.assets) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(asset.key)) {
     throw new Error(`Invalid media key: ${asset.key}`);
   }
-  if (!asset.original.startsWith("/media/originals/")) {
+  if (!asset.original.startsWith(reportDate ? `${prefix}/` : "/media/originals/")) {
     throw new Error(`Invalid original path: ${asset.original}`);
   }
   const original = path.resolve(publicRoot, `.${asset.original}`);
-  if (!original.startsWith(path.join(mediaRoot, "originals") + path.sep)) {
+  if (!original.startsWith((reportDate ? mediaRoot : path.join(mediaRoot, "originals")) + path.sep)) {
     throw new Error(`Original is outside media/originals: ${asset.key}`);
   }
   const bytes = await fs.readFile(original);
@@ -60,8 +65,8 @@ for (const asset of manifest.assets) {
       .rotate()
       .resize({ width: size, withoutEnlargement: true })
       .webp({ quality: 84, effort: 5 })
-      .toFile(path.join(mediaRoot, "images", filename));
-    variants.push({ url: `/media/images/${filename}`, width: info.width });
+      .toFile(path.join(outputRoot, filename));
+    variants.push({ url: `${prefix}${reportDate ? "" : "/images"}/${filename}`, width: info.width });
   }
   const defaultImage = variants.find((variant) => variant.width >= 960) ?? variants.at(-1)!;
   if (images[asset.remoteUrl]) {
