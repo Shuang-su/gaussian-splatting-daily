@@ -108,11 +108,19 @@ jobs:
             git commit -m "docs(daily): $DATE"
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
-          if [[ "$(git rev-list --count origin/main..HEAD)" -gt 0 ]]; then
+          # Squash merges leave old commits ahead even when the content is identical.
+          # Compare the two trees, restricted to the paths this collector publishes.
+          if git diff --quiet origin/main HEAD -- docs data state; then
+            echo "No publishable content changes relative to main."
+            echo "publishable=false" >> "$GITHUB_OUTPUT"
+          else
+            DIFF_STATUS=$?
+            if [[ "$DIFF_STATUS" -ne 1 ]]; then
+              echo "Unable to compare publishable content with main." >&2
+              exit "$DIFF_STATUS"
+            fi
             git push --set-upstream origin "$BRANCH"
             echo "publishable=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "publishable=false" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Create, record, and merge Daily PR

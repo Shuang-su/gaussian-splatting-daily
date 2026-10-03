@@ -9,6 +9,7 @@ on:
       - "data/**"
       - "state/**"
       - "scripts/**"
+      - "tests/**"
       - ".github/workflows/**"
 
 permissions:
@@ -26,6 +27,9 @@ jobs:
 
       - name: Validate all Daily files
         run: python scripts/validate_daily.py --all
+
+      - name: Run publication and editorial regression tests
+        run: python -m unittest discover -s tests -v
 
       - name: Verify generated index is current
         run: |
