@@ -8,6 +8,7 @@ import ReadingGuide from "../../../../../components/ReadingGuide";
 import ImageGallery from "../../../../../components/ImageGallery";
 import ArticleBody from "../../../../../components/ArticleBody";
 import { TopicLinks } from "../../../../../components/Cards";
+import Subscription from "../../../../../components/Subscription";
 export const dynamicParams = false;
 type RouteParams = Promise<{ year: string; month: string; day: string }>;
 export async function generateStaticParams() {
@@ -45,6 +46,7 @@ export default async function Page({ params }: { params: RouteParams }) {
           <details><summary>归档说明</summary><div className="archive-links">{a.issue && <a href={`${REPO}/issues/${a.issue}`}>Issue #{a.issue}</a>}{a.prs.map((n) => <a key={n} href={`${REPO}/pull/${n}`}>PR #{n}</a>)}</div>{a.archiveHtml && <ArticleBody html={a.archiveHtml} />}</details>
         </div>
         {related.length > 0 && <section className="article-related"><h2>往期日报</h2>{related.map((d) => <Link href={dailyUrl(d.date)} key={d.id}><time dateTime={d.date}>{d.date}</time><span>{d.headline}</span></Link>)}</section>}
+        <Subscription />
         <div className="article-end"><Link href="/daily/">全部日报</Link></div>
       </div>
     </article>
