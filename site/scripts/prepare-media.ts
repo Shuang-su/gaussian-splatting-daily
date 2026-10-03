@@ -22,7 +22,9 @@ interface MediaManifest {
 }
 
 const siteRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const publicRoot = path.join(siteRoot, "public");
+const publicArg = process.argv.indexOf("--public-root");
+if (publicArg >= 0 && !process.argv[publicArg + 1]) throw Error("Provide a path after --public-root");
+const publicRoot = publicArg < 0 ? path.join(siteRoot, "public") : path.resolve(process.argv[publicArg + 1]);
 const dateArg = process.argv.indexOf("--date");
 const reportDate = dateArg < 0 ? undefined : process.argv[dateArg + 1];
 if (dateArg >= 0 && !/^\d{4}-\d{2}-\d{2}$/.test(reportDate || "")) throw Error("Provide --date YYYY-MM-DD");
