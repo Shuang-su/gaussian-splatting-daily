@@ -43,6 +43,14 @@ export function element(node:CapturedElement,children:ReactNode,overrides:Record
 export function parseSspai(markup:string,mobileMarkup:string,dailyCards:string[],feedMenu:string,navigation:NavigationCaptures):CapturedNode[] {
   const doc=new DOMParser().parseFromString(markup,'text/html');
   const mobileDoc=new DOMParser().parseFromString(mobileMarkup,'text/html');
+  const morningSlide=mobileDoc.querySelector('.main__banner__swiper .morning__paper__board__card__slide');
+  const banner=doc.querySelector('.main__banner__swiper');
+  if(morningSlide&&banner&&!banner.querySelector('.morning__paper__board__card__slide')){
+    banner.querySelector(':scope > .swiper-wrapper')?.prepend(doc.importNode(morningSlide,true));
+    const pagination=banner.querySelector('.swiper-pagination');
+    const bullet=pagination?.querySelector('.swiper-pagination-bullet');
+    if(bullet)pagination?.prepend(bullet.cloneNode(true));
+  }
   const catalog=mobileDoc.querySelector('.article__bar__action--catalog');
   if(catalog&&!doc.querySelector('.article__bar__action--catalog'))doc.querySelector('.article__bar__actions')?.append(doc.importNode(catalog,true));
   const feed=doc.querySelector('.feed__main');if(feed)feed.setAttribute('data-reference-component','feed');
