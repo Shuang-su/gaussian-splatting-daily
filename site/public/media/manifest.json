@@ -611,6 +611,54 @@
           "width": 1600
         }
       ]
+    },
+    "https://framerusercontent.com/images/Y8O8agf1TFK2XHdpoVP5yJoeVg.png?height=480&width=1600": {
+      "alt": "Spirula Studio 报道使用的彩色螺旋题图",
+      "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
+      "position": "50% 50%",
+      "url": "/media/images/spirula-rf-960.webp",
+      "originalUrl": "/media/originals/spirula-rf.png",
+      "width": 1600,
+      "height": 480,
+      "variants": [
+        {
+          "url": "/media/images/spirula-rf-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/spirula-rf-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/spirula-rf-1600.webp",
+          "width": 1600
+        }
+      ]
+    },
+    "https://lh3.googleusercontent.com/ia2GsGs_oIx7zZtI0usVJfsF2fgR8wSaY2ZYZWtGQg1LSS_sSFVqJu-oL641KpjwQxR07lqriBfsVvLWzdjJmc_NIQjUhCV5reipp3Cgx92Ofg=s0-e365": {
+      "alt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+      "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+      "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+      "position": "50% 50%",
+      "url": "/media/images/niantic-relighting-960.webp",
+      "originalUrl": "/media/originals/niantic-relighting.png",
+      "width": 1920,
+      "height": 1080,
+      "variants": [
+        {
+          "url": "/media/images/niantic-relighting-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/media/images/niantic-relighting-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/media/images/niantic-relighting-1600.webp",
+          "width": 1600
+        }
+      ]
     }
   },
   "assets": [
@@ -978,6 +1026,32 @@
         "source": "https://github.com/openvdb/fvdb-core/tree/3c9e2727678faafa88a0e9589de831c290c37133",
         "credit": "fVDB 项目概览 · 用于说明数据表示，非 0.6.0 性能结果",
         "fit": "contain"
+      }
+    },
+    {
+      "key": "spirula-rf",
+      "remoteUrl": "https://framerusercontent.com/images/Y8O8agf1TFK2XHdpoVP5yJoeVg.png?height=480&width=1600",
+      "original": "/media/originals/spirula-rf.png",
+      "originalSha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948",
+      "sourceSha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948",
+      "image": {
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
+        "position": "50% 50%"
+      }
+    },
+    {
+      "key": "niantic-relighting",
+      "remoteUrl": "https://lh3.googleusercontent.com/ia2GsGs_oIx7zZtI0usVJfsF2fgR8wSaY2ZYZWtGQg1LSS_sSFVqJu-oL641KpjwQxR07lqriBfsVvLWzdjJmc_NIQjUhCV5reipp3Cgx92Ofg=s0-e365",
+      "original": "/media/originals/niantic-relighting.png",
+      "originalSha256": "9cd57bb0827c30e13d0227967b6eed7879b3a9d92c61def42cc8c772bc1ffe9e",
+      "sourceSha256": "9cd57bb0827c30e13d0227967b6eed7879b3a9d92c61def42cc8c772bc1ffe9e",
+      "image": {
+        "alt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+        "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+        "position": "50% 50%"
       }
     }
   ]

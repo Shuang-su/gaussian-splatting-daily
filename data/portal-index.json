@@ -4,7 +4,7 @@
   "daily": [
     {
       "id": "gsd-2026-09-30",
-      "contentHash": "1c5259195c2c7ac3fa5ad64340de2c5a67d03e8e042de34fa2ea4b302f767b9a",
+      "contentHash": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
       "date": "2026-09-30",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-30",
       "headline": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
@@ -120,26 +120,26 @@
         }
       ],
       "image": {
-        "alt": "温室中的仙人掌与植物园通道",
-        "source": "https://lichtfeld.io/",
-        "credit": "LichtFeld 项目演示",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
         "position": "50% 50%",
-        "url": "/media/images/lichtfeld-botanics-960.webp",
-        "originalUrl": "/media/originals/lichtfeld-botanics.webp",
-        "width": 1024,
-        "height": 683,
+        "url": "/media/images/spirula-rf-960.webp",
+        "originalUrl": "/media/originals/spirula-rf.png",
+        "width": 1600,
+        "height": 480,
         "variants": [
           {
-            "url": "/media/images/lichtfeld-botanics-640.webp",
+            "url": "/media/images/spirula-rf-640.webp",
             "width": 640
           },
           {
-            "url": "/media/images/lichtfeld-botanics-960.webp",
+            "url": "/media/images/spirula-rf-960.webp",
             "width": 960
           },
           {
-            "url": "/media/images/lichtfeld-botanics-1024.webp",
-            "width": 1024
+            "url": "/media/images/spirula-rf-1600.webp",
+            "width": 1600
           }
         ]
       },
@@ -251,7 +251,7 @@
     },
     {
       "id": "gsd-2026-09-28",
-      "contentHash": "e3ba33aefbf845ce5fdcbf09efc051592a9ff0c01d3c48c2500e49546b12f1b7",
+      "contentHash": "816ebaaff61139c2e81ad01d8d5cc98bed35f6945551a8df3f050a50cdd71776",
       "date": "2026-09-28",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-28",
       "headline": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
@@ -341,6 +341,30 @@
           ]
         }
       ],
+      "image": {
+        "alt": "OOOSplat 高斯模型预览与变换调整界面",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "credit": "OOOSplat 官方高斯预览界面 · 9 月 28 日仓库快照，非高清补拍效果对比",
+        "fit": "contain",
+        "url": "/media/images/ooosplat-preview-960.webp",
+        "originalUrl": "/media/originals/ooosplat-preview.png",
+        "width": 2560,
+        "height": 1393,
+        "variants": [
+          {
+            "url": "/media/images/ooosplat-preview-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/ooosplat-preview-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/ooosplat-preview-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
       "issue": 24,
       "prs": [
         25
@@ -467,7 +491,7 @@
     },
     {
       "id": "gsd-2026-09-26",
-      "contentHash": "0ef1b50a8d186d133bdb3c59907352c1e381fa2bbdced561c32ef08e15dc31b6",
+      "contentHash": "e554b720f3525143c3f9fb666c811c353e378cea791fbcd70e96c26bbc986688",
       "date": "2026-09-26",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-26",
       "headline": "LichtFeld 开发分支加入 Metal 张量后端",
@@ -501,6 +525,26 @@
           ]
         }
       ],
+      "image": {
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld Studio 官方训练界面演示；用于介绍项目，非 Metal 后端测试结果",
+        "position": "42% 50%",
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "originalUrl": "/media/originals/lichtfeld-meihogen.jpg",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/images/lichtfeld-meihogen-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/lichtfeld-meihogen-960.webp",
+            "width": 960
+          }
+        ]
+      },
       "issue": 20,
       "prs": [
         21
@@ -510,7 +554,7 @@
     },
     {
       "id": "gsd-2026-09-25",
-      "contentHash": "d8826a413434b2846b35525e0953c9bba7a593714f662bbd3a6d29acb6cf0f40",
+      "contentHash": "ff92bc258d3e57910a9c509a95e9344dfc4ef5df291c90b0034b696fdfe394fc",
       "date": "2026-09-25",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-25",
       "headline": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
@@ -589,6 +633,30 @@
           ]
         }
       ],
+      "image": {
+        "alt": "IA’GS 的照片导入与新建重建任务界面",
+        "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+        "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+        "fit": "contain",
+        "url": "/media/images/iags-studio-960.webp",
+        "originalUrl": "/media/originals/iags-studio.png",
+        "width": 1500,
+        "height": 850,
+        "variants": [
+          {
+            "url": "/media/images/iags-studio-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/iags-studio-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/iags-studio-1500.webp",
+            "width": 1500
+          }
+        ]
+      },
       "issue": 18,
       "prs": [
         19
@@ -880,7 +948,7 @@
     },
     {
       "id": "gsd-2026-09-20",
-      "contentHash": "db2e6d8a727b06fdbc5d2f2d98dcd0751d413f5214ae2554cc69f1f9f7db697a",
+      "contentHash": "2c0f6e90eacc9e52a1fbb3f6751aaa130162f1578c885e0775717dfbf7908ddd",
       "date": "2026-09-20",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-09-20",
       "headline": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
@@ -969,6 +1037,30 @@
           ]
         }
       ],
+      "image": {
+        "alt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+        "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+        "position": "50% 50%",
+        "url": "/media/images/niantic-relighting-960.webp",
+        "originalUrl": "/media/originals/niantic-relighting.png",
+        "width": 1920,
+        "height": 1080,
+        "variants": [
+          {
+            "url": "/media/images/niantic-relighting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/niantic-relighting-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/niantic-relighting-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
       "issue": 8,
       "prs": [
         9

@@ -19,7 +19,7 @@
   "default": {
     "url": "/share/default.png",
     "date": "2026-09-30",
-    "sha256": "e547d66bd598371b58e3aa321d08078d409430fb08c34f601eb0b6e64073fae4"
+    "sha256": "188c6d285f5d9959d03d5fc0e50d0a5a18926044b693681a33af25ef14ca733a"
   },
   "reports": {
     "2026-09-18": {
@@ -56,10 +56,16 @@
       "date": "2026-09-20",
       "url": "/share/2026-09-20.png",
       "title": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
-      "contentHash": "db2e6d8a727b06fdbc5d2f2d98dcd0751d413f5214ae2554cc69f1f9f7db697a",
-      "inputHash": "06c2ad3ef40dd7c481c2435d94fbfcae9eb835791367c0cfa889f5e7c0012f63",
-      "sha256": "da1722573556793e75ad3c5bd48035b01a94bd455dd7166d855c225d99ba11e1",
-      "bytes": 26772
+      "contentHash": "2c0f6e90eacc9e52a1fbb3f6751aaa130162f1578c885e0775717dfbf7908ddd",
+      "inputHash": "345a87bcf1eae411a2db18d9c5f476e68fd988f87893e0a83fee31bb40d2865d",
+      "sha256": "1250d73a5c5869b8d0bd743a5b72deb10484f03fe1a1a9855b87f56738c3b1d1",
+      "bytes": 452456,
+      "cover": {
+        "url": "/media/originals/niantic-relighting.png",
+        "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+        "sha256": "9cd57bb0827c30e13d0227967b6eed7879b3a9d92c61def42cc8c772bc1ffe9e"
+      }
     },
     "2026-09-21": {
       "date": "2026-09-21",
@@ -125,19 +131,31 @@
       "date": "2026-09-25",
       "url": "/share/2026-09-25.png",
       "title": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
-      "contentHash": "d8826a413434b2846b35525e0953c9bba7a593714f662bbd3a6d29acb6cf0f40",
-      "inputHash": "7b7420b23d747812c4317e6174f94cc6db04febdce1673e74549803e6e98f4f2",
-      "sha256": "a4dcc2268d98ac2c4e7862ca375b1cfb6cb26b0b356aa300abf2659b556fadcf",
-      "bytes": 29978
+      "contentHash": "ff92bc258d3e57910a9c509a95e9344dfc4ef5df291c90b0034b696fdfe394fc",
+      "inputHash": "c21bf400d2b18acf7d88bb6b064b4a7500fa29f2d0dd968a87896014514d80c0",
+      "sha256": "cbd39b8aac1c263c54f87ecb8143fd33634c3c6bf0e1375ac8c09a41623d5cc4",
+      "bytes": 177061,
+      "cover": {
+        "url": "/media/originals/iags-studio.png",
+        "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+        "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+        "sha256": "16ed64047bb31aedf540aae5e04660a460d4ec1c8107caa8b7dc495eaf0035ef"
+      }
     },
     "2026-09-26": {
       "date": "2026-09-26",
       "url": "/share/2026-09-26.png",
       "title": "LichtFeld 开发分支加入 Metal 张量后端",
-      "contentHash": "0ef1b50a8d186d133bdb3c59907352c1e381fa2bbdced561c32ef08e15dc31b6",
-      "inputHash": "86588cc2ff94b577d08c7fa1e7f4a9558e9d117e18ee6b9c0906d799273795cd",
-      "sha256": "0ae17c08cc28aee540bd745acb034869a441ca76c75290941810cf11d357823d",
-      "bytes": 22879
+      "contentHash": "e554b720f3525143c3f9fb666c811c353e378cea791fbcd70e96c26bbc986688",
+      "inputHash": "27d68a689a0a3b03da3dfa2ea75c4dc2896549062bd73d8b783648515a4f44a6",
+      "sha256": "b93a2dd79647a62abd1f5af0b3934523067eb018e48fd9de57c8389e508e2737",
+      "bytes": 425106,
+      "cover": {
+        "url": "/media/originals/lichtfeld-meihogen.jpg",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld Studio 官方训练界面演示；用于介绍项目，非 Metal 后端测试结果",
+        "sha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5"
+      }
     },
     "2026-09-27": {
       "date": "2026-09-27",
@@ -158,10 +176,16 @@
       "date": "2026-09-28",
       "url": "/share/2026-09-28.png",
       "title": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
-      "contentHash": "e3ba33aefbf845ce5fdcbf09efc051592a9ff0c01d3c48c2500e49546b12f1b7",
-      "inputHash": "482e3f8cb632871a281e3968790d05d7b40b1b197eda20e860b146b7e5560f96",
-      "sha256": "7ffb25449bea3272b53d8cc2a48620b61fd7ea63dbf2f5b8388e5ccd18e15b8a",
-      "bytes": 27646
+      "contentHash": "816ebaaff61139c2e81ad01d8d5cc98bed35f6945551a8df3f050a50cdd71776",
+      "inputHash": "e32007f6c734a96cdd2009a1d62b31657da1355faffc4b2711db7304ea1f9de9",
+      "sha256": "13e3630880a62a4bc2a7b381ec2b32f26f07f4831e4c43077d71f50e1cd6f836",
+      "bytes": 389567,
+      "cover": {
+        "url": "/media/originals/ooosplat-preview.png",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "credit": "OOOSplat 官方高斯预览界面 · 9 月 28 日仓库快照，非高清补拍效果对比",
+        "sha256": "0583a5f03b1e29e6b37db244c25ff298ff0adaf6cdfe0513ad2356a6b7e6a1ae"
+      }
     },
     "2026-09-29": {
       "date": "2026-09-29",
@@ -182,15 +206,15 @@
       "date": "2026-09-30",
       "url": "/share/2026-09-30.png",
       "title": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
-      "contentHash": "1c5259195c2c7ac3fa5ad64340de2c5a67d03e8e042de34fa2ea4b302f767b9a",
-      "inputHash": "d996e56759d33028ffee52722676cb81b540db58fde3df86607ac2565159777b",
-      "sha256": "e547d66bd598371b58e3aa321d08078d409430fb08c34f601eb0b6e64073fae4",
-      "bytes": 534232,
+      "contentHash": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
+      "inputHash": "1c6b15e95ae93abb45e66eb5364a4a1a2f312bc49f1ff78ae8c28ce8d8b6a765",
+      "sha256": "188c6d285f5d9959d03d5fc0e50d0a5a18926044b693681a33af25ef14ca733a",
+      "bytes": 224209,
       "cover": {
-        "url": "/media/originals/lichtfeld-botanics.webp",
-        "source": "https://lichtfeld.io/",
-        "credit": "LichtFeld 项目演示",
-        "sha256": "5ca4b8ba6325b4187feaf0b87ba3dd6007636b3c5184f017de8ed888cc3376f4"
+        "url": "/media/originals/spirula-rf.png",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
+        "sha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948"
       }
     }
   }

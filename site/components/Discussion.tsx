@@ -4,7 +4,7 @@ import { DISCUSSIONS, discussionFixture, discussionTerm } from "../lib/discussio
 import type { DiscussionConfig } from "../lib/discussions";
 import { SITE_URL, dailyUrl } from "../lib/catalog";
 
-export default function Discussion({ dailyId, date, eventId, anchor, config = DISCUSSIONS }: { dailyId: string; date: string; eventId?: string; anchor?: string; config?: DiscussionConfig | null }) {
+export default function Discussion({ dailyId, date, eventId, anchor, heading = false, config = DISCUSSIONS }: { dailyId: string; date: string; eventId?: string; anchor?: string; heading?: boolean; config?: DiscussionConfig | null }) {
   const [open,setOpen] = useState(false), [mounted,setMounted] = useState(false);
   const [fixture,setFixture] = useState<string|null>(null), [status,setStatus] = useState("idle"), [attempt,setAttempt] = useState(0);
   const [src,setSrc] = useState<string>(); const [height,setHeight] = useState(260);
@@ -48,7 +48,9 @@ export default function Discussion({ dailyId, date, eventId, anchor, config = DI
     return () => {clearTimeout(timer); observer.disconnect(); system.removeEventListener("change",updateTheme); window.removeEventListener("message",listener);};
   },[mounted,config,fixture,term,attempt,date,anchor]);
   const close = () => {setOpen(false);trigger.current?.focus({preventScroll:true});};
-  return <div className="discussion" data-discussion-term={term} onKeyDown={e => {if(e.key === "Escape" && open){e.stopPropagation();close();}}}>
+  if (!config && !fixture) return null;
+  return <div id={heading ? "discussion" : undefined} className={heading ? "issue-discussion discussion" : "discussion"} data-discussion-term={term} onKeyDown={e => {if(e.key === "Escape" && open){e.stopPropagation();close();}}}>
+    {heading && <h2>本期讨论</h2>}
     <button ref={trigger} className="discussion-trigger" aria-expanded={open} aria-controls={panel} onClick={() => {setMounted(true);setOpen(!open);}}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-5 3v-3H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10M7 13h7"/></svg>
       {eventId ? "讨论" : "展开本期讨论"}

@@ -5,7 +5,7 @@ import type { SourceImage as ImageData } from "../lib/types";
 import { assetUrl, imageKey, imageSrcSet } from "../lib/images";
 import { useImagePreview } from "./ImageGallery";
 
-export default function SourceImage({ image, caption = false, priority = false, href, label, sizes = "(max-width: 639px) 100vw, (max-width: 1023px) 80vw, 760px" }: { image?: ImageData; caption?: boolean; priority?: boolean; href?: string; label?: string; sizes?: string }) {
+export default function SourceImage({ image, caption = false, previewable = caption, priority = false, href, label, sizes = "(max-width: 639px) 100vw, (max-width: 1023px) 80vw, 760px" }: { image?: ImageData; caption?: boolean; previewable?: boolean; priority?: boolean; href?: string; label?: string; sizes?: string }) {
   const [failedUrl, setFailedUrl] = useState<string>();
   const element = useRef<HTMLImageElement>(null);
   const preview = useImagePreview();
@@ -15,7 +15,7 @@ export default function SourceImage({ image, caption = false, priority = false, 
   }, [image?.url]);
   if (!image) return null;
   const failed = failedUrl === image.url;
-  const canPreview = caption && !href && Boolean(preview);
+  const canPreview = previewable && !href && Boolean(preview);
   const picture = <img ref={element} src={assetUrl(image.url)} srcSet={imageSrcSet(image)} sizes={sizes} width={image.width} height={image.height} alt={image.alt} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : undefined} decoding="async"
         className={canPreview ? "preview-trigger" : undefined} role={canPreview ? "button" : undefined} tabIndex={canPreview ? 0 : undefined} aria-label={canPreview ? `放大图片：${image.alt}` : undefined}
         onClick={(e) => { if (canPreview) preview?.(imageKey(image), e.currentTarget); }}
