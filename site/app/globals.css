@@ -79,7 +79,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .mobile-lead-credit { display: none; }
 .lead-kicker { font-size: 12px; display: flex; gap: 16px; color: var(--muted); }
 .lead-kicker span { color: var(--accent); }
-.lead-story h1 { font-size: clamp(28px,2.5vw,36px); line-height: 1.4; font-weight: 650; letter-spacing: -.7px; margin-top: 16px; text-wrap: balance; }
+.lead-story h1 { font-size: clamp(28px,2.4vw,34px); line-height: 1.4; font-weight: 650; letter-spacing: -.7px; margin-top: 16px; }
 .lead-summary { font-size: 15px; line-height: 1.85; margin-top: 20px; color: var(--muted); }
 .lead-meta { margin-top: 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 12px; color: var(--muted); }
 .lead-meta a { display: flex; align-items: center; gap: 8px; color: var(--ink); }
@@ -87,6 +87,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .lead-visual { position: relative; min-width: 0; }
 .lead-image { display: block; }
 .source-image { margin: 0; min-width: 0; }
+.source-image-link { display: block; width: 100%; height: 100%; }
 .source-image img { width: 100%; }
 .source-image figcaption { font-size: 12px; color: var(--muted); line-height: 1.6; padding-top: 9px; }
 .lead-image .source-image { aspect-ratio: 4/3; overflow: hidden; }
@@ -96,6 +97,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .lead-date { display: none; }
 .image-unavailable { min-height: 100%; padding: 32px 16px; color: var(--muted); background: var(--surface); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; font-size: 13px; }
 .image-unavailable a { text-decoration: underline; text-underline-offset: 3px; }
+.feed-row-image .image-unavailable, .entry-image .image-unavailable { padding: 8px; gap: 4px; font-size: 12px; }
 .hero-secondary { border-left: 1px solid var(--line); padding-left: 28px; min-width: 0; }
 .secondary-story { padding-bottom: 24px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
 .secondary-story:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
@@ -114,6 +116,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .feed-row { display: flex; gap: 28px; justify-content: space-between; align-items: center; padding: 28px 0; border-bottom: 1px solid var(--line); }
 .feed-row-copy { flex: 1; min-width: 0; }
 .feed-row h2 { font-size: 23px; line-height: 1.5; font-weight: 600; letter-spacing: -.2px; }
+.feed-row h2 > a, .daily-card h2 > a, .entry-card h2 > a { display: block; }
 .feed-row time { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
 .feed-row p { font-size: 14px; line-height: 1.8; color: var(--muted); margin-top: 12px; }
 .feed-row-image { width: 200px; flex-shrink: 0; }
@@ -172,7 +175,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .archive-surface .daily-card.text-only { border: 0; }
 .catalogue-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 64px; padding-bottom: 48px; }
 .catalogue-list { min-width: 0; }
-.catalogue-aside { border-left: 1px solid var(--line); padding-left: 28px; align-self: start; position: sticky; top: 28px; }
+.catalogue-aside { border-left: 1px solid var(--line); padding-left: 28px; align-self: start; position: sticky; top: 76px; }
 .catalogue-aside h2 { font-size: 18px; font-weight: 600; }
 .catalogue-aside > a { display: block; margin-top: 28px; font-size: 14px; }
 .catalogue-aside .topic-links a { font-size: 14px; }
@@ -245,7 +248,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .prose th, .prose td { border: 1px solid var(--line); padding: 10px 12px; text-align: left; min-width: 100px; }
 .prose th { background: var(--surface); font-weight: 600; }
 .prose hr { margin: 32px 0; border: 0; border-top: 1px solid var(--line); }
-.event-anchor { display: block; scroll-margin-top: 76px; }
+.event-anchor { display: block; }
 .event-summary, .event-overview { margin: 22px 0 28px; font-size: 17px; }
 .event-priority { color: var(--muted); font-size: 12px; }
 .event-summary p, .event-overview p { margin-bottom: 10px; }

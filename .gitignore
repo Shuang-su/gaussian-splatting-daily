@@ -10,3 +10,4 @@ site/*.tsbuildinfo
 site/public/content-index.json
 
 site/public/deployment.json
+site/public/feeds/

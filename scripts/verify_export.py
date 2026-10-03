@@ -7,6 +7,7 @@ import json
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
+import xml.etree.ElementTree as ET
 
 from record_publication import verify_readback
 from validate_daily import ROOT
@@ -35,13 +36,39 @@ class Links(HTMLParser):
             self.urls.append(attrs['content'])
 
 
+class FeedLinks:
+    """Validate RSS XML, then follow its page and embedded-description links."""
+    def __init__(self, xml):
+        feed = ET.fromstring(xml)
+        if feed.tag != 'rss' or feed.get('version') != '2.0':
+            raise ValueError('Expected an RSS 2.0 document')
+        self.ids = set()
+        self.urls = []
+        for element in feed.iter():
+            name = element.tag.rsplit('}', 1)[-1]
+            if name == 'link':
+                self.urls.append(element.get('href') or element.text or '')
+            if name == 'guid' and element.get('isPermaLink', 'true') == 'true':
+                self.urls.append(element.text or '')
+            if name == 'description':
+                self.urls.extend(Links(element.text or '').urls)
+        if any(urlsplit(url).scheme != 'https' or urlsplit(url).netloc != 'shuang-su.github.io' or not urlsplit(url).path.startswith(BASE + '/') for url in self.urls):
+            raise ValueError('RSS links must use canonical HTTPS URLs with the project prefix')
+
+
 def verify(root=ROOT):
     output = (root / 'site/out').resolve()
     pages = {path: Links(path.read_text()) for path in output.rglob('*.html')}
     if not pages:
         raise ValueError('No exported HTML pages; build the portal first')
+    feeds = {}
+    for kind in ('daily', 'weekly'):
+        source = output / 'feeds' / f'{kind}.xml'
+        if not source.is_file():
+            raise ValueError(f'Missing RSS file: {source}')
+        feeds[source] = FeedLinks(source.read_text())
     errors = []
-    for source, page in pages.items():
+    for source, page in {**pages, **feeds}.items():
         for url in page.urls:
             parsed = urlsplit(url)
             if (parsed.scheme or parsed.netloc) and parsed.netloc != 'shuang-su.github.io':
@@ -82,4 +109,4 @@ def verify(root=ROOT):
 
 if __name__ == '__main__':
     pages, reports = verify()
-    print(f'Export verified: {pages} HTML files, {reports} canonical reports, no broken internal links/assets/anchors. Browser interactions remain a separate check.')
+    print(f'Export verified: {pages} HTML files, 2 RSS feeds, {reports} canonical reports, no broken internal links/assets/anchors. Browser interactions remain a separate check.')

@@ -17,7 +17,7 @@ import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
-export const SITE_URL = `https://shuang-su.github.io${BASE}`;
+export { SITE_URL } from "./catalog";
 export const ROOT = path.resolve(
   process.cwd(),
   process.cwd().endsWith("/site") ? ".." : ".",

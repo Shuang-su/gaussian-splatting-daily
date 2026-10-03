@@ -3,6 +3,7 @@ import { BASE, REPO } from "../lib/catalog";
 import "./globals.css";
 import Header from "../components/Header";
 import BrandMark from "../components/BrandMark";
+import { FEEDS } from "../lib/feeds";
 export const metadata: Metadata = {
   metadataBase: new URL("https://shuang-su.github.io"),
   title: { default: "高斯日报", template: "%s · 高斯日报" },
@@ -12,10 +13,10 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return <html lang="zh-CN" data-scroll-behavior="smooth" suppressHydrationWarning>
-    <head><script dangerouslySetInnerHTML={{ __html: "try{const t=localStorage.getItem('gsd-theme');document.documentElement.dataset.theme=['system','light','dark'].includes(t)?t:'system'}catch{}" }} /></head>
+  return <html lang="zh-CN" suppressHydrationWarning>
+    <head>{Object.values(FEEDS).map(feed => <link key={feed.path} rel="alternate" type="application/rss+xml" title={`高斯日报 · ${feed.title}`} href={feed.url} />)}<script dangerouslySetInnerHTML={{ __html: "try{const t=localStorage.getItem('gsd-theme');document.documentElement.dataset.theme=['system','light','dark'].includes(t)?t:'system'}catch{}" }} /></head>
     <body><a className="skip-link" href="#main">跳至内容</a><Header /><main id="main">{children}</main>
-      <footer className="site-footer"><a className="footer-brand" href={`${BASE}/`}><BrandMark />高斯日报</a><div><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a><a href={REPO}>GitHub</a></div></footer>
+      <footer className="site-footer"><a className="footer-brand" href={`${BASE}/`}><BrandMark />高斯日报</a><div><a href={`${BASE}/subscribe/`}>订阅高斯日报</a><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a><a href={REPO}>GitHub</a></div></footer>
     </body>
   </html>;
 }

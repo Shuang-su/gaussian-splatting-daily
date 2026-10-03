@@ -1,5 +1,6 @@
 export const REPO = "https://github.com/Shuang-su/gaussian-splatting-daily";
 export const BASE = "/gaussian-splatting-daily";
+export const SITE_URL = `https://shuang-su.github.io${BASE}`;
 export const TOPICS = [
   {
     slug: "3dgs",
