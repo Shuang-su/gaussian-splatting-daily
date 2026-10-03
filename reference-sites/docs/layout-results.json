@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T17:50:57.276Z",
+  "generatedAt": "2026-10-03T04:01:35.853Z",
   "baseline": "d0b4ebba2e792150b72f5ef9b9a66b648c783a5b",
   "browser": "Codex in-app browser on macOS",
   "matrix": [
@@ -8,14 +8,14 @@
       "sourceUrl": "https://sspai.com/",
       "width": 375,
       "sourceHeight": 6833,
-      "localHeight": 6833,
-      "heightDifference": 0,
+      "localHeight": 6842,
+      "heightDifference": 9,
       "overflow": false,
       "brokenImages": 0,
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:50.049Z",
-      "localCapturedAt": "2026-10-02T17:50:57.070Z",
+      "localCapturedAt": "2026-10-03T03:53:27.065Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -28,7 +28,7 @@
           "file": "qa/sspai-home-375.jpg",
           "width": 375,
           "height": 844,
-          "sha256": "4e6409fc0b5d16b26cb34028799027372a6b441a6db4e346ec1342d0dab9981f"
+          "sha256": "ec6405c9db7923611befeec0416e6c00c9d96c4de1925cce421b6c1a74998832"
         }
       }
     },
@@ -44,7 +44,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:48.736Z",
-      "localCapturedAt": "2026-10-02T17:50:57.077Z",
+      "localCapturedAt": "2026-10-03T03:57:02.991Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -57,7 +57,7 @@
           "file": "qa/sspai-home-390.jpg",
           "width": 390,
           "height": 6868,
-          "sha256": "7cdaf4cc63ffaa1cca225179503cfc945788c9f8e7606d126e5d9ad1a0368415"
+          "sha256": "e89b7bc499815c545188d6bce8537df8a0bbc6035d4a27bc66d2d41f7b4546c9"
         }
       }
     },
@@ -73,7 +73,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:48.534Z",
-      "localCapturedAt": "2026-10-02T17:50:57.081Z",
+      "localCapturedAt": "2026-10-03T03:53:28.351Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -86,7 +86,7 @@
           "file": "qa/sspai-home-430.jpg",
           "width": 430,
           "height": 844,
-          "sha256": "296094275ba81b7ebb4f922823720894a65de4d89899a36d4a7ce1387948fdae"
+          "sha256": "62ce62cee105bf8933f1907926b3922df0e1d96dbef7c46ff9bf91e70d463363"
         }
       }
     },
@@ -95,14 +95,14 @@
       "sourceUrl": "https://sspai.com/",
       "width": 768,
       "sourceHeight": 8130,
-      "localHeight": 8130,
-      "heightDifference": 0,
+      "localHeight": 8110,
+      "heightDifference": -20,
       "overflow": false,
       "brokenImages": 0,
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:48.316Z",
-      "localCapturedAt": "2026-10-02T17:50:57.084Z",
+      "localCapturedAt": "2026-10-03T03:53:28.445Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -115,7 +115,7 @@
           "file": "qa/sspai-home-768.jpg",
           "width": 768,
           "height": 1000,
-          "sha256": "db7a8623b362ba15135726fb9e1f4dded6085dc2ac41b946de3e2ab844155569"
+          "sha256": "ca1be397236a2eff44c7720c07ceb9bfb4aeea85b5d94e5087f43c8de3404dc0"
         }
       }
     },
@@ -124,14 +124,14 @@
       "sourceUrl": "https://sspai.com/",
       "width": 1024,
       "sourceHeight": 8236,
-      "localHeight": 8236,
-      "heightDifference": 0,
+      "localHeight": 8235,
+      "heightDifference": -1,
       "overflow": false,
       "brokenImages": 0,
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:48.104Z",
-      "localCapturedAt": "2026-10-02T17:50:57.088Z",
+      "localCapturedAt": "2026-10-03T03:53:28.560Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -144,7 +144,7 @@
           "file": "qa/sspai-home-1024.jpg",
           "width": 1024,
           "height": 1000,
-          "sha256": "a0a0c50cab4eb453edcc84fa609a6f8e24116d6efea003ecfb08a9ea36089317"
+          "sha256": "8e67699a5762959000b1b28405b188b5a8fb3ef4e1116f93f553aca07019a5cf"
         }
       }
     },
@@ -160,7 +160,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:46.634Z",
-      "localCapturedAt": "2026-10-02T17:50:57.091Z",
+      "localCapturedAt": "2026-10-03T03:53:29.878Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -173,7 +173,7 @@
           "file": "qa/sspai-home-1440.jpg",
           "width": 1440,
           "height": 8488,
-          "sha256": "5af7c7c60e0a8ae2c1dd823bd8addfbfe084a82e14c20049fb72ea035909e721"
+          "sha256": "2b9d17f497535cead2db24ca6bb24cbbb707e5415559ff97d56c7c8379f77f0e"
         }
       }
     },
@@ -182,14 +182,14 @@
       "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
       "width": 375,
       "sourceHeight": 7685,
-      "localHeight": 7685,
-      "heightDifference": 0,
+      "localHeight": 7675,
+      "heightDifference": -10,
       "overflow": false,
       "brokenImages": 0,
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:17.658Z",
-      "localCapturedAt": "2026-10-02T17:50:57.096Z",
+      "localCapturedAt": "2026-10-03T03:54:10.505Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -202,7 +202,7 @@
           "file": "qa/sspai-list-375.jpg",
           "width": 375,
           "height": 844,
-          "sha256": "b37b6fcfe7440392ca98b04cc910c211091077a88e5b55a704e9e600d8241e36"
+          "sha256": "06d9f9218c1fdaa9c9e39dc79f105d4dda1f454ff3b46c3eb453e2631837a507"
         }
       }
     },
@@ -218,7 +218,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:16.354Z",
-      "localCapturedAt": "2026-10-02T17:50:57.099Z",
+      "localCapturedAt": "2026-10-03T03:57:35.454Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -231,7 +231,7 @@
           "file": "qa/sspai-list-390.jpg",
           "width": 390,
           "height": 7807,
-          "sha256": "2a11bf5a66e56e56444a4ec25eb19db5dec9d273276bb9f8142f44ac911e4f6f"
+          "sha256": "1e1ebb7e36a3839b4981487222e20b6b1623e5edc0299029f1d3787919c1f557"
         }
       }
     },
@@ -247,7 +247,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:16.168Z",
-      "localCapturedAt": "2026-10-02T17:50:57.103Z",
+      "localCapturedAt": "2026-10-03T03:54:11.848Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -260,7 +260,7 @@
           "file": "qa/sspai-list-430.jpg",
           "width": 430,
           "height": 844,
-          "sha256": "1e79d267f764853cfc962f5bfb23b6eb932dc4ea59eabea6b399ce4be0849db8"
+          "sha256": "931076bfe3659f649279dd736f4c1832614e1524722a546838f5bb24ba63dea5"
         }
       }
     },
@@ -276,7 +276,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:15.947Z",
-      "localCapturedAt": "2026-10-02T17:50:57.106Z",
+      "localCapturedAt": "2026-10-03T03:54:12.021Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -289,7 +289,7 @@
           "file": "qa/sspai-list-768.jpg",
           "width": 768,
           "height": 1000,
-          "sha256": "696a6c640796122019b335b2d93d11364e3149f66f2a781ee40b81a14f957a9f"
+          "sha256": "1f86a4e296d5ad9777c06973a7e8f33689bd769c52797d4c048b299e94475152"
         }
       }
     },
@@ -305,7 +305,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:15.749Z",
-      "localCapturedAt": "2026-10-02T17:50:57.109Z",
+      "localCapturedAt": "2026-10-03T03:54:12.225Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -318,7 +318,7 @@
           "file": "qa/sspai-list-1024.jpg",
           "width": 1024,
           "height": 1000,
-          "sha256": "3589c7f10032ae06c5a9a7fd8c6905aedf51600d64aa117f5a093e7e500be27a"
+          "sha256": "fe02bbefe289c6184cd98b5a204f0411ca25fe5a543c964ceadeda2ab712e3e8"
         }
       }
     },
@@ -334,7 +334,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:18:14.405Z",
-      "localCapturedAt": "2026-10-02T17:50:57.113Z",
+      "localCapturedAt": "2026-10-03T03:54:13.447Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -347,7 +347,7 @@
           "file": "qa/sspai-list-1440.jpg",
           "width": 1440,
           "height": 2672,
-          "sha256": "feaf5e1054a5c19bb39298855d5639eee5aa3a7d9b0e95d8ae68032d64a540b0"
+          "sha256": "d7bdca9456586b2162d4007b1a2c86b73c0efe5e105f23c78aa5103e475d9fdc"
         }
       }
     },
@@ -356,14 +356,14 @@
       "sourceUrl": "https://sspai.com/post/115197",
       "width": 375,
       "sourceHeight": 11375,
-      "localHeight": 11375,
-      "heightDifference": 0,
+      "localHeight": 11377,
+      "heightDifference": 2,
       "overflow": false,
       "brokenImages": 0,
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:17:03.441Z",
-      "localCapturedAt": "2026-10-02T17:50:57.116Z",
+      "localCapturedAt": "2026-10-03T03:54:13.868Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -376,7 +376,7 @@
           "file": "qa/sspai-daily-375.jpg",
           "width": 375,
           "height": 844,
-          "sha256": "247c37174f0091c813cfa3f65df012317a0d8454791c4797f19bde214f0c4338"
+          "sha256": "e588563890bf83e905a02a45e1e51646e2b2862481abd0b069caa23c512bfa3b"
         }
       }
     },
@@ -392,7 +392,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:15:24.630Z",
-      "localCapturedAt": "2026-10-02T17:50:57.121Z",
+      "localCapturedAt": "2026-10-03T03:56:49.166Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -405,7 +405,7 @@
           "file": "qa/sspai-daily-390.jpg",
           "width": 390,
           "height": 11137,
-          "sha256": "b33f738da886ecdfc5d460e762bbbdcc9955d489a32816d99ae7a7c117c1da9a"
+          "sha256": "e31db613899aa3cf756586c2dfab4db8cd5fb2a2a122d9322366b6b423764d19"
         }
       }
     },
@@ -421,7 +421,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:17:03.694Z",
-      "localCapturedAt": "2026-10-02T17:50:57.125Z",
+      "localCapturedAt": "2026-10-03T03:54:15.235Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -434,7 +434,7 @@
           "file": "qa/sspai-daily-430.jpg",
           "width": 430,
           "height": 844,
-          "sha256": "af33f8a55ad16134759fb3e7e50c1057112cc428827cd26af761a597fe7e05be"
+          "sha256": "492dae5435682741e04cbfaf5925e223461e2e2e41ece0b8be8a8145d3d68d71"
         }
       }
     },
@@ -450,7 +450,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:17:03.940Z",
-      "localCapturedAt": "2026-10-02T17:50:57.131Z",
+      "localCapturedAt": "2026-10-03T03:54:15.401Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -463,7 +463,7 @@
           "file": "qa/sspai-daily-768.jpg",
           "width": 768,
           "height": 1000,
-          "sha256": "0def25bb9c69173b6d9cbcdcf7a3ff0ce5cb66a5077598a7df828a3472be95b3"
+          "sha256": "087a0155ff08f3f59c0fa660b114d341c66efe3ee36505daede7a06140f78a7a"
         }
       }
     },
@@ -479,7 +479,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:17:04.171Z",
-      "localCapturedAt": "2026-10-02T17:50:57.135Z",
+      "localCapturedAt": "2026-10-03T03:54:15.533Z",
       "fullPage": false,
       "screenshots": {
         "source": {
@@ -492,7 +492,7 @@
           "file": "qa/sspai-daily-1024.jpg",
           "width": 1024,
           "height": 1000,
-          "sha256": "e6014878f38eea98b7dfca63679f973bb83e4f70cecef5b7b2e43b9ddf5698d2"
+          "sha256": "87a6d01020f93857a1feb98461b97498ce133b696013b43866b28e2c65954c5b"
         }
       }
     },
@@ -508,7 +508,7 @@
       "pendingImages": 0,
       "externalResources": [],
       "sourceCapturedAt": "2026-10-02T15:17:04.429Z",
-      "localCapturedAt": "2026-10-02T17:50:57.138Z",
+      "localCapturedAt": "2026-10-03T03:54:16.994Z",
       "fullPage": true,
       "screenshots": {
         "source": {
@@ -521,7 +521,7 @@
           "file": "qa/sspai-daily-1440.jpg",
           "width": 1440,
           "height": 11906,
-          "sha256": "a20ba9676c57cf475f01ef0848a950bb3b638385fcbebb3d0f768c8f33eb6ccf"
+          "sha256": "a195be35e6cac429d86feeb0e0c60398f11feb87a685b85c6d9608a2c3a7c1d0"
         }
       }
     },

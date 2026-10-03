@@ -51,3 +51,7 @@
 详细结果：`reference-sites/docs/validation.md`、`layout-results.json` 和 `reference-study.md`。截图与离线记录：`.codex-work/references/qa/`。完成记录自身的提交 SHA 由最终交付回复报告，避免在文件内记录自己的循环哈希。
 
 没有推送、公开 PR、合并、Pages 部署或定时任务调整。高斯日报改版与公开发布继续留在后续计划。
+
+## 2026-10-03 后续修正
+
+首轮交付后发现少数派跨断点状态丢失、二级菜单未实现、搜索 Esc 重开和目录标题遮挡。上文验证不能证明这些连续流程无误。修复和新验收见 `docs/changes/20261003-sspai-reference-repair/completion.md` 与 `reference-sites/docs/sspai-repair.md`；首轮记录保留供追溯。

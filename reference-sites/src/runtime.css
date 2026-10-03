@@ -19,3 +19,11 @@
 .reference-directory-toggle:focus-visible,[data-anchor]:focus-visible,[data-gallery]:focus-visible{outline:2px solid #d7191a;outline-offset:4px}
 .reference-nav-open [data-framer-name="Frame"] { transform: rotate(180deg) !important; }
 .reference-nav-open > [data-framer-component-type="RichTextContainer"] p { color: #888; }
+[id^="ss-hId-"]{scroll-margin-top:76px}
+.ss__desktop__submenu__transition__wrapper:has([data-reference-menu]:not([hidden])){pointer-events:auto}
+@media(min-width:768px){.ss__custom__header__mobile__menu{display:none!important}}
+.reference-search-results[aria-label="搜索结果"]{font-family:inherit;border-radius:16px}
+.ss__custom__header__search__input__wrapper{z-index:100001}
+.ss__custom__header__search__mask{z-index:99999}
+@media(max-width:1199px){.article__bar__share{display:none!important}}
+@media(min-width:1200px){.article__bar__action--catalog{display:none!important}}

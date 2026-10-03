@@ -42,7 +42,10 @@ npm run dev:radiance
 | 入口与页面载入 | `src/main.tsx` |
 | 页面内容与组件结构 | `public/pages/<page-id>/{desktop,tablet,mobile}.html` |
 | 各页原站样式 | `public/styles/<page-id>.css` |
-| 少数派菜单、目录、外观、列表 | `src/sspai.ts` |
+| 少数派页面与列表组件 | `src/sspai/App.tsx`、`components.tsx` |
+| 原站结构转换与范围内链接 | `src/sspai/markup.tsx`、`state.ts` |
+| 少数派菜单、目录、外观、滚动导航 | `src/sspai.ts` |
+| 桌面与手机二级导航快照 | `public/data/sspai-navigation.json` |
 | 原站图片预览、焦点与滚动恢复 | `src/gallery.ts` |
 | 原站轮播 | `src/swiper.ts` |
 | RF 桌面导航 | `src/navigation.ts` |
@@ -54,14 +57,14 @@ npm run dev:radiance
 | 本地搜索条目 | `public/data/catalog.json` |
 | 图片、字体、CSS 等资源来源与校验值 | `public/data/assets.json` |
 
-采用原站 DOM 的可编辑 HTML 模板以保存 Vue / Framer 的作用域类名、复杂 SVG 和响应式结构，React 管理页面生命周期，TypeScript 管理阅读交互。两个站点有独立的内容模板与 CSS，构建入口通过 Vite mode 分开。
+采用原站 DOM 的可编辑 HTML 模板保存 Vue / Framer 的作用域类名、SVG 和响应式结构。少数派读取桌面结构及手机目录按钮，转换为 React 节点；每页挂载一次，由原站 CSS 处理响应式布局。首页筛选和日报加载数量由 React 状态管理，页面返回通过 sessionStorage 恢复阅读位置。Radiance Fields 保持既有模板载入方式。两个站点的内容模板与 CSS 独立，构建入口通过 Vite mode 分开。
 
 普通开发和构建不会重写模板。`npm run prepare:sources` 会从本地采集资料重新生成模板、CSS、固定数据和资源映射，只在明确要重新导入时运行。该操作无需访问原站，但会覆盖手动编辑过的生成文件；先保存自己的修改。
 
 ## 数据与本地资源
 
-- 7 页，21 个可编辑视口模板；768 / 810 / 1200 的模板切换与原站 CSS 共同控制响应式布局。
-- 820 个本地资源，记录原始 URL、文件、字节数、原始及本地 SHA-256、图片尺寸（适用时）和采集文件时间。
+- 7 页，21 个可编辑采集模板；少数派使用持续挂载的 React 页面与原站响应式 CSS，RF 保留 810 / 1200 的模板切换。
+- 837 个本地资源，记录原始 URL、文件、字节数、原始及本地 SHA-256、图片尺寸（适用时）和采集文件时间。
 - 固定样本：派早报 48 条、论文 48 条、工具 72 条、RF Recent Continued 新闻 8 条；综合搜索索引 261 条。
 - 日报列表每次增加 12 条；论文每次增加 24 条；工具滚动加载每批 24 条。搜索与筛选只在本地样本中进行。
 - 首轮范围内链接在本地打开；范围外链接指向原站。登录、评论提交、支付、订阅、广告和视频嵌入没有连接原站后台。未模拟这些服务的成功结果。
@@ -82,3 +85,5 @@ node scripts/summarize-evidence.mjs
 `verify` 校验本地资源哈希、模板资源引用、账户清理与静态路由；`summarize-evidence` 汇总已经通过浏览器采集的证据，不代替浏览器操作。截图和网络核验记录位于 `../.codex-work/references/qa/`。
 
 阅读 [对照与设计研究](docs/reference-study.md)、[验证记录](docs/validation.md) 和 [素材说明](NOTICE.md)。真实手机双指手势没有测试，不应将浏览器鼠标测试作为设备验收。
+
+2026-10-03 少数派修复结果见 [修复验收](docs/sspai-repair.md)。当前对照页已更新少数派三页的截图；早期截图保存在 `.codex-work/references/qa/sspai-repair-20261003/before/`。导航资料可用 `node scripts/import-sspai-navigation.mjs` 单独导入，不重新生成正文快照。
