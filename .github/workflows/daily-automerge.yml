@@ -28,11 +28,15 @@ jobs:
               if (pr.base.ref !== 'main' || pr.draft) continue;
               if (![owner, 'github-actions[bot]'].includes(pr.user.login)) continue;
               const files = await github.paginate(github.rest.pulls.listFiles, {owner,repo,pull_number:pr.number,per_page:100});
-              const allowed = p => /^docs\/daily\/\d{4}\/\d{2}\/(?:\d{4}-\d{2}-\d{2}|index)\.md$/.test(p)
+              const media = p => /^site\/public\/daily-media\/\d{4}-\d{2}-\d{2}\/(?:manifest\.json|[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|jpg|jpeg|webp))$/.test(p);
+              const allowed = p => media(p) || /^docs\/daily\/\d{4}\/\d{2}\/(?:\d{4}-\d{2}-\d{2}|index)\.md$/.test(p)
                 || ['docs/index.md','docs/corrections.md','data/daily-index.json','data/portal-index.json','state/checkpoint.json','state/publication-observations.json'].includes(p);
               if (!files.length || files.some(f=>!allowed(f.filename) || f.status==='removed' || (f.previous_filename && !allowed(f.previous_filename)))) {
                 core.warning(`PR #${pr.number} changes files outside daily publication; requires separate review.`);continue;
               }
+              // Data-only dated attachments. The validation job checks provenance,
+              // raster signatures, checksums, variants and per-day 40 MiB bounds.
+              // Schemas, global asset manifests, scripts and workflows stay excluded.
               // PR checks can be attached to the synthetic merge SHA. Bind the gate
               // to this successful workflow run and its verified PR head instead.
               const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {owner,repo,run_id:run.id,per_page:100});

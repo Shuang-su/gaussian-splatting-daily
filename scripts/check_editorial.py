@@ -1,16 +1,53 @@
 #!/usr/bin/env python3
-"""Editorial completeness, retaining historical section numbering and real no-change reports."""
+"""Validate research coverage and event completeness, with legacy report support."""
 from __future__ import annotations
-import argparse,re,sys
+import argparse,re,sys,json
 from validate_daily import DAILY_ROOT,ARXIV_RE,parse_frontmatter,daily_files
 HEADINGS=re.compile(r'^#{1,2} (\d{1,2})\. (.+)$',re.M)
 CATEGORIES=[r'今日最值得看',r'SuperSplat\s*/\s*PlayCanvas',r'可实际运行.*开源',r'4D\s*/\s*Dynamic',r'Viewer\s*/\s*Editor',r'Compression\s*/\s*Format',r'Training\s*/\s*Reconstruction',r'Avatar\s*/\s*Human',r'软件.*硬件.*平台厂商',r'研究论文|论文与研究',r'海外.*社区',r'中文.*社区',r'今[天日]最值得实际测试']
 PLACEHOLDERS=('未启用或未成功完成 AI 编辑增强','请以原始 arXiv 记录为准','TODO:','待填正文')
 NO_CHANGE=re.compile(r'无新增|没有.{0,12}新增|未发现.{0,12}新增|没有.{0,12}新实质|检索失败|无法访问|未能访问|本窗口.{0,15}无')
+COVERAGE_IDS={'overview','playcanvas','opensource','dynamic','viewer','formats','training','avatar','vendors','papers','overseas','chinese','practice'}
+def event_check(text, meta, body):
+ errors=[]
+ try:
+  coverage=json.loads(re.search(r'^research_coverage: (.+)$',text,re.M).group(1))
+  layout=json.loads(re.search(r'^  editorial: (.+)$',text,re.M).group(1))
+ except (AttributeError,ValueError):return ['event layout needs JSON editorial metadata and research_coverage']
+ if not isinstance(coverage,list) or not all(isinstance(r,dict) for r in coverage) or {r.get('id') for r in coverage}!=COVERAGE_IDS or len(coverage)!=13:errors.append('research coverage must record all 13 scopes exactly once')
+ else:
+  for record in coverage:
+   status=record.get('status')
+   if status not in {'updated','no-change','unavailable','historical-record'}:errors.append('unknown research status')
+   if status=='historical-record' and meta.get('date','')>'2026-09-30':errors.append('new reports cannot claim historical coverage')
+   if not str(record.get('note','')).strip():errors.append('coverage needs a scope/result explanation')
+   if status!='historical-record' and (not record.get('sources') or not all(re.match(r'^https://',u) for u in record.get('sources',[]))):errors.append('each live research scope needs checked or attempted source URLs')
+   if status=='unavailable' and not record.get('gap'):errors.append('inaccessible sources need an explicit gap')
+ if not isinstance(layout,dict) or layout.get('version')!=1 or not isinstance(layout.get('events'),list):return errors+['unsupported event layout']
+ events=layout['events'];ids=set();anchors=set()
+ for event in events:
+  if not isinstance(event,dict):errors.append('event must be an object');continue
+  if not event.get('id') or event['id'] in ids or not event.get('anchor') or event['anchor'] in anchors:errors.append('event identity/anchor must be unique')
+  ids.add(event.get('id'));anchors.add(event.get('anchor'))
+  if not event.get('title') or event.get('group') not in {'main','brief','paper','analysis'} or not event.get('blocks'):errors.append('event needs title, group and canonical source blocks')
+  if event.get('group')=='main' and not event.get('judgment') and not event.get('guideRows'):errors.append('main event needs its core judgment')
+  tags=event.get('tags',{})
+  if not isinstance(tags,dict):tags={}
+  if any(not isinstance(tags.get(d),list) for d in ['techniques','projects','content','sources']):errors.append('event taxonomy dimensions are missing')
+ if not events and isinstance(coverage,list) and any(isinstance(r,dict) and r.get('status')=='updated' for r in coverage):errors.append('updated research needs an event')
+ if not events and not NO_CHANGE.search(body):errors.append('empty edition must explain no change or source failure')
+ return errors
+
 def check(text:str)->list[str]:
  errors=[];meta=parse_frontmatter(text)
  body=text.split('---\n',2)[2] if text.startswith('---\n') and len(text.split('---\n',2))==3 else text
  if meta.get('status') not in {'published','corrected'}:errors.append('report has not been marked published/corrected')
+ if re.search(r'^  layout: events$',text,re.M):
+  errors+=event_check(text,meta,body)
+  for phrase in PLACEHOLDERS:
+   if phrase in body:errors.append(f'editorial placeholder remains: {phrase}')
+  errors+=source_checks(body,meta)
+  return errors
  headings=list(HEADINGS.finditer(text));titles=re.findall(r'^#{1,3} (.+)$',text,re.M)
  legacy=meta.get('date','')<'2026-09-30'
  if legacy:
@@ -27,12 +64,17 @@ def check(text:str)->list[str]:
   if len(meaningful)<60 and not (NO_CHANGE.search(content) and len(meaningful)>=18):errors.append(f'section {m.group(1)} is incomplete')
  for phrase in PLACEHOLDERS:
   if phrase in text:errors.append(f'editorial placeholder remains: {phrase}')
+ errors+=source_checks(body,meta)
+ return errors
+
+def source_checks(body,meta):
+ errors=[]
  if not re.search(r'https://',body) and not (NO_CHANGE.search(body) and re.search(r'窗口|检查范围|检索范围',body)):
   errors.append('report needs source links or an explicit search-window explanation')
- if not legacy:
-  matches=list(ARXIV_RE.finditer(text))
+ if meta.get('date','')>='2026-09-30':
+  matches=list(ARXIV_RE.finditer(body))
   for i,m in enumerate(matches):
-   block=text[m.end():matches[i+1].start() if i+1<len(matches) else len(text)]
+   block=body[m.end():matches[i+1].start() if i+1<len(matches) else len(body)]
    summary=re.search(r'(?:\*\*)?编辑摘要：(?:\*\*)?\s*([^\n]+)',block)
    if not summary or len(summary.group(1).strip())<30:errors.append(f'arXiv {m.group(1)} needs a specific editorial summary')
  return errors

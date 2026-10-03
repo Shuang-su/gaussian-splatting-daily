@@ -21,3 +21,16 @@ class Editorial(unittest.TestCase):
  def test_frontmatter_only_reads_top_level(self):
   self.assertEqual(parse_frontmatter('---\ndate: "2026-10-01"\nportal:\n  date: "wrong"\n---\n')['date'],'2026-10-01')
 if __name__=='__main__':unittest.main()
+
+class EventEditorial(unittest.TestCase):
+ def source(self,events=None,status='no-change'):
+  import json
+  from check_editorial import COVERAGE_IDS
+  coverage=[{'id':key,'status':status,'note':'检查项目官方发布记录；本窗口无新增。','sources':['https://example.org/releases']} for key in sorted(COVERAGE_IDS)]
+  layout={'version':1,'events':events or [],'introduction':['b-example-1'],'archive':[],'omit':[]}
+  return '---\ndate: "2026-10-01"\nstatus: "published"\nresearch_coverage: '+json.dumps(coverage)+'\nportal:\n  layout: events\n  editorial: '+json.dumps(layout)+'\n---\n检查本窗口官方来源；没有新增，检索范围与上次成功窗口一致。'
+ def test_event_no_change_without_news_quota(self):self.assertEqual(check(self.source()),[])
+ def test_event_unavailable_needs_gap(self):self.assertTrue(check(self.source(status='unavailable')))
+ def test_event_updated_needs_event(self):self.assertTrue(check(self.source(status='updated')))
+ def test_no_historical_research_in_new_report(self):self.assertTrue(check(self.source(status='historical-record')))
+ def test_event_paper_still_needs_summary(self):self.assertTrue(check(self.source()+'\n<!-- arxiv:2609.38177 -->\n论文。'))
