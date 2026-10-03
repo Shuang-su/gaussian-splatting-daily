@@ -1,0 +1,481 @@
+{
+  "checkedAt": "2026-10-04",
+  "baselineCommit": "4a430beca17c0afa2aa9c2a11d28164335e82ace",
+  "coverage": {
+    "reports": 13,
+    "covers": 13,
+    "uniqueImages": 12,
+    "newOriginals": 2,
+    "modifiedCoverMetadata": 5
+  },
+  "records": [
+    {
+      "date": "2026-09-18",
+      "headline": "Blender 修复高斯导入，PlayCanvas 减少阴影计算",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "Blender 高斯渲染示例中的织物帽子",
+        "source": "https://developer.blender.org/docs/release_notes/5.3/rendering/",
+        "credit": "Blender Foundation",
+        "url": "/media/images/blender-gaussian-480.webp",
+        "originalUrl": "/media/originals/blender-gaussian.png",
+        "width": 480,
+        "height": 270,
+        "variants": [
+          {
+            "url": "/media/images/blender-gaussian-480.webp",
+            "width": 480
+          }
+        ]
+      },
+      "assetKey": "blender-gaussian",
+      "remoteUrl": "https://developer.blender.org/docs/release_notes/5.3/images/render_gsplat.png",
+      "originalSha256": "bd91bee3b48eea0625423899e7961be0d6fa2b3bb8358a7c0c05bc9f825333f5",
+      "variantSha256": {
+        "/media/images/blender-gaussian-480.webp": "31cab1646a111e0667d9203877993c34841ad6ee09fabb12409215f07db3f220"
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "headline": "PlayCanvas 加入随机透明度，Blender 支持 OpenUSD 高斯",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "SuperSplat 随机透明度演示中的温室与仙人掌",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "credit": "SuperSplat 项目演示",
+        "position": "65% 50%",
+        "url": "/media/images/supersplat-stochastic-960.webp",
+        "originalUrl": "/media/originals/supersplat-stochastic.png",
+        "width": 1600,
+        "height": 1058,
+        "variants": [
+          {
+            "url": "/media/images/supersplat-stochastic-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/supersplat-stochastic-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/supersplat-stochastic-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "supersplat-stochastic",
+      "remoteUrl": "https://blog.playcanvas.com/img/supersplat3-stochastic-alpha.mp4",
+      "originalSha256": "e007472e971ea7991b07a1161e61106d2e4377ffc09b522a5cbc3336e79142e8",
+      "variantSha256": {
+        "/media/images/supersplat-stochastic-640.webp": "901486a3de66090b0cd84f4ae142f3844e119f3cdc6f5625979a8ada31d0c268",
+        "/media/images/supersplat-stochastic-960.webp": "db2cc5a3bc025f309513ab609a2270ad74a49d5d2e6fc8ad351ec44bdfb59d7e",
+        "/media/images/supersplat-stochastic-1600.webp": "6588de7e1cf936be90765bc3b247bc77c3edce80411bd3cc548d8516f0dff9c8"
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "headline": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
+      "decision": "新增：Niantic Spatial 官方重光照公告画面，公告日期 2026-09-18，与当期重光照报道对应。",
+      "image": {
+        "alt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+        "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+        "position": "50% 50%",
+        "url": "/media/images/niantic-relighting-960.webp",
+        "originalUrl": "/media/originals/niantic-relighting.png",
+        "width": 1920,
+        "height": 1080,
+        "variants": [
+          {
+            "url": "/media/images/niantic-relighting-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/niantic-relighting-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/niantic-relighting-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "niantic-relighting",
+      "remoteUrl": "https://lh3.googleusercontent.com/ia2GsGs_oIx7zZtI0usVJfsF2fgR8wSaY2ZYZWtGQg1LSS_sSFVqJu-oL641KpjwQxR07lqriBfsVvLWzdjJmc_NIQjUhCV5reipp3Cgx92Ofg=s0-e365",
+      "originalSha256": "9cd57bb0827c30e13d0227967b6eed7879b3a9d92c61def42cc8c772bc1ffe9e",
+      "variantSha256": {
+        "/media/images/niantic-relighting-640.webp": "c80f933f5b6919be5fc088fe9a13d1924de407c0f537357c245b9d327e56192f",
+        "/media/images/niantic-relighting-960.webp": "c667f06bff64521d0de4dd4ac8e85b09b0ef6d4ca6f88e0d1cc95634139e2869",
+        "/media/images/niantic-relighting-1600.webp": "8a58afc6007ff9b8b9c9d0c19234cd5269d5859a5bdce1edf7c2ac06ca765c65"
+      }
+    },
+    {
+      "date": "2026-09-21",
+      "headline": "LichtFeld 提前启动大数据集训练，Spirula 发布正式版",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "position": "42% 50%",
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "originalUrl": "/media/originals/lichtfeld-meihogen.jpg",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/images/lichtfeld-meihogen-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/lichtfeld-meihogen-960.webp",
+            "width": 960
+          }
+        ]
+      },
+      "assetKey": "lichtfeld-meihogen",
+      "remoteUrl": "https://lichtfeld.io/videos/meihogen-homepage-poster.jpg",
+      "originalSha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5",
+      "variantSha256": {
+        "/media/images/lichtfeld-meihogen-640.webp": "062d8c4b560cfdb883578d683910f36788e414f613927eecec9144ffd7e677ed",
+        "/media/images/lichtfeld-meihogen-960.webp": "7d4387a17bcd01420c854c9689303a177dda652c7c1159b0855230709b6fd5fe"
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "headline": "SuperSplat Viewer 1.32 发布，SplatTransform 支持轨迹渲染",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "SuperSplat Viewer 中的教堂与相机时间线",
+        "source": "https://github.com/playcanvas/supersplat-viewer",
+        "credit": "SuperSplat 项目演示",
+        "position": "50% 48%",
+        "url": "/media/images/supersplat-viewer-960.webp",
+        "originalUrl": "/media/originals/supersplat-viewer.png",
+        "width": 2228,
+        "height": 1478,
+        "variants": [
+          {
+            "url": "/media/images/supersplat-viewer-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/supersplat-viewer-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/supersplat-viewer-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "supersplat-viewer",
+      "remoteUrl": "https://github.com/user-attachments/assets/15d2c654-9484-4265-a279-99acb65e38c9",
+      "originalSha256": "fd7b6f6b597ea46652d20f1de49aabf7062487f6951ab68f133892d37c3cc7cf",
+      "variantSha256": {
+        "/media/images/supersplat-viewer-640.webp": "3e901aa63dab8b982c4fbaff2d58c7e9a2d54ec6c71490c42bdad1ad9a9e2609",
+        "/media/images/supersplat-viewer-960.webp": "869fd74f1af225a72c15d387f7da012ca045ff6ab81f3be3181044493f5e0951",
+        "/media/images/supersplat-viewer-1600.webp": "740613d2cf5c08e9fa5dd2d857a051ad0b2f117e3295b7257cbb3f4b256443d4"
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "headline": "SuperSplat 优化大 PLY 加载，SplatTransform 3.6 改进 SOG 写入",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "credit": "SuperSplat 项目演示",
+        "position": "62% 50%",
+        "url": "/media/images/supersplat-webgpu-editor-960.webp",
+        "originalUrl": "/media/originals/supersplat-webgpu-editor.png",
+        "width": 1600,
+        "height": 1058,
+        "variants": [
+          {
+            "url": "/media/images/supersplat-webgpu-editor-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/supersplat-webgpu-editor-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/supersplat-webgpu-editor-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "supersplat-webgpu-editor",
+      "remoteUrl": "https://blog.playcanvas.com/img/supersplat3-webgpu-editor.mp4",
+      "originalSha256": "bc8ad8523309b497f28b6c81a8839948bc800a4919d696de4f9d395f237fc3c3",
+      "variantSha256": {
+        "/media/images/supersplat-webgpu-editor-640.webp": "e5426d15c2f4ee592c9737acc3f5fd10ff607ec1f15db6af8c84d340520c1679",
+        "/media/images/supersplat-webgpu-editor-960.webp": "aa077792539ba7393b2f7a15a0d9edf192e83492f5a7d4f4db00790044d1d454",
+        "/media/images/supersplat-webgpu-editor-1600.webp": "e60c1c3a577e8da798f605a0e2f9fa0fc9d47555312d2228bc31b4e88f2ed245"
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "headline": "ROCm GSplat 已可安装，SuperSplat Viewer 1.35 发布",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "同一庭院在不同高斯数量下的重建对比",
+        "source": "https://rocm.blogs.amd.com/software-tools-optimization/point-2-gaussian/README.html",
+        "credit": "AMD ROCm 博客",
+        "fit": "contain",
+        "url": "/media/images/amd-gsplat-counts-960.webp",
+        "originalUrl": "/media/originals/amd-gsplat-counts.png",
+        "width": 4252,
+        "height": 1475,
+        "variants": [
+          {
+            "url": "/media/images/amd-gsplat-counts-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/amd-gsplat-counts-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/amd-gsplat-counts-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "amd-gsplat-counts",
+      "remoteUrl": "https://rocm.blogs.amd.com/_images/GS_num.png",
+      "originalSha256": "5093e4d75687df3c0cc0d1b3207e936035ce8fff241e9231a6d09a537f1d5312",
+      "variantSha256": {
+        "/media/images/amd-gsplat-counts-640.webp": "6d5171e70cd3430ecc6c47885e39d505e3ded7b8f3fedd0e4884b91a4b5c06c8",
+        "/media/images/amd-gsplat-counts-960.webp": "9190ec47de2407a6007b7d1bdd4bcba575f656bf9339040fa1a87cd05d5692da",
+        "/media/images/amd-gsplat-counts-1600.webp": "44103b487e80ea1d4ea83d5524ac2b55ead6659164472bb1350df46aac3a0107"
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "headline": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
+      "decision": "补齐：复用当期 IA’GS 事件的官方界面，固定仓库提交 58278f55c3c0325d12c9e628edec0eb18438eca5。",
+      "image": {
+        "alt": "IA’GS 的照片导入与新建重建任务界面",
+        "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+        "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+        "fit": "contain",
+        "url": "/media/images/iags-studio-960.webp",
+        "originalUrl": "/media/originals/iags-studio.png",
+        "width": 1500,
+        "height": 850,
+        "variants": [
+          {
+            "url": "/media/images/iags-studio-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/iags-studio-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/iags-studio-1500.webp",
+            "width": 1500
+          }
+        ]
+      },
+      "assetKey": "iags-studio",
+      "remoteUrl": "https://raw.githubusercontent.com/by-lastime/IA-GS/58278f55c3c0325d12c9e628edec0eb18438eca5/assets/screenshots/studio.png",
+      "originalSha256": "16ed64047bb31aedf540aae5e04660a460d4ec1c8107caa8b7dc495eaf0035ef",
+      "variantSha256": {
+        "/media/images/iags-studio-640.webp": "2ae59fae889541458510b53faeb32e5f2ac57a3ec7e59eeec63c7af00943a890",
+        "/media/images/iags-studio-960.webp": "63507085c5ff3d02ea79c71ec5a6d8d59bccac36824924c146cd32b949477bac",
+        "/media/images/iags-studio-1500.webp": "02509a16d4c9aef72edd114b3d62cb3043f6855ca8b116d83abc67ffdfca18ed"
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "headline": "LichtFeld 开发分支加入 Metal 张量后端",
+      "decision": "补齐：复用 LichtFeld 官方项目界面；原图未标注发布日期，不作为 Metal 后端实现或性能的证据。",
+      "image": {
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld Studio 官方训练界面演示；用于介绍项目，非 Metal 后端测试结果",
+        "position": "42% 50%",
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "originalUrl": "/media/originals/lichtfeld-meihogen.jpg",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/images/lichtfeld-meihogen-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/lichtfeld-meihogen-960.webp",
+            "width": 960
+          }
+        ]
+      },
+      "assetKey": "lichtfeld-meihogen",
+      "remoteUrl": "https://lichtfeld.io/videos/meihogen-homepage-poster.jpg",
+      "originalSha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5",
+      "variantSha256": {
+        "/media/images/lichtfeld-meihogen-640.webp": "062d8c4b560cfdb883578d683910f36788e414f613927eecec9144ffd7e677ed",
+        "/media/images/lichtfeld-meihogen-960.webp": "7d4387a17bcd01420c854c9689303a177dda652c7c1159b0855230709b6fd5fe"
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "headline": "SuperSplat 合入随机渲染，LichtFeld 降低训练显存",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "LichtFeld Viewer 中的建筑与道路重建",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "credit": "LichtFeld 项目演示",
+        "position": "50% 45%",
+        "url": "/media/images/lichtfeld-viewer-600.webp",
+        "originalUrl": "/media/originals/lichtfeld-viewer.png",
+        "width": 600,
+        "height": 338,
+        "variants": [
+          {
+            "url": "/media/images/lichtfeld-viewer-600.webp",
+            "width": 600
+          }
+        ]
+      },
+      "assetKey": "lichtfeld-viewer",
+      "remoteUrl": "https://raw.githubusercontent.com/MrNeRF/LichtFeld-Studio/master/docs/viewer_demo.gif",
+      "originalSha256": "b84dd8d8ec73a32336979c57395838884be59a528b60e1002afe0624cc55ae56",
+      "variantSha256": {
+        "/media/images/lichtfeld-viewer-600.webp": "d646f0c415d788b8d8bda8c47f5aacb184658a8eb55715c95ec0462820a24e35"
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "headline": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
+      "decision": "补齐：复用当期 OOOSplat 官方界面，固定仓库提交 0e19a3b74122c3bab0103bc2ad3140da0853c74f；不作为高清补拍结果。",
+      "image": {
+        "alt": "OOOSplat 高斯模型预览与变换调整界面",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "credit": "OOOSplat 官方高斯预览界面 · 9 月 28 日仓库快照，非高清补拍效果对比",
+        "fit": "contain",
+        "url": "/media/images/ooosplat-preview-960.webp",
+        "originalUrl": "/media/originals/ooosplat-preview.png",
+        "width": 2560,
+        "height": 1393,
+        "variants": [
+          {
+            "url": "/media/images/ooosplat-preview-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/ooosplat-preview-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/ooosplat-preview-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "ooosplat-preview",
+      "remoteUrl": "https://raw.githubusercontent.com/ooolabdev/ooosplat/0e19a3b74122c3bab0103bc2ad3140da0853c74f/assets/screenshots/gaussian-preview.png",
+      "originalSha256": "0583a5f03b1e29e6b37db244c25ff298ff0adaf6cdfe0513ad2356a6b7e6a1ae",
+      "variantSha256": {
+        "/media/images/ooosplat-preview-640.webp": "f5aa1b6ce71225363d0daaa3fc9790d02edc1e8b5e6d0af849f1cba11e632bc1",
+        "/media/images/ooosplat-preview-960.webp": "17542c99a10f00e14a4f3e43bdf8288c1fc7dd3e918cf33383d7575030d0ca12",
+        "/media/images/ooosplat-preview-1600.webp": "cbf4f3bef8b23957b78583585aa773b6b3035757d4a260de6c82bdeb8b40e1db"
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "headline": "PlayCanvas 调整流式 LOD，SuperSplat Viewer 1.36 发布",
+      "decision": "沿用基线封面；本轮重新核对本地解码、尺寸、来源入口和页面加载，未重新宣称为当天版本测试结果。",
+      "image": {
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "credit": "PlayCanvas 项目演示",
+        "position": "55% 42%",
+        "url": "/media/images/supersplat-lod-controls-960.webp",
+        "originalUrl": "/media/originals/supersplat-lod-controls.png",
+        "width": 1920,
+        "height": 1080,
+        "variants": [
+          {
+            "url": "/media/images/supersplat-lod-controls-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/supersplat-lod-controls-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/supersplat-lod-controls-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "supersplat-lod-controls",
+      "remoteUrl": "https://blog.playcanvas.com/img/editor-2-32-gsplat-lod-controls.mp4",
+      "originalSha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0",
+      "variantSha256": {
+        "/media/images/supersplat-lod-controls-640.webp": "3237add6df97d278332adc9da214106e9bb4d12b49be933510d9b68a074f6a36",
+        "/media/images/supersplat-lod-controls-960.webp": "aa2050f882dfd2bae9d1a36f0dfbec60216e8c2d8757c566d6007c8f04bd7157",
+        "/media/images/supersplat-lod-controls-1600.webp": "cb58ffb184023a7f03275cb2eab754be201c72b9224284746896d6b15af541a3"
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "headline": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
+      "decision": "替换：Radiance Fields 同日 Spirula Studio 版本报道的原始题图；是报道插画，不是分区训练结果图。",
+      "image": {
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
+        "position": "50% 50%",
+        "url": "/media/images/spirula-rf-960.webp",
+        "originalUrl": "/media/originals/spirula-rf.png",
+        "width": 1600,
+        "height": 480,
+        "variants": [
+          {
+            "url": "/media/images/spirula-rf-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/spirula-rf-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/spirula-rf-1600.webp",
+            "width": 1600
+          }
+        ]
+      },
+      "assetKey": "spirula-rf",
+      "remoteUrl": "https://framerusercontent.com/images/Y8O8agf1TFK2XHdpoVP5yJoeVg.png?height=480&width=1600",
+      "originalSha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948",
+      "variantSha256": {
+        "/media/images/spirula-rf-640.webp": "aebc0377fd39d83bc28b8ed43e667f20072df41a164b242ba888212a453269db",
+        "/media/images/spirula-rf-960.webp": "e63f9999333d55678b96a6973d9ff8712b9a86a2890f1e644a5e780a1640b8f8",
+        "/media/images/spirula-rf-1600.webp": "23b3c1725f58dac9c6783741c076db5e2cd773e7c10088aeed3062e68799db9c"
+      }
+    }
+  ],
+  "rejectedCandidates": [
+    {
+      "candidate": "Niantic 的 RF 标志题图",
+      "reason": "采用同一事件的官方重光照画面，提供更具体的信息。"
+    },
+    {
+      "candidate": "LichtFeld tour/session/gallery 视频海报",
+      "reason": "文字占比高或功能不对应，未为了补齐封面采用。"
+    },
+    {
+      "candidate": "Spirula 旧 Mandelbulb 截图",
+      "reason": "不能说明分区训练，本轮采用同日报道的真实题图并明确用途。"
+    }
+  ],
+  "gaps": [
+    "LichtFeld 官网演示图片没有可确认的原始发布日期，沿用为项目介绍图，不作当日实现证据。",
+    "9 月 21 日与 26 日各自介绍 LichtFeld，复用同一张训练界面。"
+  ]
+}

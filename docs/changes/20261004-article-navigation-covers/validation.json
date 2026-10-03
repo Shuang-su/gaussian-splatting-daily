@@ -1,0 +1,171 @@
+{
+  "date": "2026-10-04",
+  "implementationCommit": "c890dc39ec45ca9cd1e245236c91838d2beeff89",
+  "browser": "Codex In-app Browser",
+  "deviceTests": false,
+  "viewportChecks": {
+    "all13Issues": {
+      "widths": [
+        375,
+        390,
+        430,
+        550,
+        768,
+        1024,
+        1440
+      ],
+      "height": 958,
+      "runs": 91,
+      "appearance": "system with dark emulation"
+    },
+    "september30Themes": {
+      "widths": [
+        375,
+        390,
+        430,
+        550,
+        768,
+        1024,
+        1440
+      ],
+      "choices": [
+        "light",
+        "dark",
+        "system"
+      ],
+      "runs": 21
+    }
+  },
+  "interactions": [
+    {
+      "name": "paper-nested-jump",
+      "state": {
+        "active": "paper-2609.37816",
+        "current": "WINGS: Reference-Free Gaussian Splatting Inpainting with 3D-Native Generative Priors",
+        "hash": "#paper-2609.37816",
+        "top": 75.9375
+      }
+    },
+    {
+      "name": "desktop-escape",
+      "state": {
+        "focused": "目录",
+        "hidden": true,
+        "scrollY": 8914
+      }
+    },
+    {
+      "name": "old-archive-deep-link",
+      "state": {
+        "inner": true,
+        "outer": true,
+        "targetTop": 76.0078125
+      }
+    },
+    {
+      "name": "theme-refresh",
+      "state": {
+        "background": "rgb(255, 255, 255)",
+        "theme": "light"
+      }
+    },
+    {
+      "name": "desktop-to-mobile-reading-position",
+      "before": 76.2109375,
+      "after": {
+        "focused": "收起文章目录",
+        "open": true,
+        "top": 82.21875
+      }
+    },
+    {
+      "name": "mobile-escape-focus",
+      "state": {
+        "focus": "目录",
+        "hidden": true,
+        "overflow": ""
+      }
+    },
+    {
+      "name": "discussion-sample-identity",
+      "state": [
+        {
+          "label": "本地验收样本 · populated · 非真实评论",
+          "term": "gsd-2026-09-30::event::github.com/playcanvas/splat-transform/releases/tag/v3.8.0"
+        },
+        {
+          "label": "本地验收样本 · populated · 非真实评论",
+          "term": "gsd-2026-09-30::daily"
+        }
+      ]
+    },
+    {
+      "name": "discussion-retained-on-resize",
+      "count": 2
+    },
+    {
+      "name": "discussion-retry-sample",
+      "state": "本期讨论\n展开本期讨论\n\n本地验收样本 · empty · 非真实评论\n\n暂无评论。\n\n收起讨论"
+    },
+    {
+      "name": "cover-gallery-rotate-zoom",
+      "state": "150%"
+    },
+    {
+      "name": "gallery-next-resets-zoom",
+      "state": "100%"
+    },
+    {
+      "name": "gallery-close-restores-cover",
+      "state": {
+        "dialogs": 0,
+        "focus": "放大图片：Spirula Studio 报道使用的彩色螺旋题图",
+        "scrollY": 0
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "path": ".codex-work/references/article-navigation-covers/daily-30-cover-1440.jpg",
+      "sha256": "306697cf082149da3cc065f7e15d030bf46f310a654a522e27568c4d386c315c"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/daily-directory-390.png",
+      "sha256": "6ad16553621bbfffcd82093fc773e54acf3f7cf0429911179fa62fed8094c4c3"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/daily-footer-1440-dark.jpg",
+      "sha256": "97dfcc9293ed999f61b210f4245d8d17918f52f87a8ec665e9c1764754b17ae6"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/daily-list-1440.png",
+      "sha256": "37fc09f4dd207a9aa2f5ca0254971017074379cd71afaf28654cc834688cf7fb"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/cover-preview-1440.png",
+      "sha256": "6cc39ed9de443dd2550e3672d62c09a1e93e4b46728b9b9f43c016280fdf4d55"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/sspai-114607-directory.png",
+      "sha256": "69cae7fd4587afd16aca53eb5be2b26b0104e8585e36b02f8e30e6a6176d0dbf"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/sspai-114607-footer.png",
+      "sha256": "fbee30540d5c19a587a09208bdc22bc506a15e2041111c2be952b83d2e5aca90"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/sspai-114954-footer.png",
+      "sha256": "10b06db66f067ca1463e5ed5083bdd19bbda0e7d3cdc8c0e3f924d5cb9db2601"
+    },
+    {
+      "path": ".codex-work/references/article-navigation-covers/sspai-115197-footer.png",
+      "sha256": "21038ca83e6eb05097064c149a5bb8c4dff69f11423c4c63c05006ceb68a7005"
+    }
+  ],
+  "rawEvidence": [
+    ".codex-work/references/article-navigation-covers/navigation-matrix.json",
+    ".codex-work/references/article-navigation-covers/theme-matrix.json",
+    ".codex-work/references/article-navigation-covers/interaction-checks.json",
+    ".codex-work/references/article-navigation-covers/python-tests.log"
+  ]
+}
