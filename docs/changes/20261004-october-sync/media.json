@@ -1,0 +1,59 @@
+[
+  {
+    "key": "arkit-training",
+    "remoteUrl": "https://raw.githubusercontent.com/KuoFengYuan/arkit-3dgs-scanner/92de1e64e286b83488cf69f1f71b63326279af86/docs/media/demo.mp4",
+    "original": "/media/originals/arkit-training.png",
+    "originalSha256": "f2a1e4851a3b14d236d7c54302c727c5eeb497f2102834063f41c6a24a647963",
+    "sourceSha256": "d5f4ea6eb65c05f315a01f2297d0b453b19b76a43a19247651517caf21f84b98",
+    "image": {
+      "alt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+      "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
+      "credit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比",
+      "position": "50% 50%"
+    },
+    "frame": {
+      "seconds": 45
+    },
+    "sourceArchive": "/media/originals/arkit.mp4",
+    "capturedAt": "2026-10-03T18:48:52.346957+00:00",
+    "sourcePublishedAt": "2026-09-30T16:08:09Z",
+    "versionEvidence": "ARKit Scanner PR #58 merge commit 92de1e64e286b83488cf69f1f71b63326279af86"
+  },
+  {
+    "key": "lulusplat-rf",
+    "remoteUrl": "https://framerusercontent.com/images/xp3ajsXbaCOIflEe5Q1qWxD3I.webp?width=1395&height=956",
+    "original": "/media/originals/lulusplat.webp",
+    "originalSha256": "6b5927d90c47d1d861cb8fd143c4911e8a32ae5337fa35e50b13ec4fc03feadc",
+    "sourceSha256": "6b5927d90c47d1d861cb8fd143c4911e8a32ae5337fa35e50b13ec4fc03feadc",
+    "image": {
+      "alt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+      "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+      "credit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图",
+      "position": "50% 50%"
+    },
+    "sourceArchive": "/media/originals/lulusplat.webp",
+    "capturedAt": "2026-10-03T18:48:52.348671+00:00",
+    "sourcePublishedAt": "2026-09-30",
+    "versionEvidence": "Radiance Fields 页面日期 Sep 30, 2026；LuluSplat macOS 1.1 介绍"
+  },
+  {
+    "key": "gslite-v120-demo",
+    "remoteUrl": "https://raw.githubusercontent.com/WilliamLiu-1997/Gaussian-Splat-Lite/v1.2.0/.github/assets/default-demo.gif",
+    "original": "/media/originals/gslite-30.png",
+    "originalSha256": "60b44c3f274799ca316e70449a913535a7b93fc4781a97dc1bde7ea6466c85ae",
+    "sourceSha256": "b74d34f596fb5c45922caa61caf4f5ff4b652d8af4cfcae700fd4aa171cf35a0",
+    "image": {
+      "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+      "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+      "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+      "position": "50% 50%"
+    },
+    "frame": {
+      "index": 30
+    },
+    "sourceArchive": "/media/originals/gslite.gif",
+    "capturedAt": "2026-10-03T18:48:52.392240+00:00",
+    "sourcePublishedAt": "2026-10-02T16:28:05Z",
+    "versionEvidence": "Gaussian-Splat-Lite v1.2.0 commit f7214532c41d6cde1b77f1adc31d75197a204627"
+  }
+]

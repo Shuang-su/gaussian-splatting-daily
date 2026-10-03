@@ -1,7 +1,467 @@
 {
   "schemaVersion": 1,
-  "updatedThrough": "2026-09-30",
+  "updatedThrough": "2026-10-03",
   "daily": [
+    {
+      "id": "gsd-2026-10-03",
+      "contentHash": "f5f28e4822dbe28818424fc2db29273b760bcc1f99313c102fd098bd80a83929",
+      "date": "2026-10-03",
+      "title": "3DGS / 4DGS 深度情报日报 — 2026-10-03",
+      "headline": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 与转换工具正式更新",
+      "summary": "Gaussian-Splat-Lite 推进 WebGPU、XR 与流式加载；SuperSplat、Viewer 和 SplatTransform 发布正式版本，LichtFeld 修复评估偏差，另有 10 篇新论文。",
+      "status": "corrected",
+      "path": "docs/daily/2026/10/2026-10-03.md",
+      "sourceCount": 10,
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "highlights": [
+        {
+          "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+          "kind": "tool",
+          "title": "Gaussian-Splat-Lite 1.2 更新 WebGPU、XR 与流式加载",
+          "summary": "正式版加入 8-bit 排序、TAA、XR 双眼共享和流式重试；同时删除部分旧 API，升级需按迁移处理。setCamera 注册相机，update 无参数。",
+          "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+          "anchor": "event-0e975fb36257",
+          "topics": [
+            "3dgs",
+            "webgpu",
+            "streaming"
+          ],
+          "priority": "P1+",
+          "evidence": "可实际测试；Apache-2.0；Three.js ≥0.186、Node 20.19+；A/B",
+          "image": {
+            "url": "/media/images/gslite-v120-demo-960.webp",
+            "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+            "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+            "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+            "position": "50% 50%",
+            "originalUrl": "/media/originals/gslite-30.png",
+            "width": 960,
+            "height": 540,
+            "variants": [
+              {
+                "url": "/media/images/gslite-v120-demo-640.webp",
+                "width": 640
+              },
+              {
+                "url": "/media/images/gslite-v120-demo-960.webp",
+                "width": 960
+              }
+            ]
+          },
+          "date": "2026-10-03"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+          "kind": "tool",
+          "title": "SuperSplat 3.5.1、Viewer 1.37 与 SplatTransform 3.9 发布",
+          "summary": "此前主分支的 SOG 提速、PLY 兼容及头显 XR 改动进入正式版本；Editor 对超过 4000 万 live splats 的发布强制生成 LOD。",
+          "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+          "anchor": "event-b8ea1613f532",
+          "topics": [
+            "3dgs",
+            "formats",
+            "lod"
+          ],
+          "priority": "P1+",
+          "evidence": "可直接安装；MIT；A",
+          "date": "2026-10-03"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+          "kind": "tool",
+          "title": "LichtFeld 修复畸变评估与 masked LPIPS",
+          "summary": "master 重构畸变训练与评估空间，并按有效区域归一化 masked LPIPS；历史指标不宜直接与修复后结果比较，尚未进入 0.5.3。",
+          "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+          "anchor": "event-364e0463c471",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1+",
+          "evidence": "master 可测；GPL-3.0；B",
+          "date": "2026-10-03"
+        },
+        {
+          "id": "github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+          "kind": "tool",
+          "title": "LocusGS 公开前馈高斯重建代码",
+          "summary": "仓库公开空间落地 token、训练评估及多 GPU 配置；权重与安装文档仍不完整，当前属于复现门槛较高的研究原型。",
+          "source": "https://github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+          "anchor": "event-4c7048614107",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "研究原型；Apache-2.0；代码已放、权重/安装文档未见；B",
+          "date": "2026-10-03"
+        },
+        {
+          "id": "huggingface.co/datasets/wonguen/3DROID",
+          "kind": "tool",
+          "title": "3DROID 开放 114 个机器人重建场景",
+          "summary": "数据集提供高斯、相机、度量深度和评估信息，可用于机器人视觉的深度与位姿测试；原始 DROID 视频、机器人状态和训练权重需另取。",
+          "source": "https://huggingface.co/datasets/wonguen/3DROID",
+          "anchor": "event-9b7cfd1728eb",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "数据+评估代码可下载；约 681 MB；作者代码 Apache-2.0、场景资产 CC BY-NC 4.0/上游条款；A",
+          "date": "2026-10-03"
+        },
+        {
+          "id": "github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+          "kind": "tool",
+          "title": "track-4dgs 0.6 接入 VGGSfM 轨迹查询",
+          "summary": "增加特征复用、分块查询和原像素坐标恢复，支持将二维轨迹关联到高斯相机数据；它仍是跟踪工具包，完整动态训练流程尚未提供。",
+          "source": "https://github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+          "anchor": "event-45c5e03e2cd6",
+          "topics": [
+            "3dgs",
+            "4dgs"
+          ],
+          "priority": "P1-",
+          "evidence": "可实际测试；Apache-2.0；PyTorch/CUDA + VGGSfM checkpoint；B",
+          "date": "2026-10-03"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/04da9085",
+          "kind": "tool",
+          "title": "Spirula 改进航线接缝，并警示 AMD Windows 训练风险",
+          "summary": "GPS mapping 增加 seam weld，AMD Windows 驱动问题加入警告与 CAS 绕行；阈值和受影响显卡的验证仍有限，不能视为已经全面修复。",
+          "source": "https://github.com/harry7557558/spirula-studio/commit/04da9085",
+          "anchor": "event-256af6ce66fa",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1- / 风险",
+          "evidence": "master 实验性；GPL-3.0；RX 6000 及更老卡尚未实机验证；B",
+          "date": "2026-10-03"
+        }
+      ],
+      "image": {
+        "url": "/media/images/gslite-v120-demo-960.webp",
+        "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+        "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/gslite-30.png",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/images/gslite-v120-demo-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/gslite-v120-demo-960.webp",
+            "width": 960
+          }
+        ]
+      },
+      "issue": 40,
+      "prs": [
+        41,
+        44
+      ],
+      "readingMinutes": 13,
+      "unresolvedSources": 0
+    },
+    {
+      "id": "gsd-2026-10-02",
+      "contentHash": "e61d92ba07f48ed5862c7abb7607d27e466a9b6b10b626c263dd3100af207373",
+      "date": "2026-10-02",
+      "title": "3DGS / 4DGS 深度情报日报 — 2026-10-02",
+      "headline": "SplatTransform 加速 SOG 生成，SuperSplat 优化头显 XR",
+      "summary": "SOG 转换与流式打包提速，SuperSplat 调整头显预算、操作与 LOD；Spirula 引入 GPS mapping，LuluSplat 增加 Windows / Vulkan 训练。",
+      "status": "published",
+      "path": "docs/daily/2026/10/2026-10-02.md",
+      "sourceCount": 0,
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "highlights": [
+        {
+          "id": "github.com/playcanvas/splat-transform/pull/340",
+          "kind": "tool",
+          "title": "SplatTransform 加速 SOG 聚类与流式打包",
+          "summary": "采用 f32 k-means 与重叠流水改善 SOG 生成，正确读取 big-endian PLY，并明确拒绝 ASCII PLY；提速提交尚未进入当时的 3.8.0，流式打包峰值内存有所增加。",
+          "source": "https://github.com/playcanvas/splat-transform/pull/340",
+          "anchor": "event-bc8f0fd5b15b",
+          "topics": [
+            "3dgs",
+            "formats",
+            "streaming"
+          ],
+          "priority": "P1+",
+          "evidence": "main 可编译；MIT；A10G/M4 Max 作者实测；B",
+          "date": "2026-10-02"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+          "kind": "tool",
+          "title": "SuperSplat Viewer 调整头显预算、双手操作与 XR LOD",
+          "summary": "main 为独立头显采用 1M splat 预算，增加双手缩放和按距离选择 XR LOD；上游在 Quest 3 测得改善，Pico 识别尚未经真机验证。",
+          "source": "https://github.com/playcanvas/supersplat-viewer/pull/322",
+          "anchor": "event-f5b48c8ee473",
+          "topics": [
+            "3dgs",
+            "lod"
+          ],
+          "priority": "P1+",
+          "evidence": "Viewer main；MIT；Quest 3 / Quest Browser 152；B",
+          "date": "2026-10-02"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/130",
+          "kind": "tool",
+          "title": "Spirula 将 GPS 约束加入重建 mapping",
+          "summary": "GPS 从初始对齐参考进入 mapping prior，帮助无人机与长航线约束重建；精度、坐标和少数数据集上调节的阈值仍需逐项核对。",
+          "source": "https://github.com/harry7557558/spirula-studio/pull/130",
+          "anchor": "event-48305d82f552",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1+",
+          "evidence": "master 可测；GPL-3.0；macOS/Linux 验证；B",
+          "date": "2026-10-02"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+          "kind": "tool",
+          "title": "LichtFeld 降低多模型加载与合并的显存开销",
+          "summary": "q16 band 分块路径降低多个大模型同时加载和合并的内存成本；属于 master 上的实现改进，需用实际场景核对峰值与时间。",
+          "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+          "anchor": "event-488cb0ea7bb5",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "master 可测；GPL-3.0；B",
+          "date": "2026-10-02"
+        },
+        {
+          "id": "liquiduslabs.com/lulusplat/",
+          "kind": "tool",
+          "title": "LuluSplat 1.1.2 增加 Windows / Vulkan 训练",
+          "summary": "本地一体化流程扩展到 Windows / Vulkan，macOS 仍使用 Metal；上游低端显卡案例只说明具体配置可行，不代表通用性能。",
+          "source": "https://liquiduslabs.com/lulusplat/",
+          "anchor": "event-853f99bec576",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "Win 10/11、2016+ Vulkan GPU；免费二进制、源码/许可证未公开；A（产品页）",
+          "image": {
+            "url": "/media/images/lulusplat-rf-960.webp",
+            "alt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+            "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+            "credit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图",
+            "position": "50% 50%",
+            "originalUrl": "/media/originals/lulusplat.webp",
+            "width": 1395,
+            "height": 956,
+            "variants": [
+              {
+                "url": "/media/images/lulusplat-rf-640.webp",
+                "width": 640
+              },
+              {
+                "url": "/media/images/lulusplat-rf-960.webp",
+                "width": 960
+              },
+              {
+                "url": "/media/images/lulusplat-rf-1395.webp",
+                "width": 1395
+              }
+            ]
+          },
+          "date": "2026-10-02"
+        },
+        {
+          "id": "aescripts.com/gausser/",
+          "kind": "tool",
+          "title": "Gausser 1.0.0 在 Cinema 4D 中加入高斯动画对象",
+          "summary": "将高斯对象接入 MoGraph、Fields、Effectors 与 Deformers，提供商业 Cinema 4D 动画流程；导出和重光照能力需遵循现有产品限制。",
+          "source": "https://aescripts.com/gausser/",
+          "anchor": "event-201bdc7a485d",
+          "topics": [
+            "3dgs",
+            "4dgs"
+          ],
+          "priority": "P1- / 商业",
+          "evidence": "C4D 2026+；Win x64 / Apple Silicon；闭源商业插件；A",
+          "date": "2026-10-02"
+        }
+      ],
+      "image": {
+        "url": "/media/images/lulusplat-rf-960.webp",
+        "alt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+        "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+        "credit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/lulusplat.webp",
+        "width": 1395,
+        "height": 956,
+        "variants": [
+          {
+            "url": "/media/images/lulusplat-rf-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/lulusplat-rf-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/lulusplat-rf-1395.webp",
+            "width": 1395
+          }
+        ]
+      },
+      "issue": 37,
+      "prs": [
+        38,
+        39
+      ],
+      "readingMinutes": 13,
+      "unresolvedSources": 0
+    },
+    {
+      "id": "gsd-2026-10-01",
+      "contentHash": "c760ef8aa2055fa45dafe50f1a5ba80ead6b6b0ae81793243100d277452ca536",
+      "date": "2026-10-01",
+      "title": "3DGS / 4DGS 深度情报日报 — 2026-10-01",
+      "headline": "ARKit Scanner 提速设备端训练，Spirula 支持外部点云初始化",
+      "summary": "ARKit Scanner 优化 Swift / Metal 训练；PlayCanvas 修复换帧黑屏与 XR 会话，Spirula 加入外部 PLY 初始化和 HEIC 输入支持。",
+      "status": "published",
+      "path": "docs/daily/2026/10/2026-10-01.md",
+      "sourceCount": 0,
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "highlights": [
+        {
+          "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+          "kind": "tool",
+          "title": "ARKit Scanner 加速设备端 Swift / Metal 训练",
+          "summary": "优化 GPU 反向传播、Adam 与 CPU 调整步骤，保持原有训练方法；作者在相同热状态的 iPhone 17 Pro 上测得约 1.39 倍提速，其他设备仍需验证。",
+          "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+          "anchor": "event-e7ea69b3b4c1",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1+",
+          "evidence": "源码可编译；iOS 17+、A14+；PolyForm Noncommercial；B",
+          "image": {
+            "url": "/media/images/arkit-training-720.webp",
+            "alt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+            "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
+            "credit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比",
+            "position": "50% 50%",
+            "originalUrl": "/media/originals/arkit-training.png",
+            "width": 720,
+            "height": 1566,
+            "variants": [
+              {
+                "url": "/media/images/arkit-training-640.webp",
+                "width": 640
+              },
+              {
+                "url": "/media/images/arkit-training-720.webp",
+                "width": 720
+              }
+            ]
+          },
+          "date": "2026-10-01"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9610",
+          "kind": "tool",
+          "title": "PlayCanvas 修复高斯资产换帧时的黑帧",
+          "summary": "Engine #9610 修复资产替换后的状态同步，作者的 WebGPU 与 WebGL2 flipbook 回归不再出现黑帧；当前属于 main 修复。",
+          "source": "https://github.com/playcanvas/engine/pull/9610",
+          "anchor": "event-b6493d88439b",
+          "topics": [
+            "3dgs",
+            "4dgs"
+          ],
+          "priority": "P1+",
+          "evidence": "Engine main；MIT；Chrome 152 回归数据；B",
+          "date": "2026-10-01"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/126",
+          "kind": "tool",
+          "title": "Spirula 支持外部 PLY 初始化并改进 HEIC 输入",
+          "summary": "可保留 COLMAP 或 Nerfstudio 相机并使用已配准的外部 XYZ+RGB 点云初始化训练，同时改善 HEIC 与全景天空遮罩输入；仍需核对坐标系。",
+          "source": "https://github.com/harry7557558/spirula-studio/pull/126",
+          "anchor": "event-4e6e23c8ff87",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "main 可测；GPL-3.0；Windows Vulkan 已验证，CUDA 未重编；B",
+          "date": "2026-10-01"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9627",
+          "kind": "tool",
+          "title": "PlayCanvas 修复 XR 会话与相机状态",
+          "summary": "连续修复会话进出、AR 平面与网格移除、命中测试、相机 rig 朝向及裁剪面；应回归重复进入和退出 XR 的完整流程。",
+          "source": "https://github.com/playcanvas/engine/pull/9627",
+          "anchor": "event-07e7794fda78",
+          "topics": [
+            "3dgs"
+          ],
+          "priority": "P1",
+          "evidence": "Engine main；MIT；含 Quest 3 测试；B",
+          "date": "2026-10-01"
+        }
+      ],
+      "image": {
+        "url": "/media/images/arkit-training-720.webp",
+        "alt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+        "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
+        "credit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/arkit-training.png",
+        "width": 720,
+        "height": 1566,
+        "variants": [
+          {
+            "url": "/media/images/arkit-training-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/arkit-training-720.webp",
+            "width": 720
+          }
+        ]
+      },
+      "issue": 34,
+      "prs": [
+        35,
+        36
+      ],
+      "readingMinutes": 10,
+      "unresolvedSources": 0
+    },
     {
       "id": "gsd-2026-09-30",
       "contentHash": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
@@ -1224,6 +1684,438 @@
     }
   ],
   "entries": [
+    {
+      "id": "arxiv:2610.00040",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "DSSR-3D: View-Dependent Referring Segmentation on Semantic 3D Gaussians",
+      "summary": "以 training-free projection scoring 做 view-dependent referring segmentation，并提出 ViewRef-GS benchmark；不是本窗口新提交，不计为“今天发表”。",
+      "source": "https://arxiv.org/abs/2610.00040",
+      "anchor": "section-dssr-3d-view-dependent-referring-segmentation-on-semantic-3d-gaussians",
+      "topics": [
+        "3dgs"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00195",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "GS-PQM: Full-Reference Quality Metric for Compressed Gaussian Splatting",
+      "summary": "直接在 reference/distorted GS 参数域提取特征并用 SVR 预测质量，示例接受两份 PLY。适合压缩回归测试的候选 metric，但缺少明确开源许可，不能默认商用或再分发。",
+      "source": "https://arxiv.org/abs/2610.00195",
+      "anchor": "section-gs-pqm-full-reference-quality-metric-for-compressed-gaussian-splatting",
+      "topics": [
+        "3dgs",
+        "formats"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00749",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "What Builds the Scene? Luminance Dominates Geometry Formation in 3D Gaussian Splatting",
+      "summary": "11 个场景×4 次运行中，luminance-only 建几何、再拟合外观，平均只比 RGB 低 0.085 dB；chroma-only 几何低 3.9–5.5 dB。若后续被复现，可能影响 densification/feature allocation 的设计，但目前不能直接改生产 trainer。",
+      "source": "https://arxiv.org/abs/2610.00749",
+      "anchor": "section-what-builds-the-scene-luminance-dominates-geometry-formation-in-3d-gaussian-splatting",
+      "topics": [
+        "3dgs"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00822",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "TRACE: Privacy-Preserving Next-Best-View over Distributed 3DGS Maps",
+      "summary": "多机器人只交换 transmittance/radiance aggregate 及导数，消息大小与本地地图规模无关；Habitat 100 次决策中作者报 83.3% heading 在集中式结果 15° 内。对隐私/带宽敏感协同探索有新意，但没有实机或代码证据。",
+      "source": "https://arxiv.org/abs/2610.00822",
+      "anchor": "section-trace-privacy-preserving-next-best-view-over-distributed-3dgs-maps",
+      "topics": [
+        "3dgs",
+        "slam"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01114",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "Affine-Aligned Atlas for Canonical Gaussian Construction in Video Representation",
+      "summary": "在 canonical Gaussian 构建前用逐帧 affine transform 吸收全局相机运动，参数增量很小，面向大幅 camera motion；需要等代码确认其对真实 rolling shutter、非刚体和长序列漂移的鲁棒性。",
+      "source": "https://arxiv.org/abs/2610.01114",
+      "anchor": "section-affine-aligned-atlas-for-canonical-gaussian-construction-in-video-representation",
+      "topics": []
+    },
+    {
+      "id": "arxiv:2610.01229",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "A Compact Explicit 4D Representation for Dynamic Scenes（Sparc4D）",
+      "summary": "单目视频+已知相机的 feed-forward autoencoder，以静态共享特征和稀疏 temporal slots 表示 4D state，decoder 输出 2D Gaussian surfels。32-frame MultiCamVideo 报告 0.95M values、PSNR 21.70（MoVieS 20.40）；尚无代码/权重，不能验证质量—压缩权衡。",
+      "source": "https://arxiv.org/abs/2610.01229",
+      "anchor": "section-a-compact-explicit-4d-representation-for-dynamic-scenessparc4d",
+      "topics": [
+        "formats"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01707",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "MEGA: Object-Level Watertight Mesh Extraction from 3D Gaussians",
+      "summary": "先在 3DGS 中分割对象，再通过空间视觉蒸馏渲染对象视图，训练 mask-guided neural surface，目标是 object-level watertight mesh。对资产导出有价值，但目前没有可跑工具。",
+      "source": "https://arxiv.org/abs/2610.01707",
+      "anchor": "section-mega-object-level-watertight-mesh-extraction-from-3d-gaussians",
+      "topics": [
+        "3dgs"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01744",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "3DROID: A Dataset for 3D Reconstruction in Robotics",
+      "summary": "这是今日论文中最可落地的一项：可直接取 114 个 gaussians.ply、相机、metric depth/alpha 做 SLAM/深度/新视角评测；许可需同时遵守代码、生成资产和上游组件条款。",
+      "source": "https://arxiv.org/abs/2610.01744",
+      "anchor": "section-3droid-a-dataset-for-3d-reconstruction-in-robotics",
+      "topics": [
+        "slam"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01876",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "EvenSplat: Gaussian Splatting under Uneven Illumination",
+      "summary": "联合 2D illumination decomposition、Gaussian-carried illumination field、camera response network 与局部曝光补偿，面向高反差/不均匀光照；尚不能判断训练成本和与 relighting 方法的可组合性。",
+      "source": "https://arxiv.org/abs/2610.01876",
+      "anchor": "section-evensplat-gaussian-splatting-under-uneven-illumination",
+      "topics": [
+        "3dgs"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02207",
+      "kind": "paper",
+      "date": "2026-10-03",
+      "title": "GALA: Gaussian Avatar Lightweight Animation",
+      "summary": "移动 Web 结果很吸引人，但“最高 2659×”来自特定 host/CPU 对照；需等代码后统一模型、帧数、质量和设备口径测试。",
+      "source": "https://arxiv.org/abs/2610.02207",
+      "anchor": "section-gala-gaussian-avatar-lightweight-animation",
+      "topics": [
+        "avatar"
+      ]
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/04da9085",
+      "kind": "tool",
+      "title": "Spirula 改进航线接缝，并警示 AMD Windows 训练风险",
+      "summary": "GPS mapping 增加 seam weld，AMD Windows 驱动问题加入警告与 CAS 绕行；阈值和受影响显卡的验证仍有限，不能视为已经全面修复。",
+      "source": "https://github.com/harry7557558/spirula-studio/commit/04da9085",
+      "anchor": "event-256af6ce66fa",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1- / 风险",
+      "evidence": "master 实验性；GPL-3.0；RX 6000 及更老卡尚未实机验证；B",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+      "kind": "tool",
+      "title": "LocusGS 公开前馈高斯重建代码",
+      "summary": "仓库公开空间落地 token、训练评估及多 GPU 配置；权重与安装文档仍不完整，当前属于复现门槛较高的研究原型。",
+      "source": "https://github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+      "anchor": "event-4c7048614107",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "研究原型；Apache-2.0；代码已放、权重/安装文档未见；B",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+      "kind": "tool",
+      "title": "LichtFeld 修复畸变评估与 masked LPIPS",
+      "summary": "master 重构畸变训练与评估空间，并按有效区域归一化 masked LPIPS；历史指标不宜直接与修复后结果比较，尚未进入 0.5.3。",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+      "anchor": "event-364e0463c471",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1+",
+      "evidence": "master 可测；GPL-3.0；B",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+      "kind": "tool",
+      "title": "SuperSplat 3.5.1、Viewer 1.37 与 SplatTransform 3.9 发布",
+      "summary": "此前主分支的 SOG 提速、PLY 兼容及头显 XR 改动进入正式版本；Editor 对超过 4000 万 live splats 的发布强制生成 LOD。",
+      "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+      "anchor": "event-b8ea1613f532",
+      "topics": [
+        "3dgs",
+        "formats",
+        "lod"
+      ],
+      "priority": "P1+",
+      "evidence": "可直接安装；MIT；A",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+      "kind": "tool",
+      "title": "Gaussian-Splat-Lite 1.2 更新 WebGPU、XR 与流式加载",
+      "summary": "正式版加入 8-bit 排序、TAA、XR 双眼共享和流式重试；同时删除部分旧 API，升级需按迁移处理。setCamera 注册相机，update 无参数。",
+      "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+      "anchor": "event-0e975fb36257",
+      "topics": [
+        "3dgs",
+        "webgpu",
+        "streaming"
+      ],
+      "priority": "P1+",
+      "evidence": "可实际测试；Apache-2.0；Three.js ≥0.186、Node 20.19+；A/B",
+      "image": {
+        "url": "/media/images/gslite-v120-demo-960.webp",
+        "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+        "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/gslite-30.png",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/images/gslite-v120-demo-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/gslite-v120-demo-960.webp",
+            "width": 960
+          }
+        ]
+      },
+      "date": "2026-10-03"
+    },
+    {
+      "id": "github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+      "kind": "tool",
+      "title": "track-4dgs 0.6 接入 VGGSfM 轨迹查询",
+      "summary": "增加特征复用、分块查询和原像素坐标恢复，支持将二维轨迹关联到高斯相机数据；它仍是跟踪工具包，完整动态训练流程尚未提供。",
+      "source": "https://github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+      "anchor": "event-45c5e03e2cd6",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "priority": "P1-",
+      "evidence": "可实际测试；Apache-2.0；PyTorch/CUDA + VGGSfM checkpoint；B",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "huggingface.co/datasets/wonguen/3DROID",
+      "kind": "tool",
+      "title": "3DROID 开放 114 个机器人重建场景",
+      "summary": "数据集提供高斯、相机、度量深度和评估信息，可用于机器人视觉的深度与位姿测试；原始 DROID 视频、机器人状态和训练权重需另取。",
+      "source": "https://huggingface.co/datasets/wonguen/3DROID",
+      "anchor": "event-9b7cfd1728eb",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "数据+评估代码可下载；约 681 MB；作者代码 Apache-2.0、场景资产 CC BY-NC 4.0/上游条款；A",
+      "date": "2026-10-03"
+    },
+    {
+      "id": "aescripts.com/gausser/",
+      "kind": "tool",
+      "title": "Gausser 1.0.0 在 Cinema 4D 中加入高斯动画对象",
+      "summary": "将高斯对象接入 MoGraph、Fields、Effectors 与 Deformers，提供商业 Cinema 4D 动画流程；导出和重光照能力需遵循现有产品限制。",
+      "source": "https://aescripts.com/gausser/",
+      "anchor": "event-201bdc7a485d",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "priority": "P1- / 商业",
+      "evidence": "C4D 2026+；Win x64 / Apple Silicon；闭源商业插件；A",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/130",
+      "kind": "tool",
+      "title": "Spirula 将 GPS 约束加入重建 mapping",
+      "summary": "GPS 从初始对齐参考进入 mapping prior，帮助无人机与长航线约束重建；精度、坐标和少数数据集上调节的阈值仍需逐项核对。",
+      "source": "https://github.com/harry7557558/spirula-studio/pull/130",
+      "anchor": "event-48305d82f552",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1+",
+      "evidence": "master 可测；GPL-3.0；macOS/Linux 验证；B",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+      "kind": "tool",
+      "title": "LichtFeld 降低多模型加载与合并的显存开销",
+      "summary": "q16 band 分块路径降低多个大模型同时加载和合并的内存成本；属于 master 上的实现改进，需用实际场景核对峰值与时间。",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+      "anchor": "event-488cb0ea7bb5",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "master 可测；GPL-3.0；B",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "github.com/playcanvas/splat-transform/pull/340",
+      "kind": "tool",
+      "title": "SplatTransform 加速 SOG 聚类与流式打包",
+      "summary": "采用 f32 k-means 与重叠流水改善 SOG 生成，正确读取 big-endian PLY，并明确拒绝 ASCII PLY；提速提交尚未进入当时的 3.8.0，流式打包峰值内存有所增加。",
+      "source": "https://github.com/playcanvas/splat-transform/pull/340",
+      "anchor": "event-bc8f0fd5b15b",
+      "topics": [
+        "3dgs",
+        "formats",
+        "streaming"
+      ],
+      "priority": "P1+",
+      "evidence": "main 可编译；MIT；A10G/M4 Max 作者实测；B",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+      "kind": "tool",
+      "title": "SuperSplat Viewer 调整头显预算、双手操作与 XR LOD",
+      "summary": "main 为独立头显采用 1M splat 预算，增加双手缩放和按距离选择 XR LOD；上游在 Quest 3 测得改善，Pico 识别尚未经真机验证。",
+      "source": "https://github.com/playcanvas/supersplat-viewer/pull/322",
+      "anchor": "event-f5b48c8ee473",
+      "topics": [
+        "3dgs",
+        "lod"
+      ],
+      "priority": "P1+",
+      "evidence": "Viewer main；MIT；Quest 3 / Quest Browser 152；B",
+      "date": "2026-10-02"
+    },
+    {
+      "id": "liquiduslabs.com/lulusplat/",
+      "kind": "tool",
+      "title": "LuluSplat 1.1.2 增加 Windows / Vulkan 训练",
+      "summary": "本地一体化流程扩展到 Windows / Vulkan，macOS 仍使用 Metal；上游低端显卡案例只说明具体配置可行，不代表通用性能。",
+      "source": "https://liquiduslabs.com/lulusplat/",
+      "anchor": "event-853f99bec576",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "Win 10/11、2016+ Vulkan GPU；免费二进制、源码/许可证未公开；A（产品页）",
+      "image": {
+        "url": "/media/images/lulusplat-rf-960.webp",
+        "alt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+        "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+        "credit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/lulusplat.webp",
+        "width": 1395,
+        "height": 956,
+        "variants": [
+          {
+            "url": "/media/images/lulusplat-rf-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/lulusplat-rf-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/images/lulusplat-rf-1395.webp",
+            "width": 1395
+          }
+        ]
+      },
+      "date": "2026-10-02"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/126",
+      "kind": "tool",
+      "title": "Spirula 支持外部 PLY 初始化并改进 HEIC 输入",
+      "summary": "可保留 COLMAP 或 Nerfstudio 相机并使用已配准的外部 XYZ+RGB 点云初始化训练，同时改善 HEIC 与全景天空遮罩输入；仍需核对坐标系。",
+      "source": "https://github.com/harry7557558/spirula-studio/pull/126",
+      "anchor": "event-4e6e23c8ff87",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "main 可测；GPL-3.0；Windows Vulkan 已验证，CUDA 未重编；B",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+      "kind": "tool",
+      "title": "ARKit Scanner 加速设备端 Swift / Metal 训练",
+      "summary": "优化 GPU 反向传播、Adam 与 CPU 调整步骤，保持原有训练方法；作者在相同热状态的 iPhone 17 Pro 上测得约 1.39 倍提速，其他设备仍需验证。",
+      "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+      "anchor": "event-e7ea69b3b4c1",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1+",
+      "evidence": "源码可编译；iOS 17+、A14+；PolyForm Noncommercial；B",
+      "image": {
+        "url": "/media/images/arkit-training-720.webp",
+        "alt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+        "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
+        "credit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比",
+        "position": "50% 50%",
+        "originalUrl": "/media/originals/arkit-training.png",
+        "width": 720,
+        "height": 1566,
+        "variants": [
+          {
+            "url": "/media/images/arkit-training-640.webp",
+            "width": 640
+          },
+          {
+            "url": "/media/images/arkit-training-720.webp",
+            "width": 720
+          }
+        ]
+      },
+      "date": "2026-10-01"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9610",
+      "kind": "tool",
+      "title": "PlayCanvas 修复高斯资产换帧时的黑帧",
+      "summary": "Engine #9610 修复资产替换后的状态同步，作者的 WebGPU 与 WebGL2 flipbook 回归不再出现黑帧；当前属于 main 修复。",
+      "source": "https://github.com/playcanvas/engine/pull/9610",
+      "anchor": "event-b6493d88439b",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "priority": "P1+",
+      "evidence": "Engine main；MIT；Chrome 152 回归数据；B",
+      "date": "2026-10-01"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9627",
+      "kind": "tool",
+      "title": "PlayCanvas 修复 XR 会话与相机状态",
+      "summary": "连续修复会话进出、AR 平面与网格移除、命中测试、相机 rig 朝向及裁剪面；应回归重复进入和退出 XR 的完整流程。",
+      "source": "https://github.com/playcanvas/engine/pull/9627",
+      "anchor": "event-07e7794fda78",
+      "topics": [
+        "3dgs"
+      ],
+      "priority": "P1",
+      "evidence": "Engine main；MIT；含 Quest 3 测试；B",
+      "date": "2026-10-01"
+    },
     {
       "id": "arxiv:2609.35573",
       "kind": "paper",
@@ -2496,6 +3388,57 @@
   ],
   "search": [
     {
+      "id": "gsd-2026-10-03",
+      "kind": "daily",
+      "title": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 与转换工具正式更新",
+      "summary": "Gaussian-Splat-Lite 推进 WebGPU、XR 与流式加载；SuperSplat、Viewer 和 SplatTransform 发布正式版本，LichtFeld 修复评估偏差，另有 10 篇新论文。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "url": "/daily/2026/10/03/",
+      "text": "增量窗口：2026-10-02 07:27 → 2026-10-03 07:15（北京时间）。 已读取 10 月 2 日 canonical 日报去重；SplatTransform #340/#341、SuperSplat Viewer #322–#324、Spirula GPS mapping、LichtFeld 合并显存优化等已报道内容，今天只记录其“正式发版”或后续实质变化。\n今天没有 P0，但有一组很扎实的 P1：PlayCanvas 将昨天仍停留在 main 的编辑器、Viewer 与转换器改动全部推成可安装版本；Gaussian-Splat-Lite v1.2.0 把 WebGPU 排序、XR 双眼共享、TAA、流式重试与大 SPZ 解码一次性推进；LichtFeld 修正了畸变评估和 masked LPIPS 的系统性偏差。 动态方向上，track-4dgs 接入 VGGSfM；数据方向，3DROID 已开放 114 个带 3DGS、相机与度量深度的场景。没有核实到 NVIDIA、AMD、Apple、Meta、Unity、Unreal、Khronos 或 MPEG 在本窗口发布新的原生 GS SDK/标准。\n1. 今日最值得看\n优先级事件可运行性 / 许可证 / 证据实际判断P1+Gaussian-Splat-Lite v1.2.0可实际测试；Apache-2.0；Three.js ≥0.186、Node 20.19+；A/BWebGPU radix sort 改为 8-bit passes，作者称相同排序下约少 1/3 GPU sort 时间；新增 TAA、XR 双眼共享 culling/sort、RAD/SOG 重试、128 MiB SPZ Zstd window 与 >4M splat 内存修复。API 有破坏性删除，虽是 minor 版本也应按迁移升级处理。P1+SuperSplat v3.5.1 + Viewer v1.37.0 + SplatTransform 3.9.0可直接安装；MIT；A昨天的 SOG 提速、big-endian PLY、Quest/Pico 1M budget、双手操作和 XR LOD 已进入发布版本；Viewer 同时恢复 Engine 2.23 下 picking/voxel debug overlay。现在才是适合锁版本回归测试的节点。P1+LichtFeld #2686：畸变训练/评估空间重构 + #2688：masked LPIPS 归一化master 可测；GPL-3.0；B原先 --undistort 可能拿畸变原图对齐无畸变渲染，且缩小后再矫正损失细节；新路径一次全分辨率矫正并可把渲染逆变换回原镜头空间。masked LPIPS 也不再因主体只占 1/3 画面而看起来约好 3 倍。属于指标可信度修复，不只是画质 tweak。P1LocusGS 代码公开 commit f5aac796研究原型；Apache-2.0；代码已放、权重/安装文档未见；BNUDT 的 feed-forward 3DGS 把空间落地 token 用于几何 cross-attention；仓库含 DL3DV/RealEstate10K 训练评估和 1/2/4/7/8 GPU Accelerate 配置，但 README 仍只有论文链接，复现门槛高。P13DROID 数据集数据+评估代码可下载；约 681 MB；作者代码 Apache-2.0、场景资产 CC BY-NC 4.0/上游条款；A114 个机器人场景包含 gaussians.ply、相机、metric depth、alpha 和可靠性指标，能直接做机器人视觉的 GS 深度/位姿评测；不含原始 DROID 视频与机器人状态，训练权重需另取。P1-track-4dgs 0.6.0：VGGSfM tracker可实际测试；Apache-2.0；PyTorch/CUDA + VGGSfM checkpoint；B一次提取特征、分块跟踪查询点并恢复原像素坐标，可把 2D 长时轨迹附到 GS 相机数据；它仍是 tracking 工具包，不是完整 4DGS 训练器，README 的 motion estimation / regularization 工作流仍是 TODO。P1- / 风险Spirula AMD/Windows float atomic workaroundmaster 实验性；GPL-3.0；RX 6000 及更老卡尚未实机验证；B维护者确认 AMD Windows 专有 Vulkan 驱动在缺少原生 fp32 buffer atomic add 时可能崩溃或产出黑模型；新增 wave-uniform CAS 退出方案和开关。Linux Mesa RADV 是当前已知安全路径；不要把 commit 当成已修复。P2GALA：Gaussian Avatar 动画压缩论文+项目页；仓库 仍写 Code coming soon；B把 host avatar 的时序高斯属性压成 spline/low-rank/重建器并在 WebGL 解码，作者报告 iPhone 15 60 fps、CPU 动画最高 2659×；没有代码，暂不能审计口径或复现。\n2. SuperSplat / PlayCanvas 工具链\nSuperSplat v3.5.1：40M live splats 以上强制 LOD\nPR #1064 统计未删除的 live splats；超过 40,000,000 时，发布场景的 Generate LODs 会被强制开启并禁用开关，纯动画更新不显示该限制。原因是单文件 SOG 走 SplatTransform/WASM WebP encoder，维护者测得约 45M–50M 会耗尽内存。架构影响：这不是渲染器的新 LOD 算法，而是 Editor 发布边界的安全阀。大型场景会被引导到分层 SOG/streaming 路径，避免导出阶段 OOM；已删除 splats 不计数，符合实际 payload。若流水线依赖“超大单文件 SOG”，v3.5.1 会改变 UI 行为，应改为 LOD 发布或在命令行拆分。升级判断：值得马上升级。 它把可预测的 40M 阈值显式化，比在 WebP 编码末端失败更安全。证据 A（release）/B（PR）。\nSuperSplat Viewer v1.37.0：昨天的 XR 改动正式可用\nv1.37.0 收录 #322、#323、#324：独立头显默认 1M splat budget、Quest/Pico foveation/performance scale、双手平移/旋转/缩放，以及基于距离的 XR LOD。相对上一状态的新增，是从 main 可测变为正式 tag。#326 适配 PlayCanvas Engine 2.23 移除 drawTexture：用受生命周期管理的 fullscreen mesh instances 重画 pick-depth 与 voxel debug overlay，并显式 teardown；同时去掉已废弃的 GSPLAT_LODMODE_DISTANCE 赋值。实际价值是 selection/picking 深度与体素调试可见性恢复，不改变 SOG/SPZ/PLY 输入格式。升级判断：XR Viewer 建议升级并做设备回归。 重点检查 Quest/Pico 帧率、双手手势与 picking overlay；非 XR 项目主要收益是 Engine 2.23 兼容。证据 A/B。\nSplatTransform 3.9.0：#340/#341 从源码变成安装版本\n3.9.0 包含 #340 的 f32 k-means/streamed SOG 并行提速，以及 #341 的 big-endian binary PLY 正确读取和 ASCII PLY 明确拒绝。相对昨天，核心算法没有再变；关键变化是 npm 版本边界可锁定。SOG/streaming 生产线可用 @playcanvas/splat-transform@3.9.0 做 A/B，重点观测 streamed combine 的 CPU/GPU 峰值，因为作者基准显示提速同时提高峰值资源。SuperSplat、Viewer 与 SplatTransform 本轮仍未看到新的 GLB/glTF、共享 viewer settings、camera path 或 WebGPU Editor 发布 API。公开 Discord 未能直接读取；不使用转述补全。\n3. 可实际运行的开源项目\nGaussian-Splat-Lite v1.2.0\n用途/格式： Three.js 的 WebGPU/WebGL2 3DGS renderer，读取 PLY、SPZ、SOG、RAD，含 GPU sort、stochastic rendering、streaming LOD 与 GIS/ECEF 高精度路径。代码变化： native WebGPU radix 由 4-bit 改 8-bit；fast/normal/stochastic 分别 3/4/2 passes，稳定处理相同 depth key；XR 两眼共用 generation/culling/sort，WebGPU 一次 compute 投影双眼；新增无 velocity texture 的 camera/depth reprojection TAA；RAD/SOG 对 408/425/429/5xx 和 worker loss 自动重试，等待间隔逐步增加、上限 30 秒，并非重试总截止时间；SPZ v4 Zstd window 上限 128 MiB；>4M splats 减少闲置纹理。门槛： three >=0.186.0，Node ^20.19 || >=22.12；浏览器需 WebGPU 或 WebGL2。仅在重建 WASM decoder 时需要 Rust 1.87。兼容风险： 删除 autoStochastic、旧 stochastic passes、render()/offscreen capture env-map 路径与非 XR ArrayCamera；streaming scheduler 通过 setCamera(camera) 注册相机，再调用无参数的 update()；未注册相机时 update() 会抛错。建议先跑格式矩阵和 XR/移动浏览器回归，再升级生产包。\nLocusGS\n代码仓库 在 10 月 2 日公开完整模型/训练/评估实现，机构为国防科技大学，Apache-2.0。训练脚本覆盖 DL3DV 与 RealEstate10K，默认 bf16/Accelerate，示例含多 GPU 训练和单 GPU 评估。当前没有清晰 requirements、安装步骤、公开 checkpoint 或一键 demo；代码注释与 shell 脚本里还有本地路径。判定为“真实代码已公开的研究原型”，不是开箱可跑产品。\n固定仓库复查：nerfstudio-project/gsplat、graphdeco-inria/gaussian-splatting、WebODM/OpenSplat 在窗口内未见改变工作流的新 release/commit；不把常规 CI/文档更新凑入日报。\n4. 4D / Dynamic Gaussian\ntrack-4dgs 0.6.0： 新增 VGGSfM tracker，支持任意 query frame 重排到 index 0、一次特征提取、chunked query、visibility/confidence 输出。它补强了从视频 2D tracks 到 GS 投影/关联的前处理层，可与 CoTracker3、VGGT、MV-TAP、OpenD4RT 后端对比；安装依赖作者的 gaussian-splatting>=2.3.8、PyTorch/CUDA 和 Meta VGGSfM 权重。固定 hustvl/4DGaussians、fudan-zvg/4d-gaussian-splatting、Dynamic3DGaussians 本窗口未核实到 release 或关键 commit。Sparc4D 与 Affine-Aligned Atlas 见论文栏：两者均涉及动态视频表示，但今天只有论文，不能按可运行 4DGS 工具计算。\n5. Viewer / Editor / Web / Mobile / XR\nWeb/XR 的主要可用变化来自 SuperSplat Viewer v1.37.0 与 Gaussian-Splat-Lite v1.2.0：前者更偏发布/共享 Viewer 与独立头显交互，后者更适合 Three.js 嵌入和自定义 renderer。若要评估 WebGS 工程路线，建议同一 SOG 场景对比首屏、steady-state FPS、GPU memory、LOD 抖动、picking 和双眼一致性。Gaussian-Splat-Lite 的 TAA 是 camera/depth reprojection，不依赖 velocity texture；对 stochastic rendering 的噪声稳定很有价值，但随机模式需显式启用，噪声采样由 stochasticSample / autoAdvanceStochasticSample 控制，旧项目不能无脑替换。没有核实到 Three.js、Babylon.js、Unity、Unreal、Godot、visionOS/RealityKit 本窗口发布新的官方原生 Gaussian Splatting 集成。\n6. Compression / Format / LOD / Streaming\nSOG： SuperSplat 对 >40M live splats 强制 LOD，是格式/发布路径上的运维边界；SplatTransform 3.9.0 则把 streamed SOG 加速推到 npm。两者结合意味着 PlayCanvas 正把“超大单文件”转向分层 streaming，而不是继续扩大单文件 encoder 的容忍度。SPZ： Gaussian-Splat-Lite 将 SPZ v4 Zstd window 提到 128 MiB，解决大字典/窗口文件的浏览器解码兼容；这不代表格式本身新增 LOD 或随机访问。PLY： SplatTransform 3.9.0 修正 big-endian binary PLY；ASCII 现在失败得更早、更明确。导入网关应仍把 PLY encoding 纳入验收，而不是只看扩展名。标准状态： 未核实到 glTF Gaussian extension、OpenUSD、3D Tiles、MPEG GSC、Khronos 或 W3C/WebGPU 在窗口内新的正式提案里程碑。今天没有可报告的跨生态标准落地。\n7. Training / Reconstruction / SLAM / Robotics / Mapping\nLichtFeld Studio 正确性修复组\n#2686 新增 --eval-space distorted|undistorted；默认在原始畸变参考空间比较：2× 渲染后按原镜头模型逆 warp，使用 validity mask。训练预处理改为一次 full-resolution area resample + Lanczos-3/8×8 quadrature，并让 mask/depth/normal 同步对齐。维护者报告 8K 图像一次性约 0.24 s、残差中位数 <0.3 px，且无 --undistort 路径 bit-identical。#2688 在每个 VGG stage 按 mask 有效面积归一化 LPIPS；quarter-mask 与裁剪区域 LPIPS 的差异收敛到 2% 内。历史 masked LPIPS 不宜直接与修复后结果纵向比较。#2683 补全 COLMAP FULL_OPENCV 的 k4–k6 有理畸变分母；#2690 防止非训练 render 更新 per-Gaussian screen-size 统计，修复隐藏模型训练在显存增长期停滞；#2684 让 depth AbsRel 观测通过向后兼容 SFMO chapter 在项目恢复后保持一致。这些都只在 master，尚未进入 v0.5.3。建议评估/畸变数据用户优先测 #2686/#2688；普通无畸变训练无需急追所有提交。\nSpirula mapping 与 AMD 风险\nPR #131 在昨天 GPS mapping 基础上加入 seam weld：对有 ≥100 verified matches、共享 3D 点少、邻居交集低的相邻 capture frame 检测重复点并融合，再做求解；同时用 60–150 m GPS block 检查向 BA 提示 4%–8% 的短尺度段。作者单条 canopy 航线上多处 seam 从约 2.14–4.51 m 降到 0.52–1.80 m，但阈值只在少数数据调过，默认应视为实验性。Issue #137 的 RX 580/Windows 崩溃促成驱动警告和 CAS workaround。RX 6000 及更老 AMD 卡的 Windows 训练当前证据不足；Linux Mesa RADV 是更可信的绕行路径。\n机器人数据\n3DROID 提供 114 个场景和 reconstruction/evaluation bundle；论文称从 225 个候选中有 114 个通过 refine-extrinsics 质量门槛。参考 pipeline 是 A100 80 GB / CUDA 12.1，作者报模型加载/编译后中位数 0.77 s/scene；该数字不能外推到消费卡或训练端。\n8. Avatar / Human / Generative 3D\nGALA 的价值在于把已有 Gaussian avatar 的每帧属性序列重参数化为紧凑时序表示，使动画解码可落到浏览器。项目页给出多 host 方法 CPU 从 154/234 ms 到 5.5/4.4 ms，以及一个 42.9 s 到 16.1 ms 的案例；这些是作者口径、任务不一致，不能简单合并成通用 2659×。当前 代码仓库 无实现与权重，因此等级为“论文/演示，无代码”。适合跟踪，不适合纳入本周交付依赖。本窗口未核实到可下载的新 Gaussian Human/Avatar 权重或商业 DCC 插件正式更新。\n9. 软件、硬件和平台厂商\nPlayCanvas 是今天唯一达到正式发布证据的厂商/平台链：Editor v3.5.1、Viewer v1.37.0、SplatTransform 3.9.0。PlayCanvas Engine 的 2.24 beta 提交本窗口主要为通用引擎工作，未发现新的 GS 核心能力，故不单列为新增。对 NVIDIA Developer/Omniverse/CUDA、AMD GPUOpen/ROCm、Intel Graphics、Apple/Metal/RealityKit/visionOS、Meta Reality Labs、Qualcomm/ARM、Unity、Unreal、Cesium/MapLibre、Babylon.js/Three.js 做了实时检索；没有核实到本窗口的原生 GS SDK、硬件路径或正式版本变化。这里是“未发现可验证发布”，不是断言这些生态没有内部开发。商业工具 Jawset Postshot、Luma、Scaniverse、Polycam、KIRI、RealityCapture、Volinga、Gracia、Arcturus 本窗口未核实到新的正式版本/价格/许可变化，不重复旧消息。\n10. 研究论文\n以下按 arXiv 10 月 2 日更新列表核验；“提交日”与“今天被列表收录”分开写。无代码链接即按论文无代码处理。\nWhat Builds the Scene? Luminance Dominates Geometry Formation in 3D Gaussian Splatting\n\narXiv 2610.00749，提交 2026-09-30；论文无代码，P2，A。编辑摘要： 11 个场景×4 次运行中，luminance-only 建几何、再拟合外观，平均只比 RGB 低 0.085 dB；chroma-only 几何低 3.9–5.5 dB。若后续被复现，可能影响 densification/feature allocation 的设计，但目前不能直接改生产 trainer。\nA Compact Explicit 4D Representation for Dynamic Scenes（Sparc4D）\n\narXiv 2610.01229，提交 2026-10-01；论文无代码，P2，A。编辑摘要： 单目视频+已知相机的 feed-forward autoencoder，以静态共享特征和稀疏 temporal slots 表示 4D state，decoder 输出 2D Gaussian surfels。32-frame MultiCamVideo 报告 0.95M values、PSNR 21.70（MoVieS 20.40）；尚无代码/权重，不能验证质量—压缩权衡。\nAffine-Aligned Atlas for Canonical Gaussian Construction in Video Representation\n\narXiv 2610.01114，提交 2026-10-01；论文无代码，P2，A。编辑摘要： 在 canonical Gaussian 构建前用逐帧 affine transform 吸收全局相机运动，参数增量很小，面向大幅 camera motion；需要等代码确认其对真实 rolling shutter、非刚体和长序列漂移的鲁棒性。\nMEGA: Object-Level Watertight Mesh Extraction from 3D Gaussians\n\narXiv 2610.01707，提交 2026-10-01；论文无代码，P2，A。编辑摘要： 先在 3DGS 中分割对象，再通过空间视觉蒸馏渲染对象视图，训练 mask-guided neural surface，目标是 object-level watertight mesh。对资产导出有价值，但目前没有可跑工具。\n3DROID: A Dataset for 3D Reconstruction in Robotics\n\narXiv 2610.01744 / Hugging Face 数据集，提交 2026-10-01；数据+代码可下载，P1，A。编辑摘要： 这是今日论文中最可落地的一项：可直接取 114 个 gaussians.ply、相机、metric depth/alpha 做 SLAM/深度/新视角评测；许可需同时遵守代码、生成资产和上游组件条款。\nEvenSplat: Gaussian Splatting under Uneven Illumination\n\narXiv 2610.01876，提交 2026-10-01；论文无代码，P2，A。编辑摘要： 联合 2D illumination decomposition、Gaussian-carried illumination field、camera response network 与局部曝光补偿，面向高反差/不均匀光照；尚不能判断训练成本和与 relighting 方法的可组合性。\nGALA: Gaussian Avatar Lightweight Animation\n\narXiv 2610.02207 / 项目页，提交 2026-10-01；演示可看、代码未放，P2，B。编辑摘要： 移动 Web 结果很吸引人，但“最高 2659×”来自特定 host/CPU 对照；需等代码后统一模型、帧数、质量和设备口径测试。\nTRACE: Privacy-Preserving Next-Best-View over Distributed 3DGS Maps\n\narXiv 2610.00822，提交 2026-09-30；论文无代码，P2，A。编辑摘要： 多机器人只交换 transmittance/radiance aggregate 及导数，消息大小与本地地图规模无关；Habitat 100 次决策中作者报 83.3% heading 在集中式结果 15° 内。对隐私/带宽敏感协同探索有新意，但没有实机或代码证据。\nGS-PQM: Full-Reference Quality Metric for Compressed Gaussian Splatting\n\narXiv 2610.00195 / 代码，页面显示提交 2026-09-18，本轮属于更新列表补漏；代码+预训练 SVR 可跑，但仓库未见 LICENSE，P1-，A/B。编辑摘要： 直接在 reference/distorted GS 参数域提取特征并用 SVR 预测质量，示例接受两份 PLY。适合压缩回归测试的候选 metric，但缺少明确开源许可，不能默认商用或再分发。\nDSSR-3D: View-Dependent Referring Segmentation on Semantic 3D Gaussians\n\narXiv 2610.00040，页面显示提交 2026-09-03，本轮属于更新列表补漏；论文无代码，P2，A。编辑摘要： 以 training-free projection scoring 做 view-dependent referring segmentation，并提出 ViewRef-GS benchmark；不是本窗口新提交，不计为“今天发表”。\n11. 海外开发者社区信号\n最值得注意的社区信号是 Spirula Issue #137：真实 RX 580 8 GB/Windows 用户在 amdvlk64.dll 崩溃，维护者将其归入 AMD Windows 专有驱动的 float atomic 问题。证据等级 D（单用户环境）+ B（维护者代码/警告）；目前还缺第二台受影响硬件的复现。SuperSplat/PlayCanvas 的公开 GitHub PR 和 release 已直接核验。公开 Discord 若需登录/加入服务器，本轮未直接读取；没有把搜索摘要或转述当事实。Reddit、Hacker News、Stack Overflow、Computer Graphics StackExchange、YouTube 本窗口未找到同时满足“原作者/可复现/新增”的高信号条目；不使用旧帖子填充。\n12. 中文社区信号\n对 B站、知乎、CSDN、掘金、SegmentFault、V2EX、少数派及国内高校/实验室公开页做了中文检索，本窗口未找到可由第一手代码、版本或可复现实验交叉核验的新增 P0/P1。搜索摘要、转载和不可完整访问的公众号/小红书内容没有提升为事实条目；这表示“没有核实到”，不等于中文社区没有发布。LocusGS 的作者机构为中国高校，今天的可验证新增是 GitHub 代码 commit，已在开源栏目按一手来源记录，而不是以二次解读重复计数。\n13. 今天最值得实际测试 / 部署\n1) Gaussian-Splat-Lite v1.2.0：WebGPU/XR/streaming 回归\n为什么： 今天唯一同时覆盖 WebGPU sort、XR 双眼共享、stochastic TAA、SOG/SPZ/RAD streaming 和大场景内存的可安装开源更新。门槛： Node 20.19+/22.12+、Three.js 0.186+、支持 WebGPU/WebGL2 的浏览器；准备同一场景的 PLY/SPZ/SOG 与至少一台 XR 设备。预期收益： 更低 GPU sort 时间、更少双眼重复工作、更稳的流式重试和更大 SPZ 兼容；风险是 API 删除多，先建立 v1.1.x 对照，不要直接替换生产包。\n2) PlayCanvas 三件套发布版本：锁版验证生产链\n为什么： 昨天只能追 main 的改动今天都进入 Editor v3.5.1、Viewer v1.37.0、SplatTransform 3.9.0，适合做可复现的端到端基线。门槛： 一个 5M–10M SH3 PLY 和一个 >40M live splat 工程；Quest/Pico 如有则再跑 XR。记录转换时间、峰值 RAM/VRAM、首屏、steady-state FPS、picking 与 LOD 切换。预期收益： SOG 构建缩短、big-endian 输入不再静默损坏、移动 XR budget/交互可用、Engine 2.23 debug overlay 恢复；>40M 发布会被强制走 LOD，这是预期行为。\n3) LichtFeld #2686/#2688：重算一组带畸变评估\n为什么： 这两项可能改变历史指标结论，价值高于再跑一个普通训练 benchmark。门槛： 从 master 构建 LichtFeld，选一组 FULL_OPENCV 或明显畸变数据、带前景 mask 的场景；保留旧版 PSNR/LPIPS 与图像对齐可视化。预期收益： 去掉 15–33 px 级参考空间错位和 mask 面积偏差，得到能与真实成像空间对应的指标。若团队依赖排行榜或回归阈值，应在升级后重新建立基线。\n核查与边界\n证据等级：A=官方 release/原论文/正式数据集；B=原作者 commit/PR/issue 或项目页；C=可复现第三方测试；D=单一社区报告。性能数字只保留来源给出的硬件、场景或对照语境；没有把不同项目的倍数横向相乘或外推。本轮没有使用无法直接读取的私有 Discord、微信/小红书全文，也没有把搜索摘要写成已核验事实。"
+    },
+    {
+      "id": "gsd-2026-10-02",
+      "kind": "daily",
+      "title": "SplatTransform 加速 SOG 生成，SuperSplat 优化头显 XR",
+      "summary": "SOG 转换与流式打包提速，SuperSplat 调整头显预算、操作与 LOD；Spirula 引入 GPS mapping，LuluSplat 增加 Windows / Vulkan 训练。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "url": "/daily/2026/10/02/",
+      "text": "增量窗口：2026-10-01 07:43 → 2026-10-02 07:27（北京时间）。 已读取 10 月 1 日 canonical 日报去重；ARKit Scanner #58、PlayCanvas Engine #9610/#9623–#9627、Spirula 外部 PLY seed、HEIC、Blender half-float USD 动画修复与 AESplat 仓库状态不再重复算作今天新增。\n今天没有 P0。最实质的 P1 集中在四条工程链：SplatTransform 的 streamed SOG 生成在 A10G 上缩短约 52%；SuperSplat Viewer 为 Quest/Pico 加入真正按移动 GPU 预算运行的 XR 路径；Spirula 把 GPS 从“事后定标”推进到 SfM mapping 过程；LichtFeld 多模型合并的峰值显存由 5.4 GB 降至 3.7 GB。 另外，LuluSplat v1.1.2 已提供 Windows/Vulkan 下载，Cinema 4D 商业插件 Gausser 1.0.0 则把 PLY/SPLAT/SPZ 接入 MoGraph、变形器与多种渲染器。\n1. 今日最值得看\n优先级事件可运行性 / 许可证 / 证据实际判断P1+SplatTransform #340：f32 k-means 与 streamed SOG 流水线提速main 可编译；MIT；A10G/M4 Max 作者实测；BA10G 上 5M SH3 PLY→SOG 51.0→31.8 s，4 LOD/9.4M streamed combine 144.5→69.9 s；代价是 streamed 峰值 CPU 1.95→2.16 GB、GPU 130→260 MB。尚未进入 3.8.0。P1+SuperSplat Viewer #322–#324：独立头显预算、双手操作与 XR LODViewer main；MIT；Quest 3 / Quest Browser 152；BQuest 3 streamed scene 从 9.7 fps 提到 30.7 fps，performance mode 40.3 fps；新增双手移动/旋转/缩放，并避免转头后看到 behind-penalty 选出的粗 LOD。尚未进入 1.36.2。P1+Spirula #130：GPS 参与 mapping、360 水平先验与 solver 修复master 可测；GPL-3.0；macOS/Linux 验证；BEXIF/遥测 GPS 现在影响匹配、BA 与注册拒绝，不再只用于事后 metric gauge；一个 1,800 帧林下航拍从 1,784+10 帧碎片模型修到 1,800 帧单模型，但数据只覆盖一条困难航线。尚未进入 v2026.9.30。P1LichtFeld #2620/#2621：多模型合并改为 bounded-band q16 编码master 可测；GPL-3.0；B三个 5M SH3 模型合并时，量化输入峰值 GPU 5.4→3.7 GB、构建 2.2→0.13 s；后续 #2621 修复 allocator 预留容量导致的失败。未进入当前正式 v0.5.3。P1LuluSplat v1.1.2：Windows/Vulkan 初始发布Win 10/11、2016+ Vulkan GPU；免费二进制、源码/许可证未公开；A（产品页）照片/普通视频/360/INSV/COLMAP→SfM→Vanilla/MCMC→PLY/SPLAT，支持 batch、CLI、MCP；Windows 版让旧 AMD/Intel/NVIDIA 也能实测，但目前不能按开源软件审计或集成。P1-SplatTransform #341：big-endian PLY 正确读取、ASCII 明确拒绝main；MIT；B避免 big-endian 数值被静默按 little-endian 解成垃圾；ASCII 不再误读成 binary。属于数据正确性修复，仍未进入 3.8.0。P1- / 商业Gausser 1.0.0 for Cinema 4DC4D 2026+；Win x64 / Apple Silicon；闭源商业插件；A导入 PLY/SPLAT/SPZ，可用 Fields、Effectors、Deformers、Forces、Cloner 驱动并导出；支持 Standard/Redshift/Octane/Arnold。9 月 30 日发布，本轮补漏，不冒充 10 月 1 日新发布。P2sun-conditioned-3dgs：太阳方向条件化 SH 基线研究原型；继承 Graphdeco 许可、非宽松商用；9 tests + 1k-step 小跑；B每 Gaussian 16D feature + 两层宽 32 MLP 生成随太阳方向变化的 SH residual；能烘焙固定太阳 PLY，但尚无 full-resolution 30k 结果，早期 200k 点 step 为 40.98 vs 17.85 ms。\n2. SuperSplat / PlayCanvas 工具链\nViewer #322：独立头显不再误用 desktop 4M budget\nPR #322，merge commit 3d87dc8a 修复了一个很实际的分类错误：Quest/Pico 浏览器 UA 报告 Linux desktop，Viewer 因而给它们 4M desktop splat budget；XR 又要每眼各画一次，Quest 3 最终只有 9.7 fps。\n现在独立头显 session 默认：\nstreamed budget      1M（显式 budget 仍优先）\nfixed foveation      1\ntarget refresh       72 Hz（设备支持时）\nperformance mode     0.8× render resolution\nexit XR              恢复原 2D budget\n作者在 Quest 3、Quest Browser 152、WebGL、Engine 2.22.6 的结果：\n模式Budget分辨率FPS修复前4M3360×17609.7Quality1M3360×176030.7Performance1M2688×140840.3\n主线程只用 1.1–1.8 ms，瓶颈明确在 GPU；每 1M splats 约增加 18 ms。这个结果不能外推到 Pico，因为 Pico UA 检测未在真机验证；单文件非 streamed scene 也没有 splat budget，只会得到 foveation/分辨率收益。\nViewer #323：双手把环境缩成桌面模型\nPR #323，merge commit 4a173177 把 Engine 的 XrManipulation 接到 camera rig：双手 grip 或 tracked-hand fist 可移动、yaw 旋转、缩放 splat；VR 绕脚底 pivot，AR 绕双手 pivot，退出 session 恢复 authored placement，避免破坏 viewer 的 camera framing、collision 与 annotation 假设。\nQuest 3 上 1M streamed scene 在拖动时由 28.2 降到 21.9 fps，因为世界变换变化会每帧重拷 work buffer 并重排；松手后无持续性能损失。这是功能性进步，但还不是“零成本 XR manipulation”。\nViewer #324：XR LOD 按距离选，不再因头部朝向降级\nPR #324，merge commit e83a447e 在 XR 内把：\nlodBehindPenalty: 5 → 1\nlodUpdateAngle: 90° → 0\n也就是完全按距离选择 streamed detail，不再把身后区域视为最远 5 倍，也不因头部转动触发重新平衡/重流式。作者固定 1M budget 的脚本测试中，转 80° 后原本位于身后的画面区域由 97K splats 提升到 150K；代价是正对最初方向时总体 splats 约少 8%。\n发布边界\n当前 Viewer package.json 和正式 v1.36.2 Release 仍是 1.36.2，上述 #322–#324 只在 main。AR 天空、XR 退出后 tone mapping/stochastic 恢复与 360° heading 等紧邻提交也处于同一未发布区间。要立即使用需锁 commit 或等待下一个 npm/tag。\nSuperSplat Editor 本窗口没有新 commit/release；Engine 本窗口的最新提交主要是类型、devtools 和通用渲染 pass 修复，没有新的 Gaussian renderer 核心变更。\n3. 可实际运行的开源项目\nSplatTransform：SOG 生成从串行等待改为重叠流水\nPR #340，merge commit b9809137 包含两层优化：\n对没有 shader-f16 的 WebGPU 设备（例如 NVIDIA/Dawn/Vulkan），f32 k-means assignment 改用 zero-padded vec4、|c|²−2x·c 距离形式和 128-thread workgroup；LOD writer 把 writeSogSource 拆成 start/finish，两份 unit 最多同时驻留，让下一 unit 的 GPU k-means 与当前 unit 的 CPU encode/write 重叠。\nA10G castle.ply、5M Gaussians、SH3、生产参数的作者数据：\n工作负载BeforeAfter3M×45、K=65536、10 iter k-means23.7 s12.5 sPLY→SOG51.0 s31.8 s4 LOD、9.4M streamed combine144.5 s69.9 s\nM4 Max 走 f16 kernel，普通 SOG 基本不变（44.4→43.9 s），但 streamed SOG 仍因流水重叠从 56.4 降到 44.4 s。839 tests 通过；输出除随机 k-means 的 shN codebook 外与旧版一致。\n同一提交还加入 --lod-file-count <n,n,...>，允许每个结构 LOD 指定 file-unit 的 Gaussian 数，最后一个值对更粗层重复；它只改变 leaf 打包进文件的方式，不改变 --lod-chunk-count 的 leaf split。这对网络请求数、单请求大小与解码峰值的 A/B 很有价值。\nPR #341，merge commit efb2fa3d 则让 readPly 真的遵守 binary_big_endian，并对 ASCII 给出清晰拒绝；过去两者都可能被按 little-endian binary 静默读坏。\n正式版本仍为 3.8.0，因此这两项均按 main 可测，不写成 npm 已发布。\nLuluSplat v1.1.2：Windows/Vulkan 的一体化本机流程\n官方产品页当前同时提供 Mac 与 Windows v1.1.2：\n输入：stills、普通视频、equirectangular 360、Insta360 .insv、COLMAP；SfM：提帧、模糊过滤、相机解算、稀疏重建检查；训练：Mac Metal；Windows Vulkan；Vanilla 与 MCMC；输出：.ply、.splat、output-log.txt；自动化：batch、headless CLI、JSON 输出、内置 MCP server；Windows 门槛：Windows 10/11 x64、2016 年后 Vulkan-capable GPU，安装包约 83 MB。\n直接下载免费且可离线运行，但官网没有公开自身源码或软件许可证，所以应标记为可下载闭源工具，不能把它使用的 gsplat/metal-gauss 开源组件自动等同于整个产品开源。Reddit 作者帖声称 RX570 可运行，证据只作为 C 级单机演示，不把它升级为通用性能保证。\nLichtFeld：多大模型同时加载的合并成本下降\nPR #2620，merge commit 1fdfa3e7 不再为所有模型的 SH 建整份 float 临时副本，而是按 bounded bands 编码 q16 payload，并让量化输入在 GPU 上解码。\n三个 5M SH3 模型：\n输入峰值 GPUBuild timequantized5.4→3.7 GB2.2→0.13 sfloat5.2→3.8 GB约多 16 ms\n输出与旧 builder byte-identical。紧接的 #2621 修复 allocator 为 means 预留额外 rows 后，SH degree 检查按 capacity 而不是 row count 失败的问题。它们适合“多个分区/多个 splat 组合成一个 viewport model”的场景，不是单模型训练显存优化；当前正式 Release 仍是 v0.5.3，main 与用户下载版边界很大。\n4. 4D / Dynamic Gaussian\n固定检查：\nhustvl/4DGaussiansfudan-zvg/4d-gaussian-splattingJonathonLuiten/Dynamic3DGaussians\n增量窗口没有新的关键 commit、Release、权重或可运行新项目达到 P1。新建仓库搜索中出现 Endo-4DGS 等条目，但 commit history 实际停在 2025 年，是重建/复制仓库，已过滤。\n今天最接近动态内容的变化来自 XR viewer：#323 可对静态场景做交互式刚体/缩放操作，但不是时间维度 Gaussian；#322/#324 改善 4D/序列场景在头显上的承载条件，却没有 deformation field、trajectory、时序压缩或多相机动态训练。\n5. Viewer / Editor / Web / Mobile / XR\n今天 Viewer/XR 的真实进步可以概括为：\n以前：桌面 UA → 4M budget → Quest 3 约 10 fps\n现在：头显识别 → 1M + foveation + 可选 0.8× → 31–40 fps\n再加：双手抓取、退出复位、按距离 LOD\n这对大型 WebGS 导览的价值高于单纯“支持 WebXR”标签，因为它处理了实际帧率、LOD 可见正确性与交互闭环。但还要注意：\nQuest 测试为 WebGL；WebGPU XR 路径仍取决于浏览器支持；Pico 仅 UA 识别，未真机验证；streamed scene 才有 1M budget，单文件 scene 仍需手工控 splat 数；manipulation 期间会每帧重排，Quest 3 约损失 22% fps。\n移动训练方面，昨日 ARKit Scanner 已覆盖 iOS/Metal；今天新增的 LuluSplat Windows 让低端 Vulkan 桌面卡也进入同类“一体化 GUI”比较组。SuperSplat Editor 本身没有新更新。\n6. Compression / Format / LOD / Streaming\n今天没有新的 SPZ/SOG schema、glTF/KHR Gaussian 扩展、OpenUSD、3D Tiles 或 MPEG GSC 标准版本。工程层的三项变化值得记录：\nSOG 生成速度：SplatTransform #340 在 A10G 上把 streamed combine 降低 52%，以双 unit 驻留换吞吐；LOD 文件粒度：--lod-file-count 让各 LOD 层的 file unit 大小可独立配置，可直接测 HTTP 请求数与首屏/近景切换；输入正确性：#341 正确处理 big-endian binary PLY，拒绝 ASCII，避免“转换成功但所有数值都坏了”的静默失败。\nLichtFeld 的 q16 banded builder 属于运行时模型合并/显存路径，不是新的交换格式。Gausser 可导出 Gaussian PLY、Point PLY、SPLAT、SPZ，但产品页没有说明其 SPZ/SOG 编解码实现或 LOD/streaming 语义，不能推断与 PlayCanvas streamed SOG 等价。\n7. Training / Reconstruction / SLAM / Robotics / Mapping\nSpirula #130：GPS 从 gauge 升级为 mapping prior\nPR #130，merge commit 37d8dc44 是今天重建侧最大改动：\n图片文件夹的 EXIF GPS 与视频遥测一样，生成 GPS-near match pairs，并在全局/联合 BA 给每帧 centre factor；--metric-gps auto 成为默认：有高度的 drone/EXIF→full，无可靠高度→horizontal，少于 3 个 fix→none；full 使用 COLMAP pose_prior_mapper 同口径：1 m sigma、Cauchy scale 7.815；新注册帧会对 GPS 轨迹做检查：连续漂移触发提前 global BA，前一帧正常而本帧偏离 4× radius 时拒绝错误 PnP；levelled ERP 的 -Y up 共识可形成 up prior 与 tilt gate，票数不足/分散过大时 fail closed；修复 exact-zero angle-axis 导数、prior-only 小步无法降低 LM damping、GPS final pass 迭代不足。\n作者的一条 1,800 帧林下 equirect 航拍：\n指标COLMAP GPSmaster#130 + follow-up单模型注册帧18001784 + 10-frame 小模型1800林下 GPS p90 / max4.95 / 7.39 m约 8–13 m 偏离1.63 / 2.56 m开阔区 GPS median1.80 m1.71 m1.72 m\n这里必须保留三个限制：表中包含后续 seam-weld PR 的联合结果；同一困难区运行间仍可能相差约 2 m；Windows/CUDA 未由作者验证。对无人机/360 大场景很值得测，但不能据此宣布普遍优于 COLMAP。\n固定库 gsplat、OpenSplat、Graphdeco 原版在本窗口没有新主分支提交。Spirula 新 GPS/level prior 仍在 master，最新正式二进制仍是 v2026.9.30。\n8. Avatar / Human / Generative 3D\n本窗口没有新的可运行 Avatar/Human Gaussian release。\n生成式方向有两个早期信号：\nsun-conditioned-3dgs 不是生成式 3D，而是条件外观模型：共享 geometry/opacity，每 Gaussian 16D feature 与共享小 MLP 根据太阳方向的 degree-2 SH 生成 view-SH residual；可把某一太阳方向烘焙成常规 PLY。9 个单测与 1,000-step/256² 验证通过，但尚无 30k/full-res 质量结果，列 P2。giro 在本轮出现公开社区发布：单图→MiniMax H3 轨道视频→自动环轨 gate/gap fill→SAM 3.1 mask→COLMAP→Brush 透明训练→visual-hull crop→SPZ/SOG/PLY/WebXR。代码 MIT，但模型各有独立许可；需要 Linux、两张 24 GB NVIDIA GPU、Python 3.12、Node、Rust、FFmpeg、CUDA COLMAP，作者明确称为个人研究原型，现有结论来自少量 subject/seed，因此列 P2 而非“一键产品”。\n新建 NovaSplat 的描述是“通过 3DGS onboarding/refinement 做 model-free 6D object pose”，但仓库目前只有一行 README、size 0、无代码/权重/许可证。保留为 P2 watch，不写成已开源实现。\n9. 软件、硬件和平台厂商\nGausser 1.0.0：Cinema 4D 内真正可动画的 splat object\n官方 aescripts 产品页 显示 v1.0.0 于 2026-09-30 发布：\nPLY/SPLAT/SPZ 导入，viewport adaptive detail；Cinema 4D Fields reveal/fade/isolate；MoGraph effectors、deformers、gravity/wind/field force、Cloner；Standard、Redshift、Octane、Arnold 的 geometry/material 准备；Gaussian PLY、Point PLY、SPLAT、SPZ 导出，包含 color/crop/effector 结果；RAM cache、surface emission、native Mesh Emitter/Particle Group；C4D 2026+、Windows x64、Apple Silicon、14-day trial。\n价格为 $24.99，官方页显示截至 2026-10-16 的促销价 $19.99。它是闭源商业插件，不是 C4D/Maxon 官方原生 GS；“scene lighting”也不等于从物理材质恢复真实 relighting，应以具体 renderer 的表现测试。\n其他厂商\nNVIDIA、AMD、Intel、Apple、Qualcomm、Meta、Unity、Unreal、Cesium、Khronos、W3C 与 MPEG 在本窗口未核到新的正式 Gaussian SDK/标准发布。Quest 3 是 SuperSplat 作者测试设备，不能解读成 Meta 发布原生 GS runtime。\n10. 研究论文\n截至观察点，没有发现新的 2026-10 arXiv Gaussian Splatting 批次进入可核验索引，因此本文件：\nsource_count: 0\n不复制 9 月 30 日已归档的 12 篇论文，也不把新建但空的 NovaSplat 仓库算作论文代码发布。sun-conditioned-3dgs 是带代码的独立实验 baseline，不是已发表论文；giro 是系统原型与实验笔记。\n如果 arXiv 批次在本次观察点之后发布，下一轮应作为 10 月 2 日的增量事件归档，并用 canonical arXiv marker 去重，而不是回写本轮为“检索失败”。\n11. 海外开发者社区信号\n本轮最值得保留的社区信号是 giro 的公开发布帖。它不是新的单体重建算法，而是把不可靠的单图 orbit video 做成可观察、可拒绝、可 reroll 的系统：环轨至少 330°、单帧跳变不超过 30°、闭环与圆度检查，缺一小段时只做 gap fill。\n作者 README 披露：20/20 视频的 gate 与人工判断一致；一次 turntable seed 从 4/119 提升到 119/119 registered frames；gap fill 约 40 s，对比整次 reroll 约 7 min，3/3 通过；Quest 3 在 245K splats 已出现 stutter。这些都是小样本实验笔记，不是通用 benchmark，证据 C/B 混合。\n另一个当日帖子报告 2,124 张 circular fisheye 图的 SfM 从 41:53 降到 10:57，但没有公开代码、设置与可复验数据，只能视为 D 级线索，不进入今日重点。\n12. 中文社区信号\n公开可索引的 B 站、知乎、CSDN、掘金与中文搜索结果中，本窗口没有发现同时满足明确发布时间、可访问源码/版本、复现步骤的新 P1。\n搜索到的“知天下 SOG 20×压缩”等内容属于此前已知视频/产品宣传，今天没有新的 schema、release 或可核 benchmark；也没有把只有搜索摘要的公众号/小红书内容当事实。中文用户今天最实用的新增仍来自原项目本身：Spirula 的中文 UI/CLI 与新 GPS mapping 逻辑、以及可在 Windows 低端 Vulkan GPU 上尝试的 LuluSplat。\n13. 今天最值得实际测试 / 部署的 3 项\n① SplatTransform #340：在 5090D V2 上跑 Vulkan/D3D12 双后端 SOG A/B\n你现有 5090D V2 很适合补上作者未给出的 Windows 数据。固定同一 20M–100M PLY，分别：\n--gpu-backend vulkan\n--gpu-backend d3d12\n再测试：\n--lod-file-count 128,256,512\n--lod-file-count 256,512,1024\n记录 GPU k-means、SOG/streamed combine wall time、CPU/GPU peak、文件数/平均 unit、首屏请求与近景切换延迟。预期收益是 A10G 级别的大幅压缩时间下降，但 5090 的 f16/backend 路径可能不同，不能直接套 52%。门槛：从 b9809137 之后的 main 构建，而不是 npm 3.8.0。\n② Quest 3 / Pico：Viewer XR 三提交联合回归\n锁定 e83a447e 或更晚 commit，用同一 streamed SOG 测：\n1M/2M/4M 显式 budget；quality vs performance mode；WebGL/WebGPU（设备实际支持时）；0°→80°→160° 快速转头后的 in-view splats、网络请求和 LOD pop；双手 grab 前/中/后 frame time；退出 XR 后预算、world transform、annotation/collision 是否复位。\n预期收益是从“能打开 XR”进入 30–40 fps 可交互区间；最大的工程风险是 manipulation 时每帧重排和 Pico 未实机验证。\n③ Spirula GPS mapping：你的 360/无人机数据与无 GPS 对照\n同一组 DJI/Insta360 数据跑：\nA. --metric-gps none\nB. --metric-gps horizontal\nC. --metric-gps full / auto\nD. COLMAP pose_prior_mapper 参考\n记录 connected models、registered frames、GPS p50/p90/max、相邻 camera jump、tilt、BA 次数、总 SfM 时间，并专看树荫/重复纹理/弱匹配区。若使用水平锁定 ERP，再 A/B --no-level-erp。预期收益是降低弱纹理段错误桥接；门槛是必须用 37d8dc44 后 master，并接受当前 Windows/CUDA 尚未由作者验证。\n今日结论\n今天最重要的不是一个新格式，而是现有生产链同时补上了“生成速度、头显预算、地理先验、多模型合并”四个瓶颈：\nGPS/360 SfM 更稳\n        ↓\nSOG / streamed SOG 更快生成\n        ↓\n多个大模型更低显存组合\n        ↓\nQuest/Pico 以移动 GPU 预算运行\n如果只选一项立即验证，我会选 SplatTransform #340：它最接近你的 WebGS/大型场景管线，而且 5090D V2 正好能补出 Windows Vulkan/D3D12 的上游缺口。若目标是近期做 XR 导览，则 Viewer #322–#324 应作为一组升级，不能只挑 1M budget 而漏掉转头 LOD 与退出复位。\n自动化说明\n已读取 2026-10-01 canonical 日报、10 月索引、daily index 与 checkpoint 去重。GitHub 结论优先使用原仓库 commit、merged PR、Release 与 README；作者 benchmark 均明确标注为未独立复现。main 与正式 npm/Release 严格分开：Viewer 最新正式版 1.36.2，SplatTransform 3.8.0，Spirula v2026.9.30，LichtFeld v0.5.3。新建仓库按真实 commit history 过滤；旧项目重建、镜像、空 README 不包装为今日可运行项目。arXiv 本轮没有 canonical marker，source_count: 0；图片发现不阻塞日报，本轮未引入第三方图片。"
+    },
+    {
+      "id": "gsd-2026-10-01",
+      "kind": "daily",
+      "title": "ARKit Scanner 提速设备端训练，Spirula 支持外部点云初始化",
+      "summary": "ARKit Scanner 优化 Swift / Metal 训练；PlayCanvas 修复换帧黑屏与 XR 会话，Spirula 加入外部 PLY 初始化和 HEIC 输入支持。",
+      "date": "2026-10-01",
+      "topics": [
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "lod",
+        "streaming",
+        "formats"
+      ],
+      "url": "/daily/2026/10/01/",
+      "text": "增量窗口：2026-09-30 17:40 → 2026-10-01 07:43（北京时间）。 已先读取 9 月 30 日 canonical 日报去重；SplatTransform 3.8.0、Spirula v2026.9.30、LichtFeld #2602/#2606/#2608、Mobile-4DGS、Viewer 1.36.2 与昨日 12 篇 arXiv 不再重复算作今天新增。\n今天没有 P0。最实质的 P1 是：iPhone/Metal 本机训练获得带设备数据的 1.39× 提速；PlayCanvas 修复动态替换 GS asset 时闪烁或停渲染；Spirula 可把已配准 LiDAR/普通 PLY 直接作为 Gaussian 初始点；PlayCanvas 又合入一组 XR 生命周期与 hit-test 修复。 Blender 原生 USD GS 读取也修了半精度动态属性的动画判断。\n1. 今日最值得看\n优先级事件可运行性 / 许可证 / 证据实际判断P1+ARKit 3DGS Scanner #58：Swift/Metal 训练提速源码可编译；iOS 17+、A14+；PolyForm Noncommercial；B同一 10k iterations 工作负载，作者在 serious thermal state 的 iPhone 17 Pro 测得 769.4→553.1 s（1.39×），M1 Pro 约 1.37–1.45×；不是跨项目“比 CUDA 快”结论。P1+PlayCanvas Engine #9610：GS asset 替换不再黑一帧Engine main；MIT；Chrome 152 回归数据；BGSplatFlipbook、4D/序列 GS 或按帧换资产的路径直接受益；WebGPU 30 fps flipbook 的空白帧 16/40→0，WebGL2 19/40→0。P1Spirula #126：外部 XYZ+RGB PLY seed cloudmain 可测；GPL-3.0；Windows Vulkan 已验证，CUDA 未重编；B可保留 COLMAP/Nerfstudio 相机与图像，同时用已配准 LiDAR/摄影测量点云替代 points3D 初始化，不再改写 COLMAP 数据库。P1PlayCanvas #9623–#9627：WebXR 稳定性链Engine main；MIT；含 Quest 3 测试；B处理监听器泄漏、运行中 clip plane、输入射线/速度、初始朝向、plane/mesh remove 与 hit test；对 GS 的 AR/VR 导览层重要，但不是 splat rasterizer 性能更新。P1-Blender commit 4676deff：USD GS 半精度动画判断Blender main；GPL；BUSD ParticleField/gsplat 使用 half-float 属性时，读取器现在也会检查 time samples，避免动态 GS 被误判为静态。P1-Spirula HEIC 输入 与 360 天空特征遮罩main 可测；GPL-3.0；BiPhone 静态照片可少一道转码；360 preset 隐藏天空/云的 feature，可减少非刚体云层参与匹配。尚未进入新的正式 Release。P2 / 状态纠正AESplat 官方仓库 与权重链接出现官方仓库；许可证未明确；BREADME 给出 CUDA 12.8/PyTorch 2.10 命令和两个 checkpoint，但当前 tree 只有 README、数据说明、assets、train.sh，缺 src/、requirements 和 rasterizer submodule，暂不能称代码+权重可跑。\n2. SuperSplat / PlayCanvas 工具链\n#9610：动态 GS 换帧的正确性修复\nPR #9610（merge commit 8e3e990c356b）修的是 streaming 与 render reconcile 的时序：\nGSplatComponent.asset 被替换\n→ 旧 placement 销毁、新 placement 建立\n→ framerender 的 streaming tick 先于 render path\n→ world state 仍按上一帧 placement 构建\n→ 本帧没有 splat / 旧 2.22.x 甚至抛错后永久停渲染\n新实现让 GSplatDirector#updateStreaming 在 manager streaming 前检查 gsplatPlacementsDirty 并 reconcile 当前 placement。公开 API 不变；只有 placement 改动帧会多一次轻量 reconcile，render path 的第二次遍历发现无变化。\n作者的固定间隔 Chrome 152 测试：\n场景修复前空白/失败帧修复后30 fps Flipbook / 60 Hz / WebGPU16 / 400 / 4030 fps Flipbook / 60 Hz / WebGL219 / 400 / 40每帧换 asset / WebGPU29 / 300 / 30每帧换 asset / WebGL229 / 301–2 / 30（首次 CPU sort）\n这对 4DGS 不是完整动态形变支持，但对“多份静态/时间片 splat 轮换”的实现非常关键。当前只在 Engine main；Viewer/SuperSplat/SplatTransform 本窗口没有新 commit 或新 Release，升级前仍应核对应用实际锁定的 Engine 版本。\nXR 修复组\n#9623：销毁 XrManager/XrView 与结束 session 时移除监听器，避免多次进入 XR 后对象和回调累积。#9624：运行中的 nearClip/farClip 会传给 session；Quest 3 测试从仍为 0.1–10000 修到设置的 0.5–5。#9625：输入源 origin/direction 不再覆盖 position/rotation 返回向量，射线使用完整 rig transform，linear velocity 回到文档声明的 world space。#9626：进入 XR 时按 camera forward 计算完整 360° heading；180° 相机不再被折回 0°。#9627：被移除的 plane/mesh 仍保留最后数据供 remove handler 读取；hit test 跳过无 pose 结果并按浏览器给出的沿射线顺序取最近有效命中。\n这些是 GS XR 应用的宿主引擎修复，不应写成 Gaussian rasterizer 获得了新能力。\n3. 可实际运行的开源项目\nARKit 3DGS Scanner：从采集到 SOG 都在设备内\n项目：KuoFengYuan/arkit-3dgs-scanner\n用途：ARKit 照片/pose/可选 LiDAR capture → refinement → Swift/Metal 3DGS training → gaussians.sog；也可导出 COLMAP ZIP 给桌面 trainer。门槛：Xcode 26+；iOS/iPadOS 17+；本机训练需 A14+；LiDAR 可选。档位：4k/300k、10k/600k、20k/1M iterations/Gaussian cap；默认 960 px，可选 1440/1920。互操作：README 声明 SOG 可由 SuperSplat、PlayCanvas、LichtFeld Studio 打开。许可：2026-09-30 从此前状态改为 PolyForm Noncommercial 1.0.0，不适合直接纳入商业闭源产品。\n#58 没改 loss、PPISP、pose refinement、densification schedule、精度或 cap，主要改 GPU/CPU 执行：\nbackward blend 每线程重放 4 个垂直像素，M1 Pro 18.1→10.9 ms；projection backward 只写被 view 触达的行，每步省约 100 MB zero gradients，3.17→0.78 ms；六组 Adam 合并一次 dispatch，5.72→5.02 ms；每步等待 6→3 次；CPU refine 去掉逐行分配并并行算 Gumbel keys。\n作者 F21171（715 train / 143 held-out）报告：\n设备10k iteration 总时长GPU step质量变化M1 Pro374.2/386.7→261.7/277.6 s36.6→26.4 msaligned PSNR 均值约 23.861→23.859 dBiPhone 17 Pro，serious thermal769.4→553.1 s80.7→58.9 ms23.946→23.907 dB\n手机每版只有一组同热状态运行，不能泛化到其他 iPhone、20k/full-res 或正常 UI preview；但这已比只报理论 kernel speed 更有工程参考价值。\nSpirula main：采集输入更友好\n外部 PLY seed cloud #126 增加 --seed-pointcloud 与 GUI picker。它读取普通 XYZ+RGB ASCII/binary PLY，在 centering 和坐标变换之前替换 dataset seed points；支持 COLMAP 与 Nerfstudio，并对空点云、NaN/Inf、缺 RGB、相对/绝对路径做回归测试。它与 init_ply 的“从既有 Gaussian warm start”不同：这里是初始几何点，不带训练好的 Gaussian 参数。\nHEIC 支持 commit 对 iPhone 静态照片集尤其有用；本轮未见包含这些晚间提交的新 tag，因此均按 main 可测，不写成 v2026.9.30 已带。\n4. 4D / Dynamic Gaussian\n固定检查的 hustvl/4DGaussians、fudan-zvg/4d-gaussian-splatting、Dynamic3DGaussians 在增量窗口没有新 commit/release。今天与动态内容最直接的工程变化是 PlayCanvas #9610：若 4D/序列播放通过 GSplatFlipbook 或轮换 asset 实现，修复后不会每个时间片黑一帧。\n这不等于：\n单个模型内的 deformation field；Gaussian trajectory/interpolation；流式 4D 压缩；多相机同步重建。\n因此归类为 viewer/runtime correctness，而不是新的 4DGS 方法。\n5. Viewer / Editor / Web / Mobile / XR\nMobile：ARKit 3DGS Scanner 已形成 on-device capture、training、preview、SOG share 的完整开源链，但非商业许可；当前性能数据只覆盖作者一个大场景和两类 Apple 设备。Web/XR：PlayCanvas #9623–#9627 改善多次进入/退出、AR plane/mesh remove、hit test、rig 朝向与 clip planes。对 Meta Quest/ARCore 类 GS 导览器，优先回归“重复进出 session、移动过的 camera rig、多 hit result、动态改 near/far”。Viewer/Editor：SuperSplat、SuperSplat Viewer、SplatTransform 在本窗口没有继昨日版本后的新提交，不能把 Engine main 修复自动视为 Viewer npm 已包含。Blender：commit 4676deff 的 USDParticleFieldReader::is_animated() 改为通过 UsesFloat* 选择实际 float/half attribute，再查 ValueMightBeTimeVarying()。这说明 Blender 的原生 USD gsplat 路径已经覆盖半精度属性，但本提交只修动画检测，不是新渲染器发布。\n6. Compression / Format / LOD / Streaming\n今天没有新的 SPZ/SOG schema、KHR 扩展、MPEG GSC 或 3D Tiles 标准版本。新增更多是互操作 correctness：\nARKit Scanner 直接导出 SOG，但它的训练/导出实现是独立 Swift/Metal 代码；Spirula 外部 seed cloud 接受普通 XYZ+RGB PLY，用于训练初始化，不是 SOG/SPZ 转换；Blender 修 USD ParticleField 中 half-float GS 属性的 time-varying 检测；PlayCanvas #9610 修 runtime streaming world state 在 asset replacement 时的同步。\nLOD 方面沿用昨日结论：Engine 已转为 distance bands + Target/Limit budget，SplatTransform 3.8.0 不再生成新的 error tables；本窗口没有进一步策略更改。\n7. Training / Reconstruction / SLAM / Robotics / Mapping\n今天最值得映射/重建用户关注的是 Spirula 的 LiDAR/PLY seed 注入。推荐的实际链路是：\nCOLMAP / Nerfstudio 相机与图像\n+ 已配准 LiDAR XYZ+RGB PLY\n→ --seed-pointcloud\n→ 共用 centering / coordinate transform\n→ Gaussian training\n这避免把 LiDAR 数据伪装成 COLMAP points3D.bin，也允许 poses-only COLMAP reconstruction 使用外部 cloud。限制是必须先完成同一坐标系配准；此功能不会自动做 LiDAR-camera registration。\nARKit Scanner 则把 ARKit pose、可选 LiDAR depth seed/loss、per-image exposure/color correction 放进设备端链路。它适合比较“Apple 设备快速现场闭环”与“导出 COLMAP 后在 5090/专业训练器重训”的质量/耗时差异，而不是替代所有桌面 SfM。\n固定库 gsplat、OpenSplat、Graphdeco 原版在窗口内没有新主分支提交；LichtFeld 新提交均已进入昨日 9 月 30 日正文，不重复计数。\n8. Avatar / Human / Generative 3D\n本窗口没有新的可运行 Avatar/Human Gaussian release。AESplat 属于 pose-free feed-forward scene reconstruction，不是数字人。它的状态相对昨日论文条目有变化：\n官方 README 给 PyTorch 2.10、CUDA 12.8、训练/评估命令；给出 RealEstate10K 与 ACID 两个 Hugging Face checkpoint 链接；但 初始 commit 的仓库树没有 README 所引用的 src.main、requirements.txt 或 submodules/diff-gaussian-rasterization。\n所以今天只能从“论文无代码”升级为“官方占位仓库 + 权重链接，源码不完整”，可运行性仍是研究待补齐。\n9. 软件、硬件和平台厂商\nApple 生态：第三方 ARKit Scanner 在 A14+/Metal 上跑训练，并非 Apple 官方原生 GS API。性能数据证明一个具体实现可行，不能写成 iOS/RealityKit 已官方支持 3DGS。Blender：main 的 USD GS half-float animation fix 是明确平台互操作进展；要等对应 nightly/release 才能按产品版本部署。PlayCanvas：今天是 Engine main 的 correctness 修复，没有新的 Viewer/Editor npm 包。NVIDIA / AMD / Intel / Qualcomm / Meta / Unity / Unreal：本窗口未核到新的官方 GS SDK、硬件扩展或正式产品发布。Quest 3 只作为 PlayCanvas 上游验证设备出现，不等于 Meta 发布 GS runtime。\n10. 研究论文\n上一次 canonical 日报已经归档 12 条 arXiv（包括 Imagine3D-LLM、WINGS、NRF-GS、AESplat、CollisionSplatting 等）。截至本轮观察点，没有发现新的 arXiv 批次需要追加，故本文件 source_count: 0，不会复制昨天的论文正文。\n唯一需要记录的论文状态变化是 AESplat 官方仓库/权重链接出现但源码缺失；上游论文中的 +0.8 dB/+1.1 dB 等数值仍是作者报告，未独立复现。\n11. 海外开发者社区信号\n一个值得保留但不升级为 P1 的案例，是 “Doors of Perception”线上画廊讨论。发帖者披露约 4,000 张照片、COLMAP 对齐、LichtFeld MCMC/MIP filter/PPISP、稀疏化后重训 LOD，最终约 1.6M Gaussians / 57 MB，并在 SuperSplat 中用 hotspot/annotation 展示作品信息。\n价值在于它展示“高细节艺术品”与“十分钟 360 视频快速扫描”的取舍：画作纹理、低光和缝合误差会让高像素静态照片仍有优势。数据来自单一项目公开说明，证据 C，不当作通用压缩率或质量 benchmark。\n另有 ARGO 的 GS deliverables 教程 用同一 CC0 场景比较 viewer、video、mesh、point cloud、AR 等交付物，适合作为客户交付清单参考，不属于底层工具突破。\n12. 中文社区信号\n公开中文索引中，本窗口没有发现同时具备明确发布时间、源码/版本、可复现步骤的新 P1。Spirula 的 13 语言 UI 和 ARKit Scanner 的繁体中文文档有利于中文用户上手，但它们仍属于原项目一手资料，不应包装成独立中文社区事件。\n不把旧 B 站/CSDN 教程、无源码演示或搜索摘要当作今天新增。\n13. 今天最值得实际测试 / 部署的 3 项\n① iPhone 端训练：做真实热稳态 A/B\n在同一段现场扫描上固定 10k、960 px、PPISP、600k cap，比较旧/新 commit：\ntotal time、GPU step；thermal state、峰值内存、电量；held-out PSNR/SSIM、empty pixel share；gaussians.sog 在 SuperSplat/PlayCanvas/LichtFeld 的打开与方向/颜色一致性。\n预期收益是训练时长约 20–39%，但需在你的目标 iPhone、正常 UI preview 和自采数据上验证。商业项目先解决非商业许可证。\n② PlayCanvas：Flipbook + XR 生命周期联合回归\n用 2–4 个时间片 asset 以 30 fps 轮换，同时在 Quest/移动浏览器重复进入退出 XR：\n每帧 drawable splat count、黑帧数；WebGPU/WebGL2 首次 sort；near/far 动态改变；180° 初始 camera heading；plane/mesh remove handler 与 hit-test 多结果；退出后的 listener/object 数。\n预期收益是消除序列换帧闪烁和多次 XR session 累积故障；门槛是需要 Engine main，自行确认 npm/tag 含提交。\n③ Spirula：COLMAP poses + LiDAR seed 对照\n同一数据做三组：\nA. 原 COLMAP points3D\nB. 已配准 LiDAR XYZ+RGB PLY\nC. random / warm-start（作为不同机制参照）\n记录初始 scale/center、收敛速度、floaters、几何边界、最终 Gaussian 数与 VRAM。再把 iPhone HEIC 原图直接输入，检查 EXIF orientation、色彩与特征数。预期是更稳的初始几何和更少数据预处理；前提是 LiDAR 与相机坐标已经可靠配准。\n今日结论\n今天的变化不在“又一个 viewer”，而在把移动采集、训练初始化、动态播放和 XR 运行时的断点补齐：\niPhone capture / Metal training\n        ↓\nCOLMAP / Nerfstudio poses + 外部 LiDAR seed\n        ↓\nSOG / USD 等交付格式\n        ↓\nWeb flipbook / XR navigation 的稳定运行\n短期最值得立即验证的是 PlayCanvas #9610 和 Spirula #126；前者影响动态 GS 展示的可见正确性，后者能把专业采集/测量点云更干净地接入跨厂商 trainer。ARKit Scanner 的速度数据很亮眼，但许可证与设备/数据集外推边界必须同时写在评估结论里。\n自动化说明\n先读取 2026-09-30 canonical 日报、索引与仓库提交去重；同一 Release、PR、论文不重复包装。GitHub 结论以公开 repo、merge commit、PR body、Release 为一手；作者 benchmark 未独立复现。arXiv 本轮无新增，source_count 只统计 canonical arXiv marker，不统计正文中的 GitHub/社区链接。图片发现不阻塞日报；本轮未引入需长期依赖的第三方图片。"
+    },
+    {
       "id": "gsd-2026-09-30",
       "kind": "daily",
       "title": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
@@ -2741,6 +3684,340 @@
       ],
       "url": "/daily/2026/09/18/",
       "text": "历史回填。 本文保留 2026-09-18 聊天日报的分析与增量时间窗口；于 2026-09-29 转录入仓库。来源链接已转为普通 Markdown。原文中的版本状态与“今日”指报告当时，并非对当前状态的重新核实。原聊天有 28 处无法从分享页恢复源 URL 的工具引用，已原位标记待复核。原始对话：日报记录。\n标准状态纠错（2026-09-30 归档核验）： 原文中“KHR_gaussian_splatting 仍为 Release Candidate”的判断已被 09-20 日报纠正。Khronos 官方于 2026-09-03 将状态改为 Ratified；以下保留当时记录，请以原始提交及纠错日志为准。\n今日判断：过去 24 小时没有新的 P0。 今天的高价值变化主要是昨天 Blender 原生 GS 大合入后的第一轮 correctness / importer hardening，以及 PlayCanvas Engine 针对 Gaussian shadow compute 的实质优化。另补录一条前一轮遗漏、但很值得加入固定监控的实际生产链：Arcturus Vision 官方已经把 Steam Frame 双目空间视频 → COLMAP → LichtFeld → scene.sog 做成公开可运行脚本。\n1. 今日最值得看\n优先级事件可运行性结论P1+Blender：PLY/SPZ GS importer 加固，修 SH 非标准布局/损坏文件处理5.3 Alpha / main 可测不只是防 crash；修正了 f_rest channel-major 偏移，对不完整 SH band、异常属性数提供 warning/fallbackP1Blender Cycles：缺少 GS 属性时与 EEVEE 行为对齐main 可测缺 radiance/scale/rotation 不再直接产生与 EEVEE 差异巨大的结果，增加统一默认值P1PlayCanvas Engine #9416：缓存的 Gaussian shadow 不再执行无意义 compute cullingEngine main 可测静态/缓存 shadow 场景可跳过 interval upload、transform refresh、cull shader、per-light compute dispatchP1 补录Arcturus Vision：官方 avcam_to_3dgs.py，空间视频直接生成 SOG可实际运行 / Linux NVIDIA双目 MP4 → 校准轨迹 → COLMAP → LichtFeld → scene.sog；这是非常完整的消费级 capture→GS pipelineP2+NormLift / arXiv:2609.18898论文，当前未找到官方代码仓库Training-free semantic lifting，把 feature norm 解释为跨视角语义可靠度，可用于开放词汇 Gaussian 场景理解P2Geometry beneath the Waves / arXiv:2609.18737论文 / SIGGRAPH Asia Poster用 dense prior 改善 sparse-view underwater GS 初始化，属于特殊场景重建方向P2/CThree.js r186 实战报告：原生 GS 目前无 LOD/streaming，depth postprocess 有明显缺口可实际测试很适合校准 Three.js 与 Spark/PlayCanvas 的边界，而不是只看“现在 Three.js 原生支持 GS”P2LichtFeld #2178：Asset Manager 主题和 RmlUi alpha bug 修复master主要是 UI correctness；不影响训练/渲染算法\n\n2. SuperSplat / PlayCanvas 工具链\n过去这一轮，playcanvas/supersplat、supersplat-viewer、splat-transform 没有超过昨天已报告 #1049 / #301 / #318 的新实质 commit，所以今天不重复。\n真正的新 GS 代码在 PlayCanvas Engine：\n#9416 — Skip compute work for cached Gaussian splat shadows\nCommit：\n1e6832f983228962732cc3a45293125dd8dc1791\n过去 GSplatShadowRenderer.cull() 即使某盏灯的 shadow 已经是缓存状态，仍然会先准备一整套 GS shadow compute 资源，包括：\nupload interval metadata\n→ 更新 bounds-group transforms\n→ 同步 user vertex modify\n→ 检查/构建 cull shader\n→ GS coarse/fine cull\n→ indirect args\n现在逻辑改成先检查：\nneedsShadowRendering(light)\n+\nshadowUpdateOverrides\n只有至少一盏灯真的需要更新 shadow，才开始共享 preparation；完全缓存的灯直接跳过全部 compute。原始聊天工具引用，需补一手链接\n这对实际意义比“少一次函数调用”大，因为 GS shadow 的候选集可能是百万级 primitive。对于：\n大静态 Gaussian 场景\n+\n固定太阳/灯光\n+\nshadow cache\n过去虽然 shadow texture 不重画，但 GS caster culling 仍可能产生 compute 成本；现在这部分也能停掉。\n测试还覆盖了：\n全部 cached；cached + realtime 混合；THISFRAME one-shot refresh；disabled / invisible lights；cascade override；splat 数据未 ready。\n所以这是一个相当完整的调度修复。原始聊天工具引用，需补一手链接\n实际建议：P1 / B。\n不过它不会直接让当前 Metaflow Viewer 自动更快。只有当你们升级到包含该统一 GS shadow 路径的 Engine，并且真的让 Gaussian 参与 shadow rendering 时才有收益。\n\n3. 可实际运行的开源项目\n今天 GitHub 新仓库发现结果里出现不少“新创建”的 Gaussian 项目，但进一步核查后，很多只是旧项目 fork。\n例如今天搜索出现：\nWildGS-SLAMvkraygsRoboSimGS\n看起来都是 9 月 17 日新建，但进一步查询：\nalejandro-garnung-ctic/WildGS-SLAM 实际是 GradientSpaces/WildGS-SLAM 的 fork，原项目是 CVPR 2025。原始聊天工具引用，需补一手链接\nckeisc/vkraygs 则是 facebookresearch/vkraygs 的 fork，原项目是 CVPR 2025 Hardware-Rasterized Ray-Based Gaussian Splatting。原始聊天工具引用，需补一手链接\nEvanHon1818/RoboSimGS 也是旧 Maxwell-Zhao/RoboSimGS 的 fork。原始聊天工具引用，需补一手链接\n所以这些全部按去重规则过滤掉：\nGitHub 创建时间新 ≠ 技术项目新。\n今天没有发现一个全新原创仓库达到 P1。\n\n4. 4D / Dynamic Gaussian\n固定检查：\nhustvl/4DGaussiansfudan-zvg/4d-gaussian-splattingDynamic3DGaussiansTOM-GSSuperTimeGS\n本轮没有新的 release / 代码里程碑值得超过昨日结论。\n4DGS 今日无重大新增。\n另外搜索中再次出现了一些旧 4DGS / talking-head 内容，但原始论文日期更早，因此没有重新包装成今日新闻。\n\n5. Viewer / Editor / Web / Mobile / XR\n今天最有价值的 Web 信号不是新 library release，而是一份很扎实的 Three.js r186 实战报告。\nICS MEDIA 9 月 17 日发布了完整教程，实际从：\n手机 Scaniverse 捕获\n→ SPZ\n→ SuperSplat 清理\n→ Three.js WebGPU\n跑了一遍。Three.js 原生路径现在可以直接：\nconst geometry = await new SPZLoader().loadAsync(...)\nconst splat = new GaussianSplat(geometry)\nscene.add(splat)\n而且原生 loader 已覆盖：\n.spz.ply.splat.ksplat\n但这一实现当前仅支持 WebGPURenderer，不是 WebGLRenderer。ICS MEDIA\n更值得关注的是作者实际踩出的两个限制。\n① 当前没有 LOD / Streaming\nThree.js r186 的 native GS 当前会：\n完整下载并加载整个 Gaussian 文件后再显示。\n没有：\ndistance LOD\nhierarchical chunking\nprogressive streaming\n所以小物件非常合适，但大城市/大景区不能因为“Three.js 原生支持了 GS”就推断已经可以替代 Spark / PlayCanvas Streamed SOG。ICS MEDIA\n② Gaussian 没有正确进入 depth-based postprocessing\n作者用一个 cube 和 Gaussian 放在相同焦距位置测试 DOF：\nCube\n→ sharp\n\nGaussian\n→ 被当成背景深度\n→ 错误变模糊\nAmbient Occlusion 等依赖 depth buffer 的效果也会遇到同类问题。ICS MEDIA\n这对 Metaflow 很重要，因为它说明 Three.js 当前更适合：\n“把 GS 当普通 WebGPU scene object 嵌入现有 Three.js 产品。”\n而 PlayCanvas/Spark 更适合：\n大场景流式 GS 本身是核心内容。\n\n6. Compression / Format / LOD / Streaming\nBlender PLY / SPZ importer 今天补了一轮非常值得注意的安全和正确性修复\nCommit：\n7cdcac1176f1d6fd841801fa72ca4a0c7adcce2f\n标题：\nGSplat: Sanitize SPZ and PLY importers against malformed files\n不只是防 malformed header。\n其中 PLY 的 SH 解析有一处真正会影响颜色正确性的修复。\n经典 3DGS PLY 的：\nf_rest_0\nf_rest_1\n...\n是 channel-major：\nR coefficients...\nG coefficients...\nB coefficients...\n过去 importer 在遇到不完整/非标准 SH band 时，计算 channel offset 用的是：\n最终导入的 coefficient 数\n现在改成：\n文件实际每通道 coefficient 数\n否则文件中存在不完整 band 时：\nR/G/B 会读错位置\n。原始聊天工具引用，需补一手链接\n同时增加明确边界：\n最大支持 SH degree 4最多 72 个 f_rest 属性属性数不能被 3 整除 → warning，SH 不导入高于支持 degree → warning，不导入 SH最后一个 band 不完整 → 只取完整可用部分并 warning增加完整的 in-memory regression tests。原始聊天工具引用，需补一手链接\n这其实非常适合我们以后做 Metaflow 格式验收：\nPLY/SPZ\n不应该只是\n“文件能打开”\n而应该验证：\nposition\nscale\nrotation\nopacity\nSH layout\nSH degree\ncoordinate convention\n全部一致。\n\n7. Training / Reconstruction / SLAM / Robotics / Mapping\nP1 补录：Arcturus Vision 官方把空间视频 → SOG 打通了\n这条发布时间是 9 月 16 日，昨天日报漏掉，所以今天明确标为补录，不冒充过去 24 小时新发布。\nArcturus Vision 官方已经公开：\navcam_to_3dgs.py\n工作流：\nArcturus Vision Camera\nstereo MP4\n       ↓\n同步左右目图像\n       ↓\ntone mapping\n       ↓\n读取录制时 calibration + trajectory\n       ↓\n构建对齐 COLMAP scene\n       ↓\nLichtFeld Studio training\n       ↓\nscene.sog\n官方默认：\n半分辨率训练；Gaussian 上限 1.5M；--training-image-scale 1 可跑全分辨率；--headless--resumeGPU COLMAP / hardware video decode 可用时自动使用。Arcturus Vision\n目前脚本正式支持目标是 Linux workstation：\nNVIDIA Compute Capability 7.5+Driver 570+uvCOLMAPLichtFeld Studio。Arcturus Vision\nArcturus 官方还提供 Steam Frame 端 Gaussian XR，可以直接读取：\nPLYSOG\n并随附 8 个示例场景。Arcturus Vision\n为什么我认为这条值得 P1\n它不是新算法，而是非常清楚地产品化了：\n消费级空间摄像机\n→ 已知双目标定\n→ 已知轨迹\n→ COLMAP refinement\n→ 3DGS\n→ SOG\n→ XR\n相比普通手机视频：\n它不需要重新从完全未知相机运动开始猜一切。\n而且最终直接落到 SOG，这对你现在 PlayCanvas / Metaflow 技术链非常贴近。\n许可方面，官方页面提供脚本 ZIP 下载，但我目前没有核实到一个明确的开源许可证，所以应写：\n公开可下载官方脚本 ≠ 已确认开源。\n\nRobotics / SLAM\n固定 GS-SLAM 仓库本轮没有新的代码级 P1。\n此前搜索中重新出现了 GSP-3D，它把：\nsingle RGB-D\n→ generalizable GS\n→ GS-conditioned diffusion policy\n→ Transformer world model\n用于 RoboTwin 2.0 双臂 manipulation。论文已经正式发表，但不是今天新增，所以不重复当新闻。Frontiers\n\n8. Avatar / Human / Generative 3D\n过去 24 小时没有发现新的、代码可跑的：\nGaussian Avatartalking head GSHuman 4DGSvideo avatar\n项目达到 P1。\n今天搜索再次出现的：\nTalking Head Synthesis with Facial Landmark Guidance via 3DGS\n\n实际原始 arXiv 提交时间是 2026-07-16，并不是今天的新论文。arXiv\n按严格日期去重：\n不收录为今日新增。\n\n9. 软件、硬件和平台厂商\nBlender：昨天大合入后，今天开始快速修 correctness\n第一条：\nbfea416b9d2d6ceb13baeb528e568131caec2ec4\nFix: Cycles gsplats are different from EEVEE with missing attributes\n如果 GS PointCloud 缺：\nradiance:basescalerotation\n过去 Cycles 和 EEVEE 结果会明显不一致。\n现在 Cycles 可以创建与 Blender EEVEE 相同语义的默认属性：\nradiance base → 默认值\nscale → 1e-3, 1e-3, 1e-3\nrotation → identity quaternion\n并且 motion fallback 也使用这些默认值。原始聊天工具引用，需补一手链接\n这说明 Blender 的 GS 支持现在已经从：\n“大功能合入”\n进入：\n“真实脏数据和不完整属性应该怎么处理”\n阶段。\n对 Alpha 功能来说，这是健康信号。\n\n一个值得补回长期监控基线的老 P1：Esri\n这不是今日新增，发布日期是 2026-08-05，但此前日报对 GIS / map integration 的覆盖里没有把它单独立项，我这里补基线，不计入今日新增数量。\nArcGIS Maps SDK 2.4 for Unity / Unreal 已经有原生：\nGaussian Splat Layer\n而且不是普通本地 PLY viewer。\n它支持：\nArcGIS Online / Enterprise Gaussian layer\n+\nlocal 3D Tiles\n+\ntileset.json\n+\n.3tz\n并强调：\ngeoreferenced data；和其他 2D/3D GIS layer 混合；large-scale streaming；offline local package；digital twin / infrastructure inspection。Esri 开发者\n这对你们未来：\nMini Shenzhen / GIS + 高斯\n比普通 Unity GS 插件更值得研究，因为它解决的是：\n高斯\n+\n地理坐标\n+\n3D Tiles\n+\n地图图层\n这一层。\n\n10. 研究论文\n今天值得保留两篇，但都不是“立刻替换工具链”的 P1。\nP2+ — NormLift\nNormLift: From Lifted Features To Semantic Reliability In 3D Gaussian SplattingarXiv: 2609.18898\n\n提交：2026-09-16 16:35 UTC。arXiv\n它解决的是 semantic Gaussian 里一个很现实的问题：\n传统做法：\n多个 view 的 CLIP feature\n↓\nweighted average\n↓\n塞给 Gaussian\n但 CLIP downstream 往往实际使用：\ncosine similarity\n也就是说 feature 本质更接近单位球面上的方向，而不是普通 Euclidean vector。\nNormLift 从这个目标重新推导，得到：\nL2-normalized semantic back-projection 正好是 cosine alignment 的 closed-form solution。\n更有意思的是，聚合后 feature 的 norm 被解释成：\nintra-view consistency；inter-view consistency；\n的组合，因此可以直接作为：\n“这个 Gaussian 的语义到底靠不靠谱”\n的 confidence signal。arXiv\n后续用这个 reliability 做 mode-voting refinement，而不是继续线性平均 CLIP feature。\n对 Metaflow 的潜在价值\n如果以后我们给 Gaussian asset 做：\n建筑\n门\n雕塑\n路\n店铺\n植物\n这种开放词汇标签，NormLift 的意义在于：\n不只是产生 semantic feature，还同时产生一个可解释 reliability。\n这很适合：\n自动 POI；语义拾取；AI 导览；搜索；低置信度区域交给人工复核。\n当前我没有在 GitHub 检索到官方 NormLift 仓库，所以分类：\n论文 / 暂无核实代码 / A（论文）。\n\nP2 — Geometry beneath the Waves\nGeometry beneath the Waves: Dense Priors for Sparse-View Underwater 3D Gaussian Splatting\n\narXiv: 2609.18737，SIGGRAPH Asia Poster。arXiv\n核心问题不是新的 rasterizer，而是：\nunderwater sparse-view 时，初始化 geometry 太差，后续即使有水下 image-formation model，也很难救回来。\n因此重点放在：\ndense prior → 更可靠 GS initialization。\n它更偏：\n水下文旅；海洋考古；海底设施；sparse-view reconstruction；\n目前没有找到足够明确的可运行官方代码，因此维持 P2。\n\n11. 海外开发者社区信号\n今天最值得记录的是前述 ICS 的 Three.js r186 实测。\n它还确认了一点，和我们昨天深入分析 Blender Cycles 时得到的结论完全一致：\n普通 capture GS 保存的是拍摄时的 radiance / appearance，场景灯光不会像 PBR mesh 那样重新照亮 Gaussian。\nThree.js 文章直接测试指出：给场景增加灯光不会改变 splat 亮度；SH 只让外观随观察方向变化，不代表物理反射。ICS MEDIA\n这对社区里常见的一种误解很有价值：\nGS 可以进普通 3D engine\n≠\nGS 已经变成普通 PBR mesh\n另外，文章明确把大场景路线区分为：\nThree.js native GS：简单嵌入；Spark：LOD / streaming；PlayCanvas：SOG / Streamed SOG。ICS MEDIA\n这是非常符合实际工程边界的比较。\n\n12. 中文社区信号\n本轮再次专门检查了 B站公开索引，包括：\n3DGS；高斯泼溅；Blender GS；网页 GS；开源 GS 工具。\n过去 24 小时暂未发现一条新的、能够追溯到一手源码或正式产品更新的 P1 中文项目。\n搜索结果主要仍是旧内容，例如：\nUE5 GS 插件教程；Pico 4 4DGS；Postshot/LichtFeld 对比；Scan / ComfyUI GS 工作流；\n均不属于今日新增。哔哩哔哩\n所以今天这一栏明确写：\n无高置信度新增。\n不会为了填满日报把旧 B 站视频重新推一次。\n另外，collider-forge 昨天以后只出现了一个“补充说明”文档提交，没有新的 Poisson / Gaussian-aware 算法代码，因此也不重复播报。\n\n13. 今天最值得实际测试的 3 项\n① Blender 5.3 Alpha：专门做“坏文件测试”\n昨天建议的是普通 PLY / SPZ 渲染测试；今天应该换成 importer torture test。\n准备：\nA. 正常 SH degree 3 PLY\nB. 缺一个 f_rest 的 PLY\nC. 多一个 f_rest 的 PLY\nD. 超过 degree 4 的 PLY\nE. 缺 scale\nF. 缺 rotation\nG. 缺 radiance base\nH. 正常 SPZ\nI. header 被轻微破坏的 SPZ\n然后比较：\nEEVEE\nvs\nCycles\n重点验证新 commit 后：\n是否 warning 而不是 crash；SH 是否错 channel；missing attrs 是否两 renderer 一致；fallback 是否保持可辨识形状。\n这比再跑一个漂亮 demo 更能判断 Blender 5.3 GS 距离生产还有多远。\n\n② PlayCanvas #9416：真正测 cached shadow 的 GPU 成本\n准备：\n5M–20M Gaussian\n+\n1 个 directional light\n+\nGS shadow\n测试：\nrealtime shadow\nvs\nSHADOWUPDATE_THISFRAME\nvs\nSHADOWUPDATE_NONE\n记录：\nGS shadow compute dispatch 数；GPU frame time；interval upload；culling cost；shadow 更新时 spike；camera movement 时 cached shadow 是否保持。\n真正需要确认的是：\n静态 shadow 进入 cache 后，GS shadow compute 是否几乎完全从 frame profile 消失。\n\n③ Three.js r186 vs Spark / PlayCanvas 做一次“小场景/大场景分界测试”\n同一资产准备：\n0.5M\n2M\n5M\n10M splats\n分别用：\nThree.js native GaussianSplat\nSpark\nPlayCanvas/SOG\n记录：\n首帧时间；下载完成前是否能看到场景；RAM / VRAM；FPS；camera move；5M/10M 时浏览器稳定性；DOF/depth behavior。\n这项实验会直接回答一个对 Metaflow 很重要的问题：\nThree.js native GS 适合作为“普通网页 3D 对象”，它的规模边界到底在哪；从哪一个规模开始，应该切回 Streamed SOG / hierarchical GS。\n\n今日一句话结论\n今天不是又出现一个新 GS 范式，而是昨天几个“大能力”开始进入工程收敛期。\nBlender 已经迅速从：\n“原生支持 GS”\n推进到：\n“非标准 PLY、缺属性、坏 SPZ、Cycles/EEVEE 一致性要怎么保证”。\nPlayCanvas 则开始继续处理：\n“Gaussian 不只是显示，连 shadow compute 也要有真正的 cache-aware 调度”。\n而 Arcturus 的官方空间摄像机 → LichtFeld → SOG 流程，则给了一个很具体的产业信号：\nSOG 正在不只是 Web 发布格式，而开始成为消费级空间捕获设备的最终交付格式之一。\n对 Metaflow 最值得继续盯的三条路线也因此越来越清楚：\nPlayCanvas/SOG 做大规模 Web 交付，Blender 做 DCC/成片，语义与地图层则分别开始由 NormLift / ArcGIS 这类外围生态补齐。\n\n当日后续增量（截至 16:24 北京时间）\n3DGS / 4DGS / Gaussian Splatting 深度情报日报｜2026-09-18 增量版\n本轮截至 2026-09-18 16:24（北京时间）。 今天早前一版已经覆盖 Blender GS importer/Cycles 修复、PlayCanvas #9416、Arcturus Vision、NormLift 等内容，因此这里严格按增量去重，不再重复。本轮没有新的 P0，但新增 3 条值得跟进的 P1/P1-：PlayCanvas 把 Gaussian shadow culling 进一步改造成“由真正被调度的 render pass 请求”，LichtFeld 连续修 Project Manager/Gallery 的生产交互，另外出现了一个新的机器人方向可运行项目 PrecisionReach-GS。\n1. 今日最值得看\n优先级新增可运行性结论P1PlayCanvas #9423 + #9428：GS/mesh shadow culling 改成 render-pass-driven schedulingEngine main 可测继 #9416 “cached GS shadow 不做 compute”之后继续前移：方向光、点光、聚光灯现在只有真正安排了 shadow pass 才做 caster culling；对静态/one-shot shadow 和多灯场景更重要P1-PrecisionReach-GS 首次公开：robot-aligned GS → wrist-camera VLA 数据生成代码可跑 / 研究原型 / 未声明许可证真正把 GS 当机器人数据生成空间，而不是 viewer；包含 COLMAP→机器人坐标配准、FR3 可达性、路径/视频/EE pose 批量生成P1-LichtFeld #2177 + #2184：Project Manager / Gallery 大幅稳定化master 可测 / GPLInspector 改成响应式 overlay、减少 resize 重建、Gallery relink/refresh/account 状态不再静默失败；很值得 Metaflow Studio 参考P1 补录Blender fe3d4436：修原生 GS EEVEE 透明度/透射和 billboard windingBlender 5.3 Alpha前一版漏掉；这是原生 GS 大合入后的关键 correctness follow-up，不只是小 cleanupP2 / 状态KHR_gaussian_splatting 仍是 Release Candidate标准未 RatifiedKhronos 2 月曾预计 Q2 ratification，但截至 9 月 18 日官方页面和 press archive 仍没有正式 Ratified 公告，应继续按 RC 处理 Khronos 官方公告\n\n2. SuperSplat / PlayCanvas 工具链\n这轮 playcanvas/supersplat、supersplat-viewer、splat-transform 没有比上一版更新的实质 commit。因此 #1049 stochastic warping、Viewer #301 createViewer()、SplatTransform #318 不重复。\nViewer 正式 Release 仍停在 v1.31.2（9 月 9 日），所以 #301 依旧属于 main 能测、正式 npm/release 尚未独立发版的状态。原始聊天工具引用，需补一手链接\n真正的新内容来自 PlayCanvas Engine shadow scheduler。\n#9423：方向光 shadow culling 只由已调度的 shadow pass 请求\nCommit：\n113173b0ee1afa4fbc62b66071747926bcf29a2c\nPlayCanvas Engine #9423 commit\n之前大致是：\ncamera 看得到 directional light\n          ↓\nlight castShadows\n          ↓\n做 shadow caster culling\n现在变为：\nFrame Graph\n    ↓\n真的创建并启用了 Shadow Pass\n    ↓\nrequestDirectionalShadowCull(light, camera)\n    ↓\nMesh culler + GSplatShadowRenderer\n才处理这个 light/camera\n它给 LightRenderData 增加 shadowCullRequested，用现有 per-light/per-camera render data 记录请求，避免另外分配请求对象。GSplatShadowRenderer 也会检查相机对应的 directional shadow pass 是否真的被调度，再决定是否进行 Gaussian compute culling。 原始聊天工具引用，需补一手链接\n这解决了一个很实际的问题：SHADOWUPDATE_THISFRAME 之类的一次性更新，如果这一帧实际上没有 shadow pass，就不应该提前被消费，也不应该浪费 GS culling。\n\n#9428：点光/聚光灯也改成相同模型\nCommit：\n45e2cca46015dd0c45ac4674dde506d6a998f7d2\nPlayCanvas Engine #9428 commit\nLocal lights 新增：\n_localShadowCullRequests\n只有 scheduled local shadow pass 会调用：\nrequestLocalShadowCull(light)\n点光灯很有意思，因为一个 omni shadow 通常有 6 个 cube faces。现在：\n6 个 face passes\n        ↓\n共享同一 light request\n        ↓\ncaster cull 只做一次\n        ↓\n6 faces 各自 render\n而不是 6 次重复决定/准备。测试覆盖 clustered / non-clustered、spot / omni、THISFRAME、disabled pass、lightmapper 等情况。原始聊天工具引用，需补一手链接\n为什么这对 Gaussian 特别重要\nMesh caster culling 本身已经不便宜，但 Gaussian shadow 场景可能有数百万到千万 primitive，需要：\nworld intervals\n→ bounds-group transforms\n→ coarse/fine GS culling\n→ indirect draw/compute args\n所以从：\n“灯可见就算一遍”\n转到：\n“这一帧真的有 shadow render pass 才算”\n收益潜力明显更大。\n这是 #9416 的自然后续：\n#9416\ncached GS shadow\n→ 不执行无意义 compute\n\n#9423 / #9428\n根本没安排 shadow pass\n→ 连 caster cull request 都不产生\n对 Metaflow 当前的现实影响\n目前不是立刻升级理由。\n你们当前 Web Viewer 的核心目标还是：\nGS 自身可视化；SOG streaming；collision；导览；\n不是把 Gaussian 当带实时 shadow 的普通游戏几何。\n但如果以后加入：\nGaussian environment\n+\n动态 mesh 人物/车辆\n+\n灯光\n+\nGS shadow / mixed scene\n这套调度会越来越重要。\n\n3. 可实际运行的新开源项目：PrecisionReach-GS\n这是本轮 GitHub 新项目发现里真正值得留下的一项。\n仓库：\n001-Wang/PrecisionReach-GS\nGitHub 显示：\n创建时间：2026-09-17 23:26 UTC非 fork；当前 0 stars，刚公开；仓库没有声明 SPDX/license。原始聊天工具引用，需补一手链接\n项目标题：\nRobot-Aligned 3D Gaussian Splatting for Precise Reaching with Wrist-Camera VLA Policies\n它的目标不是：\n机器人拿 GS 当漂亮地图。\n而是：\n真实机器人工作区\n       ↓\n照片 / pose\n       ↓\nCOLMAP\n       ↓\n3DGS\n       ↓\n把 COLMAP / GS 坐标\n对齐到 Robot Base Frame\n       ↓\n在 GS 里生成 wrist-camera 轨迹\n       ↓\n同步生成：\n视频\n+\nEE / gripper pose\n       ↓\n用于 VLA adaptation\nREADME 明确把它定位为 real-to-sim-to-real / data-efficient VLA adaptation。原始聊天工具引用，需补一手链接\n\n4. PrecisionReach-GS 公开了什么，没公开什么\n公开部分不是一个空 project page。\n主要包含：\nalign_colmap_to_robot.py\nprepare_fastgs_robot_dataset.py\ncamera_path_to_ee_poses.py\nadd_gripper_pose_to_camera_path.py\n以及一个：\ngs_dual_viewer/\n用于：\nGS 查看；FR3 reachability；camera path 编辑；trajectory recording。原始聊天工具引用，需补一手链接\n但作者明确没有公开：\n大数据集；reconstructed splats；机器人原始记录；trained policies；实验完整输出。\n所以它不是：\n下载就能复现论文最终 VLA success rate。\n而是：\n核心的 reconstruction → robot-frame alignment → synthetic observation generation 子链已公开。\n\n5. 它最值得看的其实是 GS Dual Viewer\n这个 viewer 有两个窗口：\nEE camera viewer\n→ 机器人腕部相机视角\n\nSide viewer\n→ 固定第三视角\n→ 看 EE camera marker / frustum\n两者通过浏览器：\nBroadcastChannel\n实时同步 camera pose。原始聊天工具引用，需补一手链接\n同时提供：\nFR3 numerical IK；joint limit；reachability；safe workspace；camera path；start pose sampling；WebM recording；EE pose JSON / CSV；batch trajectory generation。\n很特别的是：\nRecord WebM + EE Poses\n会同时导出视频和每帧：\nframe index；video timestamp；gripper center；base_T_gripper。\n因此数据天然是：\n图像 observation\n↔\nrobot action/state\n同步的。原始聊天工具引用，需补一手链接\n这比普通 GS viewer 更接近：\nEmbodied AI synthetic data tool。\n\n6. PrecisionReach-GS 的技术门槛\nPython 侧 requirements 非常轻：\nnumpy >= 1.24\nPillow >= 10.0\n。原始聊天工具引用，需补一手链接\n但这不要误读成“整个系统只有两个依赖”。\n外部还需要：\nPython 3.10+；COLMAP；已训练 .splat 或 .ply；robot pose 数据；FastGS/相关 reconstruction workflow。\n而 viewer 是浏览器侧。\n作者报告的结果\nREADME 声称：\n最多生成 1,500 条 trajectory；最大数据集主动人工采集 <10 分钟；π₀.₅ reaching：screw 21/25GPU 19/25RAM 20/25generated trajectory RMS jerk 0.2353 m/s³；teleoperation 3.2657 m/s³。原始聊天工具引用，需补一手链接\n这些目前属于：\n作者仓库声明 / B\n没有独立复现，所以不把它们写成已证明通用收益。\n许可证\nGitHub repo 没有 LICENSE metadata，README 也没声明许可。\n所以当前必须写：\n源码可读可测试，但不能假设允许商业复用或重新分发。\n\n7. 4D / Dynamic Gaussian\n本轮固定检查：\nhustvl/4DGaussiansfudan-zvg/4d-gaussian-splattingDynamic3DGaussiansTOM-GSSuperTimeGS\n没有新的实质 release/commit。\nGitHub 新仓库搜索里出现：\nSpiralCloudOmega/4C4D\n看起来创建于 9 月 17 日，但进一步核查确认它只是：\nyangzf-1023/4C4D\n的 fork；原项目是 CVPR 2026 4C4D: 4 Camera 4D Gaussian Splatting，早在 4 月已经存在。原始聊天工具引用，需补一手链接\n因此按去重规则：\n不算今日新 4DGS 项目。\n这类过滤很重要，因为这两天 GitHub Search 里大量“刚创建”的：\nSuperSplat；gsplat；4DGaussians；ReSplat；\n实际上只是 fork。\n\n8. Viewer / Editor / Web / Mobile / XR\nSuperSplat Viewer\n没有超过 #301 的新 commit，正式 Release 也仍是 v1.31.2。原始聊天工具引用，需补一手链接\n所以今天没有新的 embeddable viewer API 可以补充。\n\nBlender：补录一个前一版漏掉的 correctness 修复\nCommit：\nfe3d4436cce3cfc121870c908f625ab54913f0e9\nFix: GSplat: Initial minor bugs\nBlender GSplat minor fixes\n名字叫 minor bugs，但里面至少有两项并不“视觉无关”。\nGSplat 必须被当透明几何\nEEVEE 过去判断：\nmaterial 是否标记 transparent？\n现在额外：\nOR geometry_type == GSPLAT\n因为 Gaussian 本身具有 opacity，不应该因为材质是默认材质就被错误走 opaque 路径。原始聊天工具引用，需补一手链接\n同时把 transmittance 公式修成：\nGaussian alpha\n×\nexisting material transmittance\n的组合，而不是覆盖/错误组合原材质透明度。\n这直接影响：\nEEVEE depth；shadow；transparent material；Gaussian + material interaction。\n\nBillboard winding / normal 也修了\nshader quad 的顶点 1/2 根据 winding 正确翻转，而 centroid normal 不再错误随 quad winding 取反。原始聊天工具引用，需补一手链接\n所以如果你现在下载 Blender 5.3 Daily Build 测 GS：\n一定应该使用包含 fe3d4436、7cdcac1、bfea416 之后的 build。\n不要拿最初合入当天的首个 Daily Build 当最终质量判断。\n\n9. LichtFeld：Project Manager / Gallery 又连续两次修生产问题\n#2177\nCommit：\n4b9f93604626019d55de73f50b1abc61eb9d01c0\n主要目标是：\nProject Manager responsiveness + Gallery UX。\nLichtFeld #2177 commit\n最值得注意的是 Inspector：\n过去不同窗口宽度里，会给 Inspector 永久留一块 layout space。\n现在变成：\n按需 overlay。\n同时 resize 不再每次都暴力 rebuild 整套虚拟化列表，只在：\nvisible row window 改变；gallery column count 改变；\n时重建。原始聊天工具引用，需补一手链接\n对于大量项目时，这比某个按钮 UI 好不好看更重要。\n\nGallery relink 也开始变得像真正的 production sync\n#2177 对：\nGallery authorization / relink\n增加：\nfailure latch；explicit retry；account-level warning；不再每个 project 都重复报警；预期 403 不打印错误 traceback；account session 增加 email / connected_since。\n还修 Windows 删除项目时：\n如果回收站操作不可用，必须显示永久删除警告，不能静默删除。原始聊天工具引用，需补一手链接\n这些都属于：\nDCC project lifecycle\n而不是 Gaussian renderer 本身。\n\n10. #2184：#2177 上线不到一小时就继续修真实边界条件\nCommit：\nf91cab7417b6868d3aeb74b385967976ce0b040b\nLichtFeld #2184 commit\n有几个很典型的 production bug。\nGallery Refresh 静默无效\n如果：\nsigned_in = true\n但 account profile 还没有提供：\nemail\nconnected_since\n旧代码会把它当成：\n“等等，之后 account subscription 会自动回来。”\n但某些情况下这两个字段永远不会出现，于是用户按：\nRefresh\n什么也不发生。\n现在只有在真正 account operation busy 时才等待，否则显示：\naccount details still loading / refresh account and retry。\n同时 PortalAccountService 正式提供公开 busy property，而不是 GallerySync 偷看内部 worker thread。原始聊天工具引用，需补一手链接\n\n损坏/不兼容工程过去反而打不开 Inspector\n这些状态：\nMISSING\nIDENTITY_MISMATCH\nUNREADABLE\nUNSUPPORTED_NEWER\n恰恰最需要看 Inspector diagnostics。\n但旧 UI 的打开入口又来自正常 project operation actions，于是：\n项目越坏，越看不到诊断。\n现在右键菜单始终给本地项目：\nInspector\n入口。原始聊天工具引用，需补一手链接\n\n对 Metaflow Studio 值得吸收的点\nLichtFeld 这两轮最值得看的不是 RmlUi，而是：\nProject identity\nLocal health\nRemote relationship\nTransfer state\nAccount identity\nDiagnostic Inspector\n被明确分离。\n以后 Metaflow Studio 如果同时有：\n本地/库内资产；发布版本；Gallery/Web Viewer；外部托管；draft；broken source；\n很适合采用类似思想：\n“资源坏了也必须能打开元数据/诊断页。”\n不要把 Inspector/详情页的入口依赖于“资源先成功加载”。\n\n11. Compression / Format / LOD / Streaming\n本轮没有新的：\nSPZ revision；SOG schema；SSOG release；MPEG GSC milestone；glTF Gaussian ratification。\n尤其 Khronos 这点需要继续明确：\n官方 2026-02-03 公告称：\nKHR_gaussian_splatting Release Candidate\n并当时预计 Q2 完成 ratification。Khronos 官方公告\n但截至今天的官方 press archive 仍然只列出这份 RC 公告，没有后续：\n“Ratified KHR_gaussian_splatting”\n公告。The Khronos Group\n因此状态仍然是：\nRC / A。\n我们不因为 Blender、Three.js、PlayCanvas、Cesium 等已经实现兼容，就擅自把标准状态写成正式 ratified。\n\n12. Training / Reconstruction / SLAM / Robotics / Mapping\n固定仓库检查：\nnerfstudio-project/gsplat：最新相关代码仍是 9 月 3 日的 64-bit intersection offsets；WebODM/OpenSplat：最新重要项仍是此前已经报告的 #250 / v1.2.2；graphdeco-inria/gaussian-splatting：无新实质变化；经典 4D repos：无新增。\n因此今天这一栏真正新的就是 PrecisionReach-GS。\n它特别值得和我们过去看到的：\nGS-SLAM\nSemantic GS\nRobot simulation GS\n区分。\nPrecisionReach 的核心不是让 GS 成为实时 SLAM map，而是：\n真实空间 capture\n↓\nGS\n↓\n对齐 robot base frame\n↓\n在 GS 内设计 camera/action trajectories\n↓\n生成 VLA training observations\n这更接近：\nGS as data-generation simulator\n而不是：\nGS as localization map。\n我认为这是机器人方向里一个值得长期单独追踪的分类。\n\n13. Avatar / Human / Generative 3D\n本轮没有新的高置信度 P1。\nGitHub 搜索里出现了一批当天创建的：\n4DGS fork；human Gaussian fork；editor fork；\n进一步检查后多数并非新项目。\n所以：\n无重大新增。\n\n14. 软件、硬件和平台厂商\n本轮没有 NVIDIA / AMD / Intel / Apple / Qualcomm / Meta 新的 Gaussian-specific API 或正式 SDK。\nPlayCanvas Engine 的 #9423/#9428 是今天平台侧最值得关注的变化。\nKhronos 如上仍是 RC。\n商业产品方面，Jawset、Polycam、Niantic 本轮没有发现过去这一增量窗口中新 release 需要升 P1。Polycam 最近公开的 Unreal 工作流仍是 9 月 4 日内容，不计今日新增。The Khronos Group\n\n15. 研究论文\n本轮实时 arXiv / Web 检索没有找到一篇新提交且技术优先级高于今天工程项的 3DGS / 4DGS 论文。\nPrecisionReach-GS 仓库附有 manuscript PDF，但作者 citation 明确写：\nManuscript under review\n目前没有给 arXiv ID。原始聊天工具引用，需补一手链接\n因此分类：\n研究原型 + 代码部分公开\n而不是“正式已发表论文”。\n之前已经报道的 NormLift 等不重复。\n\n16. 海外开发者社区信号\n本轮没有出现一个新的 Reddit / HN / Radiance Fields 帖子，能比 GitHub 一手提交提供更多 P1 级事实。\n公开搜索中有一些新文章重新讨论：\nBlender native GS；Three.js native GS；GS robotics；\n但底层技术事件都已经在此前日报覆盖。\n因此不把：\n新文章日期\n等价成：\n新技术发布日期。\n这是今天继续执行的去重原则。\n\n17. 中文社区信号\n本轮继续单独搜了：\nB站「3DGS」「高斯泼溅」「开源高斯」「GS SLAM」「Blender 高斯」\n公开索引没有发现 2026-09-18 新发布且能回溯到一手源码 的 P1 项。\n搜到的较相关内容主要还是旧视频，例如 UE5 Gaussian 插件、LHM、GS-SLAM 分享等，发布日期均明显更早。Bilibili\n因此：\n中文社区本轮无高置信度新增。\n这次没有重复前几天的 Collider Forge，因为它这轮也没有新的核心算法提交。\n\n18. 今天最值得实际测试 / 部署的项目\n① PlayCanvas #9423 + #9428：做 Gaussian Shadow Scheduler Profile\n如果你要研究未来：\n高斯场景\n+\n动态人物/车\n+\n普通 mesh\n+\n实时灯光\n建议准备：\n10M+ splats\n1 directional light\n4 spot lights\n2 omni lights\n分别运行：\nREALTIME\nTHISFRAME\nNONE / cached\n记录：\nGS cull compute dispatch；mesh caster cull；shadow map passes；GPU ms；CPU culling；one-shot refresh spike。\n关键验证：\n没有 scheduled shadow pass 的 light，是否彻底从 GS shadow culling profile 中消失。\n这比单看平均 FPS更能验证 #9423/#9428 的真实收益。\n\n② PrecisionReach-GS：值得跑它的 GS Dual Viewer\n不需要先复现 VLA。\n第一步直接拿一个你已有的 .ply/.splat，准备一个简单 robot alignment JSON，体验：\nGS Scene\n↓\nEE camera\n↓\nSide camera\n↓\nReachability\n↓\nPath\n↓\nBatch Starts\n↓\nWebM + EE poses\n重点看它的：\ncamera↔robot frame contract；trajectory JSON；batch synthetic data organization；browser-side IK/reachability UX。\n对 Metaflow 未来的：\nAgent navigation\nsimulation\nscene automation\nAI training\n这部分设计思想可能比它的 VLA benchmark 本身更有参考价值。\n但不要直接复制代码进项目，因为当前仓库没有明确许可证。原始聊天工具引用，需补一手链接\n\n③ LichtFeld #2177/#2184：用“大项目库 + 异常项目”而不是单场景测试\n建立：\n100–500 projects\n+\nMISSING\n+\nUNREADABLE\n+\nold version\n+\nremote-only\n+\nGallery linked/unlinked\n然后测试：\nresize；gallery/list 切换；Inspector；selection；Gallery relink；account incomplete；deleted external file；Windows Recycle Bin。\n这可以非常直接地帮助评估：\nLichtFeld 的 Project Manager 有多少项目生命周期设计值得 Metaflow Studio 复用。\n\n今日结论\n今天的变化没有 Blender 原生 GS 那种 P0 级爆炸性，但出现了两个很清楚的长期趋势。\n第一，PlayCanvas 正在把 Gaussian 从“特殊 renderer”继续推进成正常 engine citizen：现在不仅有 sorting、LOD、streaming、stochastic rendering，连 shadow caster scheduling 都开始和普通 mesh 使用同一套 frame-graph/request 生命周期。\n第二，机器人方向开始从：\n“GS 是高保真地图”\n进一步发展到：\n“GS 是可以生成机器人 observation/action 数据的可控中间世界”。\nPrecisionReach-GS 就是一个很典型的例子：真正重要的不是它又训练了一个 Gaussian，而是它把：\n现实坐标 → GS → robot frame → camera trajectory → VLA data\n这条链路明确做出来了。\n对你现在的 Metaflow，今天最值得吸收的分别是：\nPlayCanvas 的 render-pass-driven scheduling、LichtFeld 的 Project/Gallery 状态分层，以及 PrecisionReach 的“空间资产→可执行数据生成”思想。"
+    },
+    {
+      "id": "arxiv:2610.00040",
+      "kind": "paper",
+      "title": "DSSR-3D: View-Dependent Referring Segmentation on Semantic 3D Gaussians",
+      "summary": "以 training-free projection scoring 做 view-dependent referring segmentation，并提出 ViewRef-GS benchmark；不是本窗口新提交，不计为“今天发表”。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#section-dssr-3d-view-dependent-referring-segmentation-on-semantic-3d-gaussians",
+      "text": "DSSR-3D: View-Dependent Referring Segmentation on Semantic 3D Gaussians 以 training-free projection scoring 做 view-dependent referring segmentation，并提出 ViewRef-GS benchmark；不是本窗口新提交，不计为“今天发表”。 https://arxiv.org/abs/2610.00040"
+    },
+    {
+      "id": "arxiv:2610.00195",
+      "kind": "paper",
+      "title": "GS-PQM: Full-Reference Quality Metric for Compressed Gaussian Splatting",
+      "summary": "直接在 reference/distorted GS 参数域提取特征并用 SVR 预测质量，示例接受两份 PLY。适合压缩回归测试的候选 metric，但缺少明确开源许可，不能默认商用或再分发。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "formats"
+      ],
+      "url": "/daily/2026/10/03/#section-gs-pqm-full-reference-quality-metric-for-compressed-gaussian-splatting",
+      "text": "GS-PQM: Full-Reference Quality Metric for Compressed Gaussian Splatting 直接在 reference/distorted GS 参数域提取特征并用 SVR 预测质量，示例接受两份 PLY。适合压缩回归测试的候选 metric，但缺少明确开源许可，不能默认商用或再分发。 https://arxiv.org/abs/2610.00195"
+    },
+    {
+      "id": "arxiv:2610.00749",
+      "kind": "paper",
+      "title": "What Builds the Scene? Luminance Dominates Geometry Formation in 3D Gaussian Splatting",
+      "summary": "11 个场景×4 次运行中，luminance-only 建几何、再拟合外观，平均只比 RGB 低 0.085 dB；chroma-only 几何低 3.9–5.5 dB。若后续被复现，可能影响 densification/feature allocation 的设计，但目前不能直接改生产 trainer。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#section-what-builds-the-scene-luminance-dominates-geometry-formation-in-3d-gaussian-splatting",
+      "text": "What Builds the Scene? Luminance Dominates Geometry Formation in 3D Gaussian Splatting 11 个场景×4 次运行中，luminance-only 建几何、再拟合外观，平均只比 RGB 低 0.085 dB；chroma-only 几何低 3.9–5.5 dB。若后续被复现，可能影响 densification/feature allocation 的设计，但目前不能直接改生产 trainer。 https://arxiv.org/abs/2610.00749"
+    },
+    {
+      "id": "arxiv:2610.00822",
+      "kind": "paper",
+      "title": "TRACE: Privacy-Preserving Next-Best-View over Distributed 3DGS Maps",
+      "summary": "多机器人只交换 transmittance/radiance aggregate 及导数，消息大小与本地地图规模无关；Habitat 100 次决策中作者报 83.3% heading 在集中式结果 15° 内。对隐私/带宽敏感协同探索有新意，但没有实机或代码证据。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "slam"
+      ],
+      "url": "/daily/2026/10/03/#section-trace-privacy-preserving-next-best-view-over-distributed-3dgs-maps",
+      "text": "TRACE: Privacy-Preserving Next-Best-View over Distributed 3DGS Maps 多机器人只交换 transmittance/radiance aggregate 及导数，消息大小与本地地图规模无关；Habitat 100 次决策中作者报 83.3% heading 在集中式结果 15° 内。对隐私/带宽敏感协同探索有新意，但没有实机或代码证据。 https://arxiv.org/abs/2610.00822"
+    },
+    {
+      "id": "arxiv:2610.01114",
+      "kind": "paper",
+      "title": "Affine-Aligned Atlas for Canonical Gaussian Construction in Video Representation",
+      "summary": "在 canonical Gaussian 构建前用逐帧 affine transform 吸收全局相机运动，参数增量很小，面向大幅 camera motion；需要等代码确认其对真实 rolling shutter、非刚体和长序列漂移的鲁棒性。",
+      "date": "2026-10-03",
+      "topics": [],
+      "url": "/daily/2026/10/03/#section-affine-aligned-atlas-for-canonical-gaussian-construction-in-video-representation",
+      "text": "Affine-Aligned Atlas for Canonical Gaussian Construction in Video Representation 在 canonical Gaussian 构建前用逐帧 affine transform 吸收全局相机运动，参数增量很小，面向大幅 camera motion；需要等代码确认其对真实 rolling shutter、非刚体和长序列漂移的鲁棒性。 https://arxiv.org/abs/2610.01114"
+    },
+    {
+      "id": "arxiv:2610.01229",
+      "kind": "paper",
+      "title": "A Compact Explicit 4D Representation for Dynamic Scenes（Sparc4D）",
+      "summary": "单目视频+已知相机的 feed-forward autoencoder，以静态共享特征和稀疏 temporal slots 表示 4D state，decoder 输出 2D Gaussian surfels。32-frame MultiCamVideo 报告 0.95M values、PSNR 21.70（MoVieS 20.40）；尚无代码/权重，不能验证质量—压缩权衡。",
+      "date": "2026-10-03",
+      "topics": [
+        "formats"
+      ],
+      "url": "/daily/2026/10/03/#section-a-compact-explicit-4d-representation-for-dynamic-scenessparc4d",
+      "text": "A Compact Explicit 4D Representation for Dynamic Scenes（Sparc4D） 单目视频+已知相机的 feed-forward autoencoder，以静态共享特征和稀疏 temporal slots 表示 4D state，decoder 输出 2D Gaussian surfels。32-frame MultiCamVideo 报告 0.95M values、PSNR 21.70（MoVieS 20.40）；尚无代码/权重，不能验证质量—压缩权衡。 https://arxiv.org/abs/2610.01229"
+    },
+    {
+      "id": "arxiv:2610.01707",
+      "kind": "paper",
+      "title": "MEGA: Object-Level Watertight Mesh Extraction from 3D Gaussians",
+      "summary": "先在 3DGS 中分割对象，再通过空间视觉蒸馏渲染对象视图，训练 mask-guided neural surface，目标是 object-level watertight mesh。对资产导出有价值，但目前没有可跑工具。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#section-mega-object-level-watertight-mesh-extraction-from-3d-gaussians",
+      "text": "MEGA: Object-Level Watertight Mesh Extraction from 3D Gaussians 先在 3DGS 中分割对象，再通过空间视觉蒸馏渲染对象视图，训练 mask-guided neural surface，目标是 object-level watertight mesh。对资产导出有价值，但目前没有可跑工具。 https://arxiv.org/abs/2610.01707"
+    },
+    {
+      "id": "arxiv:2610.01744",
+      "kind": "paper",
+      "title": "3DROID: A Dataset for 3D Reconstruction in Robotics",
+      "summary": "这是今日论文中最可落地的一项：可直接取 114 个 gaussians.ply、相机、metric depth/alpha 做 SLAM/深度/新视角评测；许可需同时遵守代码、生成资产和上游组件条款。",
+      "date": "2026-10-03",
+      "topics": [
+        "slam"
+      ],
+      "url": "/daily/2026/10/03/#section-3droid-a-dataset-for-3d-reconstruction-in-robotics",
+      "text": "3DROID: A Dataset for 3D Reconstruction in Robotics 这是今日论文中最可落地的一项：可直接取 114 个 gaussians.ply、相机、metric depth/alpha 做 SLAM/深度/新视角评测；许可需同时遵守代码、生成资产和上游组件条款。 https://arxiv.org/abs/2610.01744"
+    },
+    {
+      "id": "arxiv:2610.01876",
+      "kind": "paper",
+      "title": "EvenSplat: Gaussian Splatting under Uneven Illumination",
+      "summary": "联合 2D illumination decomposition、Gaussian-carried illumination field、camera response network 与局部曝光补偿，面向高反差/不均匀光照；尚不能判断训练成本和与 relighting 方法的可组合性。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#section-evensplat-gaussian-splatting-under-uneven-illumination",
+      "text": "EvenSplat: Gaussian Splatting under Uneven Illumination 联合 2D illumination decomposition、Gaussian-carried illumination field、camera response network 与局部曝光补偿，面向高反差/不均匀光照；尚不能判断训练成本和与 relighting 方法的可组合性。 https://arxiv.org/abs/2610.01876"
+    },
+    {
+      "id": "arxiv:2610.02207",
+      "kind": "paper",
+      "title": "GALA: Gaussian Avatar Lightweight Animation",
+      "summary": "移动 Web 结果很吸引人，但“最高 2659×”来自特定 host/CPU 对照；需等代码后统一模型、帧数、质量和设备口径测试。",
+      "date": "2026-10-03",
+      "topics": [
+        "avatar"
+      ],
+      "url": "/daily/2026/10/03/#section-gala-gaussian-avatar-lightweight-animation",
+      "text": "GALA: Gaussian Avatar Lightweight Animation 移动 Web 结果很吸引人，但“最高 2659×”来自特定 host/CPU 对照；需等代码后统一模型、帧数、质量和设备口径测试。 https://arxiv.org/abs/2610.02207"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/04da9085",
+      "kind": "tool",
+      "title": "Spirula 改进航线接缝，并警示 AMD Windows 训练风险",
+      "summary": "GPS mapping 增加 seam weld，AMD Windows 驱动问题加入警告与 CAS 绕行；阈值和受影响显卡的验证仍有限，不能视为已经全面修复。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#event-256af6ce66fa",
+      "text": "Spirula 改进航线接缝，并警示 AMD Windows 训练风险 GPS mapping 增加 seam weld，AMD Windows 驱动问题加入警告与 CAS 绕行；阈值和受影响显卡的验证仍有限，不能视为已经全面修复。 https://github.com/harry7557558/spirula-studio/commit/04da9085"
+    },
+    {
+      "id": "github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+      "kind": "tool",
+      "title": "LocusGS 公开前馈高斯重建代码",
+      "summary": "仓库公开空间落地 token、训练评估及多 GPU 配置；权重与安装文档仍不完整，当前属于复现门槛较高的研究原型。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#event-4c7048614107",
+      "text": "LocusGS 公开前馈高斯重建代码 仓库公开空间落地 token、训练评估及多 GPU 配置；权重与安装文档仍不完整，当前属于复现门槛较高的研究原型。 https://github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+      "kind": "tool",
+      "title": "LichtFeld 修复畸变评估与 masked LPIPS",
+      "summary": "master 重构畸变训练与评估空间，并按有效区域归一化 masked LPIPS；历史指标不宜直接与修复后结果比较，尚未进入 0.5.3。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#event-364e0463c471",
+      "text": "LichtFeld 修复畸变评估与 masked LPIPS master 重构畸变训练与评估空间，并按有效区域归一化 masked LPIPS；历史指标不宜直接与修复后结果比较，尚未进入 0.5.3。 https://github.com/MrNeRF/LichtFeld-Studio/pull/2686"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+      "kind": "tool",
+      "title": "SuperSplat 3.5.1、Viewer 1.37 与 SplatTransform 3.9 发布",
+      "summary": "此前主分支的 SOG 提速、PLY 兼容及头显 XR 改动进入正式版本；Editor 对超过 4000 万 live splats 的发布强制生成 LOD。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "formats",
+        "lod"
+      ],
+      "url": "/daily/2026/10/03/#event-b8ea1613f532",
+      "text": "SuperSplat 3.5.1、Viewer 1.37 与 SplatTransform 3.9 发布 此前主分支的 SOG 提速、PLY 兼容及头显 XR 改动进入正式版本；Editor 对超过 4000 万 live splats 的发布强制生成 LOD。 https://github.com/playcanvas/supersplat/releases/tag/v3.5.1"
+    },
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+      "kind": "tool",
+      "title": "Gaussian-Splat-Lite 1.2 更新 WebGPU、XR 与流式加载",
+      "summary": "正式版加入 8-bit 排序、TAA、XR 双眼共享和流式重试；同时删除部分旧 API，升级需按迁移处理。setCamera 注册相机，update 无参数。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "webgpu",
+        "streaming"
+      ],
+      "url": "/daily/2026/10/03/#event-0e975fb36257",
+      "text": "Gaussian-Splat-Lite 1.2 更新 WebGPU、XR 与流式加载 正式版加入 8-bit 排序、TAA、XR 双眼共享和流式重试；同时删除部分旧 API，升级需按迁移处理。setCamera 注册相机，update 无参数。 https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0"
+    },
+    {
+      "id": "github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+      "kind": "tool",
+      "title": "track-4dgs 0.6 接入 VGGSfM 轨迹查询",
+      "summary": "增加特征复用、分块查询和原像素坐标恢复，支持将二维轨迹关联到高斯相机数据；它仍是跟踪工具包，完整动态训练流程尚未提供。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "url": "/daily/2026/10/03/#event-45c5e03e2cd6",
+      "text": "track-4dgs 0.6 接入 VGGSfM 轨迹查询 增加特征复用、分块查询和原像素坐标恢复，支持将二维轨迹关联到高斯相机数据；它仍是跟踪工具包，完整动态训练流程尚未提供。 https://github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d"
+    },
+    {
+      "id": "huggingface.co/datasets/wonguen/3DROID",
+      "kind": "tool",
+      "title": "3DROID 开放 114 个机器人重建场景",
+      "summary": "数据集提供高斯、相机、度量深度和评估信息，可用于机器人视觉的深度与位姿测试；原始 DROID 视频、机器人状态和训练权重需另取。",
+      "date": "2026-10-03",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/03/#event-9b7cfd1728eb",
+      "text": "3DROID 开放 114 个机器人重建场景 数据集提供高斯、相机、度量深度和评估信息，可用于机器人视觉的深度与位姿测试；原始 DROID 视频、机器人状态和训练权重需另取。 https://huggingface.co/datasets/wonguen/3DROID"
+    },
+    {
+      "id": "aescripts.com/gausser/",
+      "kind": "tool",
+      "title": "Gausser 1.0.0 在 Cinema 4D 中加入高斯动画对象",
+      "summary": "将高斯对象接入 MoGraph、Fields、Effectors 与 Deformers，提供商业 Cinema 4D 动画流程；导出和重光照能力需遵循现有产品限制。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "url": "/daily/2026/10/02/#event-201bdc7a485d",
+      "text": "Gausser 1.0.0 在 Cinema 4D 中加入高斯动画对象 将高斯对象接入 MoGraph、Fields、Effectors 与 Deformers，提供商业 Cinema 4D 动画流程；导出和重光照能力需遵循现有产品限制。 https://aescripts.com/gausser/"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/130",
+      "kind": "tool",
+      "title": "Spirula 将 GPS 约束加入重建 mapping",
+      "summary": "GPS 从初始对齐参考进入 mapping prior，帮助无人机与长航线约束重建；精度、坐标和少数数据集上调节的阈值仍需逐项核对。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/02/#event-48305d82f552",
+      "text": "Spirula 将 GPS 约束加入重建 mapping GPS 从初始对齐参考进入 mapping prior，帮助无人机与长航线约束重建；精度、坐标和少数数据集上调节的阈值仍需逐项核对。 https://github.com/harry7557558/spirula-studio/pull/130"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+      "kind": "tool",
+      "title": "LichtFeld 降低多模型加载与合并的显存开销",
+      "summary": "q16 band 分块路径降低多个大模型同时加载和合并的内存成本；属于 master 上的实现改进，需用实际场景核对峰值与时间。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/02/#event-488cb0ea7bb5",
+      "text": "LichtFeld 降低多模型加载与合并的显存开销 q16 band 分块路径降低多个大模型同时加载和合并的内存成本；属于 master 上的实现改进，需用实际场景核对峰值与时间。 https://github.com/MrNeRF/LichtFeld-Studio/pull/2620"
+    },
+    {
+      "id": "github.com/playcanvas/splat-transform/pull/340",
+      "kind": "tool",
+      "title": "SplatTransform 加速 SOG 聚类与流式打包",
+      "summary": "采用 f32 k-means 与重叠流水改善 SOG 生成，正确读取 big-endian PLY，并明确拒绝 ASCII PLY；提速提交尚未进入当时的 3.8.0，流式打包峰值内存有所增加。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs",
+        "formats",
+        "streaming"
+      ],
+      "url": "/daily/2026/10/02/#event-bc8f0fd5b15b",
+      "text": "SplatTransform 加速 SOG 聚类与流式打包 采用 f32 k-means 与重叠流水改善 SOG 生成，正确读取 big-endian PLY，并明确拒绝 ASCII PLY；提速提交尚未进入当时的 3.8.0，流式打包峰值内存有所增加。 https://github.com/playcanvas/splat-transform/pull/340"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+      "kind": "tool",
+      "title": "SuperSplat Viewer 调整头显预算、双手操作与 XR LOD",
+      "summary": "main 为独立头显采用 1M splat 预算，增加双手缩放和按距离选择 XR LOD；上游在 Quest 3 测得改善，Pico 识别尚未经真机验证。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs",
+        "lod"
+      ],
+      "url": "/daily/2026/10/02/#event-f5b48c8ee473",
+      "text": "SuperSplat Viewer 调整头显预算、双手操作与 XR LOD main 为独立头显采用 1M splat 预算，增加双手缩放和按距离选择 XR LOD；上游在 Quest 3 测得改善，Pico 识别尚未经真机验证。 https://github.com/playcanvas/supersplat-viewer/pull/322"
+    },
+    {
+      "id": "liquiduslabs.com/lulusplat/",
+      "kind": "tool",
+      "title": "LuluSplat 1.1.2 增加 Windows / Vulkan 训练",
+      "summary": "本地一体化流程扩展到 Windows / Vulkan，macOS 仍使用 Metal；上游低端显卡案例只说明具体配置可行，不代表通用性能。",
+      "date": "2026-10-02",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/02/#event-853f99bec576",
+      "text": "LuluSplat 1.1.2 增加 Windows / Vulkan 训练 本地一体化流程扩展到 Windows / Vulkan，macOS 仍使用 Metal；上游低端显卡案例只说明具体配置可行，不代表通用性能。 https://liquiduslabs.com/lulusplat/"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/126",
+      "kind": "tool",
+      "title": "Spirula 支持外部 PLY 初始化并改进 HEIC 输入",
+      "summary": "可保留 COLMAP 或 Nerfstudio 相机并使用已配准的外部 XYZ+RGB 点云初始化训练，同时改善 HEIC 与全景天空遮罩输入；仍需核对坐标系。",
+      "date": "2026-10-01",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/01/#event-4e6e23c8ff87",
+      "text": "Spirula 支持外部 PLY 初始化并改进 HEIC 输入 可保留 COLMAP 或 Nerfstudio 相机并使用已配准的外部 XYZ+RGB 点云初始化训练，同时改善 HEIC 与全景天空遮罩输入；仍需核对坐标系。 https://github.com/harry7557558/spirula-studio/pull/126"
+    },
+    {
+      "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+      "kind": "tool",
+      "title": "ARKit Scanner 加速设备端 Swift / Metal 训练",
+      "summary": "优化 GPU 反向传播、Adam 与 CPU 调整步骤，保持原有训练方法；作者在相同热状态的 iPhone 17 Pro 上测得约 1.39 倍提速，其他设备仍需验证。",
+      "date": "2026-10-01",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/01/#event-e7ea69b3b4c1",
+      "text": "ARKit Scanner 加速设备端 Swift / Metal 训练 优化 GPU 反向传播、Adam 与 CPU 调整步骤，保持原有训练方法；作者在相同热状态的 iPhone 17 Pro 上测得约 1.39 倍提速，其他设备仍需验证。 https://github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9610",
+      "kind": "tool",
+      "title": "PlayCanvas 修复高斯资产换帧时的黑帧",
+      "summary": "Engine #9610 修复资产替换后的状态同步，作者的 WebGPU 与 WebGL2 flipbook 回归不再出现黑帧；当前属于 main 修复。",
+      "date": "2026-10-01",
+      "topics": [
+        "3dgs",
+        "4dgs"
+      ],
+      "url": "/daily/2026/10/01/#event-b6493d88439b",
+      "text": "PlayCanvas 修复高斯资产换帧时的黑帧 Engine #9610 修复资产替换后的状态同步，作者的 WebGPU 与 WebGL2 flipbook 回归不再出现黑帧；当前属于 main 修复。 https://github.com/playcanvas/engine/pull/9610"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9627",
+      "kind": "tool",
+      "title": "PlayCanvas 修复 XR 会话与相机状态",
+      "summary": "连续修复会话进出、AR 平面与网格移除、命中测试、相机 rig 朝向及裁剪面；应回归重复进入和退出 XR 的完整流程。",
+      "date": "2026-10-01",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/10/01/#event-07e7794fda78",
+      "text": "PlayCanvas 修复 XR 会话与相机状态 连续修复会话进出、AR 平面与网格移除、命中测试、相机 rig 朝向及裁剪面；应回归重复进入和退出 XR 的完整流程。 https://github.com/playcanvas/engine/pull/9627"
     },
     {
       "id": "arxiv:2609.35573",

@@ -11,9 +11,9 @@ import ReadingGuide from "../components/ReadingGuide";
 import ArticleFooter from "../components/ArticleFooter";
 import Discussion from "../components/Discussion";
 const archive = buildArchive();
-test("all 13 covers are local, have intrinsic dimensions and accessible originals", async () => {
+test("all 16 covers are local, have intrinsic dimensions and accessible originals", async () => {
   const { articles } = await archive;
-  assert.equal(articles.length, 13);
+  assert.equal(articles.length, 16);
   for (const a of articles) {
     assert.ok(a.image, `${a.date}: missing cover`);
     assert.ok(a.image.url.startsWith("/media/"));

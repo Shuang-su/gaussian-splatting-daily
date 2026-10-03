@@ -31,9 +31,10 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
       assert.match(e.summary, /。$/);
     }
   }
-  assert.equal(index.entries.filter(e => e.kind === "paper").length, 42);
-  assert.equal(index.entries.filter(e => e.kind === "tool").length, 36);
-  assert.equal(index.daily.length, 13);
+  assert.equal(index.entries.filter(e => e.kind === "paper").length, 52);
+  assert.equal(index.entries.filter(e => e.kind === "tool" && e.date < "2026-10-01").length, 36);
+  assert.equal(index.entries.filter(e => e.kind === "tool" && e.date >= "2026-10-01").length, 17);
+  assert.equal(index.daily.length, 16);
   assert.ok(index.daily.every(d => !("paperSummaries" in d)));
   const thermal = index.entries.find(e => e.id === "arxiv:2609.24531")!;
   const thermalArticle = articles.find(a => a.date === thermal.date)!;

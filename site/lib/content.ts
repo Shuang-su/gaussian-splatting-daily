@@ -47,6 +47,8 @@ const LEGACY_PAPER_TITLES: Record<string, string> = {
   "PlenoCI：变化检测不是比较 Gaussian primitive": "PlenoCI: Plenoptic CharacterIstics for View Dependence Aware Change Classification",
   "GaussPDE：把 Gaussian 本身当 PDE 离散域": "GaussPDE: Graph-Based Partial Differential Equation-Driven Rendering for 3D Gaussian Splatting",
   "GS-PI：把 baked-radiance GS 变成 PBR Gaussian Asset": "GS-PI: An Optimization-Decoupled Appearance Decomposition Approach for Generating PBR Gaussian Assets",
+  "BayesianGS-SLAM：代码真正放出来了": "BayesianGS-SLAM: Uncertainty-Aware Neural Rendering SLAM via Probabilistic Formulation",
+  "Cube-Splat：360° Gaussian SLAM 值得加入固定监控": "Cube-Splat: High-Fidelity 360° Gaussian Splatting SLAM via Cubemap Factorization and Adjoint-Consistent Optimization",
 };
 function loadImageManifest(root: string): ImageManifest {
   const file = path.join(root, "site/public/media/manifest.json");
@@ -498,7 +500,7 @@ export async function buildArchive(root = ROOT) {
         paperImage.credit = `论文 ${id} 作者（arXiv HTML）`;
       }
       const descriptiveHeading =
-        !/^\d+\.|研究论文|Robotics|SLAM|软件、硬件|可实际运行/.test(heading);
+        !/^(?:\d+\.|研究论文|Robotics|SLAM|软件、硬件|可实际运行)/.test(heading);
       // Legacy reports put some full paper titles in bold paragraphs.
       const legacyTitle = nodes
         .slice(Math.max(0, i - 6), i)

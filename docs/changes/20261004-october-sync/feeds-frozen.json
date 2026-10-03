@@ -1,0 +1,12 @@
+[
+  {
+    "feed": "daily",
+    "sha256": "55adf548fc2e1df7707d8cb71928ba198fc513ec05502b8f86e5b741235c787f",
+    "unchanged": true
+  },
+  {
+    "feed": "weekly",
+    "sha256": "b7b867166f627ccbbc6b45fb688d9f0ae0415696c3a2fde2e3518d2f67923b66",
+    "unchanged": true
+  }
+]

@@ -1,0 +1,226 @@
+{
+  "date": "2026-10-02",
+  "baseline": "7b59a2c2b29c0ebc747718ece4935d561f12355d",
+  "body_sha256": "d9402bbd8fc4ced9c211bd4419b1e314201248f11de7150eb1ae3628b0ef09f8",
+  "source_blocks": 110,
+  "events": [
+    {
+      "id": "github.com/playcanvas/splat-transform/pull/340",
+      "anchor": "event-bc8f0fd5b15b",
+      "title": "SplatTransform 加速 SOG 聚类与流式打包",
+      "group": "main",
+      "source_blocks": [
+        "b-0d44231d04fd-1",
+        "b-412f27c76d66-1",
+        "b-4e8c4868b322-1",
+        "b-06d1a9e1edff-1",
+        "b-66185016264c-1",
+        "b-1f8eb4a5daa5-1",
+        "b-4847e4435693-1",
+        "b-f8e651df4ea3-1",
+        "b-b0e8595d3f78-1"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+      "anchor": "event-f5b48c8ee473",
+      "title": "SuperSplat Viewer 调整头显预算、双手操作与 XR LOD",
+      "group": "main",
+      "source_blocks": [
+        "b-579cce7f7880-1",
+        "b-698bdc52d003-1",
+        "b-e8d7a799c454-1",
+        "b-724c73012b27-1",
+        "b-630955e78b71-1",
+        "b-58a2fadf6396-1",
+        "b-31b27ac9326b-1",
+        "b-5202b5af60ca-1",
+        "b-73734e9a2bf8-1",
+        "b-281b1171e0b2-1",
+        "b-1452619b06af-1",
+        "b-7acb6c788960-1",
+        "b-94954fda192c-1",
+        "b-6c61cef00cfd-1",
+        "b-6557d82b3423-1",
+        "b-86ff7d12d1ca-1",
+        "b-649dbed458ea-1",
+        "b-0d9e0c437c23-1",
+        "b-f136ba6fbbf8-1",
+        "b-453d92ed553b-1",
+        "b-9cd13bc27e6a-1",
+        "b-5d3075aab43e-1",
+        "b-5049895b9e87-1"
+      ]
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/130",
+      "anchor": "event-48305d82f552",
+      "title": "Spirula 将 GPS 约束加入重建 mapping",
+      "group": "main",
+      "source_blocks": [
+        "b-5f3d632aca2f-1",
+        "b-bc2d81a427c3-1",
+        "b-937a4916117f-1",
+        "b-aa4a6bf943a7-1",
+        "b-e079f524f370-1",
+        "b-782d81955aa7-1",
+        "b-d9470fc7e53b-1",
+        "b-1440fd13373f-1"
+      ]
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+      "anchor": "event-488cb0ea7bb5",
+      "title": "LichtFeld 降低多模型加载与合并的显存开销",
+      "group": "main",
+      "source_blocks": [
+        "b-216aa8322118-1",
+        "b-03a11ba432e3-1",
+        "b-db38ed75b27c-1",
+        "b-5fcb213a1a56-1",
+        "b-919978d044ee-1"
+      ]
+    },
+    {
+      "id": "liquiduslabs.com/lulusplat/",
+      "anchor": "event-853f99bec576",
+      "title": "LuluSplat 1.1.2 增加 Windows / Vulkan 训练",
+      "group": "main",
+      "source_blocks": [
+        "b-abd80111c9c3-1",
+        "b-e024d76438fe-1",
+        "b-f45ad4e4bd4e-1",
+        "b-e508f27cecce-1"
+      ]
+    },
+    {
+      "id": "aescripts.com/gausser/",
+      "anchor": "event-201bdc7a485d",
+      "title": "Gausser 1.0.0 在 Cinema 4D 中加入高斯动画对象",
+      "group": "main",
+      "source_blocks": [
+        "b-778d79822102-1",
+        "b-df5a892f0c4e-1",
+        "b-f59281e5fc11-1",
+        "b-1a7ffe245129-1"
+      ]
+    },
+    {
+      "id": "github.com/hsiang0117/sun-conditioned-3dgs",
+      "anchor": "event-8993d518faf0",
+      "title": "太阳方向控制与单图重建原型",
+      "group": "brief",
+      "source_blocks": [
+        "b-5259ed2045e0-1",
+        "b-366e44ee20f7-1",
+        "b-0cf13b029e3b-1",
+        "b-ac210a4c081e-1",
+        "b-504d64907f5f-1",
+        "b-d3d3dbf8e845-1",
+        "b-8fa615e45411-1",
+        "b-43258fd6392c-1",
+        "b-dd85b07acd89-1"
+      ]
+    },
+    {
+      "id": "analysis-2026-10-02",
+      "anchor": "analysis",
+      "title": "分析与实践",
+      "group": "analysis",
+      "source_blocks": [
+        "b-c58b00d56d7b-1",
+        "b-c3aeb9ab248f-1",
+        "b-27b40ee86ed4-1",
+        "b-2924b7fd28d5-1",
+        "b-5185a8d940fe-1",
+        "b-84307aa5991e-1",
+        "b-3d1a798c2323-1",
+        "b-5e283154e039-1",
+        "b-d5229a4a7c83-1",
+        "b-fce10a5ece81-1",
+        "b-6087a49deec0-1",
+        "b-9163697bfb14-1",
+        "b-4ab3e264a007-1",
+        "b-7fdce7f0c57a-1",
+        "b-ae572ca7da29-1",
+        "b-64213460c882-1",
+        "b-8d3ab368c8cb-1",
+        "b-858e08b78ff6-1",
+        "b-99672405f8dd-1",
+        "b-c4efcd07d725-1",
+        "b-fb8f6ef734d8-1",
+        "b-3da467be47b8-1",
+        "b-5d5248977574-1",
+        "b-375815099200-1",
+        "b-39640dedb1eb-1",
+        "b-4c92dccdaba1-1",
+        "b-87905ae5ba93-1",
+        "b-d7bba1ac7cf5-1",
+        "b-70cf29fb3a9c-1",
+        "b-ddc9f63748ba-1",
+        "b-2e02ab07da7b-1",
+        "b-6bcbf611b1d1-1",
+        "b-6ef988d0846f-1",
+        "b-e97875db7b8d-1",
+        "b-206f6b17039e-1",
+        "b-f1a4c68e68e7-1",
+        "b-db0373cccc0b-1",
+        "b-ad66dd68d064-1",
+        "b-a15a82abd0bc-1",
+        "b-bc94bdf2906d-1",
+        "b-c5c69e7e1253-1"
+      ]
+    }
+  ],
+  "introduction": [
+    "b-525416cb9d9a-1",
+    "b-208929029a3c-1"
+  ],
+  "archive": [
+    "b-72d1cf3d9617-1",
+    "b-484670293c6e-1",
+    "b-2b48de728746-1"
+  ],
+  "omit": [
+    "b-ca119cf745f3-1",
+    "b-414b850a67a4-1"
+  ],
+  "legacy_targets": [
+    "section-1-今日最值得看",
+    "section-2-supersplat--playcanvas-工具链",
+    "section-viewer-322独立头显不再误用-desktop-4m-budget",
+    "section-viewer-323双手把环境缩成桌面模型",
+    "section-viewer-324xr-lod-按距离选不再因头部朝向降级",
+    "section-发布边界",
+    "section-3-可实际运行的开源项目",
+    "section-splattransformsog-生成从串行等待改为重叠流水",
+    "section-lulusplat-v112windowsvulkan-的一体化本机流程",
+    "section-lichtfeld多大模型同时加载的合并成本下降",
+    "section-4-4d--dynamic-gaussian",
+    "section-5-viewer--editor--web--mobile--xr",
+    "section-6-compression--format--lod--streaming",
+    "section-7-training--reconstruction--slam--robotics--mapping",
+    "section-spirula-130gps-从-gauge-升级为-mapping-prior",
+    "section-8-avatar--human--generative-3d",
+    "section-9-软件硬件和平台厂商",
+    "section-gausser-100cinema-4d-内真正可动画的-splat-object",
+    "section-其他厂商",
+    "section-10-研究论文",
+    "section-11-海外开发者社区信号",
+    "section-12-中文社区信号",
+    "section-13-今天最值得实际测试--部署的-3-项",
+    "section--splattransform-340在-5090d-v2-上跑-vulkand3d12-双后端-sog-ab",
+    "section--quest-3--picoviewer-xr-三提交联合回归",
+    "section--spirula-gps-mapping你的-360无人机数据与无-gps-对照",
+    "section-今日结论",
+    "section-自动化说明",
+    "event-bc8f0fd5b15b",
+    "event-f5b48c8ee473",
+    "event-48305d82f552",
+    "event-488cb0ea7bb5",
+    "event-853f99bec576",
+    "event-ce71665fa550",
+    "event-201bdc7a485d",
+    "event-8993d518faf0"
+  ]
+}

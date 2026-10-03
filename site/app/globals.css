@@ -495,7 +495,7 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
 .article-date { width: 72px; border-radius: 16px; background: var(--date-day); color: var(--date-ink); top: 294px; box-shadow: none; }
 .article-date span { background: #DA282A; font-size: 14px; padding: 0; line-height: 26px; }
 .article-date strong { font-size: 32px; line-height: 46px; }
-.event-guide { border: 0; padding: 36px 0; margin: 0; }
+.event-guide { border: 0; padding: 36px 0; margin: 0; overflow-wrap: anywhere; }
 .event-guide h2 { font-size: 17px; font-weight: 400; }
 .event-guide ol > li { display: grid; grid-template-columns: 18px minmax(0,1fr); gap: 8px; margin: 20px 0; }
 .event-guide .guide-number { color: #DA282A; font-size: 16px; line-height: 27px; }
