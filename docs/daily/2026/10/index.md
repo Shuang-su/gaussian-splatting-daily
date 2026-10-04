@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-05：Godot tile 丢失告警、LichtFeld 启动/显存优化与 Spirula HDR](2026-10-05.md)
 - [2026-10-04：Godot 流式 Atlas 预算、LichtFeld 节点编辑与 HDR/EXR](2026-10-04.md)
 - [2026-10-03：PlayCanvas 三件套发版、WebGPU/XR 排序与评估正确性](2026-10-03.md)
 - [2026-10-02：SOG 流水提速、头显 XR 预算与 GPS mapping](2026-10-02.md)
