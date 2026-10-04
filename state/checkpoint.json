@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "timezone": "Asia/Tokyo",
-  "committed_through": "2026-10-04",
+  "committed_through": "2026-10-05",
   "last_workflow_run_id": null,
   "backfilled_dates": [
     "2026-09-18",
@@ -18,5 +18,5 @@
     "2026-09-29"
   ],
   "backfill_source": "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
-  "last_editorial_update": "2026-10-04T08:54:23+09:00"
+  "last_editorial_update": "2026-10-05T08:18:04+09:00"
 }
