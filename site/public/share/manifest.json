@@ -205,11 +205,11 @@
     "2026-09-30": {
       "date": "2026-09-30",
       "url": "/share/2026-09-30.png",
-      "title": "SplatTransform 3.8 发布，Spirula 分区训练进入正式版",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
       "contentHash": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
-      "inputHash": "1c6b15e95ae93abb45e66eb5364a4a1a2f312bc49f1ff78ae8c28ce8d8b6a765",
-      "sha256": "188c6d285f5d9959d03d5fc0e50d0a5a18926044b693681a33af25ef14ca733a",
-      "bytes": 224209,
+      "inputHash": "77f8403a49463aae1f21628f151cdffcc70cac7c90f65c790bd8ca56ce29bf41",
+      "sha256": "73c8c2c354c0a2b42206000be4f3e511602ded13799b371f82d8d825e5ad3384",
+      "bytes": 225076,
       "cover": {
         "url": "/media/originals/spirula-rf.png",
         "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
@@ -220,11 +220,11 @@
     "2026-10-01": {
       "date": "2026-10-01",
       "url": "/share/2026-10-01.png",
-      "title": "ARKit Scanner 提速设备端训练，Spirula 支持外部点云初始化",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
       "contentHash": "c760ef8aa2055fa45dafe50f1a5ba80ead6b6b0ae81793243100d277452ca536",
-      "inputHash": "330fb76ff6216c6d6064aadda5fbdae2a3c2251236d46d235975b297399ca583",
-      "sha256": "fbca183f5d7e3ccb350d7e17ac92b7b4e77bd506df4e31cde1cf7da9fee93152",
-      "bytes": 155690,
+      "inputHash": "8a694141dbfb6b8425d7104c48326264a778a5cf9442ab764923885dc2643f1e",
+      "sha256": "d76fa9cef38b4c1dd15d92f1afd3c9a78dd7ca8f7f6a2c3579cffd7b3a19a22d",
+      "bytes": 153610,
       "cover": {
         "url": "/media/originals/arkit-training.png",
         "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
@@ -235,11 +235,11 @@
     "2026-10-02": {
       "date": "2026-10-02",
       "url": "/share/2026-10-02.png",
-      "title": "SplatTransform 加速 SOG 生成，SuperSplat 优化头显 XR",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
       "contentHash": "e61d92ba07f48ed5862c7abb7607d27e466a9b6b10b626c263dd3100af207373",
-      "inputHash": "8f4678d045e7139b9d12ee9309587ea192933215e089762f7771da551c671023",
-      "sha256": "85146a8120c62cc61b8431c21ad29dcd4ce106fd5bc8b3e06987f18cabfed9ed",
-      "bytes": 185795,
+      "inputHash": "25fae819c7cde905a62d3e93eba00afa5a74ac4694966a0cb39516453805530c",
+      "sha256": "f756e16b5e002f0a2df83535ce404575e9cae2ffd06e180c7a6e8fc4421ac1c6",
+      "bytes": 185711,
       "cover": {
         "url": "/media/originals/lulusplat.webp",
         "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",

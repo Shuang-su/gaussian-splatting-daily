@@ -55,7 +55,7 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
     articles.find((a) => a.date === "2026-09-18")?.text.includes("增量版"),
   );
   const latest=articles.find(a=>a.date==='2026-09-30')!;
-  assert.equal(latest.readingGuide?.rows.length,7);
+  assert.equal(latest.readingGuide?.rows.length,0);
   const guideHtml = renderToStaticMarkup(createElement(ReadingGuide, { article: latest }));
   for (const event of latest.events!.filter(e => e.group === 'main')) {
     assert.ok(guideHtml.includes(`href="#${event.anchor}"`));
@@ -64,14 +64,15 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
   assert.ok(!guideHtml.includes('完整目录'));
   assert.ok(!latest.readingGuide!.bodyHtml.includes('overview-table'));
   assert.equal(latest.readingGuide!.leadingHtml, '');
-  assert.ok(latest.introductionHtml.includes('观察截至'));
+  assert.equal(latest.introductionHtml, '');
+  assert.ok(latest.archiveHtml.includes('观察截至'));
   assert.ok(latest.archiveHtml.includes('原自动化已于今日上午'));
   assert.ok(!latest.introductionHtml.includes('原自动化已于今日上午'));
   assert.ok(!latest.bodyHtml.includes('以下保留 PR #30 原始 canonical'));
   assert.ok(!latest.bodyHtml.includes('记录与校验口径'));
   assert.ok(!latest.bodyHtml.includes('source_count: 12'));
-  assert.ok(latest.bodyHtml.includes('论文指标均为作者报告，未做独立复现'));
-  assert.ok(latest.bodyHtml.includes('不伪装为 30 日首发'));
+  assert.ok(latest.archiveHtml.includes('论文指标均为作者报告，未做独立复现'));
+  assert.ok(latest.bodyHtml.includes('本期为 9 月 28 日论文的补充收录'));
   assert.ok(latest.archiveHtml.includes('以下保留 PR #30 原始 canonical'));
   assert.ok(latest.archiveHtml.includes('source_count: 12'));
   const archiveHeading=latest.toc.find(t=>t.title==='记录与校验口径')!;
@@ -81,7 +82,7 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
   const mobile=latest.highlights.find(e=>e.id.includes('Mobile-4DGS'))!;
   assert.notEqual(spirula.anchor,mobile.anchor);
   assert.ok(latest.bodyHtml.indexOf(`id="${spirula.anchor}"`)<latest.bodyHtml.indexOf('Spirula Studio v2026.9.30'));
-  assert.ok(latest.bodyHtml.indexOf(`id="${mobile.anchor}"`)<latest.bodyHtml.indexOf('<strong>Mobile-4DGS</strong>'));
+  assert.ok(latest.events!.find(e => e.anchor === mobile.anchor)!.sourceText.includes('CUDA 12.6'));
   for (const id of ["arxiv:2609.36969", "arxiv:2609.35619"]) {
     const entry = index.entries.find(e => e.id === id)!;
     assert.equal(entry.image, undefined, `${id}: a camera or benchmark plot must not become a listing image`);

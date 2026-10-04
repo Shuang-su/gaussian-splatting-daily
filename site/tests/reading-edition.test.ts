@@ -1,12 +1,15 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import matter from "gray-matter";
 import { buildArchive, parseArticle, ROOT } from "../lib/content";
 import { applyReadingEdition } from "../lib/reading-edition";
 import { readingNavigation } from "../lib/reading-navigation";
 import { weekPicks } from "../lib/week-picks";
 import { searchItems } from "../lib/search";
+import ReadingGuide from "../components/ReadingGuide";
 
 const canonicalPath = "docs/daily/2026/10/2026-10-03.md";
 const readerPath = "docs/reading/2026-10-03.md";
@@ -40,13 +43,41 @@ test("reader edition keeps source identity, old links and research while shorten
   assert.ok(!readingNavigation(a, false).some(item => item.title === "分析与实践"));
 });
 
-test("other dates and paper ownership stay unchanged; corrected sources keep stable event IDs", async () => {
+test("reader editions preserve research identity and anchors; unedited dates stay unchanged", async () => {
   const { articles, index } = await archive;
-  for (const a of articles.slice(1)) {
+  assert.deepEqual(articles.filter(a => a.readingEdition).map(a => a.date), ["2026-10-03", "2026-10-02", "2026-10-01", "2026-09-30"]);
+  for (const a of articles) {
     const baseline = await parseArticle(fs.readFileSync(`${ROOT}/${a.path}`, "utf8"), a.path);
-    assert.deepEqual(a, baseline);
+    if (!a.readingEdition) {
+      assert.deepEqual(a, baseline);
+      continue;
+    }
+    assert.equal(a.contentHash, baseline.contentHash, `${a.date}: canonical research hash`);
+    assert.equal(a.html, baseline.html, `${a.date}: complete original research`);
+    assert.equal(a.sourceCount, baseline.sourceCount, `${a.date}: original paper marker count`);
+    assert.ok(a.readingMinutes < baseline.readingMinutes, `${a.date}: continuous reading is shorter`);
+    for (const event of a.events!) {
+      assert.equal(event.anchor, baseline.events!.find(e => e.id === event.id)!.anchor);
+      assert.deepEqual(event.context, []);
+    }
+    const guide = renderToStaticMarkup(createElement(ReadingGuide, { article: a }));
+    const ids = [...(guide + a.bodyHtml + a.archiveHtml).matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+    assert.equal(new Set(ids).size, ids.length, `${a.date}: no duplicate DOM IDs`);
+    for (const target of baseline.targets) assert.ok(ids.includes(target), `${a.date}: retained ${target}`);
   }
+  const september = articles.find(a => a.date === "2026-09-30")!;
+  assert.equal(september.events!.filter(e => e.id.startsWith("arxiv:")).length, 12);
+  for (const date of ["2026-10-01", "2026-10-02"]) {
+    const report = articles.find(a => a.date === date)!;
+    assert.equal(report.sourceCount, 0, "follow-up reports must not re-own earlier papers");
+  }
+  assert.equal(articles.find(a => a.date === "2026-10-01")!.events!.find(e => e.id.includes("blender"))!.group, "brief");
+  assert.ok(!readingNavigation(articles.find(a => a.date === "2026-10-02")!, false).some(item => item.title === "研究简讯"), "a day without paper news needs no empty research section");
   assert.equal(index.entries.filter(e => e.kind === "paper").length, 52);
+});
+
+test("corrected sources retain stable event IDs, search terms and paper ownership", async () => {
+  const { articles, index } = await archive;
   const corrected = index.entries.find(e => e.id.includes("9ee3ba9f2f8b334d"))!;
   assert.equal(corrected.source, "https://github.com/yindaheng98/track-4dgs/commit/9ee3ba967a63e864424a74eb5ded6b829f4ae6a2");
   assert.equal(index.entries.find(e => e.id === "arxiv:2610.02207")!.title, "One Basis to Animate Them All: Gaussian Blendshape Distillation for Real-Time Avatars");
