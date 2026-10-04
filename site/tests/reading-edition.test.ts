@@ -10,6 +10,7 @@ import { readingNavigation } from "../lib/reading-navigation";
 import { weekPicks } from "../lib/week-picks";
 import { searchItems } from "../lib/search";
 import ReadingGuide from "../components/ReadingGuide";
+import ArticleEvents from "../components/ArticleEvents";
 
 const canonicalPath = "docs/daily/2026/10/2026-10-03.md";
 const readerPath = "docs/reading/2026-10-03.md";
@@ -37,7 +38,7 @@ test("reader edition keeps source identity, old links and research while shorten
   assert.ok(a.archiveHtml.includes("今天最值得实际测试"));
   assert.ok(a.archiveHtml.includes('id="analysis"'));
   assert.ok(a.archiveHtml.includes('id="group-analysis"'));
-  const ids = [...(a.bodyHtml + a.archiveHtml).matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+  const ids = [...(renderToStaticMarkup(createElement(ArticleEvents, { article: a })) + a.archiveHtml).matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
   assert.equal(new Set(ids).size, ids.length, "body and research details must not duplicate anchor IDs");
   assert.ok(readingNavigation(a, false).some(item => item.title === "研究简讯"));
   assert.ok(!readingNavigation(a, false).some(item => item.title === "分析与实践"));
@@ -61,7 +62,7 @@ test("reader editions preserve research identity and anchors; unedited dates sta
       assert.deepEqual(event.context, []);
     }
     const guide = renderToStaticMarkup(createElement(ReadingGuide, { article: a }));
-    const ids = [...(guide + a.bodyHtml + a.archiveHtml).matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+    const ids = [...(guide + renderToStaticMarkup(createElement(ArticleEvents, { article: a })) + a.archiveHtml).matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
     assert.equal(new Set(ids).size, ids.length, `${a.date}: no duplicate DOM IDs`);
     for (const target of baseline.targets) assert.ok(ids.includes(target), `${a.date}: retained ${target}`);
   }

@@ -8,6 +8,12 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   const [compact, setCompact] = useState(false), [active, setActive] = useState(items[0]?.id);
   const panel = useRef<HTMLDivElement>(null), trigger = useRef<HTMLButtonElement>(null);
   const root = useRef<HTMLDivElement>(null), scrollList = useRef<HTMLElement>(null);
+  const externalTrigger = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const openFromBar = (event: Event) => { externalTrigger.current = (event as CustomEvent<{ origin: HTMLElement }>).detail.origin; setOpen(true); };
+    window.addEventListener("open-reading-navigation", openFromBar);
+    return () => window.removeEventListener("open-reading-navigation", openFromBar);
+  }, []);
   const readingPosition = useRef<{ node: Element; top: number; width: number } | null>(null);
   const shown = open || (!compact && hovered);
   useEffect(() => {
@@ -64,7 +70,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     if (compact) { document.body.style.overflow = "hidden"; panel.current?.querySelector<HTMLButtonElement>("button")?.focus({ preventScroll: true }); }
     return () => { document.removeEventListener("pointerdown", closeOutside); if (compact) document.body.style.overflow = previous; };
   }, [open, compact]);
-  function close() { setOpen(false); setHovered(false); requestAnimationFrame(() => trigger.current?.focus({ preventScroll: true })); }
+  function close() { setOpen(false); setHovered(false); requestAnimationFrame(() => { (externalTrigger.current || trigger.current)?.focus({ preventScroll: true }); externalTrigger.current = null; }); }
   useEffect(() => {
     if (!shown) return;
     const escape = (event: globalThis.KeyboardEvent) => { if (event.key === "Escape") { event.preventDefault(); close(); } };

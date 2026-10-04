@@ -59,7 +59,8 @@ export async function applyReadingEdition(
   };
   const reading = await parse(matter.stringify(content, meta), file);
   const guide = source.readingGuide ? { ...source.readingGuide, rows: [], leadingHtml: "", bodyHtml: "", afterHtml: "" } : undefined;
-  const activeIds = new Set([...idsIn(reading.bodyHtml), guide?.id || "reading-guide"]);
+  // Group wrappers are rendered by ArticleEvents, not stored in bodyHtml.
+  const activeIds = new Set([...idsIn(reading.bodyHtml), ...(reading.events || []).map(event => `group-${event.group}`), guide?.id || "reading-guide"]);
   const archiveAliases = (source.events || []).filter(event => !assigned.has(event.id)).flatMap(event => [event.anchor, `group-${event.group}`]);
   // A legacy link opens the research details when its subject was not retained
   // in the reader body. Remove only duplicate IDs, preserving every source word.

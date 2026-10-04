@@ -1,0 +1,775 @@
+{
+  "interactions": [
+    {
+      "active": "全部讨论 7",
+      "check": "escape-focus",
+      "closed": true
+    },
+    {
+      "check": "add-reaction",
+      "selected": "❤️1",
+      "text": "👍15👏1❤️1"
+    },
+    {
+      "check": "thread-isolation",
+      "daily": false,
+      "dailyHeading": "本期讨论1",
+      "firstEvent": false,
+      "newEvent": true
+    },
+    {
+      "check": "failure-retry",
+      "focused": true,
+      "text": "讨论 0本地样本暂无评论，来聊聊你的看法。说点什么…收起讨论，返回阅读"
+    },
+    {
+      "check": "mobile-directory-escape",
+      "focused": "打开文章目录",
+      "open": false
+    },
+    {
+      "check": "bookmark-reload",
+      "pressed": "true"
+    },
+    {
+      "check": "copy-link",
+      "copied": "http://127.0.0.1:4337/gaussian-splatting-daily/daily/2026/09/30/"
+    },
+    {
+      "check": "gallery-close",
+      "focus": "放大图片：高斯场景补洞的编码、结构补全与解码流程",
+      "open": false
+    },
+    {
+      "check": "legacy-anchor",
+      "parents": [
+        {
+          "open": true
+        },
+        {
+          "open": true
+        }
+      ],
+      "top": 76.2265625,
+      "visible": true
+    },
+    {
+      "check": "gallery-removed",
+      "dialogs": 0
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "check": "system-theme",
+      "systemDark": false,
+      "theme": "system"
+    },
+    {
+      "check": "duplicate-anchor-fixed",
+      "briefTargets": 1,
+      "duplicateIds": [],
+      "report": "gsd-2026-09-30"
+    },
+    {
+      "archiveOpen": false,
+      "check": "brief-guide-jump",
+      "top": 76.203125
+    },
+    {
+      "check": "expanded-thread-breakpoint",
+      "from": 1440,
+      "to": 390,
+      "open": true,
+      "repliesOpen": true
+    },
+    {
+      "check": "reaction-toggle-back",
+      "text": "👍\n15\n👏\n1"
+    },
+    {
+      "bar": "2",
+      "check": "daily-composer-count",
+      "firstEvent": "全部讨论 7",
+      "hasDailyTextInEvent": false,
+      "heading": "本期讨论2"
+    }
+  ],
+  "widths": [
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "21px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 359,
+        "top": 892,
+        "width": 343,
+        "x": 16,
+        "y": 892
+      },
+      "date": {
+        "bottom": 298.9375,
+        "height": 64,
+        "left": 24,
+        "right": 88,
+        "top": 234.9375,
+        "width": 64,
+        "x": 24,
+        "y": 234.9375
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "28px",
+        "size": "20px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "27px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "width": 375
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "21px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 374,
+        "top": 892,
+        "width": 358,
+        "x": 16,
+        "y": 892
+      },
+      "date": {
+        "bottom": 307.375,
+        "height": 64,
+        "left": 24,
+        "right": 88,
+        "top": 243.375,
+        "width": 64,
+        "x": 24,
+        "y": 243.375
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "28px",
+        "size": "20px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "27px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "width": 390
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "21px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 414,
+        "top": 892,
+        "width": 398,
+        "x": 16,
+        "y": 892
+      },
+      "date": {
+        "bottom": 329.875,
+        "height": 64,
+        "left": 24,
+        "right": 88,
+        "top": 265.875,
+        "width": 64,
+        "x": 24,
+        "y": 265.875
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "28px",
+        "size": "20px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "27px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "width": 430
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "21px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 534,
+        "top": 892,
+        "width": 518,
+        "x": 16,
+        "y": 892
+      },
+      "date": {
+        "bottom": 397.375,
+        "height": 64,
+        "left": 24,
+        "right": 88,
+        "top": 333.375,
+        "width": 64,
+        "x": 24,
+        "y": 333.375
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "28px",
+        "size": "20px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "27px",
+        "size": "15px",
+        "weight": "400"
+      },
+      "width": 550
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "23.8px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 124,
+        "right": 644,
+        "top": 876,
+        "width": 520,
+        "x": 124,
+        "y": 876
+      },
+      "date": {
+        "bottom": 450,
+        "height": 72,
+        "left": 44,
+        "right": 116,
+        "top": 378,
+        "width": 72,
+        "x": 44,
+        "y": 378
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "33.6px",
+        "size": "24px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "30.6px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "width": 768
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "23.8px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 252,
+        "right": 772,
+        "top": 876,
+        "width": 520,
+        "x": 252,
+        "y": 876
+      },
+      "date": {
+        "bottom": 450,
+        "height": 72,
+        "left": 172,
+        "right": 244,
+        "top": 378,
+        "width": 72,
+        "x": 172,
+        "y": 378
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "33.6px",
+        "size": "24px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "30.6px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "width": 1024
+    },
+    {
+      "all": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "23.8px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 460,
+        "right": 980,
+        "top": 876,
+        "width": 520,
+        "x": 460,
+        "y": 876
+      },
+      "date": {
+        "bottom": 450,
+        "height": 72,
+        "left": 380,
+        "right": 452,
+        "top": 378,
+        "width": 72,
+        "x": 380,
+        "y": 378
+      },
+      "h2": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", 微软雅黑, \"helvetica neue\", helvetica, ubuntu, roboto, noto, \"segoe ui\", Arial, sans-serif",
+        "line": "33.6px",
+        "size": "24px",
+        "weight": "600"
+      },
+      "lastNumber": "nowrap",
+      "overflow": false,
+      "previews": 0,
+      "prose": {
+        "font": "-apple-system, system-ui, \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei\", Arial, sans-serif",
+        "line": "30.6px",
+        "size": "17px",
+        "weight": "400"
+      },
+      "width": 1440
+    },
+    {
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 359,
+        "top": 892,
+        "width": 343,
+        "x": 16,
+        "y": 892
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 327,
+      "width": 375
+    },
+    {
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 374,
+        "top": 892,
+        "width": 358,
+        "x": 16,
+        "y": 892
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 342,
+      "width": 390
+    },
+    {
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 414,
+        "top": 892,
+        "width": 398,
+        "x": 16,
+        "y": 892
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 382,
+      "width": 430
+    },
+    {
+      "bar": {
+        "bottom": 946,
+        "height": 54,
+        "left": 16,
+        "right": 534,
+        "top": 892,
+        "width": 518,
+        "x": 16,
+        "y": 892
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 502,
+      "width": 550
+    },
+    {
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 124,
+        "right": 644,
+        "top": 876,
+        "width": 520,
+        "x": 124,
+        "y": 876
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 680,
+      "width": 768
+    },
+    {
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 252,
+        "right": 772,
+        "top": 876,
+        "width": 520,
+        "x": 252,
+        "y": 876
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 680,
+      "width": 1024
+    },
+    {
+      "bar": {
+        "bottom": 934,
+        "height": 58,
+        "left": 460,
+        "right": 980,
+        "top": 876,
+        "width": 520,
+        "x": 460,
+        "y": 876
+      },
+      "day": "rgb(57, 57, 60)",
+      "link": "rgb(51, 172, 255)",
+      "mode": "sample-dark",
+      "overflow": false,
+      "previewWidth": 680,
+      "width": 1440
+    }
+  ],
+  "pages": [
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 0,
+      "report": "gsd-2026-09-18",
+      "thumbnails": 0,
+      "title": "Blender 修复高斯导入，PlayCanvas 减少阴影计算",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 1,
+      "report": "gsd-2026-09-19",
+      "thumbnails": 1,
+      "title": "PlayCanvas 加入随机透明度，Blender 支持 OpenUSD 高斯",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 2,
+      "report": "gsd-2026-09-20",
+      "thumbnails": 2,
+      "title": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 3,
+      "report": "gsd-2026-09-21",
+      "thumbnails": 3,
+      "title": "LichtFeld 提前启动大数据集训练，Spirula 发布正式版",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 4,
+      "report": "gsd-2026-09-22",
+      "thumbnails": 4,
+      "title": "SuperSplat Viewer 1.32 发布，SplatTransform 支持轨迹渲染",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-23",
+      "thumbnails": 5,
+      "title": "SuperSplat 优化大 PLY 加载，SplatTransform 3.6 改进 SOG 写入",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-24",
+      "thumbnails": 5,
+      "title": "ROCm GSplat 已可安装，SuperSplat Viewer 1.35 发布",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-25",
+      "thumbnails": 5,
+      "title": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-26",
+      "thumbnails": 5,
+      "title": "LichtFeld 开发分支加入 Metal 张量后端",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-27",
+      "thumbnails": 5,
+      "title": "SuperSplat 合入随机渲染，LichtFeld 降低训练显存",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-28",
+      "thumbnails": 5,
+      "title": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-29",
+      "thumbnails": 5,
+      "title": "PlayCanvas 调整流式 LOD，SuperSplat Viewer 1.36 发布",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-09-30",
+      "thumbnails": 5,
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-10-01",
+      "thumbnails": 5,
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-10-02",
+      "thumbnails": 5,
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 550
+    },
+    {
+      "discussion": "本期讨论讨论暂未开放。",
+      "duplicateIds": [],
+      "fixturePreviews": 0,
+      "forms": 0,
+      "guide": "日报速览",
+      "iframes": 0,
+      "missingGuideTargets": [],
+      "overflow": false,
+      "pastCards": 5,
+      "report": "gsd-2026-10-03",
+      "thumbnails": 5,
+      "title": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 更新大场景与 XR 支持",
+      "width": 550
+    }
+  ],
+  "console": []
+}

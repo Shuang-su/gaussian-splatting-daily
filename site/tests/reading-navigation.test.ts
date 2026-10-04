@@ -30,13 +30,19 @@ test("floating navigation follows reading order and every nested target exists i
     const hasWeek = weekPicks(a, articles).length > 0;
     const items = readingNavigation(a, hasWeek), flat = flattenReadingLinks(items);
     assert.equal(new Set(flat.map(i => i.id)).size, flat.length, `${a.date}: duplicate destinations`);
-    const html = renderToStaticMarkup(createElement(ReadingGuide, { article: a, hasWeek })) + renderToStaticMarkup(createElement(ArticleEvents, { article: a })) + renderToStaticMarkup(createElement(ArticleFooter, { article: a })) + (hasWeek ? '<section id="this-week"/>' : '');
+    const html = renderToStaticMarkup(createElement(ReadingGuide, { article: a, hasWeek })) + renderToStaticMarkup(createElement(ArticleEvents, { article: a })) + renderToStaticMarkup(createElement(ArticleFooter, { article: a })) + (hasWeek ? '<section id="this-week"/>' : '') + renderToStaticMarkup(createElement(Discussion, { dailyId: a.id, date: a.date, heading: true }));
     for (const item of flat) assert.ok(html.includes(`id="${item.id}"`), `${a.date}: ${item.id} has no destination`);
     assert.deepEqual(items.slice(1, 1 + a.events!.filter(e => e.group === "main").length).map(i => i.id), a.events!.filter(e => e.group === "main").map(e => e.anchor));
   }
 });
-test("unconfigured discussions leave no inert action while archival sources remain reachable", async () => {
-  assert.equal(renderToStaticMarkup(createElement(Discussion, { dailyId: "test", date: "2026-09-30", heading: true })), "");
+test("unconfigured discussions remain visible without invented comments or a submit form", async () => {
+  const discussion = renderToStaticMarkup(createElement(Discussion, { dailyId: "test", date: "2026-09-30", heading: true }));
+  assert.ok(discussion.includes('id="discussion"'));
+  assert.ok(discussion.includes("讨论暂未开放"));
+  assert.ok(!discussion.includes("暂无评论"));
+  assert.ok(!discussion.includes("本地样本"));
+  assert.ok(!discussion.includes("<form"));
+  assert.ok(!discussion.includes("<iframe"));
   const a = (await archive).articles[0];
   const html = renderToStaticMarkup(createElement(ArticleFooter, { article: a }));
   assert.ok(html.includes(a.image!.source));
