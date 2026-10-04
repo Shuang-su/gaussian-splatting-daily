@@ -46,4 +46,6 @@
 
 ## Checkpoint
 
-实施 checkpoint 和最终完成记录的 SHA 将在提交后读回记录。分支为 codex/article-style-discussion，起点 be15aaae4fefeb22a4eac38bd5459bf283858770。
+实施 checkpoint：`37fba74673c2a5f1abb8453ec6f1ad51bddc08f4`。静态产物已从该提交重建，deployment.json 已读回此 SHA，导出校验再次通过。分支为 `codex/article-style-discussion`，起点 `be15aaae4fefeb22a4eac38bd5459bf283858770`。
+
+本记录随后形成仅文档的收尾 checkpoint，其 SHA 由最终回复交付。实施提交后工作树为干净状态；研究／阅读 Markdown 和两份 RSS 相比起点没有 diff。普通阅读页和混合评论样本页已留在本地浏览器，视口测试覆盖已重置。
