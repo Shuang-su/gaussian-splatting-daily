@@ -104,6 +104,14 @@ def verify(root=ROOT):
         canonical = root / f'docs/daily/{report_date[:4]}/{report_date[5:7]}/{report_date}.md'
         detail = output / f'daily/{report_date.replace("-", "/")}/index.html'
         verify_readback(report_date, hashlib.sha256(canonical.read_bytes()).hexdigest(), deployment, homepage, detail.read_text())
+        if report.get('readingEdition'):
+            reader = report['readingEdition']
+            reader_path = (root / reader['path']).resolve()
+            if not reader_path.is_relative_to((root / 'docs/reading').resolve()):
+                raise ValueError(f'Invalid reading edition path: {reader_path}')
+            digest = hashlib.sha256(reader_path.read_bytes()).hexdigest()
+            if digest != reader['contentHash'] or f'data-reading-sha256="{digest}"' not in detail.read_text():
+                raise ValueError(f'Reading edition does not match the export: {report_date}')
     return len(pages), len(reports)
 
 

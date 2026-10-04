@@ -654,3 +654,18 @@ a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,su
  .reading-navigator:has(.reading-nav-panel:not([hidden])) .reading-actions { visibility: hidden; }
 }
 @media (prefers-reduced-motion: reduce) { .reading-nav-ticks span { transition: none; } }
+
+/* Reader editions use short items beneath one group heading. */
+.article-reading-edition .group-brief .news-event,
+.article-reading-edition .group-paper .news-event { border: 0; padding: 24px 0 0; }
+.article-reading-edition .group-brief .event-title,
+.article-reading-edition .group-paper .event-title { font-size: 19px; line-height: 1.6; margin-bottom: 12px; }
+.article-reading-edition .group-brief,
+.article-reading-edition .group-paper { padding-bottom: 28px; }
+.article-reading-edition .group-brief .prose > :last-child,
+.article-reading-edition .group-paper .prose > :last-child { margin-bottom: 0; }
+.article-reading-edition .this-week time { display: block; margin-top: 8px; }
+@media (max-width: 767px) {
+  .article-reading-edition .group-brief .event-title,
+  .article-reading-edition .group-paper .event-title { font-size: 17px; }
+}

@@ -16,6 +16,7 @@ import type { Article, Daily, Entry, PortalIndex, SourceImage } from "./types";
 import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
 import { renderEvents } from "./editorial";
+import { applyReadingEdition } from "./reading-edition";
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { SITE_URL } from "./catalog";
@@ -453,13 +454,14 @@ export async function buildArchive(root = ROOT) {
     .filter((p) => /^\d{4}\/\d{2}\/\d{4}-\d{2}-\d{2}\.md$/.test(p))
     .sort();
   const articles = await Promise.all(
-    files.map((p) =>
-      parseArticle(
-        fs.readFileSync(path.join(dailyRoot, p), "utf8"),
-        `docs/daily/${p}`,
-        media,
-      ),
-    ),
+    files.map(async (p) => {
+      const markdown = fs.readFileSync(path.join(dailyRoot, p), "utf8");
+      const article = await parseArticle(markdown, `docs/daily/${p}`, media);
+      const readerPath = `docs/reading/${article.date}.md`;
+      if (!fs.existsSync(path.join(root, readerPath))) return article;
+      return applyReadingEdition(article, markdown, fs.readFileSync(path.join(root, readerPath), "utf8"), readerPath,
+        (md, file) => parseArticle(md, file, media));
+    }),
   );
   const published = articles
     .filter((a) => ["published", "corrected"].includes(a.status))
@@ -521,7 +523,7 @@ export async function buildArchive(root = ROOT) {
         id: `arxiv:${id}`,
         kind: "paper",
         date: article.date,
-        title: paperTitle,
+        title: article.paperTitles?.[id] || paperTitle,
         summary: editorialSummary ? summary : summary.slice(0, 350),
         source: `https://arxiv.org/abs/${id}`,
         anchor,
@@ -534,8 +536,15 @@ export async function buildArchive(root = ROOT) {
     (a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id),
   );
   const daily: Daily[] = published.map(
-    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, events, ...d }) => d,
+    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, paperTitles, events, ...d }) => d,
   );
+  const entrySearchText = (entry: Entry) => {
+    const article = published.find(a => a.date === entry.date && a.readingEdition);
+    const readingEvent = article?.events?.find(event => event.id === entry.id);
+    const oldHeading = article?.toc.find(heading => heading.id === entry.anchor)?.title;
+    // Formal paper titles may omit the project's familiar name (for example GALA).
+    return [entry.title, entry.summary, entry.source, oldHeading, readingEvent?.title, readingEvent?.sourceText].filter(Boolean).join(" ");
+  };
   const index: PortalIndex = {
     schemaVersion: 1,
     updatedThrough: published[0]?.date || "",
@@ -560,7 +569,7 @@ export async function buildArchive(root = ROOT) {
         date: e.date,
         topics: e.topics,
         url: entryUrl(e),
-        text: `${e.title} ${e.summary} ${e.source}`,
+        text: entrySearchText(e),
       })),
     ],
   };

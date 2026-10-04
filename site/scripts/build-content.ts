@@ -32,7 +32,7 @@ fs.writeFileSync(
       commit,
       updatedThrough: index.updatedThrough,
       dailyCount: index.daily.length,
-      reports: index.daily.map(({ id, date, contentHash }) => ({ id, date, contentHash })),
+      reports: index.daily.map(({ id, date, contentHash, readingEdition }) => ({ id, date, contentHash, ...(readingEdition ? { readingEdition } : {}) })),
     },
     null,
     2,

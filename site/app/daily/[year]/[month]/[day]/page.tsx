@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: RouteParams }) {
   const weekday = ["周日","周一","周二","周三","周四","周五","周六"][new Date(`${a.date}T12:00:00+08:00`).getUTCDay()];
   return <ImageGallery images={images}>
     <ReadingNavigator items={readingNavigation(a, week.length > 0)} />
-    <article id="article-top" className="article-shell" data-report-id={a.id} data-source-sha256={a.contentHash}>
+    <article id="article-top" className={`article-shell${a.readingEdition ? " article-reading-edition" : ""}`} data-report-id={a.id} data-source-sha256={a.contentHash} data-reading-sha256={a.readingEdition?.contentHash}>
       {a.image && <div className="article-cover"><SourceImage image={a.image} previewable priority sizes="(max-width: 639px) 100vw, 768px" /><div className="article-date" aria-hidden="true"><span>{weekday}</span><strong>{a.date.slice(8)}</strong></div></div>}
       <header className={`article-header${a.image ? "" : " no-cover"}`}>
         <Link className="article-series" href="/daily/">日报</Link><h1>{a.headline}</h1><p className="article-deck">{a.summary}</p>
@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: RouteParams }) {
         <ReadingGuide article={a} hasWeek={week.length > 0} />
         {!a.events && a.introductionHtml && <ArticleBody html={a.introductionHtml} />}
         {a.events ? <ArticleEvents article={a} /> : <ArticleBody html={a.bodyHtml} />}
-        {week.length > 0 && <section className="this-week" id="this-week"><h2>本周重要内容</h2><ul>{week.map(e=><li key={e.id}><Link href={entryUrl(e)}>{e.title}</Link><p>{e.summary}</p><time dateTime={e.date}>{e.date}</time></li>)}</ul></section>}
+        {week.length > 0 && <section className="this-week" id="this-week"><h2>本周重要内容</h2><ul>{week.map(e=><li key={e.id}><Link href={entryUrl(e)}>{e.title}</Link>{!a.readingEdition && <p>{e.summary}</p>}<time dateTime={e.date}>{e.date}</time></li>)}</ul></section>}
         <ArticleFooter article={a} />
         <Discussion dailyId={a.id} date={a.date} heading />
       </div>

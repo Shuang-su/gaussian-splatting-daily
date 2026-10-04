@@ -41,6 +41,7 @@ export interface Daily {
   prs: number[];
   readingMinutes: number;
   unresolvedSources: number;
+  readingEdition?: { path: string; contentHash: string };
 }
 export interface Article extends Daily {
   events?: ArticleEvent[];
@@ -53,6 +54,7 @@ export interface Article extends Daily {
   introductionHtml: string;
   archiveHtml: string;
   paperSummaries: Record<string, string>;
+  paperTitles?: Record<string, string>;
   readingGuide?: {
     id: string;
     title: string;

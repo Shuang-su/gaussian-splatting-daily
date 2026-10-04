@@ -19,7 +19,7 @@
   "default": {
     "url": "/share/default.png",
     "date": "2026-10-03",
-    "sha256": "3e24667156d839b185ab3a37ffb486bef4829860b6ae866d24f52727e3f6f26a"
+    "sha256": "7df7b7bc96a39cd1180a23d79c0b8ba1c47ced8c8c6dca3db2f7bbf55c68ecc6"
   },
   "reports": {
     "2026-09-18": {
@@ -250,11 +250,11 @@
     "2026-10-03": {
       "date": "2026-10-03",
       "url": "/share/2026-10-03.png",
-      "title": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 与转换工具正式更新",
+      "title": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 更新大场景与 XR 支持",
       "contentHash": "f5f28e4822dbe28818424fc2db29273b760bcc1f99313c102fd098bd80a83929",
-      "inputHash": "a94443836114676dcdddb87ed6a7886b92da2d8fa2ab9ca223cb7da13f3bf0c2",
-      "sha256": "3e24667156d839b185ab3a37ffb486bef4829860b6ae866d24f52727e3f6f26a",
-      "bytes": 184064,
+      "inputHash": "b0724e0be75c83d9da433af0433318d1722ff0e81fcf56bdc7496d419c0e695d",
+      "sha256": "7df7b7bc96a39cd1180a23d79c0b8ba1c47ced8c8c6dca3db2f7bbf55c68ecc6",
+      "bytes": 185030,
       "cover": {
         "url": "/media/originals/gslite-30.png",
         "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",

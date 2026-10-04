@@ -23,6 +23,14 @@
 - Change: `setCamera(camera)` 注册相机，`update()` 无参数；流式重试的 30 秒是等待间隔上限，并非总截止时间；随机采样控制 API 为 `autoAdvanceStochasticSample`。为已有的 10 篇实质摘要补齐 `**编辑摘要：**` 标签，保持严格编辑校验。
 - Evidence: [v1.2.0 release](https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0)、[v1.2.0 SogStreamScheduler](https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/blob/v1.2.0/docs/SogStreamScheduler.md)
 
+## 2026-10-05 — 10 月 3 日阅读稿来源复核（本地）
+
+- 逐篇读取 arXiv v1 后，发现 MEGA、3DROID、EvenSplat、GALA、TRACE、GS-PQM、DSSR-3D 的英文标题曾被概括改写。阅读稿与派生索引使用原论文标题，论文 ID、旧标题锚点和原研究文件保持不变。逐项原题与新题见 [来源复核记录](changes/20261005-editorial-pilot/sources-and-mapping.md)。
+- track-4dgs 原归档使用的完整提交地址无法解析。已读取截止报告窗口的提交列表与代码 diff，正确地址为 [9ee3ba967a63e864424a74eb5ded6b829f4ae6a2](https://github.com/yindaheng98/track-4dgs/commit/9ee3ba967a63e864424a74eb5ded6b829f4ae6a2)。网页正文与条目来源更正；已有事件 ID 保留，避免破坏讨论和引用身份。
+- 原摘要“10 篇新论文”涵盖了此前论文的补充收录。阅读稿不再将它们全部描述为新发表，并在 GS-PQM、DSSR-3D 条目说明补录属性。
+- GALA 原速览的“spline/low-rank/重建器”概括不准确。按 [原论文 v1](https://arxiv.org/abs/2610.02207v1)，阅读稿更正为预训练角色模型的 blendshape 蒸馏、浅层系数预测与线性混合。
+- 这些修改属于本地阅读稿试改，未向远端提交或公开部署。
+
 ## 提交后续纠错
 
 使用 [纠错 Issue](https://github.com/Shuang-su/gaussian-splatting-daily/issues/new?template=correction.yml)，提供当日日报、条目、原说法、修正和第一手来源。通过新 PR 修正正文并追加本日志，保留原归档上下文。
