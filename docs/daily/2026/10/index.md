@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-06：PlayCanvas 发布链、Spirula E57/LiDAR 与 LichtFeld WebXR/评估](2026-10-06.md)
 - [2026-10-05：Godot tile 丢失告警、LichtFeld 启动/显存优化与 Spirula HDR](2026-10-05.md)
 - [2026-10-04：Godot 流式 Atlas 预算、LichtFeld 节点编辑与 HDR/EXR](2026-10-04.md)
 - [2026-10-03：PlayCanvas 三件套发版、WebGPU/XR 排序与评估正确性](2026-10-03.md)
