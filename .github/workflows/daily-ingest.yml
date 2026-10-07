@@ -10,6 +10,11 @@ on:
         description: "Logical date YYYY-MM-DD; blank = today in Asia/Tokyo"
         required: false
         type: string
+      verify_only:
+        description: "Verify an existing Daily is a no-op; never push or publish"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -66,18 +71,7 @@ jobs:
         run: |
           git config user.name "gaussian-splatting-daily[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
-            git fetch origin "$BRANCH"
-            git switch -C "$BRANCH" "origin/$BRANCH"
-            if ! git merge --no-edit origin/main; then
-              git merge --abort
-              echo "Automation branch conflicts with main." >&2
-              exit 42
-            fi
-          else
-            git switch -c "$BRANCH" origin/main
-          fi
+          python scripts/prepare_daily_branch.py
 
       - name: Generate Daily
         env:
@@ -97,7 +91,19 @@ jobs:
         env:
           DATE: ${{ steps.meta.outputs.date }}
           BRANCH: ${{ steps.meta.outputs.branch }}
+          VERIFY_ONLY: ${{ inputs.verify_only || false }}
         run: |
+          if [[ "$VERIFY_ONLY" == "true" ]]; then
+            git diff --exit-code origin/main -- docs data state
+            if [[ -n "$(git ls-files --others --exclude-standard -- docs data state)" ]]; then
+              echo "Verification found untracked publication files." >&2
+              exit 1
+            fi
+            echo "Verified no-op against main; no push, Issue, or PR writes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "publishable=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
           git config user.name "gaussian-splatting-daily[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs data state
