@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-08：PlayCanvas 全景 LOD、SOG ZIP64 与 Spirula 大型 SfM](2026-10-08.md)
 - [2026-10-07：Spirula 多卡稳定性、LichtFeld 评估与 Mobile-4DGS](2026-10-07.md)
 - [2026-10-06：PlayCanvas 发布链、Spirula E57/LiDAR 与 LichtFeld WebXR/评估](2026-10-06.md)
 - [2026-10-05：Godot tile 丢失告警、LichtFeld 启动/显存优化与 Spirula HDR](2026-10-05.md)
