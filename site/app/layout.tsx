@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { BASE, REPO } from "../lib/catalog";
 import "./globals.css";
+import "./home.css";
 import Header from "../components/Header";
 import BrandMark from "../components/BrandMark";
 import { FEEDS } from "../lib/feeds";

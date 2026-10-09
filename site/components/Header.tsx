@@ -1,19 +1,30 @@
 "use client";
+
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { TOPICS } from "../lib/catalog";
+import { BASE, TOPICS } from "../lib/catalog";
 import BrandMark from "./BrandMark";
-import Icon from "./Icon";
+import Icon, { type IconName } from "./Icon";
+
 type Panel = "mobile" | "topics" | "theme" | null;
+const routes: { href: string; label: string; icon: IconName }[] = [
+  { href: "/daily/", label: "日报", icon: "paper" },
+  { href: "/papers/", label: "论文", icon: "layers" },
+  { href: "/tools/", label: "工具", icon: "tool" },
+];
+
 export default function Header() {
   const [panel, setPanel] = useState<Panel>(null);
   const [theme, setTheme] = useState("system");
   const pathname = usePathname();
+  const home = pathname === "/";
   const header = useRef<HTMLElement>(null);
+  const navigation = useRef<HTMLElement>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
   const currentPanel = useRef(panel);
   currentPanel.current = panel;
+
   useEffect(() => { setPanel(null); header.current?.classList.remove("header-hidden"); }, [pathname]);
   useEffect(() => {
     try { const saved = localStorage.getItem("gsd-theme"); if (saved && ["system", "light", "dark"].includes(saved)) setTheme(saved); } catch {}
@@ -35,6 +46,35 @@ export default function Header() {
     document.addEventListener("keydown", escape); document.addEventListener("pointerdown", outside);
     return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", scroll); document.removeEventListener("keydown", escape); document.removeEventListener("pointerdown", outside); };
   }, []);
+
+  useEffect(() => {
+    if (panel !== "mobile") return;
+    const width = window.matchMedia(`(max-width: ${home ? 1023 : 767}px)`);
+    if (!width.matches) { setPanel(null); return; }
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const outside = Array.from(document.querySelectorAll<HTMLElement>("main, .site-footer"));
+    const inert = outside.map((el) => el.inert);
+    outside.forEach((el) => { el.inert = true; });
+    const frame = requestAnimationFrame(() => navigation.current?.querySelector<HTMLInputElement>("input")?.focus());
+    const resize = () => { if (!width.matches) { setPanel(null); } };
+    const trap = (event: KeyboardEvent) => {
+      if (event.key !== "Tab") return;
+      const controls = Array.from(header.current?.querySelectorAll<HTMLElement>("a, button, input, select") || [])
+        .filter((el) => el.getClientRects().length && (el === trigger.current || navigation.current?.contains(el)));
+      if (!controls.length) return;
+      const first = controls[0], last = controls[controls.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    };
+    width.addEventListener("change", resize); document.addEventListener("keydown", trap);
+    return () => {
+      cancelAnimationFrame(frame); document.body.style.overflow = overflow;
+      outside.forEach((el, i) => { el.inert = inert[i]; });
+      width.removeEventListener("change", resize); document.removeEventListener("keydown", trap);
+    };
+  }, [panel, home]);
+
   function toggle(next: Exclude<Panel, null>, button: HTMLButtonElement) {
     trigger.current = button; header.current?.classList.remove("header-hidden"); setPanel(panel === next ? null : next);
   }
@@ -42,24 +82,26 @@ export default function Header() {
     setTheme(value); document.documentElement.dataset.theme = value;
     try { localStorage.setItem("gsd-theme", value); } catch {}
   }
-  return <header ref={header} className="site-header" data-menu-open={Boolean(panel)}>
+  return <header ref={header} className={`site-header${home ? " home-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"}>
     <div className="header-inner">
-      <Link href="/" className="brand" onClick={() => setPanel(null)}><BrandMark />高斯日报</Link>
-      <nav className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav">
-        {[["/daily/", "日报"], ["/papers/", "论文"], ["/tools/", "工具"]].map(([href, label]) => <Link key={href} href={href} aria-current={pathname.startsWith(href.slice(0,-1)) ? "page" : undefined} onClick={() => setPanel(null)}>{label}</Link>)}
+      <div className="header-brand-group"><Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>
+        {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
+      <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav">
+        <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search"><Icon name="search" /><input name="q" type="search" placeholder="搜索高斯日报…" aria-label="搜索高斯日报" /><button type="submit" aria-label="提交搜索"><Icon name="arrow" /></button></form>
+        {routes.map(({ href, label, icon }) => <Link key={href} href={href} aria-current={pathname.startsWith(href.slice(0,-1)) ? "page" : undefined} onClick={() => setPanel(null)}><span className="mobile-route-icon"><Icon name={icon} /></span>{label}<span className="mobile-route-chevron"><Icon name="chevron" /></span></Link>)}
         <div className="topic-navigation">
-          <button aria-expanded={panel === "topics"} aria-controls="header-topics" onClick={e => toggle("topics", e.currentTarget)}>主题 <span aria-hidden="true">⌄</span></button>
-          <div className="header-popover topic-popover" id="header-topics" hidden={panel !== "topics"}>{TOPICS.map(t => <Link key={t.slug} href={`/topics/${t.slug}/`} onClick={() => setPanel(null)}>{t.label}</Link>)}<Link href="/topics/" onClick={() => setPanel(null)}>全部主题</Link></div>
+          <button aria-expanded={panel === "topics"} aria-controls="header-topics" onClick={(e) => toggle("topics", e.currentTarget)}>主题 <Icon name="chevron" /></button>
+          <div className="header-popover topic-popover" id="header-topics" hidden={panel !== "topics"}>{TOPICS.map((t) => <Link key={t.slug} href={`/topics/${t.slug}/`} onClick={() => setPanel(null)}>{t.label}</Link>)}<Link href="/topics/" onClick={() => setPanel(null)}>全部主题</Link></div>
         </div>
-        <div className="mobile-nav-extra"><Link href="/topics/" onClick={() => setPanel(null)}>主题</Link><Link href="/subscribe/" onClick={() => setPanel(null)}>订阅高斯日报</Link><label>外观<select aria-label="手机显示主题" value={theme} onChange={e => changeTheme(e.target.value)}><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></label></div>
+        <div className="mobile-nav-extra"><Link href="/topics/" onClick={() => setPanel(null)}><Icon name="layers" />主题<Icon name="chevron" /></Link><Link href="/subscribe/" onClick={() => setPanel(null)}><Icon name="external" />订阅高斯日报<Icon name="chevron" /></Link><label>外观<select aria-label="手机显示主题" value={theme} onChange={(e) => changeTheme(e.target.value)}><option value="system">跟随系统</option><option value="light">浅色</option><option value="dark">暗色</option></select></label></div>
       </nav>
       <div className="header-actions">
         <Link href="/search/" className="search-link" aria-label="搜索" onClick={() => setPanel(null)}><Icon name="search" /></Link>
-        <div className="appearance-navigation desktop-action"><button className="appearance-toggle" aria-label="外观" aria-expanded={panel === "theme"} aria-controls="header-appearance" onClick={e => toggle("theme", e.currentTarget)}><Icon name="theme" /></button>
-          <div className="header-popover appearance-popover" id="header-appearance" hidden={panel !== "theme"} aria-label="显示主题">{[["light", "浅色"], ["dark", "暗色"], ["system", "跟随系统"]].map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => { changeTheme(value); setPanel(null); trigger.current?.focus({ preventScroll: true }); }}>{label}<span aria-hidden="true">{theme === value ? "✓" : ""}</span></button>)}</div>
+        <div className="appearance-navigation desktop-action"><button className="appearance-toggle" aria-label="外观" aria-expanded={panel === "theme"} aria-controls="header-appearance" onClick={(e) => toggle("theme", e.currentTarget)}><Icon name="theme" /></button>
+          <div className="header-popover appearance-popover" id="header-appearance" hidden={panel !== "theme"} aria-label="显示主题">{[["light", "浅色"], ["dark", "暗色"], ["system", "跟随系统"]].map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => { changeTheme(value); setPanel(null); trigger.current?.focus({ preventScroll: true }); }}>{label}{theme === value && <Icon name="check" />}</button>)}</div>
         </div>
         <Link className="subscribe-link desktop-action" href="/subscribe/" onClick={() => setPanel(null)}>订阅</Link>
-        <button className="menu-toggle" aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={e => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : "menu"} /></button>
+        <button className="menu-toggle" aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : "grid"} /></button>
       </div>
     </div>
   </header>;
