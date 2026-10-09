@@ -86,6 +86,11 @@
 .home-feed-dropdown button > .icon { width: 24px; height: 24px; }
 .home-feed-dropdown button > .icon:last-child:not(:first-child) { margin-left: auto; width: 20px; }
 
+@media (min-width: 1024px) and (max-width: 1099px) {
+  .feed-row { gap: 32px; }
+  .feed-meta { gap: 6px 8px; font-size: 12px; }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
   .home { --home-main-width: min(588px, calc(100vw - 64px)); }
   .home-content { grid-template-columns: 64px minmax(0,1fr); gap: 32px; padding-left: 16px; padding-right: 32px; }
