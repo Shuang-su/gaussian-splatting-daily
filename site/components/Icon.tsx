@@ -14,7 +14,10 @@ export default function Icon({ name }: { name: IconName }) {
     home: <><path d="M3.5 10.3c0-.7.3-1.4.9-1.9l6.1-4.8a2.4 2.4 0 0 1 3 0l6.1 4.8c.6.5.9 1.2.9 1.9v9.2c0 .8-.7 1.5-1.5 1.5H5c-.8 0-1.5-.7-1.5-1.5Z"/><path d="M9 21v-6a3 3 0 0 1 6 0v6"/><circle cx="12" cy="16.5" r=".7" fill="currentColor" stroke="none"/></>,
     paper: <><rect x="5" y="3" width="15" height="18" rx="2"/><path d="M5 7H3v12a2 2 0 0 0 2 2M9 7h7M9 11h7M9 15h5"/></>,
     layers: <><path d="m3 7 9-5 9 5-9 5ZM3 12l9 5 9-5M3 17l9 5 9-5"/></>,
-    tool: <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94Z"/>,
+    // Lucide "toolbox", a04f228cd01185e09c188b7227b9600c08c565ec.
+    // Official path geometry; the shared SVG sets the site's stroke and size.
+    // Source: https://lucide.dev/icons/toolbox; license: public/licenses/lucide.txt.
+    tool: <><path d="M16 12v4"/><path d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M17 6a2 2 0 011.414.586l3 3A2 2 0 0122 11v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 01.586-1.414l3-3A2 2 0 017 6z"/><path d="M2 14h20"/><path d="M8 12v4"/></>,
     check: <path d="m5 12 4 4L19 6"/>,
     chevron: <path d="m7 10 5 5 5-5"/>,
     grid: <>{[5,12,19].flatMap((x) => [5,12,19].map((y) => <circle key={`${x}-${y}`} cx={x} cy={y} r="1.2" fill="currentColor" stroke="none"/>))}</>,
