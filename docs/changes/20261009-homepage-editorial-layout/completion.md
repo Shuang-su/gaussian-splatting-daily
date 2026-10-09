@@ -163,3 +163,5 @@
 - TypeScript、Next生产构建、git diff --check及39页导出检查通过，含2个RSS与16期规范日报；20个正文/索引/RSS基线哈希一致，导出RSS逐字节一致。11个既有审查文件恢复，选图页的缓存与导出CSS链接同步到本次构建。最终预览无console error/warn。
 
 实际完整视口录到59帧，滚动阶段按真实时间离线编码GIF，仅首尾增加停留；完整截图、动图、轨迹与状态记录在 `.codex-work/references/article-backtop-20261009/`，摘要见 `backtop-validation.json`。临时视口与媒体覆盖解除；参考页恢复本轮开始时的scrollY=1128、未固定，本地暗色文章预览保留在顶部。实现作者自查，物理iPad、手机、移动Safari及已有完整内容/Python测试未重跑。本轮仅本地checkpoint。
+
+本轮代码与验证checkpoint：`bbd6295c36a9c1e0e3a190b580988b8162a9731d`。public、静态产物与4337服务的deployment元数据均只更新commit字段并重新读取此SHA；正文日期、数量、哈希与阅读版本元数据一致。SHA回填纳入随后文档checkpoint。
