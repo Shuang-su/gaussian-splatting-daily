@@ -112,15 +112,13 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   function list(entries: ReadingLink[], depth = 0) {
     return <ul className={depth ? "reading-nav-children" : undefined}>{entries.map(item => {
       const hasActive = item.id === active || flattenReadingLinks(item.children || []).some(child => child.id === active);
-      return <li key={item.id}><a href={`#${item.id}`} aria-current={item.id === active ? "location" : undefined} className={hasActive ? "is-current" : undefined} onClick={event => jump(event, item.id)}>{item.title}</a>{item.children?.length ? <details className="reading-nav-branch" open={hasActive || undefined}><summary aria-label={`展开${item.title}子目录`}>子目录</summary>{list(item.children, depth + 1)}</details> : null}</li>;
+      return <li key={item.id}><a href={`#${item.id}`} aria-current={item.id === active ? "location" : undefined} className={hasActive ? "is-current" : undefined} onClick={event => jump(event, item.id)}><span className="reading-nav-prefix" aria-hidden="true" /><span className="reading-nav-text">{item.title}</span></a>{item.children?.length ? <details className="reading-nav-branch" open={hasActive || undefined}><summary aria-label={`展开${item.title}子目录`}>子目录</summary>{list(item.children, depth + 1)}</details> : null}</li>;
     })}</ul>;
   }
   return <div className={`reading-navigator${shown ? " is-open" : ""}`} ref={root} onKeyDown={keys}>
     <button className={`reading-nav-backdrop${compact && open ? " is-open" : ""}`} tabIndex={-1} inert={!compact || !open} aria-hidden={!compact || !open} aria-label="关闭目录" onClick={close} />
     <aside className={`reading-nav-rail${shown ? " is-open" : ""}${pinned ? " is-pinned" : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-      <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} aria-controls="reading-navigation" aria-hidden={shown} inert={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0}>
-        {items.map(item => <span key={item.id} className={item.id === active || flattenReadingLinks(item.children || []).some(child => child.id === active) ? "is-current" : undefined} />)}
-      </button>
+      <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} aria-controls="reading-navigation" aria-hidden={shown} inert={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0} />
       <div className="reading-nav-panel" ref={panel} id="reading-navigation" inert={!shown} aria-hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
         <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button ref={closeButton} aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
         <nav aria-label="快捷跳转" ref={scrollList}>{list(items)}</nav>

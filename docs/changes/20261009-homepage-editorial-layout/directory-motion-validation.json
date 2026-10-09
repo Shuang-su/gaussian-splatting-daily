@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-09",
+  "scope": "Correct desktop directory geometry animation after user feedback; retain existing pin and compact modal behavior.",
+  "reference": {
+    "url": "https://sspai.com/post/115532",
+    "viewport": [
+      1441,
+      958
+    ],
+    "durationMs": 360,
+    "easing": "cubic-bezier(0.5,0,0,1)",
+    "collapsedRowPx": 12,
+    "expandedRowPx": 33,
+    "markerWidthPx": 2,
+    "collapsedMarkerHeightPx": 6,
+    "expandedMarkerHeightPx": 21,
+    "sameRows": true,
+    "horizontalMovement": false,
+    "opening": "Row and marker height immediately expand; prefix container and opacity animate.",
+    "closing": "Text immediately becomes hidden; prefix container and marker height contract toward vertical center."
+  },
+  "geometry": {
+    "reference": {
+      "opening": {
+        "samples": 50,
+        "maxPrefixErrorPx": 0.0076,
+        "maxMarkerErrorPx": 0.0,
+        "maxRowErrorPx": 0,
+        "verticalCenterRangePx": [
+          507.0,
+          507.0
+        ],
+        "textHeightSetPx": [
+          33.0
+        ],
+        "textVisibility": [
+          "visible"
+        ],
+        "textTransform": [
+          "none"
+        ],
+        "stableHorizontalPosition": true
+      },
+      "closing": {
+        "samples": 50,
+        "maxPrefixErrorPx": 0.0078,
+        "maxMarkerErrorPx": 0.0075,
+        "maxRowErrorPx": 0.0078,
+        "verticalCenterRangePx": [
+          506.99609375,
+          507.0
+        ],
+        "textHeightSetPx": [
+          12.0
+        ],
+        "textVisibility": [
+          "hidden"
+        ],
+        "textTransform": [
+          "none"
+        ],
+        "stableHorizontalPosition": true
+      }
+    },
+    "local": {
+      "opening": {
+        "samples": 27,
+        "maxPrefixErrorPx": 0.0077,
+        "maxMarkerErrorPx": 0.0,
+        "maxRowErrorPx": 0,
+        "verticalCenterRangePx": [
+          507.0,
+          507.0
+        ],
+        "textHeightSetPx": [
+          33.0
+        ],
+        "textVisibility": [
+          "visible"
+        ],
+        "textTransform": [
+          "none"
+        ],
+        "stableHorizontalPosition": true
+      },
+      "closing": {
+        "samples": 37,
+        "maxPrefixErrorPx": 0.0077,
+        "maxMarkerErrorPx": 0.0075,
+        "maxRowErrorPx": 0.0077,
+        "verticalCenterRangePx": [
+          507.0,
+          507.0
+        ],
+        "textHeightSetPx": [
+          12.0
+        ],
+        "textVisibility": [
+          "hidden"
+        ],
+        "textTransform": [
+          "none"
+        ],
+        "stableHorizontalPosition": true
+      }
+    }
+  },
+  "regression": {
+    "states": 18,
+    "viewports": [
+      [
+        1441,
+        958
+      ],
+      [
+        1280,
+        958
+      ],
+      [
+        1279,
+        958
+      ],
+      [
+        820,
+        1180
+      ],
+      [
+        430,
+        932
+      ]
+    ],
+    "labels": [
+      "desktop-pinned-pointer-away",
+      "desktop-unpinned-pointer-away",
+      "desktop-escape-focus",
+      "tablet-pin-suspended",
+      "tablet-modal-open",
+      "tablet-modal-close",
+      "desktop-1280-after-explicit-close",
+      "compact-1279",
+      "pin-suspended-1279",
+      "pin-resumed-1280",
+      "phone-modal-open",
+      "phone-focus-wrap-last",
+      "phone-focus-wrap-first",
+      "phone-anchor-jump-unlocks-body",
+      "phone-backdrop-close",
+      "desktop-outside-click-close",
+      "rapid-reversal-open",
+      "final-desktop-pinned"
+    ],
+    "reducedMotion": "All relevant transitions none; immediate open and closed endpoints.",
+    "resizeParagraphTopBeforePx": 22.84375,
+    "resizeParagraphTopAfterPx": 22.84375,
+    "consoleErrorsAndWarnings": 0
+  },
+  "verification": {
+    "typescript": "passed",
+    "nextProductionBuild": "passed",
+    "staticExport": {
+      "html": 39,
+      "rss": 2,
+      "canonicalReports": 16,
+      "brokenInternalLinksAssetsAnchors": 0,
+      "productionHtml": 36,
+      "restoredReviewHtml": 3
+    },
+    "baselineFiles": 20,
+    "baselineChanged": [],
+    "exportedFeedsByteEqual": true,
+    "historicalReviewFilesRestored": 11
+  },
+  "evidenceDirectory": ".codex-work/references/article-directory-motion-20261009",
+  "evidence": {
+    "localMotion": "local-main-motion.gif",
+    "referenceMotion": "reference-motion.gif",
+    "desktop": "desktop-final.png",
+    "phone": "phone-directory.png",
+    "sourceDOM": "reference-dom.json",
+    "localDOM": "local-dom-final.json",
+    "regression": "regression-dom.json"
+  },
+  "recording": "Real browser screencast frames, captured without viewport mutation; crop after recording, source timing preserved with terminal holds for readability.",
+  "discardedAttempts": [
+    "Cropped captureBeyondViewport screenshot temporarily changed actual viewport, invalidating that capture and related trace.",
+    "Tablet check initially targeted hidden desktop directory action; reran using visible article toolbar action.",
+    "Final export check found stale CSS URL in restored local cover review. Rebound its CSS URL to current generated stylesheet, without changing cover content, then reran full export check."
+  ],
+  "limits": [
+    "Reference has 9 top-level entries; local has 10 plus nested disclosures, so total panel height differs by content.",
+    "Physical iPad, phone, and mobile Safari not tested.",
+    "Existing complete content and Python suites not repeated.",
+    "Author self-review; no independent reviewer."
+  ],
+  "release": "Local checkpoint and preview only; no push, PR, deployment, RSS, archive, or automation change."
+}
