@@ -10,6 +10,41 @@
 .home-header .header-inner { max-width: 1296px; }
 .home-header:has(.home-feed-select[aria-expanded="true"]) { transform: none; }
 
+/* Keep mobile navigation mounted so both opening and closing can transition. */
+.site-header[data-mobile-layout="true"] .header-inner nav {
+  position: fixed; top: var(--header-height); left: 0; right: 0;
+  height: calc(100dvh - var(--header-height)); max-height: none;
+  display: flex; flex-direction: column; align-items: stretch; gap: 0;
+  padding: 8px 20px 32px; border: 0; background: var(--bg); box-shadow: none;
+  overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain;
+  opacity: 0; transform: translateY(-12px); visibility: hidden; pointer-events: none;
+  animation: none;
+  transition: opacity .24s ease, transform .28s cubic-bezier(.2,.8,.2,1), visibility 0s .28s;
+}
+.site-header[data-mobile-layout="true"][data-mobile-open="true"] .header-inner nav {
+  opacity: 1; transform: translateY(0); visibility: visible; pointer-events: auto;
+  transition-delay: 0s;
+}
+.site-header[data-mobile-layout="true"] .menu-toggle,
+.site-header[data-mobile-layout="true"] .appearance-toggle {
+  display: flex; align-items: center; justify-content: center;
+  width: 28px; height: 44px; padding: 0;
+}
+.site-header[data-mobile-layout="true"] .menu-toggle .icon,
+.site-header[data-mobile-layout="true"] .appearance-toggle .icon { width: 22px; height: 22px; }
+.home-header[data-mobile-layout="true"] .header-brand-group { min-height: 44px; }
+.home-header[data-mobile-layout="true"] .home-feed-select { min-height: 44px; line-height: 1.2; }
+.home-header[data-mobile-open="true"] .home-feed-select .icon { opacity: 0; }
+.site-header[data-mobile-layout="true"] .mobile-nav-search input { flex: 1; height: 36px; padding: 0; }
+.site-header[data-mobile-layout="true"] .mobile-nav-search input:focus-visible { outline: none; }
+.site-header[data-mobile-layout="true"] .mobile-nav-search:focus-within { border-bottom-color: var(--ink); box-shadow: 0 1px 0 var(--ink); }
+.mobile-theme-control { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 20px; }
+.mobile-theme-control > span { display: block; margin-bottom: 12px; font-size: 13px; color: var(--muted); }
+.mobile-theme-options { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 4px; padding: 4px; border-radius: 12px; background: var(--surface); }
+.mobile-theme-options button { min-width: 0; min-height: 40px; padding: 8px 4px; border: 1px solid transparent; border-radius: 9px; background: none; color: var(--muted); font-size: 14px; line-height: 20px; }
+.mobile-theme-options button[aria-pressed="true"] { color: var(--ink); background: var(--bg); border-color: var(--line); box-shadow: 0 1px 3px #0000000a; font-weight: 500; }
+.mobile-theme-options button:focus-visible { outline-offset: 1px; }
+
 .home-hero { padding: 32px 32px; border-bottom: 1px solid var(--line); }
 .home-carousel { width: var(--home-main-width); max-width: 100%; margin: 0 auto; position: relative; border-radius: 24px; touch-action: pan-y; }
 .home-slide { position: relative; display: flex; flex-direction: column; aspect-ratio: 1; border: 1px solid var(--line); border-radius: inherit; background: var(--surface); }
@@ -176,7 +211,7 @@
   .home-sidebar { display: none; }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
-  .home-header .header-inner nav.is-open { position: fixed; top: var(--header-height); height: calc(100dvh - var(--header-height)); max-height: none; left: 0; right: 0; overflow-y: auto; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 16px 32px 40px; background: var(--bg); }
+  .home-header[data-mobile-layout="true"] .header-inner nav { padding: 16px 32px 40px; }
   .home-header .topic-navigation { display: none; }
   .home-header .mobile-nav-search { display: flex; align-items: center; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); margin-bottom: 20px; }
   .home-header .mobile-nav-search input { border: 0; background: none; color: var(--ink); flex: 1; font-size: 18px; min-width: 0; }
@@ -197,4 +232,5 @@
 @media (prefers-reduced-motion: reduce) {
   .home-feed-select .icon { transition: none; }
   .carousel-progress { animation: none; }
+  .site-header[data-mobile-layout="true"] .header-inner nav { transition: none; }
 }
