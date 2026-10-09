@@ -192,5 +192,16 @@
     "Existing complete content and Python suites not repeated.",
     "Author self-review; no independent reviewer."
   ],
-  "release": "Local checkpoint and preview only; no push, PR, deployment, RSS, archive, or automation change."
+  "release": "Local checkpoint and preview only; no push, PR, deployment, RSS, archive, or automation change.",
+  "codeCheckpoint": "7eabc289af66356f8bc252c46ba9dd3b8addc74e",
+  "deploymentReadback": {
+    "commit": "7eabc289af66356f8bc252c46ba9dd3b8addc74e",
+    "updatedThrough": "2026-10-03",
+    "dailyCount": 16,
+    "sources": [
+      "site/public/deployment.json",
+      "site/out/deployment.json",
+      "http://127.0.0.1:4337/gaussian-splatting-daily/deployment.json"
+    ]
+  }
 }

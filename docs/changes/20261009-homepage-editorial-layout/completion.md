@@ -145,3 +145,5 @@
 原始及最终数据、完整截图和动图在 `.codex-work/references/article-directory-motion-20261009/`；摘要见 `directory-motion-validation.json`。冻结参考快照未修改，参考页恢复原来的固定状态及scrollY=343，本地视口/媒体覆盖解除，文章预览保留为暗色。实现作者自查；物理iPad、手机和移动Safari未测试，已有完整内容/Python测试未重跑。本轮仅本地checkpoint，RSS、数据、外部写入及部署未改变。
 
 最终导出复查发现既有选图预览仍引用旧构建的20vky2c34a1s3.css，当前构建已替换为1r61iaoy700y3.css；更新该本地预览的样式资源路径（缓存源与导出各一处），题图、选择逻辑和记录不变。全站导出检查随后重新通过。
+
+本轮代码与验收记录checkpoint：`7eabc289af66356f8bc252c46ba9dd3b8addc74e`。public、静态产物与4337预览服务的deployment元数据均更新并重新读取此代码SHA，归档仍截至10月3日、16期。完整截图与动图对应此实现；此SHA回填进入随后文档checkpoint。
