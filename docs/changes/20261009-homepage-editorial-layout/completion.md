@@ -205,3 +205,5 @@
 完整截图、原始测量、最终状态与真实浏览器帧保存在 `.codex-work/references/article-directory-landing-20261009/`，摘要为 `landing-validation.json`。最终构建录到91帧，采集时间跨度约1.100秒；GIF保持滚动阶段的原始时间，仅首尾增加停留，便于观察停止位置。采样接口不提供performance/parseFloat，改由采集端计时与读取CSS像素；一次子目录坐标位于可滚动目录的视口外，未触发选择，不计入通过状态，滚动目录后从非目标位置复测通过。初轮分组测量未计入标题自身1px边线，原始数据保留为preliminaryChecks，验收采用修正后的最终分组测量。
 
 临时视口与媒体覆盖解除，原站恢复本轮开始时scrollY=5366.5、未固定、12px收起条目；本地暗色文章预览停在SuperSplat，目录固定。实现作者自查；物理iPad/手机、移动Safari及已有完整内容/Python测试未重跑。本轮仅本地checkpoint，冻结参考、规范正文、RSS及公开部署未改变。
+
+本轮代码与验证checkpoint：`6708f8625f12a9fecacd20800f7303b396f7e261`。public、静态产物及4337预览服务的deployment元数据只更新commit并重新读取此SHA；归档仍截至10月3日、16期，正文与阅读层元数据一致。完整验收摘要已回填代码SHA，此行进入随后文档checkpoint。
