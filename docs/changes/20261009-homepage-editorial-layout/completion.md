@@ -183,3 +183,5 @@
 一次采样直接以带小数点的论文ID作为CSS selector导致只读采样失败，改用属性选择器后从非目标位置重新执行完整论文跳转并核验，未据此修改产品。实际完整视口录到78帧，GIF保持动态阶段的原始时间，只增加首尾停留。截图、轨迹、动图与原始状态在 `.codex-work/references/article-directory-jump-20261009/`，验收摘要见 `chapter-navigation-validation.json`。
 
 临时视口与媒体覆盖已解除，参考页恢复本轮开始时scrollY=1128、未固定，本地暗色预览保留在SuperSplat章节。冻结参考、正文、RSS与公开部署未改变。实现作者自查；物理iPad/手机、移动Safari与已有完整内容/Python测试未重跑。本轮仅本地checkpoint。
+
+本轮代码与验证checkpoint：`a6c4bf581af59be27f67cd98737fd311cb53b2ad`。public、静态产物及4337服务的deployment元数据只更新commit并重新读取此SHA；归档仍截至10月3日、16期，所有正文/阅读层元数据不变。SHA回填进入随后文档checkpoint。
