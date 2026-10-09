@@ -9,7 +9,7 @@ import Icon from "../components/Icon";
 export default async function Home() {
   const { index } = await loadArchive();
   const { slides, feeds, related } = buildHome(index);
-  return <div className="home">
+  return <div className="home" data-latest-report={slides[0]?.date} data-source-sha256={slides[0]?.contentHash}>
     <HomeCarousel slides={slides} />
     <HomeFeed feeds={feeds} sidebar={<aside key="related-content" className="home-sidebar" aria-label="相关内容">
       <section><h2>近期动态</h2><div className="home-related">{related.map((item) =>
