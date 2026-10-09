@@ -4,6 +4,13 @@ import type { MouseEvent, KeyboardEvent } from "react";
 import { flattenReadingLinks, type ReadingLink } from "../lib/reading-navigation";
 import Icon from "./Icon";
 
+function headingContentTop(target: Element) {
+  const heading = target.matches("h1, h2, h3, h4") ? target : target.querySelector("h1, h2, h3, h4");
+  if (!heading) return target.getBoundingClientRect().top;
+  const style = getComputedStyle(heading);
+  return heading.getBoundingClientRect().top + (parseFloat(style.paddingTop) || 0) + (parseFloat(style.borderTopWidth) || 0);
+}
+
 export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   const [open, setOpen] = useState(false), [hovered, setHovered] = useState(false);
   const [pinned, setPinned] = useState(false);
@@ -32,7 +39,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
       let current = items[0]?.id;
       for (const item of flattenReadingLinks(items)) {
         const target = document.getElementById(item.id);
-        if (target && target.getClientRects().length && target.getBoundingClientRect().top <= 140) current = item.id;
+        if (target && target.getClientRects().length && headingContentTop(target) <= 140) current = item.id;
       }
       setActive(current);
       // Retain a visible paragraph across width changes without animating normal scroll.
@@ -97,9 +104,12 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     if (compact) { setOpen(false); setHovered(false); }
     history.pushState(null, "", `#${encodeURIComponent(id)}`);
     const behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
-    if (id === "article-top") {
-      window.scrollTo({ top: 0, behavior });
-    } else target.scrollIntoView({ block: "start", behavior });
+    const padding = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+    // The reference title has a 16px inset; section IDs can precede the title by different amounts.
+    const destination = id === "article-top" ? 0 : window.scrollY + headingContentTop(target) - padding - 16;
+    const top = Math.max(0, Math.min(destination, document.documentElement.scrollHeight - window.innerHeight));
+    window.dispatchEvent(new CustomEvent("reading-navigation-jump", { detail: { top } }));
+    window.scrollTo({ top, behavior });
     target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true });
     setActive(id);
   }

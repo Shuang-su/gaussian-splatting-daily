@@ -25,9 +25,10 @@ export default function Header() {
   const navigation = useRef<HTMLElement>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
   const currentPanel = useRef(panel);
+  const readingDestination = useRef<number | null>(null);
   currentPanel.current = panel;
 
-  useEffect(() => { setPanel(null); header.current?.classList.remove("header-hidden"); }, [pathname]);
+  useEffect(() => { setPanel(null); readingDestination.current = null; header.current?.classList.remove("header-hidden"); }, [pathname]);
   useEffect(() => {
     const width = window.matchMedia(`(max-width: ${home ? 1023 : 767}px)`);
     const sync = () => {
@@ -44,18 +45,41 @@ export default function Header() {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         const y = window.scrollY, delta = y - last;
-        if (!currentPanel.current && Math.abs(delta) > 5) header.current?.classList.toggle("header-hidden", delta > 0 && y > 56);
-        if (y <= 56 || currentPanel.current) header.current?.classList.remove("header-hidden");
+        if (readingDestination.current !== null) {
+          header.current?.classList.remove("header-hidden");
+          if (Math.abs(y - readingDestination.current) <= 1) readingDestination.current = null;
+        } else {
+          if (!currentPanel.current && Math.abs(delta) > 5) header.current?.classList.toggle("header-hidden", delta > 0 && y > 56);
+          if (y <= 56 || currentPanel.current) header.current?.classList.remove("header-hidden");
+        }
         last = y; frame = 0;
       });
     };
+    const cancelReadingScroll = () => { readingDestination.current = null; };
+    const readingJump = (event: Event) => {
+      const top = (event as CustomEvent<{ top: number }>).detail.top;
+      if (!Number.isFinite(top)) return;
+      readingDestination.current = Math.abs(window.scrollY - top) > 1 ? top : null; last = window.scrollY;
+      header.current?.classList.remove("header-hidden");
+    };
     const escape = (event: KeyboardEvent) => {
+      if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) cancelReadingScroll();
       if (event.key === "Escape" && currentPanel.current) { setPanel(null); trigger.current?.focus({ preventScroll: true }); }
     };
-    const outside = (event: PointerEvent) => { if (!header.current?.contains(event.target as Node)) setPanel(null); };
+    const outside = (event: PointerEvent) => { cancelReadingScroll(); if (!header.current?.contains(event.target as Node)) setPanel(null); };
     window.addEventListener("scroll", scroll, { passive: true });
+    window.addEventListener("reading-navigation-jump", readingJump);
+    window.addEventListener("wheel", cancelReadingScroll, { passive: true });
+    window.addEventListener("touchstart", cancelReadingScroll, { passive: true });
+    window.addEventListener("resize", cancelReadingScroll);
     document.addEventListener("keydown", escape); document.addEventListener("pointerdown", outside);
-    return () => { cancelAnimationFrame(frame); window.removeEventListener("scroll", scroll); document.removeEventListener("keydown", escape); document.removeEventListener("pointerdown", outside); };
+    return () => {
+      cancelAnimationFrame(frame); window.removeEventListener("scroll", scroll);
+      window.removeEventListener("reading-navigation-jump", readingJump);
+      window.removeEventListener("wheel", cancelReadingScroll); window.removeEventListener("touchstart", cancelReadingScroll);
+      window.removeEventListener("resize", cancelReadingScroll);
+      document.removeEventListener("keydown", escape); document.removeEventListener("pointerdown", outside);
+    };
   }, []);
 
   useEffect(() => {
