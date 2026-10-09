@@ -96,9 +96,10 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     while (parent) { if (parent instanceof HTMLDetailsElement) parent.open = true; parent = parent.parentElement; }
     if (compact) { setOpen(false); setHovered(false); }
     history.pushState(null, "", `#${encodeURIComponent(id)}`);
+    const behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
     if (id === "article-top") {
-      window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
-    } else target.scrollIntoView({ block: "start", behavior: "instant" });
+      window.scrollTo({ top: 0, behavior });
+    } else target.scrollIntoView({ block: "start", behavior });
     target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true });
     setActive(id);
   }
@@ -122,9 +123,8 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     <aside className={`reading-nav-rail${shown ? " is-open" : ""}${pinned ? " is-pinned" : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} aria-controls="reading-navigation" aria-hidden={shown} inert={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0} />
       <div className="reading-nav-panel" ref={panel} id="reading-navigation" inert={!shown} aria-hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
-        <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button ref={closeButton} aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
+        <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button className="reading-nav-close" ref={closeButton} aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
         <nav aria-label="快捷跳转" ref={scrollList}>{list(items)}</nav>
-        <a className="reading-nav-top" href="#article-top" onClick={event => jump(event, "article-top")}>回到文章开头</a>
       </div>
     </aside>
     <div className="reading-actions">
