@@ -2,11 +2,14 @@
 import { useEffect, useRef, useState } from "react";
 import type { MouseEvent, KeyboardEvent } from "react";
 import { flattenReadingLinks, type ReadingLink } from "../lib/reading-navigation";
+import Icon from "./Icon";
 
 export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   const [open, setOpen] = useState(false), [hovered, setHovered] = useState(false);
+  const [pinned, setPinned] = useState(false);
   const [compact, setCompact] = useState(false), [active, setActive] = useState(items[0]?.id);
   const panel = useRef<HTMLDivElement>(null), trigger = useRef<HTMLButtonElement>(null);
+  const closeButton = useRef<HTMLButtonElement>(null);
   const root = useRef<HTMLDivElement>(null), scrollList = useRef<HTMLElement>(null);
   const externalTrigger = useRef<HTMLElement | null>(null);
   useEffect(() => {
@@ -15,10 +18,10 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     return () => window.removeEventListener("open-reading-navigation", openFromBar);
   }, []);
   const readingPosition = useRef<{ node: Element; top: number; width: number } | null>(null);
-  const shown = open || (!compact && hovered);
+  const shown = open || (!compact && (hovered || pinned));
   useEffect(() => {
     const media = matchMedia("(max-width: 1279px)");
-    const update = () => { setCompact(media.matches); setHovered(false); };
+    const update = () => { setCompact(media.matches); setOpen(false); setHovered(false); };
     update(); media.addEventListener("change", update);
     return () => media.removeEventListener("change", update);
   }, []);
@@ -64,13 +67,21 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   }, [active, shown]);
   useEffect(() => {
     if (!open) return;
-    const closeOutside = (event: PointerEvent) => { if (!root.current?.contains(event.target as Node)) { setOpen(false); setHovered(false); } };
+    const closeOutside = (event: PointerEvent) => { if (!root.current?.contains(event.target as Node) && (compact || !pinned)) { setOpen(false); setHovered(false); } };
     document.addEventListener("pointerdown", closeOutside);
     const previous = document.body.style.overflow;
-    if (compact) { document.body.style.overflow = "hidden"; panel.current?.querySelector<HTMLButtonElement>("button")?.focus({ preventScroll: true }); }
+    if (compact) { document.body.style.overflow = "hidden"; closeButton.current?.focus({ preventScroll: true }); }
     return () => { document.removeEventListener("pointerdown", closeOutside); if (compact) document.body.style.overflow = previous; };
-  }, [open, compact]);
-  function close() { setOpen(false); setHovered(false); requestAnimationFrame(() => { (externalTrigger.current || trigger.current)?.focus({ preventScroll: true }); externalTrigger.current = null; }); }
+  }, [open, compact, pinned]);
+  function close() {
+    setOpen(false); setHovered(false); setPinned(false);
+    requestAnimationFrame(() => {
+      const origin = externalTrigger.current;
+      (origin?.getClientRects().length ? origin : trigger.current)?.focus({ preventScroll: true });
+      externalTrigger.current = null;
+    });
+  }
+  function togglePin() { setPinned(value => !value); setOpen(false); }
   useEffect(() => {
     if (!shown) return;
     const escape = (event: globalThis.KeyboardEvent) => { if (event.key === "Escape") { event.preventDefault(); close(); } };
@@ -92,7 +103,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
   function keys(event: KeyboardEvent) {
     if (event.key === "Escape" && shown) { event.preventDefault(); event.stopPropagation(); close(); }
     if (event.key !== "Tab" || !compact || !open) return;
-    const controls = panel.current?.querySelectorAll<HTMLElement>('button, a[href], summary');
+    const controls = [...(panel.current?.querySelectorAll<HTMLElement>('button, a[href], summary') || [])].filter(control => control.getClientRects().length && getComputedStyle(control).visibility !== "hidden");
     if (!controls?.length) return;
     const first = controls[0], last = controls[controls.length - 1];
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
@@ -104,20 +115,20 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
       return <li key={item.id}><a href={`#${item.id}`} aria-current={item.id === active ? "location" : undefined} className={hasActive ? "is-current" : undefined} onClick={event => jump(event, item.id)}>{item.title}</a>{item.children?.length ? <details className="reading-nav-branch" open={hasActive || undefined}><summary aria-label={`展开${item.title}子目录`}>子目录</summary>{list(item.children, depth + 1)}</details> : null}</li>;
     })}</ul>;
   }
-  return <div className="reading-navigator" ref={root} onKeyDown={keys}>
-    {open && compact && <button className="reading-nav-backdrop" tabIndex={-1} aria-label="关闭目录" onClick={close} />}
-    <aside className={`reading-nav-rail${shown ? " is-open" : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-      <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0}>
+  return <div className={`reading-navigator${shown ? " is-open" : ""}`} ref={root} onKeyDown={keys}>
+    <button className={`reading-nav-backdrop${compact && open ? " is-open" : ""}`} tabIndex={-1} inert={!compact || !open} aria-hidden={!compact || !open} aria-label="关闭目录" onClick={close} />
+    <aside className={`reading-nav-rail${shown ? " is-open" : ""}${pinned ? " is-pinned" : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} aria-controls="reading-navigation" aria-hidden={shown} inert={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0}>
         {items.map(item => <span key={item.id} className={item.id === active || flattenReadingLinks(item.children || []).some(child => child.id === active) ? "is-current" : undefined} />)}
       </button>
-      <div className="reading-nav-panel" ref={panel} id="reading-navigation" hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
-        <header><h2>文章目录</h2><button aria-label="收起文章目录" onClick={close}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6" /></svg></button></header>
+      <div className="reading-nav-panel" ref={panel} id="reading-navigation" inert={!shown} aria-hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
+        <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button ref={closeButton} aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
         <nav aria-label="快捷跳转" ref={scrollList}>{list(items)}</nav>
         <a className="reading-nav-top" href="#article-top" onClick={event => jump(event, "article-top")}>回到文章开头</a>
       </div>
     </aside>
     <div className="reading-actions">
-      <button ref={trigger} className={open ? "is-current" : undefined} aria-expanded={shown} aria-controls="reading-navigation" onClick={() => { setHovered(false); setOpen(!open); }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg><span>目录</span></button>
+      <button ref={trigger} className={shown ? "is-current" : undefined} aria-expanded={shown} aria-controls="reading-navigation" onClick={() => { if (shown) close(); else { setHovered(false); setOpen(true); } }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg><span>目录</span></button>
       <a href="#article-top" aria-label="回到文章开头" onClick={event => jump(event, "article-top")}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 7-7 7 7M12 4v16" /></svg></a>
     </div>
   </div>;

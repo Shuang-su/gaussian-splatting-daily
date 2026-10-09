@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-09",
+  "scope": "Article directory animation and pin state",
+  "reference": {
+    "url": "https://sspai.com/post/115532",
+    "transition": "opacity .36s cubic-bezier(.5,0,0,1)",
+    "pinRetainsAfterPointerLeave": true,
+    "unpinCollapsesAfterPointerLeave": true
+  },
+  "source_icon": {
+    "library": "Lucide",
+    "name": "pin",
+    "upstream_commit": "a04f228cd01185e09c188b7227b9600c08c565ec",
+    "url": "https://github.com/lucide-icons/lucide/blob/a04f228cd01185e09c188b7227b9600c08c565ec/icons/pin.svg",
+    "sha256": "55e8e5e04bcb671179fc1dd589abf09cf6a1e71301ff14eb739419cfab6011e7",
+    "license": "site/public/licenses/lucide.txt"
+  },
+  "browser_states": 34,
+  "viewports": [
+    [
+      375,
+      600
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      820,
+      1180
+    ],
+    [
+      1279,
+      958
+    ],
+    [
+      1280,
+      958
+    ],
+    [
+      1441,
+      958
+    ]
+  ],
+  "animation": {
+    "opening_intermediate_opacity": "0.608886",
+    "closing_intermediate_opacity": "0.457195",
+    "rapid_three_toggles_ms": 170,
+    "rapid_result_open": true
+  },
+  "acceptance": [
+    "Transient desktop hover expands and collapses",
+    "Pin survives body click, scrolling and heading jump",
+    "Unpin plus pointer leave collapses; Escape unpins and restores trigger",
+    "Compact dialog has reversible focus wrap, scroll lock, backdrop and close recovery",
+    "Long child directory scrolls; actual child jump closes dialog and focuses article",
+    "Active child stays inside the reopened directory viewport",
+    "1279/1280 transition suspends/restores pin without opening a modal or moving the reading block",
+    "Reduced motion removes transitions; fast toggles leave correct state",
+    "Light and dark palettes render; closed panel and mask are inert; reload starts unpinned"
+  ],
+  "checks": {
+    "typescript": "passed",
+    "next_static_build": "passed",
+    "export": "36 HTML / 2 RSS / 16 canonical reports; no broken internal links/assets/anchors",
+    "canonical_content_index_rss_baseline_files": 20,
+    "baseline_hashes_unchanged": true,
+    "export_rss_byte_equal": true,
+    "restored_historical_preview_files": 11,
+    "browser_console_errors_warnings": 0,
+    "git_diff_check": "passed"
+  },
+  "intentional_differences": [
+    "Uses site article width and hierarchical Daily sections",
+    "Keeps article-directory label and explicit close button",
+    "Pin is Lucide and follows the site icon style; pin state is per mounted article"
+  ],
+  "evidence": ".codex-work/references/article-directory-20261009/",
+  "not_run": [
+    "Physical iPad/phone and mobile Safari",
+    "Full content/Python test suite (content pipeline unchanged)",
+    "Public deploy and real external writes"
+  ],
+  "review": "Implementer self-check; not independent review"
+}

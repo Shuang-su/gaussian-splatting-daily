@@ -1,4 +1,4 @@
-export type IconName = "search" | "menu" | "close" | "theme" | "arrow" | "external" | "comment" | "edit" | "reaction" | "bookmark" | "home" | "paper" | "layers" | "tool" | "check" | "chevron" | "grid" | "play" | "pause";
+export type IconName = "search" | "menu" | "close" | "theme" | "arrow" | "external" | "comment" | "edit" | "reaction" | "bookmark" | "home" | "paper" | "layers" | "tool" | "pin" | "check" | "chevron" | "grid" | "play" | "pause";
 export default function Icon({ name }: { name: IconName }) {
   const paths = {
     search: <><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></>,
@@ -18,6 +18,8 @@ export default function Icon({ name }: { name: IconName }) {
     // Official path geometry; the shared SVG sets the site's stroke and size.
     // Source: https://lucide.dev/icons/toolbox; license: public/licenses/lucide.txt.
     tool: <><path d="M16 12v4"/><path d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><path d="M17 6a2 2 0 011.414.586l3 3A2 2 0 0122 11v8a2 2 0 01-2 2H4a2 2 0 01-2-2v-8a2 2 0 01.586-1.414l3-3A2 2 0 017 6z"/><path d="M2 14h20"/><path d="M8 12v4"/></>,
+    // Lucide "pin", same fixed upstream commit and license as Toolbox above.
+    pin: <><path d="M12 17v5"/><path d="M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z"/></>,
     check: <path d="m5 12 4 4L19 6"/>,
     chevron: <path d="m7 10 5 5 5-5"/>,
     grid: <>{[5,12,19].flatMap((x) => [5,12,19].map((y) => <circle key={`${x}-${y}`} cx={x} cy={y} r="1.2" fill="currentColor" stroke="none"/>))}</>,
