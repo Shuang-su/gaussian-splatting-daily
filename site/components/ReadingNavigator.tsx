@@ -96,7 +96,9 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     while (parent) { if (parent instanceof HTMLDetailsElement) parent.open = true; parent = parent.parentElement; }
     if (compact) { setOpen(false); setHovered(false); }
     history.pushState(null, "", `#${encodeURIComponent(id)}`);
-    target.scrollIntoView({ block: "start", behavior: "instant" });
+    if (id === "article-top") {
+      window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+    } else target.scrollIntoView({ block: "start", behavior: "instant" });
     target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true });
     setActive(id);
   }
@@ -127,7 +129,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     </aside>
     <div className="reading-actions">
       <button ref={trigger} className={shown ? "is-current" : undefined} aria-expanded={shown} aria-controls="reading-navigation" onClick={() => { if (shown) close(); else { setHovered(false); setOpen(true); } }}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" /></svg><span>目录</span></button>
-      <a href="#article-top" aria-label="回到文章开头" onClick={event => jump(event, "article-top")}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 7-7 7 7M12 4v16" /></svg></a>
+      <a className="reading-backtop" href="#article-top" aria-label="回到文章开头" onClick={event => jump(event, "article-top")}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 11 7-7 7 7M12 4v16" /></svg></a>
     </div>
   </div>;
 }
