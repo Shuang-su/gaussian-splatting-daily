@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-10：LichtFeld 0.5.4、SplatTransform 3.10.1 与 Spirula Vulkan 稳定性](2026-10-10.md)
 - [2026-10-09：Spirula RoMa 稠密点云、LichtFeld RAD/超大导出与 PlayCanvas WebGPU XR](2026-10-09.md)
 - [2026-10-08：PlayCanvas 全景 LOD、SOG ZIP64 与 Spirula 大型 SfM](2026-10-08.md)
 - [2026-10-07：Spirula 多卡稳定性、LichtFeld 评估与 Mobile-4DGS](2026-10-07.md)
