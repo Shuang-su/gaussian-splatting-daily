@@ -259,3 +259,5 @@
 原始浏览器测量、滚动轨迹和截图位于`.codex-work/references/deep-audit-20261010/`；摘要为`browser-validation.json`、`search-browser-validation.json`、`static-search-validation.json`。最终前端测试日志为`frontend-tests-final.log`，构建日志为`build-search-final.log`。桌面搜索浮层为`39-desktop-home-search-final.png`；手机结果与导航分别为`37-phone-search-results-final.png`、`41-phone-home-search-native-preview.png`，桌面结果为`38-desktop-search-results-final.png`。
 
 本轮为实现作者自查，覆盖浏览器响应式尺寸和真实交互，尚无物理iPad/手机、移动Safari或实际触摸验收。参考站提交搜索会开新标签，本地沿现有站内导航在当前标签显示结果；参考站的社区/商品/用户搜索不属于本站数据，未虚构对应分类。真实讨论后端仍未配置。临时视口、媒体模拟及请求阻断已解除，暗色和推荐栏目恢复，当前430×932正常预览保留导航内搜索供确认；4337服务继续运行。本轮仅本地checkpoint，未推送、创建PR或公开部署。
+
+本轮代码与验证checkpoint：`80b51c9c7bde3fd8e5ccbc8f002229a8447470fe`。public、静态产物及4337服务的deployment元数据只更新commit字段并重新读取此SHA；首页和元数据均HTTP 200，归档仍截至10月3日、16期，其余内容与阅读层元数据一致。验收摘要已回填代码SHA；本行进入随后文档checkpoint。
