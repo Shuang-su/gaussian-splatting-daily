@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { MouseEvent, KeyboardEvent } from "react";
 import { flattenReadingLinks, type ReadingLink } from "../lib/reading-navigation";
 import Icon from "./Icon";
@@ -95,7 +95,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     document.addEventListener("keydown", escape);
     return () => document.removeEventListener("keydown", escape);
   }, [shown]);
-  function jump(event: MouseEvent<HTMLAnchorElement>, id: string) {
+  const jump = useCallback((event: MouseEvent<HTMLAnchorElement> | globalThis.MouseEvent, id: string) => {
     const target = document.getElementById(id);
     if (!target || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
@@ -112,7 +112,20 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     window.scrollTo({ top, behavior });
     target.setAttribute("tabindex", "-1"); target.focus({ preventScroll: true });
     setActive(id);
-  }
+  }, [compact]);
+  useEffect(() => {
+    // The server-rendered overview shares the directory's motion, focus, and title inset.
+    const overviewJump = (event: globalThis.MouseEvent) => {
+      if (event.button !== 0 || !(event.target instanceof Element)) return;
+      const anchor = event.target.closest<HTMLAnchorElement>(".reading-guide a[href^='#']");
+      if (!anchor) return;
+      let id: string;
+      try { id = decodeURIComponent(anchor.hash.slice(1)); } catch { return; }
+      jump(event, id);
+    };
+    document.addEventListener("click", overviewJump);
+    return () => document.removeEventListener("click", overviewJump);
+  }, [jump]);
   function keys(event: KeyboardEvent) {
     if (event.key === "Escape" && shown) { event.preventDefault(); event.stopPropagation(); close(); }
     if (event.key !== "Tab" || !compact || !open) return;

@@ -70,14 +70,19 @@ export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar
     const escape = (event: KeyboardEvent) => {
       if (event.key === "Escape") { setMenuOpen(false); menuTrigger.current?.focus({ preventScroll: true }); }
     };
+    const focus = (event: FocusEvent) => {
+      if (!menu.current?.contains(event.target as Node)) setMenuOpen(false);
+    };
     const width = window.matchMedia("(min-width: 768px)");
     const resize = () => { if (width.matches) setMenuOpen(false); };
     document.addEventListener("pointerdown", outside);
     document.addEventListener("keydown", escape);
+    document.addEventListener("focusin", focus);
     width.addEventListener("change", resize);
     return () => {
       document.removeEventListener("pointerdown", outside);
       document.removeEventListener("keydown", escape);
+      document.removeEventListener("focusin", focus);
       width.removeEventListener("change", resize);
     };
   }, [menuOpen]);
@@ -88,14 +93,15 @@ export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar
     <button ref={menuTrigger} className="home-feed-select" aria-label={`内容栏目：${section.label}`}
       aria-expanded={menuOpen} aria-controls="home-feed-menu" aria-haspopup="menu"
       onClick={() => setMenuOpen((current) => !current)} onKeyDown={(e) => {
-        if (e.key === "ArrowDown") {
+        if (e.key === "ArrowDown" || e.key === "ArrowUp") {
           e.preventDefault(); setMenuOpen(true);
-          requestAnimationFrame(() => menuButtons.current[feed]?.focus());
+          const key = e.key === "ArrowUp" ? HOME_SECTIONS[HOME_SECTIONS.length - 1].key : feed;
+          requestAnimationFrame(() => menuButtons.current[key]?.focus());
         }
       }}>{section.label}<Icon name="chevron" /></button>
     <div id="home-feed-menu" className="home-feed-dropdown" role="menu" aria-label="选择内容栏目" hidden={!menuOpen}>
       {HOME_SECTIONS.map(({ key, label, icon }, i) => <button key={key} role="menuitemradio"
-        ref={(el) => { menuButtons.current[key] = el; }} aria-checked={feed === key}
+        ref={(el) => { menuButtons.current[key] = el; }} aria-checked={feed === key} tabIndex={feed === key ? 0 : -1}
         onClick={() => { setFeed(key); setMenuOpen(false); menuTrigger.current?.focus({ preventScroll: true }); }}
         onKeyDown={(e) => {
           const next = e.key === "ArrowDown" ? (i + 1) % HOME_SECTIONS.length

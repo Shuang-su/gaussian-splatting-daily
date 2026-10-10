@@ -6,8 +6,10 @@ import { usePathname } from "next/navigation";
 import { BASE, TOPICS } from "../lib/catalog";
 import BrandMark from "./BrandMark";
 import Icon, { type IconName } from "./Icon";
+import SearchOverlay from "./SearchOverlay";
+import { rememberSearch, searchTerm } from "../lib/search-history";
 
-type Panel = "mobile" | "topics" | "theme" | null;
+type Panel = "mobile" | "topics" | "theme" | "search" | null;
 const themes = [["system", "跟随系统"], ["light", "浅色"], ["dark", "暗色"]] as const;
 const routes: { href: string; label: string; icon: IconName }[] = [
   { href: "/daily/", label: "日报", icon: "paper" },
@@ -33,7 +35,7 @@ export default function Header() {
     const width = window.matchMedia(`(max-width: ${home ? 1023 : 767}px)`);
     const sync = () => {
       setMobileLayout(width.matches);
-      if (!width.matches) setPanel((current) => current === "mobile" ? null : current);
+      setPanel((current) => current === (width.matches ? "search" : "mobile") ? null : current);
     };
     sync(); width.addEventListener("change", sync);
     return () => width.removeEventListener("change", sync);
@@ -64,7 +66,7 @@ export default function Header() {
     };
     const escape = (event: KeyboardEvent) => {
       if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) cancelReadingScroll();
-      if (event.key === "Escape" && currentPanel.current) { setPanel(null); trigger.current?.focus({ preventScroll: true }); }
+      if (event.key === "Escape" && currentPanel.current && currentPanel.current !== "search") { setPanel(null); trigger.current?.focus({ preventScroll: true }); }
     };
     const outside = (event: PointerEvent) => { cancelReadingScroll(); if (!header.current?.contains(event.target as Node)) setPanel(null); };
     window.addEventListener("scroll", scroll, { passive: true });
@@ -93,7 +95,7 @@ export default function Header() {
     const trap = (event: KeyboardEvent) => {
       if (event.key !== "Tab") return;
       const controls = Array.from(header.current?.querySelectorAll<HTMLElement>("a, button, input, select") || [])
-        .filter((el) => el.getClientRects().length && (el === trigger.current || navigation.current?.contains(el)));
+        .filter((el) => el.getClientRects().length && !el.closest("[inert]") && (el.matches(".menu-toggle") || navigation.current?.contains(el)));
       if (!controls.length) return;
       const first = controls[0], last = controls[controls.length - 1];
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
@@ -104,6 +106,8 @@ export default function Header() {
       cancelAnimationFrame(frame); document.body.style.overflow = overflow;
       outside.forEach((el, i) => { el.inert = inert[i]; });
       document.removeEventListener("keydown", trap);
+      const previousTrigger = trigger.current;
+      requestAnimationFrame(() => { if (!currentPanel.current && previousTrigger?.isConnected) previousTrigger.focus({ preventScroll: true }); });
     };
   }, [panel, home]);
 
@@ -119,7 +123,11 @@ export default function Header() {
       <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}><Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>
         {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
       <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav" inert={mobileLayout && panel !== "mobile"} aria-hidden={mobileLayout && panel !== "mobile" || undefined}>
-        <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search"><Icon name="search" /><input name="q" type="search" placeholder="搜索高斯日报…" aria-label="搜索高斯日报" /><button type="submit" aria-label="提交搜索"><Icon name="arrow" /></button></form>
+        <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search" onSubmit={(event) => {
+          const field = event.currentTarget.elements.namedItem("q") as HTMLInputElement;
+          if (!searchTerm(field.value)) { event.preventDefault(); field.focus(); return; }
+          rememberSearch(field.value);
+        }}><Icon name="search" /><input name="q" type="search" maxLength={160} placeholder="搜索高斯日报…" aria-label="搜索高斯日报" /><button type="submit" aria-label="提交搜索"><Icon name="arrow" /></button></form>
         {routes.map(({ href, label, icon }) => <Link key={href} href={href} aria-current={pathname.startsWith(href.slice(0,-1)) ? "page" : undefined} onClick={() => setPanel(null)}><span className="mobile-route-icon"><Icon name={icon} /></span>{label}<span className="mobile-route-chevron"><Icon name="chevron" /></span></Link>)}
         <div className="topic-navigation">
           <button aria-expanded={panel === "topics"} aria-controls="header-topics" onClick={(e) => toggle("topics", e.currentTarget)}>主题 <Icon name="chevron" /></button>
@@ -130,7 +138,7 @@ export default function Header() {
         </div>
       </nav>
       <div className="header-actions">
-        <Link href="/search/" className="search-link" aria-label="搜索" onClick={() => setPanel(null)} inert={mobileLayout && panel === "mobile"}><Icon name="search" /></Link>
+        <button type="button" className="search-link" aria-label="搜索" aria-haspopup={mobileLayout ? "true" : "dialog"} aria-expanded={panel === "search" || panel === "mobile"} onClick={(event) => toggle(mobileLayout ? "mobile" : "search", event.currentTarget)} inert={mobileLayout && panel === "mobile"}><Icon name="search" /></button>
         <div className="appearance-navigation desktop-action" inert={mobileLayout && panel === "mobile"} aria-hidden={mobileLayout && panel === "mobile" || undefined}><button className="appearance-toggle" aria-label="外观" aria-expanded={panel === "theme"} aria-controls="header-appearance" onClick={(e) => toggle("theme", e.currentTarget)}><Icon name="theme" /></button>
           <div className="header-popover appearance-popover" id="header-appearance" hidden={panel !== "theme"} aria-label="显示主题">{[["light", "浅色"], ["dark", "暗色"], ["system", "跟随系统"]].map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => { changeTheme(value); setPanel(null); trigger.current?.focus({ preventScroll: true }); }}>{label}{theme === value && <Icon name="check" />}</button>)}</div>
         </div>
@@ -138,5 +146,6 @@ export default function Header() {
         <button className="menu-toggle" aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : "grid"} /></button>
       </div>
     </div>
+    <SearchOverlay open={panel === "search"} onClose={() => setPanel(null)} />
   </header>;
 }
