@@ -226,3 +226,5 @@
 截图、像素取样、浏览器计算样式与29个哈希基线保存在`.codex-work/references/home-palette-20261010/`；最终图为`local-after-dark.png`，结构化结果为`browser-validation.json`、`pixel-validation.json`、`static-validation.json`。构建日志为`build.log`。
 
 实现作者自查，以上为浏览器尺寸验证，未新增物理设备/Safari验证。完整内容/Python测试未重跑，静态导出与内容哈希定向检查已运行。4337本地预览继续提供本轮构建；无推送、PR或公开部署。
+
+本轮代码与验证checkpoint：`5acee5758b887b07119ec33880560b4df3cbef45`。public、静态产物及4337服务的deployment元数据只更新commit并重新读取此SHA；归档仍截至10月3日、16期。此SHA回填进入随后文档checkpoint。
