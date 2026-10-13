@@ -1,7 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-12T08:55:00+09:00",
+  "generated_at": "2026-10-13T08:55:00+09:00",
   "items": [
+    {
+      "date": "2026-10-13",
+      "title": "3DGS / 4DGS 深度情报日报 — 2026-10-13",
+      "status": "published",
+      "source_count": 9,
+      "path": "docs/daily/2026/10/2026-10-13.md"
+    },
     {
       "date": "2026-10-12",
       "title": "3DGS / 4DGS 深度情报日报 — 2026-10-12",
