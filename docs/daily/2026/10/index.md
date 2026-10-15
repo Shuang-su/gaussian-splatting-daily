@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-16：InfiniSplat v2、PlayCanvas 显存与确定性修复](2026-10-16.md)
 - [2026-10-15：PlayCanvas Adreno 排序修复、LichtFeld 精确深度与批处理](2026-10-15.md)
 - [2026-10-14：Gausify Orbit、Spherical Beta 与 LichtFeld 大场景优化](2026-10-14.md)
 - [2026-10-13：PlayCanvas GS Compute、Spirula Dense 与 LichtFeld 正确性修复](2026-10-13.md)
