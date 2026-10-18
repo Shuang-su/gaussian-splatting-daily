@@ -6,10 +6,11 @@ import { animate } from "motion";
 import { BASE } from "../lib/catalog";
 import { articlePath, HISTORY_CHANGE, markerFrom, mergeMarker, navigationStore, ordinaryClick, returnDistance, sameDocument, sitePath, UI_CAPTURE, type NavigationMarker, type PageSnapshot, type PageUI } from "../lib/card-navigation";
 import { CARD_TIMING, CardAnimator, captureCard, retainThumbnail, visualElements, type CardVisual } from "../lib/card-transition-visual";
+import { CardBackdrop } from "../lib/card-transition-backdrop";
 
 type Transaction = {
   kind: "enter" | "return" | "history"; href: string; marker: NavigationMarker;
-  snapshot?: PageSnapshot; visual: CardVisual | null; cancelled: boolean; token: number; inputTime?: number; arrived?: boolean; expired?: boolean;
+  snapshot?: PageSnapshot; visual: CardVisual | null; origin?: HTMLElement; cancelled: boolean; token: number; inputTime?: number; arrived?: boolean; expired?: boolean;
 };
 type Context = { busy: boolean; returnHref: string; hasSource: boolean; navigate: (event: MouseEvent<HTMLAnchorElement>) => void; back: (event: MouseEvent<HTMLAnchorElement>) => void };
 const NavigationContext = createContext<Context | null>(null);
@@ -23,6 +24,7 @@ const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matche
 export default function CardNavigation({ children }: { children: ReactNode }) {
   const router = useRouter(), pathname = usePathname();
   const layer = useRef<HTMLDivElement>(null), animator = useRef<CardAnimator | null>(null);
+  const backdropLayer = useRef<HTMLDivElement>(null), backdrop = useRef<CardBackdrop | null>(null);
   const active = useRef<NavigationMarker | null>(null), activeURL = useRef("");
   const pending = useRef<Transaction | null>(null), sequence = useRef(0);
   const frame = useRef(0), watchdog = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -56,10 +58,12 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
     navigationStore().save(snapshot); return snapshot;
   }, [ensureMarker]);
 
-  const clearVisual = useCallback(() => {
+  const clearVisual = useCallback((preserveBackdrop = false) => {
     animator.current?.clear();
+    if (!preserveBackdrop) backdrop.current?.clear();
     fade.current?.stop(); fade.current = null;
     document.querySelector<HTMLElement>("main")?.style.removeProperty("opacity");
+    document.querySelector<HTMLElement>("main")?.removeAttribute("data-card-reveal");
     document.querySelectorAll<HTMLElement>("[data-card-opening]").forEach(element => { delete element.dataset.cardOpening; });
     document.querySelectorAll<HTMLElement>("[data-card-returning]").forEach(element => { element.style.removeProperty("transform"); element.style.removeProperty("opacity"); delete element.dataset.cardReturning; });
     if (layer.current) layer.current.dataset.state = "idle";
@@ -77,7 +81,9 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
   }, [clearVisual, finish]);
 
   const begin = useCallback((transaction: Transaction) => {
-    cancelAnimationFrame(frame.current); clearTimeout(watchdog.current); clearTimeout(returnTimer.current); clearVisual();
+    cancelAnimationFrame(frame.current); clearTimeout(watchdog.current); clearTimeout(returnTimer.current);
+    // A reversal during expansion keeps the frozen list until its real route is restored.
+    clearVisual(transaction.kind === "return" && Boolean(transaction.visual));
     pending.current = transaction; restoring.current = Boolean(transaction.snapshot);
     navigationStore().restoration = transaction.snapshot || null;
     setBusy(true);
@@ -85,10 +91,14 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
       layer.current.dataset.state = "waiting";
       layer.current.dataset.kind = transaction.kind;
       layer.current.dataset.duration = String(transaction.kind === "enter" ? CARD_TIMING.enter : CARD_TIMING.return);
-      if (!animator.current) animator.current = new CardAnimator(layer.current);
+      if (!animator.current) animator.current = new CardAnimator(layer.current, backdropLayer.current);
     }
     if (transaction.visual && !reduceMotion()) {
-      try { animator.current?.preview(transaction.visual); }
+      try {
+        if (!backdrop.current && backdropLayer.current) backdrop.current = new CardBackdrop(backdropLayer.current);
+        if (transaction.kind === "enter" && !backdrop.current?.capture(transaction.origin)) transaction.visual = null;
+        if (transaction.visual) animator.current?.preview(transaction.visual);
+      }
       catch { clearVisual(); transaction.visual = null; }
     }
     performance.clearMarks("gsd-navigation-input"); performance.clearMarks("gsd-navigation-feedback");
@@ -120,7 +130,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
     const inputTime = performance.now();
     const snapshot = capture(origin, anchor), marker = snapshot.marker;
     begin({ kind: "enter", href, marker: { session: marker.session, id: crypto.randomUUID(), index: marker.index + 1, sourceId: marker.id, sourceKey: origin.dataset.articleOrigin },
-      visual: url.hash ? null : captureCard(origin), cancelled: false, token: ++sequence.current, inputTime });
+      visual: url.hash ? null : captureCard(origin), origin, cancelled: false, token: ++sequence.current, inputTime });
     origin.dataset.cardOpening = "true";
     router.push(nextHref(href), { scroll: false });
   }, [begin, capture, finish, router]);
@@ -174,7 +184,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
     // measured over the next frames while the already-visible source proxy stays in place.
     if (transaction.kind === "enter" && transaction.visual && !transaction.cancelled && !reduceMotion()) {
       const main = document.querySelector<HTMLElement>("main");
-      if (main) main.style.opacity = "0";
+      if (main) { main.dataset.cardReveal = "true"; main.style.opacity = "0"; }
     }
     active.current = transaction.marker; activeURL.current = currentURL();
     history.replaceState(mergeMarker(history.state, transaction.marker), ""); syncSource(transaction.marker);
@@ -219,6 +229,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
           transaction.visual.image.key === destination.image.key && (!snapshot || snapshot.width === innerWidth);
         if (canMorph && target) {
           try {
+            if (transaction.kind === "return") backdrop.current?.clear();
             layer.current!.dataset.state = transaction.kind;
             retainThumbnail(target, starting!);
             animator.current?.hide(visualElements(target, !snapshot));
@@ -289,11 +300,12 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
       motionPreference.removeEventListener("change", userInput);
       window.removeEventListener("wheel", userInput); window.removeEventListener("touchmove", userInput); window.removeEventListener("scroll", scroll);
       window.removeEventListener("keydown", keys); window.removeEventListener("resize", resize);
-      clearTimeout(watchdog.current); clearTimeout(returnTimer.current); cancelAnimationFrame(frame.current); animator.current?.clear(); fade.current?.stop();
+      clearTimeout(watchdog.current); clearTimeout(returnTimer.current); cancelAnimationFrame(frame.current); animator.current?.clear(); backdrop.current?.clear(); fade.current?.stop();
     };
   }, [begin, cancelVisual, capture, ensureMarker, finish, syncSource]);
 
   return <NavigationContext.Provider value={{ busy, returnHref: source?.url ? nextHref(source.url) : "/daily/", hasSource: Boolean(source), navigate, back }}>
-    {children}<div ref={layer} className="card-transition-layer" data-state="idle" aria-hidden="true" inert />
+    {children}<div ref={backdropLayer} className="card-transition-backdrop" aria-hidden="true" inert />
+    <div ref={layer} className="card-transition-layer" data-state="idle" aria-hidden="true" inert />
   </NavigationContext.Provider>;
 }

@@ -1,4 +1,11 @@
 .card-transition-layer { position: fixed; inset: 0; z-index: 35; pointer-events: none; contain: layout style; }
+.card-transition-backdrop { position: fixed; inset: 0; z-index: 30; overflow: hidden; pointer-events: none; contain: strict; }
+.card-transition-backdrop:empty { display: none; }
+.card-transition-source, .card-transition-underlay { position: absolute; inset: 0; }
+.card-transition-source { isolation: isolate; z-index: 0; }
+.card-transition-underlay { z-index: 1; will-change: clip-path; }
+.card-transition-backdrop *, .card-transition-backdrop *::before, .card-transition-backdrop *::after { pointer-events: none !important; animation: none !important; transition: none !important; }
+main[data-card-reveal] { position: relative; z-index: 32; background: var(--bg); }
 .card-transition-layer:empty { display: none; }
 .card-transition-layer *, .card-transition-layer *::before, .card-transition-layer *::after { pointer-events: none !important; }
 .card-transition-sheet { position: fixed; top: 0; left: 0; transform-origin: 0 0; will-change: transform, clip-path; }
@@ -12,4 +19,4 @@
 .article-back:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
 [data-card-opening] { opacity: .76; transition: opacity 80ms ease-out; }
 [data-article-origin] h2 > a { display: block; }
-@media (prefers-reduced-motion: reduce) { .card-transition-layer { display: none; } }
+@media (prefers-reduced-motion: reduce) { .card-transition-layer, .card-transition-backdrop { display: none; } }

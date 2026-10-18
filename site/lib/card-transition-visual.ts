@@ -86,7 +86,8 @@ export class CardAnimator {
   private hidden = new Map<HTMLElement, string>();
   private reveal?: { element: HTMLElement; clip: string; opacity: string };
   private visual: CardVisual | null = null;
-  constructor(private layer: HTMLElement) {}
+  private underlay?: HTMLElement;
+  constructor(private layer: HTMLElement, private backdrop: HTMLElement | null = null) {}
   current() { return this.visual; }
   hide(elements: HTMLElement[]) {
     for (const element of elements) {
@@ -96,6 +97,7 @@ export class CardAnimator {
   }
   clear() {
     this.stopAnimation?.(); this.stopAnimation = undefined;
+    this.underlay?.remove(); this.underlay = undefined;
     this.hidden.forEach((value, element) => { element.style.visibility = value; }); this.hidden.clear();
     if (this.reveal) {
       this.reveal.element.style.clipPath = this.reveal.clip; this.reveal.element.style.opacity = this.reveal.opacity; this.reveal = undefined;
@@ -114,6 +116,12 @@ export class CardAnimator {
     if (to.fullscreen) {
       const element = document.querySelector<HTMLElement>("main");
       if (element) this.reveal = { element, clip: element.style.clipPath, opacity: element.style.opacity };
+      if (this.backdrop) {
+        this.underlay = document.createElement("div");
+        this.underlay.className = "card-transition-underlay";
+        this.underlay.style.background = to.background;
+        this.backdrop.append(this.underlay);
+      }
     }
     this.render(from, to, kind, done);
   }
@@ -156,11 +164,16 @@ export class CardAnimator {
       const radius = Math.max(0, mix(from.radius, to.radius, progress));
       position(sheet, box); sheet.style.clipPath = `inset(0 ${Math.max(0, surfaceWidth - box.width)}px ${Math.max(0, surfaceHeight - box.height)}px 0 round ${radius}px)`;
       sheet.dataset.progress = progress.toFixed(4);
+      // A continuous opaque sheet also covers the article's collapsed top margin,
+      // which the real main background does not paint.
+      if (this.underlay) this.underlay.style.clipPath = `inset(${box.y}px calc(100% - ${box.x + box.width}px) calc(100% - ${box.y + box.height}px) ${box.x}px round ${radius}px)`;
       surface.style.opacity = String(kind === "enter" ? 1 - smooth((elapsed - .2) / .24) : 1);
       if (this.reveal && mainRect) {
         // The final body appears inside the expanding sheet, without scaling or reflowing it.
         this.reveal.element.style.clipPath = `inset(${box.y - mainRect.y}px calc(100% - ${box.x + box.width - mainRect.x}px) calc(100% - ${box.y + box.height - mainRect.y}px) ${box.x - mainRect.x}px round ${radius}px)`;
-        this.reveal.element.style.opacity = String(smooth((elapsed - .12) / .24));
+        // Keep the real page opaque beneath the fading proxy surface so the retained
+        // source cannot bleed through the inside of the expanding card.
+        this.reveal.element.style.opacity = "1";
       }
       const imageRadii = from.image.radii.map((value, i) => Math.max(0, mix(value, to.image.radii[i], progress)));
       position(frame, picture, box); frame.style.clipPath = `inset(0 ${Math.max(0, imageWidth - picture.width)}px ${Math.max(0, imageHeight - picture.height)}px 0 round ${imageRadii.map(value => `${value}px`).join(" ")})`;
