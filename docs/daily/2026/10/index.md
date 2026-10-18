@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-19：PlayCanvas/GSL SH4、LichtFeld 跨应用拖拽与 OOOSplat 四格式导出](2026-10-19.md)
 - [2026-10-18：Gaussian-Splat-Lite 1.3.1、OOOSplat 多格式导入与 4DGS-VR 安全修复](2026-10-18.md)
 - [2026-10-17：Spirula 正式版、LichtFeld Mesh Init 与 WebGS 缓存/XR 修复](2026-10-17.md)
 - [2026-10-16：InfiniSplat v2、PlayCanvas 显存与确定性修复](2026-10-16.md)
