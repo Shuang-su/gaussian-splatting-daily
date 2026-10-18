@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { BASE, TOPICS } from "../lib/catalog";
 import BrandMark from "./BrandMark";
+import ArticleBack from "./ArticleBack";
 import Icon, { type IconName } from "./Icon";
 import SearchOverlay from "./SearchOverlay";
 import { rememberSearch, searchTerm } from "../lib/search-history";
@@ -23,6 +24,7 @@ export default function Header() {
   const [mobileLayout, setMobileLayout] = useState(false);
   const pathname = usePathname();
   const home = pathname === "/";
+  const article = /^\/daily\/\d{4}\/\d{2}\/\d{2}\/?$/.test(pathname);
   const header = useRef<HTMLElement>(null);
   const navigation = useRef<HTMLElement>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
@@ -120,7 +122,7 @@ export default function Header() {
   }
   return <header ref={header} className={`site-header${home ? " home-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"} data-mobile-layout={mobileLayout}>
     <div className="header-inner">
-      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}><Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>
+      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}<Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>
         {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
       <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav" inert={mobileLayout && panel !== "mobile"} aria-hidden={mobileLayout && panel !== "mobile" || undefined}>
         <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search" onSubmit={(event) => {

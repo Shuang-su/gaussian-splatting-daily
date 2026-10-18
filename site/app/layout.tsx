@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { BASE, REPO } from "../lib/catalog";
 import "./globals.css";
 import "./home.css";
+import "./card-navigation.css";
+import CardNavigation from "../components/CardNavigation";
 import Header from "../components/Header";
 import BrandMark from "../components/BrandMark";
 import { FEEDS } from "../lib/feeds";
@@ -16,8 +18,8 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <html lang="zh-CN" suppressHydrationWarning>
     <head>{Object.values(FEEDS).map(feed => <link key={feed.path} rel="alternate" type="application/rss+xml" title={`高斯日报 · ${feed.title}`} href={feed.url} />)}<script dangerouslySetInnerHTML={{ __html: "try{const t=localStorage.getItem('gsd-theme');document.documentElement.dataset.theme=['system','light','dark'].includes(t)?t:'system'}catch{}" }} /></head>
-    <body><a className="skip-link" href="#main">跳至内容</a><Header /><main id="main">{children}</main>
+    <body><CardNavigation><a className="skip-link" href="#main">跳至内容</a><Header /><main id="main">{children}</main>
       <footer className="site-footer"><a className="footer-brand" href={`${BASE}/`}><BrandMark />高斯日报</a><div><a href={`${BASE}/subscribe/`}>订阅高斯日报</a><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a><a href={REPO}>GitHub</a></div></footer>
-    </body>
+    </CardNavigation></body>
   </html>;
 }

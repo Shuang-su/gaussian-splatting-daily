@@ -1,8 +1,9 @@
 "use client";
 
-import Link from "next/link";
+import Link from "./ArticleLink";
 import { createPortal } from "react-dom";
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { restoredUI, UI_CAPTURE, type PageUI } from "../lib/card-navigation";
 import { HOME_SECTIONS, type HomeFeedKey, type HomeFeeds } from "../lib/home";
 import BrandMark from "./BrandMark";
 import Icon from "./Icon";
@@ -25,30 +26,35 @@ export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar
   const restore = useRef<ReadingState | null>(null);
   reading.current = { feed, limits, scroll: reading.current.scroll };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     ready.current = false;
     setHost(document.getElementById("home-feed-control"));
     try {
-      const saved = JSON.parse(sessionStorage.getItem("gsd-home-v1") || "null");
-      if (saved && HOME_SECTIONS.some(({ key }) => key === saved.feed)) {
+      const restored = restoredUI("homeFeed");
+      let saved = restored;
+      if (!saved) try { saved = JSON.parse(sessionStorage.getItem("gsd-home-v1") || "null"); } catch {}
+      const state = saved as ReadingState | null;
+      if (state && HOME_SECTIONS.some(({ key }) => key === state.feed)) {
         const limits = Object.fromEntries(HOME_SECTIONS.map(({ key }) => [key,
-          Number.isInteger(saved.limits?.[key]) && saved.limits[key] >= 6
-            ? Math.min(saved.limits[key], Math.max(6, feeds[key].length)) : 6,
+          Number.isInteger(state.limits?.[key]) && state.limits[key] >= 6
+            ? Math.min(state.limits[key], Math.max(6, feeds[key].length)) : 6,
         ])) as ReadingState["limits"];
-        const scroll = Number.isFinite(saved.scroll) && saved.scroll >= 0 ? saved.scroll : 0;
-        restore.current = { feed: saved.feed, limits, scroll };
+        const scroll = Number.isFinite(state.scroll) && state.scroll >= 0 ? state.scroll : 0;
+        restore.current = restored ? null : { feed: state.feed, limits, scroll };
         // Keep cleanup/pagehide safe even if development Strict Mode reruns
         // mount effects before the restored React state has rendered.
-        reading.current = { feed: saved.feed, limits, scroll };
-        setFeed(saved.feed); setLimits(limits);
+        reading.current = { feed: state.feed, limits, scroll };
+        setFeed(state.feed); setLimits(limits);
       }
     } catch {}
     ready.current = true;
     const scroll = () => { reading.current.scroll = window.scrollY; };
     const save = () => { try { sessionStorage.setItem("gsd-home-v1", JSON.stringify(reading.current)); } catch {} };
+    const capture = (event: Event) => { (event as CustomEvent<{ ui: PageUI }>).detail.ui.homeFeed = { ...reading.current, scroll: window.scrollY }; };
+    window.addEventListener(UI_CAPTURE, capture);
     window.addEventListener("scroll", scroll, { passive: true });
     window.addEventListener("pagehide", save);
-    return () => { save(); window.removeEventListener("scroll", scroll); window.removeEventListener("pagehide", save); };
+    return () => { save(); window.removeEventListener(UI_CAPTURE, capture); window.removeEventListener("scroll", scroll); window.removeEventListener("pagehide", save); };
   }, [feeds]);
 
   useEffect(() => {
@@ -129,7 +135,7 @@ export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar
     </nav>
     <section className="home-feed" aria-label={`${section.label}内容`}>
       <div id="home-feed-panel" role="tabpanel" aria-label={`${section.label}内容`} tabIndex={0} data-feed={feed}>
-        {items.map((item) => <article className="feed-row" key={item.id} data-entry-id={item.id}>
+        {items.map((item) => <article data-article-origin={`home:${feed}:${item.id}`} className="feed-row" key={item.id} data-entry-id={item.id}>
           <div className="feed-row-copy"><h2><Link href={item.url}>{item.title}</Link></h2>
             <div className="feed-meta"><span className="feed-source">{item.kind === "daily" && <BrandMark />}{item.sourceLabel}</span>
               <time dateTime={item.date}>{item.date.slice(5).replace("-", "/")}</time>

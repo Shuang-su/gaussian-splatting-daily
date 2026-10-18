@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { MouseEvent, KeyboardEvent } from "react";
 import { flattenReadingLinks, type ReadingLink } from "../lib/reading-navigation";
 import Icon from "./Icon";
+import { pushArticleHash } from "../lib/card-navigation";
 
 function headingContentTop(target: Element) {
   const heading = target.matches("h1, h2, h3, h4") ? target : target.querySelector("h1, h2, h3, h4");
@@ -102,7 +103,7 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     let parent = target.parentElement;
     while (parent) { if (parent instanceof HTMLDetailsElement) parent.open = true; parent = parent.parentElement; }
     if (compact) { setOpen(false); setHovered(false); }
-    history.pushState(null, "", `#${encodeURIComponent(id)}`);
+    pushArticleHash(id);
     const behavior = matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth";
     const padding = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
     // The reference title has a 16px inset; section IDs can precede the title by different amounts.

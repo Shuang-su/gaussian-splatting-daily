@@ -1,7 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import Link from "./ArticleLink";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { carouselState, restoredUI, UI_CAPTURE, type PageUI } from "../lib/card-navigation";
+import { useCardNavigation } from "./CardNavigation";
 import { calendarDate, type HomeSlide } from "../lib/home";
 import Icon from "./Icon";
 import SourceImage from "./SourceImage";
@@ -16,12 +18,33 @@ export default function HomeCarousel({ slides }: { slides: HomeSlide[] }) {
   const [focused, setFocused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(true);
   const [visible, setVisible] = useState(true);
+  const [ready, setReady] = useState(false);
+  const navigation = useCardNavigation();
+  const timerStarted = useRef<number | null>(null);
   const elapsed = useRef({ key: "", value: 0 });
+  const progressStart = useRef({ key: "", value: 0 });
   const pointer = useRef<{ x: number; y: number } | null>(null);
   const swiped = useRef(false);
   const pagers = useRef<(HTMLButtonElement | null)[]>([]);
-  const playing = slides.length > 1 && !paused && !hovered && !focused && !reducedMotion && visible;
+  const playing = ready && !navigation?.busy && slides.length > 1 && !paused && !hovered && !focused && !reducedMotion && visible;
   const key = `${active}-${cycle}`;
+  const current = useRef({ active, paused, key });
+  current.current = { active, paused, key };
+
+  useLayoutEffect(() => {
+    const saved = carouselState(restoredUI("carousel"), slides.map(slide => slide.id));
+    setActive(saved.active); setPaused(saved.paused);
+    elapsed.current = { key: `${saved.active}-0`, value: saved.elapsed };
+    progressStart.current = { ...elapsed.current };
+    setReady(true);
+    const capture = (event: Event) => {
+      const state = current.current;
+      (event as CustomEvent<{ ui: PageUI }>).detail.ui.carousel = { id: slides[state.active]?.id, paused: state.paused,
+        elapsed: elapsed.current.value + (timerStarted.current === null ? 0 : performance.now() - timerStarted.current) };
+    };
+    window.addEventListener(UI_CAPTURE, capture);
+    return () => window.removeEventListener(UI_CAPTURE, capture);
+  }, [slides]);
 
   useEffect(() => {
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -40,11 +63,13 @@ export default function HomeCarousel({ slides }: { slides: HomeSlide[] }) {
     if (elapsed.current.key !== key) elapsed.current = { key, value: 0 };
     if (!playing) return;
     const started = performance.now();
+    timerStarted.current = started;
     const timer = window.setTimeout(() => {
       setActive((current) => (current + 1) % slides.length);
     }, Math.max(0, INTERVAL - elapsed.current.value));
     return () => {
       clearTimeout(timer);
+      timerStarted.current = null;
       if (elapsed.current.key === key) elapsed.current.value += performance.now() - started;
     };
   }, [key, playing, slides.length]);
@@ -76,7 +101,7 @@ export default function HomeCarousel({ slides }: { slides: HomeSlide[] }) {
         }
       }} onPointerCancel={() => { pointer.current = null; }}
       onClickCapture={(e) => { if (swiped.current) { e.preventDefault(); e.stopPropagation(); swiped.current = false; } }}>
-      <article className="home-slide" aria-label={`${active + 1} / ${slides.length}`}>
+      <article data-article-origin={`carousel:${slide.id}`} className="home-slide" aria-label={`${active + 1} / ${slides.length}`}>
         <div className="home-slide-visual">
           {slide.image ? <SourceImage image={{ ...slide.image, fit: "cover" }} caption={false} previewable={false}
             priority={active === 0} sizes="(max-width: 767px) calc(100vw - 32px), 588px" />
@@ -95,7 +120,7 @@ export default function HomeCarousel({ slides }: { slides: HomeSlide[] }) {
                 : e.key === "ArrowLeft" ? (i + slides.length - 1) % slides.length
                   : e.key === "Home" ? 0 : e.key === "End" ? slides.length - 1 : -1;
               if (next >= 0) { e.preventDefault(); select(next); pagers.current[next]?.focus(); }
-            }}><span className="carousel-track">{active === i && <span key={key} className="carousel-progress" style={{ animationPlayState: playing ? "running" : "paused" }} />}</span></button>,
+            }}><span className="carousel-track">{active === i && <span key={key} className="carousel-progress" style={{ animationPlayState: playing ? "running" : "paused", animationDelay: `-${progressStart.current.key === key ? progressStart.current.value : 0}ms` }} />}</span></button>,
         )}</div>
         <button className="carousel-play" aria-label={paused ? "播放轮播" : "暂停轮播"} aria-pressed={paused}
           onClick={() => setPaused((current) => !current)}><Icon name={paused ? "play" : "pause"} /></button>

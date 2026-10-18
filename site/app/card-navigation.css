@@ -1,0 +1,15 @@
+.card-transition-layer { position: fixed; inset: 0; z-index: 35; pointer-events: none; contain: layout style; }
+.card-transition-layer:empty { display: none; }
+.card-transition-layer *, .card-transition-layer *::before, .card-transition-layer *::after { pointer-events: none !important; }
+.card-transition-sheet { position: fixed; top: 0; left: 0; transform-origin: 0 0; will-change: transform, clip-path; }
+.card-transition-surface, .card-transition-image, .card-transition-text { position: absolute; top: 0; left: 0; transform-origin: 0 0; }
+.card-transition-image { overflow: hidden; }
+.card-transition-image, .card-transition-text { will-change: transform; }
+.card-transition-text { overflow: hidden; }
+.article-back { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px; margin-left: -10px; border-radius: 50%; }
+.article-back .icon { width: 22px; height: 22px; transform: rotate(180deg); }
+.article-back:hover { background: var(--surface, rgba(128,128,128,.08)); }
+.article-back:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+[data-card-opening] { opacity: .76; transition: opacity 80ms ease-out; }
+[data-article-origin] h2 > a { display: block; }
+@media (prefers-reduced-motion: reduce) { .card-transition-layer { display: none; } }

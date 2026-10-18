@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import Link from "./ArticleLink";
 import type { SourceImage as ImageData } from "../lib/types";
 import { assetUrl, imageKey, imageSrcSet } from "../lib/images";
 import { useImagePreview } from "./ImageGallery";
@@ -16,7 +16,7 @@ export default function SourceImage({ image, caption = false, previewable = capt
   if (!image) return null;
   const failed = failedUrl === image.url;
   const canPreview = previewable && !href && Boolean(preview);
-  const picture = <img ref={element} src={assetUrl(image.url)} srcSet={imageSrcSet(image)} sizes={sizes} width={image.width} height={image.height} alt={image.alt} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : undefined} decoding="async"
+  const picture = <img data-card-image={imageKey(image)} ref={element} src={assetUrl(image.url)} srcSet={imageSrcSet(image)} sizes={sizes} width={image.width} height={image.height} alt={image.alt} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : undefined} decoding="async"
         className={canPreview ? "preview-trigger" : undefined} role={canPreview ? "button" : undefined} tabIndex={canPreview ? 0 : undefined} aria-label={canPreview ? `放大图片：${image.alt}` : undefined}
         onClick={(e) => { if (canPreview) preview?.(imageKey(image), e.currentTarget); }}
         onKeyDown={(e) => { if (canPreview && ["Enter", " "].includes(e.key)) { e.preventDefault(); preview?.(imageKey(image), e.currentTarget); } }}
