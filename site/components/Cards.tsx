@@ -1,15 +1,19 @@
 import Link from "./ArticleLink";
 import SourceImage from "./SourceImage";
 import { dailyUrl, entryUrl, topicLabel } from "../lib/catalog";
+import { calendarDate } from "../lib/home";
 import type { Daily, Entry } from "../lib/types";
 
 export function TopicLinks({ topics }: { topics: string[] }) {
   return <div className="topic-links">{topics.map((t) => <Link key={t} href={`/topics/${t}/`}>{topicLabel(t)}</Link>)}</div>;
 }
 export function DailyCard({ daily }: { daily: Daily }) {
+  const date = calendarDate(daily.date);
   return <article data-article-origin={`archive:${daily.id}`} className={`daily-card${daily.image ? "" : " text-only"}`}>
     {daily.image && <div className="card-image"><SourceImage image={daily.image} href={dailyUrl(daily.date)} label={`阅读 ${daily.date} 日报`} sizes="(max-width: 639px) 100vw, (max-width: 1023px) 45vw, 370px" /></div>}
-    <div><h2><Link href={dailyUrl(daily.date)}>{daily.headline}</Link></h2><p className="excerpt">{daily.summary}</p>
+    <div className="daily-card-copy">
+      <div className="daily-card-date" aria-hidden="true"><span>{date.weekday}</span><strong>{date.day}</strong></div>
+      <h2><Link href={dailyUrl(daily.date)}>{daily.headline}</Link></h2><p className="excerpt">{daily.summary}</p>
       <div className="card-meta"><time dateTime={daily.date}>{daily.date}</time><span>{daily.readingMinutes} 分钟阅读</span></div>
     </div>
   </article>;

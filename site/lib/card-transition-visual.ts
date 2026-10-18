@@ -1,9 +1,10 @@
-import { animate } from "motion";
+import { animate, mix as mixValue } from "motion";
 
 type Rect = { x: number; y: number; width: number; height: number };
 type TextPart = { rect: Rect; node: HTMLElement; fontSize: number; lineHeight: number; letterSpacing: number; weight: number };
 type Picture = { rect: Rect; src: string; key: string; width: number; height: number; fit: string; position: string; radii: number[] };
-export type CardVisual = { rect: Rect; radius: number; background: string; title: TextPart; image: Picture; date?: TextPart; summary?: TextPart; fullscreen?: boolean };
+type CardSurface = { radius: number; shadow: string; border: string };
+export type CardVisual = { rect: Rect; surface?: CardSurface; expansion: number; elevation: number; background: string; title: TextPart; image: Picture; date?: TextPart; summary?: TextPart; fullscreen?: boolean };
 export const CARD_TIMING = { enter: 800, return: 550 } as const;
 const springs = {
   enter: { stiffness: 180, damping: 24, mass: 1.1 },
@@ -33,7 +34,7 @@ function textPart(element: HTMLElement): TextPart {
 export function visualElements(root: HTMLElement, article = false): HTMLElement[] {
   return [...root.querySelectorAll<HTMLElement>(article
     ? ".article-cover > .source-image > img, .article-header h1, .article-date, .article-deck"
-    : "[data-card-image], h1, h2, h3, .home-slide-date, .past-date, .excerpt, .search-result-summary")];
+    : "[data-card-image], h1, h2, h3, .home-slide-date, .daily-card-date, .past-date, .excerpt, .search-result-summary")];
 }
 
 export function captureCard(root: HTMLElement, article = false, fallback?: CardVisual | null): CardVisual | null {
@@ -54,9 +55,10 @@ export function captureCard(root: HTMLElement, article = false, fallback?: CardV
   const imageMask = getComputedStyle(image.closest("figure") || image);
   const radii = [imageMask.borderTopLeftRadius, imageMask.borderTopRightRadius, imageMask.borderBottomRightRadius, imageMask.borderBottomLeftRadius].map(value => parseFloat(value) || 0);
   const background = article || style.backgroundColor === "rgba(0, 0, 0, 0)" ? getComputedStyle(document.body).backgroundColor : style.backgroundColor;
-  const date = root.querySelector<HTMLElement>(article ? ".article-date" : ".home-slide-date, .past-date");
+  const date = root.querySelector<HTMLElement>(article ? ".article-date" : ".home-slide-date, .daily-card-date, .past-date");
   const summary = root.querySelector<HTMLElement>(article ? ".article-deck" : ".excerpt, .search-result-summary");
-  return { rect: surfaceRect, radius: article ? 0 : parseFloat(style.borderRadius) || 0, background, title: textPart(title), fullscreen: article,
+  return { rect: surfaceRect, ...(article ? {} : { surface: { radius: parseFloat(style.borderRadius) || 0, shadow: style.boxShadow, border: style.border } }),
+    expansion: article ? 1 : 0, elevation: 0, background, title: textPart(title), fullscreen: article,
     image: { rect: imageRect, src: thumbnail?.src || image.currentSrc || image.src, key,
       width: thumbnail?.width || image.naturalWidth, height: thumbnail?.height || image.naturalHeight, fit: imageStyle.objectFit, position: imageStyle.objectPosition, radii },
     ...(date ? { date: textPart(date) } : {}), ...(summary ? { summary: textPart(summary) } : {}) };
@@ -78,6 +80,9 @@ export function retainThumbnail(root: HTMLElement, from: CardVisual) {
 const mix = (a: number, b: number, t: number) => a + (b - a) * t;
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 const smooth = (value: number) => { const t = clamp(value); return t * t * (3 - 2 * t); };
+// Keep the card's physical corner size until it is almost a page. The same
+// expansion coordinate survives interruptions, so reversing cannot square it off.
+const roundness = (expansion: number) => 1 - smooth((expansion - .72) / .28);
 const mixRect = (a: Rect, b: Rect, t: number): Rect => ({ x: mix(a.x, b.x, t), y: mix(a.y, b.y, t), width: mix(a.width, b.width, t), height: mix(a.height, b.height, t) });
 
 /** Only the shared first-screen fields are copied. The real long article retains its layout. */
@@ -108,7 +113,7 @@ export class CardAnimator {
     // A small lift responds while the route loads, then the same geometry continues to expand.
     const lift = (box: Rect): Rect => ({ x: from.rect.x + (box.x - from.rect.x) * 1.02 - from.rect.width * .01,
       y: from.rect.y + (box.y - from.rect.y) * 1.02 - from.rect.height * .01, width: box.width * 1.02, height: box.height * 1.02 });
-    const lifted = { ...from, rect: lift(from.rect), title: { ...from.title, rect: lift(from.title.rect) }, image: { ...from.image, rect: lift(from.image.rect) },
+    const lifted = { ...from, elevation: .3, rect: lift(from.rect), title: { ...from.title, rect: lift(from.title.rect) }, image: { ...from.image, rect: lift(from.image.rect) },
       ...(from.date ? { date: { ...from.date, rect: lift(from.date.rect) } } : {}), ...(from.summary ? { summary: { ...from.summary, rect: lift(from.summary.rect) } } : {}) };
     this.render(from, lifted, "press", () => {});
   }
@@ -128,10 +133,15 @@ export class CardAnimator {
   private render(from: CardVisual, to: CardVisual, kind: keyof typeof springs, done: () => void) {
     this.stopAnimation?.(); this.layer.replaceChildren();
     const sheet = document.createElement("div"), surface = document.createElement("div"), frame = document.createElement("div"), image = document.createElement("img");
+    const restingShadow = document.createElement("div"), liftedShadow = document.createElement("div");
+    restingShadow.className = "card-transition-shadow"; liftedShadow.className = "card-transition-shadow card-transition-lift";
+    const sourceSurface = from.surface || to.surface || { radius: 0, shadow: "none", border: "none" }, targetSurface = to.surface || sourceSurface;
+    Object.assign(restingShadow.style, { boxShadow: sourceSurface.shadow, border: sourceSurface.border });
     sheet.className = "card-transition-sheet"; surface.className = "card-transition-surface"; frame.className = "card-transition-image";
     image.src = from.image.src; image.alt = ""; image.draggable = false;
     Object.assign(image.style, { position: "absolute", width: `${from.image.width}px`, height: `${from.image.height}px`, maxWidth: "none", transformOrigin: "0 0" });
-    frame.append(image); sheet.append(surface, frame); this.layer.append(sheet);
+    // Shadows sit outside the clipped sheet, otherwise clip-path cuts them off.
+    frame.append(image); sheet.append(surface, frame); this.layer.append(restingShadow, liftedShadow, sheet);
     const surfaceWidth = Math.max(from.rect.width, to.rect.width) * 1.15, surfaceHeight = Math.max(from.rect.height, to.rect.height) * 1.15;
     const imageWidth = Math.max(from.image.rect.width, to.image.rect.width) * 1.15, imageHeight = Math.max(from.image.rect.height, to.image.rect.height) * 1.15;
     Object.assign(sheet.style, { width: `${surfaceWidth}px`, height: `${surfaceHeight}px` });
@@ -147,6 +157,15 @@ export class CardAnimator {
       if (!a && !b) return null;
       const wrapper = document.createElement("div"); wrapper.className = `card-transition-text card-transition-${name}`;
       const part = b || a!, content = addText(part);
+      const badgeStyles = name === "date" && a && b ? [content, ...content.children].flatMap((element, index) => {
+        const source = [a.node, ...a.node.children][index] as HTMLElement | undefined;
+        const target = [b.node, ...b.node.children][index] as HTMLElement | undefined;
+        if (!source || !target) return [];
+        return ["font-size", "line-height", "letter-spacing", "border-radius", "border-top-width", "border-right-width", "border-bottom-width", "border-left-width", "border-color", "padding-top", "padding-bottom", "color", "background-color", "box-shadow"].flatMap(property => {
+          const start = source.style.getPropertyValue(property), end = target.style.getPropertyValue(property);
+          return start && end && start !== end ? [{ element: element as HTMLElement, property, value: mixValue(start, end) }] : [];
+        });
+      }) : [];
       if (name !== "date") {
         // The same headline/deck gets one continuously laid-out proxy: never two readable
         // copies with different line breaks. Only these short strings reflow, not the article.
@@ -154,14 +173,22 @@ export class CardAnimator {
         Object.assign(content.style, { display: "block", height: "auto", overflow: "visible", webkitLineClamp: "unset" });
       }
       wrapper.append(content); sheet.append(wrapper);
-      return { name, a, b, content, wrapper };
+      return { name, a, b, content, wrapper, badgeStyles };
     });
     const position = (element: HTMLElement, box: Rect, origin = { x: 0, y: 0 }) => { element.style.transform = `translate3d(${box.x - origin.x}px,${box.y - origin.y}px,0)`; };
     const started = performance.now(), mainRect = this.reveal ? rect(this.reveal.element) : null;
     const update = (progress: number) => {
       const elapsed = (performance.now() - started) / 1000, t = clamp(progress);
       const box = mixRect(from.rect, to.rect, progress), picture = mixRect(from.image.rect, to.image.rect, progress);
-      const radius = Math.max(0, mix(from.radius, to.radius, progress));
+      const expansion = mix(from.expansion, to.expansion, t), cardRadius = mix(sourceSurface.radius, targetSurface.radius, t);
+      const radius = cardRadius * roundness(expansion);
+      const baseElevation = mix(from.elevation, to.elevation, t);
+      const elevation = kind === "press" ? baseElevation : baseElevation + (1 - baseElevation) * 4 * t * (1 - t);
+      for (const shadow of [restingShadow, liftedShadow]) {
+        position(shadow, box);
+        Object.assign(shadow.style, { width: `${box.width}px`, height: `${box.height}px`, borderRadius: `${radius}px` });
+      }
+      restingShadow.style.opacity = String(1 - expansion); liftedShadow.style.opacity = String(elevation);
       position(sheet, box); sheet.style.clipPath = `inset(0 ${Math.max(0, surfaceWidth - box.width)}px ${Math.max(0, surfaceHeight - box.height)}px 0 round ${radius}px)`;
       sheet.dataset.progress = progress.toFixed(4);
       // A continuous opaque sheet also covers the article's collapsed top margin,
@@ -175,7 +202,9 @@ export class CardAnimator {
         // source cannot bleed through the inside of the expanding card.
         this.reveal.element.style.opacity = "1";
       }
-      const imageRadii = from.image.radii.map((value, i) => Math.max(0, mix(value, to.image.radii[i], progress)));
+      const startRoundness = roundness(from.expansion), endRoundness = roundness(to.expansion);
+      const cornerProgress = startRoundness === endRoundness ? t : clamp((roundness(expansion) - startRoundness) / (endRoundness - startRoundness));
+      const imageRadii = from.image.radii.map((value, i) => Math.max(0, mix(value, to.image.radii[i], cornerProgress)));
       position(frame, picture, box); frame.style.clipPath = `inset(0 ${Math.max(0, imageWidth - picture.width)}px ${Math.max(0, imageHeight - picture.height)}px 0 round ${imageRadii.map(value => `${value}px`).join(" ")})`;
       const fitScale = (fit: string) => (fit === "contain" ? Math.min : Math.max)(picture.width / from.image.width, picture.height / from.image.height);
       const scale = mix(fitScale(from.image.fit), fitScale(to.image.fit), t);
@@ -183,11 +212,17 @@ export class CardAnimator {
       const a = offsets(from.image), b = offsets(to.image);
       const x = (picture.width - from.image.width * scale) * mix(a[0], b[0], t), y = (picture.height - from.image.height * scale) * mix(a[1] ?? .5, b[1] ?? .5, t);
       image.style.transform = `translate3d(${x}px,${y}px,0) scale(${scale})`;
-      const current = { ...to, rect: box, radius, image: { ...from.image, rect: picture, radii: imageRadii } };
+      const current = { ...to, rect: box,
+        // A fullscreen press has no source-card styling yet; keep it unknown until
+        // the restored card is measured, instead of turning it into a square card.
+        surface: from.surface || to.surface ? { ...sourceSurface, radius: cardRadius } : undefined,
+        expansion, elevation, image: { ...from.image, rect: picture, radii: imageRadii } };
+      let titleReflow = 0;
       for (const text of texts) {
         if (!text) continue;
         const { a, b, content, wrapper, name } = text;
-        const anchor = a && b ? mixRect(a.rect, b.rect, progress) : (a || b)!.rect;
+        const anchor = a && b ? mixRect(a.rect, b.rect, progress) : { ...(a || b)!.rect };
+        if (name === "summary") anchor.y += titleReflow;
         const fontSize = a && b ? mix(a.fontSize, b.fontSize, progress) : (a || b)!.fontSize;
         const typography = { fontSize,
           lineHeight: a && b ? mix(a.lineHeight, b.lineHeight, progress) : (a || b)!.lineHeight,
@@ -195,9 +230,19 @@ export class CardAnimator {
           weight: a && b ? mix(a.weight, b.weight, progress) : (a || b)!.weight };
         position(wrapper, anchor, box);
         Object.assign(wrapper.style, { width: `${anchor.width}px`, height: `${anchor.height}px` });
-        if (name === "date") content.style.transform = `scale(${anchor.width / (b || a)!.rect.width})`;
+        if (name === "date") {
+          Object.assign(content.style, { width: `${anchor.width}px`, height: `${anchor.height}px`, transform: "none" });
+          text.badgeStyles.forEach(({ element, property, value }) => element.style.setProperty(property, value(t)));
+        }
         else Object.assign(content.style, { width: `${anchor.width}px`, fontSize: `${fontSize}px`, lineHeight: `${typography.lineHeight}px`,
           letterSpacing: `${typography.letterSpacing}px`, fontWeight: String(typography.weight) });
+        if (name !== "date" && ![a, b].some(part => part && parseInt(part.node.style.webkitLineClamp) > 0)) {
+          // An intermediate line break can add a line even when both endpoints have
+          // the same line count. Keep that line whole and move the deck below it.
+          const height = content.getBoundingClientRect().height;
+          if (name === "title") titleReflow = Math.max(0, height - anchor.height);
+          anchor.height = height; wrapper.style.height = `${height}px`;
+        }
         // Origins without a description/date reveal these fields with the rest of the article.
         if (!a || !b) wrapper.style.opacity = String(kind === "press" ? 1 : b ? smooth((elapsed - .16) / .2) : 1 - smooth(elapsed / .16));
         current[name] = { ...(b || a)!, node: content, rect: anchor, ...typography };

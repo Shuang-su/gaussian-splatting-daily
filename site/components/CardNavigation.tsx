@@ -232,7 +232,9 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
             if (transaction.kind === "return") backdrop.current?.clear();
             layer.current!.dataset.state = transaction.kind;
             retainThumbnail(target, starting!);
-            animator.current?.hide(visualElements(target, !snapshot));
+            // The proxy owns the returning card's surface as well as its fields.
+            // Hiding the real card prevents its shadow doubling under the landing proxy.
+            animator.current?.hide(snapshot ? [target] : visualElements(target, true));
             animator.current?.morph(starting!, destination!, transaction.kind === "enter" ? "enter" : "return", complete);
             return;
           } catch { /* Return control to the real page if geometry/animation setup fails. */ }
