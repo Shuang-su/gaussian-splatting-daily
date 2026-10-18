@@ -10,7 +10,7 @@ import { CardBackdrop } from "../lib/card-transition-backdrop";
 
 type Transaction = {
   kind: "enter" | "return" | "history"; href: string; marker: NavigationMarker;
-  snapshot?: PageSnapshot; visual: CardVisual | null; origin?: HTMLElement; cancelled: boolean; token: number; inputTime?: number; arrived?: boolean; expired?: boolean;
+  snapshot?: PageSnapshot; visual: CardVisual | null; origin?: HTMLElement; cancelled: boolean; token: number; inputTime?: number; arrived?: boolean; expired?: boolean; resized?: boolean;
 };
 type Context = { busy: boolean; returnHref: string; hasSource: boolean; navigate: (event: MouseEvent<HTMLAnchorElement>) => void; back: (event: MouseEvent<HTMLAnchorElement>) => void };
 const NavigationContext = createContext<Context | null>(null);
@@ -199,7 +199,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
       // Search results and restored load-more rows can mount after the route shell.
       if (!target && performance.now() - started < 1800) { frame.current = requestAnimationFrame(settle); return; }
       if (snapshot) {
-        const top = snapshot.width !== innerWidth && target && snapshot.originTop !== undefined
+        const top = (transaction.resized || snapshot.width !== innerWidth) && target && snapshot.originTop !== undefined
           ? scrollY + target.getBoundingClientRect().top - snapshot.originTop : snapshot.scroll;
         window.scrollTo({ top, behavior: "instant" });
       } else {
@@ -219,6 +219,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
         const focus = snapshot?.originKey && target ? linksIn(target)[snapshot.focusIndex || 0] || target
           : chapterFocus || document.querySelector<HTMLElement>(".article-header h1");
         const complete = () => {
+          if (pending.current?.token !== transaction.token) return;
           finish();
           // Focusing before hiding the real title for the proxy makes browsers blur it.
           if (focus?.isConnected) { if (!focus.matches("a, button")) focus.tabIndex = -1; focus.focus({ preventScroll: true }); }
@@ -285,7 +286,19 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
     };
     const scroll = () => { if (!restoring.current && pending.current && Math.abs(scrollY - animatedScroll.current) > 1 && layer.current?.dataset.state !== "waiting") cancelVisual(); };
     const keys = (event: KeyboardEvent) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) userInput(); };
-    const resize = () => { if (pending.current) { pending.current.cancelled = true; cancelVisual(); } };
+    const resize = () => {
+      const transaction = pending.current;
+      if (!transaction) return;
+      transaction.cancelled = true; transaction.resized = true;
+      // Responsive reflow can trigger scroll anchoring on entry as well as return.
+      // Do not treat that browser-generated scroll as user cancellation.
+      restoring.current = true;
+      clearVisual(); cancelAnimationFrame(frame.current);
+      // Keep the navigation alive until its destination is settled and focused.
+      // A new layout can move a restored list entry, including on height changes.
+      // If the route is still loading, its normal arrival performs this same work.
+      if (transaction.arrived) arrive();
+    };
     const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
     motionPreference.addEventListener("change", userInput);
     window.addEventListener("popstate", pop, true);
@@ -304,7 +317,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
       window.removeEventListener("keydown", keys); window.removeEventListener("resize", resize);
       clearTimeout(watchdog.current); clearTimeout(returnTimer.current); cancelAnimationFrame(frame.current); animator.current?.clear(); backdrop.current?.clear(); fade.current?.stop();
     };
-  }, [begin, cancelVisual, capture, ensureMarker, finish, syncSource]);
+  }, [arrive, begin, cancelVisual, capture, clearVisual, ensureMarker, finish, syncSource]);
 
   return <NavigationContext.Provider value={{ busy, returnHref: source?.url ? nextHref(source.url) : "/daily/", hasSource: Boolean(source), navigate, back }}>
     {children}<div ref={backdropLayer} className="card-transition-backdrop" aria-hidden="true" inert />

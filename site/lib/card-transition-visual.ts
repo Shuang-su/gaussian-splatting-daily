@@ -1,7 +1,7 @@
 import { animate, mix as mixValue } from "motion";
 
 type Rect = { x: number; y: number; width: number; height: number };
-type TextPart = { rect: Rect; node: HTMLElement; fontSize: number; lineHeight: number; letterSpacing: number; weight: number };
+type TextPart = { rect: Rect; node: HTMLElement; fontSize: number; lineHeight: number; letterSpacing: number; weight: number; lineLimit: number; extraLineOpacity: number };
 type Picture = { rect: Rect; src: string; key: string; width: number; height: number; fit: string; position: string; radii: number[] };
 type CardSurface = { radius: number; shadow: string; border: string };
 export type CardVisual = { rect: Rect; surface?: CardSurface; expansion: number; elevation: number; background: string; title: TextPart; image: Picture; date?: TextPart; summary?: TextPart; fullscreen?: boolean };
@@ -26,9 +26,10 @@ function textPart(element: HTMLElement): TextPart {
     copy.removeAttribute("id"); copy.removeAttribute("href"); copy.removeAttribute("tabindex");
     properties.forEach(property => copy.style.setProperty(property, style.getPropertyValue(property)));
   });
-  const style = getComputedStyle(element), fontSize = parseFloat(style.fontSize);
+  const style = getComputedStyle(element), fontSize = parseFloat(style.fontSize), lineLimit = parseInt(style.webkitLineClamp) || 0;
   return { node, rect: rect(element), fontSize, lineHeight: parseFloat(style.lineHeight) || fontSize * 1.5,
-    letterSpacing: parseFloat(style.letterSpacing) || 0, weight: parseFloat(style.fontWeight) || 400 };
+    letterSpacing: parseFloat(style.letterSpacing) || 0, weight: parseFloat(style.fontWeight) || 400,
+    lineLimit, extraLineOpacity: lineLimit ? 0 : 1 };
 }
 
 export function visualElements(root: HTMLElement, article = false): HTMLElement[] {
@@ -234,18 +235,39 @@ export class CardAnimator {
           Object.assign(content.style, { width: `${anchor.width}px`, height: `${anchor.height}px`, transform: "none" });
           text.badgeStyles.forEach(({ element, property, value }) => element.style.setProperty(property, value(t)));
         }
-        else Object.assign(content.style, { width: `${anchor.width}px`, fontSize: `${fontSize}px`, lineHeight: `${typography.lineHeight}px`,
-          letterSpacing: `${typography.letterSpacing}px`, fontWeight: String(typography.weight) });
-        if (name !== "date" && ![a, b].some(part => part && parseInt(part.node.style.webkitLineClamp) > 0)) {
-          // An intermediate line break can add a line even when both endpoints have
-          // the same line count. Keep that line whole and move the deck below it.
+        let lineLimit = (b || a)!.lineLimit, extraLineOpacity = (b || a)!.extraLineOpacity;
+        if (name !== "date") {
+          Object.assign(content.style, { width: `${anchor.width}px`, fontSize: `${fontSize}px`, lineHeight: `${typography.lineHeight}px`,
+            letterSpacing: `${typography.letterSpacing}px`, fontWeight: String(typography.weight), display: "block", webkitLineClamp: "unset" });
+          // Measure complete lines even when an endpoint is clamped. Interpolating
+          // the endpoint heights can otherwise slice through an intermediate line.
           const height = content.getBoundingClientRect().height;
-          if (name === "title") titleReflow = Math.max(0, height - anchor.height);
-          anchor.height = height; wrapper.style.height = `${height}px`;
+          lineLimit = a?.lineLimit || b?.lineLimit || 0;
+          if (lineLimit) {
+            const startOpacity = a?.extraLineOpacity ?? 1, endOpacity = b?.extraLineOpacity ?? 1;
+            const fadeProgress = endOpacity < startOpacity ? smooth((t - .7) / .25) : smooth(t / .25);
+            extraLineOpacity = mix(startOpacity, endOpacity, fadeProgress);
+            // One mask stop per line: a whole extra line fades together, never a
+            // moving rectangular crop through glyphs. Keep state for fast reversal.
+            const stops: string[] = [];
+            for (let line = 0; line < Math.ceil(height / typography.lineHeight); line++) {
+              const opacity = line < lineLimit ? 1 : extraLineOpacity;
+              stops.push(`rgba(0,0,0,${opacity}) ${line * typography.lineHeight}px`, `rgba(0,0,0,${opacity}) ${(line + 1) * typography.lineHeight}px`);
+            }
+            content.style.maskImage = `linear-gradient(to bottom, ${stops.join(",")})`;
+            if (extraLineOpacity === 0) {
+              // Restore the browser's original ellipsis only after extra lines are
+              // invisible; there is still just one visible copy of the headline.
+              Object.assign(content.style, { display: "-webkit-box", webkitBoxOrient: "vertical", webkitLineClamp: String(lineLimit), overflow: "hidden" });
+            } else content.style.overflow = "visible";
+          } else content.style.maskImage = "none";
+          const visibleHeight = lineLimit && extraLineOpacity === 0 ? Math.min(height, lineLimit * typography.lineHeight) : height;
+          if (name === "title") titleReflow = Math.max(0, visibleHeight - anchor.height);
+          anchor.height = visibleHeight; wrapper.style.height = `${height}px`;
         }
         // Origins without a description/date reveal these fields with the rest of the article.
         if (!a || !b) wrapper.style.opacity = String(kind === "press" ? 1 : b ? smooth((elapsed - .16) / .2) : 1 - smooth(elapsed / .16));
-        current[name] = { ...(b || a)!, node: content, rect: anchor, ...typography };
+        current[name] = { ...(b || a)!, node: content, rect: anchor, ...typography, lineLimit, extraLineOpacity };
       }
       this.visual = current;
     };
