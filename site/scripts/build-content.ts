@@ -5,12 +5,11 @@ import { buildArchive, ROOT } from "../lib/content";
 import { buildShareImages } from "./build-share";
 import { buildFeeds, buildWeekly } from "../lib/feeds";
 
-const { articles, index } = await buildArchive();
+const { articles, index, weeks } = await buildArchive();
 const output = JSON.stringify(index, null, 2) + "\n";
 fs.mkdirSync(path.join(ROOT, "site/public"), { recursive: true });
 fs.writeFileSync(path.join(ROOT, "data/portal-index.json"), output);
 fs.writeFileSync(path.join(ROOT, "site/public/content-index.json"), output);
-const weeks = buildWeekly(articles);
 const feeds = buildFeeds(articles, weeks);
 fs.mkdirSync(path.join(ROOT, "site/public/feeds"), { recursive: true });
 for (const [kind, xml] of Object.entries(feeds)) fs.writeFileSync(path.join(ROOT, `site/public/feeds/${kind}.xml`), xml);

@@ -2,7 +2,6 @@ import type { Article, ArticleEvent } from "../lib/types";
 import ArticleBody from "./ArticleBody";
 import Discussion from "./Discussion";
 import EventTags from "./EventTags";
-import SourceImage from "./SourceImage";
 import { readingGroupLabel } from "../lib/reading-navigation";
 export const EVENT_GROUPS = { main: "主要新闻", brief: "简讯", paper: "论文", analysis: "分析与实践" };
 export default function ArticleEvents({ article }: { article: Article }) {
@@ -18,7 +17,6 @@ export default function ArticleEvents({ article }: { article: Article }) {
       <List className={List === "ul" ? "brief-news-list" : "event-list"}>{events.map(event => <Item className="news-event" key={event.id} id={event.anchor} data-event-id={event.id}>
         {!(group === "analysis" && events.length === 1 && event.title === EVENT_GROUPS.analysis) && <Heading className="event-title">{event.title}</Heading>}
         <ArticleBody html={event.html}/>
-        {event.images?.map(image => <div className="event-figure" key={image.originalUrl || image.url}><SourceImage image={image} caption sizes="(max-width: 767px) calc(100vw - 48px), 680px"/></div>)}
         {(!article.readingEdition || group === "main") && <EventTags tags={event.tags}/>}
         <Discussion dailyId={article.id} date={article.date} eventId={event.id} anchor={event.anchor} sampleIndex={article.events!.indexOf(event)}/>
       </Item>)}</List>

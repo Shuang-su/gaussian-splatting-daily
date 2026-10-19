@@ -51,10 +51,10 @@ export function editorialHighlights(report: FeedReport): Entry[] {
 function published<T extends Daily>(daily: T[]) {
   return daily.filter(d => ["published","corrected"].includes(d.status)).sort((a,b) => b.date.localeCompare(a.date));
 }
-export function buildWeekly(daily: FeedReport[]): WeeklyDigest[] {
+export function buildWeekly(daily: FeedReport[], asOf?: string): WeeklyDigest[] {
   const reports = published(daily);
   if (!reports.length) return [];
-  const latestMonday = monday(reports[0].date);
+  const latestMonday = monday(asOf && asOf > reports[0].date ? asOf : reports[0].date);
   const groups = new Map<string, FeedReport[]>();
   for (const report of reports) {
     const start = monday(report.date);
@@ -67,7 +67,7 @@ export function buildWeekly(daily: FeedReport[]): WeeklyDigest[] {
     const week = isoWeek(startDate);
     const seen = new Set<string>();
     const highlights = reports.flatMap(report => editorialHighlights(report)).filter(entry => { if (seen.has(entry.id)) return false; seen.add(entry.id); return true; });
-    const releaseDate = published(daily).filter(report => report.date > week.endDate).at(-1)!.date;
+    const releaseDate = published(daily).filter(report => report.date > week.endDate).at(-1)?.date || asOf!;
     return { ...week, id: `gsd-weekly-${week.year}-${String(week.week).padStart(2,"0")}`, coverageStart: reports.at(-1)!.date, coverageEnd: reports[0].date, releaseDate, reports, highlights };
   }).sort((a,b) => b.startDate.localeCompare(a.startDate));
 }

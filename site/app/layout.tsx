@@ -3,6 +3,7 @@ import { BASE, REPO } from "../lib/catalog";
 import "./globals.css";
 import "./home.css";
 import "./card-navigation.css";
+import "./editorial.css";
 import CardNavigation from "../components/CardNavigation";
 import Header from "../components/Header";
 import BrandMark from "../components/BrandMark";

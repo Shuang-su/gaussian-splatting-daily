@@ -18,6 +18,7 @@ import ArticleInteractionBar from "../../../../../components/ArticleInteractionB
 import PastDaily from "../../../../../components/PastDaily";
 import { weekPicks } from "../../../../../lib/week-picks";
 import { entryUrl } from "../../../../../lib/catalog";
+import ArticleTeasers from "../../../../../components/ArticleTeasers";
 export const dynamicParams = false;
 type RouteParams = Promise<{ year: string; month: string; day: string }>;
 export async function generateStaticParams() {
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: { params: RouteParams }) {
 }
 export default async function Page({ params }: { params: RouteParams }) {
   const p = await params;
-  const { articles } = await loadArchive();
+  const { articles, index } = await loadArchive();
   const a = articles.find((a) => a.date === `${p.year}-${p.month}-${p.day}`);
   if (!a) notFound();
   const orderedImages = a.events ? a.events.flatMap(event=>[...a.images.filter(image=>event.html.includes(imageKey(image))),...event.images || []]) : a.images;
@@ -51,6 +52,7 @@ export default async function Page({ params }: { params: RouteParams }) {
         <ReadingGuide article={a} hasWeek={week.length > 0} />
         {!a.events && a.introductionHtml && <ArticleBody html={a.introductionHtml} />}
         {a.events ? <ArticleEvents article={a} /> : <ArticleBody html={a.bodyHtml} />}
+        <ArticleTeasers articles={index.articles?.filter(article=>article.related.some(link=>link.date===a.date)) || []}/>
         {week.length > 0 && <section className="this-week" id="this-week"><h2>本周重要内容</h2><ul>{week.map(e=><li key={e.id}><Link href={entryUrl(e)}>{e.title}</Link>{!a.readingEdition && <p>{e.summary}</p>}<time dateTime={e.date}>{e.date}</time></li>)}</ul></section>}
         <ArticleFooter article={a} />
       </div>

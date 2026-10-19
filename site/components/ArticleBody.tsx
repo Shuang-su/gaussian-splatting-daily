@@ -1,9 +1,17 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { useImagePreview } from "./ImageGallery";
+import { readingHashTarget } from "../lib/reading-navigation";
 export default function ArticleBody({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const preview = useImagePreview();
+  useEffect(() => {
+    let closed: HTMLDetailsElement[] = [];
+    const before = () => { closed = [...ref.current?.querySelectorAll<HTMLDetailsElement>("details:not([open])") || []]; closed.forEach(element => { element.open = true; }); };
+    const after = () => { closed.forEach(element => { element.open = false; }); closed = []; };
+    window.addEventListener("beforeprint", before); window.addEventListener("afterprint", after);
+    return () => { window.removeEventListener("beforeprint", before); window.removeEventListener("afterprint", after); };
+  }, [html]);
   useEffect(() => {
     let frame: number | undefined;
     function revealHash() {
@@ -16,7 +24,7 @@ export default function ArticleBody({ html }: { html: string }) {
       for (let parent = target.parentElement; parent; parent = parent.parentElement) {
         if (parent instanceof HTMLDetailsElement) parent.open = true;
       }
-      frame = requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+      frame = requestAnimationFrame(() => readingHashTarget(target).scrollIntoView({ block: "start" }));
     }
     revealHash();
     window.addEventListener("hashchange", revealHash);

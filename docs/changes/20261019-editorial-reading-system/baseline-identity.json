@@ -1,0 +1,730 @@
+{
+  "sourceCommit": "cc260bf93135f792c4c4da01dc3e8d1135d08239",
+  "originalReports": {
+    "docs/daily/2026/10/2026-10-01.md": "c760ef8aa2055fa45dafe50f1a5ba80ead6b6b0ae81793243100d277452ca536",
+    "docs/daily/2026/10/2026-10-02.md": "e61d92ba07f48ed5862c7abb7607d27e466a9b6b10b626c263dd3100af207373",
+    "docs/daily/2026/10/2026-10-03.md": "f5f28e4822dbe28818424fc2db29273b760bcc1f99313c102fd098bd80a83929",
+    "docs/daily/2026/09/2026-09-24.md": "fd241575b72fd2c96ce494cac64307eeac20a23335dcb0cb4cfb2ace8ad914e6",
+    "docs/daily/2026/09/2026-09-20.md": "2c0f6e90eacc9e52a1fbb3f6751aaa130162f1578c885e0775717dfbf7908ddd",
+    "docs/daily/2026/09/2026-09-30.md": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
+    "docs/daily/2026/09/2026-09-21.md": "258e1ab22123ea25b350c9c16c09633bf3fdce5a37d13632bd67efee5d9afdc2",
+    "docs/daily/2026/09/2026-09-25.md": "ff92bc258d3e57910a9c509a95e9344dfc4ef5df291c90b0034b696fdfe394fc",
+    "docs/daily/2026/09/2026-09-28.md": "816ebaaff61139c2e81ad01d8d5cc98bed35f6945551a8df3f050a50cdd71776",
+    "docs/daily/2026/09/2026-09-18.md": "0417e49b33cc3c6fb3d03d24a1d3c1418eb22ab87c374cfa57b72c0e76272e2f",
+    "docs/daily/2026/09/2026-09-19.md": "b65a651512220848eba914fc101a459cd458abdc06de2f688ea9b8904e90a767",
+    "docs/daily/2026/09/2026-09-29.md": "6e81b2b664cf8ce848e9bd360c4f86db0e597da969f23add3ebb174fac508f84",
+    "docs/daily/2026/09/2026-09-22.md": "98d72c4280af4c67e474843394b6e339416bc241177473d4196c5fda4ed5bef5",
+    "docs/daily/2026/09/2026-09-26.md": "e554b720f3525143c3f9fb666c811c353e378cea791fbcd70e96c26bbc986688",
+    "docs/daily/2026/09/2026-09-27.md": "e9d32564ab05cc5218bbdadf7a1c294067957999faa30babe6c48d49229445e5",
+    "docs/daily/2026/09/2026-09-23.md": "286cd062fa244812516ee1dfa56eefcaabec2e05d17fe1dca0a90b0f0c5d01e5"
+  },
+  "imports": [
+    {
+      "path": "docs/daily/2026/10/2026-10-04.md",
+      "sha256": "17e8b97395566a5f51125b74f5e34f669a94d664ef9031dc196a698de1891abe",
+      "gitBlob": "44a03927b170d8c6ae443aeca0570e63ddd23ef5"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-05.md",
+      "sha256": "ca7d7c648e09958a8092aa93ce70db35f58dc188bbd0d458b690004776a8f671",
+      "gitBlob": "6eb07e0a2832e2db6b61c6e6ac0a784865e8bffa"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-06.md",
+      "sha256": "8a9a12b30492aa6500efdbe03c9103c68286f943576bf581ccd84ca30daca8b0",
+      "gitBlob": "dde18932901fb3ff51bdcaa2f680b9cb98766fb5"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-07.md",
+      "sha256": "b4adf9c4f019daccc76882c5888f35e8870a195111007ac2ccc1139eb24f9695",
+      "gitBlob": "589ec8b6f3325c7023e94326903ced6e91be2827"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-08.md",
+      "sha256": "dbd50e94e568464a0506b344d5ad2a5cf074b5b6fbb9c273fb79b48ca68297cf",
+      "gitBlob": "c87ac154de1a31653c91a569c5d5dd004c03974c"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-09.md",
+      "sha256": "d0b4ba13c2dc467443717cdd348c7e8b749b56e79639190b6af9701bc808b439",
+      "gitBlob": "b964c2578d4cbfc62c61e5360c8ba5311d618b9f"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-10.md",
+      "sha256": "27512751e3c0f573056f37db892b9f6eb5347573157c079d92aba81f17b458d0",
+      "gitBlob": "a8cc3d587ec44027f4556ad667d8f70635989e36"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-11.md",
+      "sha256": "769264e667d7c38eab91382edd57a34e150f41cc9aa3387f612ceba555768c59",
+      "gitBlob": "688393677035e3788ad92cfd033c5888df3ebcac"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-12.md",
+      "sha256": "924f14b7348589449d1b21d039caeb81334fb63b4c181932be7249fc2601dba2",
+      "gitBlob": "5a144a512732056f8001774d6fc9f5606fec6120"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-13.md",
+      "sha256": "1c7076057c6bbf2998a64d90883ca08e6393d1d9fda48d048315fa24603f84ed",
+      "gitBlob": "bc39de70e39ffb603d5b59e1781ac56d23899914"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-14.md",
+      "sha256": "f94188a5e80d0f5a28c657403783bee3987acdf91d1bf7ebd04a3a245ea18e6b",
+      "gitBlob": "64a3f0d64fd735c8b8a331a68ea818d5e83bb57f"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-15.md",
+      "sha256": "ffda1bc312f82f71d84ce6507d827356f42a693bb9fd63be96d2eaee29dc5244",
+      "gitBlob": "22c0a5f1593b8c70d0692a6f35c0f5f2c79af5c6"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-16.md",
+      "sha256": "79671d582f79fcd33aac72e6dd6e1bd6234684f5cc4eaba80cec4691bf1cc3e3",
+      "gitBlob": "c292b2eb38ed0ba78abc3ebeff41910b4208d4fa"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-17.md",
+      "sha256": "844cbac7ead1e0758dbe06784e168e08e59b3c8ce68490b6a154ccefe62ea90a",
+      "gitBlob": "eb141f6f3725c376cc84bde27eca4e09e4604175"
+    },
+    {
+      "path": "docs/daily/2026/10/2026-10-18.md",
+      "sha256": "865ae3ac611bcb973906d651c5fa284e4710a80e53be6cb3084094d5bc4e18f4",
+      "gitBlob": "887ac7fc601068fc79ccaf99765b1dc1603dcfa9"
+    }
+  ],
+  "catalogue": [
+    {
+      "id": "arxiv:2610.00040",
+      "date": "2026-10-03",
+      "anchor": "section-dssr-3d-view-dependent-referring-segmentation-on-semantic-3d-gaussians",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.00195",
+      "date": "2026-10-03",
+      "anchor": "section-gs-pqm-full-reference-quality-metric-for-compressed-gaussian-splatting",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.00749",
+      "date": "2026-10-03",
+      "anchor": "section-what-builds-the-scene-luminance-dominates-geometry-formation-in-3d-gaussian-splatting",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.00822",
+      "date": "2026-10-03",
+      "anchor": "section-trace-privacy-preserving-next-best-view-over-distributed-3dgs-maps",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.01114",
+      "date": "2026-10-03",
+      "anchor": "section-affine-aligned-atlas-for-canonical-gaussian-construction-in-video-representation",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.01229",
+      "date": "2026-10-03",
+      "anchor": "section-a-compact-explicit-4d-representation-for-dynamic-scenessparc4d",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.01707",
+      "date": "2026-10-03",
+      "anchor": "section-mega-object-level-watertight-mesh-extraction-from-3d-gaussians",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.01744",
+      "date": "2026-10-03",
+      "anchor": "section-3droid-a-dataset-for-3d-reconstruction-in-robotics",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.01876",
+      "date": "2026-10-03",
+      "anchor": "section-evensplat-gaussian-splatting-under-uneven-illumination",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2610.02207",
+      "date": "2026-10-03",
+      "anchor": "section-gala-gaussian-avatar-lightweight-animation",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/04da9085",
+      "date": "2026-10-03",
+      "anchor": "event-256af6ce66fa",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+      "date": "2026-10-03",
+      "anchor": "event-4c7048614107",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+      "date": "2026-10-03",
+      "anchor": "event-364e0463c471",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+      "date": "2026-10-03",
+      "anchor": "event-b8ea1613f532",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+      "date": "2026-10-03",
+      "anchor": "event-0e975fb36257",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+      "date": "2026-10-03",
+      "anchor": "event-45c5e03e2cd6",
+      "kind": "tool"
+    },
+    {
+      "id": "huggingface.co/datasets/wonguen/3DROID",
+      "date": "2026-10-03",
+      "anchor": "event-9b7cfd1728eb",
+      "kind": "tool"
+    },
+    {
+      "id": "aescripts.com/gausser/",
+      "date": "2026-10-02",
+      "anchor": "event-201bdc7a485d",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/130",
+      "date": "2026-10-02",
+      "anchor": "event-48305d82f552",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+      "date": "2026-10-02",
+      "anchor": "event-488cb0ea7bb5",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/splat-transform/pull/340",
+      "date": "2026-10-02",
+      "anchor": "event-bc8f0fd5b15b",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+      "date": "2026-10-02",
+      "anchor": "event-f5b48c8ee473",
+      "kind": "tool"
+    },
+    {
+      "id": "liquiduslabs.com/lulusplat/",
+      "date": "2026-10-02",
+      "anchor": "event-853f99bec576",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/pull/126",
+      "date": "2026-10-01",
+      "anchor": "event-4e6e23c8ff87",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+      "date": "2026-10-01",
+      "anchor": "event-e7ea69b3b4c1",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9610",
+      "date": "2026-10-01",
+      "anchor": "event-b6493d88439b",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9627",
+      "date": "2026-10-01",
+      "anchor": "event-07e7794fda78",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.35573",
+      "date": "2026-09-30",
+      "anchor": "section-less-is-more-genetic-frame-selection-for-efficient-novel-view-synthesis",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.35612",
+      "date": "2026-09-30",
+      "anchor": "section-remote-sensing-sparse-view-3d-gaussian-splatting-via-depth-image-based-rendering",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.35619",
+      "date": "2026-09-30",
+      "anchor": "section-collisionsplatting-collision-aware-motion-planning-in-3dgs-scenes-with-image-conditioned-objectives-and-adjustable-conservatism",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.36520",
+      "date": "2026-09-30",
+      "anchor": "section-distilling-privileged-control-barrier-functions-into-rgb-only-safety-filters-for-dynamic-visual-navigation",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.36693",
+      "date": "2026-09-30",
+      "anchor": "section-aesplat-advancing-pose-free-feed-forward-3d-gaussian-splatting-via-decoupled-appearance-modeling",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.36940",
+      "date": "2026-09-30",
+      "anchor": "section-dispflow-gs-displacement-flow-supervision-with-motion-disentangling-for-monocular-deformable-3d-gaussian-splatting",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.36969",
+      "date": "2026-09-30",
+      "anchor": "section-prior-driven-enhancements-in-3d-gaussian-splatting-normals-and-depths-regularization",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.37115",
+      "date": "2026-09-30",
+      "anchor": "section-nrf-gs-neural-residual-fields-for-expressive-and-compact-gaussian-splatting",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.37816",
+      "date": "2026-09-30",
+      "anchor": "section-wings-reference-free-gaussian-splatting-inpainting-with-3d-native-generative-priors",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.37874",
+      "date": "2026-09-30",
+      "anchor": "section-endoprior-gs-dynamic-endoscopic-reconstruction-with-a-joint-texture-prior",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.37916",
+      "date": "2026-09-30",
+      "anchor": "section-rlx-a-unified-multi-backend-tensor-compiler-and-distributed-runtime-in-rust",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.38177",
+      "date": "2026-09-30",
+      "anchor": "section-imagine3d-llm-teaching-mllms-to-imagine-3d-scenes-before-answering",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+      "date": "2026-09-30",
+      "anchor": "event-ce0f0200e4ce",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+      "date": "2026-09-30",
+      "anchor": "event-377b0508efef",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9601",
+      "date": "2026-09-30",
+      "anchor": "event-175e2d9094b7",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+      "date": "2026-09-30",
+      "anchor": "event-99a9815e4587",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/xiaobiaodu/Mobile-4DGS/commit/675f0a827764383edd749d2c98906761e0fc28fd",
+      "date": "2026-09-30",
+      "anchor": "event-9968018ea0a0",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.30393",
+      "date": "2026-09-29",
+      "anchor": "section-lite-gs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.30865",
+      "date": "2026-09-29",
+      "anchor": "section-rrto-cf3dgs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.30941",
+      "date": "2026-09-29",
+      "anchor": "section-spackle",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.31509",
+      "date": "2026-09-29",
+      "anchor": "section-cleargs",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/52cfb6a7726119d9b1eeb889055c22b984004d63",
+      "date": "2026-09-29",
+      "anchor": "event-7bab264ad3b1",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9584",
+      "date": "2026-09-29",
+      "anchor": "event-a362fe76882a",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/53ac5da8b69e95319e1ca3eb7e76a96a544473bf",
+      "date": "2026-09-29",
+      "anchor": "event-16f4dbb79e36",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/d8e6a267f906261ba3207f55317c67a20081620b",
+      "date": "2026-09-28",
+      "anchor": "event-6426acc7d107",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2519",
+      "date": "2026-09-28",
+      "anchor": "event-52efe1d73b08",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2530",
+      "date": "2026-09-28",
+      "anchor": "event-d676f53308ff",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2539",
+      "date": "2026-09-28",
+      "anchor": "event-3a2431912b09",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/f397c56259096438674dc7398d3d599badad7a24",
+      "date": "2026-09-28",
+      "anchor": "event-e1291fd7ea72",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2444",
+      "date": "2026-09-27",
+      "anchor": "event-290171482a5b",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2460",
+      "date": "2026-09-27",
+      "anchor": "event-f1eac45bda01",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2461",
+      "date": "2026-09-27",
+      "anchor": "event-07e1eb913824",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2463",
+      "date": "2026-09-27",
+      "anchor": "event-e0bcbc173f04",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/314",
+      "date": "2026-09-27",
+      "anchor": "event-ffde57b2c9ad",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.28930",
+      "date": "2026-09-26",
+      "anchor": "section-plenoci\u53d8\u5316\u68c0\u6d4b\u4e0d\u662f\u6bd4\u8f83-gaussian-primitive",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.29836",
+      "date": "2026-09-26",
+      "anchor": "section-splatlabel",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.29963",
+      "date": "2026-09-26",
+      "anchor": "section-adatex4d",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.30245",
+      "date": "2026-09-26",
+      "anchor": "section-cosa-gs\u4eca\u5929\u6700\u503c\u5f97\u770b\u7684\u8bba\u6587\u4ee3\u7801\u538b\u7f29\u8def\u7ebf",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2436",
+      "date": "2026-09-26",
+      "anchor": "event-817ad0215ab9",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.27264",
+      "date": "2026-09-25",
+      "anchor": "section-gausspde\u628a-gaussian-\u672c\u8eab\u5f53-pde-\u79bb\u6563\u57df",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2344",
+      "date": "2026-09-25",
+      "anchor": "event-63541566cc39",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/commit/fe280fdbdc807fb9bf117e01b4d352c0879d07d3",
+      "date": "2026-09-25",
+      "anchor": "event-dd499441532e",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/310",
+      "date": "2026-09-25",
+      "anchor": "event-ffedf292ea5d",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/311",
+      "date": "2026-09-25",
+      "anchor": "event-887be614f208",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.23005",
+      "date": "2026-09-24",
+      "anchor": "section-crp-gs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.23509",
+      "date": "2026-09-24",
+      "anchor": "section-garo",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.25578",
+      "date": "2026-09-24",
+      "anchor": "section-agentic-building-aware-satellite-gs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.25604",
+      "date": "2026-09-24",
+      "anchor": "section-ultra-fast-neural-inference-for-stochastic-gaussian-splatting-denoising",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.26315",
+      "date": "2026-09-24",
+      "anchor": "section-arborsplat",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.26795",
+      "date": "2026-09-24",
+      "anchor": "section-\u03c6-rie\u8fd9\u6761\u5bf9\u4ece\u5b9e\u666f\u5230\u53ef\u4ea4\u4e92\u4e16\u754c\u5f88\u503c\u5f97\u5173\u6ce8",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.22941",
+      "date": "2026-09-23",
+      "anchor": "section-d3gs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.23491",
+      "date": "2026-09-23",
+      "anchor": "section-elevator-vigs",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.24140",
+      "date": "2026-09-23",
+      "anchor": "section-bayesiangs-slam\u4ee3\u7801\u771f\u6b63\u653e\u51fa\u6765\u4e86",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.24531",
+      "date": "2026-09-23",
+      "anchor": "section-dynamic-thermal-gaussians\u672c\u8f6e\u6700\u503c\u5f97\u770b\u7684-4dgs-\u9879\u76ee",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/pull/1053",
+      "date": "2026-09-23",
+      "anchor": "event-f46f6c9c1952",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.21176",
+      "date": "2026-09-22",
+      "anchor": "section-4dgs-fixer",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.21347",
+      "date": "2026-09-22",
+      "anchor": "section-cube-splat360-gaussian-slam-\u503c\u5f97\u52a0\u5165\u56fa\u5b9a\u76d1\u63a7",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.21498",
+      "date": "2026-09-22",
+      "anchor": "section-voxeltto",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.21516",
+      "date": "2026-09-22",
+      "anchor": "section-2d-gauss-mi",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/commit/9ea981b2dbd474b43446d471551d5d0f61032bae",
+      "date": "2026-09-21",
+      "anchor": "event-5c2b046d2792",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2253",
+      "date": "2026-09-21",
+      "anchor": "event-d8f671d8c043",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2254",
+      "date": "2026-09-21",
+      "anchor": "event-17bf556a182f",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/d94c6bfe61731b99016d0df5defaa05adb2aa6a1",
+      "date": "2026-09-20",
+      "anchor": "event-00bf2772424e",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/KhronosGroup/glTF/commit/81762cc328b160eafaa0d577dd547a998401ade9",
+      "date": "2026-09-20",
+      "anchor": "event-8df92b8d2d1c",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/commit/985707da0bfafe7626f308bde1553d00b5427467",
+      "date": "2026-09-20",
+      "anchor": "event-ba8ca9f00c73",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/nerfstudio-project/gsplat/commit/512d366b67073d77ca099ede742683c165dfc23b",
+      "date": "2026-09-20",
+      "anchor": "event-c72b077597f4",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/302",
+      "date": "2026-09-20",
+      "anchor": "event-2deb1fdd3b03",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.19421",
+      "date": "2026-09-19",
+      "anchor": "section-37-reflective-gsrgs-\u4e5f\u662f\u4eca\u5929\u503c\u5f97\u7559\u7684-p2",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.19463",
+      "date": "2026-09-19",
+      "anchor": "section-particlesplat",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.19907",
+      "date": "2026-09-19",
+      "anchor": "section-gs-pi\u628a-baked-radiance-gs-\u53d8\u6210-pbr-gaussian-asset",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.20348",
+      "date": "2026-09-19",
+      "anchor": "section-eligsir\u5f88\u503c\u5f97\u52a0\u5165-continual-gs-mapping-\u76d1\u63a7",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/commit/6e0c0d3816ca00d61ce61441d0903d46a649dc73",
+      "date": "2026-09-19",
+      "anchor": "event-fe704d35af76",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/9443",
+      "date": "2026-09-19",
+      "anchor": "event-9b9a48570ee5",
+      "kind": "tool"
+    },
+    {
+      "id": "arxiv:2609.17422",
+      "date": "2026-09-18",
+      "anchor": "section-8-avatar--human--generative-3d",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.18737",
+      "date": "2026-09-18",
+      "anchor": "section-p2--geometry-beneath-the-waves",
+      "kind": "paper"
+    },
+    {
+      "id": "arxiv:2609.18898",
+      "date": "2026-09-18",
+      "anchor": "section-p2--normlift",
+      "kind": "paper"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/commit/4b9f93604626019d55de73f50b1abc61eb9d01c0",
+      "date": "2026-09-18",
+      "anchor": "event-1d1be72df46e",
+      "kind": "tool"
+    },
+    {
+      "id": "github.com/playcanvas/engine/commit/113173b0ee1afa4fbc62b66071747926bcf29a2c",
+      "date": "2026-09-18",
+      "anchor": "event-9d398681bdf0",
+      "kind": "tool"
+    }
+  ]
+}

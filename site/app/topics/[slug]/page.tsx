@@ -30,6 +30,7 @@ export default async function Page({
         title={t.label}
         description=""
         entries={index.entries.filter((e) => e.topics.includes(slug))}
+        articles={index.articles?.filter(article=>article.topics.includes(slug))}
       />
       <section className="shell related-daily">
         <h2>相关日报</h2>

@@ -7,6 +7,7 @@ import { BASE } from "../lib/catalog";
 import { articlePath, HISTORY_CHANGE, markerFrom, mergeMarker, navigationStore, ordinaryClick, returnDistance, sameDocument, sitePath, UI_CAPTURE, type NavigationMarker, type PageSnapshot, type PageUI } from "../lib/card-navigation";
 import { CARD_TIMING, CardAnimator, captureCard, retainThumbnail, visualElements, type CardVisual } from "../lib/card-transition-visual";
 import { CardBackdrop } from "../lib/card-transition-backdrop";
+import { readingHashTarget } from "../lib/reading-navigation";
 
 type Transaction = {
   kind: "enter" | "return" | "history"; href: string; marker: NavigationMarker;
@@ -210,7 +211,7 @@ export default function CardNavigation({ children }: { children: ReactNode }) {
           const section = destination.closest<HTMLElement>("[data-event-id], section") || destination;
           chapterFocus = section.querySelector<HTMLElement>("h1, h2, h3, h4") || section;
         }
-        if (destination) destination.scrollIntoView({ block: "start", behavior: "instant" });
+        if (destination) readingHashTarget(destination).scrollIntoView({ block: "start", behavior: "instant" });
         else window.scrollTo({ top: 0, behavior: "instant" });
       }
       frame.current = requestAnimationFrame(() => {

@@ -1,9 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { createHash } from "node:crypto";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { buildArchive, parseArticle } from "../lib/content";
+import { buildArchive, parseArticle, ROOT } from "../lib/content";
 import { searchItems } from "../lib/search";
 import ReadingGuide from "../components/ReadingGuide";
 test("archive owns papers once and every catalogue entry reaches a rendered target", async () => {
@@ -31,16 +32,16 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
       assert.match(e.summary, /。$/);
     }
   }
-  assert.equal(index.entries.filter(e => e.kind === "paper").length, 52);
-  assert.equal(index.entries.filter(e => e.kind === "tool" && e.date < "2026-10-01").length, 36);
-  assert.equal(index.entries.filter(e => e.kind === "tool" && e.date >= "2026-10-01").length, 17);
-  assert.equal(index.daily.length, 16);
+  assert.equal(index.entries.filter(e => e.kind === "paper").length, 116);
+  const baseline = JSON.parse(fs.readFileSync(`${ROOT}/docs/changes/20261019-editorial-reading-system/baseline-identity.json`, "utf8"));
+  for (const entry of baseline.catalogue) { const current = index.entries.find(e => e.id === entry.id)!; assert.ok(current); assert.equal(current.date, entry.date); assert.equal(current.anchor, entry.anchor); }
+  assert.equal(index.daily.length, 31);
   assert.ok(index.daily.every(d => !("paperSummaries" in d)));
   const thermal = index.entries.find(e => e.id === "arxiv:2609.24531")!;
   const thermalArticle = articles.find(a => a.date === thermal.date)!;
   assert.equal(thermal.title, "Dynamic Thermal Gaussians: Multimodal 4D Gaussian Splatting");
-  assert.ok(thermalArticle.bodyHtml.includes(thermal.title));
-  assert.ok(thermalArticle.bodyHtml.includes(`id="${thermal.anchor}"`));
+  assert.ok(thermalArticle.archiveHtml.includes(thermal.title));
+  assert.ok((thermalArticle.bodyHtml + thermalArticle.archiveHtml).includes(`id="${thermal.anchor}"`));
   assert.ok(thermalArticle.toc.some(t => t.id === thermal.anchor && t.title === "Dynamic Thermal Gaussians：本轮最值得看的 4DGS 项目"));
   assert.equal(index.entries.find(e => e.id === "arxiv:2609.30245")?.title, "COSA-GS");
   for (const a of articles) {
@@ -52,7 +53,7 @@ test("archive owns papers once and every catalogue entry reaches a rendered targ
     assert.match(a.html, /<table(?:\s|>)/);
   }
   assert.ok(
-    articles.find((a) => a.date === "2026-09-18")?.text.includes("增量版"),
+    articles.find((a) => a.date === "2026-09-18")?.archiveHtml.includes("增量版"),
   );
   const latest=articles.find(a=>a.date==='2026-09-30')!;
   assert.equal(latest.readingGuide?.rows.length,0);

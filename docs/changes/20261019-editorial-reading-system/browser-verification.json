@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-19",
+  "preview": "http://127.0.0.1:4337/gaussian-splatting-daily/",
+  "environment": "Codex in-app Chromium browser; CSS viewport simulation, not physical devices",
+  "viewports": [
+    {
+      "width": 375,
+      "height": 812,
+      "page": "tool article and legacy daily anchor",
+      "documentWidth": 375,
+      "tableWidth": 327,
+      "legacyHeadingTop": 75.9,
+      "headerBottom": 56,
+      "result": "no document overflow; old LiTe-GS anchor shows its title"
+    },
+    {
+      "width": 430,
+      "height": 932,
+      "page": "tool article",
+      "documentWidth": 430,
+      "bodyWidth": 382,
+      "fontSize": 16,
+      "lineHeight": 28.8,
+      "bylineGap": 32,
+      "brandMarkWidth": 17,
+      "result": "heading, body, metadata and disclosure readable"
+    },
+    {
+      "width": 820,
+      "height": 1180,
+      "page": "home, daily, weekly",
+      "documentWidth": 820,
+      "articleBodyWidth": 680,
+      "homeRailWidth": 80,
+      "homeListLeft": 124,
+      "homeListRight": 776,
+      "result": "44px gutters beside rail/list; cover calendar and title division retained"
+    },
+    {
+      "width": 1180,
+      "height": 820,
+      "page": "paper and topic article",
+      "documentWidth": 1180,
+      "articleBodyWidth": 680,
+      "result": "landscape tablet text width and source links verified"
+    },
+    {
+      "width": 1441,
+      "height": 958,
+      "page": "daily and search",
+      "documentWidth": 1441,
+      "articleBodyWidth": 680,
+      "fontSize": 17,
+      "lineHeight": 30.6,
+      "result": "desktop body and expanded deep reading verified"
+    }
+  ],
+  "flows": [
+    "Keyboard Enter opens the native RAD disclosure; desktop click opens daily budget disclosure.",
+    "Light and dark themes retain readable text, source links, table and disclosure surfaces.",
+    "Reduced-motion emulation preserves directory operation; mobile directory closes after jump and places event title at about 92px.",
+    "Legacy 2026-09-29/#section-lite-gs resolves to LiTe-GS title instead of hiding that title behind the header.",
+    "Search ResStreamGS exposes daily, paper entry and standalone article; new paper entry targets event-6bbe02e03bc8 in the reader, not the source archive.",
+    "Fresh search session → paper event → visible header Return Source restores the query URL, result list and focused result link.",
+    "Home list → daily → Return Source restores home. UI measurements taken only after rendered state, not immediate React click return.",
+    "Image preview opens with original link and credit, switches image, and closes.",
+    "No warning/error console entries in the checked browser tab."
+  ],
+  "notes": [
+    "An initial failed link action did not reproduce after a fresh page. Subsequent return clicks targeted an auto-hidden header; exposing the header by scrolling up and waiting for search results established the real return flow. No speculative route rewrite was applied.",
+    "Print open/restore handlers are implemented; physical printing, iPhone/iPad Safari gestures, GPU/software performance reproduction and network-failure injection were not performed.",
+    "Screenshot files stay in the project-local ignored work directory; source/raw records are covered by committed hash tests."
+  ]
+}

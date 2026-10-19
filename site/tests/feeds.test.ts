@@ -56,12 +56,12 @@ test("daily and weekly limits bound feeds while preserving the full page model",
   assert.ok(feeds.weekly.includes(SITE_URL+weeklyUrl(weeks[0])));
   assert.deepEqual(buildFeeds([]).daily.includes("Invalid Date"),false);
 });
-test("canonical reports still produce two closed weeks shared by web and RSS", async () => {
-  const {articles,index}=await buildArchive(), weeks=buildWeekly(articles), feeds=buildFeeds(articles,weeks);
-  assert.deepEqual(weeks.map(w=>[w.year,w.week,w.reports.length]),[[2026,39,7],[2026,38,3]]);
+test("source-bound weekly editions close five weeks shared by web and RSS", async () => {
+  const {articles,index,weeks}=await buildArchive(), feeds=buildFeeds(articles,weeks);
+  assert.deepEqual(weeks.map(w=>[w.year,w.week,w.reports.length]),[[2026,42,7],[2026,41,7],[2026,40,7],[2026,39,7],[2026,38,3]]);
   assert.equal((feeds.daily.match(/<item>/g)||[]).length,articles.length);
-  assert.equal((feeds.weekly.match(/<item>/g)||[]).length,2);
+  assert.equal((feeds.weekly.match(/<item>/g)||[]).length,5);
   for(const week of weeks){assert.ok(feeds.weekly.includes(SITE_URL+weeklyUrl(week)));for(const report of week.reports)assert.ok(feeds.weekly.includes(report.headline));}
-  assert.ok(!feeds.weekly.includes('/weekly/2026/40/'));
+  assert.ok(!feeds.weekly.includes('/weekly/2026/43/'));
   for(const row of articles[0].events!.filter(e=>e.group === "main")) assert.ok(feeds.daily.includes(escapeXml(row.title)), `Daily RSS omits a displayed reading-guide event: ${row.title}`);
 });

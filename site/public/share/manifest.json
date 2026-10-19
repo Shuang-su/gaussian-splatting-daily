@@ -18,8 +18,8 @@
   },
   "default": {
     "url": "/share/default.png",
-    "date": "2026-10-03",
-    "sha256": "7df7b7bc96a39cd1180a23d79c0b8ba1c47ced8c8c6dca3db2f7bbf55c68ecc6"
+    "date": "2026-10-18",
+    "sha256": "f42d3ce23081dae568955c8d806127150962c4bac7cbc77878350286c4584180"
   },
   "reports": {
     "2026-09-18": {
@@ -259,6 +259,231 @@
         "url": "/media/originals/gslite-30.png",
         "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
         "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+        "sha256": "60b44c3f274799ca316e70449a913535a7b93fc4781a97dc1bde7ea6466c85ae"
+      }
+    },
+    "2026-10-04": {
+      "date": "2026-10-04",
+      "url": "/share/2026-10-04.png",
+      "title": "godotGS 收紧显存预算，LichtFeld 推进非破坏节点编辑",
+      "contentHash": "17e8b97395566a5f51125b74f5e34f669a94d664ef9031dc196a698de1891abe",
+      "inputHash": "20c42e93c3d6d02b46e0322345dd1083786a62807a1a59d3bb7721017eb9b528",
+      "sha256": "67a49d2716510cadab10fe8662eebb10a074f53260ed0bee5ed74ab8442686ed",
+      "bytes": 424445,
+      "cover": {
+        "url": "/media/originals/lichtfeld-meihogen.jpg",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5"
+      }
+    },
+    "2026-10-05": {
+      "date": "2026-10-05",
+      "url": "/share/2026-10-05.png",
+      "title": "godotGS 暴露渲染容量丢失，LichtFeld 缩短训练启动等待",
+      "contentHash": "ca7d7c648e09958a8092aa93ce70db35f58dc188bbd0d458b690004776a8f671",
+      "inputHash": "7216f88c2143bf7371f2d8de7331ff6ff24df32d9d7d0b9030b29e906b4ece91",
+      "sha256": "1babd3d488e7767ef0e87fc4c33c380c603eb8e717683f5be1704ec137f88978",
+      "bytes": 417815,
+      "cover": {
+        "url": "/media/originals/lichtfeld-viewer.png",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "b84dd8d8ec73a32336979c57395838884be59a528b60e1002afe0624cc55ae56"
+      }
+    },
+    "2026-10-06": {
+      "date": "2026-10-06",
+      "url": "/share/2026-10-06.png",
+      "title": "SuperSplat 改进大文件发布，Spirula 接入 E57 激光扫描数据",
+      "contentHash": "8a9a12b30492aa6500efdbe03c9103c68286f943576bf581ccd84ca30daca8b0",
+      "inputHash": "78267a1ce08b3563b2121e84d1f9c0c23e916c5fdd9eab5336bf8f6f65da3473",
+      "sha256": "8afd1096a8b1251eb032cab1070888e9452bfb777b0adccd544e379878cd6a55",
+      "bytes": 438113,
+      "cover": {
+        "url": "/media/originals/supersplat-webgpu-editor.png",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "credit": "SuperSplat 项目演示",
+        "sha256": "bc8ad8523309b497f28b6c81a8839948bc800a4919d696de4f9d395f237fc3c3"
+      }
+    },
+    "2026-10-07": {
+      "date": "2026-10-07",
+      "url": "/share/2026-10-07.png",
+      "title": "Spirula 发布新版本，LichtFeld 统一评测位深与曝光默认值",
+      "contentHash": "b4adf9c4f019daccc76882c5888f35e8870a195111007ac2ccc1139eb24f9695",
+      "inputHash": "72614c6996ba642959f2989ab3b8cacfc35a5e709054cfc7559cd774ee8a31ed",
+      "sha256": "0f6bc38204e518d94da393797a0c418a78f60b2ce31ff897b72a158cf10cdf67",
+      "bytes": 223285,
+      "cover": {
+        "url": "/media/originals/spirula-rf.png",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图",
+        "sha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948"
+      }
+    },
+    "2026-10-08": {
+      "date": "2026-10-08",
+      "url": "/share/2026-10-08.png",
+      "title": "PlayCanvas 让大场景逐层细化，SplatTransform 加入 ZIP64",
+      "contentHash": "dbd50e94e568464a0506b344d5ad2a5cf074b5b6fbb9c273fb79b48ca68297cf",
+      "inputHash": "e3279d043702bd67cbfb1253625141e8ba9f832832d4f4e9b67ea864f7289bea",
+      "sha256": "60ff2cdf91714283e8794108319c709f9de6c77a0b89abc274d77fb86972e06e",
+      "bytes": 149088,
+      "cover": {
+        "url": "/media/originals/supersplat-lod-controls.png",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "credit": "PlayCanvas 项目演示",
+        "sha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0"
+      }
+    },
+    "2026-10-09": {
+      "date": "2026-10-09",
+      "url": "/share/2026-10-09.png",
+      "title": "Spirula 加入稠密点云步骤，LichtFeld 修复 RAD 导出",
+      "contentHash": "d0b4ba13c2dc467443717cdd348c7e8b749b56e79639190b6af9701bc808b439",
+      "inputHash": "c5397da750bb758b1194ed0513666bc6a25c873e7cafeedc8e844c6b4c606520",
+      "sha256": "2830e9396a1ff50ad70a770b34cac558547140658e87ef701a7ff59b3041afb7",
+      "bytes": 219921,
+      "cover": {
+        "url": "/media/originals/spirula-rf.png",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图",
+        "sha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948"
+      }
+    },
+    "2026-10-10": {
+      "date": "2026-10-10",
+      "url": "/share/2026-10-10.png",
+      "title": "LichtFeld 0.5.4 发布，SplatTransform 修复 Worker 失败回退",
+      "contentHash": "27512751e3c0f573056f37db892b9f6eb5347573157c079d92aba81f17b458d0",
+      "inputHash": "f2952377c94e1a0ba89d19d3d6a4bb20c1249936fe3125b7056fe21ac80e6a21",
+      "sha256": "46636ac273f7e2d2a07bb15ce982ec3d068307490baf4e76ee7aaf0091d599ee",
+      "bytes": 424608,
+      "cover": {
+        "url": "/media/originals/lichtfeld-meihogen.jpg",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5"
+      }
+    },
+    "2026-10-11": {
+      "date": "2026-10-11",
+      "url": "/share/2026-10-11.png",
+      "title": "3DGS-LOD 公开分层资产工具，LichtFeld 修复相机与评测边界",
+      "contentHash": "769264e667d7c38eab91382edd57a34e150f41cc9aa3387f612ceba555768c59",
+      "inputHash": "0f70e3f92284112da4234208e10b6bb747e4c83fb6cd00cf7724f8b10eae6bf5",
+      "sha256": "98b06b798b09bd69ad6ae6af7bb82e3c06bd6b2cd6a994780b42a6b40ee4980d",
+      "bytes": 417129,
+      "cover": {
+        "url": "/media/originals/lichtfeld-viewer.png",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "b84dd8d8ec73a32336979c57395838884be59a528b60e1002afe0624cc55ae56"
+      }
+    },
+    "2026-10-12": {
+      "date": "2026-10-12",
+      "url": "/share/2026-10-12.png",
+      "title": "DynaSem-GS 公开动态语义建图，LichtFeld 修复保存与训练终态",
+      "contentHash": "924f14b7348589449d1b21d039caeb81334fb63b4c181932be7249fc2601dba2",
+      "inputHash": "70a7305b62749edc3b63325217db6bc5ed4b29402efa8603527bdde7aed0df5c",
+      "sha256": "63a039c1f9c15cdc57f47c97b38c41b786c0846283edf52e29c3b0d1be88dbc5",
+      "bytes": 428305,
+      "cover": {
+        "url": "/media/originals/lichtfeld-meihogen.jpg",
+        "source": "https://lichtfeld.io/",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5"
+      }
+    },
+    "2026-10-13": {
+      "date": "2026-10-13",
+      "url": "/share/2026-10-13.png",
+      "title": "Spirula 改进稠密初始化，LichtFeld 统一蒙版语义",
+      "contentHash": "1c7076057c6bbf2998a64d90883ca08e6393d1d9fda48d048315fa24603f84ed",
+      "inputHash": "180957aafd682bd220110224fb188a7d84869402c832f57308ea09f29764c3d0",
+      "sha256": "c6a25bac93756b0edbdc9b3754775f5014b0dc7a51f8ccf7c161866fc7e23a6f",
+      "bytes": 220645,
+      "cover": {
+        "url": "/media/originals/spirula-rf.png",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图",
+        "sha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948"
+      }
+    },
+    "2026-10-14": {
+      "date": "2026-10-14",
+      "url": "/share/2026-10-14.png",
+      "title": "Gausify Orbit 降低本地重建门槛，LichtFeld 加固插件下载",
+      "contentHash": "f94188a5e80d0f5a28c657403783bee3987acdf91d1bf7ebd04a3a245ea18e6b",
+      "inputHash": "dc98216ee58e53c8616f7563c5ac374ea1c20d42929f6d619dc801daec805075",
+      "sha256": "404a6a1db8751fc8d185d29d03711f78650977e9a5187ba8d8e50255ade66d21",
+      "bytes": 415921,
+      "cover": {
+        "url": "/media/originals/lichtfeld-viewer.png",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "credit": "LichtFeld 项目演示",
+        "sha256": "b84dd8d8ec73a32336979c57395838884be59a528b60e1002afe0624cc55ae56"
+      }
+    },
+    "2026-10-15": {
+      "date": "2026-10-15",
+      "url": "/share/2026-10-15.png",
+      "title": "PlayCanvas 修复移动 WebGPU 排序，LichtFeld 校正对齐深度",
+      "contentHash": "ffda1bc312f82f71d84ce6507d827356f42a693bb9fd63be96d2eaee29dc5244",
+      "inputHash": "ac70568913a82c11592913912db568eaed2f6cf73d098190992f45bfad164adb",
+      "sha256": "2a89b7dc3d6f97b835acc253a14eeb0d66ba75f69aa8378af83b30221f92749f",
+      "bytes": 151615,
+      "cover": {
+        "url": "/media/originals/supersplat-lod-controls.png",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "credit": "PlayCanvas 项目演示",
+        "sha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0"
+      }
+    },
+    "2026-10-16": {
+      "date": "2026-10-16",
+      "url": "/share/2026-10-16.png",
+      "title": "PlayCanvas 减少 WebGPU 排序缓冲，InfiniSplat v2 公开实现",
+      "contentHash": "79671d582f79fcd33aac72e6dd6e1bd6234684f5cc4eaba80cec4691bf1cc3e3",
+      "inputHash": "f3a7ae1475a778ce3f659bb480a9b80940703231d7835eac1f8576e7b8841759",
+      "sha256": "6ac694d7fc21cd03da12451af0941864022180e57d7538cf778eac01580c24b7",
+      "bytes": 150648,
+      "cover": {
+        "url": "/media/originals/supersplat-lod-controls.png",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "credit": "PlayCanvas 项目演示",
+        "sha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0"
+      }
+    },
+    "2026-10-17": {
+      "date": "2026-10-17",
+      "url": "/share/2026-10-17.png",
+      "title": "Spirula v2026.10.16 发布，LichtFeld 支持网格初始化训练",
+      "contentHash": "844cbac7ead1e0758dbe06784e168e08e59b3c8ce68490b6a154ccefe62ea90a",
+      "inputHash": "5afa00294196b2d4f7eb9b4e9dbe0ed43aab9d35fefa699cdb4e883d767885da",
+      "sha256": "191ed9c024cc4521f803cf87d045d83286a04b149fbef3d495efaf8f9ff5fd72",
+      "bytes": 220957,
+      "cover": {
+        "url": "/media/originals/spirula-rf.png",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "credit": "Spirula Studio 9 月 30 日报道题图",
+        "sha256": "6b9addb83dd9525205bafff0eab8dba7e065bfebc5ce0f1adea7efad0da51948"
+      }
+    },
+    "2026-10-18": {
+      "date": "2026-10-18",
+      "url": "/share/2026-10-18.png",
+      "title": "Gaussian-Splat-Lite 1.3.1 发布，OOOSplat 接入多种外部格式",
+      "contentHash": "865ae3ac611bcb973906d651c5fa284e4710a80e53be6cb3084094d5bc4e18f4",
+      "inputHash": "0687c6c305ea452517e3204c4d4c7b489123371dc6605380f5981f580305866f",
+      "sha256": "f42d3ce23081dae568955c8d806127150962c4bac7cbc77878350286c4584180",
+      "bytes": 181941,
+      "cover": {
+        "url": "/media/originals/gslite-30.png",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+        "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示",
         "sha256": "60b44c3f274799ca316e70449a913535a7b93fc4781a97dc1bde7ea6466c85ae"
       }
     }

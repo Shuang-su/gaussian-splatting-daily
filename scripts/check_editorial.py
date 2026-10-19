@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Validate research coverage and event completeness, with legacy report support."""
 from __future__ import annotations
-import argparse,re,sys,json
+import argparse,re,sys,json,hashlib
 from validate_daily import DAILY_ROOT,ARXIV_RE,parse_frontmatter,daily_files
 HEADINGS=re.compile(r'^#{1,2} (\d{1,2})\. (.+)$',re.M)
 CATEGORIES=[r'今日最值得看',r'SuperSplat\s*/\s*PlayCanvas',r'可实际运行.*开源',r'4D\s*/\s*Dynamic',r'Viewer\s*/\s*Editor',r'Compression\s*/\s*Format',r'Training\s*/\s*Reconstruction',r'Avatar\s*/\s*Human',r'软件.*硬件.*平台厂商',r'研究论文|论文与研究',r'海外.*社区',r'中文.*社区',r'今[天日]最值得实际测试']
@@ -38,15 +38,37 @@ def event_check(text, meta, body):
  if not events and not NO_CHANGE.search(body):errors.append('empty edition must explain no change or source failure')
  return errors
 
-def check(text:str)->list[str]:
+def reading_summaries(text:str, reading:str|None)->dict[str,str]:
+ if not reading:return {}
+ meta=parse_frontmatter(text)
+ header,body=reading.split('---\n',2)[1:]
+ fields={m.group(1):json.loads(m.group(2)) for m in re.finditer(r'^(version|report|sourceHash|events): (.+)$',header,re.M)}
+ if fields.get('version')!=2 or fields.get('report')!=meta.get('id') or fields.get('sourceHash')!=hashlib.sha256(text.encode()).hexdigest():raise ValueError('reading edition does not match its research record')
+ sections=re.split(r'^## .+\n',body,flags=re.M)[1:]
+ events=fields.get('events',[])
+ if len(sections)!=len(events) or len({e.get('id') for e in events})!=len(events):raise ValueError('reading event mapping is incomplete or duplicated')
+ summaries={}
+ for event,section in zip(events,sections):
+  if not event.get('sourceRefs') or event.get('source') not in text:raise ValueError('reading source mapping is missing')
+  if event.get('id','').startswith('arxiv:'):
+   identifier=event['id'][6:]
+   if not re.search(r'<!--\s*arxiv:'+re.escape(identifier)+r'\s*-->',text):continue
+   paragraph=section.strip().split('\n\n')[0]
+   if len(paragraph)<30 or not re.search(r'[\u4e00-\u9fff]',paragraph):raise ValueError('reading paper needs a specific Chinese summary')
+   summaries[identifier]=paragraph
+ return summaries
+
+def check(text:str, reading:str|None=None)->list[str]:
  errors=[];meta=parse_frontmatter(text)
+ try: summaries=reading_summaries(text,reading)
+ except (ValueError,KeyError,TypeError,IndexError) as error:return [f'invalid reading edition: {error}']
  body=text.split('---\n',2)[2] if text.startswith('---\n') and len(text.split('---\n',2))==3 else text
  if meta.get('status') not in {'published','corrected'}:errors.append('report has not been marked published/corrected')
  if re.search(r'^  layout: events$',text,re.M):
   errors+=event_check(text,meta,body)
   for phrase in PLACEHOLDERS:
    if phrase in body:errors.append(f'editorial placeholder remains: {phrase}')
-  errors+=source_checks(body,meta)
+  errors+=source_checks(body,meta,summaries)
   return errors
  headings=list(HEADINGS.finditer(text));titles=re.findall(r'^#{1,3} (.+)$',text,re.M)
  legacy=meta.get('date','')<'2026-09-30'
@@ -64,10 +86,10 @@ def check(text:str)->list[str]:
   if len(meaningful)<60 and not (NO_CHANGE.search(content) and len(meaningful)>=18):errors.append(f'section {m.group(1)} is incomplete')
  for phrase in PLACEHOLDERS:
   if phrase in text:errors.append(f'editorial placeholder remains: {phrase}')
- errors+=source_checks(body,meta)
+ errors+=source_checks(body,meta,summaries)
  return errors
 
-def source_checks(body,meta):
+def source_checks(body,meta,summaries=None):
  errors=[]
  if not re.search(r'https://',body) and not (NO_CHANGE.search(body) and re.search(r'窗口|检查范围|检索范围',body)):
   errors.append('report needs source links or an explicit search-window explanation')
@@ -76,7 +98,7 @@ def source_checks(body,meta):
   for i,m in enumerate(matches):
    block=body[m.end():matches[i+1].start() if i+1<len(matches) else len(body)]
    summary=re.search(r'(?:\*\*)?编辑摘要：(?:\*\*)?\s*([^\n]+)',block)
-   if not summary or len(summary.group(1).strip())<30:errors.append(f'arXiv {m.group(1)} needs a specific editorial summary')
+   if (not summary or len(summary.group(1).strip())<30) and not (summaries or {}).get(m.group(1)):errors.append(f'arXiv {m.group(1)} needs a specific editorial summary')
  return errors
 
 def main():
@@ -88,7 +110,8 @@ def main():
  for path in paths:
   if not path.exists():errors.append(f'missing {path}');continue
   if parse_frontmatter(path.read_text()).get('status') in {'published','corrected'} or not args.all:
-   errors += [f'{path.name}: {e}' for e in check(path.read_text())]
+   reader=DAILY_ROOT.parent/'reading'/path.name
+   errors += [f'{path.name}: {e}' for e in check(path.read_text(),reader.read_text() if reader.exists() and re.search(r'^version: 2$',reader.read_text(),re.M) else None)]
  if errors:
   print('\n'.join('EDITORIAL INCOMPLETE: '+e for e in errors),file=sys.stderr);raise SystemExit(1)
  print(f'Editorial gate passed for {len(paths)} report(s)')

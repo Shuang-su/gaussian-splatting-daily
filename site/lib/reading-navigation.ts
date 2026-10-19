@@ -1,6 +1,12 @@
 import type { Article } from "./types";
 
 export interface ReadingLink { id: string; title: string; children?: ReadingLink[] }
+/** A retained heading alias sits inside prose, after the visible event title. */
+export function readingHashTarget(target: Element): Element {
+  return target.classList.contains("legacy-anchor")
+    ? target.closest(".news-event")?.querySelector(".event-title") || target
+    : target;
+}
 const groups = { brief: "简讯", paper: "论文", analysis: "分析与实践" } as const;
 export function readingGroupLabel(article: Article, group: keyof typeof groups) {
   return article.readingEdition && group === "paper" ? "研究简讯" : groups[group];

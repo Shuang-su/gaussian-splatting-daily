@@ -72,7 +72,7 @@ export default function Search() {
         {hasSearch ? <>
           <p aria-live="polite" className="search-status">{error ? "搜索索引暂不可用，请稍后刷新。" : index ? `找到 ${results.length} 条结果${query ? `，关键词「${query}」` : ""}` : "正在加载搜索索引…"}</p>
           <div className="search-results">{results.map((result) => <article data-article-origin={`search:${result.id}`} key={result.id}>
-            <div className="search-result-copy"><p className="eyebrow">{result.kind === "daily" && <span>Metaflow · </span>}{result.date} · {kindLabel[result.kind]}</p><h2><Link href={result.url}>{result.title}</Link></h2><p className="search-result-summary">{result.summary}</p></div>
+            <div className="search-result-copy"><p className="eyebrow">{(result.kind === "daily" || result.format === "article") && <span>Metaflow · </span>}{result.date} · {result.format === "article" ? result.kind === "paper" ? "论文解读" : result.kind === "tool" ? "工具解读" : "专题" : kindLabel[result.kind]}</p><h2><Link href={result.url}>{result.title}</Link></h2><p className="search-result-summary">{result.summary}</p></div>
             {images.get(result.id) && <div className="search-result-image"><SourceImage image={images.get(result.id)} href={result.url} label={`阅读：${result.title}`} sizes="(max-width: 767px) 28vw, 164px" /></div>}
           </article>)}{index && !error && !results.length && <p className="search-empty">没有匹配结果。可减少关键词，或清除内容类型与主题筛选。</p>}</div>
         </> : <div className="search-start"><SearchHistory items={recent} onClear={() => { clearSearchHistory(); setRecent([]); input.current?.focus(); }} /><p className="search-empty">输入关键词，搜索日报、论文、工具和技术动态。</p></div>}

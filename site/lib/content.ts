@@ -17,6 +17,9 @@ import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
 import { renderEvents } from "./editorial";
 import { applyReadingEdition } from "./reading-edition";
+import { parseMarkdown } from "./markdown";
+import { loadLongform, loadWeeklyEditorial } from "./longform";
+import { buildWeekly } from "./feeds";
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
 export { SITE_URL } from "./catalog";
@@ -86,10 +89,7 @@ export async function parseArticle(
   media: ImageManifest = loadImageManifest(ROOT),
 ): Promise<Article> {
   const { data: meta, content } = matter(markdown);
-  const tree = unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .parse(content) as MdRoot;
+  const tree = parseMarkdown(content);
   const reportIndex = tree.children.findIndex(
     (n) => n.type === "heading" && /深度情报日报|今日概览/.test(plain(n)),
   );
@@ -321,8 +321,8 @@ export async function parseArticle(
     if (portal.layout === "events") {
       if (!portal.editorial || portal.editorial.version !== 1) throw Error(`${filePath}: invalid editorial layout`);
       const eventNodes = root.children.map(splitProcessParagraph).filter((node): node is HastRoot["children"][number] => Boolean(node));
-      const layout = renderEvents(portal.editorial, tree.children, content, eventNodes, readingGuide, filePath);
-      events = layout.events.map(event => ({...event, images: event.images?.map(image => resolveImage(image, media))}));
+      const layout = renderEvents({ ...portal.editorial, events: portal.editorial.events.map((event: import("./types").EditorialEvent) => ({ ...event, images: event.images?.map(image => resolveImage(image, media)) })) }, tree.children, content, eventNodes, readingGuide, filePath);
+      events = layout.events;
       introductionHtml = layout.introductionHtml;
       archiveHtml = layout.archiveHtml + serialize([...new Map(archive.filter(node => !prefix.has(node)).map(node => [serialize([node]), node])).values()]);
       for (const event of events) { targets.add(event.anchor); for (const alias of event.aliases || []) targets.add(alias); }
@@ -332,7 +332,7 @@ export async function parseArticle(
   };
   const renderer = unified()
     .use(remarkRehype)
-    .use(rehypeSanitize, { ...defaultSchema, clobberPrefix: "" })
+    .use(rehypeSanitize, { ...defaultSchema, clobberPrefix: "", tagNames: [...defaultSchema.tagNames!, "details", "summary"], attributes: { ...defaultSchema.attributes, details: ["className"] } })
     .use(rehypeSlug, { prefix: "section-" })
     .use(collect)
     .use(rehypeStringify);
@@ -439,8 +439,7 @@ export async function parseArticle(
     events,
   };
 }
-let archivePromise:
-  Promise<{ articles: Article[]; index: PortalIndex }> | undefined;
+let archivePromise: ReturnType<typeof buildArchive> | undefined;
 export function loadArchive() {
   if (process.env.NODE_ENV === "development") return buildArchive();
   return (archivePromise ||= buildArchive());
@@ -470,9 +469,10 @@ export async function buildArchive(root = ROOT) {
   // First ownership stays with the earliest canonical paper report.
   for (const article of [...published].reverse()) {
     article.highlights.forEach((e) => entries.set(e.id, e));
-    const md = matter(
+    const canonical = matter(
       fs.readFileSync(path.join(root, article.path), "utf8"),
-    ).content;
+    );
+    const md = canonical.content;
     const nodes = (
       unified().use(remarkParse).use(remarkGfm).parse(md) as MdRoot
     ).children;
@@ -526,7 +526,12 @@ export async function buildArchive(root = ROOT) {
         title: article.paperTitles?.[id] || paperTitle,
         summary: editorialSummary ? summary : summary.slice(0, 350),
         source: `https://arxiv.org/abs/${id}`,
-        anchor,
+        // Established event-layout reports keep their published catalogue URLs.
+        // A raw research report's first reader edition links to its readable event,
+        // while the canonical section anchor remains accessible in the archive.
+        anchor: !canonical.data.portal?.editorial
+          ? article.events?.find(event => event.id === `arxiv:${id}`)?.anchor || anchor
+          : anchor,
         topics: topicsFor(`${heading} ${summary}`),
         image: paperImage,
       });
@@ -536,14 +541,14 @@ export async function buildArchive(root = ROOT) {
     (a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id),
   );
   const daily: Daily[] = published.map(
-    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, paperTitles, events, ...d }) => d,
+    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, paperTitles, paperOriginalTitles, events, ...d }) => d,
   );
   const entrySearchText = (entry: Entry) => {
     const article = published.find(a => a.date === entry.date && a.readingEdition);
     const readingEvent = article?.events?.find(event => event.id === entry.id);
     const oldHeading = article?.toc.find(heading => heading.id === entry.anchor)?.title;
     // Formal paper titles may omit the project's familiar name (for example GALA).
-    return [entry.title, entry.summary, entry.source, oldHeading, readingEvent?.title, readingEvent?.sourceText].filter(Boolean).join(" ");
+    return [entry.title, entry.summary, entry.source, oldHeading, article?.paperOriginalTitles?.[entry.id.replace("arxiv:", "")], readingEvent?.title, readingEvent?.sourceText].filter(Boolean).join(" ");
   };
   const index: PortalIndex = {
     schemaVersion: 1,
@@ -573,5 +578,10 @@ export async function buildArchive(root = ROOT) {
       })),
     ],
   };
-  return { articles: published, index };
+  const [editorials, weeklyEditorials] = await Promise.all([loadLongform(root, published, parseArticle), loadWeeklyEditorial(root, published, parseArticle)]);
+  index.articles = editorials.map(({ html, text, toc, images, readingMinutes, ...summary }) => summary);
+  index.search.push(...editorials.map(article => ({ id: article.id, kind: article.genre === "topic" ? "news" as const : article.genre, format: "article" as const, title: article.title, summary: article.summary, date: article.date, topics: article.topics, url: article.url, text: article.text })));
+  const asOf = [published[0]?.date || "", ...weeklyEditorials.map(week => week.releaseDate)].sort().at(-1);
+  const weeks = buildWeekly(published, asOf);
+  return { articles: published, index, editorials, weeklyEditorials, weeks };
 }

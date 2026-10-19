@@ -5,7 +5,7 @@ import { unified } from "unified";
 import rehypeStringify from "rehype-stringify";
 import type { Article, ArticleEvent, EditorialLayout } from "./types";
 import { normalizeTags, validateTags } from "./taxonomy";
-import { validImageUrl } from "./images";
+import { validImageUrl, assetUrl, imageKey, imageSrcSet } from "./images";
 
 export function sourceBlocks(nodes: RootContent[], content: string) {
   const counts = new Map<string, number>();
@@ -33,6 +33,14 @@ export function renderEvents(layout: EditorialLayout, nodes: RootContent[], cont
     if (offset !== undefined) allocated.set(offset, [...(allocated.get(offset) || []), node]);
   }
   const groups = ["main", "brief", "paper", "analysis"];
+  const reservedIds = new Set(layout.events.map(event => event.anchor));
+  const reserve = (node: Root["children"][number]) => {
+    if (node.type === "element") {
+      if (node.properties.id) reservedIds.add(String(node.properties.id));
+      node.children.forEach(reserve);
+    }
+  };
+  rendered.forEach(reserve);
   let previousGroup = -1;
   const take = (keys: string[]) => keys.flatMap(key => {
     const block = byKey.get(key);
@@ -71,10 +79,27 @@ export function renderEvents(layout: EditorialLayout, nodes: RootContent[], cont
     });
     // Old event anchors follow their source paragraph even after regrouping.
     for (const alias of event.aliases || []) {
-      if (!body.some(node => node.type === "element" && node.properties.id === alias)) body.unshift({type:"element",tagName:"span",properties:{id:alias,className:["legacy-anchor"],ariaHidden:"true"},children:[]});
+      if (!reservedIds.has(alias)) {
+        body.unshift({type:"element",tagName:"span",properties:{id:alias,className:["legacy-anchor"],ariaHidden:"true"},children:[]});
+        reservedIds.add(alias);
+      }
     }
+    // Place figures between complete AST blocks, never by splitting HTML strings.
+    let paragraph = 0;
+    const pending = [...(event.images || [])];
+    const figure = (image: import("./types").SourceImage): Element => ({ type: "element", tagName: "figure", properties: { className: ["source-image", "event-figure"] }, children: [
+      { type: "element", tagName: "img", properties: { src: assetUrl(image.url), srcSet: imageSrcSet(image), width: image.width, height: image.height, alt: image.alt, loading: "lazy", decoding: "async", dataPreviewKey: imageKey(image), dataImageSource: image.source, dataImageCredit: image.credit, sizes: "(max-width: 767px) calc(100vw - 48px), 680px" }, children: [] },
+      { type: "element", tagName: "figcaption", properties: {}, children: [{ type: "text", value: `${image.alt} · ` }, { type: "element", tagName: "a", properties: { href: image.source, target: "_blank", rel: ["noopener", "noreferrer"] }, children: [{ type: "text", value: image.credit }] }] },
+    ] });
+    const illustrated = body.flatMap(node => {
+      if (node.type === "element" && node.tagName === "p" && !node.properties.className?.toString().includes("event-original-source")) paragraph++;
+      const placed = pending.filter(image => image.afterParagraph === paragraph && paragraph > 0);
+      for (const image of placed) pending.splice(pending.indexOf(image), 1);
+      return [node, ...placed.map(figure)];
+    });
+    illustrated.push(...pending.map(figure));
     const rows = (event.guideRows || []).map(i => guide?.rows[i]).filter(row => Boolean(row));
-    return { ...event, tags, sections: body.filter((node): node is Element=>node.type === "element" && node.tagName === "h3" && Boolean(node.properties.id)).map(node=>({id:String(node.properties.id),title:text(node)})), html: serialize(body), judgment: event.judgment ? serialize([{type:"text",value:event.judgment}]) : rows.map(row => row!.details.at(-1)?.html || "").join(" "), context: rows.flatMap(row => row!.details.slice(0,-1)), sourceText: event.blocks.map(key => byKey.get(key)!.raw).join("\n\n") };
+    return { ...event, tags, sections: body.filter((node): node is Element=>node.type === "element" && node.tagName === "h3" && Boolean(node.properties.id)).map(node=>({id:String(node.properties.id),title:text(node)})), html: serialize(illustrated), judgment: event.judgment ? serialize([{type:"text",value:event.judgment}]) : rows.map(row => row!.details.at(-1)?.html || "").join(" "), context: rows.flatMap(row => row!.details.slice(0,-1)), sourceText: event.blocks.map(key => byKey.get(key)!.raw).join("\n\n") };
   });
   const introductionHtml = serialize(take(layout.introduction || []));
   const archiveHtml = serialize(take(layout.archive || []));
