@@ -1,6 +1,6 @@
 # 完成记录
 
-日期：2026-10-19。范围：本地编辑与实现，分支 `codex/editorial-reading-system`，起点 `b5dc9b7`。本文件连同实现创建本地 checkpoint；其完整 SHA 在后续记录提交中回填。
+日期：2026-10-19。范围：本地编辑与实现，分支 `codex/editorial-reading-system`，起点 `b5dc9b7`。实现 checkpoint：`37689f05fffb6addfc930affb2d3207e326323d1`。31 期研究原文的已提交 Git blob 已逐一回读并通过原始 SHA-256 对照。完成记录的回填另作文档提交。
 
 ## 实际交付
 
@@ -56,3 +56,9 @@
 主要截图：`desktop-deep-reading.png`、`mobile-longform.png`、`mobile-table.png`、`mobile-legacy-anchor.png`、`tablet-portrait-home.png`、`tablet-weekly.png`、`tablet-landscape-topic.png`。
 
 回退方式：在当前分支上对本次 checkpoint 创建反向提交；原始日报及已有独立分支均保留，不需要重置用户历史。
+
+## 提交与服务回读
+
+- 实现提交：`37689f05fffb6addfc930affb2d3207e326323d1`。
+- 提交后重新生成预览，使 `deployment.json` 指向该实现提交；内容检查与浏览器证据对应这套实现。
+- 本地 `4337` 预览首页返回 HTTP 200；HTTP 回读的 `deployment.json` 为实现提交 `37689f05fffb6addfc930affb2d3207e326323d1`、31 期、更新至 2026-10-18。代码工作树在实现提交后为空；后续仅回填本完成记录。
