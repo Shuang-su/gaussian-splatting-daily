@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-25：浏览器 WebGPU 训练、LichtFeld headless 修复与 Blender 原生重建](2026-10-25.md)
 - [2026-10-20：SuperSplat 移动/XR、LichtFeld POPSpa 与 OOOSplat 0.7.0](2026-10-20.md)
 - [2026-10-19：PlayCanvas/GSL SH4、LichtFeld 跨应用拖拽与 OOOSplat 四格式导出](2026-10-19.md)
 - [2026-10-18：Gaussian-Splat-Lite 1.3.1、OOOSplat 多格式导入与 4DGS-VR 安全修复](2026-10-18.md)
