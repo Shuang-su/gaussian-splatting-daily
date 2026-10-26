@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-27：SuperSplat 3.7、LichtFeld 碰撞体与 OOOSplat GPS](2026-10-27.md)
 - [2026-10-26：LichtFeld SteadySplats、Rust 原生训练与 CT 二叉树 3DGS](2026-10-26.md)
 - [2026-10-25：浏览器 WebGPU 训练、LichtFeld headless 修复与 Blender 原生重建](2026-10-25.md)
 - [2026-10-20：SuperSplat 移动/XR、LichtFeld POPSpa 与 OOOSplat 0.7.0](2026-10-20.md)
