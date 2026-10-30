@@ -1,5 +1,6 @@
 # 2026 年 10 月日报
 
+- [2026-10-31：PlayCanvas 原生 LCC2 层级流式与 Spark Radix 0.0.1](2026-10-31.md)
 - [2026-10-30：OOOSplat MCP、Spirula Vulkan 提速与 LichtFeld 大场景优化](2026-10-30.md)
 - [2026-10-29：PlayCanvas 超大 splat 回退、LichtFeld SAM2/OpenXR 与 SOG v3 提案](2026-10-29.md)
 - [2026-10-28：LichtFeld 批量训练/尺度定标、splatkit 16-bit 排序与 CGR-GS](2026-10-28.md)
