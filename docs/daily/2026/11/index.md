@@ -1,5 +1,6 @@
 # 2026 年 11 月日报
 
+- [2026-11-07：SOG v3 进入 PlayCanvas Engine，GSL v1.7 与 InstantHand 可测](2026-11-07.md)
 - [2026-11-06：PlayCanvas token 轮换与 SuperSplat Viewer 1.42.1 Quest XR 修复](2026-11-06.md)
 - [2026-11-05：GSPIM 4DGS artifact 与浏览器 SfM/WebGPU Viewer](2026-11-05.md)
 - [2026-11-04：Unity 3DGS v2.0 与 PlayCanvas 格式感知抗锯齿](2026-11-04.md)
