@@ -1,5 +1,6 @@
 # 2026 年 11 月日报
 
+- [2026-11-09：LichtFeld 外部训练预览与 SAM2.1 视频掩码追踪](2026-11-09.md)
 - [2026-11-08：Arcturus AV1 3DGS 流水线与可训练语义 Gaussian](2026-11-08.md)
 - [2026-11-07：SOG v3 进入 PlayCanvas Engine，GSL v1.7 与 InstantHand 可测](2026-11-07.md)
 - [2026-11-06：PlayCanvas token 轮换与 SuperSplat Viewer 1.42.1 Quest XR 修复](2026-11-06.md)
