@@ -1,5 +1,6 @@
 # 2026 年 11 月日报
 
+- [2026-11-10：SOG v3 默认落地、SPZ v4 任意逐点属性与导出稳定性修复](2026-11-10.md)
 - [2026-11-09：LichtFeld 外部训练预览与 SAM2.1 视频掩码追踪](2026-11-09.md)
 - [2026-11-08：Arcturus AV1 3DGS 流水线与可训练语义 Gaussian](2026-11-08.md)
 - [2026-11-07：SOG v3 进入 PlayCanvas Engine，GSL v1.7 与 InstantHand 可测](2026-11-07.md)
