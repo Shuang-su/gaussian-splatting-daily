@@ -1,5 +1,6 @@
 # 2026 年 11 月日报
 
+- [2026-11-12：SuperSplat 3.8.0、Viewer 1.43.1 与 Spirula 性能更新](2026-11-12.md)
 - [2026-11-11：SuperSplat WebMCP 视觉闭环、Viewer 1.43.0 直读 LCC2/SPZ 与 SplatTransform 3.11.1](2026-11-11.md)
 - [2026-11-10：SOG v3 默认落地、SPZ v4 任意逐点属性与导出稳定性修复](2026-11-10.md)
 - [2026-11-09：LichtFeld 外部训练预览与 SAM2.1 视频掩码追踪](2026-11-09.md)
