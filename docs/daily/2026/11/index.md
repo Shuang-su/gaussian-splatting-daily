@@ -1,5 +1,6 @@
 # 2026 年 11 月日报
 
+- [2026-11-13：SOG v3 布局迁移、SuperSplat 3.8.1 与 LichtFeld Pose/GUT 更新](2026-11-13.md)
 - [2026-11-12：SuperSplat 3.8.0、Viewer 1.43.1 与 Spirula 性能更新](2026-11-12.md)
 - [2026-11-11：SuperSplat WebMCP 视觉闭环、Viewer 1.43.0 直读 LCC2/SPZ 与 SplatTransform 3.11.1](2026-11-11.md)
 - [2026-11-10：SOG v3 默认落地、SPZ v4 任意逐点属性与导出稳定性修复](2026-11-10.md)
@@ -12,3 +13,4 @@
 - [2026-11-03：GSL 1.6.1 LCC2 流式、PlayCanvas GS 排序与体素交互](2026-11-03.md)
 - [2026-11-02：LichtFeld 显存恢复、visloc-rs 原生鱼眼与 Spirula 自动训练](2026-11-02.md)
 - [2026-11-01：SuperSplat WebMCP 相机关键帧与 LichtFeld 按需显存](2026-11-01.md)
+
