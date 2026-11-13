@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-09",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-09T00:00:00+08:00",
+    "end": "2026-10-10T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/wallgs-pro-brings-gaussian-splat-relighting-to-unreal-engine-5",
+        "radiancefields.com/webodm-3-3-0-brings-gaussian-splatting-to-open-source-drone-mapping"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:56.066995+00:00",
+      "urls": [
+        "https://www.fab.com/listings/3e8a8fa7-38f5-4825-b714-3eb121fd9993"
+      ],
+      "candidateIds": [
+        "radiancefields.com/wallgs-pro-brings-gaussian-splat-relighting-to-unreal-engine-5"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.fab.com/listings/3e8a8fa7-38f5-4825-b714-3eb121fd9993",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:56.066995+00:00",
+          "sha256": "f1e31479f1eb58db11698fa861feb38834abf8ba4b83cca53380b46adaebfae6",
+          "characters": 6730
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:20.784620+00:00",
+      "urls": [
+        "https://github.com/WebODM/WebODM/releases/tag/v3.3.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/webodm-3-3-0-brings-gaussian-splatting-to-open-source-drone-mapping"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/WebODM/WebODM/releases/tag/v3.3.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:20.784620+00:00",
+          "sha256": "f0bedd93a186c59ac009d3b4bce0a1f31470f2dfdf74e431d9cc674caa345270",
+          "characters": 3450
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/wallgs-pro-brings-gaussian-splat-relighting-to-unreal-engine-5",
+      "title": "WallGS Pro 为 Unreal 高斯加入重光照",
+      "eventDate": "2026-10-09",
+      "reportDate": "2026-10-09",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/wallgs-pro-brings-gaussian-splat-relighting-to-unreal-engine-5",
+        "https://www.fab.com/listings/3e8a8fa7-38f5-4825-b714-3eb121fd9993"
+      ],
+      "eventId": "radiancefields.com/wallgs-pro-brings-gaussian-splat-relighting-to-unreal-engine-5"
+    },
+    {
+      "id": "radiancefields.com/webodm-3-3-0-brings-gaussian-splatting-to-open-source-drone-mapping",
+      "title": "WebODM 3.3 把高斯纳入无人机处理流程",
+      "eventDate": "2026-10-09",
+      "reportDate": "2026-10-09",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/webodm-3-3-0-brings-gaussian-splatting-to-open-source-drone-mapping",
+        "https://github.com/WebODM/WebODM/releases/tag/v3.3.0"
+      ],
+      "eventId": "radiancefields.com/webodm-3-3-0-brings-gaussian-splatting-to-open-source-drone-mapping"
+    }
+  ]
+}

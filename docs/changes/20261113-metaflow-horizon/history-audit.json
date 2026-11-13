@@ -1,0 +1,2092 @@
+{
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "range": {
+    "from": "2026-09-18",
+    "through": "2026-11-13"
+  },
+  "dates": [
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05",
+    "2026-10-06",
+    "2026-10-07",
+    "2026-10-08",
+    "2026-10-09",
+    "2026-10-10",
+    "2026-10-11",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14",
+    "2026-10-15",
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-01",
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-04",
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11",
+    "2026-11-12",
+    "2026-11-13"
+  ],
+  "scope": "Radiance Fields dated articles and linked primary sources; original canonical records retained; source reachability is not independent software validation.",
+  "candidateCount": 169,
+  "primaryAccess": [
+    {
+      "url": "https://aescripts.com/gausser/?aff=radiancefields",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:03.978133+00:00",
+      "sha256": "8ec7b683dcc7fd09947d111912550fbc37013f21d18794b34f948d09953bf05b",
+      "characters": 56169
+    },
+    {
+      "url": "https://api.github.com/repos/openvdb/fvdb-core/releases",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.211609+00:00",
+      "sha256": "c010ca393e17fb2f6b9fee1a96426a049e664ec64e9593006c124e92dd0cdb16",
+      "characters": 65659
+    },
+    {
+      "url": "https://app.insta360.com/3dspace/detail/GS3DG8dc55a71b133474f88a549e099d89326 ",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:02.334802+00:00",
+      "sha256": "0f0dcecaf4e7575a3c000e529e68c809fb8bd3bd601442dbbbcd4cae5e3afb9a",
+      "characters": 151,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://apps.apple.com/us/app/kiri-engine-3d-scanner-lidar/id1577127142",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:03.610725+00:00",
+      "sha256": "7a7655a29e1257eb43e03fff7bfd8523396b8ffab60e9e2068d93de2f600a13d",
+      "characters": 5393
+    },
+    {
+      "url": "https://apps.apple.com/us/app/spatial-film/id6670564820",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:04.470358+00:00",
+      "sha256": "86a1a54154c0ac688d1e3ced3fda53ab98161a75b225ef6bdfe0a658a6ca9918",
+      "characters": 5379
+    },
+    {
+      "url": "https://apps.apple.com/us/app/tutticam-multi-camera-sync/id6820396336",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:04.753498+00:00",
+      "sha256": "2b9bc011826c2224a087e83180634e7e35322c486e5c507c6f6a45b32f165519",
+      "characters": 5432
+    },
+    {
+      "url": "https://arrival.space/realtime-ai",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:04.917731+00:00",
+      "sha256": "860fcd83ec971b5f769583b72264e1d4761da4e6626a38ca744137e9473dc39f",
+      "characters": 37,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://arrival.space/splat-js",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.755287+00:00",
+      "sha256": "caa830a724ae4ac733e35485058c1b094b7f8d43e7dc13d3e1282780ef5ab1c7",
+      "characters": 2219
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.03877",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:04.754007+00:00",
+      "sha256": "1104f8133c25c8f3b7484a104e290df3f2db742ce5c383abe4959d8f1dfabc2e",
+      "characters": 4925
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.02437",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.007952+00:00",
+      "sha256": "f72f3cdb9cdf5454b134497d1553b431b4a2aac4ccf82ddd72bcd559c0bfb7b4",
+      "characters": 5213
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.31339",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.007652+00:00",
+      "sha256": "65ac937308688276d79761a9ba74a29f50d8245f901615e667efd9f950cddba4",
+      "characters": 5387
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.09116",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.149758+00:00",
+      "sha256": "fa811b497c9338144dcb7b5103a1730692546dd0c52ac290acf6ce4e88df919a",
+      "characters": 5273
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.24812",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.218361+00:00",
+      "sha256": "f40bfe245909b5ed2edfa3f1d6aebed498cde61d4edd0bf59419f2471270a084",
+      "characters": 5241
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30340",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.283203+00:00",
+      "sha256": "346a6d13f92ba2f94912ee9ef80599c25652391b3b9c2592cbf9f432dce99a69",
+      "characters": 5112
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.30468",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.282990+00:00",
+      "sha256": "8a9fcafeda5b7db8821105d07f579c9b39d11e234d737444e49df5df51414be2",
+      "characters": 5493
+    },
+    {
+      "url": "https://arxiv.org/abs/2611.12716",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:05.481110+00:00",
+      "sha256": "b99d0d45781dbf5f07d69f61cccf577c4881b0ff712e92803289addcc384d89f",
+      "characters": 4960
+    },
+    {
+      "url": "https://aster-master.com/devlog/gaussian-splats-destruction/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.045037+00:00",
+      "sha256": "e4cf8921a3cd2636fce7bf0a086bb5b1a13af4dc77c3cb66e9814cbfb0ad833d",
+      "characters": 42883
+    },
+    {
+      "url": "https://aster-master.com/devlog/gaussian-splats-destruction/?ref=rf_guest",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.018016+00:00",
+      "sha256": "e4cf8921a3cd2636fce7bf0a086bb5b1a13af4dc77c3cb66e9814cbfb0ad833d",
+      "characters": 42883
+    },
+    {
+      "url": "https://babylonjs.com/lite-demos/demo-trogir-streaming.html",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.415958+00:00",
+      "sha256": "2316d95a725e8aae2cbf8b061bf23e26e8851cb482d762b3608e466986fa6d96",
+      "characters": 1149
+    },
+    {
+      "url": "https://booth.pm/en/items/8063569",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:06.015634+00:00",
+      "sha256": "c170625a912bfb31ae7c0b89e3f4390843298c124c66ae16d9ab6326406a5ee6",
+      "characters": 5571
+    },
+    {
+      "url": "https://bubo2.com/pricing",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.324614+00:00",
+      "sha256": "dc34492036102e85c374f363aa6fb992f40902626091dbbcca3fb2bbf92cbe77",
+      "characters": 4794
+    },
+    {
+      "url": "https://burnersphere.com/",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:07.186139+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "characters": 0,
+      "gap": "No readable body in response."
+    },
+    {
+      "url": "https://colmapview.github.io/latest/",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:07.560949+00:00",
+      "sha256": "fb54a55bcaffadec269416f851c3a39052e681bc5bb58a3282e577b47f410bbe",
+      "characters": 10,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://colmapview.opsiclear.com/hub/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.849980+00:00",
+      "sha256": "8d25690b502a3da06229f896e66e6846b31e2d427dc9a4d7a84bf83050caf99c",
+      "characters": 9666
+    },
+    {
+      "url": "https://crevis.co.jp/exhibitions/mushi_ten/",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:07.909665+00:00",
+      "error": "HTTP Error 503: Service Temporarily Unavailable"
+    },
+    {
+      "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:07.934141+00:00",
+      "sha256": "43ff435f0573aa39c355a637144bd5f03dfc6971fd45a87057d68a62b7ddb6be",
+      "characters": 30994
+    },
+    {
+      "url": "https://design4real.de/apps/splatmania",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:08.569538+00:00",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "characters": 0,
+      "gap": "No readable body in response."
+    },
+    {
+      "url": "https://dev.epicgames.com/documentation/fortnite/43-00-fortnite-ecosystem-updates-and-release-notes?lang=en-US",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:08.413114+00:00",
+      "sha256": "b9be76c36f2cad5dc027d4d6910c3bfc68406b0aa1b5066bc60d190a34c9dcb1",
+      "characters": 50508
+    },
+    {
+      "url": "https://developer.blender.org/docs/release_notes/5.3/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:09.388950+00:00",
+      "sha256": "7e5a4b548c2fef7c0494fd0b03ef7af528a07933b10fd5cadd96355f9c8c999b",
+      "characters": 15798
+    },
+    {
+      "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/spatial-recon-introduction",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:08.240878+00:00",
+      "sha256": "677bbe02ba508d65aab370b36c580b2c7a24e2e4274426b5f0145d1aa60209f6",
+      "characters": 4,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://developer.xgrids.com/#/download?page=LCC_UNREAL_SDK_UE55",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:09.099791+00:00",
+      "sha256": "38db14398221e79008548dd6aa0e0987ff1049f2afdb2b70ddc340df7915becc",
+      "characters": 9,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://discourse.mcneel.com/t/gaussian-splat-view-in-rhino-8/224353",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:09.045585+00:00",
+      "sha256": "2adf82a8278d10b3d9fbe820394cc18928e9d6ffd0a9d0a7a95bbeb21ca0d5e5",
+      "characters": 1390
+    },
+    {
+      "url": "https://doc.arcgis.com/en/arcgis-earth/get-started/what-s-new.htm",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:28.487991+00:00",
+      "error": "<urlopen error _ssl.c:1129: The handshake operation timed out>"
+    },
+    {
+      "url": "https://doc.arcgis.com/en/drone2map/2025.2/get-started/whats-new.htm",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:10.353011+00:00",
+      "sha256": "2983f72b46b7828d462f2e0f1358e52ac1f5bf69c2e7713cecdc5ec223933050",
+      "characters": 4970
+    },
+    {
+      "url": "https://docs.atlas-beta.worldlabs.ai/posed-images-to-splats",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:11.199734+00:00",
+      "sha256": "b25eb4c3cf270dad1e6a9e6ebd5d56a9fd8562c4f5dc9b3be65ccf59e67c636d",
+      "characters": 4391
+    },
+    {
+      "url": "https://docs.maptiler.com/geosplats-sdk/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:10.974653+00:00",
+      "sha256": "ad389e2f2937f4a3b4862c92a13a8713dd15ee83d3cfd2f99e7c39612af43f3d",
+      "characters": 11335
+    },
+    {
+      "url": "https://docs.oko.live/oko-2026-22",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:11.276131+00:00",
+      "sha256": "97f457d8e5c5574907e5ab256580df81b695b9d27ff2d426eb3eab17882c1085",
+      "characters": 3900
+    },
+    {
+      "url": "https://docs.spaitial.ai/api/capture-worlds",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:11.308385+00:00",
+      "sha256": "f496f4bea1f1bad0a217d3eeba626c21ed29027b4b3c88532fb0a7a2d3586310",
+      "characters": 9483
+    },
+    {
+      "url": "https://docs.voxel51.com/release-notes.html",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:12.400006+00:00",
+      "sha256": "0ccee0737c4510c6b03130d0b782f88c73184fa45bbe0b389d161354bf9671bd",
+      "characters": 300888
+    },
+    {
+      "url": "https://documentation.chaos.com/space/CRMAX/1436221661/16.0.0",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:11.905428+00:00",
+      "sha256": "d4f43231a0a59b080df6b5d7ae2015074b26685528c2e12d39a6b03717ff1e1e",
+      "characters": 6,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://downloads.foundry.com/nuke-beta-18",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:12.506254+00:00",
+      "sha256": "7a47e7315c1ed4d0a6381169bd77a2946e647ef6984ec33a2463da261d8364d1",
+      "characters": 565
+    },
+    {
+      "url": "https://editor.annx.ai",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:11.881932+00:00",
+      "sha256": "65cc92c71ca226de14f93e4daa1cd95f57b15e6354870844bf0ea3cc4f283bf2",
+      "characters": 25,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://evergine.com/gaussian-splatting-add-on-whats-new/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:12.806172+00:00",
+      "sha256": "67475af97f5a6d0fa6dc808152b2a38d4ddbba63b19b3ac052d224092b6af7be",
+      "characters": 13229
+    },
+    {
+      "url": "https://filmumentaries.com/2026/10/ep-157-ilms-john-knoll-on-the-mandalorian-and-grogu-motion-control-stop-motion-and-gaussian-splats/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:17.785057+00:00",
+      "sha256": "b71d8a0ec621e570b877f11ab27cbbbe37e9433f1c46f007084fcf1aef4f7582",
+      "characters": 43070
+    },
+    {
+      "url": "https://forums.autodesk.com/t5/arnold-for-maya-forum/arnold-for-maya-mtoa-5-6-4-is-here/td-p/14325408",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:12.634226+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://forums.unrealengine.com/t/2852858",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:14.564237+00:00",
+      "sha256": "0f67e41bee3544772abac1f7ecbff49475e301c7fc199c3cf0ef22e51a91350b",
+      "characters": 651
+    },
+    {
+      "url": "https://forums.unrealengine.com/t/unreal-engine-5-9-megajam-preview/2852840",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:14.107531+00:00",
+      "sha256": "f66b93795d5344017914ca14ce01436eb60e651a9aab440448c763816ca0e106",
+      "characters": 20094
+    },
+    {
+      "url": "https://gauzilla.xyz",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:15.127705+00:00",
+      "sha256": "3bf4ca946cde3154baac78e799a27b6a9d6c7785176ccbf1718ffdae88c02bb4",
+      "characters": 9394
+    },
+    {
+      "url": "https://geospatial.chcnav.com/products/chcnav-cocloud",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:14.931348+00:00",
+      "sha256": "322ae1f1ea06b00d7ce05095efe528e6131fec34ea0d21f3c7fdb868a73952d8",
+      "characters": 8625
+    },
+    {
+      "url": "https://geospatial.chcnav.com/products/chcnav-coviewer",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:15.127980+00:00",
+      "sha256": "350092e832ba95bb1f53bedfb453fdd6be047ee2a079f196d267df3140501cb0",
+      "characters": 8434
+    },
+    {
+      "url": "https://github.com/AndriiShramko/ShramkoGSFPV",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:15.941608+00:00",
+      "sha256": "6d83352de3b863abd80f586e97fc1e0565f4ec04de43ee915a84aeeae4f4c8a0",
+      "characters": 43467
+    },
+    {
+      "url": "https://github.com/BabylonJS/Babylon-Lite/releases/tag/npm-lite-v1.33.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:16.227082+00:00",
+      "sha256": "da97a9ecdd6f7f5492cd01dcdc724d89e42fcd15b57e1c4909e20c605c8f9eb7",
+      "characters": 3670
+    },
+    {
+      "url": "https://github.com/BabylonJS/Babylon.js/pull/18930",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:17.607092+00:00",
+      "sha256": "6fd200ab54105a264d3e1c7b51ccae5b55df3d5e88092a5c59ecbdff4c1e4634",
+      "characters": 33475
+    },
+    {
+      "url": "https://github.com/BabylonJS/Babylon.js/releases/tag/9.27.1",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:16.775678+00:00",
+      "sha256": "e10e70e03f06cc28cb850c1f46c5af29fa0f7dd46c765dec09ea73a987d1083a",
+      "characters": 3509
+    },
+    {
+      "url": "https://github.com/CoSTAR-National-Lab/starlightgs",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:17.205518+00:00",
+      "sha256": "382c2ecdd2e689509ce8bc06b6fcf1324088c1276b02464278402776d20f530f",
+      "characters": 5529
+    },
+    {
+      "url": "https://github.com/CoSTAR-National-Lab/starlightgs-sample",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:17.739086+00:00",
+      "sha256": "91d42169a03710e9d2e85f13bfce9e1e9d6c7f7cb833f7f5fcf054884787ccd0",
+      "characters": 5562
+    },
+    {
+      "url": "https://github.com/CoSTAR-National-Lab/starlightgs-training",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:18.149473+00:00",
+      "sha256": "8eb7d6bfaa181233b06b46eb0b6e37a9c82666f438011bd69c948c15c47706d5",
+      "characters": 9983
+    },
+    {
+      "url": "https://github.com/ElHamb1/Unity-Gaussian-Ray-Tracing",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:18.690909+00:00",
+      "sha256": "7451b146b4c14fadd07c3270818cf54865d3f21182d4f228f11458e47b23fb3d",
+      "characters": 21277
+    },
+    {
+      "url": "https://github.com/Iconem/blender_ogc3dtiles/releases/tag/v0.5.1",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:18.595417+00:00",
+      "sha256": "3839e0838e8b31b848be2d863ff50015051dd8cd2f9c07d811f4e210ba235c8d",
+      "characters": 3055
+    },
+    {
+      "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/untagged-b05a65ef39ba5e2a7264",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:18.664583+00:00",
+      "sha256": "42a751a7142b730c7da3c3cacbe7d60447d8f751463e150a65e1bc3768353512",
+      "characters": 3489
+    },
+    {
+      "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:19.798387+00:00",
+      "sha256": "bf24a9f6d9948cc3482d595c4fb029f5e36cc12ca1fe1131bd4e1aac10a60f00",
+      "characters": 82065
+    },
+    {
+      "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4.2",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:19.589319+00:00",
+      "sha256": "c9b1aa70dd2dcee61d6645901c9c32113c8189a00b3ebb858e40eaf06c9b2daa",
+      "characters": 7737
+    },
+    {
+      "url": "https://github.com/NavodPeiris/gsplat-talkinghead",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:19.764510+00:00",
+      "sha256": "3eba0460f9cab97ebcf8b45b690c8e3a6d59e2d11bc6b928205d7d4745956c6b",
+      "characters": 27481
+    },
+    {
+      "url": "https://github.com/Pryme8/splat-lab",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:19.735797+00:00",
+      "sha256": "e494133d7872368ca2734ecaaf932330fbe8c5684c1623e7373af18b1d948f5c",
+      "characters": 8483
+    },
+    {
+      "url": "https://github.com/QROST/GaussianSplattingRhino",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:20.644407+00:00",
+      "sha256": "39195bf4be9b8b040a7e1a64bd769350e84d2d6a83ca1915bd0dc8648f4e8500",
+      "characters": 11411
+    },
+    {
+      "url": "https://github.com/TobiasBat/ChronoFuseGS",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:21.256393+00:00",
+      "sha256": "9809b3478099ed0b894a8939e98e8643f5a111d321d4b441ea53ecb41e303937",
+      "characters": 8207
+    },
+    {
+      "url": "https://github.com/WebODM/WebODM/releases/tag/v3.3.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:20.784620+00:00",
+      "sha256": "f0bedd93a186c59ac009d3b4bce0a1f31470f2dfdf74e431d9cc674caa345270",
+      "characters": 3450
+    },
+    {
+      "url": "https://github.com/WilliamLiu-1997/3D-Tiles-RendererJS-3DGS-Plugin/releases/tag/v0.3.1",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:20.734947+00:00",
+      "sha256": "3c05b56cad2926f273b43bc8f929a900b7ed7c72361bb5250ae0da7ce6ecc66f",
+      "characters": 3196
+    },
+    {
+      "url": "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v1.1.2",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:21.703694+00:00",
+      "sha256": "6b0fde5078a3da112e6bd8a32cd369b0939760cf76637ceeb6008d08350e99ed",
+      "characters": 3323
+    },
+    {
+      "url": "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v2.0.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:21.704187+00:00",
+      "sha256": "3b1b5e283e402af496dda23250ad59d82b6842dbab1bef9322b5c68395a515c9",
+      "characters": 5214
+    },
+    {
+      "url": "https://github.com/awslabs/visual-asset-management-system/releases",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:22.014514+00:00",
+      "sha256": "a895bb543fd5f893d7f75313619fbb4f9f34e25d2c5c5caeece78fd4999c3177",
+      "characters": 62893
+    },
+    {
+      "url": "https://github.com/backblaze-b2-samples/4d-gaussian-splatting-volumetric-capture",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:23.309204+00:00",
+      "sha256": "51445153527d6ca1c10b2f7352797eaffa144f63609a4a5704332f4fa84621ad",
+      "characters": 21576
+    },
+    {
+      "url": "https://github.com/clarencedad-cloud/d4r-Splatmania",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:22.275643+00:00",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "url": "https://github.com/dtpoi/TuttiCam-Android/releases",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:22.807239+00:00",
+      "sha256": "565b592a6f5abf1f55de70ef99108129fe844f073b72988ef87280a4da546417",
+      "characters": 10993
+    },
+    {
+      "url": "https://github.com/elliotttate/SpatialSlideshow",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:22.964146+00:00",
+      "sha256": "d4146a578a2bc8b623d442221b051122a21ed79e7537f27c8da16a8958a6ff37",
+      "characters": 23311
+    },
+    {
+      "url": "https://github.com/fhahlbohm/fused-zipnerf",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:23.349579+00:00",
+      "sha256": "bfe48fda4c7795b77e66f3d9df5db15cc5e41c6f63a9c3004a92d1f8615ee6aa",
+      "characters": 10230
+    },
+    {
+      "url": "https://github.com/freddewitt/CorbeauSplat",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:23.873242+00:00",
+      "sha256": "9af941d139100b79f78c07a65a5d6d82012489d6241fb45c44781e9ccbd3139a",
+      "characters": 13165
+    },
+    {
+      "url": "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:23.859181+00:00",
+      "sha256": "fcca5c8ad5b4ac4afcceb31bdad1f72d9b04a8305791df82342837fee2f83151",
+      "characters": 6715
+    },
+    {
+      "url": "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0-beta.4",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:24.084308+00:00",
+      "sha256": "907bfee49890f93864da04d4235ddf1ee3a50550ce90ee357ea659b8060cf4a9",
+      "characters": 9705
+    },
+    {
+      "url": "https://github.com/glaseagle/painterly-splat",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:24.416447+00:00",
+      "sha256": "99ff39815a60d74bbf5f1ebbc0c4f50a9a1fe6a0a4fa7a5aec37e15559255839",
+      "characters": 12758
+    },
+    {
+      "url": "https://github.com/gokayfem/gaussian-splat-to-blender-nodes",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:24.999206+00:00",
+      "sha256": "141f0c56bacd502275d377774b59445ecee9a02ecce2cb9c0881c2d7a99d32f3",
+      "characters": 12066
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:24.632325+00:00",
+      "sha256": "23aa960debfd74622733cf1b3bfb620bf1c56c4e8294a95cffe2e85616f218e4",
+      "characters": 4600
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.30",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:24.999482+00:00",
+      "sha256": "46cf00ab8313d902d0cd8cf34d583a9bbcfea6e9c5606e091dacf93b2efc410d",
+      "characters": 4749
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.6",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:25.367029+00:00",
+      "sha256": "119bc48715811c6c8cc9fd0212c1e5b5a5179135c5d6c32def5d0b8e7f06725c",
+      "characters": 4031
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:25.501087+00:00",
+      "sha256": "cdb965d1123fcc5f1834f72119a14b04897f658dd1ddbefaa734df38eb8ff106",
+      "characters": 4477
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.24",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:25.886435+00:00",
+      "sha256": "9d172d96fd90950deff98f04a267331768534d8ff25727f67b3d548b02400b72",
+      "characters": 4026
+    },
+    {
+      "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:25.900584+00:00",
+      "sha256": "3875fca800f089d080aee99f8ae395b36b7cef215832a500276d686c4e83ba84",
+      "characters": 4050
+    },
+    {
+      "url": "https://github.com/hh-hang/3dgs-weather",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:25.423703+00:00",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1147)>"
+    },
+    {
+      "url": "https://github.com/hustvl/4DGaussians",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:26.623173+00:00",
+      "sha256": "8e1c45166a7d69e2aa45d65f6b85714e0f51fb756b6c67e64ce511045d08bbdb",
+      "characters": 14743
+    },
+    {
+      "url": "https://github.com/isaac-sim/IsaacSim/releases/tag/v6.2.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:26.449030+00:00",
+      "sha256": "dd148c1511a70d8a3a7f44cb9330f687974b51afc3d435d96088b865186ca111",
+      "characters": 2857
+    },
+    {
+      "url": "https://github.com/isl-org/Open3D/releases/tag/v0.20.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:27.241602+00:00",
+      "sha256": "d7445140a90803cc89a91dd6f857a4bc3f7de2204dc04da21917271c29a1f835",
+      "characters": 14815
+    },
+    {
+      "url": "https://github.com/islandmed/SculptForge/releases",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:27.803561+00:00",
+      "sha256": "bed63793da0b4bb26335e28a1b661beb504a3ec79b39715a0f27989f59e5c947",
+      "characters": 60678
+    },
+    {
+      "url": "https://github.com/jKaarlehto/ComfyUI-InfiniSplat",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:27.684249+00:00",
+      "sha256": "122a4b5c0554dcec61ef4a11cc902a27fd017ab33b416ba364b5680a6209dd0c",
+      "characters": 11055
+    },
+    {
+      "url": "https://github.com/kxhit/mlp-splatting",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:29.043777+00:00",
+      "sha256": "fddd4cb657c817876a4ba5bc5672e3f5040e29bcef3d31ef42363a783c714832",
+      "characters": 10072
+    },
+    {
+      "url": "https://github.com/mlslabs/MLSLabsGaussianSplattingRenderer-UE/releases/tag/Pro_V2.1.0.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:28.173962+00:00",
+      "sha256": "5d886a4f4d53d359b4a5651102d5ba6edd6d107ef274c829f15304e9fbf7f842",
+      "characters": 3961
+    },
+    {
+      "url": "https://github.com/myned-ai/gsplat-flame-avatar-renderer",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:28.803583+00:00",
+      "sha256": "7603c926ceb9edc7a7793a879f3b3fdab7088706d19faa792750fab665b6fcd0",
+      "characters": 12207
+    },
+    {
+      "url": "https://github.com/nerficg-project/nerficg",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:28.821064+00:00",
+      "sha256": "c603966149d5e15c25b755ba4bacac7495cd2629238995fb1b474e153c1460c7",
+      "characters": 11826
+    },
+    {
+      "url": "https://github.com/obraia/colmap-wasm",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:29.294899+00:00",
+      "sha256": "0f6fe29f820aa390b8f87e33fb1063feaf03f88aaec6d4b4624454f6eb03798a",
+      "characters": 8968
+    },
+    {
+      "url": "https://github.com/playcanvas/engine/releases/tag/v2.22.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:29.641328+00:00",
+      "sha256": "cf0ce9e27e0ade2c4673290d825a0ff2a1515c9b4cd4d1a967db2cf15071f011",
+      "characters": 11259
+    },
+    {
+      "url": "https://github.com/playcanvas/engine/releases/tag/v2.23.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:30.098926+00:00",
+      "sha256": "f81c54d11dba6b55fc4513ab159659130c6c0c12552a2161d4581532a65b77eb",
+      "characters": 24970
+    },
+    {
+      "url": "https://github.com/playcanvas/splat-transform",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:29.864065+00:00",
+      "sha256": "3656f8775fcb986b34a6345aa0f9a68e8bcc485dcf07f0e788c1087ff81ba3b3",
+      "characters": 35735
+    },
+    {
+      "url": "https://github.com/playcanvas/splat-transform/releases/tag/v3.9.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:29.942598+00:00",
+      "sha256": "6be647730535215b8cd2f219f8ecf1216b87ad19a086a2805325d8aee423bfc4",
+      "characters": 2977
+    },
+    {
+      "url": "https://github.com/playcanvas/supersplat-blender-extension/releases/tag/v0.1.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:30.356005+00:00",
+      "sha256": "830a1a00ef52655a8040d7610f14a7461fc400ea9f0375497eec6ce91181566b",
+      "characters": 4321
+    },
+    {
+      "url": "https://github.com/playcanvas/supersplat/releases/tag/v3.6.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:30.599925+00:00",
+      "sha256": "3d359d73e2d6be861f9afe4d682870db39fb0d88cf79a31f6b61dce15c493e76",
+      "characters": 3116
+    },
+    {
+      "url": "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:30.725280+00:00",
+      "sha256": "a338ca363433fd2a1c04348a9878b5349a6a88459f97bd03372d49100e17b046",
+      "characters": 3095
+    },
+    {
+      "url": "https://github.com/saemranian/abu-align-train/releases",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:31.244323+00:00",
+      "sha256": "b6401c0c8bbffd31c34345340dc00d2ae2666e79100b7cb86a3d69e368ba05d9",
+      "characters": 6509
+    },
+    {
+      "url": "https://github.com/seemandhar/SplatLab",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:31.250876+00:00",
+      "sha256": "b2e6e648f8457989a419e5ffc7a3653cef1c4da250311e1a5a810330f71204b1",
+      "characters": 17650
+    },
+    {
+      "url": "https://github.com/smallfly/Carveout",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:31.462274+00:00",
+      "sha256": "c17f46145ec88c0744ba7588d6664313cf6cef521ea474de3b8c3e564a5c0e6b",
+      "characters": 20719
+    },
+    {
+      "url": "https://github.com/spaitial-ai/spaitial-capture-prototype",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:31.547427+00:00",
+      "sha256": "7047822f664874f2ab0f4442b4c90e51d9f0e27948728d830238ea8938228d9c",
+      "characters": 7869
+    },
+    {
+      "url": "https://github.com/sparkjsdev/spark/releases/tag/v2.3.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:32.016604+00:00",
+      "sha256": "c114b12edaaa5f046923427e3a67fccf2500504ee121ae44cf7620131cbc4db5",
+      "characters": 5466
+    },
+    {
+      "url": "https://github.com/sparkjsdev/spark/releases/tag/v2.4.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:32.215872+00:00",
+      "sha256": "e063e21ee3cea0556db06e5941f0c6335d40faee3617db3a38b73eed7737bc0f",
+      "characters": 5168
+    },
+    {
+      "url": "https://github.com/splat3d/splat-swift-sdk/releases/tag/1.1.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:32.216188+00:00",
+      "sha256": "f04a3dd72fd5bd9ae18dc9b29453237485a287a1fc7f87c944396ca91d22c1e6",
+      "characters": 3169
+    },
+    {
+      "url": "https://github.com/splatxr/splatxr",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:32.371012+00:00",
+      "sha256": "d6deebf1d110cf8ae3dfe330619f05579df411c702417cdef6398f703a05c10e",
+      "characters": 9339
+    },
+    {
+      "url": "https://github.com/tchauffi/metalsplat",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.303237+00:00",
+      "sha256": "034bbbc52aba7a7ae0658b3608dcf562ee9c2b0616bce3d43f2d3bd96a6ec799",
+      "characters": 25135
+    },
+    {
+      "url": "https://github.com/theialab/switchsplat",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.046687+00:00",
+      "sha256": "e1686d9e3284e3cba9d96eb0d0f45c6d4a22668dc6c86600bdf378f555a5435d",
+      "characters": 6002
+    },
+    {
+      "url": "https://github.com/timfennell/blender-splat-patch",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.512862+00:00",
+      "sha256": "59e089dc917a8311ce5a2183bb7033292ae4339b2874d88cbf01dd78b64ed16e",
+      "characters": 22044
+    },
+    {
+      "url": "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.1.15",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.245733+00:00",
+      "sha256": "2baeac03f5f82f9a8626ac99fcf0e2896cea8da20bc18a2e62df22ee2c54175b",
+      "characters": 3100
+    },
+    {
+      "url": "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.2.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.287299+00:00",
+      "sha256": "c5e5817bbd6e357c7be0c109def89687cb588cc6095aa9e63e047ef07c4652d4",
+      "characters": 3096
+    },
+    {
+      "url": "https://github.com/warpgatelabs/RSR/releases/tag/v0.9.1",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:33.995209+00:00",
+      "sha256": "bec8e938f5e33a76aaed45fcbd8779e150f65389624c2d930fa12c282e159b17",
+      "characters": 4177
+    },
+    {
+      "url": "https://github.com/warpgatelabs/gauss-cannon/releases/tag/v1.3.0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:34.274202+00:00",
+      "sha256": "5b55ec1862def325a0e2445c8c9a8d9cf54914b77e18c8de6b2e7cdb3d2cf1ea",
+      "characters": 6978
+    },
+    {
+      "url": "https://gracia.ai",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:34.154057+00:00",
+      "sha256": "4e26ed6edd6164ac95d314c1e07823b754aded68fb78ff407273c7e1ca5842c2",
+      "characters": 193,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://gumroad.com/a/211985763/bvfcc",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:34.590913+00:00",
+      "sha256": "2bfaefdd4e7ae2d65347ed10756aa94a479725da857b0e57d936629821611d1a",
+      "characters": 1222
+    },
+    {
+      "url": "https://gumroadfx.gumroad.com/?a=555385955",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:34.151782+00:00",
+      "sha256": "bbf15a4a0f14b5b6efe6664719fe5d67dccf8143f3614d07b67bdd3d5a68d680",
+      "characters": 97,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-Foundation4D",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:34.632793+00:00",
+      "sha256": "cec440b22e78556395bc54e9c24df51aa3de5859e2ab256e48834cc26228ce80",
+      "characters": 22656
+    },
+    {
+      "url": "https://investor.hesaitech.com/news-releases/news-release-details/hesai-group-reports-second-quarter-2026-unaudited-financial",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:34.598461+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1299/amd-to-acquire-world-labs-to-advance-the-future-of-ai-compute",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:39.526238+00:00",
+      "sha256": "731ee854d76da6d71b3f43a38a17243bf0c938a8bab0ce1407b3de4080fc822d",
+      "characters": 8886
+    },
+    {
+      "url": "https://journal.burningman.org/2026/03/burning-man-arts/brc-art/introducing-brc-2026-honoraria-art-honoraria/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:36.238357+00:00",
+      "sha256": "a61d559867a2931d91e40c700a8650c61a48203d25e9c2fa87e76d41f41286ac",
+      "characters": 28061
+    },
+    {
+      "url": "https://lichtfeld.io/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:35.067923+00:00",
+      "sha256": "fd84bf24eaa621ed21cd1d2868ce8436b66169b7b832612df6aed776acfee1d5",
+      "characters": 5434
+    },
+    {
+      "url": "https://lichtfeld.io/showcase",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:35.311459+00:00",
+      "sha256": "f74c84d14b49aea33c203dff0750065497d201c9359a12b3cad28c10c1c25cc7",
+      "characters": 2109
+    },
+    {
+      "url": "https://liquiduslabs.com/lulusplat/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:36.523049+00:00",
+      "sha256": "ff39f5e825b522e1981787189f441762c19e944c150b6ce250082e19359f7a05",
+      "characters": 49875
+    },
+    {
+      "url": "https://marketplace.microsoft.com/en-us/product/wa200013032",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:35.361237+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://marzenamilowska.co.uk/gaussian-splats",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:36.690257+00:00",
+      "sha256": "1b10660bb7b40191f32f6f6c66201986e2a0feae92dcd38edf77a028243c0fb9",
+      "characters": 1563
+    },
+    {
+      "url": "https://medium.com/@splnlss/how-we-used-gaussian-splats-to-take-readers-inside-a-restricted-refugee-camp-f09c3a3324f0",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:35.933807+00:00",
+      "sha256": "ac51c3b2290986618fa2a5b8f397786b312127ab985ee38270c130b263de791c",
+      "characters": 29141
+    },
+    {
+      "url": "https://michael.software/painterly-splat?v=color-1",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:36.906756+00:00",
+      "sha256": "4b5c9032f6adfa2985c458a8bce9064b3dd4ba4d3a1f1f25e3b13a37c2effdad",
+      "characters": 2342
+    },
+    {
+      "url": "https://na.mipmap3d.com/blogs/mipmap-desktop-3-3-new-tools-for-gaussian-splatting-measurement-and-sharing/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:37.416445+00:00",
+      "sha256": "c377c2df43931081795fbe177361bd5605b00aed6f86397f746096503d4c7d5e",
+      "characters": 9846
+    },
+    {
+      "url": "https://nicolasdiolez.com/en/mask-bridge-lightroom-plugin/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:38.217538+00:00",
+      "sha256": "9cc094059ec80d90aedea0a48b654aec7e1a063f87a382783a11fb9c49cabacb",
+      "characters": 4806
+    },
+    {
+      "url": "https://offlinetools.io/fsp-product",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:37.802893+00:00",
+      "sha256": "4a16cb0548341a9bda38abbd5f4f0ed5c496c5655fffdd70577a19bd12a9d36c",
+      "characters": 5687
+    },
+    {
+      "url": "https://paralleldomain.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:38.247588+00:00",
+      "sha256": "6ca048aae479d6eceefae20c8bb6f28729f4d984ae4d20dcc339ec17be5f7c38",
+      "characters": 4370
+    },
+    {
+      "url": "https://paralleldomain.com/product/pd-sim",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:39.101740+00:00",
+      "sha256": "798e1164f3a42648325bb5473834bd01725d1f258f893e7c01eb7d23b3719c7a",
+      "characters": 2941
+    },
+    {
+      "url": "https://paralleldomain.com/resources/from-roads-to-replicas",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:38.694253+00:00",
+      "sha256": "e5584aceda47fbdbf009f08f5c4abd0d395db41bf61472955f893bccb0fe3911",
+      "characters": 2776
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.kiriengine.app",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:38.606264+00:00",
+      "sha256": "24b200697c207836169e2f966fd838e1e7902aedc9c50a5d4c40b450bb5ee9f6",
+      "characters": 8065
+    },
+    {
+      "url": "https://playcanv.as/p/7SQpBGmU/",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:39.253824+00:00",
+      "sha256": "0f0846051feb1ae8cbd9af31a62ee1453c7200c0ca96a40ee173dde9ce36f419",
+      "characters": 92,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://pryme8.github.io/splat-lab/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:39.559069+00:00",
+      "sha256": "0c186c57e6b2f643e16485f3f9fe11a08e1788c7376c83fa6af91f04d1e7e86b",
+      "characters": 1903
+    },
+    {
+      "url": "https://render.otoy.com/forum/viewtopic.php?t=85864",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:40.350494+00:00",
+      "sha256": "6ed6f96ac6e46c4d8f222e2801b58bd2e6d7dd58277bcad520eda833cde96ba2",
+      "characters": 20553
+    },
+    {
+      "url": "https://render.otoy.com/forum/viewtopic.php?t=85910",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:40.774103+00:00",
+      "sha256": "bb3cdd21e0d142f91ecf46d6540b93e74d6e33acd2e56c518ba6e3a873ec9584",
+      "characters": 18594
+    },
+    {
+      "url": "https://renderman.pixar.com/gaussian-splatting-the-pixar-campus",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:41.989905+00:00",
+      "sha256": "80222d21e6b2de3393de5507c738f7e23a94f07d4d0d0ae586c1045c49e5ae22",
+      "characters": 6953
+    },
+    {
+      "url": "https://sketchfab.com/kohiyama",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:45.832511+00:00",
+      "sha256": "1ca1056d9a693e46f9209aee2a5a6e1a30253b58eb038708aa98e9ed4ac40ca1",
+      "characters": 2246
+    },
+    {
+      "url": "https://spaitial.ai/blog/echo-3-release",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:40.406283+00:00",
+      "sha256": "04f49dbf68bdfe3c0cde7fbf17aa532add244f10b5810c113df52b0d71b3a185",
+      "characters": 4186
+    },
+    {
+      "url": "https://sparkjs.dev/radix/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:41.622932+00:00",
+      "sha256": "ca03192ea1b267d53e4067ddb734ca17d81336cc0ea08fa41e5fc4e9bccbfb53",
+      "characters": 4072
+    },
+    {
+      "url": "https://spatialcreative.com/stageit-optimiser/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:41.634210+00:00",
+      "sha256": "67ef8149e36dd6fcfa45527d829d8eea879c7d4c3a55b45052021f7880d56786",
+      "characters": 5513
+    },
+    {
+      "url": "https://spatialview.io/blog/querying-3d-models-with-ai-agents/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:42.295150+00:00",
+      "sha256": "a76417a7369c70555fe2e14c979af656d0588372dd09d7ae000f099540ae7124",
+      "characters": 7945
+    },
+    {
+      "url": "https://splat-dissolve-v4-5.netlify.app/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:44.383470+00:00",
+      "sha256": "48a7b2924a92db977b963df40a90ba0914c36f97ee9e77569f3092a17a76c77f",
+      "characters": 8328
+    },
+    {
+      "url": "https://splattour.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:42.783089+00:00",
+      "sha256": "b1ff2f9b1faae0e71ebf78028543f346a230920eff1acb39015cfcd8f82e4a96",
+      "characters": 4888
+    },
+    {
+      "url": "https://splitview.studio/?ref=radiancefields",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:43.707084+00:00",
+      "sha256": "93ff4572184615e990121ca8a04b1e04acdcd2cbf18422ca25543fbe0a2782d4",
+      "characters": 11564
+    },
+    {
+      "url": "https://store.steampowered.com/app/3977540/Arcturus_Vision_Gaussian_XR/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:46.987493+00:00",
+      "sha256": "7f1b7bee263b27cadaa7ceeb99758cf2e30252d5bb75cacb24c6f9bbf86f0af1",
+      "characters": 4374
+    },
+    {
+      "url": "https://store.steampowered.com/app/5095060/AsterMaster/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:51.077550+00:00",
+      "sha256": "0e46e96bdc0b7ef4209185ac9e096fccbd7e6757c71fa7c3ee0b05f7d3362cc6",
+      "characters": 6927
+    },
+    {
+      "url": "https://storysplat.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:44.876319+00:00",
+      "sha256": "590e31a845c44bf805638077d68ad0aea500d5654c6c690b48a7287d59f1add3",
+      "characters": 7872
+    },
+    {
+      "url": "https://stulab.jp/gallery_categories/photographic-3dmodels/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:47.236137+00:00",
+      "sha256": "a9ca0c80d29e3f060faf361f2f4d4d969fdfc06413a909d2578a56205ab127e5",
+      "characters": 702
+    },
+    {
+      "url": "https://stulab.jp/gallery_categories/photographic-objects/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:47.186668+00:00",
+      "sha256": "69db8438c4e753f6ae37444607210450f66cbbf64cb0afcaed4f159e2dd3a45b",
+      "characters": 831
+    },
+    {
+      "url": "https://superhivemarket.com/products/lens-optics",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:47.472973+00:00",
+      "sha256": "104464e3c2ceeb20c4b03a992d5d4150d031a0ec816e74f1ae4fed678d28d9fd",
+      "characters": 1844
+    },
+    {
+      "url": "https://superhivemarket.com/products/splat-stage",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:47.967663+00:00",
+      "sha256": "cd3a2cffbae01e4036a5bf979cd5215dd9b63a03ab0ebfa3a2d627701e92097b",
+      "characters": 10580
+    },
+    {
+      "url": "https://superhivemarket.com/products/splatpilot",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:48.220731+00:00",
+      "sha256": "589e3d42916d2a64d54b238384a91f72d4f09d1b9a4ce9de50e80e59d4395141",
+      "characters": 7858
+    },
+    {
+      "url": "https://superspl.at/scene/1528c7be",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:49.071132+00:00",
+      "sha256": "a0e25646f1ce1c507f7eba92d7e1807b36fd442d173d1786e1e91c1b651b6726",
+      "characters": 435
+    },
+    {
+      "url": "https://superspl.at/scene/21575f53",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:48.462020+00:00",
+      "sha256": "f4b033b63fbd79ffbe2b5499dd5b84d17b0a24d082aae9d04894dbe3526484bd",
+      "characters": 388
+    },
+    {
+      "url": "https://switchsplat.github.io/viewer/",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:48.418008+00:00",
+      "sha256": "a631678a1ba65220f33b05340b50eb63f50fd922346b128643facd8d8b699fcb",
+      "characters": 32,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://tactyc.gumroad.com/l/dgmnyj?a=555385955",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:49.037621+00:00",
+      "sha256": "165fd86f990239743a6f5f3a6b86a59a6b5577c04d236ba0620043f5a6c93b16",
+      "characters": 7250
+    },
+    {
+      "url": "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:48.676469+00:00",
+      "sha256": "b20d57d116aad1d2f5c68a324c8ea6f54140e16fc534b361fceaca54124c6052",
+      "characters": 7396
+    },
+    {
+      "url": "https://thirddimension.ai/blog/posts/reconstruct-the-real-world-with-supersim",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:50.519475+00:00",
+      "sha256": "b190ecfa0654b91078135a20bbdbe6b121fdcb683e72efb7074538f3de5d6bb5",
+      "characters": 4494
+    },
+    {
+      "url": "https://thirddimension.ai/blog/posts/world-models-at-third-dimension-ai",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:50.518773+00:00",
+      "sha256": "0525a6808aa2fd7afd5502cb863f90ee09f485853e230dd91496f538d083d363",
+      "characters": 7703
+    },
+    {
+      "url": "https://tijerinart.itch.io/quick-gs-editor",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:50.071409+00:00",
+      "sha256": "610c35eb351f45af62ec73db6925ca0449f4798b79bc11adb3e600ce8dc53bc5",
+      "characters": 5293
+    },
+    {
+      "url": "https://tijerinart.itch.io/quick-gs-editor-pro",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:49.674624+00:00",
+      "sha256": "a7859b516dca6730310cad143261baa527672613a099809bfba3bbccf4d675c5",
+      "characters": 5947
+    },
+    {
+      "url": "https://topmuseum.jp/exhibition/5454/?lang=en",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:50.619788+00:00",
+      "sha256": "816eaeb42b70c433539a92ee3b1036766218088b4e858244aab99823c30d8342",
+      "characters": 2724
+    },
+    {
+      "url": "https://uidronelab.org/2026/10/29/ui-drone-lab-captures-laser-scans-of-2026-us-capitol-christmas-tree/",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:51.686190+00:00",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "url": "https://viggle.ai/jst2",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:51.255972+00:00",
+      "sha256": "353fdce3815c615d894f167db38b036670f1696e787aed0e44a15275a6d163f1",
+      "characters": 16033
+    },
+    {
+      "url": "https://viggle.ai/pinoc/mcp",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:51.256210+00:00",
+      "sha256": "d2e04c8ece943b202b817bbd9124350c8ad30696f922c30b4f7530ae5acf1bcd",
+      "characters": 9357
+    },
+    {
+      "url": "https://voxel51.com/blog/voxel51-3-0-physical-ai-data-platform",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:58.394453+00:00",
+      "sha256": "ce7f0643783f5741977f20de8d8e8e187271b662d06519bad931d7c44d4e2791",
+      "characters": 20329
+    },
+    {
+      "url": "https://www.360gaussianpro.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:51.758281+00:00",
+      "sha256": "5deca18a1edffe5bf193b456de3b9ece11c47b65b2956956697a67366b6c0f9b",
+      "characters": 6648
+    },
+    {
+      "url": "https://www.artec3d.com/news/artec-twins-press-release",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:51.419003+00:00",
+      "sha256": "f7db1c6e9a02d6292cb95e98a97d04ff261701fa250d3de36e30c79baebe55c7",
+      "characters": 165,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://www.businesswire.com/news/home/20261022561907/en/",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:37:04.837699+00:00",
+      "error": "Remote end closed connection without response"
+    },
+    {
+      "url": "https://www.dobasketsdream.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:52.232642+00:00",
+      "sha256": "5fbe10f9aadc4d1dc87a30c64b1ff9d651029ddd008cb92370b170cbbe14d6fb",
+      "characters": 2505
+    },
+    {
+      "url": "https://www.dylansisson.com/stories/kosmo/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:53.912818+00:00",
+      "sha256": "3259955986d46aa4524bda3a4c756d97afedfb8e6eb6e9defe9dfa44c071a3cf",
+      "characters": 6056
+    },
+    {
+      "url": "https://www.eclipseautomation.com/resource/articles/radiance-field-technology/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:52.785942+00:00",
+      "sha256": "c11e15cc6418b16c9ebfa7b55c6df3d8f5401681af789adb79317d98eabfa892",
+      "characters": 16300
+    },
+    {
+      "url": "https://www.eclipseautomation.com/resource/press-releases/realitysync-preview-iphone-vision-pro/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:52.955632+00:00",
+      "sha256": "5e79442c607adf8ee4b779f719c8f27f64fdb7013a5f970c194c2b3e153ebca5",
+      "characters": 11075
+    },
+    {
+      "url": "https://www.einstar.com/blogs/news/exstar-hub-2-0-update",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:53.702827+00:00",
+      "sha256": "f8c7e8207706f9bda09089fc27893ab80bc172a4046b5ed50b7ff3ad16b52e66",
+      "characters": 12375
+    },
+    {
+      "url": "https://www.es2-inc.com/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:56.580276+00:00",
+      "sha256": "b7df1005b38e72c06cbad1d6b8106f474fdc65df2ba0dc28b1eea68c7f5d5472",
+      "characters": 4886
+    },
+    {
+      "url": "https://www.esri.com/about/newsroom/arcwatch/clemson-turns-70000-drone-images-into-a-photorealistic-digital-campus",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:53.951768+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.esri.com/arcgis-blog/products/js-api-arcgis/announcements/arcgis-maps-sdk-for-javascript-whats-new-in-5-2",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:54.088761+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.esri.com/en-us/lg/industry/government/stories/gretna-louisiana-imagery-mapping-improves-infrastructure-management",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:54.426130+00:00",
+      "sha256": "a075047656813a50f1bc72441fd398c25bc01c0d7a5ebbee09f483a7810094d1",
+      "characters": 7162
+    },
+    {
+      "url": "https://www.fab.com/listings/3e8a8fa7-38f5-4825-b714-3eb121fd9993",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:56.066995+00:00",
+      "sha256": "f1e31479f1eb58db11698fa861feb38834abf8ba4b83cca53380b46adaebfae6",
+      "characters": 6730
+    },
+    {
+      "url": "https://www.food4rhino.com/en/app/splatypus",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:55.230475+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.freegaussian.ai/blog/dji-osmo-360-gaussian-splatting",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:56.279968+00:00",
+      "sha256": "d29abd8c1e3beeb993c532c5a3792d4ea871b6fb3081686ca642d71c0ce25aac",
+      "characters": 4484
+    },
+    {
+      "url": "https://www.freegaussian.ai/blog/insv-native-fisheye-gaussian-splatting",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:56.630969+00:00",
+      "sha256": "402d3dfb1bb455e273b341fc328e608b8a561e08ed96102bdbbc282925472d70",
+      "characters": 8009
+    },
+    {
+      "url": "https://www.freegaussian.ai/blog/new-3d-viewer",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:56.842686+00:00",
+      "sha256": "491b540adf06e865bd375ae90942e8a0cb7c5d3cb2863f36a50b45b4e42b3286",
+      "characters": 5514
+    },
+    {
+      "url": "https://www.globenewswire.com/news-release/2026/10/27/3388749/0/en/octave-alto-expands-visualization-capabilities.html",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:36:56.801697+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.hesaitech.com/9974-2/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:57.007282+00:00",
+      "sha256": "12d84fc178526af629ef9831ee8dd9ab2171ffa5728ddb0a5e77ba0484584aff",
+      "characters": 11955
+    },
+    {
+      "url": "https://www.ilm.com/john-knoll-interview-star-wars-mandalorian-grogu-ilm-vfx/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:59.472433+00:00",
+      "sha256": "29c25a5da4df184beae3de36f9a924408b2beea572bf9b3f6a3111603b3731a4",
+      "characters": 16083
+    },
+    {
+      "url": "https://www.insta360.com/spatial-capture-challenge",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:36:57.377638+00:00",
+      "sha256": "c6eafb9ee48f62c47daff7429653e8c4f21a485dd7ee2491a26f6b17c5503a64",
+      "characters": 6000
+    },
+    {
+      "url": "https://www.instagram.com/dobasketsdream/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:03.896512+00:00",
+      "sha256": "6fa5b23e2a643cdca8a767dd38ce41288562316b278344066c472c1ba8529937",
+      "characters": 1089
+    },
+    {
+      "url": "https://www.instagram.com/p/De1VKkbABUW/",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:37:03.190154+00:00",
+      "sha256": "bad57ef7837c8e6bf99c2a5935cc9d6fe5324a53d88744ad5551db0e46b03cd6",
+      "characters": 9,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://www.kaukokaipuukobo.com",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:36:59.015835+00:00",
+      "sha256": "fbc95cdda2fb0515dbdbe58e21718c47ad82c7ace39c336f2aae6ea8c90bc178",
+      "characters": 176,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://www.labiennale.org/en/news/official-awards-83rd-venice-international-film-festival",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:01.935675+00:00",
+      "sha256": "701bbe71a1c61b2e9a414355c0ade1665813dc8e5a1ec049661ba8a0d36e2b66",
+      "characters": 8758
+    },
+    {
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518914152707407872/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:00.870152+00:00",
+      "sha256": "35a580ea76de0e124ab7486d8c505fddf3175d702e1b7218fbfb487f306d1388",
+      "characters": 14433
+    },
+    {
+      "url": "https://www.linkedin.com/posts/gaussiansplatting-3dgeospatialtechnology-ugcPost-7522993461872967680-HNFI/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:01.589744+00:00",
+      "sha256": "d6cd14d6d19193dba5119dffe54eabc0521e0c2f28183155e94446a505c18ccb",
+      "characters": 2525
+    },
+    {
+      "url": "https://www.linkedin.com/posts/trimbledimensions-xgrids-lixelstudio-ugcPost-7525618393735995392-nJ8c/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:02.419323+00:00",
+      "sha256": "774dfdb23be0210f80f09dd415361e57c6f28c9369ec76ad24109a4dc0f08306",
+      "characters": 3658
+    },
+    {
+      "url": "https://www.linkervision.com/post/linker-vision-announces-esg-agent-to-help-cities-plan-more-sustainable-urban-environments",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:06.321995+00:00",
+      "sha256": "028a98cc1488c512fb9e2ecf3d10d727bcf766bb6205b857a1d163c7d25b5c39",
+      "characters": 3768
+    },
+    {
+      "url": "https://www.livedesignonline.com/news/excellence-awards-2026-empire-sea",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:37:03.659405+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.lutraconsulting.co.uk/crowdfunding/qgis-3d-reality-capture-animation",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:03.496607+00:00",
+      "sha256": "75093ac8de318eae2fb161808c08072851a993c9ff5fee0575278dced599548d",
+      "characters": 16062
+    },
+    {
+      "url": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:04.730725+00:00",
+      "sha256": "f0789dd7bcf8d2a42d16279ee1de5f466b75609d4e5f1e8a232cd31f8c1e4e76",
+      "characters": 12431
+    },
+    {
+      "url": "https://www.nianticspatial.com/blog/introducing-object-interaction",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:05.773562+00:00",
+      "sha256": "1ae94c49f6978696e360b3aef6d46ff0a532f45bafc1186ae9b2495aaf53f7c3",
+      "characters": 7087
+    },
+    {
+      "url": "https://www.nianticspatial.com/embodied-ai/places-library-usdz",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:05.582731+00:00",
+      "sha256": "7615e3f9446d07ad71fac3c9ed97bb44ba9f719c01983754f971442ba05023e3",
+      "characters": 10140
+    },
+    {
+      "url": "https://www.nokia.com/blog/nokia-showcased-pioneering-dash-based-volumetric-video-streaming-at-ibc-2026/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:06.155813+00:00",
+      "sha256": "b914f1e31fc86284e39aaaa782ee6a0f4a8060e4666b99b63b10591b77fe29d1",
+      "characters": 10540
+    },
+    {
+      "url": "https://www.npmjs.com/package/cairn-spec",
+      "status": "unavailable",
+      "checkedAt": "2026-11-13T09:37:05.041961+00:00",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.ntticc.or.jp/en/archive/works/micro-presence/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:06.050251+00:00",
+      "sha256": "c229a434f582884c4b0833bc1c617bd0fb3a69a17d540fdf609e5d66df97a004",
+      "characters": 2212
+    },
+    {
+      "url": "https://www.okayama-kenbi.info/exh-20261009-mushi_ten/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:06.537659+00:00",
+      "sha256": "5e3d554e3537a120b99d9054caf77b488e5a7ef385641ea8d0c99862c312490a",
+      "characters": 5690
+    },
+    {
+      "url": "https://www.open3d.org/2026/09/24/open3d-v0-20-is-here-with-gaussian-splatting-and-full-intel-gpu-support/ ",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:09.078173+00:00",
+      "sha256": "4c14ce54aaa7b868077f13122397ba6c64779528e29bcb047940bb9a9e6cd9e8",
+      "characters": 12027
+    },
+    {
+      "url": "https://www.share3dcam.com/en/app.html",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:06.447718+00:00",
+      "sha256": "fa37e13fe1477e72b05631324097ee0998a7e750606d586c9af4bd871f5b019e",
+      "characters": 12558
+    },
+    {
+      "url": "https://www.simactive.com/news-stories/simactive-enables-online-sharing-of-gaussian-splats",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:07.470925+00:00",
+      "sha256": "34341264b9245792a778cef7c012400156f29b7ed54f2bb3ac0d556052e0988d",
+      "characters": 2307
+    },
+    {
+      "url": "https://www.skylinesoft.com/news/skylineglobe-server-and-terraexplorer-fusion-8-5-release/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:07.978809+00:00",
+      "sha256": "f74b1d915ad20cadfed1b74bf652da1f03eee62124009e6593608c5982f575d4",
+      "characters": 9450
+    },
+    {
+      "url": "https://www.sony.jp/professional/News/Press/20261027/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:07.139685+00:00",
+      "sha256": "458d8192adb2b750f715f92ff9eee24b45051bcdeec09a4cc2a8865974e948c3",
+      "characters": 8752
+    },
+    {
+      "url": "https://www.stonex.it/new-products/cube-3d-genesys-software/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:12.454086+00:00",
+      "sha256": "60a62b7f88f8151bdf354f618f2de50f127f10fd4c7467b1f58a415d8d2a41aa",
+      "characters": 4969
+    },
+    {
+      "url": "https://www.stonex.it/product/cube-3d-software/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:13.735921+00:00",
+      "sha256": "90e90be6d4112164395f45df9baa12a640b658b535b82da36850274ee3757882",
+      "characters": 12087
+    },
+    {
+      "url": "https://www.thepixellab.net/3d-gaussian-splat-pack-davy-jones-locker",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:08.403330+00:00",
+      "sha256": "885208b622f0cb670eef97907e8a2c1511ed7c0240101b4697dd43b466cd8d08",
+      "characters": 2974
+    },
+    {
+      "url": "https://www.thepixellab.net/3d-gaussian-splat-pack-nebula",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:08.469310+00:00",
+      "sha256": "d43569583f38c8bfd358946da4bc9b35c9dfda31ddc5dfc7c81ab836ef37112a",
+      "characters": 3126
+    },
+    {
+      "url": "https://www.tohoku.ac.jp/japanese/2026/10/press20261006-03-netis.html",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:08.884339+00:00",
+      "sha256": "81ade2aeb9a21b79616325d58747b3de1f87dee5dbf86a464e996b1d396df68b",
+      "characters": 2338
+    },
+    {
+      "url": "https://www.voxelo.ai/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:09.240953+00:00",
+      "sha256": "576bcf3175aacb5d85ff5769beb347e34b32a2dfcf6ad4dae814ec9ce988f945",
+      "characters": 1306
+    },
+    {
+      "url": "https://www.w3.org/community/reports/immersive-captions/CG-FINAL-360-captions-20240412/",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:09.425059+00:00",
+      "sha256": "f48ffed22f79a7482055ff84ca3915511153e39dd5e0f2d41b3c05d84898ac5a",
+      "characters": 26376
+    },
+    {
+      "url": "https://www.worldlabs.ai/atlas",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:09.615424+00:00",
+      "sha256": "cf1e7f2af0e1cea8cb720840dbc4822b18626a3fe637d92142d2ad6eef8fedaa",
+      "characters": 2161
+    },
+    {
+      "url": "https://www.xgrids.com/intl/support/download/lcc-model-editor",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:13.858565+00:00",
+      "sha256": "0e87403981e1d230d9323706dd45a183977d5a7d06167b872e36d1cf882818c0",
+      "characters": 4971
+    },
+    {
+      "url": "https://www.xgrids.com/intl/support/download/lcc-studio",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:11.490863+00:00",
+      "sha256": "4c33fd4772f55014ee78e0973d52b9c17064094215f691a83d6707c8781f776f",
+      "characters": 6548
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ARnEPc2j_gU",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:37:10.649760+00:00",
+      "sha256": "f70edcaacaa90e4705136a080ebf3c89514984eeaebda3788f1055b50188f20d",
+      "characters": 136,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://x.com/DSkaale/status/2107820779530240134",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:11.172066+00:00",
+      "sha256": "a5dc58305ada09d10b477c3ec2b54347cadebc2773f359a97a5ae9e1d609fb6a",
+      "characters": 2116
+    },
+    {
+      "url": "https://x.com/syu_ya23/status/2120449956393705816",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:11.628667+00:00",
+      "sha256": "745491ca4284944c59c99b990dc67eb80fa63a18db75027c9fd3ddf7d7f1343f",
+      "characters": 1753
+    },
+    {
+      "url": "https://xangleapps.com/orbit/changelog/v26.10.27",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:12.322231+00:00",
+      "sha256": "7e961ec039c29df826a037de3a114bfd81d5b483a6b15c3341a1c72652a5b09f",
+      "characters": 4723
+    },
+    {
+      "url": "https://youtu.be/TziLEMJ9BsE",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:37:12.696691+00:00",
+      "sha256": "de466f9c5a3ec8418deeb63a8bede190761280de74f54b6256a9284f54d57b35",
+      "characters": 146,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://youtu.be/ZzcXRoycB5M",
+      "status": "shell-only",
+      "checkedAt": "2026-11-13T09:37:13.808930+00:00",
+      "sha256": "db8fe8b302c6c8e2d13ba9951729076a263c2a6d1e279bc700b273e5ad6e9ea8",
+      "characters": 165,
+      "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+    },
+    {
+      "url": "https://zoynctech.itch.io/room-scan-exporter-for-meta-quest-3",
+      "status": "retrieved",
+      "checkedAt": "2026-11-13T09:37:13.074577+00:00",
+      "sha256": "61594a4858f376fbcd999dd9a407e205e2aa18b11d385c30e9f86cee7d49dbd4",
+      "characters": 10409
+    }
+  ],
+  "reports": [
+    {
+      "date": "2026-09-18",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "15af5c44eb47a0a931bac2b5b67710617be50da625f2ab7bc7ca6048b4a928f0",
+      "supplement": "docs/supplements/2026-09-18-horizon.md"
+    },
+    {
+      "date": "2026-09-19",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "fd6e2cafe9ad4289816d8ec53700791210f728f1b68e438bea9e4f2ad3df7fbe",
+      "supplement": "docs/supplements/2026-09-19-horizon.md"
+    },
+    {
+      "date": "2026-09-20",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "38f426b3d0a826bf68956db466ce2d4af6e7b21154a89ceb9439858ca88f823e",
+      "supplement": "docs/supplements/2026-09-20-horizon.md"
+    },
+    {
+      "date": "2026-09-22",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "b86e65128c0f373ddba682e2efe342079fa5c516f32cc49022e79fef68beae3a",
+      "supplement": "docs/supplements/2026-09-22-horizon.md"
+    },
+    {
+      "date": "2026-09-23",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "c76bb2153daf822be13b6d3a30b6b2a2c5461da333786251d79055fdaaf31336",
+      "supplement": "docs/supplements/2026-09-23-horizon.md"
+    },
+    {
+      "date": "2026-09-25",
+      "added": 1,
+      "merged": 1,
+      "originalReadingSha256": "658046eaf73b0298cfe580441832bd8e69bb4626cefb5c2bd502dc20b71947c7",
+      "supplement": "docs/supplements/2026-09-25-horizon.md"
+    },
+    {
+      "date": "2026-09-28",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "3c5c806455589cb0bb4e9ef339a891c187c0d972f7ac0474382eac3fce5b37c6",
+      "supplement": "docs/supplements/2026-09-28-horizon.md"
+    },
+    {
+      "date": "2026-09-29",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "cdf5ff93ddabe338d0e0fd5b54d046f5380fbba520d63efdbc3752a8df95bd5d",
+      "supplement": "docs/supplements/2026-09-29-horizon.md"
+    },
+    {
+      "date": "2026-09-30",
+      "added": 5,
+      "merged": 1,
+      "originalReadingSha256": "fc8af7a996e6daf9763869fa03970ce9512c4b389232cf6e0cc72c5cb8b030e3",
+      "supplement": "docs/supplements/2026-09-30-horizon.md"
+    },
+    {
+      "date": "2026-10-01",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "10b048af3ff7e19c42f797f1be84c434e0ffc1f3621a9a69e4706c98fefc0177",
+      "supplement": "docs/supplements/2026-10-01-horizon.md"
+    },
+    {
+      "date": "2026-10-02",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "336f6a67a408021f86a433ec218b9418be0b570232145072aee9ce230ef2e5ca",
+      "supplement": "docs/supplements/2026-10-02-horizon.md"
+    },
+    {
+      "date": "2026-10-03",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "c3792cd2e49e9484a5e60237b5002600573209349ed4aeef6170279624216f15",
+      "supplement": "docs/supplements/2026-10-03-horizon.md"
+    },
+    {
+      "date": "2026-10-04",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "21290a349d0d9845d08d572e2b4f9265640483ca6a9975115b4558d03baa0b86",
+      "supplement": "docs/supplements/2026-10-04-horizon.md"
+    },
+    {
+      "date": "2026-10-05",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "df4548e0c2b03dea7208a5578b000d98e1e0143b65576be102750ca2334a0fd6",
+      "supplement": "docs/supplements/2026-10-05-horizon.md"
+    },
+    {
+      "date": "2026-10-06",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "c7395522f42af69478a8f77bf59fcb372e9a897583ae271684bc2e4ded288c30",
+      "supplement": "docs/supplements/2026-10-06-horizon.md"
+    },
+    {
+      "date": "2026-10-07",
+      "added": 3,
+      "merged": 1,
+      "originalReadingSha256": "1cb3761b1bbd5ea00477811a06f789be8756830f99477538f28f5fbd54292589",
+      "supplement": "docs/supplements/2026-10-07-horizon.md"
+    },
+    {
+      "date": "2026-10-08",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "b58552085dc0c9af23f90d53df9b9d5e4f816449f7b4fdfe68978dea9e78c548",
+      "supplement": "docs/supplements/2026-10-08-horizon.md"
+    },
+    {
+      "date": "2026-10-10",
+      "added": 3,
+      "merged": 1,
+      "originalReadingSha256": "3a1b8d17ae955598e593cef8779df822599b8215963bfbd829c4ef02af0ba612",
+      "supplement": "docs/supplements/2026-10-10-horizon.md"
+    },
+    {
+      "date": "2026-10-09",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "8568325518e1d4cf843bd35bb3f135c57daa33dfc957117194b2a8a4bb4bc05a",
+      "supplement": "docs/supplements/2026-10-09-horizon.md"
+    },
+    {
+      "date": "2026-10-12",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "3d9d6774b94eb9dd02aa2d7d7b5010d5d6d5adbf8c3bd8da036cfd24ee6e93f5",
+      "supplement": "docs/supplements/2026-10-12-horizon.md"
+    },
+    {
+      "date": "2026-10-13",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "6d2aad14690639657f8920087d8244ac60d6e8232835111afb3b9510399a29ec",
+      "supplement": "docs/supplements/2026-10-13-horizon.md"
+    },
+    {
+      "date": "2026-10-14",
+      "added": 7,
+      "merged": 0,
+      "originalReadingSha256": "252abf9945408635fd90e23d831672fe180fc3eb10a33c23281fd22457da5727",
+      "supplement": "docs/supplements/2026-10-14-horizon.md"
+    },
+    {
+      "date": "2026-10-15",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "5df940f89c7c96d985174b8f8028692302518910fe15869855acdec17f21113f",
+      "supplement": "docs/supplements/2026-10-15-horizon.md"
+    },
+    {
+      "date": "2026-10-16",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "4ca21490802c78a0f51fbb95e982f3c86b1d2304637487ea9e722b990b5e094c",
+      "supplement": "docs/supplements/2026-10-16-horizon.md"
+    },
+    {
+      "date": "2026-10-17",
+      "added": 4,
+      "merged": 1,
+      "originalReadingSha256": "e75d9dc1c29d71c26e10cb693ece205bfd35ea7fdaf8b1ad280e7de482a430d0",
+      "supplement": "docs/supplements/2026-10-17-horizon.md"
+    },
+    {
+      "date": "2026-10-18",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "b52fdfbd2e1d72169de350498f07f291e279c4ec05ac3f69225797ca04e084d7",
+      "supplement": "docs/supplements/2026-10-18-horizon.md"
+    },
+    {
+      "date": "2026-10-19",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "63da4e7f050040c66ed73610d0e32903598f9d25fbbf62aad7d6df72da916deb",
+      "supplement": "docs/supplements/2026-10-19-horizon.md"
+    },
+    {
+      "date": "2026-10-20",
+      "added": 9,
+      "merged": 0,
+      "originalReadingSha256": "76e405bb8eb1498acf05bffe2a135010c0940e8455d725d1057d186ad0086485",
+      "supplement": "docs/supplements/2026-10-20-horizon.md"
+    },
+    {
+      "date": "2026-10-21",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supplement": "docs/supplements/2026-10-21-horizon.md"
+    },
+    {
+      "date": "2026-10-22",
+      "added": 6,
+      "merged": 0,
+      "originalReadingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supplement": "docs/supplements/2026-10-22-horizon.md"
+    },
+    {
+      "date": "2026-10-23",
+      "added": 6,
+      "merged": 0,
+      "originalReadingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supplement": "docs/supplements/2026-10-23-horizon.md"
+    },
+    {
+      "date": "2026-10-24",
+      "added": 7,
+      "merged": 0,
+      "originalReadingSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "supplement": "docs/supplements/2026-10-24-horizon.md"
+    },
+    {
+      "date": "2026-10-25",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "9b24193fe4b8b136b3554e005fc8d0203c73efc3d8fd21d94bdb1a0ea003b991",
+      "supplement": "docs/supplements/2026-10-25-horizon.md"
+    },
+    {
+      "date": "2026-10-26",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "8ed9df534c5360f3af22fefd579c8dc4cb13c963e926d21731ba59bd75c5075b",
+      "supplement": "docs/supplements/2026-10-26-horizon.md"
+    },
+    {
+      "date": "2026-10-27",
+      "added": 7,
+      "merged": 1,
+      "originalReadingSha256": "c668f3a1c1c29d8f618fe2677005ba4a1e335018ffdabc5ec3148205aa7b3382",
+      "supplement": "docs/supplements/2026-10-27-horizon.md"
+    },
+    {
+      "date": "2026-10-28",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "cdd9277c4deca95920f4092a3a639fc26d12e3425e41f11a382ac195f16cacc5",
+      "supplement": "docs/supplements/2026-10-28-horizon.md"
+    },
+    {
+      "date": "2026-10-29",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "1f552a9e26f78319ded798c8e05d48104ec146fd0c43ab3d5dc3fe5fc49aaf0c",
+      "supplement": "docs/supplements/2026-10-29-horizon.md"
+    },
+    {
+      "date": "2026-10-30",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "a5afc6869d58cba25e2c82f4dda641c1cbe8febfd3c277eba09a62dc4c310697",
+      "supplement": "docs/supplements/2026-10-30-horizon.md"
+    },
+    {
+      "date": "2026-10-31",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "96a31f04e48f8e48619084c676ca1343045983ba3680ddd58a2198fa2ac68f4e",
+      "supplement": "docs/supplements/2026-10-31-horizon.md"
+    },
+    {
+      "date": "2026-11-01",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "23a023e47b21a7089bfee3b0d3ae820890fb7964ffe6c91336ceba79abb989fd",
+      "supplement": "docs/supplements/2026-11-01-horizon.md"
+    },
+    {
+      "date": "2026-11-02",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "63c151cb5716504bc7acc66658972ccb721b8b83355ba148d93f4405002f2ab9",
+      "supplement": "docs/supplements/2026-11-02-horizon.md"
+    },
+    {
+      "date": "2026-11-03",
+      "added": 4,
+      "merged": 0,
+      "originalReadingSha256": "2f9731e0343b6f060f0d8331d3bce142357a94b761b47cae1184fb0ed719862f",
+      "supplement": "docs/supplements/2026-11-03-horizon.md"
+    },
+    {
+      "date": "2026-11-04",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "9eb66671a9b6bbddf9213f590d67fe506b1bd3338ce9f25937266719510dfb41",
+      "supplement": "docs/supplements/2026-11-04-horizon.md"
+    },
+    {
+      "date": "2026-11-05",
+      "added": 6,
+      "merged": 0,
+      "originalReadingSha256": "e0a00747ceb8209b5c17262cd2632d5c76e0d0154b69ca3e93bfddd5c1730ba7",
+      "supplement": "docs/supplements/2026-11-05-horizon.md"
+    },
+    {
+      "date": "2026-11-06",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "8dbc3553df2e1f5527639b4d19663c82b305a83343fd816c22969d126f30e00e",
+      "supplement": "docs/supplements/2026-11-06-horizon.md"
+    },
+    {
+      "date": "2026-11-07",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "abc367f118a1c5d3698333f016078ad1f47b02ae6e82e128dbbff823165162b5",
+      "supplement": "docs/supplements/2026-11-07-horizon.md"
+    },
+    {
+      "date": "2026-11-08",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "c9fb6282bbd8dfc7a37b179518f8793d0b2922e3038599e28f44c91ffeb77e19",
+      "supplement": "docs/supplements/2026-11-08-horizon.md"
+    },
+    {
+      "date": "2026-11-09",
+      "added": 1,
+      "merged": 0,
+      "originalReadingSha256": "57df0007104be069854779d7981aae245ba29f0e94af4f9a38bca87b71843de4",
+      "supplement": "docs/supplements/2026-11-09-horizon.md"
+    },
+    {
+      "date": "2026-11-10",
+      "added": 6,
+      "merged": 0,
+      "originalReadingSha256": "903e89c649d3f489e7f605e2037ff0c7e644009ee1459df8f18f6cd1b0a733cc",
+      "supplement": "docs/supplements/2026-11-10-horizon.md"
+    },
+    {
+      "date": "2026-11-11",
+      "added": 8,
+      "merged": 0,
+      "originalReadingSha256": "82fae7303b63c0c06dade07bb1948f6545e60bffaa7e5a7a3600909432d175dd",
+      "supplement": "docs/supplements/2026-11-11-horizon.md"
+    },
+    {
+      "date": "2026-11-12",
+      "added": 3,
+      "merged": 0,
+      "originalReadingSha256": "7750525469119887878811573d091006f8f14274208e199771971b3aeb583630",
+      "supplement": "docs/supplements/2026-11-12-horizon.md"
+    },
+    {
+      "date": "2026-11-13",
+      "added": 2,
+      "merged": 0,
+      "originalReadingSha256": "1f8acbc2fd1cb64342f237a198e7a361808eea430ab8b87878ee10f13d11c962",
+      "supplement": "docs/supplements/2026-11-13-horizon.md"
+    }
+  ]
+}

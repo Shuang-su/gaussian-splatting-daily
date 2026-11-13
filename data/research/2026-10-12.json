@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-12",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-12T00:00:00+08:00",
+    "end": "2026-10-13T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.007952+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2608.02437"
+      ],
+      "candidateIds": [
+        "radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2608.02437",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.007952+00:00",
+          "sha256": "f72f3cdb9cdf5454b134497d1553b431b4a2aac4ccf82ddd72bcd559c0bfb7b4",
+          "characters": 5213
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:27.684249+00:00",
+      "urls": [
+        "https://github.com/jKaarlehto/ComfyUI-InfiniSplat"
+      ],
+      "candidateIds": [
+        "radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/jKaarlehto/ComfyUI-InfiniSplat",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:27.684249+00:00",
+          "sha256": "122a4b5c0554dcec61ef4a11cc902a27fd017ab33b416ba364b5680a6209dd0c",
+          "characters": 11055
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui",
+      "title": "ComfyUI-InfiniSplat 提供单图到高斯节点",
+      "eventDate": "2026-10-12",
+      "reportDate": "2026-10-12",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui",
+        "https://arxiv.org/abs/2608.02437",
+        "https://github.com/jKaarlehto/ComfyUI-InfiniSplat"
+      ],
+      "eventId": "radiancefields.com/comfyui-infinisplat-brings-single-image-gaussian-splats-to-comfyui"
+    }
+  ]
+}

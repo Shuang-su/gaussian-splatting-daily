@@ -79,8 +79,8 @@ def validate_file(path: Path) -> list[str]:
 
     if meta["id"] != f"gsd-{logical_date}":
         errors.append(f"{path}: id must be gsd-{logical_date}")
-    if meta["timezone"] != "Asia/Tokyo":
-        errors.append(f"{path}: timezone must be Asia/Tokyo")
+    if meta["timezone"] not in {"Asia/Tokyo", "Asia/Shanghai"}:
+        errors.append(f"{path}: timezone must be Asia/Shanghai (legacy Asia/Tokyo accepted)")
     if meta["schema_version"] != "1":
         errors.append(f"{path}: schema_version must be 1")
     if meta["status"] not in {"draft", "no-data", "published", "corrected"}:
@@ -108,7 +108,10 @@ def validate_file(path: Path) -> list[str]:
                 f"{path}: source_count={source_count}, but found {len(markers)} arXiv marker(s)"
             )
 
-    if "# 今日概览" in text:
+    if meta.get("editorial_policy") == "horizon-v1":
+        if not re.search(r"^# .+", text, re.M) or not (ROOT / f"docs/reading/{logical_date}.md").is_file() or not (ROOT / f"data/research/{logical_date}.json").is_file():
+            errors.append(f"{path}: Horizon report needs heading, reading edition and source coverage record")
+    elif "# 今日概览" in text:
         for heading in ("## 论文与研究", "## 自动化说明"):
             if heading not in text:
                 errors.append(f"{path}: missing section {heading}")

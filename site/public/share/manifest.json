@@ -19,7 +19,7 @@
   "default": {
     "url": "/share/default.png",
     "date": "2026-11-13",
-    "sha256": "50bfe0413361a4719f787995cdc7c5b5e10be3474d08bcb65b05ed9fdeeffa58"
+    "sha256": "a81c9a3029806d5384bd24353af094d7372c2efcb9b9c4273aba45e93bbb8c77"
   },
   "reports": {
     "2026-09-18": {
@@ -40,11 +40,11 @@
     "2026-09-19": {
       "date": "2026-09-19",
       "url": "/share/2026-09-19.png",
-      "title": "PlayCanvas 加入随机透明度，Blender 支持 OpenUSD 高斯",
+      "title": "Niantic Spatial 测试高斯场景重光照",
       "contentHash": "b65a651512220848eba914fc101a459cd458abdc06de2f688ea9b8904e90a767",
-      "inputHash": "db00b3aa77714e14d699591106885a3ce10f2a89d43bab9ab38adf6ecfa001f4",
-      "sha256": "0e2316ee194f0c9d6b2c7f73b0350993e183c6f80ffd4711a75d8c9e5cc8b9de",
-      "bytes": 509561,
+      "inputHash": "e7d5b6d361e14b7009a3461fa2ff5f96c2e76c7f9c96391faf2b663e5595153d",
+      "sha256": "3cd2a172ae68fb0fef109437b71e7889707e06324f778540d2b70b8a811bbdda",
+      "bytes": 503868,
       "cover": {
         "url": "/media/originals/supersplat-stochastic.png",
         "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
@@ -55,11 +55,11 @@
     "2026-09-20": {
       "date": "2026-09-20",
       "url": "/share/2026-09-20.png",
-      "title": "glTF 高斯扩展已批准，SuperSplat 提供宿主控制 API",
+      "title": "AWS 资产管理系统采用 SuperSplat 查看器",
       "contentHash": "2c0f6e90eacc9e52a1fbb3f6751aaa130162f1578c885e0775717dfbf7908ddd",
-      "inputHash": "345a87bcf1eae411a2db18d9c5f476e68fd988f87893e0a83fee31bb40d2865d",
-      "sha256": "1250d73a5c5869b8d0bd743a5b72deb10484f03fe1a1a9855b87f56738c3b1d1",
-      "bytes": 452456,
+      "inputHash": "06d3bbe7a4fb432079d9d924185b466a7d03b87e66ae744c14f04077cb5d4665",
+      "sha256": "5f408cf6cc47a7e20557bf7eafe931fc457b3395a4e7c987baa3097153654d2e",
+      "bytes": 452395,
       "cover": {
         "url": "/media/originals/niantic-relighting.png",
         "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
@@ -130,11 +130,11 @@
     "2026-09-25": {
       "date": "2026-09-25",
       "url": "/share/2026-09-25.png",
-      "title": "LichtFeld 加入 glTF/GLB 导入导出，PlayCanvas 优先下载所需 LOD",
+      "title": "Nokia 演示用视频流协议传送动态高斯",
       "contentHash": "ff92bc258d3e57910a9c509a95e9344dfc4ef5df291c90b0034b696fdfe394fc",
-      "inputHash": "c21bf400d2b18acf7d88bb6b064b4a7500fa29f2d0dd968a87896014514d80c0",
-      "sha256": "cbd39b8aac1c263c54f87ecb8143fd33634c3c6bf0e1375ac8c09a41623d5cc4",
-      "bytes": 177061,
+      "inputHash": "592dc94b28daecd92c7d75e3ba995225f79d8f8dfc637bf4a0e3a06740361d54",
+      "sha256": "1de47b3f301650c4bca9b58f5e4399639cda35c7b7c884e1229290879a54ee07",
+      "bytes": 173545,
       "cover": {
         "url": "/media/originals/iags-studio.png",
         "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
@@ -175,11 +175,11 @@
     "2026-09-28": {
       "date": "2026-09-28",
       "url": "/share/2026-09-28.png",
-      "title": "LichtFeld 推进 Vulkan Trainer，Spirula 加入分区训练",
+      "title": "AMD 宣布拟收购 World Labs",
       "contentHash": "816ebaaff61139c2e81ad01d8d5cc98bed35f6945551a8df3f050a50cdd71776",
-      "inputHash": "e32007f6c734a96cdd2009a1d62b31657da1355faffc4b2711db7304ea1f9de9",
-      "sha256": "13e3630880a62a4bc2a7b381ec2b32f26f07f4831e4c43077d71f50e1cd6f836",
-      "bytes": 389567,
+      "inputHash": "ba7fda36f0261d181056102a4257049c0f3b48664af3300e733fc95883389c04",
+      "sha256": "09f2b77afa9e23f470cb13d1d7fc4173c326419f3703df7c27dd3c1104d5358f",
+      "bytes": 384102,
       "cover": {
         "url": "/media/originals/ooosplat-preview.png",
         "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
@@ -235,11 +235,11 @@
     "2026-10-02": {
       "date": "2026-10-02",
       "url": "/share/2026-10-02.png",
-      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "title": "ArcGIS Earth 3.0 可在地图中加载高斯图层",
       "contentHash": "e61d92ba07f48ed5862c7abb7607d27e466a9b6b10b626c263dd3100af207373",
-      "inputHash": "25fae819c7cde905a62d3e93eba00afa5a74ac4694966a0cb39516453805530c",
-      "sha256": "f756e16b5e002f0a2df83535ce404575e9cae2ffd06e180c7a6e8fc4421ac1c6",
-      "bytes": 185711,
+      "inputHash": "4be4016a492b408c319fff6af0b53254fb98a31470178db8bcd064e5b6dcb2b0",
+      "sha256": "2cb8e97ad5df68d7f68c06c4226ec5881955d7757e4ab1c921156a3192b20df2",
+      "bytes": 182426,
       "cover": {
         "url": "/media/originals/lulusplat.webp",
         "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
@@ -265,11 +265,11 @@
     "2026-10-04": {
       "date": "2026-10-04",
       "url": "/share/2026-10-04.png",
-      "title": "godotGS 收紧显存预算，LichtFeld 推进非破坏节点编辑",
+      "title": "Niantic Spatial 开放真实环境资源库",
       "contentHash": "17e8b97395566a5f51125b74f5e34f669a94d664ef9031dc196a698de1891abe",
-      "inputHash": "20c42e93c3d6d02b46e0322345dd1083786a62807a1a59d3bb7721017eb9b528",
-      "sha256": "67a49d2716510cadab10fe8662eebb10a074f53260ed0bee5ed74ab8442686ed",
-      "bytes": 424445,
+      "inputHash": "96ac7f1d1343214d89f96fbc388c6b35d29aeb6fe1d1f3fec1e49f0c277c529b",
+      "sha256": "113d6866d5f316351ef572c7caeed0f8ea21ea0b5c16e0b2a7c430a202be45e9",
+      "bytes": 419364,
       "cover": {
         "url": "/media/originals/lichtfeld-meihogen.jpg",
         "source": "https://lichtfeld.io/",
@@ -295,11 +295,11 @@
     "2026-10-06": {
       "date": "2026-10-06",
       "url": "/share/2026-10-06.png",
-      "title": "SuperSplat 改进大文件发布，Spirula 接入 E57 激光扫描数据",
+      "title": "《Empire At Sea》用动态高斯呈现沉浸式演员",
       "contentHash": "8a9a12b30492aa6500efdbe03c9103c68286f943576bf581ccd84ca30daca8b0",
-      "inputHash": "78267a1ce08b3563b2121e84d1f9c0c23e916c5fdd9eab5336bf8f6f65da3473",
-      "sha256": "8afd1096a8b1251eb032cab1070888e9452bfb777b0adccd544e379878cd6a55",
-      "bytes": 438113,
+      "inputHash": "36f9ad61335bb3ab0c2861c9421a489425efe6649a2f127608105ac3d3634562",
+      "sha256": "e0ccc107ad818e03088f7461c28a4891bdf4a3769262e0c5ba66c75a86014004",
+      "bytes": 433911,
       "cover": {
         "url": "/media/originals/supersplat-webgpu-editor.png",
         "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
@@ -310,11 +310,11 @@
     "2026-10-07": {
       "date": "2026-10-07",
       "url": "/share/2026-10-07.png",
-      "title": "Spirula 发布新版本，LichtFeld 统一评测位深与曝光默认值",
+      "title": "日本基础设施技术库登记一项 3DGS 方法",
       "contentHash": "b4adf9c4f019daccc76882c5888f35e8870a195111007ac2ccc1139eb24f9695",
-      "inputHash": "72614c6996ba642959f2989ab3b8cacfc35a5e709054cfc7559cd774ee8a31ed",
-      "sha256": "0f6bc38204e518d94da393797a0c418a78f60b2ce31ff897b72a158cf10cdf67",
-      "bytes": 223285,
+      "inputHash": "87378b132e54c04f845b2a44241e5bd61e767667f2bac3d08e61b1a76ef22d3b",
+      "sha256": "f736a540e9532623750af646492f1c08901c4f62e69a5fcf43cfb6ad8e8ffb4d",
+      "bytes": 217933,
       "cover": {
         "url": "/media/originals/spirula-rf.png",
         "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
@@ -340,11 +340,11 @@
     "2026-10-09": {
       "date": "2026-10-09",
       "url": "/share/2026-10-09.png",
-      "title": "Spirula 加入稠密点云步骤，LichtFeld 修复 RAD 导出",
+      "title": "WebODM 3.3 把高斯纳入无人机处理流程",
       "contentHash": "d0b4ba13c2dc467443717cdd348c7e8b749b56e79639190b6af9701bc808b439",
-      "inputHash": "c5397da750bb758b1194ed0513666bc6a25c873e7cafeedc8e844c6b4c606520",
-      "sha256": "2830e9396a1ff50ad70a770b34cac558547140658e87ef701a7ff59b3041afb7",
-      "bytes": 219921,
+      "inputHash": "e5cdaf7e71bf97a6a39da4e3aad8a3948aa54e90aa8cbded8816601361e0e393",
+      "sha256": "e70b449c24e1b8893e044f4f6172f4afad47fd0fe8494f5ebb0689889fee3f02",
+      "bytes": 218569,
       "cover": {
         "url": "/media/originals/spirula-rf.png",
         "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
@@ -415,11 +415,11 @@
     "2026-10-14": {
       "date": "2026-10-14",
       "url": "/share/2026-10-14.png",
-      "title": "Gausify Orbit 降低本地重建门槛，LichtFeld 加固插件下载",
+      "title": "Gracia 发布面向真实拍摄的世界重建模型",
       "contentHash": "f94188a5e80d0f5a28c657403783bee3987acdf91d1bf7ebd04a3a245ea18e6b",
-      "inputHash": "dc98216ee58e53c8616f7563c5ac374ea1c20d42929f6d619dc801daec805075",
-      "sha256": "404a6a1db8751fc8d185d29d03711f78650977e9a5187ba8d8e50255ade66d21",
-      "bytes": 415921,
+      "inputHash": "94c4df5a101c2ce5dfeb68c4b6c4aa3c3a717da1403615499b0bd02b7df66d66",
+      "sha256": "49cbdb489fa6d3e26977f59d1e2726b0acfc93af9da26ad5fa74be0f11bf7554",
+      "bytes": 411412,
       "cover": {
         "url": "/media/originals/lichtfeld-viewer.png",
         "source": "https://github.com/MrNeRF/LichtFeld-Studio",
@@ -430,11 +430,11 @@
     "2026-10-15": {
       "date": "2026-10-15",
       "url": "/share/2026-10-15.png",
-      "title": "PlayCanvas 修复移动 WebGPU 排序，LichtFeld 校正对齐深度",
+      "title": "禾赛发布 Kosmo 采集硬件与云端重建",
       "contentHash": "ffda1bc312f82f71d84ce6507d827356f42a693bb9fd63be96d2eaee29dc5244",
-      "inputHash": "ac70568913a82c11592913912db568eaed2f6cf73d098190992f45bfad164adb",
-      "sha256": "2a89b7dc3d6f97b835acc253a14eeb0d66ba75f69aa8378af83b30221f92749f",
-      "bytes": 151615,
+      "inputHash": "2d60d4ab13a232f146ee38bb03dfa290d1119d7909d535050fef3ec0a9c6f54a",
+      "sha256": "ff72f0844fd65bab3b0c200a9751c594e40c622beed671d7bdb929b49e5b7dea",
+      "bytes": 145517,
       "cover": {
         "url": "/media/originals/supersplat-lod-controls.png",
         "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
@@ -445,11 +445,11 @@
     "2026-10-16": {
       "date": "2026-10-16",
       "url": "/share/2026-10-16.png",
-      "title": "PlayCanvas 减少 WebGPU 排序缓冲，InfiniSplat v2 公开实现",
+      "title": "Gretna 用无人机扫描记录整座城市",
       "contentHash": "79671d582f79fcd33aac72e6dd6e1bd6234684f5cc4eaba80cec4691bf1cc3e3",
-      "inputHash": "f3a7ae1475a778ce3f659bb480a9b80940703231d7835eac1f8576e7b8841759",
-      "sha256": "6ac694d7fc21cd03da12451af0941864022180e57d7538cf778eac01580c24b7",
-      "bytes": 150648,
+      "inputHash": "3a599552fc0726f46d6a0e555afb4df35b39997f3e67605d2f5f7ae5319caf27",
+      "sha256": "555911cf66efb81f1438697b5494c21da001d09c4573f0db89d89297919438d1",
+      "bytes": 144213,
       "cover": {
         "url": "/media/originals/supersplat-lod-controls.png",
         "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
@@ -490,11 +490,11 @@
     "2026-10-19": {
       "date": "2026-10-19",
       "url": "/share/2026-10-19.png",
-      "title": "PlayCanvas 与 Gaussian-Splat-Lite 补齐四阶球谐",
+      "title": "Viggle 发布 JST 2 世界模型",
       "contentHash": "5b5914a58cba1276eb39384353f46c84b63f49bcec9d1caf754e3a8fbc334022",
-      "inputHash": "19b0239432768081fd0399f98128406e49523410ce7cd4ddb07b078a6dd9e512",
-      "sha256": "6dc11752a3bc6460de8410ddd7c5fa842c51fcff43924311c6d398b361d52b59",
-      "bytes": 345589,
+      "inputHash": "f32cbac996902383a3d235ebc0a943a2ff5ff0d266f1a526b259510eb2d4a9a3",
+      "sha256": "bd2438a8e29340eddf7bb90dbbdd028ff44b5479120a9d7a0ceb3f0d9a158ed5",
+      "bytes": 340428,
       "cover": {
         "url": "/media/editorial-covers/2026-10-19-960.webp",
         "source": "https://github.com/playcanvas/engine/pull/9796",
@@ -506,11 +506,11 @@
     "2026-10-20": {
       "date": "2026-10-20",
       "url": "/share/2026-10-20.png",
-      "title": "SuperSplat Viewer 主干增加移动随机渲染和 WebGPU XR",
+      "title": "Linker Vision 在城市三维记录中规划植树",
       "contentHash": "72c2781849fea34284b27700bd0eae1746b9f8ba906837da8afe7dbb91773541",
-      "inputHash": "9e4df305ab5901913f5e5b07be975d3c84aa4bd89e276718a19360be4b0813cf",
-      "sha256": "849918b43bdff7c0ee2396a5dc960bac4f0386f11e601bf8e49ec72b971370c7",
-      "bytes": 448375,
+      "inputHash": "7c77d64b5107cfb3cbb76a030491a949887e3182e9c3a654964f90ed942b2a12",
+      "sha256": "bcd56c6e6a28e6f0984510bef7d0d9ec836c921c667b0dc09197b2fabb610ba2",
+      "bytes": 443653,
       "cover": {
         "url": "/media/editorial-covers/2026-10-20-960.webp",
         "source": "https://github.com/playcanvas/supersplat-viewer/pull/330",
@@ -518,6 +518,42 @@
         "sha256": "427f8d359389ea65dee175221718dcdf6247dc67f32557d279b73742a2a3458f",
         "kind": "editorial-illustration"
       }
+    },
+    "2026-10-21": {
+      "date": "2026-10-21",
+      "url": "/share/2026-10-21.png",
+      "title": "AsterMaster 把高斯做成可破坏的游戏敌人",
+      "contentHash": "01cf89bb06d21f5ae346d00e10e1f04802d34f36a9e7eb8bebc09773635e8dde",
+      "inputHash": "cd6bdbd4692d3a4974f1dcfc15a248755f4bb25278009db0ab7ed2ac5654b2bf",
+      "sha256": "38b5751402b787138b39636e1fce19e25aacc86b2993428229eb9f76119210db",
+      "bytes": 26142
+    },
+    "2026-10-22": {
+      "date": "2026-10-22",
+      "url": "/share/2026-10-22.png",
+      "title": "Rivian 收购 SuperSim 开发商 Third Dimension AI",
+      "contentHash": "97e4d4287e963085115f1ef4252d372b1cef4879ff637213d6e46d1a0b06e7dc",
+      "inputHash": "165d144212ab7703cb52d1ca2b0d2e2341736c8a6466f195e101ee13d2a61ac3",
+      "sha256": "eef1c6d606f8211c406b8fdbfc1e51bb789355142f9a7d3105a402a67248e949",
+      "bytes": 25738
+    },
+    "2026-10-23": {
+      "date": "2026-10-23",
+      "url": "/share/2026-10-23.png",
+      "title": "Framestore 拆解《超人》的动态高斯制作",
+      "contentHash": "adac1f07b67f430cf2e0f075c65ce86d3e478f7fc77d2f6bf735e0e992276d38",
+      "inputHash": "08ff52cd02394ad00fe75aa2403acd7c43b938f6d3bfd11d2000f9bb0128aa05",
+      "sha256": "24c4c00da9dad16e96b95b4aba95d16a94e4edc485e179a9be9308e4ef910d6a",
+      "bytes": 25692
+    },
+    "2026-10-24": {
+      "date": "2026-10-24",
+      "url": "/share/2026-10-24.png",
+      "title": "Foundation4D 统一预测驾驶场景信息",
+      "contentHash": "d4638ce0c71717b28092d0d3d98be11c801aae5191ba1f7bc5ad32d77e76d3f1",
+      "inputHash": "18a97a9ab21e0b424abc225c5f03e127f06fa571cf6b74b212521176ce859351",
+      "sha256": "86bc2b7848fee8e2e38f1f0d081f1d14e89edcac7b9d752b48b2987e727a0833",
+      "bytes": 23092
     },
     "2026-10-25": {
       "date": "2026-10-25",
@@ -554,11 +590,11 @@
     "2026-10-27": {
       "date": "2026-10-27",
       "url": "/share/2026-10-27.png",
-      "title": "SuperSplat 3.7.0 加入径向排序，LichtFeld 支持持久碰撞体",
+      "title": "SuperSplat 3.7.0 将径向排序带入编辑器",
       "contentHash": "8bb59e7e3fd0eac9fda917d59a2a1214dd33e3d033c39a8402001bc689890653",
-      "inputHash": "733f07b98de70ff9a370f029c84fd06b80ee6fac02ce4b207b68cab79b46e954",
-      "sha256": "1b7cfbfe507488a2a48f7ac58288a14ee292bb95ba992570c6d0b40d1434c606",
-      "bytes": 276473,
+      "inputHash": "1d864f0e82ab954bf2e72346707f808909241246b178ec53f93af3be1a182ee7",
+      "sha256": "2f7d39f9f733568e879169b5af16759e99ad50a166250d2b5eb5d1cad565860e",
+      "bytes": 273415,
       "cover": {
         "url": "/media/editorial-covers/2026-10-27-960.webp",
         "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0",
@@ -570,11 +606,11 @@
     "2026-10-28": {
       "date": "2026-10-28",
       "url": "/share/2026-10-28.png",
-      "title": "LichtFeld 批量训练加入受监督 CLI",
+      "title": "Sony XYN 向个人创作者开放",
       "contentHash": "c613bd10c9264c28b80f05a086f72fcfc109a990b4bd054a9d0efbd5111bae29",
-      "inputHash": "5b7f936bc0b7849afb3e71f66930d0dac3b0836feba55730cdf75294620ac630",
-      "sha256": "6fd570a7961e75ff5127ca89a1f1bae65afb82a9c5b14c5b6f6dcda44d7b5353",
-      "bytes": 346005,
+      "inputHash": "5537c05e52d1dbbe0b9210c640004562983f924876d5f9310ca2effdf5962b70",
+      "sha256": "3efa0938ab58d84ecc974465efcef9c0d9ee6c92b7f94277f665dcfb119769bf",
+      "bytes": 344820,
       "cover": {
         "url": "/media/editorial-covers/2026-10-28-960.webp",
         "source": "https://github.com/MrNeRF/LichtFeld-Studio/commit/6a7c00d1fffce27e2f1e725299ca7569655cdc84",
@@ -666,11 +702,11 @@
     "2026-11-03": {
       "date": "2026-11-03",
       "url": "/share/2026-11-03.png",
-      "title": "Gaussian Splat Lite 1.6.1 加入 LCC2 流式加载",
+      "title": "UEFN 开始实验性导入高斯",
       "contentHash": "e21bebb60f9f3b58c56f5ff7c9915fe8b044c65e90c0eef3a6b0cae20525206b",
-      "inputHash": "44905d85e74145e6b4e5328a66108ffa0a0dd6cefb7b1fc5ad179cc3943ce591",
-      "sha256": "329ab2210053976b8a6b372d7f5a98f40fee103e23dd884bc27ff9622c236635",
-      "bytes": 390051,
+      "inputHash": "ebbea6cb99eeac0f1d1bdc7a1340e05ee6b573560b0930948a54b3dcddc77170",
+      "sha256": "9f9cc6c7d9bb299e4430bb916144c6ff139282fc3db219d8bee903615b9d4482",
+      "bytes": 385956,
       "cover": {
         "url": "/media/editorial-covers/2026-11-03-960.webp",
         "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.6.1",
@@ -682,11 +718,11 @@
     "2026-11-04": {
       "date": "2026-11-04",
       "url": "/share/2026-11-04.png",
-      "title": "UnityGaussianSplatting 2.0.0 可直接加载 PLY 和 SPZ",
+      "title": "PD Forma 面向可进入仿真的四维环境",
       "contentHash": "f4e0bb02a198b2aa68707a3e171cb262f6c0d3aa3a10fa97d2aea24e24cd52ad",
-      "inputHash": "d3d67229e99d05c6a38fc3979d31e860bed591ac45cfe2f2fb0eff9c9f3073de",
-      "sha256": "753308e6938aa93e09c30578e573c85a12c0622ea7cd4646e5b12d998d73527d",
-      "bytes": 261851,
+      "inputHash": "b4871edac90b3534588fe14e1af964dd480a8cbc6e4606f95fa0f0ec10505567",
+      "sha256": "311fde67a9c44575b6fb3de7458b5ac7889ec42d6f326b590b567537d1299879",
+      "bytes": 259120,
       "cover": {
         "url": "/media/editorial-covers/2026-11-04-960.webp",
         "source": "https://github.com/aras-p/UnityGaussianSplatting/tree/v2.0.0",
@@ -698,11 +734,11 @@
     "2026-11-05": {
       "date": "2026-11-05",
       "url": "/share/2026-11-05.png",
-      "title": "GSPIM 公开动态高斯计算实验工件",
+      "title": "SuperSplat for Blender 打通场景导入与发布",
       "contentHash": "88aa21ea4715ccaa3d6758a78dac33852faf01590ad3f9823aa16f0b35c4fd01",
-      "inputHash": "28cce2e993e7e9c5f93606fe3bcc261c88885074f324b23262f7793d800c107c",
-      "sha256": "86e8305b4b8f724031c58377f4d070396f57eb0e9958177fd646155a74060f53",
-      "bytes": 349074,
+      "inputHash": "fda7e1e035f2edd511e8ea4d6da4b9eeee4f25fc0b74c50fdfe94db2d492884c",
+      "sha256": "ad2e63eef0974780a55c3576a31c9dad1897cd29fa4bb294512f60091ba36a6a",
+      "bytes": 349429,
       "cover": {
         "url": "/media/editorial-covers/2026-11-05-960.webp",
         "source": "https://github.com/MAdrid1011/GSPIM",
@@ -778,11 +814,11 @@
     "2026-11-10": {
       "date": "2026-11-10",
       "url": "/share/2026-11-10.png",
-      "title": "SplatTransform 默认输出 SOG v3，旧查看器需回归",
+      "title": "Blender 5.3 正式加入原生高斯支持",
       "contentHash": "70ab867b6b5c7975010e6d90f1daeb29a327d74d746d79271848ebbc841caf8f",
-      "inputHash": "223acd5a0f16904f6f82c607c51f6f21460bb8eb8ea3f7c0bfacbc86f959eb2c",
-      "sha256": "8fecf7330cc6f32f0cf012aa850da6e16758c5d8d9dc6350aaabebed24ee8240",
-      "bytes": 326272,
+      "inputHash": "34a3336ce669280f1fcd3283a9b7e77ec750bc1fe4b1b8628f256d9b5a6d0c47",
+      "sha256": "39ea5c43b75413b12ce8e20c58442acc488d21b29a5be45ecbbcf8d1560b4dbb",
+      "bytes": 321987,
       "cover": {
         "url": "/media/editorial-covers/2026-11-10-960.webp",
         "source": "https://github.com/playcanvas/splat-transform/pull/370",
@@ -794,11 +830,11 @@
     "2026-11-11": {
       "date": "2026-11-11",
       "url": "/share/2026-11-11.png",
-      "title": "SuperSplat Viewer 1.43.0 直读 LCC2 和 SPZ",
+      "title": "ArcGIS 可对高斯做可视域与阴影分析",
       "contentHash": "6ec67aefd3ff2630600ccb37b677e3ca9281c82ba309e1bcf31b096e081e466e",
-      "inputHash": "40f1cec3e22702f2127efdb7304386edda898f96f9584888532464445ca603e1",
-      "sha256": "c402d42819b4575898d73974deb6731c98a2c8eae07fb3539c9070f7362759d0",
-      "bytes": 305663,
+      "inputHash": "bc66439fcfda8c249231389a03c97fd8482d153c9144daae8a18865559eb38e0",
+      "sha256": "abe3ffcc6ea8c7caad19a0b2c300b021595bec5b7b2afcece5dead66981afd8a",
+      "bytes": 307121,
       "cover": {
         "url": "/media/editorial-covers/2026-11-11-960.webp",
         "source": "https://github.com/playcanvas/supersplat-viewer/tree/v1.43.0",
@@ -826,11 +862,11 @@
     "2026-11-13": {
       "date": "2026-11-13",
       "url": "/share/2026-11-13.png",
-      "title": "SOG v3 更换旋转布局，SuperSplat 3.8.1 修复透明度",
+      "title": "SuperSplat 修复模型发雾与透明度导出，SOG v3 工具链同步更新",
       "contentHash": "1799278febe23a5c1a8270ffd71575b038a335d09f6c043a114fd40611030da0",
-      "inputHash": "ad39a08254352eda7a388cc2f18dfede400c8dee91644ef7e3e5dca0b356d2ca",
-      "sha256": "50bfe0413361a4719f787995cdc7c5b5e10be3474d08bcb65b05ed9fdeeffa58",
-      "bytes": 286926,
+      "inputHash": "7f932cb360460bb9e994f731218ac12210d21e62ea3a5e1e921ea2217f074f90",
+      "sha256": "a81c9a3029806d5384bd24353af094d7372c2efcb9b9c4273aba45e93bbb8c77",
+      "bytes": 290552,
       "cover": {
         "url": "/media/editorial-covers/2026-11-13-960.webp",
         "source": "https://github.com/playcanvas/engine/pull/10007",

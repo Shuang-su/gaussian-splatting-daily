@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-17",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-17T00:00:00+08:00",
+    "end": "2026-10-18T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spirula-studio-v2026.10.16-adds-spherical-beta-lobes-and-roma-v2-dense-initialization",
+        "radiancefields.com/clemson-university-turns-existing-drone-imagery-of-memorial-stadium-into-a-gaussian-splat-with-esri-drone2map",
+        "radiancefields.com/eclipse-automation-opens-realitysync-as-a-free-preview-on-iphone-ipad-and-apple-vision-pro",
+        "radiancefields.com/warpgate-labs-improves-rsr-vr-compatibility-with-virtual-desktop-and-steamvr-in-v0-9-1",
+        "radiancefields.com/voxel51-launches-3-0-for-physical-ai-on-a-fiftyone-viewer-that-renders-gaussian-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:58.394453+00:00",
+      "urls": [
+        "https://doc.arcgis.com/en/drone2map/2025.2/get-started/whats-new.htm",
+        "https://www.esri.com/about/newsroom/arcwatch/clemson-turns-70000-drone-images-into-a-photorealistic-digital-campus",
+        "https://www.eclipseautomation.com/resource/articles/radiance-field-technology/",
+        "https://www.eclipseautomation.com/resource/press-releases/realitysync-preview-iphone-vision-pro/",
+        "https://voxel51.com/blog/voxel51-3-0-physical-ai-data-platform",
+        "https://docs.voxel51.com/release-notes.html"
+      ],
+      "candidateIds": [
+        "radiancefields.com/clemson-university-turns-existing-drone-imagery-of-memorial-stadium-into-a-gaussian-splat-with-esri-drone2map",
+        "radiancefields.com/eclipse-automation-opens-realitysync-as-a-free-preview-on-iphone-ipad-and-apple-vision-pro",
+        "radiancefields.com/voxel51-launches-3-0-for-physical-ai-on-a-fiftyone-viewer-that-renders-gaussian-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://doc.arcgis.com/en/drone2map/2025.2/get-started/whats-new.htm",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:10.353011+00:00",
+          "sha256": "2983f72b46b7828d462f2e0f1358e52ac1f5bf69c2e7713cecdc5ec223933050",
+          "characters": 4970
+        },
+        {
+          "url": "https://www.esri.com/about/newsroom/arcwatch/clemson-turns-70000-drone-images-into-a-photorealistic-digital-campus",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:53.951768+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.eclipseautomation.com/resource/articles/radiance-field-technology/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:52.785942+00:00",
+          "sha256": "c11e15cc6418b16c9ebfa7b55c6df3d8f5401681af789adb79317d98eabfa892",
+          "characters": 16300
+        },
+        {
+          "url": "https://www.eclipseautomation.com/resource/press-releases/realitysync-preview-iphone-vision-pro/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:52.955632+00:00",
+          "sha256": "5e79442c607adf8ee4b779f719c8f27f64fdb7013a5f970c194c2b3e153ebca5",
+          "characters": 11075
+        },
+        {
+          "url": "https://voxel51.com/blog/voxel51-3-0-physical-ai-data-platform",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:58.394453+00:00",
+          "sha256": "ce7f0643783f5741977f20de8d8e8e187271b662d06519bad931d7c44d4e2791",
+          "characters": 20329
+        },
+        {
+          "url": "https://docs.voxel51.com/release-notes.html",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:12.400006+00:00",
+          "sha256": "0ccee0737c4510c6b03130d0b782f88c73184fa45bbe0b389d161354bf9671bd",
+          "characters": 300888
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.995209+00:00",
+      "urls": [
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16",
+        "https://github.com/warpgatelabs/RSR/releases/tag/v0.9.1"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spirula-studio-v2026.10.16-adds-spherical-beta-lobes-and-roma-v2-dense-initialization",
+        "radiancefields.com/warpgate-labs-improves-rsr-vr-compatibility-with-virtual-desktop-and-steamvr-in-v0-9-1"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:24.632325+00:00",
+          "sha256": "23aa960debfd74622733cf1b3bfb620bf1c56c4e8294a95cffe2e85616f218e4",
+          "characters": 4600
+        },
+        {
+          "url": "https://github.com/warpgatelabs/RSR/releases/tag/v0.9.1",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.995209+00:00",
+          "sha256": "bec8e938f5e33a76aaed45fcbd8779e150f65389624c2d930fa12c282e159b17",
+          "characters": 4177
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/spirula-studio-v2026.10.16-adds-spherical-beta-lobes-and-roma-v2-dense-initialization",
+      "title": "Spirula 加入稠密初始化与新视角颜色模型",
+      "eventDate": "2026-10-16",
+      "reportDate": "2026-10-17",
+      "importance": "standard",
+      "disposition": "merged",
+      "reason": "与阅读版相同的固定发行/PR/提交合并，补充原始报道线索。",
+      "sources": [
+        "https://radiancefields.com/spirula-studio-v2026.10.16-adds-spherical-beta-lobes-and-roma-v2-dense-initialization",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16"
+      ],
+      "eventId": "github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16"
+    },
+    {
+      "id": "radiancefields.com/clemson-university-turns-existing-drone-imagery-of-memorial-stadium-into-a-gaussian-splat-with-esri-drone2map",
+      "title": "Clemson 将已有航拍重新处理为体育场高斯",
+      "eventDate": "2026-10-17",
+      "reportDate": "2026-10-17",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/clemson-university-turns-existing-drone-imagery-of-memorial-stadium-into-a-gaussian-splat-with-esri-drone2map",
+        "https://doc.arcgis.com/en/drone2map/2025.2/get-started/whats-new.htm",
+        "https://www.esri.com/about/newsroom/arcwatch/clemson-turns-70000-drone-images-into-a-photorealistic-digital-campus"
+      ],
+      "eventId": "radiancefields.com/clemson-university-turns-existing-drone-imagery-of-memorial-stadium-into-a-gaussian-splat-with-esri-drone2map"
+    },
+    {
+      "id": "radiancefields.com/eclipse-automation-opens-realitysync-as-a-free-preview-on-iphone-ipad-and-apple-vision-pro",
+      "title": "RealitySync 在 Apple 设备开放预览",
+      "eventDate": "2026-10-17",
+      "reportDate": "2026-10-17",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/eclipse-automation-opens-realitysync-as-a-free-preview-on-iphone-ipad-and-apple-vision-pro",
+        "https://www.eclipseautomation.com/resource/articles/radiance-field-technology/",
+        "https://www.eclipseautomation.com/resource/press-releases/realitysync-preview-iphone-vision-pro/"
+      ],
+      "eventId": "radiancefields.com/eclipse-automation-opens-realitysync-as-a-free-preview-on-iphone-ipad-and-apple-vision-pro"
+    },
+    {
+      "id": "radiancefields.com/warpgate-labs-improves-rsr-vr-compatibility-with-virtual-desktop-and-steamvr-in-v0-9-1",
+      "title": "RSR 调整 OpenXR 版本以改善头显兼容",
+      "eventDate": "2026-10-17",
+      "reportDate": "2026-10-17",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/warpgate-labs-improves-rsr-vr-compatibility-with-virtual-desktop-and-steamvr-in-v0-9-1",
+        "https://github.com/warpgatelabs/RSR/releases/tag/v0.9.1"
+      ],
+      "eventId": "radiancefields.com/warpgate-labs-improves-rsr-vr-compatibility-with-virtual-desktop-and-steamvr-in-v0-9-1"
+    },
+    {
+      "id": "radiancefields.com/voxel51-launches-3-0-for-physical-ai-on-a-fiftyone-viewer-that-renders-gaussian-splats",
+      "title": "Voxel51 3.0 面向物理 AI 数据工作",
+      "eventDate": "2026-10-17",
+      "reportDate": "2026-10-17",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/voxel51-launches-3-0-for-physical-ai-on-a-fiftyone-viewer-that-renders-gaussian-splats",
+        "https://voxel51.com/blog/voxel51-3-0-physical-ai-data-platform",
+        "https://docs.voxel51.com/release-notes.html"
+      ],
+      "eventId": "radiancefields.com/voxel51-launches-3-0-for-physical-ai-on-a-fiftyone-viewer-that-renders-gaussian-splats"
+    }
+  ]
+}

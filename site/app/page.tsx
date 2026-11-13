@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { loadArchive } from "../lib/content";
-import { TOPICS } from "../lib/catalog";
+import { TOPICS, SITE_URL } from "../lib/catalog";
 import { buildHome } from "../lib/home";
 import HomeCarousel from "../components/HomeCarousel";
 import HomeFeed from "../components/HomeFeed";
 import { ReadLaterTrigger } from "../components/ReadLater";
 import Icon from "../components/Icon";
 
+export const metadata = { alternates: { canonical: SITE_URL + "/" } };
 export default async function Home() {
   const { index } = await loadArchive();
   const { slides, feeds, related } = buildHome(index);
@@ -19,7 +20,7 @@ export default async function Home() {
       <section className="home-sidebar-topics"><h2>主题</h2><div className="sidebar-topics">{TOPICS.map((t) =>
         <Link key={t.slug} href={`/topics/${t.slug}/`}>{t.label}</Link>,
       )}</div></section>
-      <section className="sidebar-subscribe"><h2>订阅高斯日报</h2><Link href="/subscribe/">订阅方式 <Icon name="arrow" /></Link></section>
+      <section className="sidebar-subscribe"><h2>订阅 horizon</h2><Link href="/subscribe/">订阅方式 <Icon name="arrow" /></Link></section>
     </aside>} />
     <ReadLaterTrigger className="home-read-later-trigger"/>
   </div>;

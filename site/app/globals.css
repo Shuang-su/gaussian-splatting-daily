@@ -799,3 +799,8 @@ body:has(.article-interaction-bar) .site-footer { padding-bottom: 112px; }
   .article-interaction-bar > button { min-width: 32px; padding: 0 4px; }
   .article-comment-entry { margin-right: 2px; }
 }
+
+.app-facts { padding: 20px 24px; margin: 0 0 32px; border: 1px solid var(--line); border-radius: 12px; font-size: 14px; line-height: 1.8; }
+.app-facts p + p { margin-top: 10px; }
+.app-teaser-facts { font-size: 12px; color: var(--muted); }
+@media (max-width: 767px) { .brand { font-size: 18px; gap: 7px; } }

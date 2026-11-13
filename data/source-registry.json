@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "timezone": "Asia/Shanghai",
+  "overlapDays": 7,
+  "sources": [
+    {
+      "id": "radiancefields",
+      "name": "Radiance Fields 新闻与工具",
+      "type": "media",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://radiancefields.com/",
+        "https://radiancefields.com/platforms"
+      ]
+    },
+    {
+      "id": "official",
+      "name": "厂商、应用与创作者原始发布",
+      "type": "official",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://blog.playcanvas.com/",
+        "https://www.blender.org/news/"
+      ]
+    },
+    {
+      "id": "x",
+      "name": "X 原作者与官方账号",
+      "type": "social",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://x.com/radiancefields",
+        "https://x.com/playcanvas",
+        "https://x.com/willeastcott",
+        "https://x.com/valigurskym"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "论文与研究项目页",
+      "type": "research",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://export.arxiv.org/api/query",
+        "https://huggingface.co/papers"
+      ]
+    },
+    {
+      "id": "github",
+      "name": "代码、版本与维护者讨论",
+      "type": "code",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://github.com/playcanvas/supersplat",
+        "https://github.com/MrNeRF/LichtFeld-Studio"
+      ]
+    },
+    {
+      "id": "community",
+      "name": "中文与海外社区、作品和应用",
+      "type": "community",
+      "required": true,
+      "cadence": "daily",
+      "urls": [
+        "https://www.reddit.com/r/GaussianSplatting/",
+        "https://www.bilibili.com/",
+        "https://sspai.com/"
+      ]
+    }
+  ]
+}

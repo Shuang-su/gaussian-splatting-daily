@@ -13,8 +13,8 @@ from html.parser import HTMLParser
 
 from validate_daily import ROOT, parse_frontmatter
 
-REPO = 'Shuang-su/gaussian-splatting-daily'
-SITE = 'https://shuang-su.github.io/gaussian-splatting-daily'
+REPO = 'Shuang-su/metaflow-horizon'
+SITE = 'https://metaflow.shuang-su.com/horizon'
 
 
 class PageEvidence(HTMLParser):
@@ -63,9 +63,9 @@ def transition(checkpoint, observations, report_date, main_sha, deployment, mode
     if mode not in {'manual', 'scheduled'}:
         raise ValueError('Publication mode must be manual or scheduled')
     if deployment.get('commit') != main_sha:
-        raise ValueError('Pages does not contain current main; success window is unchanged')
+        raise ValueError('Horizon does not contain current main; success window is unchanged')
     if deployment.get('updatedThrough', '') < report_date:
-        raise ValueError('Pages has not published this report date')
+        raise ValueError('Horizon has not published this report date')
     if not readback or readback.get('report_id') != f'gsd-{report_date}' or not readback.get('content_sha256'):
         raise ValueError('Successful homepage and detail readback is required')
     cp, obs = copy.deepcopy(checkpoint), copy.deepcopy(observations)

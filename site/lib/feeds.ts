@@ -1,7 +1,8 @@
 import { dailyUrl, entryUrl, SITE_URL } from "./catalog";
-import type { Article, Daily, Entry } from "./types";
+import type { Article, Daily, Entry, EditorialArticleSummary } from "./types";
 
 export const FEEDS = {
+  articles: { title: "文章与应用", path: "/feeds/articles.xml", url: `${SITE_URL}/feeds/articles.xml` },
   daily: { title: "每日简报", path: "/feeds/daily.xml", url: `${SITE_URL}/feeds/daily.xml` },
   weekly: { title: "每周汇总", path: "/feeds/weekly.xml", url: `${SITE_URL}/feeds/weekly.xml` },
 };
@@ -83,14 +84,17 @@ export function dailyDescription(daily: FeedReport) {
 export function weeklyDescription(week: WeeklyDigest) {
   return `<p>${escapeXml(coverageLabel(week))}</p><h2>本周日报</h2>${week.reports.map(report => `<p>${escapeXml(report.date)} · ${htmlLink(SITE_URL + dailyUrl(report.date),report.headline)}</p><p>${escapeXml(report.summary)}</p>`).join("")}${week.highlights.length ? `<h2>本周事件</h2><ul>${week.highlights.map(entry => `<li>${escapeXml(entry.date)} · ${htmlLink(SITE_URL + entryUrl(entry),entry.title)} — ${escapeXml(entry.summary)}</li>`).join("")}</ul>` : ""}<p>${htmlLink(SITE_URL + weeklyUrl(week),"阅读全文")}</p>`;
 }
-type FeedItem = { title: string; url: string; date: string; description: string };
+const LEGACY_SITE = "https://shuang-su.github.io/gaussian-splatting-daily";
+export function stableFeedGuid(url: string) { return LEGACY_SITE + url.slice(SITE_URL.length); }
+type FeedItem = { title: string; url: string; date: string; description: string; guid?: string };
 function rss(kind: keyof typeof FEEDS, items: FeedItem[], through?: string) {
   const feed = FEEDS[kind];
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>高斯日报 · ${feed.title}</title><link>${SITE_URL}/</link><description>${kind === "daily" ? "3DGS、4DGS 与辐射场的每日论文、工具和技术动态。" : "周一至周日的高斯日报与重点事件汇总。"}</description><language>zh-CN</language><atom:link href="${feed.url}" rel="self" type="application/rss+xml"/>${through ? `<lastBuildDate>${reportDate(through)}</lastBuildDate>` : ""}${items.map(item => `<item><title>${escapeXml(item.title)}</title><link>${escapeXml(item.url)}</link><guid isPermaLink="true">${escapeXml(item.url)}</guid><pubDate>${reportDate(item.date)}</pubDate><description>${escapeXml(item.description)}</description></item>`).join("")}</channel></rss>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>metaflow horizon · ${feed.title}</title><link>${SITE_URL}/</link><description>${kind === "daily" ? "扫描、空间 AI、XR、作品、研究与应用的每日报道。" : "周一至周日的高斯日报与重点事件汇总。"}</description><language>zh-CN</language><atom:link href="${feed.url}" rel="self" type="application/rss+xml"/>${through ? `<lastBuildDate>${reportDate(through)}</lastBuildDate>` : ""}${items.map(item => `<item><title>${escapeXml(item.title)}</title><link>${escapeXml(item.url)}</link><guid isPermaLink="false">${escapeXml(item.guid || stableFeedGuid(item.url))}</guid><pubDate>${reportDate(item.date)}</pubDate><description>${escapeXml(item.description)}</description></item>`).join("")}</channel></rss>\n`;
 }
-export function buildFeeds(daily: FeedReport[], weeks = buildWeekly(daily)) {
+export function buildFeeds(daily: FeedReport[], weeks = buildWeekly(daily), articles: EditorialArticleSummary[] = []) {
   const reports = published(daily);
   return {
+    articles: rss("articles",articles.map(article=>({title:article.title,url:SITE_URL+article.url,date:article.date,guid:article.id,description:`<p>${escapeXml(article.summary)}</p>${article.app ? `<p>${escapeXml(article.app.platforms.join("、"))} · ${article.app.experience === "tested" ? "实际体验" : "资料介绍"} · 核对于 ${article.app.checkedAt}</p>` : ""}`})),reports[0]?.date),
     daily: rss("daily",reports.slice(0,60).map(report => ({ title: `${report.date} · ${report.headline}`, url: SITE_URL + dailyUrl(report.date), date: report.date, description: dailyDescription(report) })),reports[0]?.date),
     weekly: rss("weekly",weeks.slice(0,26).map(week => ({ title: weeklyTitle(week), url: SITE_URL + weeklyUrl(week), date: week.releaseDate, description: weeklyDescription(week) })),reports[0]?.date),
   };

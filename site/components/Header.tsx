@@ -19,8 +19,10 @@ type Panel = "mobile" | "topics" | "theme" | "search" | null;
 const themes = [["system", "跟随系统"], ["light", "浅色"], ["dark", "暗色"]] as const;
 const routes: { href: string; label: string; icon: IconName }[] = [
   { href: "/daily/", label: "日报", icon: "paper" },
-  { href: "/papers/", label: "论文", icon: "layers" },
-  { href: "/tools/", label: "工具", icon: "tool" },
+  { href: "/articles/", label: "文章", icon: "paper" },
+  { href: "/features/", label: "专题", icon: "layers" },
+  { href: "/papers/", label: "研究", icon: "layers" },
+  { href: "/apps/", label: "应用", icon: "tool" },
 ];
 
 export default function Header() {
@@ -136,20 +138,20 @@ export default function Header() {
   return <header ref={header} className={`site-header${home ? " home-header" : ""}${article ? " reader-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"} data-mobile-layout={mobileLayout} data-reader-chrome={immersive}>
     <div className="progressive-header-blur" aria-hidden="true"><i/><i/><i/></div>
     <div className="header-inner" data-reading-restart={Boolean(article && reader?.canRestart)}>
-      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}{!article && <Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>}
+      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}{!article && <Link href="/" className="brand" aria-label="metaflow horizon 首页" onClick={() => setPanel(null)}><BrandMark /><span>metaflow horizon</span></Link>}
         {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
       <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav" inert={mobileLayout && panel !== "mobile"} aria-hidden={mobileLayout && panel !== "mobile" || undefined}>
         <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search" onSubmit={(event) => {
           const field = event.currentTarget.elements.namedItem("q") as HTMLInputElement;
           if (!searchTerm(field.value)) { event.preventDefault(); field.focus(); return; }
           rememberSearch(field.value);
-        }}><Icon name="search" /><input name="q" type="search" maxLength={160} placeholder="搜索高斯日报…" aria-label="搜索高斯日报" /><button type="submit" aria-label="提交搜索"><Icon name="arrow" /></button></form>
+        }}><Icon name="search" /><input name="q" type="search" maxLength={160} placeholder="搜索 horizon…" aria-label="搜索 horizon" /><button type="submit" aria-label="提交搜索"><Icon name="arrow" /></button></form>
         {routes.map(({ href, label, icon }) => <Link key={href} href={href} aria-current={pathname.startsWith(href.slice(0,-1)) ? "page" : undefined} onClick={() => setPanel(null)}><span className="mobile-route-icon"><Icon name={icon} /></span>{label}<span className="mobile-route-chevron"><Icon name="chevron" /></span></Link>)}
         <div className="topic-navigation">
           <button aria-expanded={panel === "topics"} aria-controls="header-topics" onClick={(e) => toggle("topics", e.currentTarget)}>主题 <Icon name="chevron" /></button>
           <div className="header-popover topic-popover" id="header-topics" hidden={panel !== "topics"}>{TOPICS.map((t) => <Link key={t.slug} href={`/topics/${t.slug}/`} onClick={() => setPanel(null)}>{t.label}</Link>)}<Link href="/topics/" onClick={() => setPanel(null)}>全部主题</Link></div>
         </div>
-        <div className="mobile-nav-extra"><Link href="/topics/" onClick={() => setPanel(null)}><Icon name="layers" />主题<Icon name="chevron" /></Link><Link href="/subscribe/" onClick={() => setPanel(null)}><Icon name="external" />订阅高斯日报<Icon name="chevron" /></Link>
+        <div className="mobile-nav-extra"><Link href="/topics/" onClick={() => setPanel(null)}><Icon name="layers" />主题<Icon name="chevron" /></Link><Link href="/subscribe/" onClick={() => setPanel(null)}><Icon name="external" />订阅 horizon<Icon name="chevron" /></Link>
           <ReadLaterTrigger className="reader-menu-read-later" onOpen={() => setPanel(null)}/>
           <div className="mobile-theme-control"><span id="mobile-theme-label">外观</span><div className="mobile-theme-options" role="group" aria-labelledby="mobile-theme-label">{themes.map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => changeTheme(value)}>{label}</button>)}</div></div>
         </div>

@@ -32,7 +32,9 @@ jobs:
         run: python scripts/validate_daily.py --all
 
       - name: Validate editorial completeness
-        run: python scripts/check_editorial.py --all
+        run: |
+          python scripts/check_editorial.py --all
+          python scripts/validate_coverage.py --all
 
       - name: Reject changed Daily drafts from publication
         env:
@@ -71,7 +73,10 @@ jobs:
         run: npm ci --prefix site
 
       - name: Verify content links and browser search
-        run: npm test --prefix site
+        run: |
+          npm test --prefix site
+          npm run typecheck --prefix site
+          npm run lint:editorial --prefix site
 
       - name: Build static portal and verify derived metadata
         env:

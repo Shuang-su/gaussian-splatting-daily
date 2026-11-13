@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-01",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-01T00:00:00+08:00",
+    "end": "2026-11-02T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/3d-tiles-splat-plugin-v0.3.1-adds-uncompressed-gltf",
+        "radiancefields.com/lichtfeld-studio-v0-5-4-2-adds-popspa-sparsification",
+        "radiancefields.com/octanerender-2027-1-beta-1-speeds-up-gaussian-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:40.774103+00:00",
+      "urls": [
+        "https://render.otoy.com/forum/viewtopic.php?t=85910"
+      ],
+      "candidateIds": [
+        "radiancefields.com/octanerender-2027-1-beta-1-speeds-up-gaussian-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://render.otoy.com/forum/viewtopic.php?t=85910",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:40.774103+00:00",
+          "sha256": "bb3cdd21e0d142f91ecf46d6540b93e74d6e33acd2e56c518ba6e3a873ec9584",
+          "characters": 18594
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:20.734947+00:00",
+      "urls": [
+        "https://github.com/WilliamLiu-1997/3D-Tiles-RendererJS-3DGS-Plugin/releases/tag/v0.3.1",
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4.2"
+      ],
+      "candidateIds": [
+        "radiancefields.com/3d-tiles-splat-plugin-v0.3.1-adds-uncompressed-gltf",
+        "radiancefields.com/lichtfeld-studio-v0-5-4-2-adds-popspa-sparsification"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/WilliamLiu-1997/3D-Tiles-RendererJS-3DGS-Plugin/releases/tag/v0.3.1",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:20.734947+00:00",
+          "sha256": "3c05b56cad2926f273b43bc8f929a900b7ed7c72361bb5250ae0da7ce6ecc66f",
+          "characters": 3196
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4.2",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:19.589319+00:00",
+          "sha256": "c9b1aa70dd2dcee61d6645901c9c32113c8189a00b3ebb858e40eaf06c9b2daa",
+          "characters": 7737
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/3d-tiles-splat-plugin-v0.3.1-adds-uncompressed-gltf",
+      "title": "3D Tiles 插件增加未压缩 glTF 高斯支持",
+      "eventDate": "2026-11-01",
+      "reportDate": "2026-11-01",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/3d-tiles-splat-plugin-v0.3.1-adds-uncompressed-gltf",
+        "https://github.com/WilliamLiu-1997/3D-Tiles-RendererJS-3DGS-Plugin/releases/tag/v0.3.1"
+      ],
+      "eventId": "radiancefields.com/3d-tiles-splat-plugin-v0.3.1-adds-uncompressed-gltf"
+    },
+    {
+      "id": "radiancefields.com/lichtfeld-studio-v0-5-4-2-adds-popspa-sparsification",
+      "title": "LichtFeld 0.5.4.2 增加可选稀疏化",
+      "eventDate": "2026-11-01",
+      "reportDate": "2026-11-01",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/lichtfeld-studio-v0-5-4-2-adds-popspa-sparsification",
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4.2"
+      ],
+      "eventId": "radiancefields.com/lichtfeld-studio-v0-5-4-2-adds-popspa-sparsification"
+    },
+    {
+      "id": "radiancefields.com/octanerender-2027-1-beta-1-speeds-up-gaussian-splats",
+      "title": "OctaneRender 测试版改善高斯渲染速度",
+      "eventDate": "2026-11-01",
+      "reportDate": "2026-11-01",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/octanerender-2027-1-beta-1-speeds-up-gaussian-splats",
+        "https://render.otoy.com/forum/viewtopic.php?t=85910"
+      ],
+      "eventId": "radiancefields.com/octanerender-2027-1-beta-1-speeds-up-gaussian-splats"
+    }
+  ]
+}

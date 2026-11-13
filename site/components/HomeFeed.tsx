@@ -10,7 +10,7 @@ import Icon from "./Icon";
 import SourceImage from "./SourceImage";
 
 type ReadingState = { feed: HomeFeedKey; limits: Record<HomeFeedKey, number>; scroll: number };
-const initialLimits: ReadingState["limits"] = { recommended: 6, daily: 6, paper: 6, tool: 6 };
+const initialLimits: ReadingState["limits"] = { recommended: 6, daily: 6, article: 6, feature: 6, app: 6, paper: 6, tool: 6 };
 
 export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar: ReactNode }) {
   const [feed, setFeed] = useState<HomeFeedKey>("recommended");
@@ -140,7 +140,7 @@ export default function HomeFeed({ feeds, sidebar }: { feeds: HomeFeeds; sidebar
             <div className="feed-meta"><span className="feed-source">{item.kind === "daily" && <BrandMark />}{item.sourceLabel}</span>
               <time dateTime={item.date}>{item.date.slice(5).replace("-", "/")}</time>
               <span className="feed-kind"><Icon name={item.kind === "daily" ? "paper" : item.kind === "paper" ? "layers" : "tool"} />
-                {item.kind === "daily" ? "高斯日报" : item.kind === "paper" ? "论文" : "工具"}</span>
+                {item.kind === "daily" ? "高斯日报" : item.kind === "paper" ? "研究" : item.kind === "article" ? item.sourceLabel : "工具"}</span>
             </div>
           </div>
           {item.image && <div className="feed-row-image"><SourceImage image={{ ...item.image, fit: "cover" }}

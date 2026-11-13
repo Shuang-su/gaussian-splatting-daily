@@ -3,11 +3,11 @@ import { test } from "node:test";
 import { editorialBackHref, hierarchyParent, isHierarchyLink } from "../lib/reading-hierarchy";
 
 test("the immediate parent uses a real catalogue route and the source used to enter editorial reading", () => {
-  assert.equal(hierarchyParent("/gaussian-splatting-daily/topics/webgpu"), "/topics/");
+  assert.equal(hierarchyParent("/horizon/topics/webgpu"), "/topics/");
   assert.equal(hierarchyParent("/articles/a", "/topics/webgpu/"), "/topics/webgpu/");
   assert.equal(hierarchyParent("/articles/a", "/papers/"), "/papers/");
   assert.equal(hierarchyParent("/articles/a"), null);
-  assert.equal(isHierarchyLink("/topics/", "/gaussian-splatting-daily/topics/webgpu/"), true);
+  assert.equal(isHierarchyLink("/topics/", "/horizon/topics/webgpu/"), true);
   assert.equal(isHierarchyLink("/topics/webgpu/", "/articles/a/#source"), true);
 });
 

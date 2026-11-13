@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-23",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-23T00:00:00+08:00",
+    "end": "2026-09-24T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corbeausplat-v2.0.0-ships-stable-version",
+        "radiancefields.com/xgrids-lcc-unreal-sdk-v3.4.0-adds-orthographic-views"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:09.099791+00:00",
+      "urls": [
+        "https://developer.xgrids.com/#/download?page=LCC_UNREAL_SDK_UE55"
+      ],
+      "candidateIds": [
+        "radiancefields.com/xgrids-lcc-unreal-sdk-v3.4.0-adds-orthographic-views"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://developer.xgrids.com/#/download?page=LCC_UNREAL_SDK_UE55",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:09.099791+00:00",
+          "sha256": "38db14398221e79008548dd6aa0e0987ff1049f2afdb2b70ddc340df7915becc",
+          "characters": 9,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:23.873242+00:00",
+      "urls": [
+        "https://github.com/freddewitt/CorbeauSplat",
+        "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corbeausplat-v2.0.0-ships-stable-version"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/freddewitt/CorbeauSplat",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:23.873242+00:00",
+          "sha256": "9af941d139100b79f78c07a65a5d6d82012489d6241fb45c44781e9ccbd3139a",
+          "characters": 13165
+        },
+        {
+          "url": "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:23.859181+00:00",
+          "sha256": "fcca5c8ad5b4ac4afcceb31bdad1f72d9b04a8305791df82342837fee2f83151",
+          "characters": 6715
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/corbeausplat-v2.0.0-ships-stable-version",
+      "title": "CorbeauSplat 2.0 发布正式版",
+      "eventDate": "2026-09-23",
+      "reportDate": "2026-09-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/corbeausplat-v2.0.0-ships-stable-version",
+        "https://github.com/freddewitt/CorbeauSplat",
+        "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0"
+      ],
+      "eventId": "radiancefields.com/corbeausplat-v2.0.0-ships-stable-version"
+    },
+    {
+      "id": "radiancefields.com/xgrids-lcc-unreal-sdk-v3.4.0-adds-orthographic-views",
+      "title": "XGRIDS Unreal SDK 增加正交视图与区域加载",
+      "eventDate": "2026-09-23",
+      "reportDate": "2026-09-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/xgrids-lcc-unreal-sdk-v3.4.0-adds-orthographic-views",
+        "https://developer.xgrids.com/#/download?page=LCC_UNREAL_SDK_UE55"
+      ],
+      "eventId": "radiancefields.com/xgrids-lcc-unreal-sdk-v3.4.0-adds-orthographic-views"
+    }
+  ]
+}

@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from record_publication import verify_readback
 from validate_daily import ROOT
 
-BASE = '/gaussian-splatting-daily'
+BASE = '/horizon'
 
 
 class Links(HTMLParser):
@@ -52,7 +52,7 @@ class FeedLinks:
                 self.urls.append(element.text or '')
             if name == 'description':
                 self.urls.extend(Links(element.text or '').urls)
-        if any(urlsplit(url).scheme != 'https' or urlsplit(url).netloc != 'shuang-su.github.io' or not urlsplit(url).path.startswith(BASE + '/') for url in self.urls):
+        if any(urlsplit(url).scheme != 'https' or urlsplit(url).netloc != 'metaflow.shuang-su.com' or not urlsplit(url).path.startswith(BASE + '/') for url in self.urls):
             raise ValueError('RSS links must use canonical HTTPS URLs with the project prefix')
 
 
@@ -62,7 +62,7 @@ def verify(root=ROOT):
     if not pages:
         raise ValueError('No exported HTML pages; build the portal first')
     feeds = {}
-    for kind in ('daily', 'weekly'):
+    for kind in ('daily', 'weekly', 'articles'):
         source = output / 'feeds' / f'{kind}.xml'
         if not source.is_file():
             raise ValueError(f'Missing RSS file: {source}')
@@ -71,7 +71,7 @@ def verify(root=ROOT):
     for source, page in {**pages, **feeds}.items():
         for url in page.urls:
             parsed = urlsplit(url)
-            if (parsed.scheme or parsed.netloc) and parsed.netloc != 'shuang-su.github.io':
+            if (parsed.scheme or parsed.netloc) and parsed.netloc != 'metaflow.shuang-su.com':
                 continue
             if parsed.path == BASE or parsed.path.startswith(BASE + '/'):
                 destination = output / unquote(parsed.path[len(BASE):].lstrip('/'))
@@ -139,4 +139,4 @@ def verify(root=ROOT):
 
 if __name__ == '__main__':
     pages, reports = verify()
-    print(f'Export verified: {pages} HTML files, 2 RSS feeds, {reports} canonical reports, no broken internal links/assets/anchors. Browser interactions remain a separate check.')
+    print(f'Export verified: {pages} HTML files, 3 RSS feeds, {reports} canonical reports, no broken internal links/assets/anchors. Browser interactions remain a separate check.')

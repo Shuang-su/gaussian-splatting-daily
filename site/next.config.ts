@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/gaussian-splatting-daily",
+  basePath: "/horizon",
   trailingSlash: true,
   images: { unoptimized: true },
   poweredByHeader: false,

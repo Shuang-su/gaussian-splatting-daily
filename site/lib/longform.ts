@@ -14,18 +14,19 @@ const https = (value: unknown) => typeof value === "string" && /^https:\/\//.tes
 export async function loadLongform(root: string, reports: Article[], parse: Parser): Promise<EditorialArticle[]> {
   return Promise.all(files(root, "docs/articles").map(async file => {
     const { data, content } = matter(fs.readFileSync(path.join(root, file), "utf8"));
-    if (!text(data.title) || !text(data.summary) || !text(data.author) || !text(data.disclosure) || !/^\d{4}-\d{2}-\d{2}$/.test(data.date) || !["paper", "tool", "topic"].includes(data.genre)) throw Error(`${file}: incomplete article metadata`);
+    if (!text(data.title) || !text(data.summary) || !text(data.author) || !text(data.disclosure) || !/^\d{4}-\d{2}-\d{2}$/.test(data.date) || !["paper", "tool", "topic", "app", "tutorial", "case"].includes(data.genre)) throw Error(`${file}: incomplete article metadata`);
     const slug = path.basename(file, ".md"), id = `article:${slug}`;
     if (!Array.isArray(data.topics) || data.topics.some((topic: string) => !TOPICS.some(known => known.slug === topic))) throw Error(`${file}: unknown topic`);
     if (!data.sources?.length || data.sources.some((source: { title: string; url: string }) => !text(source.title) || !https(source.url))) throw Error(`${file}: missing article sources`);
     if (!data.related?.length || data.related.some((link: { date: string; event: string }) => !reports.find(report => report.date === link.date)?.events?.some(event => event.id === link.event))) throw Error(`${file}: missing related event`);
+    if (data.genre === "app" && (!data.app?.platforms?.length || !text(data.app.pricing) || !text(data.app.limitations) || !/^\d{4}-\d{2}-\d{2}$/.test(data.app.checkedAt) || !["researched", "tested"].includes(data.app.experience))) throw Error(`${file}: application needs platforms, pricing, limitations, verification date and experience status`);
     const image = data.cover ?? data.image;
     const prose = await parse(matter.stringify(content, {
       id, date: data.date, title: data.title, status: "published", source_count: 0,
       ...(data.revisions === undefined ? {} : { revisions: data.revisions }),
       portal: { headline: data.title, summary: data.summary, ...(image === undefined ? {} : { image }) },
     }), file);
-    return { id, slug, genre: data.genre, title: data.title, summary: data.summary, date: data.date, author: data.author, topics: data.topics, sources: data.sources, related: data.related, disclosure: data.disclosure, url: `/articles/${slug}/`, html: prose.html, text: prose.text, toc: prose.toc, images: prose.images, cover: prose.image, readingMinutes: prose.readingMinutes, revisions: prose.revisions };
+    return { id, slug, genre: data.genre, ...(data.app ? { app: data.app } : {}), title: data.title, summary: data.summary, date: data.date, author: data.author, topics: data.topics, sources: data.sources, related: data.related, disclosure: data.disclosure, url: `/articles/${slug}/`, html: prose.html, text: prose.text, toc: prose.toc, images: prose.images, cover: prose.image, readingMinutes: prose.readingMinutes, revisions: prose.revisions };
   }));
 }
 

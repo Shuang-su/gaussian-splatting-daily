@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-14T00:00:00+08:00",
+    "end": "2026-10-15T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/arrival-space-2026.10-adds-real-time-voice-npcs",
+        "radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming",
+        "radiancefields.com/gauss-cannon-v1.3.0-turns-blender-into-a-colmap-dataset-generator-with-depth-and-normal-maps",
+        "radiancefields.com/gauzilla-pro-adds-bim-import-to-4d-gaussian-splat-time-lapse",
+        "radiancefields.com/gracia-introduces-a-world-reconstruction-model-for-physical-ai-and-sports-replays",
+        "radiancefields.com/nvidia-isaac-sim-6-2-0-turns-on-gaussian-depth-and-albedo-for-nurec-scenes",
+        "radiancefields.com/john-knoll-used-gaussian-splatting-for-the-razor-crest-interior-in-the-mandalorian-and-grogu"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:59.472433+00:00",
+      "urls": [
+        "https://arrival.space/realtime-ai",
+        "https://babylonjs.com/lite-demos/demo-trogir-streaming.html",
+        "https://gauzilla.xyz",
+        "https://gracia.ai",
+        "https://www.ilm.com/john-knoll-interview-star-wars-mandalorian-grogu-ilm-vfx/",
+        "https://filmumentaries.com/2026/10/ep-157-ilms-john-knoll-on-the-mandalorian-and-grogu-motion-control-stop-motion-and-gaussian-splats/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/arrival-space-2026.10-adds-real-time-voice-npcs",
+        "radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming",
+        "radiancefields.com/gauzilla-pro-adds-bim-import-to-4d-gaussian-splat-time-lapse",
+        "radiancefields.com/gracia-introduces-a-world-reconstruction-model-for-physical-ai-and-sports-replays",
+        "radiancefields.com/john-knoll-used-gaussian-splatting-for-the-razor-crest-interior-in-the-mandalorian-and-grogu"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arrival.space/realtime-ai",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:04.917731+00:00",
+          "sha256": "860fcd83ec971b5f769583b72264e1d4761da4e6626a38ca744137e9473dc39f",
+          "characters": 37,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://babylonjs.com/lite-demos/demo-trogir-streaming.html",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.415958+00:00",
+          "sha256": "2316d95a725e8aae2cbf8b061bf23e26e8851cb482d762b3608e466986fa6d96",
+          "characters": 1149
+        },
+        {
+          "url": "https://gauzilla.xyz",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:15.127705+00:00",
+          "sha256": "3bf4ca946cde3154baac78e799a27b6a9d6c7785176ccbf1718ffdae88c02bb4",
+          "characters": 9394
+        },
+        {
+          "url": "https://gracia.ai",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:34.154057+00:00",
+          "sha256": "4e26ed6edd6164ac95d314c1e07823b754aded68fb78ff407273c7e1ca5842c2",
+          "characters": 193,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://www.ilm.com/john-knoll-interview-star-wars-mandalorian-grogu-ilm-vfx/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:59.472433+00:00",
+          "sha256": "29c25a5da4df184beae3de36f9a924408b2beea572bf9b3f6a3111603b3731a4",
+          "characters": 16083
+        },
+        {
+          "url": "https://filmumentaries.com/2026/10/ep-157-ilms-john-knoll-on-the-mandalorian-and-grogu-motion-control-stop-motion-and-gaussian-splats/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:17.785057+00:00",
+          "sha256": "b71d8a0ec621e570b877f11ab27cbbbe37e9433f1c46f007084fcf1aef4f7582",
+          "characters": 43070
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:34.274202+00:00",
+      "urls": [
+        "https://github.com/BabylonJS/Babylon-Lite/releases/tag/npm-lite-v1.33.0",
+        "https://github.com/warpgatelabs/gauss-cannon/releases/tag/v1.3.0",
+        "https://github.com/isaac-sim/IsaacSim/releases/tag/v6.2.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming",
+        "radiancefields.com/gauss-cannon-v1.3.0-turns-blender-into-a-colmap-dataset-generator-with-depth-and-normal-maps",
+        "radiancefields.com/nvidia-isaac-sim-6-2-0-turns-on-gaussian-depth-and-albedo-for-nurec-scenes"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/BabylonJS/Babylon-Lite/releases/tag/npm-lite-v1.33.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:16.227082+00:00",
+          "sha256": "da97a9ecdd6f7f5492cd01dcdc724d89e42fcd15b57e1c4909e20c605c8f9eb7",
+          "characters": 3670
+        },
+        {
+          "url": "https://github.com/warpgatelabs/gauss-cannon/releases/tag/v1.3.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:34.274202+00:00",
+          "sha256": "5b55ec1862def325a0e2445c8c9a8d9cf54914b77e18c8de6b2e7cdb3d2cf1ea",
+          "characters": 6978
+        },
+        {
+          "url": "https://github.com/isaac-sim/IsaacSim/releases/tag/v6.2.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:26.449030+00:00",
+          "sha256": "dd148c1511a70d8a3a7f44cb9330f687974b51afc3d435d96088b865186ca111",
+          "characters": 2857
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/arrival-space-2026.10-adds-real-time-voice-npcs",
+      "title": "Arrival.Space 增加可语音交流的场景角色",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/arrival-space-2026.10-adds-real-time-voice-npcs",
+        "https://arrival.space/realtime-ai"
+      ],
+      "eventId": "radiancefields.com/arrival-space-2026.10-adds-real-time-voice-npcs"
+    },
+    {
+      "id": "radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming",
+      "title": "Babylon Lite 为大场景增加渐进加载",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming",
+        "https://babylonjs.com/lite-demos/demo-trogir-streaming.html",
+        "https://github.com/BabylonJS/Babylon-Lite/releases/tag/npm-lite-v1.33.0"
+      ],
+      "eventId": "radiancefields.com/babylon-lite-1-33-0-adds-webgpu-gaussian-splat-streaming"
+    },
+    {
+      "id": "radiancefields.com/gauss-cannon-v1.3.0-turns-blender-into-a-colmap-dataset-generator-with-depth-and-normal-maps",
+      "title": "Gauss Cannon 为训练生成相机与监督数据",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gauss-cannon-v1.3.0-turns-blender-into-a-colmap-dataset-generator-with-depth-and-normal-maps",
+        "https://github.com/warpgatelabs/gauss-cannon/releases/tag/v1.3.0"
+      ],
+      "eventId": "radiancefields.com/gauss-cannon-v1.3.0-turns-blender-into-a-colmap-dataset-generator-with-depth-and-normal-maps"
+    },
+    {
+      "id": "radiancefields.com/gauzilla-pro-adds-bim-import-to-4d-gaussian-splat-time-lapse",
+      "title": "Gauzilla Pro 把 BIM 设计叠加到现场扫描",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gauzilla-pro-adds-bim-import-to-4d-gaussian-splat-time-lapse",
+        "https://gauzilla.xyz"
+      ],
+      "eventId": "radiancefields.com/gauzilla-pro-adds-bim-import-to-4d-gaussian-splat-time-lapse"
+    },
+    {
+      "id": "radiancefields.com/gracia-introduces-a-world-reconstruction-model-for-physical-ai-and-sports-replays",
+      "title": "Gracia 发布面向真实拍摄的世界重建模型",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gracia-introduces-a-world-reconstruction-model-for-physical-ai-and-sports-replays",
+        "https://gracia.ai"
+      ],
+      "eventId": "radiancefields.com/gracia-introduces-a-world-reconstruction-model-for-physical-ai-and-sports-replays"
+    },
+    {
+      "id": "radiancefields.com/nvidia-isaac-sim-6-2-0-turns-on-gaussian-depth-and-albedo-for-nurec-scenes",
+      "title": "Isaac Sim 默认输出高斯深度信息",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/nvidia-isaac-sim-6-2-0-turns-on-gaussian-depth-and-albedo-for-nurec-scenes",
+        "https://github.com/isaac-sim/IsaacSim/releases/tag/v6.2.0"
+      ],
+      "eventId": "radiancefields.com/nvidia-isaac-sim-6-2-0-turns-on-gaussian-depth-and-albedo-for-nurec-scenes"
+    },
+    {
+      "id": "radiancefields.com/john-knoll-used-gaussian-splatting-for-the-razor-crest-interior-in-the-mandalorian-and-grogu",
+      "title": "ILM 分享《曼达洛人与古古》的高斯采集",
+      "eventDate": "2026-10-14",
+      "reportDate": "2026-10-14",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/john-knoll-used-gaussian-splatting-for-the-razor-crest-interior-in-the-mandalorian-and-grogu",
+        "https://www.ilm.com/john-knoll-interview-star-wars-mandalorian-grogu-ilm-vfx/",
+        "https://filmumentaries.com/2026/10/ep-157-ilms-john-knoll-on-the-mandalorian-and-grogu-motion-control-stop-motion-and-gaussian-splats/"
+      ],
+      "eventId": "radiancefields.com/john-knoll-used-gaussian-splatting-for-the-razor-crest-interior-in-the-mandalorian-and-grogu"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-30",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-30T00:00:00+08:00",
+    "end": "2026-10-01T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-gaussian-pro-1.1.0-adds-denser-alignment-and-gps-exif",
+        "radiancefields.com/colmapview-v0.15-publishes-colmap-and-gaussian-splat-projects-to-hugging-face-in-one-click",
+        "radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+        "radiancefields.com/metalsplat-v0.3.0-trains-3dgs-and-2dgs-on-apple-silicon",
+        "radiancefields.com/spark-v2.3.0-fixes-on-demand-rendering-for-paged-lod",
+        "radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:51.758281+00:00",
+      "urls": [
+        "https://www.360gaussianpro.com/",
+        "https://colmapview.github.io/latest/",
+        "https://liquiduslabs.com/lulusplat/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-gaussian-pro-1.1.0-adds-denser-alignment-and-gps-exif",
+        "radiancefields.com/colmapview-v0.15-publishes-colmap-and-gaussian-splat-projects-to-hugging-face-in-one-click",
+        "radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.360gaussianpro.com/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:51.758281+00:00",
+          "sha256": "5deca18a1edffe5bf193b456de3b9ece11c47b65b2956956697a67366b6c0f9b",
+          "characters": 6648
+        },
+        {
+          "url": "https://colmapview.github.io/latest/",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:07.560949+00:00",
+          "sha256": "fb54a55bcaffadec269416f851c3a39052e681bc5bb58a3282e577b47f410bbe",
+          "characters": 10,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://liquiduslabs.com/lulusplat/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:36.523049+00:00",
+          "sha256": "ff39f5e825b522e1981787189f441762c19e944c150b6ce250082e19359f7a05",
+          "characters": 49875
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.303237+00:00",
+      "urls": [
+        "https://github.com/tchauffi/metalsplat",
+        "https://github.com/sparkjsdev/spark/releases/tag/v2.3.0",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30"
+      ],
+      "candidateIds": [
+        "radiancefields.com/metalsplat-v0.3.0-trains-3dgs-and-2dgs-on-apple-silicon",
+        "radiancefields.com/spark-v2.3.0-fixes-on-demand-rendering-for-paged-lod",
+        "radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/tchauffi/metalsplat",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.303237+00:00",
+          "sha256": "034bbbc52aba7a7ae0658b3608dcf562ee9c2b0616bce3d43f2d3bd96a6ec799",
+          "characters": 25135
+        },
+        {
+          "url": "https://github.com/sparkjsdev/spark/releases/tag/v2.3.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:32.016604+00:00",
+          "sha256": "c114b12edaaa5f046923427e3a67fccf2500504ee121ae44cf7620131cbc4db5",
+          "characters": 5466
+        },
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:25.900584+00:00",
+          "sha256": "3875fca800f089d080aee99f8ae395b36b7cef215832a500276d686c4e83ba84",
+          "characters": 4050
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/360-gaussian-pro-1.1.0-adds-denser-alignment-and-gps-exif",
+      "title": "360 Gaussian Pro 改善对齐与 GPS 信息传递",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/360-gaussian-pro-1.1.0-adds-denser-alignment-and-gps-exif",
+        "https://www.360gaussianpro.com/"
+      ],
+      "eventId": "radiancefields.com/360-gaussian-pro-1.1.0-adds-denser-alignment-and-gps-exif"
+    },
+    {
+      "id": "radiancefields.com/colmapview-v0.15-publishes-colmap-and-gaussian-splat-projects-to-hugging-face-in-one-click",
+      "title": "ColmapView 支持一键分享重建项目",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/colmapview-v0.15-publishes-colmap-and-gaussian-splat-projects-to-hugging-face-in-one-click",
+        "https://colmapview.github.io/latest/"
+      ],
+      "eventId": "radiancefields.com/colmapview-v0.15-publishes-colmap-and-gaussian-splat-projects-to-hugging-face-in-one-click"
+    },
+    {
+      "id": "radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+      "title": "LuluSplat 在 Apple Silicon 上完成本地训练",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+        "https://liquiduslabs.com/lulusplat/"
+      ],
+      "eventId": "radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs"
+    },
+    {
+      "id": "radiancefields.com/metalsplat-v0.3.0-trains-3dgs-and-2dgs-on-apple-silicon",
+      "title": "MetalSplat 提供面向 Mac 的可微高斯渲染",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/metalsplat-v0.3.0-trains-3dgs-and-2dgs-on-apple-silicon",
+        "https://github.com/tchauffi/metalsplat"
+      ],
+      "eventId": "radiancefields.com/metalsplat-v0.3.0-trains-3dgs-and-2dgs-on-apple-silicon"
+    },
+    {
+      "id": "radiancefields.com/spark-v2.3.0-fixes-on-demand-rendering-for-paged-lod",
+      "title": "Spark 修复按需渲染中的流式加载停顿",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spark-v2.3.0-fixes-on-demand-rendering-for-paged-lod",
+        "https://github.com/sparkjsdev/spark/releases/tag/v2.3.0"
+      ],
+      "eventId": "radiancefields.com/spark-v2.3.0-fixes-on-demand-rendering-for-paged-lod"
+    },
+    {
+      "id": "radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "title": "Spirula 可分区训练后合并大场景",
+      "eventDate": "2026-09-30",
+      "reportDate": "2026-09-30",
+      "importance": "standard",
+      "disposition": "merged",
+      "reason": "与阅读版相同的固定发行/PR/提交合并，补充原始报道线索。",
+      "sources": [
+        "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30"
+      ],
+      "eventId": "github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30"
+    }
+  ]
+}

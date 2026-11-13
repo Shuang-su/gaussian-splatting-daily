@@ -2,7 +2,7 @@ import { BASE, TOPICS } from "./catalog";
 
 export const topicIndex = "/topics/";
 const topicPaths = new Set(TOPICS.map(topic => `/topics/${topic.slug}/`));
-const cataloguePaths = new Set([ ...topicPaths, "/papers/", "/tools/" ]);
+const cataloguePaths = new Set([ ...topicPaths, "/papers/", "/tools/", "/articles/", "/features/", "/apps/" ]);
 
 export function hierarchyPath(path: string) {
   const local = path.startsWith(`${BASE}/`) ? path.slice(BASE.length) : path;

@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-11",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-11T00:00:00+08:00",
+    "end": "2026-11-12T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service",
+        "radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats",
+        "radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+        "radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves",
+        "radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats",
+        "radiancefields.com/training-gaussian-splats-from-renders-not-photos",
+        "radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+        "radiancefields.com/design4real-releases-splatmania-a-free-splat-editor"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:54.088761+00:00",
+      "urls": [
+        "https://bubo2.com/pricing",
+        "https://www.esri.com/arcgis-blog/products/js-api-arcgis/announcements/arcgis-maps-sdk-for-javascript-whats-new-in-5-2",
+        "https://docs.spaitial.ai/api/capture-worlds",
+        "https://superhivemarket.com/products/splatpilot",
+        "https://aster-master.com/devlog/gaussian-splats-destruction/?ref=rf_guest",
+        "https://forums.unrealengine.com/t/unreal-engine-5-9-megajam-preview/2852840",
+        "https://forums.unrealengine.com/t/2852858",
+        "https://design4real.de/apps/splatmania"
+      ],
+      "candidateIds": [
+        "radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service",
+        "radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats",
+        "radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+        "radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats",
+        "radiancefields.com/training-gaussian-splats-from-renders-not-photos",
+        "radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+        "radiancefields.com/design4real-releases-splatmania-a-free-splat-editor"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://bubo2.com/pricing",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.324614+00:00",
+          "sha256": "dc34492036102e85c374f363aa6fb992f40902626091dbbcca3fb2bbf92cbe77",
+          "characters": 4794
+        },
+        {
+          "url": "https://www.esri.com/arcgis-blog/products/js-api-arcgis/announcements/arcgis-maps-sdk-for-javascript-whats-new-in-5-2",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:54.088761+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://docs.spaitial.ai/api/capture-worlds",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:11.308385+00:00",
+          "sha256": "f496f4bea1f1bad0a217d3eeba626c21ed29027b4b3c88532fb0a7a2d3586310",
+          "characters": 9483
+        },
+        {
+          "url": "https://superhivemarket.com/products/splatpilot",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:48.220731+00:00",
+          "sha256": "589e3d42916d2a64d54b238384a91f72d4f09d1b9a4ce9de50e80e59d4395141",
+          "characters": 7858
+        },
+        {
+          "url": "https://aster-master.com/devlog/gaussian-splats-destruction/?ref=rf_guest",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.018016+00:00",
+          "sha256": "e4cf8921a3cd2636fce7bf0a086bb5b1a13af4dc77c3cb66e9814cbfb0ad833d",
+          "characters": 42883
+        },
+        {
+          "url": "https://forums.unrealengine.com/t/unreal-engine-5-9-megajam-preview/2852840",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:14.107531+00:00",
+          "sha256": "f66b93795d5344017914ca14ce01436eb60e651a9aab440448c763816ca0e106",
+          "characters": 20094
+        },
+        {
+          "url": "https://forums.unrealengine.com/t/2852858",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:14.564237+00:00",
+          "sha256": "0f67e41bee3544772abac1f7ecbff49475e301c7fc199c3cf0ef22e51a91350b",
+          "characters": 651
+        },
+        {
+          "url": "https://design4real.de/apps/splatmania",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:08.569538+00:00",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "characters": 0,
+          "gap": "No readable body in response."
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:11.628667+00:00",
+      "urls": [
+        "https://x.com/syu_ya23/status/2120449956393705816"
+      ],
+      "candidateIds": [
+        "radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://x.com/syu_ya23/status/2120449956393705816",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:11.628667+00:00",
+          "sha256": "745491ca4284944c59c99b990dc67eb80fa63a18db75027c9fd3ddf7d7f1343f",
+          "characters": 1753
+        }
+      ]
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.481110+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2611.12716"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2611.12716",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.481110+00:00",
+          "sha256": "b99d0d45781dbf5f07d69f61cccf577c4881b0ff712e92803289addcc384d89f",
+          "characters": 4960
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:31.547427+00:00",
+      "urls": [
+        "https://github.com/spaitial-ai/spaitial-capture-prototype",
+        "https://github.com/clarencedad-cloud/d4r-Splatmania"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+        "radiancefields.com/design4real-releases-splatmania-a-free-splat-editor"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/spaitial-ai/spaitial-capture-prototype",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:31.547427+00:00",
+          "sha256": "7047822f664874f2ab0f4442b4c90e51d9f0e27948728d830238ea8938228d9c",
+          "characters": 7869
+        },
+        {
+          "url": "https://github.com/clarencedad-cloud/d4r-Splatmania",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:22.275643+00:00",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service",
+      "title": "Bubo² 准备推出云端高斯服务",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service",
+        "https://bubo2.com/pricing"
+      ],
+      "eventId": "radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service"
+    },
+    {
+      "id": "radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats",
+      "title": "ArcGIS 可对高斯做可视域与阴影分析",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats",
+        "https://www.esri.com/arcgis-blog/products/js-api-arcgis/announcements/arcgis-maps-sdk-for-javascript-whats-new-in-5-2"
+      ],
+      "eventId": "radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats"
+    },
+    {
+      "id": "radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+      "title": "SpAItial 向所有开发者账户开放 Echo-3 API",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+        "https://github.com/spaitial-ai/spaitial-capture-prototype",
+        "https://docs.spaitial.ai/api/capture-worlds"
+      ],
+      "eventId": "radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account"
+    },
+    {
+      "id": "radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves",
+      "title": "Spaghetti Splatting 用曲线替代独立高斯点",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves",
+        "https://arxiv.org/abs/2611.12716"
+      ],
+      "eventId": "radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves"
+    },
+    {
+      "id": "radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats",
+      "title": "SplatPilot 将 Blender 场景训练成高斯",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats",
+        "https://superhivemarket.com/products/splatpilot"
+      ],
+      "eventId": "radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/training-gaussian-splats-from-renders-not-photos",
+      "title": "AsterMaster 作者分享从渲染图训练游戏高斯",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/training-gaussian-splats-from-renders-not-photos",
+        "https://aster-master.com/devlog/gaussian-splats-destruction/?ref=rf_guest"
+      ],
+      "eventId": "radiancefields.com/training-gaussian-splats-from-renders-not-photos"
+    },
+    {
+      "id": "radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+      "title": "Unreal Engine 5.9 预览版加入实验性高斯入口",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+        "https://x.com/syu_ya23/status/2120449956393705816",
+        "https://forums.unrealengine.com/t/unreal-engine-5-9-megajam-preview/2852840",
+        "https://forums.unrealengine.com/t/2852858"
+      ],
+      "eventId": "radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/design4real-releases-splatmania-a-free-splat-editor",
+      "title": "Splatmania 提供带剪辑时间线的浏览器编辑",
+      "eventDate": "2026-11-11",
+      "reportDate": "2026-11-11",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/design4real-releases-splatmania-a-free-splat-editor",
+        "https://github.com/clarencedad-cloud/d4r-Splatmania",
+        "https://design4real.de/apps/splatmania"
+      ],
+      "eventId": "radiancefields.com/design4real-releases-splatmania-a-free-splat-editor"
+    }
+  ]
+}

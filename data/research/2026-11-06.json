@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-06",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-06T00:00:00+08:00",
+    "end": "2026-11-07T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/insta360-launches-a-spatial-capture-challenge",
+        "radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3",
+        "radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:13.808930+00:00",
+      "urls": [
+        "https://youtu.be/ZzcXRoycB5M",
+        "https://app.insta360.com/3dspace/detail/GS3DG8dc55a71b133474f88a549e099d89326 ",
+        "https://www.insta360.com/spatial-capture-challenge",
+        "https://na.mipmap3d.com/blogs/mipmap-desktop-3-3-new-tools-for-gaussian-splatting-measurement-and-sharing/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/insta360-launches-a-spatial-capture-challenge",
+        "radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://youtu.be/ZzcXRoycB5M",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:37:13.808930+00:00",
+          "sha256": "db8fe8b302c6c8e2d13ba9951729076a263c2a6d1e279bc700b273e5ad6e9ea8",
+          "characters": 165,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://app.insta360.com/3dspace/detail/GS3DG8dc55a71b133474f88a549e099d89326 ",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:02.334802+00:00",
+          "sha256": "0f0dcecaf4e7575a3c000e529e68c809fb8bd3bd601442dbbbcd4cae5e3afb9a",
+          "characters": 151,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://www.insta360.com/spatial-capture-challenge",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:57.377638+00:00",
+          "sha256": "c6eafb9ee48f62c47daff7429653e8c4f21a485dd7ee2491a26f6b17c5503a64",
+          "characters": 6000
+        },
+        {
+          "url": "https://na.mipmap3d.com/blogs/mipmap-desktop-3-3-new-tools-for-gaussian-splatting-measurement-and-sharing/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:37.416445+00:00",
+          "sha256": "c377c2df43931081795fbe177361bd5605b00aed6f86397f746096503d4c7d5e",
+          "characters": 9846
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:18.149473+00:00",
+      "urls": [
+        "https://github.com/CoSTAR-National-Lab/starlightgs-training",
+        "https://github.com/CoSTAR-National-Lab/starlightgs-sample",
+        "https://github.com/CoSTAR-National-Lab/starlightgs"
+      ],
+      "candidateIds": [
+        "radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/CoSTAR-National-Lab/starlightgs-training",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:18.149473+00:00",
+          "sha256": "8eb7d6bfaa181233b06b46eb0b6e37a9c82666f438011bd69c948c15c47706d5",
+          "characters": 9983
+        },
+        {
+          "url": "https://github.com/CoSTAR-National-Lab/starlightgs-sample",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:17.739086+00:00",
+          "sha256": "91d42169a03710e9d2e85f13bfce9e1e9d6c7f7cb833f7f5fcf054884787ccd0",
+          "characters": 5562
+        },
+        {
+          "url": "https://github.com/CoSTAR-National-Lab/starlightgs",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:17.205518+00:00",
+          "sha256": "382c2ecdd2e689509ce8bc06b6fcf1324088c1276b02464278402776d20f530f",
+          "characters": 5529
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/insta360-launches-a-spatial-capture-challenge",
+      "title": "Insta360 举办 Spatial Capture 创作挑战",
+      "eventDate": "2026-11-06",
+      "reportDate": "2026-11-06",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/insta360-launches-a-spatial-capture-challenge",
+        "https://youtu.be/ZzcXRoycB5M",
+        "https://app.insta360.com/3dspace/detail/GS3DG8dc55a71b133474f88a549e099d89326 ",
+        "https://www.insta360.com/spatial-capture-challenge"
+      ],
+      "eventId": "radiancefields.com/insta360-launches-a-spatial-capture-challenge"
+    },
+    {
+      "id": "radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3",
+      "title": "MipMap Desktop 增加行走与尺度校准",
+      "eventDate": "2026-11-06",
+      "reportDate": "2026-11-06",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3",
+        "https://na.mipmap3d.com/blogs/mipmap-desktop-3-3-new-tools-for-gaussian-splatting-measurement-and-sharing/"
+      ],
+      "eventId": "radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3"
+    },
+    {
+      "id": "radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine",
+      "title": "StarLightGS 使用 Unreal 灯光重照高斯",
+      "eventDate": "2026-11-06",
+      "reportDate": "2026-11-06",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine",
+        "https://github.com/CoSTAR-National-Lab/starlightgs-training",
+        "https://github.com/CoSTAR-National-Lab/starlightgs-sample",
+        "https://github.com/CoSTAR-National-Lab/starlightgs"
+      ],
+      "eventId": "radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-15",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-15T00:00:00+08:00",
+    "end": "2026-10-16T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/hesai-launches-kosmo-lidar-and-8k-capture-system-for-gaussian-splatting"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:57.007282+00:00",
+      "urls": [
+        "https://investor.hesaitech.com/news-releases/news-release-details/hesai-group-reports-second-quarter-2026-unaudited-financial",
+        "https://www.dylansisson.com/stories/kosmo/",
+        "https://renderman.pixar.com/gaussian-splatting-the-pixar-campus",
+        "https://www.hesaitech.com/9974-2/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/hesai-launches-kosmo-lidar-and-8k-capture-system-for-gaussian-splatting"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://investor.hesaitech.com/news-releases/news-release-details/hesai-group-reports-second-quarter-2026-unaudited-financial",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:34.598461+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.dylansisson.com/stories/kosmo/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:53.912818+00:00",
+          "sha256": "3259955986d46aa4524bda3a4c756d97afedfb8e6eb6e9defe9dfa44c071a3cf",
+          "characters": 6056
+        },
+        {
+          "url": "https://renderman.pixar.com/gaussian-splatting-the-pixar-campus",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:41.989905+00:00",
+          "sha256": "80222d21e6b2de3393de5507c738f7e23a94f07d4d0d0ae586c1045c49e5ae22",
+          "characters": 6953
+        },
+        {
+          "url": "https://www.hesaitech.com/9974-2/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:57.007282+00:00",
+          "sha256": "12d84fc178526af629ef9831ee8dd9ab2171ffa5728ddb0a5e77ba0484584aff",
+          "characters": 11955
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/hesai-launches-kosmo-lidar-and-8k-capture-system-for-gaussian-splatting",
+      "title": "禾赛发布 Kosmo 采集硬件与云端重建",
+      "eventDate": "2026-10-15",
+      "reportDate": "2026-10-15",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/hesai-launches-kosmo-lidar-and-8k-capture-system-for-gaussian-splatting",
+        "https://investor.hesaitech.com/news-releases/news-release-details/hesai-group-reports-second-quarter-2026-unaudited-financial",
+        "https://www.dylansisson.com/stories/kosmo/",
+        "https://renderman.pixar.com/gaussian-splatting-the-pixar-campus",
+        "https://www.hesaitech.com/9974-2/"
+      ],
+      "eventId": "radiancefields.com/hesai-launches-kosmo-lidar-and-8k-capture-system-for-gaussian-splatting"
+    }
+  ]
+}

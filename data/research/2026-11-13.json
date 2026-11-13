@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-13",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-13T00:00:00+08:00",
+    "end": "2026-11-14T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser",
+        "radiancefields.com/world-labs-opens-atlas-world-model-to-everyone"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:09.615424+00:00",
+      "urls": [
+        "https://offlinetools.io/fsp-product",
+        "https://www.worldlabs.ai/atlas"
+      ],
+      "candidateIds": [
+        "radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser",
+        "radiancefields.com/world-labs-opens-atlas-world-model-to-everyone"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://offlinetools.io/fsp-product",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:37.802893+00:00",
+          "sha256": "4a16cb0548341a9bda38abbd5f4f0ed5c496c5655fffdd70577a19bd12a9d36c",
+          "characters": 5687
+        },
+        {
+          "url": "https://www.worldlabs.ai/atlas",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:09.615424+00:00",
+          "sha256": "cf1e7f2af0e1cea8cb720840dbc4822b18626a3fe637d92142d2ad6eef8fedaa",
+          "characters": 2161
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser",
+      "title": "Frankensplat 在浏览器本地训练高斯",
+      "eventDate": "2026-11-13",
+      "reportDate": "2026-11-13",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser",
+        "https://offlinetools.io/fsp-product"
+      ],
+      "eventId": "radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser"
+    },
+    {
+      "id": "radiancefields.com/world-labs-opens-atlas-world-model-to-everyone",
+      "title": "World Labs 向所有人开放 Atlas",
+      "eventDate": "2026-11-13",
+      "reportDate": "2026-11-13",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/world-labs-opens-atlas-world-model-to-everyone",
+        "https://www.worldlabs.ai/atlas"
+      ],
+      "eventId": "radiancefields.com/world-labs-opens-atlas-world-model-to-everyone"
+    }
+  ]
+}

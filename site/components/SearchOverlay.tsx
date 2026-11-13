@@ -25,7 +25,7 @@ export default function SearchOverlay({ open, onClose }: { open: boolean; onClos
       if (previousFocus?.isConnected && previousFocus.getClientRects().length) previousFocus.focus({ preventScroll: true });
     };
   }, [open]);
-  return <dialog ref={dialog} className="search-overlay" aria-label="搜索高斯日报" onCancel={(event) => { event.preventDefault(); onClose(); }} onKeyDown={(event) => {
+  return <dialog ref={dialog} className="search-overlay" aria-label="搜索 horizon" onCancel={(event) => { event.preventDefault(); onClose(); }} onKeyDown={(event) => {
     if (event.key !== "Tab") return;
     const controls = Array.from(event.currentTarget.querySelectorAll<HTMLElement>("input, button, a[href]")).filter((element) => element.getClientRects().length);
     const first = controls[0], last = controls[controls.length - 1];
@@ -41,7 +41,7 @@ export default function SearchOverlay({ open, onClose }: { open: boolean; onClos
         if (!searchTerm(query)) { event.preventDefault(); input.current?.focus(); return; }
         rememberSearch(query); onClose();
       }}>
-        <Icon name="search" /><input ref={input} name="q" value={query} onChange={(event) => setQuery(event.target.value)} type="search" maxLength={160} placeholder="搜索高斯日报…" aria-label="搜索高斯日报" />
+        <Icon name="search" /><input ref={input} name="q" value={query} onChange={(event) => setQuery(event.target.value)} type="search" maxLength={160} placeholder="搜索 horizon…" aria-label="搜索 horizon" />
         {query && <button type="button" className="search-clear" aria-label="清空关键词" onClick={() => { setQuery(""); input.current?.focus(); }}><Icon name="close" /></button>}
         <button className="search-submit-accessible" type="submit">搜索</button>
       </form>

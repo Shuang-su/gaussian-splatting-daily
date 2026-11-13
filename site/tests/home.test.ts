@@ -32,11 +32,11 @@ test("recommendations use archived illustrations without duplicate lead covers o
       const canonical = index.daily.find(report => report.id === item.id)!;
       assert.equal(item.image?.url, canonical.image?.url);
       assert.equal(item.url, dailyUrl(canonical.date));
-    } else {
+    } else if (item.kind !== "article") {
       assert.ok(item.image, `${item.id} should have an archived illustration`);
     }
     if (i) assert.ok(feeds.recommended[i - 1].date >= item.date);
-    if (item.kind !== "daily") assert.ok(!index.daily.some((d) => d.date === item.date && d.image?.url === item.image?.url));
+    if (item.kind !== "daily" && item.kind !== "article") assert.ok(!index.daily.some((d) => d.date === item.date && d.image?.url === item.image?.url));
   }
   for (const kind of ["paper", "tool"] as const) {
     assert.equal(feeds[kind].length, index.entries.filter((e) => e.kind === kind).length);

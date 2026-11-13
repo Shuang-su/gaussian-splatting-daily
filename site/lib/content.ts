@@ -491,6 +491,7 @@ export async function buildArchive(root = ROOT) {
       const reading = await applyReadingEdition(article, markdown, fs.readFileSync(path.join(root, readerPath), "utf8"), readerPath,
         (md, file) => parseArticle(md, file, media), {
           cover: covers[article.date],
+          readSupplement(file) { return fs.readFileSync(path.join(root, file), "utf8"); },
           validateFigure(image, primary) {
             if (image.kind || image.originalUrl || !primary || !/^https:\/\//.test(image.source)) return false;
             const primaryPaper = primary.match(/^https:\/\/arxiv\.org\/abs\/([\d.]+)$/)?.[1];
@@ -627,7 +628,7 @@ export async function buildArchive(root = ROOT) {
   };
   const [editorials, weeklyEditorials] = await Promise.all([loadLongform(root, published, parseArticle), loadWeeklyEditorial(root, published, parseArticle)]);
   index.articles = editorials.map(({ html, text, toc, images, readingMinutes, revisions, cover, ...summary }) => summary);
-  index.search.push(...editorials.map(article => ({ id: article.id, kind: article.genre === "topic" ? "news" as const : article.genre, format: "article" as const, title: article.title, summary: article.summary, date: article.date, topics: article.topics, url: article.url, text: article.text })));
+  index.search.push(...editorials.map(article => ({ id: article.id, kind: article.genre === "paper" ? "paper" as const : article.genre === "tool" || article.genre === "app" ? "tool" as const : "news" as const, format: "article" as const, column: article.genre === "app" ? "app" as const : article.genre === "topic" ? "feature" as const : article.genre === "paper" ? "research" as const : "article" as const, genre: article.genre, ...(article.app ? {app:article.app} : {}), title: article.title, summary: article.summary, date: article.date, topics: article.topics, url: article.url, text: article.text })));
   const asOf = [published[0]?.date || "", ...weeklyEditorials.map(week => week.releaseDate)].sort().at(-1);
   const weeks = buildWeekly(published, asOf);
   return { articles: published, index, editorials, weeklyEditorials, weeks };

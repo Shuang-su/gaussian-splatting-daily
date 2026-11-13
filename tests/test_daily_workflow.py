@@ -89,7 +89,7 @@ class DailyWorkflowTests(unittest.TestCase):
     def run_step(self, name):
         script = textwrap.dedent(step(name).split("        run: |\n", 1)[1])
         # Give each test its own artifact directory instead of the runner's /tmp.
-        script = script.replace("/tmp/daily-summary", str(self.root / "summary"))
+        script = script.replace(".codex-work/tmp/daily-summary", str(self.root / "summary"))
         return subprocess.run(["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c", script],
                               cwd=self.repo, env=self.env, text=True, capture_output=True)
 
@@ -104,10 +104,10 @@ class DailyWorkflowTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         outputs = dict(line.split("=", 1) for line in self.output.read_text().splitlines())
         # Honor the production Actions condition, and fail if it is removed.
-        publish_step = step("Create, record, and merge Daily PR")
+        publish_step = step("Create or reuse research-draft PR")
         self.assertIn("        if: steps.commit.outputs.publishable == 'true'\n", publish_step)
         if result.returncode == 0 and outputs.get("publishable") == "true":
-            result = self.run_step("Create, record, and merge Daily PR")
+            result = self.run_step("Create or reuse research-draft PR")
             self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         return result, outputs
 
@@ -148,7 +148,7 @@ class DailyWorkflowTests(unittest.TestCase):
         self.assertIn(self.git("rev-parse", "HEAD").stdout.strip(), self.remote_head())
         self.assertIn(["issue", "create"], self.commands())
         self.assertIn(["pr", "create"], self.commands())
-        self.assertIn(["pr", "merge"], self.commands())
+        self.assertNotIn(["pr", "merge"], self.commands())
 
     def test_retry_of_pending_content_survives_unchanged_worktree(self):
         self.write("docs/new.md", "Pending content\n")
@@ -162,7 +162,7 @@ class DailyWorkflowTests(unittest.TestCase):
         self.env["GH_EXISTING"] = "1"
         self.write("docs/new.md", "Pending content\n")
         self.publish()
-        self.assertIn(["issue", "edit"], self.commands())
+        self.assertIn(["issue", "list"], self.commands())
         self.assertIn(["pr", "edit"], self.commands())
         self.assertNotIn(["issue", "create"], self.commands())
         self.assertNotIn(["pr", "create"], self.commands())
@@ -217,7 +217,7 @@ class DailyWorkflowTests(unittest.TestCase):
         self.assertEqual(outputs["publishable"], "true")
         self.assertIn(["pr", "create"], self.commands())
         self.assertNotIn(["pr", "merge"], self.commands())
-        self.assertIn("EDITORIAL INCOMPLETE", result.stderr)
+        self.assertIn("Research draft preserved", result.stdout)
 
 
 if __name__ == "__main__":

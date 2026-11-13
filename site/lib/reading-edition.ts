@@ -15,7 +15,7 @@ const idsIn = (html: string) => [...html.matchAll(/\bid="([^"]+)"/g)].map(match 
 /** A reader edition is tied to an exact research record; it never replaces it. */
 export async function applyReadingEdition(
   source: Article, sourceMarkdown: string, markdown: string, file: string, parse: ParseArticle,
-  { cover, validateFigure }: { cover?: CoverRecord; validateFigure?: (image: SourceImage, primary?: string) => boolean } = {},
+  { cover, validateFigure, readSupplement }: { cover?: CoverRecord; validateFigure?: (image: SourceImage, primary?: string) => boolean; readSupplement?: (file: string) => string } = {},
 ): Promise<Article> {
   const { data, content } = matter(markdown);
   if (![1, 2].includes(data.version) || data.report !== source.id || data.sourceHash !== source.contentHash)
@@ -27,6 +27,20 @@ export async function applyReadingEdition(
   const nodes = parseMarkdown(content).children;
   const researchContent = matter(sourceMarkdown).content;
   const researchBlocks = new Map(sourceBlocks(parseMarkdown(researchContent).children, researchContent).map(block => [block.key, block.raw]));
+  let evidenceMarkdown = sourceMarkdown;
+  const supplementPaths = new Set<string>();
+  if (data.supplements !== undefined && !Array.isArray(data.supplements)) throw Error(`${file}: invalid supplements`);
+  for (const supplement of data.supplements || []) {
+    if (!/^docs\/supplements\/\d{4}-\d{2}-\d{2}(?:-[a-z0-9-]+)?\.md$/.test(supplement.path) || supplementPaths.has(supplement.path) || !readSupplement)
+      throw Error(`${file}: invalid or duplicate supplement path`);
+    supplementPaths.add(supplement.path);
+    const raw = readSupplement(supplement.path);
+    if (createHash("sha256").update(raw).digest("hex") !== supplement.sha256) throw Error(`${file}: stale supplement hash`);
+    const parsed = matter(raw);
+    if (parsed.data.report !== source.id || !/^\d{4}-\d{2}-\d{2}$/.test(parsed.data.addedAt)) throw Error(`${file}: supplement identity/date mismatch`);
+    for (const block of sourceBlocks(parseMarkdown(parsed.content).children, parsed.content)) researchBlocks.set(`${supplement.path}#${block.key}`, block.raw);
+    evidenceMarkdown += "\n" + raw;
+  }
   const blocks = sourceBlocks(nodes, content);
   const starts = nodes.flatMap((node, index) => node.type === "heading" && node.depth === 2 ? [index] : []);
   if (starts[0] !== 0 || starts.length !== data.events.length || nodes.some(n => n.type === "heading" && n.depth === 1))
@@ -39,7 +53,7 @@ export async function applyReadingEdition(
     if ((!original && data.version === 1) || assigned.has(event.id)) throw Error(`${file}: unknown or duplicate reading event ${event.id}`);
     if (data.version === 2) {
       if (!event.sourceRefs?.length || event.sourceRefs.some(ref => !researchBlocks.has(ref))) throw Error(`${file}: missing or stale research block mapping for ${event.id}`);
-      if (!event.source || !/^https:\/\//.test(event.source) || !sourceMarkdown.includes(event.source) || !["paper", "tool", "news"].includes(event.kind || "")) throw Error(`${file}: invalid primary source for ${event.id}`);
+      if (!event.source || !/^https:\/\//.test(event.source) || !evidenceMarkdown.includes(event.source) || !["paper", "tool", "news"].includes(event.kind || "")) throw Error(`${file}: invalid primary source for ${event.id}`);
       if (event.images?.some(image => image.kind === "editorial-illustration" ||
           (!image.originalUrl?.startsWith("/media/originals/") && !validateFigure?.(image, event.source))))
         throw Error(`${file}: reading figure needs a dated archive and primary attribution for ${event.id}`);

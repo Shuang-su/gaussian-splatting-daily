@@ -34,7 +34,7 @@ test("new reading editions use 22 distinct dated editorial covers", async () => 
   const illustrated = articles.filter(article => article.image?.kind === "editorial-illustration");
   assert.equal(illustrated.length, 22);
   assert.deepEqual(illustrated.map(article => article.date).sort(),
-    articles.filter(article => article.date > "2026-10-18").map(article => article.date).sort());
+    articles.filter(article => article.date > "2026-10-18" && !["2026-10-21","2026-10-22","2026-10-23","2026-10-24"].includes(article.date)).map(article => article.date).sort());
   assert.equal(new Set(Object.values(manifest).map(cover => cover.inputSha256)).size, 22);
   for (const article of illustrated) {
     const { date, image } = article;

@@ -1,0 +1,24 @@
+[build]
+command = "npm ci --prefix site && npm run build --prefix site && python3 scripts/verify_export.py && python3 scripts/stage_site.py"
+publish = ".codex-work/deploy/horizon-site"
+
+[[redirects]]
+from = "/horizon"
+to = "/horizon/"
+status = 301
+
+[[redirects]]
+from = "/horizon/*"
+to = "/horizon/404.html"
+status = 404
+
+[[headers]]
+for = "/horizon/*"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+X-Content-Type-Options = "nosniff"
+
+[[headers]]
+for = "/horizon/_next/static/*"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"

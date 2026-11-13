@@ -20,7 +20,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ATOM = {"a": "http://www.w3.org/2005/Atom"}
 ARXIV_API = "https://export.arxiv.org/api/query"
 QUERY = 'all:"gaussian splatting"'
-USER_AGENT = "gaussian-splatting-daily/0.1 (https://github.com/Shuang-su/gaussian-splatting-daily)"
+USER_AGENT = "gaussian-splatting-daily/0.1 (https://github.com/Shuang-su/metaflow-horizon)"
 ARXIV_MARKER_RE = re.compile(r"<!--\s*arxiv:([^\s>]+)\s*-->")
 VERSION_RE = re.compile(r"v\d+$")
 

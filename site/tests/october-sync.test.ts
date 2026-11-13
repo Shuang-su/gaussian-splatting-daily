@@ -11,10 +11,10 @@ test("October reports extend the archive without re-owning earlier papers or los
     ...Array.from({ length: 20 }, (_, i) => new Date(Date.UTC(2026, 10, 13 - i)).toISOString().slice(0, 10)),
     "2026-10-20", "2026-10-19",
   ];
-  assert.deepEqual(articles.map(a => a.date), [...imported, ...historical]);
+  assert.deepEqual(articles.map(a => a.date), [...Array.from({length:26},(_,i)=>new Date(Date.UTC(2026,10,13-i)).toISOString().slice(0,10)), ...historical]);
   const october = articles.filter(a => a.date >= "2026-10-01" && a.date <= "2026-10-03");
   assert.deepEqual(october.map(a => a.sourceCount), [10, 0, 0]);
-  assert.deepEqual(october.map(a => a.events!.filter(e => e.group === "main").length), [4, 6, 4]);
+  assert.deepEqual(october.map(a => a.events!.filter(e => e.group === "main").length), [4, 7, 4]);
   for (const a of october) {
     assert.ok(a.issue);
     assert.ok(a.prs.length >= 2);

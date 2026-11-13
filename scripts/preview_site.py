@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Serve the exported portal locally at its GitHub Pages project path."""
+"""Serve the exported portal locally at its Horizon public path."""
 import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit
 
-BASE = '/gaussian-splatting-daily'
+BASE = '/horizon'
 ROOT = Path(__file__).resolve().parents[1]
 
 class Handler(SimpleHTTPRequestHandler):

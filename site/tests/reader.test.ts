@@ -14,15 +14,15 @@ const article: ReaderIdentity = { id: "gsd-2026-10-31", title: "日报", url: "/
 test("reader preferences and sharing retain safe defaults and local preview destinations", () => {
   for (const input of [null, "", "13", "14.5", "25", "NaN"]) assert.equal(readerFontSize(input), null);
   for (const size of [14, 17, 24]) assert.equal(readerFontSize(String(size)), size);
-  assert.equal(readerShareUrl(article, new URL("https://shuang-su.github.io/gaussian-splatting-daily/daily/2026/10/31?giscus=abc#section")), "https://shuang-su.github.io/gaussian-splatting-daily/daily/2026/10/31/");
-  assert.equal(readerShareUrl(article, new URL("http://127.0.0.1:4388/gaussian-splatting-daily/daily/2026/10/31/?commentFixture=mixed#section")), "http://127.0.0.1:4388/gaussian-splatting-daily/daily/2026/10/31/");
+  assert.equal(readerShareUrl(article, new URL("https://metaflow.shuang-su.com/horizon/daily/2026/10/31?giscus=abc#section")), "https://metaflow.shuang-su.com/horizon/daily/2026/10/31/");
+  assert.equal(readerShareUrl(article, new URL("http://127.0.0.1:4388/horizon/daily/2026/10/31/?commentFixture=mixed#section")), "http://127.0.0.1:4388/horizon/daily/2026/10/31/");
   assert.equal(readerThreadTerm(article), "gsd-2026-10-31::daily");
   assert.equal(readerThreadTerm(article, "event-a"), "gsd-2026-10-31::event::event-a");
   assert.equal(readerThreadTerm({ ...article, id: "article:gaussians", kind: "editorial" }), "article:gaussians::article");
 });
 
 test("Giscus count uses only validated top-level count and GitHub discussion links", () => {
-  const repo = "Shuang-su/gaussian-splatting-daily";
+  const repo = "Shuang-su/metaflow-horizon";
   const url = `https://github.com/${repo}/discussions/42`;
   const valid = { totalCommentCount: 2, totalReplyCount: 5, url, repository: { nameWithOwner: repo } };
   assert.deepEqual(giscusCount(valid, repo), { count: 2, url });

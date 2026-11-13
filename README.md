@@ -1,59 +1,46 @@
-# 高斯日报 · Gaussian Splatting Daily
+# metaflow horizon
 
-关注 3DGS / 4DGS、辐射场、重建、工具链与实际应用的中文研究日报。**Markdown 是唯一正文，网站和索引由归档构建。**
+面向读者的中文行业媒体：高斯、扫描与摄影测量、NeRF、空间 AI、XR、创作工具、作品及行业应用。**高斯日报**保留为每日栏目，另设文章、专题、研究和应用。
 
-[公开门户](https://shuang-su.github.io/gaussian-splatting-daily/) · [2026 年 9 月归档](docs/daily/2026/09/index.md) · [历史核验](docs/history-audit.md) · [纠错记录](docs/corrections.md)
+[正式网站](https://metaflow.shuang-su.com/horizon/) · [内容契约](docs/horizon-spec.md) · [编辑与排版规范](docs/editorial-style.md) · [每日任务](docs/chatgpt-horizon-task.md)
 
-## 内容与网站
+Markdown 保存研究原文、阅读版及独立文章，Next.js 静态导出。网站独立部署在与 Metaflow 相同的 Netlify 团队，通过主站 `/horizon/` 代理访问。GitHub 原仓库改名保留提交、Issue、PR 历史；不要创建同名旧仓库，以免破坏重定向。
 
-首版提供首页、完整日报、论文、工具、主题、图片与浏览器搜索。Next.js / TypeScript 静态导出到 GitHub Pages，无运行时后端。文章页优先参考少数派日报的封面、日期牌、速览和正文阅读节奏；首页兼顾 Radiance Fields 的头条与紧凑次要新闻。中文品牌与图片独立选取。
+## 阅读与追溯
 
-- 已有 2026-09-18 至 09-30 共 13 份日报；18 日上午正文、下午增量和人工分析保留。
-- 论文按无版本 arXiv marker 首次归档；后续更新引用原条目。工具用仓库与 Release / PR / commit 标识去重。
-- 来源无法从原聊天内部引用恢复时，正文和核验记录明确标为待复核。
-- 图片从官方来源逐日选择，并标注归属；当前 9 期有真实封面，09-20、09-25、09-26、09-28 使用文字展示。采用素材的原图与无放大的 WebP 保存本地，加载失败保留文字与来源。详见 [配图来源](docs/cover-selection.md)。
-- 文章全文、目录、表格、来源、纠错和 GitHub Issue / PR 均可从门户访问。手机、平板、桌面使用不同布局，支持浅色、暗色和系统主题。
+- `docs/daily/`：研究稿；原有来源、论文首次归档和锚点保留。
+- `docs/reading/`：以读者为中心的正文，以哈希绑定研究稿和补充材料。
+- `docs/supplements/`：带事件日期和补收日期的新增证据。
+- `docs/articles/`、`docs/weekly/`：独立文章、应用资料与周报。
+- `data/source-registry.json`、`data/research/`：来源注册表、每轮检查结果和候选处置。
+- `data/portal-index.json`：统一栏目、应用元数据、相关推荐和搜索索引。
+
+本轮审核覆盖 2026-09-18 至 2026-11-13 共 57 个日期，包括注明事后补收的 10 月 21—24 日。来源可访问性和历史缺口详见[审核记录](docs/changes/20261113-metaflow-horizon/history-audit.json)。覆盖范围以来源清单和日期为准，不等于全网穷尽。
 
 ## 每日发布
 
-原 ChatGPT 任务 **「3DGS / 4DGS 每日深度情报」** 是主要研究和 AI 编辑入口，时间为**每天北京时间 08:00**。报告日期按 Asia/Shanghai 判断；schema v1 的 Asia/Tokyo 字段暂时兼容，不改变逻辑日期。补跑必须显式指定日期。
+复用原 ChatGPT 任务，每天北京时间 08:00 执行综合检索、编辑、归档与读回。最近 7 天重叠检查；失败保存稿件和 PR，不推进成功窗口。每日 PR 校验通过后受限自动合并，`Deploy Horizon` 工作流独立发布 Netlify，并读回正式站部署身份。运行提示词和阶段恢复要求见[每日任务](docs/chatgpt-horizon-task.md)。
 
-1. 读取最新 main、当日归档和上次成功窗口，实时巡检原有 13 栏公开来源。
-2. 保留既有正文，生成完整中文日报、重点元数据与衍生索引，复用当日 Issue / 分支 / PR。
-3. 内容 PR 使用 `automation/daily/YYYY-MM-DD` 和 `daily-publish` 标签，等待当前提交的内容校验、测试及静态构建。
-4. 仅允许日报及衍生索引进入自动 squash merge；工作流、schema、网站代码使用独立 PR。
-5. 等待 Pages 成功，读回公开首页、当日日报及 `deployment.json` 的 main SHA，再记录成功窗口与交付状态。
+RSS 提供日报、周报、文章与应用；原日报和周报 GUID 与网址分离，改域名或更正正文不会改变条目身份。新网站上线不代表定时流程已观察完成；前三次真实定时成功记录在 `state/publication-observations.json`，人工执行单独计数。
 
-研究、归档、部署分别报告。失败时保留正文、Issue、PR，下次复用；不推进成功窗口。详细执行约定与重部署见 [发布运行手册](docs/publication.md)。不需要新增 OpenAI API Key 或付费 AI API 服务。
+## 本地开发与检查
 
-**切换状态：** GitHub arXiv 采集器现只产研究底稿，不自动合并；其旧定时入口暂保留，直到原 ChatGPT 任务实际完成一次完整发布后，再通过独立工作流 PR 取消。保留 `workflow_dispatch` 手动采集。不能把本地构建成功当作 ChatGPT 发布验收。
-
-## 本地验证与开发
-
-```bash
+```sh
+python3 scripts/build_index.py
 python3 scripts/validate_daily.py --all
 python3 scripts/check_editorial.py --all
-python3 -m unittest discover -s scripts/tests -v
+python3 scripts/validate_coverage.py --all
+python3 scripts/validate_media.py
+python3 -m unittest discover -s scripts/tests
+python3 -m unittest discover -s tests
 npm ci --prefix site
 npm test --prefix site
 npm run typecheck --prefix site
+npm run lint:editorial --prefix site
 npm run build --prefix site
 python3 scripts/verify_export.py
+python3 scripts/stage_site.py
 npm run dev --prefix site
 ```
 
-入口为 `http://127.0.0.1:4317/gaussian-splatting-daily/`。构建输出在 `site/out/`，项目路径前缀、尾斜杠、详情静态参数和图片加载已配置；GitHub Pages 应选择 **GitHub Actions**。
-
-媒体可以用 `npm run media --prefix site` 从本地原图离线重建。分享图随内容构建生成；字体及许可在 `site/assets/fonts/`。本地静态文件验收与公开发布、真实手机触控分别记录在 [本轮完成记录](docs/changes/20261001-sspai-portal/completion.md)。
-
-## 仓库入口
-
-- `docs/daily/`：规范日报与月份入口
-- `data/daily-index.json`：schema v1 日报索引，`source_count` 仍是 arXiv marker 数量
-- `data/portal-index.json`：从 Markdown 派生的门户条目与全文搜索索引
-- `site/`：静态门户与构建器
-- `state/checkpoint.json`：已合并日期与经验证的成功窗口
-- `state/publication-observations.json`：手动发布及前三次真实定时运行的实测记录
-- `.github/workflows/`：内容校验、受限每日合并、Pages、手动研究底稿采集
-
-感谢 arXiv 和开源项目提供可引用的一手资料。未来功能以独立需求为准，首版不包含交互式 3D Viewer 或问答后端。
+开发入口 `http://127.0.0.1:4317/horizon/`。`site/out/` 是导出内容，部署产物位于 `.codex-work/deploy/horizon-site/horizon/`。`netlify.toml` 保持不存在页面的真实 404；日常发布不构建或替换主站。应用条目必须区分资料核验和实际体验，未试用不称评测。

@@ -99,13 +99,17 @@ export interface PortalIndex {
     url: string;
     text: string;
     format?: "article";
+    column?: "daily" | "article" | "feature" | "research" | "app";
+    genre?: EditorialArticleSummary["genre"];
+    app?: EditorialArticleSummary["app"];
   }[];
 }
 
 export interface EditorialArticleSummary {
   id: string;
   slug: string;
-  genre: "paper" | "tool" | "topic";
+  genre: "paper" | "tool" | "topic" | "app" | "tutorial" | "case";
+  app?: { platforms: string[]; pricing: string; checkedAt: string; experience: "researched" | "tested"; limitations: string };
   title: string;
   summary: string;
   date: string;

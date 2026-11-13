@@ -8,7 +8,7 @@ export function searchItems(
   const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   return items.filter(
     (item) =>
-      (!kind || item.kind === kind) &&
+      (!kind || item.kind === kind || item.column === kind) &&
       (!topic || item.topics.includes(topic)) &&
       words.every((w) =>
         `${item.title} ${item.text}`.toLocaleLowerCase().includes(w),

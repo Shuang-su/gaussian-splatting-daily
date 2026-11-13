@@ -1,7 +1,12 @@
-export const REPO = "https://github.com/Shuang-su/gaussian-splatting-daily";
-export const BASE = "/gaussian-splatting-daily";
-export const SITE_URL = `https://shuang-su.github.io${BASE}`;
+export const REPO = "https://github.com/Shuang-su/metaflow-horizon";
+export const BASE = "/horizon";
+export const SITE_URL = `https://metaflow.shuang-su.com${BASE}`;
+export const BRAND = "metaflow horizon";
 export const TOPICS = [
+  { slug: "capture", label: "扫描与摄影测量", pattern: /capture|scan|photogrammetry|摄影测量|扫描|采集/i },
+  { slug: "spatial-ai", label: "空间 AI", pattern: /World Labs|SpAItial|world model|空间|NeRF|生成式/i },
+  { slug: "xr", label: "XR 与创作", pattern: /XR|VR|AR|创作|作品|艺术|展览/i },
+  { slug: "industry", label: "行业与应用", pattern: /平台|商业|应用|收费|合作|行业/i },
   {
     slug: "3dgs",
     label: "3DGS",

@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: RouteParams }) {
   const p = await params;
   const a = (await loadArchive()).articles.find((a) => a.date === `${p.year}-${p.month}-${p.day}`);
   if (!a) return {};
-  return { title: a.headline, description: a.summary, alternates: { canonical: `https://shuang-su.github.io${BASE}${dailyUrl(a.date)}` }, openGraph: { title: a.headline, description: a.summary, type: "article", images: [{ url: `${BASE}/share/${a.date}.png`, width: 1200, height: 630, alt: a.headline }] } };
+  return { title: a.headline, description: a.summary, alternates: { canonical: `https://metaflow.shuang-su.com${BASE}${dailyUrl(a.date)}` }, openGraph: { title: a.headline, description: a.summary, type: "article", images: [{ url: `${BASE}/share/${a.date}.png`, width: 1200, height: 630, alt: a.headline }] } };
 }
 export default async function Page({ params }: { params: RouteParams }) {
   const p = await params;

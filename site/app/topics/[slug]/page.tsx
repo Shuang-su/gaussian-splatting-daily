@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { loadArchive } from "../../../lib/content";
-import { TOPICS } from "../../../lib/catalog";
+import { TOPICS, SITE_URL } from "../../../lib/catalog";
 import Catalogue from "../../../components/Catalogue";
 import { DailyCard } from "../../../components/Cards";
 export const dynamicParams = false;
@@ -13,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  return { title: TOPICS.find((t) => t.slug === slug)?.label };
+  return { alternates: { canonical: `${SITE_URL}/topics/${slug}/` }, title: TOPICS.find((t) => t.slug === slug)?.label };
 }
 export default async function Page({
   params,

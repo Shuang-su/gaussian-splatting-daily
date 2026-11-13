@@ -2,7 +2,7 @@
 """Validate research coverage and event completeness, with legacy report support."""
 from __future__ import annotations
 import argparse,re,sys,json,hashlib
-from validate_daily import DAILY_ROOT,ARXIV_RE,parse_frontmatter,daily_files
+from validate_daily import ROOT,DAILY_ROOT,ARXIV_RE,parse_frontmatter,daily_files
 HEADINGS=re.compile(r'^#{1,2} (\d{1,2})\. (.+)$',re.M)
 CATEGORIES=[r'今日最值得看',r'SuperSplat\s*/\s*PlayCanvas',r'可实际运行.*开源',r'4D\s*/\s*Dynamic',r'Viewer\s*/\s*Editor',r'Compression\s*/\s*Format',r'Training\s*/\s*Reconstruction',r'Avatar\s*/\s*Human',r'软件.*硬件.*平台厂商',r'研究论文|论文与研究',r'海外.*社区',r'中文.*社区',r'今[天日]最值得实际测试']
 PLACEHOLDERS=('未启用或未成功完成 AI 编辑增强','请以原始 arXiv 记录为准','TODO:','待填正文')
@@ -43,13 +43,23 @@ def reading_summaries(text:str, reading:str|None)->dict[str,str]:
  meta=parse_frontmatter(text)
  header,body=reading.split('---\n',2)[1:]
  fields={m.group(1):json.loads(m.group(2)) for m in re.finditer(r'^(version|report|sourceHash|events): (.+)$',header,re.M)}
+ evidence=text
+ supplements=re.search(r'^supplements: (.+)$',header,re.M)
+ seen=set()
+ for item in json.loads(supplements.group(1)) if supplements else []:
+  path=item.get('path','')
+  if not re.fullmatch(r'docs/supplements/\d{4}-\d{2}-\d{2}(?:-[a-z0-9-]+)?\.md',path) or path in seen:raise ValueError('invalid supplement path')
+  seen.add(path)
+  raw=(ROOT/path).read_bytes()
+  if hashlib.sha256(raw).hexdigest()!=item.get('sha256'):raise ValueError('stale supplement hash')
+  evidence+='\n'+raw.decode()
  if fields.get('version')!=2 or fields.get('report')!=meta.get('id') or fields.get('sourceHash')!=hashlib.sha256(text.encode()).hexdigest():raise ValueError('reading edition does not match its research record')
  sections=re.split(r'^## .+\n',body,flags=re.M)[1:]
  events=fields.get('events',[])
  if len(sections)!=len(events) or len({e.get('id') for e in events})!=len(events):raise ValueError('reading event mapping is incomplete or duplicated')
  summaries={}
  for event,section in zip(events,sections):
-  if not event.get('sourceRefs') or event.get('source') not in text:raise ValueError('reading source mapping is missing')
+  if not event.get('sourceRefs') or event.get('source') not in evidence:raise ValueError('reading source mapping is missing')
   if event.get('id','').startswith('arxiv:'):
    identifier=event['id'][6:]
    if not re.search(r'<!--\s*arxiv:'+re.escape(identifier)+r'\s*-->',text):continue
@@ -64,6 +74,16 @@ def check(text:str, reading:str|None=None)->list[str]:
  except (ValueError,KeyError,TypeError,IndexError) as error:return [f'invalid reading edition: {error}']
  body=text.split('---\n',2)[2] if text.startswith('---\n') and len(text.split('---\n',2))==3 else text
  if meta.get('status') not in {'published','corrected'}:errors.append('report has not been marked published/corrected')
+ if meta.get('editorial_policy')=='horizon-v1':
+  if not reading:return errors+['Horizon report requires a source-bound reading edition']
+  from validate_coverage import validate
+  record=json.loads((ROOT/f'data/research/{meta["date"]}.json').read_text())
+  registry=json.loads((ROOT/'data/source-registry.json').read_text())
+  event_meta=json.loads(re.search(r'^events: (.+)$',reading,re.M)[1])
+  errors+=validate(record,registry,{e['id'] for e in event_meta})
+  for phrase in PLACEHOLDERS:
+   if phrase in reading:errors.append(f'editorial placeholder remains: {phrase}')
+  return errors
  if re.search(r'^  layout: events$',text,re.M):
   errors+=event_check(text,meta,body)
   for phrase in PLACEHOLDERS:

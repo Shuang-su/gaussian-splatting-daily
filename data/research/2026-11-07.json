@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-07",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-07T00:00:00+08:00",
+    "end": "2026-11-08T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents",
+        "radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:42.295150+00:00",
+      "urls": [
+        "https://spatialview.io/blog/querying-3d-models-with-ai-agents/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://spatialview.io/blog/querying-3d-models-with-ai-agents/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:42.295150+00:00",
+          "sha256": "a76417a7369c70555fe2e14c979af656d0588372dd09d7ae000f099540ae7124",
+          "characters": 7945
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:32.216188+00:00",
+      "urls": [
+        "https://github.com/splat3d/splat-swift-sdk/releases/tag/1.1.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/splat3d/splat-swift-sdk/releases/tag/1.1.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:32.216188+00:00",
+          "sha256": "f04a3dd72fd5bd9ae18dc9b29453237485a287a1fc7f87c944396ca91d22c1e6",
+          "characters": 3169
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents",
+      "title": "SpatialView 让 AI 按语言查找场景视图",
+      "eventDate": "2026-11-07",
+      "reportDate": "2026-11-07",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents",
+        "https://spatialview.io/blog/querying-3d-models-with-ai-agents/"
+      ],
+      "eventId": "radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents"
+    },
+    {
+      "id": "radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api",
+      "title": "Splat3D 提供 Swift 采集与重建 SDK",
+      "eventDate": "2026-11-07",
+      "reportDate": "2026-11-07",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api",
+        "https://github.com/splat3d/splat-swift-sdk/releases/tag/1.1.0"
+      ],
+      "eventId": "radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api"
+    }
+  ]
+}

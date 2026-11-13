@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-29",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-29T00:00:00+08:00",
+    "end": "2026-09-30T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/gaussian-splatting-lidar-and-the-future-of-spatial-workflows",
+        "radiancefields.com/spatial-slideshow-0.9.0-runs-apple-s-photos-model-as-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:22.964146+00:00",
+      "urls": [
+        "https://github.com/elliotttate/SpatialSlideshow"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spatial-slideshow-0.9.0-runs-apple-s-photos-model-as-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/elliotttate/SpatialSlideshow",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:22.964146+00:00",
+          "sha256": "d4146a578a2bc8b623d442221b051122a21ed79e7537f27c8da16a8958a6ff37",
+          "characters": 23311
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/gaussian-splatting-lidar-and-the-future-of-spatial-workflows",
+      "title": "Mirror Labs 分享高斯与激光扫描的理赔应用",
+      "eventDate": "2026-09-29",
+      "reportDate": "2026-09-29",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gaussian-splatting-lidar-and-the-future-of-spatial-workflows"
+      ],
+      "eventId": "radiancefields.com/gaussian-splatting-lidar-and-the-future-of-spatial-workflows"
+    },
+    {
+      "id": "radiancefields.com/spatial-slideshow-0.9.0-runs-apple-s-photos-model-as-splats",
+      "title": "Spatial Slideshow 把照片相册变成空间场景",
+      "eventDate": "2026-09-29",
+      "reportDate": "2026-09-29",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spatial-slideshow-0.9.0-runs-apple-s-photos-model-as-splats",
+        "https://github.com/elliotttate/SpatialSlideshow"
+      ],
+      "eventId": "radiancefields.com/spatial-slideshow-0.9.0-runs-apple-s-photos-model-as-splats"
+    }
+  ]
+}

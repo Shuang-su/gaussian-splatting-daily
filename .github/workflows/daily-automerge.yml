@@ -29,7 +29,8 @@ jobs:
               if (![owner, 'github-actions[bot]'].includes(pr.user.login)) continue;
               const files = await github.paginate(github.rest.pulls.listFiles, {owner,repo,pull_number:pr.number,per_page:100});
               const media = p => /^site\/public\/daily-media\/\d{4}-\d{2}-\d{2}\/(?:manifest\.json|[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|jpg|jpeg|webp))$/.test(p);
-              const allowed = p => media(p) || /^docs\/daily\/\d{4}\/\d{2}\/(?:\d{4}-\d{2}-\d{2}|index)\.md$/.test(p)
+              const editorial = p => /^docs\/(?:reading|supplements)\/\d{4}-\d{2}-\d{2}(?:-[a-z0-9-]+)?\.md$/.test(p) || /^docs\/articles\/[a-z0-9-]+\.md$/.test(p) || /^docs\/weekly\/\d{4}-\d{2}\.md$/.test(p) || /^data\/research\/\d{4}-\d{2}-\d{2}\.json$/.test(p) || /^site\/public\/share\/(?:\d{4}-\d{2}-\d{2}\.png|default\.png|manifest\.json)$/.test(p);
+              const allowed = p => editorial(p) || media(p) || /^docs\/daily\/\d{4}\/\d{2}\/(?:\d{4}-\d{2}-\d{2}|index)\.md$/.test(p)
                 || ['docs/index.md','docs/corrections.md','data/daily-index.json','data/portal-index.json','state/checkpoint.json','state/publication-observations.json'].includes(p);
               if (!files.length || files.some(f=>!allowed(f.filename) || f.status==='removed' || (f.previous_filename && !allowed(f.previous_filename)))) {
                 core.warning(`PR #${pr.number} changes files outside daily publication; requires separate review.`);continue;
@@ -48,5 +49,5 @@ jobs:
               if (!result.data.merged) throw Error(`Merge failed: ${result.data.message}`);
               // GITHUB_TOKEN merges do not trigger a push workflow. Dispatch deployment explicitly.
               await github.rest.actions.createWorkflowDispatch({owner,repo,workflow_id:'pages.yml',ref:'main'});
-              core.summary.addRaw(`Merged PR #${pr.number} at ${result.data.sha}. Pages dispatched; publication is complete only after public deployment.json readback.`).write();
+              core.summary.addRaw(`Merged PR #${pr.number} at ${result.data.sha}. Horizon deployment dispatched; publication is complete only after public deployment.json readback.`).write();
             }

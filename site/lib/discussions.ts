@@ -2,7 +2,7 @@ export interface DiscussionConfig { repo: string; repoId: string; category: stri
 // Verified 2026-11-13: official giscus installation selects only this public repository.
 // The Comments category uses announcement format so threads are created by the app.
 export const DISCUSSIONS: DiscussionConfig | null = {
-  repo: "Shuang-su/gaussian-splatting-daily",
+  repo: "Shuang-su/metaflow-horizon",
   repoId: "R_kgDOUxdQnw",
   category: "Comments",
   categoryId: "DIC_kwDOUxdQn84DLBLB",

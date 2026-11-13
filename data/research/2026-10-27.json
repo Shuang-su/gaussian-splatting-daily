@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-27",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-27T00:00:00+08:00",
+    "end": "2026-10-28T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/supersplat-editor-3-7-lets-ai-agents-edit-splats",
+        "radiancefields.com/google-deepmind-announces-genie-4-real-time-world-model",
+        "radiancefields.com/huawei-adds-gaussian-splat-editing-to-spatial-recon-kit",
+        "radiancefields.com/kiri-engine-4-3-speeds-up-gaussian-splat-training",
+        "radiancefields.com/nuke-18.0-open-beta-adds-gaussian-splat-isolation",
+        "radiancefields.com/spaitial-echo-3-turns-iphone-scans-into-3d-worlds",
+        "radiancefields.com/stepping-inside-an-ai-generated-film-with-gaussian-splats",
+        "radiancefields.com/xangle-grows-orbit-into-a-multi-camera-splat-pipeline"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:12.322231+00:00",
+      "urls": [
+        "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+        "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/spatial-recon-introduction",
+        "https://apps.apple.com/us/app/kiri-engine-3d-scanner-lidar/id1577127142",
+        "https://play.google.com/store/apps/details?id=com.kiriengine.app",
+        "https://downloads.foundry.com/nuke-beta-18",
+        "https://spaitial.ai/blog/echo-3-release",
+        "https://marzenamilowska.co.uk/gaussian-splats",
+        "https://xangleapps.com/orbit/changelog/v26.10.27"
+      ],
+      "candidateIds": [
+        "radiancefields.com/google-deepmind-announces-genie-4-real-time-world-model",
+        "radiancefields.com/huawei-adds-gaussian-splat-editing-to-spatial-recon-kit",
+        "radiancefields.com/kiri-engine-4-3-speeds-up-gaussian-splat-training",
+        "radiancefields.com/nuke-18.0-open-beta-adds-gaussian-splat-isolation",
+        "radiancefields.com/spaitial-echo-3-turns-iphone-scans-into-3d-worlds",
+        "radiancefields.com/stepping-inside-an-ai-generated-film-with-gaussian-splats",
+        "radiancefields.com/xangle-grows-orbit-into-a-multi-camera-splat-pipeline"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.934141+00:00",
+          "sha256": "43ff435f0573aa39c355a637144bd5f03dfc6971fd45a87057d68a62b7ddb6be",
+          "characters": 30994
+        },
+        {
+          "url": "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/spatial-recon-introduction",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:08.240878+00:00",
+          "sha256": "677bbe02ba508d65aab370b36c580b2c7a24e2e4274426b5f0145d1aa60209f6",
+          "characters": 4,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://apps.apple.com/us/app/kiri-engine-3d-scanner-lidar/id1577127142",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:03.610725+00:00",
+          "sha256": "7a7655a29e1257eb43e03fff7bfd8523396b8ffab60e9e2068d93de2f600a13d",
+          "characters": 5393
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=com.kiriengine.app",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:38.606264+00:00",
+          "sha256": "24b200697c207836169e2f966fd838e1e7902aedc9c50a5d4c40b450bb5ee9f6",
+          "characters": 8065
+        },
+        {
+          "url": "https://downloads.foundry.com/nuke-beta-18",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:12.506254+00:00",
+          "sha256": "7a47e7315c1ed4d0a6381169bd77a2946e647ef6984ec33a2463da261d8364d1",
+          "characters": 565
+        },
+        {
+          "url": "https://spaitial.ai/blog/echo-3-release",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:40.406283+00:00",
+          "sha256": "04f49dbf68bdfe3c0cde7fbf17aa532add244f10b5810c113df52b0d71b3a185",
+          "characters": 4186
+        },
+        {
+          "url": "https://marzenamilowska.co.uk/gaussian-splats",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:36.690257+00:00",
+          "sha256": "1b10660bb7b40191f32f6f6c66201986e2a0feae92dcd38edf77a028243c0fb9",
+          "characters": 1563
+        },
+        {
+          "url": "https://xangleapps.com/orbit/changelog/v26.10.27",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:12.322231+00:00",
+          "sha256": "7e961ec039c29df826a037de3a114bfd81d5b483a6b15c3341a1c72652a5b09f",
+          "characters": 4723
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:30.725280+00:00",
+      "urls": [
+        "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/supersplat-editor-3-7-lets-ai-agents-edit-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:30.725280+00:00",
+          "sha256": "a338ca363433fd2a1c04348a9878b5349a6a88459f97bd03372d49100e17b046",
+          "characters": 3095
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/supersplat-editor-3-7-lets-ai-agents-edit-splats",
+      "title": "SuperSplat 3.7 开放代理编辑工具",
+      "eventDate": "2026-10-26",
+      "reportDate": "2026-10-27",
+      "importance": "important",
+      "disposition": "merged",
+      "reason": "与阅读版相同的固定发行/PR/提交合并，补充原始报道线索。",
+      "sources": [
+        "https://radiancefields.com/supersplat-editor-3-7-lets-ai-agents-edit-splats",
+        "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0"
+      ],
+      "eventId": "github.com/playcanvas/supersplat/releases/tag/v3.7.0"
+    },
+    {
+      "id": "radiancefields.com/google-deepmind-announces-genie-4-real-time-world-model",
+      "title": "Google DeepMind 发布 Genie 4 世界模型",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/google-deepmind-announces-genie-4-real-time-world-model",
+        "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/"
+      ],
+      "eventId": "radiancefields.com/google-deepmind-announces-genie-4-real-time-world-model"
+    },
+    {
+      "id": "radiancefields.com/huawei-adds-gaussian-splat-editing-to-spatial-recon-kit",
+      "title": "华为 Spatial Recon Kit 增加高斯编辑",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/huawei-adds-gaussian-splat-editing-to-spatial-recon-kit",
+        "https://developer.huawei.com/consumer/cn/doc/doccenter-capabilities/spatial-recon-introduction"
+      ],
+      "eventId": "radiancefields.com/huawei-adds-gaussian-splat-editing-to-spatial-recon-kit"
+    },
+    {
+      "id": "radiancefields.com/kiri-engine-4-3-speeds-up-gaussian-splat-training",
+      "title": "KIRI Engine 4.3 更新移动高斯扫描",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/kiri-engine-4-3-speeds-up-gaussian-splat-training",
+        "https://apps.apple.com/us/app/kiri-engine-3d-scanner-lidar/id1577127142",
+        "https://play.google.com/store/apps/details?id=com.kiriengine.app"
+      ],
+      "eventId": "radiancefields.com/kiri-engine-4-3-speeds-up-gaussian-splat-training"
+    },
+    {
+      "id": "radiancefields.com/nuke-18.0-open-beta-adds-gaussian-splat-isolation",
+      "title": "Nuke 18 测试版增加高斯隔离与吸附",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/nuke-18.0-open-beta-adds-gaussian-splat-isolation",
+        "https://downloads.foundry.com/nuke-beta-18"
+      ],
+      "eventId": "radiancefields.com/nuke-18.0-open-beta-adds-gaussian-splat-isolation"
+    },
+    {
+      "id": "radiancefields.com/spaitial-echo-3-turns-iphone-scans-into-3d-worlds",
+      "title": "SpAItial Echo-3 将 iPhone 采集转为三维世界",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spaitial-echo-3-turns-iphone-scans-into-3d-worlds",
+        "https://spaitial.ai/blog/echo-3-release"
+      ],
+      "eventId": "radiancefields.com/spaitial-echo-3-turns-iphone-scans-into-3d-worlds"
+    },
+    {
+      "id": "radiancefields.com/stepping-inside-an-ai-generated-film-with-gaussian-splats",
+      "title": "《Through the Depths of Time》将生成图像变为 VR 叙事",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/stepping-inside-an-ai-generated-film-with-gaussian-splats",
+        "https://marzenamilowska.co.uk/gaussian-splats"
+      ],
+      "eventId": "radiancefields.com/stepping-inside-an-ai-generated-film-with-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/xangle-grows-orbit-into-a-multi-camera-splat-pipeline",
+      "title": "Xangle Orbit 扩展多相机高斯制作流程",
+      "eventDate": "2026-10-27",
+      "reportDate": "2026-10-27",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/xangle-grows-orbit-into-a-multi-camera-splat-pipeline",
+        "https://xangleapps.com/orbit/changelog/v26.10.27"
+      ],
+      "eventId": "radiancefields.com/xangle-grows-orbit-into-a-multi-camera-splat-pipeline"
+    }
+  ]
+}

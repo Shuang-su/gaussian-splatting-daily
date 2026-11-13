@@ -1,7 +1,7 @@
 import HierarchyLink from "../../components/HierarchyLink";
 import { loadArchive } from "../../lib/content";
-import { TOPICS } from "../../lib/catalog";
-export const metadata = { title: "主题" };
+import { TOPICS, SITE_URL } from "../../lib/catalog";
+export const metadata = { alternates: { canonical: `${SITE_URL}/topics/` }, title: "主题" };
 export default async function Page() {
   const { index } = await loadArchive();
   return (

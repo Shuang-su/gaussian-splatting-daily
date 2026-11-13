@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T08:29:24+09:00",
+  "generated_at": "2026-11-13T09:47:13.106Z",
   "items": [
     {
       "date": "2026-11-13",
@@ -141,6 +141,34 @@
       "status": "published",
       "source_count": 0,
       "path": "docs/daily/2026/10/2026-10-25.md"
+    },
+    {
+      "date": "2026-10-24",
+      "title": "高斯日报 — 2026-10-24",
+      "status": "published",
+      "source_count": 0,
+      "path": "docs/daily/2026/10/2026-10-24.md"
+    },
+    {
+      "date": "2026-10-23",
+      "title": "高斯日报 — 2026-10-23",
+      "status": "published",
+      "source_count": 0,
+      "path": "docs/daily/2026/10/2026-10-23.md"
+    },
+    {
+      "date": "2026-10-22",
+      "title": "高斯日报 — 2026-10-22",
+      "status": "published",
+      "source_count": 0,
+      "path": "docs/daily/2026/10/2026-10-22.md"
+    },
+    {
+      "date": "2026-10-21",
+      "title": "高斯日报 — 2026-10-21",
+      "status": "published",
+      "source_count": 0,
+      "path": "docs/daily/2026/10/2026-10-21.md"
     },
     {
       "date": "2026-10-20",

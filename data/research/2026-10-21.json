@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-21",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-21T00:00:00+08:00",
+    "end": "2026-10-22T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/astermaster-builds-destructible-boss-hulls-from-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:51.077550+00:00",
+      "urls": [
+        "https://store.steampowered.com/app/5095060/AsterMaster/",
+        "https://aster-master.com/devlog/gaussian-splats-destruction/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/astermaster-builds-destructible-boss-hulls-from-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://store.steampowered.com/app/5095060/AsterMaster/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:51.077550+00:00",
+          "sha256": "0e46e96bdc0b7ef4209185ac9e096fccbd7e6757c71fa7c3ee0b05f7d3362cc6",
+          "characters": 6927
+        },
+        {
+          "url": "https://aster-master.com/devlog/gaussian-splats-destruction/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.045037+00:00",
+          "sha256": "e4cf8921a3cd2636fce7bf0a086bb5b1a13af4dc77c3cb66e9814cbfb0ad833d",
+          "characters": 42883
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/astermaster-builds-destructible-boss-hulls-from-splats",
+      "title": "AsterMaster 把高斯做成可破坏的游戏敌人",
+      "eventDate": "2026-10-21",
+      "reportDate": "2026-10-21",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/astermaster-builds-destructible-boss-hulls-from-splats",
+        "https://store.steampowered.com/app/5095060/AsterMaster/",
+        "https://aster-master.com/devlog/gaussian-splats-destruction/"
+      ],
+      "eventId": "radiancefields.com/astermaster-builds-destructible-boss-hulls-from-splats"
+    }
+  ]
+}

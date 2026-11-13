@@ -7,7 +7,7 @@ export default function ArticleFooter({ article: a }: { article: Article }) {
   return <footer className="article-colophon" id="sources">
     <h2>来源与纠错</h2>
     {a.editorialDisclosure && <p className="editorial-disclosure">{a.editorialDisclosure}</p>}
-    <nav aria-label="文章来源"><a href={`${REPO}/blob/main/${a.path}`}>{a.readingEdition ? "研究归档" : "GitHub 原文"}</a><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a><a href={`${REPO}/issues/new?template=correction.yml`}>提交纠错</a></nav>
+    <nav aria-label="文章来源"><a href={`${REPO}/blob/main/${a.path}`}>{a.readingEdition ? "研究归档" : "GitHub 原文"}</a><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a>{a.date >= "2026-09-18" && a.date <= "2026-11-13" && !["2026-10-21","2026-10-22","2026-10-23","2026-10-24"].includes(a.date) && <a href={`${REPO}/blob/1e27deb60c55fd192f4b0614e198aa01dc8975ef/docs/reading/${a.date}.md`}>本次修订前阅读版</a>}<a href={`${REPO}/issues/new?template=correction.yml`}>提交纠错</a></nav>
     {a.unresolvedSources > 0 && <p className="source-notice">本期有 {a.unresolvedSources} 处来源引用待补充。<a href={`${REPO}/blob/main/docs/history-audit.md`}>查看来源记录</a></p>}
     {a.image && <p className="cover-credit">封面：<ImageCredit image={a.image} /></p>}
     <details className="article-archive"><summary>研究归档与来源记录</summary>

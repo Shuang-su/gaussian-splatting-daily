@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-16",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-16T00:00:00+08:00",
+    "end": "2026-10-17T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/backblaze-publishes-open-source-template-that-turns-multi-camera-video-into-4d-gaussian-splats",
+        "radiancefields.com/gretna-louisiana-flies-the-whole-city-for-gaussian-splats-with-esri-arcgis-reality",
+        "radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:56.580276+00:00",
+      "urls": [
+        "https://www.es2-inc.com/",
+        "https://www.esri.com/en-us/lg/industry/government/stories/gretna-louisiana-imagery-mapping-improves-infrastructure-management"
+      ],
+      "candidateIds": [
+        "radiancefields.com/gretna-louisiana-flies-the-whole-city-for-gaussian-splats-with-esri-arcgis-reality"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.es2-inc.com/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:56.580276+00:00",
+          "sha256": "b7df1005b38e72c06cbad1d6b8106f474fdc65df2ba0dc28b1eea68c7f5d5472",
+          "characters": 4886
+        },
+        {
+          "url": "https://www.esri.com/en-us/lg/industry/government/stories/gretna-louisiana-imagery-mapping-improves-infrastructure-management",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:54.426130+00:00",
+          "sha256": "a075047656813a50f1bc72441fd398c25bc01c0d7a5ebbee09f483a7810094d1",
+          "characters": 7162
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:04.754007+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2606.03877"
+      ],
+      "candidateIds": [
+        "radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2606.03877",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:04.754007+00:00",
+          "sha256": "1104f8133c25c8f3b7484a104e290df3f2db742ce5c383abe4959d8f1dfabc2e",
+          "characters": 4925
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:29.043777+00:00",
+      "urls": [
+        "https://github.com/hustvl/4DGaussians",
+        "https://github.com/backblaze-b2-samples/4d-gaussian-splatting-volumetric-capture",
+        "https://github.com/kxhit/mlp-splatting"
+      ],
+      "candidateIds": [
+        "radiancefields.com/backblaze-publishes-open-source-template-that-turns-multi-camera-video-into-4d-gaussian-splats",
+        "radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/hustvl/4DGaussians",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:26.623173+00:00",
+          "sha256": "8e1c45166a7d69e2aa45d65f6b85714e0f51fb756b6c67e64ce511045d08bbdb",
+          "characters": 14743
+        },
+        {
+          "url": "https://github.com/backblaze-b2-samples/4d-gaussian-splatting-volumetric-capture",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:23.309204+00:00",
+          "sha256": "51445153527d6ca1c10b2f7352797eaffa144f63609a4a5704332f4fa84621ad",
+          "characters": 21576
+        },
+        {
+          "url": "https://github.com/kxhit/mlp-splatting",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:29.043777+00:00",
+          "sha256": "fddd4cb657c817876a4ba5bc5672e3f5040e29bcef3d31ef42363a783c714832",
+          "characters": 10072
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/backblaze-publishes-open-source-template-that-turns-multi-camera-video-into-4d-gaussian-splats",
+      "title": "Backblaze 开源动态高斯处理模板",
+      "eventDate": "2026-10-16",
+      "reportDate": "2026-10-16",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/backblaze-publishes-open-source-template-that-turns-multi-camera-video-into-4d-gaussian-splats",
+        "https://github.com/hustvl/4DGaussians",
+        "https://github.com/backblaze-b2-samples/4d-gaussian-splatting-volumetric-capture"
+      ],
+      "eventId": "radiancefields.com/backblaze-publishes-open-source-template-that-turns-multi-camera-video-into-4d-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/gretna-louisiana-flies-the-whole-city-for-gaussian-splats-with-esri-arcgis-reality",
+      "title": "Gretna 用无人机扫描记录整座城市",
+      "eventDate": "2026-10-16",
+      "reportDate": "2026-10-16",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gretna-louisiana-flies-the-whole-city-for-gaussian-splats-with-esri-arcgis-reality",
+        "https://www.es2-inc.com/",
+        "https://www.esri.com/en-us/lg/industry/government/stories/gretna-louisiana-imagery-mapping-improves-infrastructure-management"
+      ],
+      "eventId": "radiancefields.com/gretna-louisiana-flies-the-whole-city-for-gaussian-splats-with-esri-arcgis-reality"
+    },
+    {
+      "id": "radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting",
+      "title": "MLP Splatting 发布研究代码",
+      "eventDate": "2026-10-16",
+      "reportDate": "2026-10-16",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting",
+        "https://arxiv.org/abs/2606.03877",
+        "https://github.com/kxhit/mlp-splatting"
+      ],
+      "eventId": "radiancefields.com/imperial-college-london-releases-code-for-mlp-splatting"
+    }
+  ]
+}

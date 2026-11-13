@@ -1,10 +1,10 @@
 import { dailyUrl, entryUrl } from "./catalog";
 import type { PortalIndex, SourceImage } from "./types";
 
-export type HomeFeedKey = "recommended" | "daily" | "paper" | "tool";
+export type HomeFeedKey = "recommended" | "daily" | "article" | "feature" | "paper" | "app" | "tool";
 export type HomeItem = {
   id: string;
-  kind: "daily" | "paper" | "tool";
+  kind: "daily" | "paper" | "tool" | "article";
   title: string;
   date: string;
   url: string;
@@ -17,7 +17,10 @@ export type HomeFeeds = Record<HomeFeedKey, HomeItem[]>;
 export const HOME_SECTIONS = [
   { key: "recommended", label: "推荐", icon: "home", route: "/daily/" },
   { key: "daily", label: "日报", icon: "paper", route: "/daily/" },
-  { key: "paper", label: "论文", icon: "layers", route: "/papers/" },
+  { key: "article", label: "文章", icon: "paper", route: "/articles/" },
+  { key: "feature", label: "专题", icon: "layers", route: "/features/" },
+  { key: "app", label: "应用", icon: "tool", route: "/apps/" },
+  { key: "paper", label: "研究", icon: "layers", route: "/papers/" },
   { key: "tool", label: "工具", icon: "tool", route: "/tools/" },
 ] as const;
 
@@ -57,7 +60,8 @@ export function buildHome(index: PortalIndex) {
   // as a second recommendation for the same day's lead event.
   const covers = new Set(daily.map((d) => `${d.date}:${d.image?.url}`));
   const illustrated = entries.filter((e) => e.image && !covers.has(`${e.date}:${e.image.url}`));
-  const recommended = [...daily, ...illustrated].sort((a, b) => b.date.localeCompare(a.date));
+  const longform: HomeItem[] = (index.articles || []).map(a=>({id:a.id,kind:"article",title:a.title,date:a.date,url:a.url,sourceLabel:a.genre === "app" ? "应用介绍" : a.genre === "topic" ? "专题" : "文章"}));
+  const recommended = [...daily, ...longform, ...illustrated].sort((a, b) => b.date.localeCompare(a.date));
   const seen = new Set<string>();
   const feeds: HomeFeeds = {
     recommended: recommended.filter((item) => {
@@ -65,6 +69,9 @@ export function buildHome(index: PortalIndex) {
       seen.add(item.id); return true;
     }),
     daily,
+    article: longform,
+    feature: longform.filter(a=>index.articles?.some(b=>b.id===a.id&&b.genre==="topic")),
+    app: longform.filter(a=>index.articles?.some(b=>b.id===a.id&&b.genre==="app")),
     paper: entries.filter((e) => e.kind === "paper"),
     tool: entries.filter((e) => e.kind === "tool"),
   };

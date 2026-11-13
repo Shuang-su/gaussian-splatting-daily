@@ -2,10 +2,10 @@ import type { SourceImage } from "./types";
 import { BASE } from "./catalog";
 
 export const BASE_PATH = BASE;
-const PUBLIC_ORIGIN = `https://shuang-su.github.io${BASE_PATH}`;
+const PUBLIC_ORIGIN = `https://metaflow.shuang-su.com${BASE_PATH}`;
 
 export function assetUrl(url: string): string {
-  if (url.startsWith(`${PUBLIC_ORIGIN}/`)) return url.slice("https://shuang-su.github.io".length);
+  if (url.startsWith(`${PUBLIC_ORIGIN}/`)) return url.slice("https://metaflow.shuang-su.com".length);
   if (url.startsWith(`${BASE_PATH}/`)) return url;
   return url.startsWith("/") ? `${BASE_PATH}${url}` : url;
 }
