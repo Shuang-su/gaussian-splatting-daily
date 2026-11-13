@@ -10,4 +10,4 @@
 
 Giscus 使用已启用的真实仓库及 Comments 分类，官方应用限定一个仓库，真实登录回跳、编辑器和阅读位置恢复已验证；没有发送测试评论。没有远端发布、推送或自动采集改动。
 
-验证结果、已修复失败和设备边界见 [validation.md](validation.md)。本地预览：[高斯日报](http://127.0.0.1:4337/gaussian-splatting-daily/)。实施 checkpoint 的 SHA 在下一条记录提交中回填，以免自引用。
+验证结果、已修复失败和设备边界见 [validation.md](validation.md)。本地预览：[高斯日报](http://127.0.0.1:4337/gaussian-splatting-daily/)。实施 checkpoint：`b2c00a3b0e1a0a475b1a4dee81ba2b365a430063`。后续记录提交仅回填该 SHA；产品功能、内容和验证边界均以此 checkpoint 为准。
