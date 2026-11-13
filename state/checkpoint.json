@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "timezone": "Asia/Tokyo",
-  "committed_through": "2026-10-03",
+  "committed_through": "2026-10-20",
   "last_workflow_run_id": null,
   "backfilled_dates": [
     "2026-09-18",
@@ -18,6 +18,9 @@
     "2026-09-29"
   ],
   "backfill_source": "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
-  "verified_main_sha": "7b59a2c2b29c0ebc747718ece4935d561f12355d",
-  "last_editorial_update": "2026-10-03T08:15:10+09:00"
+  "last_editorial_update": "2026-11-13T08:29:24+09:00",
+  "generated_at": "2026-11-13T08:29:24+09:00",
+  "last_completed_date": "2026-11-13",
+  "last_report_path": "docs/daily/2026/11/2026-11-13.md"
 }
+

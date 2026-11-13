@@ -14,6 +14,11 @@ def plain(value: str) -> str:
     return re.sub(r"\s+", " ", re.sub(r"[*`]", "", value.replace(r"\|", "|"))).strip()
 
 
+def title_text(value: str) -> str:
+    """Keep link labels in GitHub titles, before applying the title length limit."""
+    return plain(re.sub(r"\[([^]]+)\]\(https?://[^)]+\)", r"\1", value))
+
+
 def summary(text: str) -> tuple[str, str, list[str]]:
     body = text.split("---\n", 2)[-1]
     rows = []
@@ -32,14 +37,14 @@ def summary(text: str) -> tuple[str, str, list[str]]:
     if not rows:
         rows = [f"- [{title}]({url})" for title, url in papers[:5]]
 
-    lead = top_event or (papers[0][0] if papers else "无新增研究条目")
-    lead = lead[:72]
+    lead = title_text(top_event or (papers[0][0] if papers else "无新增研究条目"))[:72]
 
-    if "# 今日概览" in body:
-        intro = body.split("# 今日概览", 1)[1].split("## 论文与研究", 1)[0]
-    else:
-        match = re.search(r"^# 3DGS / 4DGS / Gaussian Splatting 深度情报日报[^\n]*\n\n([^#]+)", body, re.M)
-        intro = match.group(1).split("\n\n", 1)[0] if match else ""
+    heading = re.search(
+        r"^# (?:今日概览|3DGS / 4DGS / Gaussian Splatting 深度情报日报)[^\n]*\n",
+        body, re.M,
+    )
+    # Only a Markdown heading ends the introduction; inline PR numbers do not.
+    intro = re.split(r"^#{1,6}[ \t]+", body[heading.end():], maxsplit=1, flags=re.M)[0] if heading else ""
     intro = intro.strip()[:1100]
     return lead, intro, rows
 

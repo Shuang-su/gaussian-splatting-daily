@@ -9,6 +9,7 @@ on:
       - "data/**"
       - "state/**"
       - "scripts/**"
+      - "tests/**"
       - ".github/workflows/**"
       - "site/**"
 
@@ -51,6 +52,9 @@ jobs:
 
       - name: Check publication failure and retry rules
         run: python -m unittest discover -s scripts/tests -v
+
+      - name: Run upstream regressions
+        run: python -m unittest discover -s tests -v
 
       - name: Verify generated index is current
         run: |
