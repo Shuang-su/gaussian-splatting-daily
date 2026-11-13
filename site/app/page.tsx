@@ -4,6 +4,7 @@ import { TOPICS } from "../lib/catalog";
 import { buildHome } from "../lib/home";
 import HomeCarousel from "../components/HomeCarousel";
 import HomeFeed from "../components/HomeFeed";
+import { ReadLaterTrigger } from "../components/ReadLater";
 import Icon from "../components/Icon";
 
 export default async function Home() {
@@ -20,5 +21,6 @@ export default async function Home() {
       )}</div></section>
       <section className="sidebar-subscribe"><h2>订阅高斯日报</h2><Link href="/subscribe/">订阅方式 <Icon name="arrow" /></Link></section>
     </aside>} />
+    <ReadLaterTrigger className="home-read-later-trigger"/>
   </div>;
 }

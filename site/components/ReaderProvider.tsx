@@ -4,6 +4,10 @@ import { createContext, useCallback, useContext, useEffect, useLayoutEffect, use
 import type { ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { readerFontSize, readerShareUrl, readerThreadTerm, restoreReaderScroll, READER_FONT_KEY } from "../lib/reader";
+import { readSavedArticles, READ_LATER_KEY, writeSavedArticles } from "../lib/read-later";
+import type { ReadLaterArticle } from "../lib/read-later";
+import { useReadingProgress } from "./useReadingProgress";
+import ReadLater from "./ReadLater";
 import type { ReaderIdentity } from "../lib/reader";
 import { DISCUSSIONS } from "../lib/discussions";
 import ReaderPanels from "./ReaderPanels";
@@ -27,18 +31,56 @@ interface ReaderState {
   share: (origin: HTMLElement) => void;
   openDiscussion: (origin: HTMLElement | null, thread?: Omit<ReaderThread, "term">) => void;
   counts: Record<string, number>;
+  readLaterIds: string[];
+  toggleReadLater: (id: string) => boolean;
+  openReadLater: (origin: HTMLElement) => void;
+  canRestart: boolean;
+  resetReading: () => void;
 }
 
 const Reader = createContext<ReaderState | null>(null);
 const Register = createContext<(article: ReaderIdentity) => () => void>(() => () => {});
 
-export default function ReaderProvider({ children }: { children: ReactNode }) {
+export default function ReaderProvider({ children, catalogue }: { children: ReactNode; catalogue: ReadLaterArticle[] }) {
   const pathname = usePathname();
   const [registered, setRegistered] = useState<ReaderIdentity | null>(null);
   const [fontSize, setFont] = useState<number | null>(null);
   const [counts, setCounts] = useState<Record<string, number>>({});
   const [panel, setPanel] = useState<ReaderPanel | null>(null);
   const article = registered && registered.url.replace(/\/$/, "") === pathname.replace(/\/$/, "") ? registered : null;
+
+  const [readLaterIds, setReadLaterIds] = useState<string[]>([]);
+  const [readLaterOrigin, setReadLaterOrigin] = useState<HTMLElement | null>(null);
+  const { canRestart, resetReading } = useReadingProgress(article);
+  const known = useMemo(() => new Map(catalogue.map(item => [item.id, item])), [catalogue]);
+
+  useEffect(() => {
+    const load = () => {
+      try { setReadLaterIds(readSavedArticles(localStorage, catalogue)); } catch {}
+    };
+    load();
+    const sync = (event: StorageEvent) => {
+      if (event.key === READ_LATER_KEY || event.key === null) load();
+    };
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
+  }, [catalogue]);
+
+  const toggleReadLater = useCallback((id: string) => {
+    if (!known.has(id)) return false;
+    try {
+      const current = readSavedArticles(localStorage, catalogue);
+      const next = current.includes(id) ? current.filter(item => item !== id) : [id, ...current];
+      writeSavedArticles(localStorage, next);
+      setReadLaterIds(next);
+      return true;
+    } catch { return false; }
+  }, [catalogue, known]);
+
+  const openReadLater = useCallback((origin: HTMLElement) => {
+    setPanel(null);
+    setReadLaterOrigin(origin);
+  }, []);
 
   const register = useCallback((identity: ReaderIdentity) => {
     setRegistered(identity);
@@ -100,7 +142,7 @@ export default function ReaderProvider({ children }: { children: ReactNode }) {
     setCounts(current => current[term] === count ? current : { ...current, [term]: count });
   }, []);
 
-  useEffect(() => { setPanel(null); }, [pathname]);
+  useEffect(() => { setPanel(null); setReadLaterOrigin(null); }, [pathname]);
 
   useEffect(() => {
     if (!article || !DISCUSSIONS) return;
@@ -135,9 +177,14 @@ export default function ReaderProvider({ children }: { children: ReactNode }) {
     } catch {}
   }, [article, openDiscussion]);
 
-  const value = useMemo(() => ({ article, fontSize, setFontSize, share, openDiscussion, counts }), [article, fontSize, setFontSize, share, openDiscussion, counts]);
+  const value = useMemo(() => ({ article, fontSize, setFontSize, share, openDiscussion, counts, readLaterIds, toggleReadLater, openReadLater, canRestart, resetReading }),
+    [article, fontSize, setFontSize, share, openDiscussion, counts, readLaterIds, toggleReadLater, openReadLater, canRestart, resetReading]);
   return <Register.Provider value={register}><Reader.Provider value={value}>
     {children}
+    {readLaterOrigin && <ReadLater origin={readLaterOrigin} items={readLaterIds.flatMap(id => {
+      const item = known.get(id);
+      return item ? [item] : [];
+    })} close={() => setReadLaterOrigin(null)} toggle={toggleReadLater}/>}
     {panel && <ReaderPanels panel={panel} close={() => setPanel(null)} reportCount={reportCount}/>}
   </Reader.Provider></Register.Provider>;
 }

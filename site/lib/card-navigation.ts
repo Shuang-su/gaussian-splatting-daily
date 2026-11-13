@@ -7,11 +7,11 @@ export const HISTORY_CHANGE = "gsd-history-change";
 
 export type PageUI = Record<string, unknown>;
 export type NavigationMarker = {
-  session: string; id: string; index: number; sourceId?: string; sourceKey?: string;
+  session: string; id: string; index: number; sourceId?: string; sourceKey?: string; contextPath?: string; contextId?: string;
 };
 export type PageSnapshot = {
   marker: NavigationMarker; url: string; scroll: number; width: number;
-  ui: PageUI; originKey?: string; originTop?: number; focusIndex?: number;
+  ui: PageUI; originKey?: string; originTop?: number; focusIndex?: number; focusHref?: string;
 };
 type StorageLike = Pick<Storage, "getItem" | "setItem">;
 
@@ -31,6 +31,8 @@ export function markerFrom(state: unknown): NavigationMarker | null {
   if (!value || typeof value.session !== "string" || typeof value.id !== "string" || !Number.isSafeInteger(value.index) || value.index < 0) return null;
   if (value.sourceId !== undefined && typeof value.sourceId !== "string") return null;
   if (value.sourceKey !== undefined && typeof value.sourceKey !== "string") return null;
+  if (value.contextId !== undefined && typeof value.contextId !== "string") return null;
+  if (value.contextPath !== undefined && typeof value.contextPath !== "string") return null;
   return value;
 }
 

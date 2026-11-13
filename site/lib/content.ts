@@ -17,6 +17,7 @@ import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 
 import { renderEvents } from "./editorial";
 import { applyReadingEdition } from "./reading-edition";
+import { loadEditorialCovers } from "./editorial-covers";
 import { parseMarkdown } from "./markdown";
 import { parseRevisions, validateFootnotes } from "./revisions";
 import { loadLongform, loadWeeklyEditorial } from "./longform";
@@ -469,6 +470,8 @@ export function loadArchive() {
 }
 export async function buildArchive(root = ROOT) {
   const media = loadImageManifest(root);
+  const covers = loadEditorialCovers(root);
+  const usedCovers = new Set<string>();
   const dailyRoot = path.join(root, "docs/daily");
   const files = fs
     .readdirSync(dailyRoot, { recursive: true })
@@ -481,10 +484,31 @@ export async function buildArchive(root = ROOT) {
       const article = await parseArticle(markdown, `docs/daily/${p}`, media);
       const readerPath = `docs/reading/${article.date}.md`;
       if (!fs.existsSync(path.join(root, readerPath))) return article;
-      return applyReadingEdition(article, markdown, fs.readFileSync(path.join(root, readerPath), "utf8"), readerPath,
-        (md, file) => parseArticle(md, file, media));
+      const datedManifest = path.join(root, "site/public/daily-media", article.date, "manifest.json");
+      const readDatedFigures = (): ImageManifest => fs.existsSync(datedManifest) ?
+        JSON.parse(fs.readFileSync(datedManifest, "utf8")).images : {};
+      let datedFigures: ImageManifest | undefined;
+      const reading = await applyReadingEdition(article, markdown, fs.readFileSync(path.join(root, readerPath), "utf8"), readerPath,
+        (md, file) => parseArticle(md, file, media), {
+          cover: covers[article.date],
+          validateFigure(image, primary) {
+            if (image.kind || image.originalUrl || !primary || !/^https:\/\//.test(image.source)) return false;
+            const primaryPaper = primary.match(/^https:\/\/arxiv\.org\/abs\/([\d.]+)$/)?.[1];
+            const figure = new URL(image.source);
+            const figurePaper = figure.hostname === "arxiv.org" ? figure.pathname.match(/^\/html\/([\d.]+)v[1-9]\d*$/)?.[1] : undefined;
+            if (image.source !== primary && (!primaryPaper || primaryPaper !== figurePaper)) return false;
+            datedFigures ??= readDatedFigures();
+            const archived = datedFigures[image.url];
+            return Boolean(archived?.originalUrl?.startsWith(`/daily-media/${article.date}/`) &&
+              archived.source === image.source && archived.credit === image.credit && archived.alt === image.alt);
+          },
+        });
+      if (reading.image?.kind === "editorial-illustration") usedCovers.add(article.date);
+      return reading;
     }),
   );
+  for (const date of Object.keys(covers)) if (!usedCovers.has(date))
+    throw Error(`Editorial cover is not assigned to reading edition ${date}`);
   const published = articles
     .filter((a) => ["published", "corrected"].includes(a.status))
     .sort((a, b) => b.date.localeCompare(a.date));

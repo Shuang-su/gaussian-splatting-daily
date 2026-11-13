@@ -26,11 +26,12 @@ export class CardBackdrop {
     delete this.layer.dataset.nodes;
     delete this.layer.dataset.retained;
     delete this.layer.dataset.pullVisible;
+    delete this.layer.dataset.pullDirection;
   }
 
-  capture(origin?: HTMLElement) {
+  capture(origin?: HTMLElement, retainSourceCard = false) {
     this.clear();
-    const roots = [...document.querySelectorAll<HTMLElement>("body > main, body > .site-footer")];
+    const roots = [...document.querySelectorAll<HTMLElement>("main#main, body > .site-footer")];
     if (!roots.length) return false;
     let count = 0;
     const floatingAncestors = new Set<Element>();
@@ -41,12 +42,13 @@ export class CardBackdrop {
         while (parent && parent !== root) { floatingAncestors.add(parent); parent = parent.parentElement; }
       }
     }
-    const freeze = (source: Element): Element | null => {
+    const freeze = (source: Element): Element | DocumentFragment | null => {
       if (["SCRIPT", "STYLE", "LINK", "IFRAME", "OBJECT", "EMBED", "DIALOG"].includes(source.tagName)) return null;
       if (++count > MAX_SNAPSHOT_NODES) throw new Error("Source viewport exceeds the snapshot budget");
       const bounds = source.getBoundingClientRect(), style = getComputedStyle(source);
       const outside = bounds.width > 0 && bounds.height > 0 && (bounds.bottom < 0 || bounds.top > innerHeight || bounds.right < 0 || bounds.left > innerWidth);
-      const pruned = style.display === "none" || style.visibility === "hidden" || style.opacity === "0" || source === origin || (outside && !floatingAncestors.has(source));
+      const isSlot = source === origin && !retainSourceCard;
+      const pruned = isSlot || style.display === "none" || style.visibility === "hidden" || style.opacity === "0" || (outside && !floatingAncestors.has(source));
       const copy = source.cloneNode(source instanceof SVGElement && !pruned) as HTMLElement;
       for (const node of [copy, ...copy.querySelectorAll("*")]) {
         for (const attribute of [...node.attributes]) {
@@ -62,7 +64,7 @@ export class CardBackdrop {
         copy.style.width = `${bounds.width}px`; copy.style.height = `${bounds.height}px`;
         copy.style.boxSizing = "border-box";
         copy.removeAttribute("src"); copy.removeAttribute("srcset");
-        if (source === origin) {
+        if (isSlot) {
           copy.dataset.sourceSlot = "";
           copy.style.visibility = "visible";
           copy.style.background = "color-mix(in srgb, var(--bg), var(--ink) 7%)";
@@ -79,6 +81,23 @@ export class CardBackdrop {
           if (child instanceof Element) { const frozen = freeze(child); if (frozen) copy.append(frozen); }
           else if (child.nodeType === Node.TEXT_NODE) copy.append(child.cloneNode());
         }
+      }
+      if (source === origin) {
+        // Preserve the layout of the vacated slot for the pull morph. The
+        // horizontal exit instead reveals the complete, frozen source card.
+        const slot = copy.cloneNode(false) as HTMLElement;
+        slot.dataset.sourceSlot = "";
+        slot.style.width = `${bounds.width}px`;
+        slot.style.height = `${bounds.height}px`;
+        slot.style.boxSizing = "border-box";
+        slot.removeAttribute("src");
+        slot.removeAttribute("srcset");
+        slot.style.background = "color-mix(in srgb, var(--bg), var(--ink) 7%)";
+        slot.style.boxShadow = "inset 0 1px 6px rgb(0 0 0 / 12%)";
+        copy.dataset.sourceCard = "";
+        const pair = document.createDocumentFragment();
+        pair.append(slot, copy);
+        return pair;
       }
       if (source instanceof HTMLInputElement) (copy as HTMLInputElement).value = source.value;
       if (source instanceof HTMLSelectElement) (copy as HTMLSelectElement).value = source.value;

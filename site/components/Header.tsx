@@ -11,7 +11,9 @@ import SearchOverlay from "./SearchOverlay";
 import { ReaderFontControl, ReaderShareControl } from "./ReadingControls";
 import { useCardNavigation } from "./CardNavigation";
 import { useReader } from "./ReaderProvider";
+import { ReadLaterTrigger } from "./ReadLater";
 import { rememberSearch, searchTerm } from "../lib/search-history";
+import { lockDocumentScroll } from "../lib/scroll-lock";
 
 type Panel = "mobile" | "topics" | "theme" | "search" | null;
 const themes = [["system", "跟随系统"], ["light", "浅色"], ["dark", "暗色"]] as const;
@@ -100,9 +102,8 @@ export default function Header() {
 
   useEffect(() => {
     if (panel !== "mobile") return;
-    const overflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    const outside = Array.from(document.querySelectorAll<HTMLElement>("main, .site-footer"));
+    const unlock = lockDocumentScroll();
+    const outside = Array.from(document.querySelectorAll<HTMLElement>("main, .site-footer, .reading-parent"));
     const inert = outside.map((el) => el.inert);
     outside.forEach((el) => { el.inert = true; });
     const frame = requestAnimationFrame(() => navigation.current?.querySelector<HTMLInputElement>("input")?.focus());
@@ -117,11 +118,11 @@ export default function Header() {
     };
     document.addEventListener("keydown", trap);
     return () => {
-      cancelAnimationFrame(frame); document.body.style.overflow = overflow;
+      cancelAnimationFrame(frame); unlock();
       outside.forEach((el, i) => { el.inert = inert[i]; });
       document.removeEventListener("keydown", trap);
       const previousTrigger = trigger.current;
-      requestAnimationFrame(() => { if (!currentPanel.current && previousTrigger?.isConnected) previousTrigger.focus({ preventScroll: true }); });
+      requestAnimationFrame(() => { if (!currentPanel.current && previousTrigger?.isConnected && !document.querySelector("dialog:modal")) previousTrigger.focus({ preventScroll: true }); });
     };
   }, [panel, home]);
 
@@ -134,7 +135,7 @@ export default function Header() {
   }
   return <header ref={header} className={`site-header${home ? " home-header" : ""}${article ? " reader-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"} data-mobile-layout={mobileLayout} data-reader-chrome={immersive}>
     <div className="progressive-header-blur" aria-hidden="true"><i/><i/><i/></div>
-    <div className="header-inner">
+    <div className="header-inner" data-reading-restart={Boolean(article && reader?.canRestart)}>
       <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}{!article && <Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>}
         {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
       <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav" inert={mobileLayout && panel !== "mobile"} aria-hidden={mobileLayout && panel !== "mobile" || undefined}>
@@ -149,9 +150,12 @@ export default function Header() {
           <div className="header-popover topic-popover" id="header-topics" hidden={panel !== "topics"}>{TOPICS.map((t) => <Link key={t.slug} href={`/topics/${t.slug}/`} onClick={() => setPanel(null)}>{t.label}</Link>)}<Link href="/topics/" onClick={() => setPanel(null)}>全部主题</Link></div>
         </div>
         <div className="mobile-nav-extra"><Link href="/topics/" onClick={() => setPanel(null)}><Icon name="layers" />主题<Icon name="chevron" /></Link><Link href="/subscribe/" onClick={() => setPanel(null)}><Icon name="external" />订阅高斯日报<Icon name="chevron" /></Link>
+          <ReadLaterTrigger className="reader-menu-read-later" onOpen={() => setPanel(null)}/>
           <div className="mobile-theme-control"><span id="mobile-theme-label">外观</span><div className="mobile-theme-options" role="group" aria-labelledby="mobile-theme-label">{themes.map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => changeTheme(value)}>{label}</button>)}</div></div>
         </div>
       </nav>
+      {article && reader?.canRestart && <button type="button" className="reader-restart" onClick={reader.resetReading}
+        inert={panel === "mobile" || cardNavigation?.busy || undefined}>从头开始阅读</button>}
       <div className="header-actions" inert={cardNavigation?.busy || undefined}>
         {article ? <><ReaderFontControl onOpen={() => setPanel(null)}/><ReaderShareControl onOpen={() => setPanel(null)}/></> : <>
         <button type="button" className="search-link" data-glass-surface={immersive ? "" : undefined} aria-label="搜索" aria-haspopup="dialog" aria-expanded={panel === "search" || panel === "mobile"} onClick={(event) => toggle("search", event.currentTarget)} inert={mobileLayout && panel === "mobile"}><Icon name="search" /></button>
@@ -159,7 +163,7 @@ export default function Header() {
           <div className="header-popover appearance-popover" id="header-appearance" hidden={panel !== "theme"} aria-label="显示主题">{[["light", "浅色"], ["dark", "暗色"], ["system", "跟随系统"]].map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => { changeTheme(value); setPanel(null); trigger.current?.focus({ preventScroll: true }); }}>{label}{theme === value && <Icon name="check" />}</button>)}</div>
         </div>
         <Link className="subscribe-link desktop-action" href="/subscribe/" onClick={() => setPanel(null)} inert={mobileLayout && panel === "mobile"}>订阅</Link></>}
-        <button className="menu-toggle" data-glass-surface={immersive ? "" : undefined} aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : immersive ? "more" : "grid"} /></button>
+        <button className="menu-toggle" data-reader-more-trigger data-glass-surface={immersive ? "" : undefined} aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : immersive ? "more" : "grid"} /></button>
       </div>
     </div>
     <SearchOverlay open={panel === "search"} onClose={() => setPanel(null)} />

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "assets": [
+    {
+      "key": "rf3dgs-figure-5",
+      "remoteUrl": "https://arxiv.org/html/2611.13772v2/figures/Real_comparison.jpg",
+      "original": "/daily-media/2026-11-12/rf3dgs-figure-5.jpg",
+      "originalSha256": "2e8944db35bebd6f4361ef21f12860dd9d72bc4280b304d2bdb7a5f1014088a2",
+      "sourceSha256": "2e8944db35bebd6f4361ef21f12860dd9d72bc4280b304d2bdb7a5f1014088a2",
+      "retrievedAt": "2026-11-13T07:47:41Z",
+      "sourcePublishedAt": "2026-11-11",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "image": {
+        "alt": "RF3DGS 图 5。各列对比真实场景的含反射输入、不同基线和作者方法，末列另显示分离出的反射。",
+        "source": "https://arxiv.org/html/2611.13772v2#S4.F5",
+        "credit": "Qiang Wen 等，RF3DGS 图 5（CC BY 4.0）",
+        "fit": "contain"
+      }
+    }
+  ],
+  "images": {
+    "https://arxiv.org/html/2611.13772v2/figures/Real_comparison.jpg": {
+      "alt": "RF3DGS 图 5。各列对比真实场景的含反射输入、不同基线和作者方法，末列另显示分离出的反射。",
+      "source": "https://arxiv.org/html/2611.13772v2#S4.F5",
+      "credit": "Qiang Wen 等，RF3DGS 图 5（CC BY 4.0）",
+      "fit": "contain",
+      "url": "/daily-media/2026-11-12/rf3dgs-figure-5-960.webp",
+      "originalUrl": "/daily-media/2026-11-12/rf3dgs-figure-5.jpg",
+      "width": 8074,
+      "height": 4210,
+      "variants": [
+        {
+          "url": "/daily-media/2026-11-12/rf3dgs-figure-5-640.webp",
+          "width": 640
+        },
+        {
+          "url": "/daily-media/2026-11-12/rf3dgs-figure-5-960.webp",
+          "width": 960
+        },
+        {
+          "url": "/daily-media/2026-11-12/rf3dgs-figure-5-1600.webp",
+          "width": 1600
+        }
+      ]
+    }
+  }
+}

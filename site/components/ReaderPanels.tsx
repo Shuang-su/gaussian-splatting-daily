@@ -7,6 +7,8 @@ import { commentCount, DISCUSSIONS, toggleReaction } from "../lib/discussions";
 import type { DiscussionComment } from "../lib/discussions";
 import { useDiscussionSample } from "./DiscussionProvider";
 import type { ReaderPanel, ReaderThread } from "./ReaderProvider";
+import { closeReaderSheet } from "../lib/reader-sheet";
+import { lockDocumentScroll } from "../lib/scroll-lock";
 import Icon from "./Icon";
 
 const GiscusThread = dynamic(() => import("./GiscusThread"), { ssr: false });
@@ -79,24 +81,26 @@ export default function ReaderPanels({ panel, close, reportCount }: {
     const element = dialog.current;
     if (!element) return;
     element.showModal();
-    const overflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    const unlock = lockDocumentScroll();
     return () => {
       element.close();
-      document.body.style.overflow = overflow;
+      unlock();
       if (panel.origin?.isConnected) panel.origin.focus({ preventScroll: true });
     };
   }, [panel]);
 
   const title = panel.kind === "share" ? "分享文章" :
     panel.thread.eventId ? "事件讨论" : panel.thread.article.kind === "daily" ? "本期讨论" : "文章讨论";
+  const dismiss = () => closeReaderSheet(dialog.current, close);
   return createPortal(<dialog ref={dialog} className={`reader-dialog reader-dialog-${panel.kind}`} aria-labelledby={titleId}
-    onCancel={event => { event.preventDefault(); close(); }}
-    onClick={event => { if (event.target === event.currentTarget) close(); }}>
+    data-sheet-drag={panel.kind === "discussion" ? "" : undefined}
+    onCancel={event => { event.preventDefault(); dismiss(); }}
+    onClick={event => { if (event.target === event.currentTarget) dismiss(); }}>
     <div className="reader-dialog-content">
+      {panel.kind === "discussion" && <div className="reader-sheet-handle" data-sheet-handle aria-hidden="true"/>}
       <header className="reader-dialog-header">
         <h2 id={titleId}>{title}</h2>
-        <button type="button" className="reader-dialog-close" aria-label={`关闭${title}`} onClick={close}><Icon name="close"/></button>
+        <button type="button" className="reader-dialog-close" data-sheet-close aria-label={`关闭${title}`} onClick={dismiss}><Icon name="close"/></button>
       </header>
       {panel.kind === "discussion" ? <div className="reader-dialog-scroll"><DiscussionContent key={panel.thread.term} thread={panel.thread} reportCount={reportCount}/></div> :
         <div className="reader-share-options">

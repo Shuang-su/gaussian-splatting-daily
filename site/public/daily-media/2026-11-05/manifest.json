@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "assets": [
+    {
+      "key": "gspim-figure-1",
+      "remoteUrl": "https://arxiv.org/html/2611.04804v2/intro.drawio.png",
+      "original": "/daily-media/2026-11-05/gspim-figure-1.png",
+      "originalSha256": "849edc0b1874f57fb94f8401dbda682edb70e470c6e448b8e1ac82c0f7684ec7",
+      "sourceSha256": "849edc0b1874f57fb94f8401dbda682edb70e470c6e448b8e1ac82c0f7684ec7",
+      "retrievedAt": "2026-11-13T07:51:22Z",
+      "sourcePublishedAt": "2026-11-04",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "image": {
+        "alt": "GSPIM 图 1。图示对比普通 4DGS 的逐帧处理与 GSPIM 的近存筛选和跨帧数据复用。",
+        "source": "https://arxiv.org/html/2611.04804v2#S1.F1",
+        "credit": "Zirui Ma 等，GSPIM 图 1（CC BY 4.0）",
+        "fit": "contain"
+      }
+    }
+  ],
+  "images": {
+    "https://arxiv.org/html/2611.04804v2/intro.drawio.png": {
+      "alt": "GSPIM 图 1。图示对比普通 4DGS 的逐帧处理与 GSPIM 的近存筛选和跨帧数据复用。",
+      "source": "https://arxiv.org/html/2611.04804v2#S1.F1",
+      "credit": "Zirui Ma 等，GSPIM 图 1（CC BY 4.0）",
+      "fit": "contain",
+      "url": "/daily-media/2026-11-05/gspim-figure-1-625.webp",
+      "originalUrl": "/daily-media/2026-11-05/gspim-figure-1.png",
+      "width": 625,
+      "height": 144,
+      "variants": [
+        {
+          "url": "/daily-media/2026-11-05/gspim-figure-1-625.webp",
+          "width": 625
+        }
+      ]
+    }
+  }
+}

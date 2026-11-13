@@ -4,6 +4,8 @@ import type { MouseEvent, KeyboardEvent } from "react";
 import { flattenReadingLinks, type ReadingLink } from "../lib/reading-navigation";
 import Icon from "./Icon";
 import { pushArticleHash } from "../lib/card-navigation";
+import { closeReaderSheet } from "../lib/reader-sheet";
+import { lockDocumentScroll } from "../lib/scroll-lock";
 
 function headingContentTop(target: Element) {
   const heading = target.matches("h1, h2, h3, h4") ? target : target.querySelector("h1, h2, h3, h4");
@@ -77,17 +79,21 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     if (!open) return;
     const closeOutside = (event: PointerEvent) => { if (!root.current?.contains(event.target as Node) && (compact || !pinned)) { setOpen(false); setHovered(false); } };
     document.addEventListener("pointerdown", closeOutside);
-    const previous = document.body.style.overflow;
-    if (compact) { document.body.style.overflow = "hidden"; closeButton.current?.focus({ preventScroll: true }); }
-    return () => { document.removeEventListener("pointerdown", closeOutside); if (compact) document.body.style.overflow = previous; };
+    const unlock = compact ? lockDocumentScroll() : undefined;
+    if (compact) closeButton.current?.focus({ preventScroll: true });
+    return () => { document.removeEventListener("pointerdown", closeOutside); unlock?.(); };
   }, [open, compact, pinned]);
-  function close() {
+  function closeImmediately() {
     setOpen(false); setHovered(false); setPinned(false);
     requestAnimationFrame(() => {
       const origin = externalTrigger.current;
       (origin?.getClientRects().length ? origin : trigger.current)?.focus({ preventScroll: true });
       externalTrigger.current = null;
     });
+  }
+  function close() {
+    if (compact && open) closeReaderSheet(panel.current, closeImmediately);
+    else closeImmediately();
   }
   function togglePin() { setPinned(value => !value); setOpen(false); }
   useEffect(() => {
@@ -146,8 +152,9 @@ export default function ReadingNavigator({ items }: { items: ReadingLink[] }) {
     <button className={`reading-nav-backdrop${compact && open ? " is-open" : ""}`} tabIndex={-1} inert={!compact || !open} aria-hidden={!compact || !open} aria-label="关闭目录" onClick={close} />
     <aside className={`reading-nav-rail${shown ? " is-open" : ""}${pinned ? " is-pinned" : ""}`} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
       <button className="reading-nav-ticks" aria-label="展开文章目录" aria-expanded={shown} aria-controls="reading-navigation" aria-hidden={shown} inert={shown} onClick={() => setOpen(true)} tabIndex={shown ? -1 : 0} />
-      <div className="reading-nav-panel" ref={panel} id="reading-navigation" inert={!shown} aria-hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
-        <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button className="reading-nav-close" ref={closeButton} aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
+      <div className="reading-nav-panel" ref={panel} id="reading-navigation" data-sheet-drag inert={!shown} aria-hidden={!shown} role={compact ? "dialog" : undefined} aria-modal={compact && open ? true : undefined} aria-label="文章目录">
+        <div className="reader-sheet-handle" data-sheet-handle aria-hidden="true"/>
+        <header><h2>文章目录</h2><div className="reading-nav-controls"><button className="reading-nav-pin" aria-label="固定文章目录" aria-pressed={pinned} title={pinned ? "取消固定目录" : "固定目录"} onClick={togglePin}><Icon name="pin" /></button><button className="reading-nav-close" ref={closeButton} data-sheet-close aria-label="收起文章目录" onClick={close}><Icon name="close" /></button></div></header>
         <nav aria-label="快捷跳转" ref={scrollList}>{list(items)}</nav>
       </div>
     </aside>

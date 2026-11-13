@@ -50,11 +50,12 @@ export default async function Page({ params }: { params: RouteParams }) {
         <Link className="article-series" href="/daily/">日报</Link><h1>{a.headline}</h1><p className="article-deck">{a.summary}</p>
         <div className="article-meta"><time dateTime={a.date}>{a.date}</time><span>{a.readingMinutes} 分钟阅读</span></div>
       </header>
-      <div className="article-layout">
+      <div className="article-layout" data-reader-body>
         <ArticleRevisionLinks revisions={a.revisions}/>
         <ReadingGuide article={a} hasWeek={week.length > 0} />
         {!a.events && a.introductionHtml && <ArticleBody html={a.introductionHtml} />}
         {a.events ? <ArticleEvents article={a} /> : <ArticleBody html={a.bodyHtml} />}
+        <div data-reader-end aria-hidden="true"/>
         {a.footnotesHtml && <ArticleBody html={a.footnotesHtml}/>}
         <ArticleTeasers articles={index.articles?.filter(article=>article.related.some(link=>link.date===a.date)) || []}/>
         {week.length > 0 && <section className="this-week" id="this-week"><h2>本周重要内容</h2><ul>{week.map(e=><li key={e.id}><Link href={entryUrl(e)}>{e.title}</Link>{!a.readingEdition && <p>{e.summary}</p>}<time dateTime={e.date}>{e.date}</time></li>)}</ul></section>}
@@ -63,7 +64,7 @@ export default async function Page({ params }: { params: RouteParams }) {
       </div>
     </article>
     <section className="article-discussion-region"><div className="article-discussion-inner"><Discussion dailyId={a.id} date={a.date} heading /></div></section>
-    <ArticleInteractionBar dailyId={a.id}/>
+    <ArticleInteractionBar/>
     <PastDaily reports={related}/>
     <div className="article-subscription-wrap"><Subscription /></div>
   </ImageGallery>;

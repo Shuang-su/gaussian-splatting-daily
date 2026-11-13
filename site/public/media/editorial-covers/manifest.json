@@ -1,0 +1,1105 @@
+{
+  "schemaVersion": 1,
+  "covers": {
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "eventId": "github.com/playcanvas/engine/pull/9796",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "93d8cf47b7c47217f8a4e23fd70739f2eb0981ec686603d0420c5f0cb50eaf90",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-19-960.webp",
+        "source": "https://github.com/playcanvas/engine/pull/9796",
+        "credit": "编辑插画",
+        "alt": "一枚蓝金色球体悬在四枚反光小球之间，表现球谐的视角相关外观。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-19-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-19-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-19-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-19-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "61c6e9093347ce137449ad686f9a900d9227a86e889323b2300a4945845041bf"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-19-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "f73e92af428a4b9c8105132e540d05f9cb789d61855c764cda300c6a2dd36d90"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-19-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "9b803bf92539780a238349e777cce7d7dcc9c5e718e8fd24501ba7711ddd7e97"
+        }
+      ]
+    },
+    "2026-10-20": {
+      "date": "2026-10-20",
+      "eventId": "github.com/playcanvas/supersplat-viewer/pull/330",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "e0be8f0ceb5c78d4d322e6dd3b3255f6e31bbd2d67f95e12da9f004ee90764fa",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-20-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/pull/330",
+        "credit": "编辑插画",
+        "alt": "双手横持手机，屏幕里是一处带有高斯粒子边缘的水岸场景。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-20-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-20-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-20-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-20-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "3df9fb9c5fbc363496321819eb3b70f3bf1a72e192d68799eb45737087ec1869"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-20-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "427f8d359389ea65dee175221718dcdf6247dc67f32557d279b73742a2a3458f"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-20-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "c930c154dc1bd0cd3fba6dc9ce157909246a329f04246b86ddd5c5cf195be1bc"
+        }
+      ]
+    },
+    "2026-10-25": {
+      "date": "2026-10-25",
+      "eventId": "github.com/MrNeRF/LichtFeld-Studio/pull/3605",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "493b117ca3e5fec7fa1b4e1b1d0f218c986b605d3c8cb1800c9ada785f1a9b9f",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-25-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3605",
+        "credit": "编辑插画",
+        "alt": "暖色山谷里的玻璃建筑逐渐散成点云，表现训练场景与项目资源。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-25-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-25-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-25-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-25-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "4164e057e32206151ff6841cbfe715795b29d6844bb4905b82f474157d9d104e"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-25-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "dccd6d52fe7e03976e50ecd71d4bcc8064c1817442a6332e7a0d9fab7449d018"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-25-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "05399f9a7f2e1ec2b75acd6eb068ecaf6e09fe248b011eca6898e7f604845ce4"
+        }
+      ]
+    },
+    "2026-10-26": {
+      "date": "2026-10-26",
+      "eventId": "github.com/MrNeRF/LichtFeld-Studio/pull/3728",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "7838ba33acd3b3eda53eec64f7fcf3309d8fba4c2de3593fb52d4be82b29f649",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-26-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3728",
+        "credit": "编辑插画",
+        "alt": "金属圆环固定着一座发光的高斯重建建筑，外缘可见细小粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-26-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-26-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-26-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-26-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "1e19db2648c81950bf369b1af151294782750364377569634b300edd8859807c"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-26-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "61e804c5c853643a1f1c94bb05ee0f3b27202dc8112997588e807005ec88c900"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-26-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "62b8c85b2ba612f1f53ba9a98794d02fbbbd354d3397b26d203b99a1e19e4313"
+        }
+      ]
+    },
+    "2026-10-27": {
+      "date": "2026-10-27",
+      "eventId": "github.com/playcanvas/supersplat/releases/tag/v3.7.0",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "fe1787968f08d07bf16796e281857fd8f2ca702b6be2e839e90abbbf8819eb33",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-27-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0",
+        "credit": "编辑插画",
+        "alt": "半透明的米色薄片绕中心螺旋排开，投下彼此交叠的阴影。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-27-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-27-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-27-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-27-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "22f4c559694d8f669901d0c6d680f518efe5537c7b0f20098b6a5f373c436ea5"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-27-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "abc4140e5c1d28e145ee40cc67aaaefdfe2e3d93939c25e049328f908f08b7f2"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-27-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "2946e3b8d853b92e286c845918d6e5c16d6de92fefa78d37c9b023675ff99718"
+        }
+      ]
+    },
+    "2026-10-28": {
+      "date": "2026-10-28",
+      "eventId": "github.com/MrNeRF/LichtFeld-Studio/commit/6a7c00d1fffc",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "d03d954f9cb33c94f00484a30173619123980e8e4f65a747519cb33bf942b1e2",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-28-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/commit/6a7c00d1fffce27e2f1e725299ca7569655cdc84",
+        "credit": "编辑插画",
+        "alt": "一排玻璃盒陈列处于不同重建阶段的同一座小型建筑。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-28-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-28-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-28-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-28-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "554404182f8fa5f314f1fa670e19a82f2d133f95be1378aa86857f6128e53a56"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-28-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "0bef6acf6e4f0808f810e4d527dfac28abe282795c277d9d6026403b1f5124ad"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-28-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "4c5f14c7013c3ef8a3318851033f78f7d30984357b622593c05d6c76ef4824b8"
+        }
+      ]
+    },
+    "2026-10-29": {
+      "date": "2026-10-29",
+      "eventId": "github.com/playcanvas/engine/commit/d0127b10af11",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "8b4b36914a69ad86e41332f4ca1c717ae70fdee0350b35e37d12683322f702cb",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-29-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/d0127b10af116c63b4d3732488b2b8157eebeeb9",
+        "credit": "编辑插画",
+        "alt": "高处俯视一座海湾城镇，近处建筑清晰，边缘渐变成细小的扫描粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-29-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-29-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-29-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-29-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "e8d4191007c60907bd0075d1d01273667afb0afa806406d2e15bf87dcb96de42"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-29-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "adfe65eaaef0d4d881d9f5a840a0b722a66fae3ea9a8fa5e93fbc257ad3d32c0"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-29-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "a190ee0ee28e43124aff9bfbc4a2bec603730d10507171437f6c9a1bfb0c2a51"
+        }
+      ]
+    },
+    "2026-10-30": {
+      "date": "2026-10-30",
+      "eventId": "github.com/ooolabdev/ooosplat/commit/28dcaf8e5f4e",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "8c2f2d897fd868625da7b9fa1fd1ed97b931e9b52fd9342d19311196e3de3391",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-30-960.webp",
+        "source": "https://github.com/ooolabdev/ooosplat/commit/28dcaf8e5f4ee48229ac741b4a5f5020ba718c84",
+        "credit": "编辑插画",
+        "alt": "橙色管线把桌面相机、高斯点云组成的雕塑和一组控制模块相连。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-30-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-30-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-30-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-30-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "0c09286fb0d507693349862fe4e84163954d58f5f41b461485dafcce6c8d9f04"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-30-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "3c4b2240e2ccf3ee6da92d8470574d778349c00aa639edef67b38457a94a7a36"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-30-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "e8716ef91c59e3b453626fe48b39783b39dab7a5101370288ea561b761403a16"
+        }
+      ]
+    },
+    "2026-10-31": {
+      "date": "2026-10-31",
+      "eventId": "github.com/playcanvas/engine/commit/81faeb7279f1",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "e863e88c1057804280a19d9979f9cf80101a7cf39348cd56821e879e3054e723",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-31-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/81faeb7279f14423e809249a5285fc029bdfa358",
+        "credit": "编辑插画",
+        "alt": "山峦和河谷组成的广阔扫描地景，在近处显示分块的高斯粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-31-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-31-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-31-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-10-31-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "63eecfe2b5a5d7fbc3635d131ddaee1f2521a720ac1fc33c8e05ee0a4d79d989"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-31-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "0934f011fe32fd367510b5ca3124625d7966ae46bd27c954174df157223f9e86"
+        },
+        {
+          "url": "/media/editorial-covers/2026-10-31-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "d177ef2183d925a162a2a0ca8cac7b2930d9a7228d9ac9b5684f9e27902878bf"
+        }
+      ]
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "eventId": "github.com/playcanvas/supersplat/commit/4069712370df",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "20fc6dd9c752ccfb94b934649d0fe62e46c37f26f85d873f39e646a286e6f858",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-01-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/commit/4069712370df3425c386610f28a814403e835543",
+        "credit": "编辑插画",
+        "alt": "几处相机位置沿弧线围绕一只布满苔藓的陶罐。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-01-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-01-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-01-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-01-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "2cac00784e5b826560f8781db7b85c823f07d40fdfdcf6fa3249218329d6c403"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-01-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "9ab8f5aee98d97cbc3db38a397e9e01fcec5dd34b861ba46915e0df1d6e9720e"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-01-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "044e9444fe4f0a8fe74168b7e18d48e28daf63de8adb22f21338cb84f6ef40b0"
+        }
+      ]
+    },
+    "2026-11-02": {
+      "date": "2026-11-02",
+      "eventId": "github.com/playcanvas/engine/commit/4b496a2a1c58",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "415a3ca22014a1eb175ce378528b002081eeda1943dd29544112f8ebe84a7ffc",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-02-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/4b496a2a1c5892b6f8198a2ec7aef0009b4447cc",
+        "credit": "编辑插画",
+        "alt": "白色头显悬在昏暗拱廊上方，拱廊中央的高斯场景重新亮起。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-02-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-02-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-02-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-02-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "65efccf76c1f15e9b6c362e2923ebd82c41eb65ddc78cb819994dba84194441f"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-02-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "dc04489a57dfba636aa93b9da6fdb263a8b523f2959bd13bfdb484e1d6e66e36"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-02-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "ad0e53da9227cd97e665f7b5ddaa11a7ca4b72b078af34f455b43998f380b2ae"
+        }
+      ]
+    },
+    "2026-11-03": {
+      "date": "2026-11-03",
+      "eventId": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.6.1",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "e5ca0c26e625d94e8c7c0fc281a6ba907b57b2b5ce6452cdf5c967a16a07c548",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-03-960.webp",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.6.1",
+        "credit": "编辑插画",
+        "alt": "一块由方形瓦片组成的高斯地形悬在湖面上，后方是针叶林与雪山。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-03-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-03-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-03-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-03-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "7ced435169a472f2a53eb58d2f4a42b76bfe9fc4b6deb52d59f652f70b727f2a"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-03-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "65a42952715d5115fc75b7004812f3e4c88abb6b52d467c78460fe024bbd2698"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-03-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "de95069997290460a16431af7efe1ec2f583372052b4d6a6b6302fe28dd59fdb"
+        }
+      ]
+    },
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "eventId": "github.com/aras-p/UnityGaussianSplatting/tree/v2.0.0",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "3e82116a70b8c63d63e18a659607413ca9e9bacc4f541d1b09c0db181dbec2ee",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-04-960.webp",
+        "source": "https://github.com/aras-p/UnityGaussianSplatting/tree/v2.0.0",
+        "credit": "编辑插画",
+        "alt": "淡紫色树冠由立体粒子和半透明网格组成。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-04-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-04-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-04-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-04-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "c086563fb484d04c482d4c3883aa9e902a8af2fb6be62595215b25496ad848cc"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-04-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "e8a6258a53ca4928debe26cbd340b3344c34412726ff600ad62e29e551142739"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-04-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "76bb665ef5c3fb4aebb8410ce83764fa56d3b843b70aa973f160f0e05c4be670"
+        }
+      ]
+    },
+    "2026-11-05": {
+      "date": "2026-11-05",
+      "eventId": "github.com/MAdrid1011/GSPIM",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "4c8d2d8bfcfb43ea4465cc9bfd798c986997805b53e1010b736bdfba15e97df8",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-05-960.webp",
+        "source": "https://github.com/MAdrid1011/GSPIM",
+        "credit": "编辑插画",
+        "alt": "暖金色旋转木马的中央排列着芯片，周围环绕表示连续帧的金属轨道。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-05-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-05-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-05-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-05-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "721405a72139e8d7144b03413e5ee798140676ded39e6b05316229c6ddca9547"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-05-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "ec9639360970b97828d65771d96d16a5757d1cbf5d90d88065cde39c4f47ff93"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-05-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "ab65026a52b0d72b4b07039ecb50d5aa0e3575d7e3a23c60ab89e1801d9cb049"
+        }
+      ]
+    },
+    "2026-11-06": {
+      "date": "2026-11-06",
+      "eventId": "github.com/playcanvas/supersplat-viewer/commit/a66496e647c5",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "84a7b9e4a9de4fb71f56a02ee2ba8a2cf001fc84b0b23cbc2dca2fa630ff6a19",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-06-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/commit/a66496e647c58f34bdded4e104adbe4ac52fc423",
+        "credit": "编辑插画",
+        "alt": "头显视窗的两侧分别映出近处的珊瑚和更远的蓝色海底结构。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-06-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-06-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-06-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-06-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "5889cf389a7428413ab6342240c258feaa7b76908c9373588e74e99bc33baedd"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-06-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "98e69f3bbebc273fcf8b84dc958bcaab6a6839a296ce077b636d4addac0073ff"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-06-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "de54a9c8be684b63c5ac695ea077725010b1ba5a5dd75fa75472a41fd6e440ba"
+        }
+      ]
+    },
+    "2026-11-07": {
+      "date": "2026-11-07",
+      "eventId": "github.com/playcanvas/engine/commit/5c474f78bb3e",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "902d164fffbe2c175072acab1331258bfd4641e1575fcf35e3ec98b37e140a7e",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-07-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/5c474f78bb3ea31ce773eaffcf9fff5a1086c018",
+        "credit": "编辑插画",
+        "alt": "赭色折片展开成多彩的半透明椭球与散点。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-07-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-07-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-07-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-07-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "88652441b8793eb5ffba55ff401f1ef50d28c1be6e3e2a27f8da401c44d5f5bd"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-07-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "69d13bafa8a048eded0b3a2333e10182304f384adfc2a0f2a0dec9c80ec76a09"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-07-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "0540123f55c60ada8f5096703b7b04ee0d8b616e7b4514579331eaa97a79a280"
+        }
+      ]
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "eventId": "github.com/arcturus-vision/3dgs-scripts/commit/80c2c0a633bf",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "ec7b61c260a3dd0c2fc9511eb1c42e19c0ecafe5b9308ed1dd74b60f912f7b78",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-08-960.webp",
+        "source": "https://github.com/arcturus-vision/3dgs-scripts/commit/80c2c0a633bfd4644f1e2df9dc804ae81e4317f9",
+        "credit": "编辑插画",
+        "alt": "两枚相机镜头从不同角度对准发出青光的岩石点云。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-08-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-08-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-08-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-08-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "e2c7eb143731b1b5c8f5f5a6081e86d459783bc0f1e4774ca2507589f08c4574"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-08-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "7f3e8839c9edea84259990d667bb8ef0f85de9259dbed3f5872a62598203521d"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-08-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "2515b1e10c69c928e765b12718299c605b4a75a9193980deacf12bb154399f1d"
+        }
+      ]
+    },
+    "2026-11-09": {
+      "date": "2026-11-09",
+      "eventId": "github.com/MrNeRF/LichtFeld-Studio/pull/4017",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "4602444ad5817ede3ee54afc2f95a6b175edd4d9ad13c773d8fa185e1bbdc7af",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-09-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4017",
+        "credit": "编辑插画",
+        "alt": "三张胶片画面记录飞鸟拍翅，浅绿色掩码轮廓随飞鸟移动。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-09-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-09-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-09-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-09-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "2d8446d22da653ea5445a530a3dca85d0257413782431af4498e5a70bcac51d2"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-09-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "a4e485835ba9273f3d166e7f4a5179d10918ffd2e9d62a50dde5b41356e52109"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-09-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "2a887abef23cceb306871f8f5cee182f39e3cfab33e363977e157802d1df71c9"
+        }
+      ]
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "eventId": "github.com/playcanvas/splat-transform/pull/370",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "6df233ac1b3237873e5f355a941f5aa959f806edd833e4c7e4da17f6bff0c59a",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-10-960.webp",
+        "source": "https://github.com/playcanvas/splat-transform/pull/370",
+        "credit": "编辑插画",
+        "alt": "浅绿色机械压机把高斯粒子压在几片青色数据层上方。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-10-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-10-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-10-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-10-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "91f28db0993da03a7a7abc08e6f25138d089d580945f89196152d5d5309b94b1"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-10-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "1888d7887792c9059c607abf63c5c33a03a12df3da204d1620e9775fdd7de0ea"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-10-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "617fcd630c4a3f4b5f7da3425ad0facc5547f41a5d1dfca0033ba819a64cbfc2"
+        }
+      ]
+    },
+    "2026-11-11": {
+      "date": "2026-11-11",
+      "eventId": "github.com/playcanvas/supersplat-viewer/tree/v1.43.0",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "8fbf8810340c8a8bfa80c62fea24707c7688e58ed363fa325da2a4558b6d85dc",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-11-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/tree/v1.43.0",
+        "credit": "编辑插画",
+        "alt": "紫色中庭的两道金色光线通向同一座琥珀色发光建筑。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-11-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-11-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-11-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-11-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "82088a481e13bed1354d9c4f9d9fa9304c9383d353cf7f086fa8aaa3af2453db"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-11-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "c1e9c1cd9b4feaf3b8c9faf6cf754f80b1859b5f00462c96d32783f3e5088537"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-11-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "236560f88980f7ce6d2d4f1606a603e07e280cd127d8710ddf726417196998c5"
+        }
+      ]
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "eventId": "github.com/playcanvas/supersplat/releases/tag/v3.8.0",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "c70d94d412bc8c51b787e80120041a983c1036bd31e88e387a57dcd025ef0c04",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-12-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.8.0",
+        "credit": "编辑插画",
+        "alt": "暖色穹顶建筑从黑色圆形窗口显露，左缘逐渐散成点云。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-12-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-12-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-12-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-12-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "460bb974fe60320c1d09099c63bc5ec05aa1723a9f2104f372e4db8664b4fb2e"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-12-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "09c0b14e2e1fe6661083376ff74c24f74675eea35eca288996d74fa2da9e132a"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-12-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "b5179bf8a71124adeaf7ada371d0091a83373053126424e235835d72704d33e2"
+        }
+      ]
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "eventId": "github.com/playcanvas/engine/pull/10007",
+      "generator": "OpenAI ImageGen",
+      "generatedOn": "2026-11-13",
+      "inputSha256": "dd4d4ecaa24dd70884d807df71ecaec53471b52f0ae2d23aa1d55de614d3d98e",
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-13-960.webp",
+        "source": "https://github.com/playcanvas/engine/pull/10007",
+        "credit": "编辑插画",
+        "alt": "蓝色和琥珀色数据平面分开排列，中间悬浮着扭转的半透明高斯粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-13-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-13-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-13-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
+      "files": [
+        {
+          "url": "/media/editorial-covers/2026-11-13-480.webp",
+          "width": 480,
+          "height": 270,
+          "sha256": "b4d72f73b5e29bd07c3b0eafd3a0b1746d48444fb8585522eacab31151a8399f"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-13-960.webp",
+          "width": 960,
+          "height": 540,
+          "sha256": "6690e5efcd4b317f2a09a23739812271bec878d958eb07f8df483cbfb9207f06"
+        },
+        {
+          "url": "/media/editorial-covers/2026-11-13-1440.webp",
+          "width": 1440,
+          "height": 810,
+          "sha256": "debc19c45f366d249253bc0c7208289c30ca63390ea8a13b81ab303c035cfc12"
+        }
+      ]
+    }
+  }
+}

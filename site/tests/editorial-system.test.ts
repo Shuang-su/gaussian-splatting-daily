@@ -69,3 +69,23 @@ test("event figures sit between intact paragraphs, with their provenance and pre
   const html=article.events![0].html, image=html.indexOf("<figure"), first=html.indexOf("</p>"), next=html.indexOf("<p>",image);
   assert.ok(first<image&&next>image);assert.ok(html.includes("data-preview-key="));assert.ok(html.includes("<figcaption>"));
 });
+
+test("dated editorial covers and author figures retain distinct provenance", async () => {
+  const { articles, index } = await archive;
+  const latest = articles.find(article => article.date === "2026-11-13")!;
+  assert.equal(latest.image?.kind, "editorial-illustration");
+  assert.equal(latest.image?.credit, "编辑插画");
+  assert.equal(latest.image?.source, "https://github.com/playcanvas/engine/pull/10007");
+  assert.equal(latest.image?.url, "/media/editorial-covers/2026-11-13-960.webp");
+  assert.deepEqual(latest.image?.variants?.map(variant => variant.width), [480, 960, 1440]);
+  assert.ok(!index.entries.some(entry => entry.image?.kind === "editorial-illustration"));
+
+  const report = articles.find(article => article.date === "2026-11-12")!;
+  const paper = report.events?.find(event => event.id === "arxiv:2611.13772");
+  const figure = paper?.images?.[0];
+  assert.equal(figure?.source, "https://arxiv.org/html/2611.13772v2#S4.F5");
+  assert.equal(figure?.originalUrl, "/daily-media/2026-11-12/rf3dgs-figure-5.jpg");
+  assert.ok(report.images.some(image => image.originalUrl === figure?.originalUrl));
+  assert.ok(paper?.html.includes("Qiang Wen 等，RF3DGS 图 5（CC BY 4.0）"));
+  assert.ok(!index.entries.find(entry => entry.id === "arxiv:2611.13772")?.image);
+});

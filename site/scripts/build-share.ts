@@ -98,7 +98,7 @@ export async function buildShareImages(index: PortalIndex) {
   const canvas = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}"><rect width="${WIDTH}" height="${HEIGHT}" fill="#fff"/><path d="M52 144H1148" stroke="#dedede"/><path d="M52 583H92" stroke="#d72626" stroke-width="3"/></svg>`);
   const reports: Record<string, {
     date: string; url: string; title: string; contentHash: string; inputHash: string; sha256: string;
-    bytes: number; cover?: { url: string; source: string; credit: string; sha256: string };
+    bytes: number; cover?: { url: string; source: string; credit: string; sha256: string; kind?: "editorial-illustration" };
   }> = {};
 
   for (const daily of [...index.daily].sort((a, b) => a.date.localeCompare(b.date))) {
@@ -123,7 +123,7 @@ export async function buildShareImages(index: PortalIndex) {
       layers.push({ input: renderedCover, left: 628, top: 184 });
       const credit = await textLayer(daily.image.credit, font, { size: 18, width: 520, maxHeight: 52, color: "#757575", spacing: 4 });
       layers.push({ input: credit.data, left: 628, top: 538 });
-      cover = { url: daily.image.originalUrl || daily.image.url, source: daily.image.source, credit: daily.image.credit, sha256: sha256(coverBytes) };
+      cover = { url: daily.image.originalUrl || daily.image.url, source: daily.image.source, credit: daily.image.credit, sha256: sha256(coverBytes), ...(daily.image.kind ? { kind: daily.image.kind } : {}) };
     }
     const png = await sharp(canvas).composite(layers).png({ compressionLevel: 9 }).toBuffer();
     const url = `/share/${daily.date}.png`;

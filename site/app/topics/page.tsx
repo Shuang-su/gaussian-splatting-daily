@@ -1,4 +1,4 @@
-import Link from "next/link";
+import HierarchyLink from "../../components/HierarchyLink";
 import { loadArchive } from "../../lib/content";
 import { TOPICS } from "../../lib/catalog";
 export const metadata = { title: "主题" };
@@ -11,7 +11,7 @@ export default async function Page() {
       </div>
       <div className="topics-grid">
         {TOPICS.map((t) => (
-          <Link href={`/topics/${t.slug}/`} key={t.slug}>
+          <HierarchyLink href={`/topics/${t.slug}/`} key={t.slug}>
             <h2>{t.label}</h2>
             <p>
               {index.daily.filter((d) => d.topics.includes(t.slug)).length}{" "}
@@ -20,7 +20,7 @@ export default async function Page() {
               条内容
             </p>
             <span>查看</span>
-          </Link>
+          </HierarchyLink>
         ))}
       </div>
     </div>

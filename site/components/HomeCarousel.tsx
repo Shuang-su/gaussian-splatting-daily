@@ -122,8 +122,10 @@ export default function HomeCarousel({ slides }: { slides: HomeSlide[] }) {
               if (next >= 0) { e.preventDefault(); select(next); pagers.current[next]?.focus(); }
             }}><span className="carousel-track">{active === i && <span key={key} className="carousel-progress" style={{ animationPlayState: playing ? "running" : "paused", animationDelay: `-${progressStart.current.key === key ? progressStart.current.value : 0}ms` }} />}</span></button>,
         )}</div>
+      </div>
+      <div className="carousel-play-area">
         <button className="carousel-play" aria-label={paused ? "播放轮播" : "暂停轮播"} aria-pressed={paused}
-          onClick={() => setPaused((current) => !current)}><Icon name={paused ? "play" : "pause"} /></button>
+          onClick={() => setPaused((current) => !current)} hidden={reducedMotion || slides.length < 2}><Icon name={paused ? "play" : "pause"} /></button>
       </div>
       <p className="sr-only" aria-live={playing ? "off" : "polite"}>{slide.date} 日报，{slide.title}</p>
     </div>

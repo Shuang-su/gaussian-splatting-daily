@@ -81,13 +81,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-13-960.webp",
+        "source": "https://github.com/playcanvas/engine/pull/10007",
+        "credit": "编辑插画",
+        "alt": "蓝色和琥珀色数据平面分开排列，中间悬浮着扭转的半透明高斯粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-13-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-13-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-13-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-13.md",
-        "contentHash": "1a76b0e489366c082e3c076e12489446e3517de2ad06ba5749e70a38dfaf62c4"
+        "contentHash": "f001530d76e0a745d6623bc007a0bc33bfe3d20594438c0ed6be431e70d659da"
       }
     },
     {
@@ -283,13 +306,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-12-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.8.0",
+        "credit": "编辑插画",
+        "alt": "暖色穹顶建筑从黑色圆形窗口显露，左缘逐渐散成点云。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-12-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-12-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-12-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-12.md",
-        "contentHash": "5ed17728e83e1e197fd5991b322a688c1f1d3ee76ac068e42b67a748c9f9f077"
+        "contentHash": "c82d2d93a81f7ccccee031af7695de6c87b07efa29b6080b95198eb37112641d"
       }
     },
     {
@@ -447,13 +493,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-11-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/tree/v1.43.0",
+        "credit": "编辑插画",
+        "alt": "紫色中庭的两道金色光线通向同一座琥珀色发光建筑。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-11-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-11-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-11-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-11.md",
-        "contentHash": "3899139ee8349b7257d63762906a74b4b12ccab1db88d0ce0dbc39844d69728e"
+        "contentHash": "95367d4257865dd18399da3715f685b9084f760cbf6a9ca6fa285728c0943e38"
       }
     },
     {
@@ -516,13 +585,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-10-960.webp",
+        "source": "https://github.com/playcanvas/splat-transform/pull/370",
+        "credit": "编辑插画",
+        "alt": "浅绿色机械压机把高斯粒子压在几片青色数据层上方。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-10-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-10-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-10-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-10.md",
-        "contentHash": "347437159526d35bf7bf03572cf4380e360c07518dcd73626c060a4fe4660927"
+        "contentHash": "1d0c375f40aa8c9f29920a73e018eb291ee8eb4ee126e2ce0909a7a629b4ad41"
       }
     },
     {
@@ -585,13 +677,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-09-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4017",
+        "credit": "编辑插画",
+        "alt": "三张胶片画面记录飞鸟拍翅，浅绿色掩码轮廓随飞鸟移动。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-09-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-09-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-09-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-09.md",
-        "contentHash": "b8c42ca64e5fc2b77dea4e019a2ba7b9338148d54e87e02427dafdeb6eae8851"
+        "contentHash": "1c2ffb29c2bde94c9b968b9c5c82818c17da951a116b58e7b131c34cb4f7eba6"
       }
     },
     {
@@ -654,13 +769,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-08-960.webp",
+        "source": "https://github.com/arcturus-vision/3dgs-scripts/commit/80c2c0a633bfd4644f1e2df9dc804ae81e4317f9",
+        "credit": "编辑插画",
+        "alt": "两枚相机镜头从不同角度对准发出青光的岩石点云。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-08-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-08-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-08-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-08.md",
-        "contentHash": "334b73da432339b9adbaca64608420e5ed398511455b37f8e352fd0c502fe64e"
+        "contentHash": "89e463653b5b89af366e9810fb56f6921aaf310c70edf06525923213ca5c68fb"
       }
     },
     {
@@ -875,13 +1013,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-07-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/5c474f78bb3ea31ce773eaffcf9fff5a1086c018",
+        "credit": "编辑插画",
+        "alt": "赭色折片展开成多彩的半透明椭球与散点。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-07-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-07-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-07-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-07.md",
-        "contentHash": "5b1621378489c1a7d7e77819722c2495dca27114152e30a5f94a8d2664b0f88f"
+        "contentHash": "82964cd8f2c5adafaaea428ea203e370a6be9336dc8443d35a581baa69517957"
       }
     },
     {
@@ -982,13 +1143,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-06-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/commit/a66496e647c58f34bdded4e104adbe4ac52fc423",
+        "credit": "编辑插画",
+        "alt": "头显视窗的两侧分别映出近处的珊瑚和更远的蓝色海底结构。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-06-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-06-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-06-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-06.md",
-        "contentHash": "5e349bb921f856533410c29b7de73a59551ef6e1fd2e9ff3acf00019583366b7"
+        "contentHash": "61f273f82588f514d1060e9bf5a01e2cd1c396498651a8153d3f4b17e7bc7419"
       }
     },
     {
@@ -1146,13 +1330,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-05-960.webp",
+        "source": "https://github.com/MAdrid1011/GSPIM",
+        "credit": "编辑插画",
+        "alt": "暖金色旋转木马的中央排列着芯片，周围环绕表示连续帧的金属轨道。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-05-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-05-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-05-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-05.md",
-        "contentHash": "ce571a7daedc5e8f97e409a68ca3c1a774ea2b62565ae75dce4d43f2acca8d8e"
+        "contentHash": "f54273e8f0aedf462e9a8ac482e846b2e9c3b349f7d797564c09f2ac17263067"
       }
     },
     {
@@ -1405,13 +1612,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-04-960.webp",
+        "source": "https://github.com/aras-p/UnityGaussianSplatting/tree/v2.0.0",
+        "credit": "编辑插画",
+        "alt": "淡紫色树冠由立体粒子和半透明网格组成。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-04-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-04-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-04-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-04.md",
-        "contentHash": "b66c8fdb56b8bd8ae589344cad3577bf8d43665033fd05f056df520767a6e9e0"
+        "contentHash": "9f3290eb62f729361e9e9a550dd6f1a2b7666a468a8229e20dbb0d967833ea38"
       }
     },
     {
@@ -1474,13 +1704,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-03-960.webp",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.6.1",
+        "credit": "编辑插画",
+        "alt": "一块由方形瓦片组成的高斯地形悬在湖面上，后方是针叶林与雪山。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-03-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-03-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-03-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-03.md",
-        "contentHash": "2804861961c0e438f9a6685d5276d4ebd2386081703a0b9794ab0a8ded6b9f09"
+        "contentHash": "261af7a224836db64ce7c2f9fd04aab7760e77a621a2712bfc94b945ee580263"
       }
     },
     {
@@ -1562,13 +1815,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-02-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/4b496a2a1c5892b6f8198a2ec7aef0009b4447cc",
+        "credit": "编辑插画",
+        "alt": "白色头显悬在昏暗拱廊上方，拱廊中央的高斯场景重新亮起。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-02-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-02-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-02-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-02.md",
-        "contentHash": "729c647ea1630d33b5f640ef6d6bf0d4eab32a04a949d44a6f6512ff479eaf81"
+        "contentHash": "7e4c327495222d48d6c8f3949648c8c67ed35a475571c93aef51db7f8a5adff3"
       }
     },
     {
@@ -1631,13 +1907,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-11-01-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/commit/4069712370df3425c386610f28a814403e835543",
+        "credit": "编辑插画",
+        "alt": "几处相机位置沿弧线围绕一只布满苔藓的陶罐。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-11-01-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-01-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-11-01-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-11-01.md",
-        "contentHash": "59092291e97611eb71c0dbe56686f665fca9d3d46612a322faad16bc3db735e9"
+        "contentHash": "088554553f5aab0379c92ac1a5c1b2eb96ab734a7ad18d8b8c09a59673c6dfcb"
       }
     },
     {
@@ -1700,13 +1999,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-31-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/81faeb7279f14423e809249a5285fc029bdfa358",
+        "credit": "编辑插画",
+        "alt": "山峦和河谷组成的广阔扫描地景，在近处显示分块的高斯粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-31-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-31-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-31-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-31.md",
-        "contentHash": "0e46028e210bf2bd6108156d82edce9f0c0092079a307ab06bc183cb56e43cbc"
+        "contentHash": "53c97a028b56f2b3f55133e3693741217aeb6ff5c23f3ac4868dc50a652d5915"
       }
     },
     {
@@ -1769,13 +2091,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-30-960.webp",
+        "source": "https://github.com/ooolabdev/ooosplat/commit/28dcaf8e5f4ee48229ac741b4a5f5020ba718c84",
+        "credit": "编辑插画",
+        "alt": "橙色管线把桌面相机、高斯点云组成的雕塑和一组控制模块相连。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-30-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-30-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-30-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-30.md",
-        "contentHash": "da6565ad167325ee323e059748beebc8595f6d7bf75697314bce44091ce56473"
+        "contentHash": "cb28011006b502c2cee5963be237dedbf2407d94bc441510857e4fcb53e7634f"
       }
     },
     {
@@ -1990,13 +2335,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-29-960.webp",
+        "source": "https://github.com/playcanvas/engine/commit/d0127b10af116c63b4d3732488b2b8157eebeeb9",
+        "credit": "编辑插画",
+        "alt": "高处俯视一座海湾城镇，近处建筑清晰，边缘渐变成细小的扫描粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-29-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-29-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-29-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-29.md",
-        "contentHash": "48b6003df29cc797c83a9574f81f4758f4db7033e56b87346ea77efecece4047"
+        "contentHash": "e20f1e0f16184024f0a6556d015f669f830bdb37226a36a2fe8a6be4bfa7998a"
       }
     },
     {
@@ -2135,13 +2503,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-28-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/commit/6a7c00d1fffce27e2f1e725299ca7569655cdc84",
+        "credit": "编辑插画",
+        "alt": "一排玻璃盒陈列处于不同重建阶段的同一座小型建筑。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-28-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-28-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-28-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-28.md",
-        "contentHash": "cfe10b6c1ed7886b6aed0ee2eea658354e385643e3ce90d310a48393a66cfa48"
+        "contentHash": "ca99d6be3fe3e2996fac64f7b7642bffd69275479a7130aceda4f8dab6e828a8"
       }
     },
     {
@@ -2204,13 +2595,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-27-960.webp",
+        "source": "https://github.com/playcanvas/supersplat/releases/tag/v3.7.0",
+        "credit": "编辑插画",
+        "alt": "半透明的米色薄片绕中心螺旋排开，投下彼此交叠的阴影。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-27-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-27-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-27-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-27.md",
-        "contentHash": "36822bf2fee5534e7f07e3075a3394f95696d5581858f51f008920c67c0aafc4"
+        "contentHash": "4d15fb09f65dec1862ae888b3053ffda297c69bff7691e1ecfbee790f221d26f"
       }
     },
     {
@@ -2273,13 +2687,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-26-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3728",
+        "credit": "编辑插画",
+        "alt": "金属圆环固定着一座发光的高斯重建建筑，外缘可见细小粒子。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-26-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-26-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-26-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-26.md",
-        "contentHash": "29c7d3c621e2390e4be94024c06765f352a51beb4fbe28f40af1d9c861c64333"
+        "contentHash": "6bcb798644ece2bc94735920c085c73b088fd91ab9560acfb1c1fe83d19585e2"
       }
     },
     {
@@ -2361,13 +2798,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-25-960.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3605",
+        "credit": "编辑插画",
+        "alt": "暖色山谷里的玻璃建筑逐渐散成点云，表现训练场景与项目资源。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-25-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-25-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-25-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-25.md",
-        "contentHash": "e0645358457b48947a6f0c5b0232afb1e1722c65d6bc4f6e74dd13e7a28c0979"
+        "contentHash": "d00f49aefe8f2e6c8a8044617fb7337df5cd8d0452d6195059fba9619d18289c"
       }
     },
     {
@@ -2582,13 +3042,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-20-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer/pull/330",
+        "credit": "编辑插画",
+        "alt": "双手横持手机，屏幕里是一处带有高斯粒子边缘的水岸场景。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-20-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-20-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-20-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 2,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-20.md",
-        "contentHash": "a9562b80e8d690a74fa037ed42c7612d9d771e9ae39041388978a6cc9bc13ce2"
+        "contentHash": "dcfbef0440da3a442a4dd8ee9de48feee1ad4bd0dce0d191d4d434565719cfa3"
       }
     },
     {
@@ -2670,13 +3153,36 @@
           ]
         }
       ],
+      "image": {
+        "kind": "editorial-illustration",
+        "url": "/media/editorial-covers/2026-10-19-960.webp",
+        "source": "https://github.com/playcanvas/engine/pull/9796",
+        "credit": "编辑插画",
+        "alt": "一枚蓝金色球体悬在四枚反光小球之间，表现球谐的视角相关外观。",
+        "width": 960,
+        "height": 540,
+        "variants": [
+          {
+            "url": "/media/editorial-covers/2026-10-19-480.webp",
+            "width": 480
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-19-960.webp",
+            "width": 960
+          },
+          {
+            "url": "/media/editorial-covers/2026-10-19-1440.webp",
+            "width": 1440
+          }
+        ]
+      },
       "prs": [],
       "readingMinutes": 1,
       "unresolvedSources": 0,
       "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
       "readingEdition": {
         "path": "docs/reading/2026-10-19.md",
-        "contentHash": "22e011170883344383ba9706a2a25b9e2f1348eb5ececdc5e5e15bee376af0b5"
+        "contentHash": "c38f38ed6d1d1169ffb1b3b1e4037abb89f363efa26d1be509e73a4ca59dab9f"
       }
     },
     {

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { BASE } from "../lib/catalog";
 import { clearSearchHistory, readSearchHistory, rememberSearch, searchTerm } from "../lib/search-history";
+import { lockDocumentScroll } from "../lib/scroll-lock";
 import Icon from "./Icon";
 import SearchHistory from "./SearchHistory";
 
@@ -13,15 +14,14 @@ export default function SearchOverlay({ open, onClose }: { open: boolean; onClos
   useEffect(() => {
     if (!open || !dialog.current) return;
     const element = dialog.current, previousFocus = document.activeElement as HTMLElement | null;
-    const overflow = document.body.style.overflow;
     setQuery(""); setRecent(readSearchHistory());
-    document.body.style.overflow = "hidden";
+    const unlock = lockDocumentScroll();
     element.showModal();
     const frame = requestAnimationFrame(() => input.current?.focus({ preventScroll: true }));
     return () => {
       cancelAnimationFrame(frame);
       element.close();
-      document.body.style.overflow = overflow;
+      unlock();
       if (previousFocus?.isConnected && previousFocus.getClientRects().length) previousFocus.focus({ preventScroll: true });
     };
   }, [open]);

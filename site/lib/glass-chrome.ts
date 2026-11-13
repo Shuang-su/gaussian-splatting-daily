@@ -127,7 +127,7 @@ export function startGlassChrome(root: HTMLElement) {
   });
   function draw(now: number) {
     frame = 0;
-    if (disposed || failed || document.hidden) return;
+    if (disposed || failed || document.hidden || document.documentElement.hasAttribute("data-card-glass-hold")) return;
     const surfaces = Array.from(document.querySelectorAll<HTMLElement>(selector)).filter(element => {
       if (element.closest("[inert], [hidden], [aria-hidden=true]")) return false;
       const bounds = element.getBoundingClientRect();
@@ -199,7 +199,7 @@ export function startGlassChrome(root: HTMLElement) {
   });
   observer.observe(document.body, { subtree: true, childList: true, characterData: true, attributes: true,
     attributeFilter: ["class", "style", "hidden", "aria-hidden", "data-card-pulling", "data-pull-visible", "data-retained", "src", "data-glass-surface"] });
-  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "class", "style"] });
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "data-card-glass-hold", "class", "style"] });
   const viewport = window.visualViewport;
   const preference = matchMedia("(prefers-color-scheme: dark)");
   window.addEventListener("scroll", schedule, { passive: true });

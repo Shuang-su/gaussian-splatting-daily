@@ -1,4 +1,5 @@
 "use client";
+import ImageCredit from "./ImageCredit";
 import { useEffect, useRef, useState } from "react";
 import Link from "./ArticleLink";
 import type { SourceImage as ImageData } from "../lib/types";
@@ -24,8 +25,8 @@ export default function SourceImage({ image, caption = false, previewable = capt
       />;
   return (
     <figure className={`source-image${failed ? " image-fallback" : ""}`}>
-      {failed ? <div className="image-unavailable"><span>图片暂不可用</span><a href={image.source} target="_blank" rel="noopener noreferrer">查看来源</a></div> : href ? <Link className="source-image-link" href={href} aria-label={label}>{picture}</Link> : picture}
-      {caption && <figcaption><a href={image.source} target="_blank" rel="noopener noreferrer">{image.credit}</a></figcaption>}
+      {failed ? <div className="image-unavailable"><span>图片暂不可用</span><a href={image.source} target="_blank" rel="noopener noreferrer">{image.kind === "editorial-illustration" ? "主题来源" : "查看来源"}</a></div> : href ? <Link className="source-image-link" href={href} aria-label={label}>{picture}</Link> : picture}
+      {caption && <figcaption><ImageCredit image={image} /></figcaption>}
     </figure>
   );
 }

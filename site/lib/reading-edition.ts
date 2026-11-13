@@ -1,10 +1,11 @@
 import { createHash } from "node:crypto";
 import matter from "gray-matter";
 import type { Root, RootContent } from "mdast";
-import type { Article, EditorialEvent, Entry } from "./types";
+import type { Article, EditorialEvent, Entry, SourceImage } from "./types";
 import { sourceBlocks } from "./editorial";
 import { parseMarkdown } from "./markdown";
 import { imageKey } from "./images";
+import type { CoverRecord } from "./editorial-covers";
 
 type ReaderEvent = Pick<EditorialEvent, "id" | "group" | "judgment"> & Partial<Pick<EditorialEvent, "anchor" | "tags" | "images">> & { source?: string; kind?: Entry["kind"]; sourceRefs?: string[] };
 type ParseArticle = (markdown: string, file: string) => Promise<Article>;
@@ -14,6 +15,7 @@ const idsIn = (html: string) => [...html.matchAll(/\bid="([^"]+)"/g)].map(match 
 /** A reader edition is tied to an exact research record; it never replaces it. */
 export async function applyReadingEdition(
   source: Article, sourceMarkdown: string, markdown: string, file: string, parse: ParseArticle,
+  { cover, validateFigure }: { cover?: CoverRecord; validateFigure?: (image: SourceImage, primary?: string) => boolean } = {},
 ): Promise<Article> {
   const { data, content } = matter(markdown);
   if (![1, 2].includes(data.version) || data.report !== source.id || data.sourceHash !== source.contentHash)
@@ -38,6 +40,9 @@ export async function applyReadingEdition(
     if (data.version === 2) {
       if (!event.sourceRefs?.length || event.sourceRefs.some(ref => !researchBlocks.has(ref))) throw Error(`${file}: missing or stale research block mapping for ${event.id}`);
       if (!event.source || !/^https:\/\//.test(event.source) || !sourceMarkdown.includes(event.source) || !["paper", "tool", "news"].includes(event.kind || "")) throw Error(`${file}: invalid primary source for ${event.id}`);
+      if (event.images?.some(image => image.kind === "editorial-illustration" ||
+          (!image.originalUrl?.startsWith("/media/originals/") && !validateFigure?.(image, event.source))))
+        throw Error(`${file}: reading figure needs a dated archive and primary attribution for ${event.id}`);
       if (!original && (!event.anchor || !event.tags)) throw Error(`${file}: new reading event needs an anchor and tags`);
     }
     assigned.add(event.id);
@@ -60,11 +65,18 @@ export async function applyReadingEdition(
       blocks: blocks.slice(start, end).map(block => block.key),
     };
   });
+  if (data.editorialCover !== undefined) {
+    const event = data.events.find((item: ReaderEvent) => item.id === cover?.eventId);
+    if (!cover || data.editorialCover !== source.date || data.image || event?.source !== cover.image.source)
+      throw Error(`${file}: editorial cover needs its dated manifest and primary event`);
+  } else if (data.image?.kind === "editorial-illustration") {
+    throw Error(`${file}: editorial illustrations require a manifest reference`);
+  }
   const meta = structuredClone(matter(sourceMarkdown).data);
   if (data.revisions !== undefined) meta.revisions = data.revisions;
   meta.portal = {
     ...meta.portal, headline: data.headline, summary: data.summary, highlights: [],
-    ...(data.image ? { image: data.image } : {}),
+    ...(data.editorialCover ? { image: cover!.image } : data.image ? { image: data.image } : {}),
     layout: "events", editorial: { version: 1, events, introduction: [], archive: [], omit: [] },
   };
   const reading = await parse(matter.stringify(content, meta), file);
@@ -95,7 +107,7 @@ export async function applyReadingEdition(
   if (data.version === 2) for (const event of events) {
     if (highlights.some(entry => entry.id === event.id)) continue;
     const mapping = data.events.find((entry: ReaderEvent) => entry.id === event.id) as ReaderEvent;
-    highlights.push({ id: event.id, anchor: event.anchor, kind: mapping.kind!, source: mapping.source!, title: event.title, summary: summaries.get(event.id)!, date: source.date, topics: source.topics, image: event.images?.[0] });
+    highlights.push({ id: event.id, anchor: event.anchor, kind: mapping.kind!, source: mapping.source!, title: event.title, summary: summaries.get(event.id)!, date: source.date, topics: source.topics, image: event.images?.find(image => image.originalUrl?.startsWith("/media/originals/")) });
   }
   return {
     ...source, headline: reading.headline, summary: reading.summary,
@@ -104,7 +116,7 @@ export async function applyReadingEdition(
     readingMinutes: reading.readingMinutes, introductionHtml: "", archiveHtml,
     readingGuide: guide, paperTitles, paperOriginalTitles: data.paperOriginalTitles || {}, paperSummaries, highlights,
     image: reading.image,
-    images: [...new Map([...source.images, ...reading.images].map(image => [imageKey(image), image])).values()],
+    images: [...new Map([...source.images, ...reading.images, ...(reading.events || []).flatMap(event => event.images?.filter(image => image.originalUrl?.startsWith("/daily-media/")) || [])].map(image => [imageKey(image), image])).values()],
     editorialDisclosure: data.disclosure,
     targets: [...new Set([...source.targets, ...reading.targets, ...archiveAliases])],
     readingEdition: { path: file, contentHash: createHash("sha256").update(markdown).digest("hex") },

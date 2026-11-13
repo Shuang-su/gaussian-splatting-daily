@@ -61,15 +61,20 @@
 .home-slide-date > span { display: block; font-size: 9px; font-weight: 500; line-height: 17px; color: white; background: #da282a; }
 .home-slide-date > strong { display: block; font-size: 17px; font-weight: 500; line-height: 31px; background: var(--bg); }
 :root[data-theme="dark"] .home-slide-date > strong { background: #39393c; }
-.carousel-controls { position: absolute; top: 8px; left: 16px; right: 12px; display: flex; align-items: center; gap: 8px; z-index: 3; }
+.carousel-controls { position: absolute; top: 0; left: 17px; right: 17px; display: flex; align-items: center; z-index: 3; }
 .carousel-pages { display: flex; flex: 1; gap: 8px; min-width: 0; }
-.carousel-page { display: flex; align-items: center; justify-content: center; flex: 1; min-width: 0; height: 32px; border: 0; background: none; padding: 0; }
-.carousel-track { display: block; width: 100%; height: 2px; border-radius: 1px; overflow: hidden; background: rgba(255,255,255,.4); }
+.carousel-page { display: flex; align-items: flex-start; justify-content: center; flex: 1; min-width: 0; height: 40px; border: 0; background: none; padding: 17px 0 0; }
+.carousel-track { display: block; width: 100%; height: 2px; border-radius: 1px; overflow: hidden; background: rgb(255 255 255 / 25%); }
 .carousel-progress { display: block; height: 100%; width: 100%; background: white; transform-origin: left; animation: carousel-progress 8s linear both; }
-.carousel-page[aria-current="true"] .carousel-track { background: rgba(255,255,255,.65); }
-.carousel-play { width: 28px; height: 28px; padding: 6px; border: 0; border-radius: 50%; color: white; background: rgba(0,0,0,.18); display: flex; align-items: center; justify-content: center; }
+.carousel-page[aria-current="true"] .carousel-track { background: rgb(255 255 255 / 25%); }
+.home-carousel[data-playing="false"] .carousel-page[aria-current="true"] .carousel-track { background: rgb(255 255 255 / 53%); }
+.home-slide-visual::after { content: ""; position: absolute; inset: 0 0 auto; height: 56px; border-radius: inherit; background: linear-gradient(rgb(0 0 0 / 40%), transparent); pointer-events: none; }
+.carousel-play-area { position: absolute; inset: 1px 1px auto; aspect-ratio: 396/275.21; z-index: 3; pointer-events: none; }
+.carousel-play { position: absolute; inset-inline-end: 10px; inset-block-end: 6px; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; color: white; background: transparent; display: grid; place-items: center; isolation: isolate; pointer-events: auto; }
+.carousel-play::before { content: ""; position: absolute; z-index: -1; inset: 7px; border-radius: inherit; background: rgb(0 0 0 / 45%); }
+.carousel-play[hidden] { display: none; }
 .carousel-play .icon { width: 15px; height: 15px; }
-.home-slide:has(.image-unavailable) ~ .carousel-controls { background: #555; border-radius: 8px; padding: 0 6px; }
+@media (prefers-reduced-motion: reduce) { .carousel-progress { animation: none; } }
 @keyframes carousel-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 
 .home-content { display: grid; grid-template-columns: 200px minmax(0,588px) 200px; gap: 106px; max-width: 1264px; padding: 32px 32px 64px; margin: 0 auto; }
@@ -194,7 +199,6 @@
   .home-slide-visual { border-radius: 19px 19px 0 0; }
   .home-slide-copy { border-radius: 0 0 19px 19px; }
   .home-slide h1 { font-size: 17px; line-height: 24px; min-height: 48px; }
-  .carousel-controls { left: 16px; right: 12px; top: 4px; }
   .home-content { display: block; padding: 32px 16px 48px; }
   .home-feed-nav { position: static; margin-bottom: 24px; }
   .home-content.has-header-selector .home-feed-nav { display: none; }

@@ -1,9 +1,11 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import { createHash } from "node:crypto";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { buildArchive, ROOT } from "../lib/content";
+import { loadEditorialCovers } from "../lib/editorial-covers";
 import { readingNavigation, flattenReadingLinks } from "../lib/reading-navigation";
 import { weekPicks } from "../lib/week-picks";
 import ArticleEvents from "../components/ArticleEvents";
@@ -16,7 +18,7 @@ test("archived covers are local, have intrinsic dimensions and accessible origin
   const historical = articles.filter(a => a.date <= "2026-10-18");
   assert.equal(historical.length, 31);
   for (const a of historical) assert.ok(a.image, `${a.date}: missing historical cover`);
-  for (const a of articles.filter(a => a.image)) {
+  for (const a of articles.filter(a => a.image && a.image.kind !== "editorial-illustration")) {
     assert.ok(a.image!.url.startsWith("/media/") || a.date > "2026-10-18" && a.image!.url.startsWith("/daily-media/"));
     assert.ok(a.image);
     assert.ok(a.image.width! > 0 && a.image.height! > 0);
@@ -25,6 +27,29 @@ test("archived covers are local, have intrinsic dimensions and accessible origin
     assert.ok(a.image.source.startsWith("https://"));
   }
   assert.match(articles.find(a => a.date === "2026-09-30")!.image!.source, /radiancefields.com\/spirula-studio-v2026.9.30/);
+});
+test("new reading editions use 22 distinct dated editorial covers", async () => {
+  const { articles } = await archive;
+  const manifest = loadEditorialCovers(ROOT);
+  const illustrated = articles.filter(article => article.image?.kind === "editorial-illustration");
+  assert.equal(illustrated.length, 22);
+  assert.deepEqual(illustrated.map(article => article.date).sort(),
+    articles.filter(article => article.date > "2026-10-18").map(article => article.date).sort());
+  assert.equal(new Set(Object.values(manifest).map(cover => cover.inputSha256)).size, 22);
+  for (const article of illustrated) {
+    const { date, image } = article;
+    const cover = manifest[date];
+    assert.deepEqual(image, cover.image);
+    assert.equal(image?.originalUrl, undefined);
+    assert.equal(image?.url, `/media/editorial-covers/${date}-960.webp`);
+    assert.equal(image?.width, 960);
+    assert.equal(image?.height, 540);
+    assert.deepEqual(image?.variants?.map(variant => variant.width), [480, 960, 1440]);
+    for (const variant of cover.files) {
+      const bytes = fs.readFileSync(`${ROOT}/site/public${variant.url}`);
+      assert.equal(createHash("sha256").update(bytes).digest("hex"), variant.sha256, variant.url);
+    }
+  }
 });
 test("floating navigation follows reading order and every nested target exists in rendered content", async () => {
   const { articles } = await archive;

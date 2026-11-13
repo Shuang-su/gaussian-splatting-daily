@@ -112,6 +112,28 @@ def verify(root=ROOT):
             digest = hashlib.sha256(reader_path.read_bytes()).hexdigest()
             if digest != reader['contentHash'] or f'data-reading-sha256="{digest}"' not in detail.read_text():
                 raise ValueError(f'Reading edition does not match the export: {report_date}')
+    cover_manifest = root / 'site/public/media/editorial-covers/manifest.json'
+    if cover_manifest.is_file():
+        covers = json.loads(cover_manifest.read_text())['covers']
+        shares = json.loads((output / 'share/manifest.json').read_text())['reports']
+        for report_date, cover in covers.items():
+            detail = output / f'daily/{report_date.replace("-", "/")}/index.html'
+            share = shares[report_date]
+            if BASE + cover['image']['url'] not in pages[detail].urls:
+                raise ValueError(f'Editorial cover does not appear on its daily page: {report_date}')
+            for variant in cover['files']:
+                media = output / variant['url'].lstrip('/')
+                if hashlib.sha256(media.read_bytes()).hexdigest() != variant['sha256']:
+                    raise ValueError(f'Editorial cover does not match its export: {variant["url"]}')
+            current = share.get('cover', {})
+            png = output / share['url'].lstrip('/')
+            if (current.get('url') != cover['image']['url'] or
+                    current.get('kind') != 'editorial-illustration' or
+                    current.get('source') != cover['image']['source'] or
+                    current.get('credit') != cover['image']['credit'] or
+                    current.get('sha256') != next(file['sha256'] for file in cover['files'] if file['url'] == current['url']) or
+                    hashlib.sha256(png.read_bytes()).hexdigest() != share['sha256']):
+                raise ValueError(f'Editorial cover does not match its share card: {report_date}')
     return len(pages), len(reports)
 
 

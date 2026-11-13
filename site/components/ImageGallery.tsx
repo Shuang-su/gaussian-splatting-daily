@@ -1,4 +1,5 @@
 "use client";
+import ImageCredit from "./ImageCredit";
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import type { SourceImage } from "../lib/types";
 import { assetUrl, imageKey } from "../lib/images";
@@ -186,7 +187,7 @@ export default function ImageGallery({ images, children }: { images: SourceImage
           <output className="preview-zoom" aria-label="缩放比例">{Math.round(view.scale * 100)}%</output>
           <button type="button" aria-label="放大图片" title="放大" disabled={view.scale >= 4} onClick={() => zoom(0.5)}><Icon name="plus" /></button>
           <button type="button" aria-label="适应屏幕" title="适应屏幕" onClick={() => { clearPointers(); writeView({ ...viewRef.current, scale: 1, offset: { x: 0, y: 0 } }); }}><Icon name="fit" /></button>
-          <a href={assetUrl(current.originalUrl || current.url)} target="_blank" rel="noopener noreferrer" aria-label="查看原图" title="查看原图"><Icon name="external" /></a>
+          <a href={assetUrl(current.originalUrl || (current.kind === "editorial-illustration" ? current.variants?.at(-1)?.url : undefined) || current.url)} target="_blank" rel="noopener noreferrer" aria-label="查看原图" title="查看原图"><Icon name="external" /></a>
           <button type="button" aria-label="关闭图片预览" title="关闭" onClick={close}><Icon name="close" /></button>
         </div>
         <div className="preview-stage" ref={stage} data-scale={view.scale} data-rotation={view.rotation} data-offset-x={view.offset.x} data-offset-y={view.offset.y} onClick={(event) => {
@@ -245,9 +246,9 @@ export default function ImageGallery({ images, children }: { images: SourceImage
           {images.length > 1 && <button type="button" className="preview-prev" aria-label="上一张图片" onClick={() => move(-1)}><Icon name="left" /></button>}
           {failed.has(key) ? <div className="preview-failed" role="status">
             <p>图片加载失败</p>
-            <a href={current.source} target="_blank" rel="noopener noreferrer">查看来源</a>
+            <a href={current.source} target="_blank" rel="noopener noreferrer">{current.kind === "editorial-illustration" ? "主题来源" : "查看来源"}</a>
             <button type="button" aria-label="重新加载图片" onClick={() => { setFailed((old) => { const next = new Set(old); next.delete(key); return next; }); setRetry((old) => old + 1); }}><Icon name="retry" />重试</button>
-          </div> : <img key={`${key}:${retry}`} className="preview-picture" src={assetUrl(current.originalUrl || current.url)} alt={current.alt} draggable={false} decoding="async" style={{ width: fitted.width, height: fitted.height, transform: `translate(-50%, -50%) translate(${view.offset.x}px, ${view.offset.y}px) rotate(${view.rotation}deg) scale(${view.scale})` }} onLoad={(event) => {
+          </div> : <img key={`${key}:${retry}`} className="preview-picture" src={assetUrl(current.originalUrl || (current.kind === "editorial-illustration" ? current.variants?.at(-1)?.url : undefined) || current.url)} alt={current.alt} draggable={false} decoding="async" style={{ width: fitted.width, height: fitted.height, transform: `translate(-50%, -50%) translate(${view.offset.x}px, ${view.offset.y}px) rotate(${view.rotation}deg) scale(${view.scale})` }} onLoad={(event) => {
             const element = event.currentTarget;
             dimensions.current.set(key, { width: element.naturalWidth, height: element.naturalHeight });
             setDimensionRevision((old) => old + 1);
@@ -256,7 +257,7 @@ export default function ImageGallery({ images, children }: { images: SourceImage
         </div>
         <footer className="preview-footer">
           <p>{current.alt}</p>
-          <a href={current.source} target="_blank" rel="noopener noreferrer">{current.credit} · 图片来源</a>
+          <ImageCredit image={current} showSourceLabel />
           <div className="preview-thumbnails" ref={thumbnails}>
             {images.map((image, i) => {
               const thumbnailKey = imageKey(image);

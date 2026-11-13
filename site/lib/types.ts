@@ -1,5 +1,6 @@
 export type Kind = "paper" | "tool" | "news";
 export interface SourceImage {
+  kind?: "editorial-illustration";
   url: string;
   alt: string;
   source: string;
