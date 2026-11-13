@@ -1,0 +1,13 @@
+{
+  "taskId": "6a9d6d5b4b648191996c3819f0986155",
+  "conversationId": "6aac7ffd-8e70-83ee-b921-e1ecf0f35177",
+  "name": "metaflow horizon · 高斯日报",
+  "timezone": "Asia/Shanghai",
+  "dailyTime": "08:00",
+  "nextRunObserved": "2026-11-14 08:00（列表显示：明天 8时 · 每天）",
+  "oldNextRunObserved": "明天 7时 · 每天 8:00",
+  "promptSavedAndReadBack": true,
+  "executionContract": "docs/chatgpt-horizon-task.md",
+  "newTaskCreated": false,
+  "scheduledRunsObserved": 0
+}

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read public identity and canonical/reader bytes without advancing the cursor."""
 import argparse, hashlib, json, time, urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime, timezone
 from record_publication import SITE, verify_readback
@@ -22,7 +23,14 @@ def verify(commit, site=SITE):
     if reader:
         digest=hashlib.sha256((ROOT/reader['path']).read_bytes()).hexdigest()
         if reader['contentHash']!=digest or f'data-reading-sha256="{digest}"' not in detail: raise ValueError('Public reading edition mismatch')
-    return {'state':'deployed-and-read-back','commit':commit,'checkedAt':datetime.now(timezone.utc).isoformat(),'site':site,'evidence':evidence}
+    index=json.loads(read('/content-index.json'))
+    if index.get('updatedThrough')!=date: raise ValueError('Public search index is stale')
+    for name in ['daily','weekly','articles']:
+        feed=ET.fromstring(read('/feeds/'+name+'.xml'))
+        if feed.tag!='rss' or feed.find('channel/link').text!=SITE+'/': raise ValueError('Public RSS uses the wrong site')
+    sitemap=ET.fromstring(read('/sitemap.xml'))
+    if any(not e.text.startswith(SITE+'/') for e in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')): raise ValueError('Public sitemap uses the wrong site')
+    return {'searchVerified':True,'feedsVerified':['daily','weekly','articles'],'sitemapVerified':True,'state':'deployed-and-read-back','commit':commit,'checkedAt':datetime.now(timezone.utc).isoformat(),'site':site,'evidence':evidence}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--site',default=SITE);p.add_argument('--output',required=True);a=p.parse_args()

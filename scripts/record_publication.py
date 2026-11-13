@@ -58,6 +58,22 @@ def verify_readback(report_date, content_hash, deployment, homepage, detail):
     }
 
 
+def observation_status(observations):
+    """Count distinct consecutive scheduled dates; manual runs/retries cannot fill slots."""
+    latest = {}
+    for run in sorted(observations.get('runs', []), key=lambda r: r.get('verified_at', r.get('failed_at', ''))):
+        if run.get('mode') == 'scheduled':
+            latest[date.fromisoformat(run['date'])] = run
+    streak, previous = 0, None
+    for day in sorted(latest, reverse=True):
+        if latest[day].get('state') != 'deployed-and-read-back' or (previous and (previous - day).days != 1):
+            break
+        streak += 1
+        previous = day
+    return {'scheduled_success_streak': streak,
+            'status': 'observed' if streak >= observations.get('target_scheduled_runs', 3) else 'observing'}
+
+
 def transition(checkpoint, observations, report_date, main_sha, deployment, mode, window_end=None, *, readback=None):
     date.fromisoformat(report_date)
     if mode not in {'manual', 'scheduled'}:
@@ -84,6 +100,7 @@ def transition(checkpoint, observations, report_date, main_sha, deployment, mode
             'verified_at': datetime.now(timezone.utc).isoformat(),
             'state': 'deployed-and-read-back', 'url': SITE + '/', 'readback': readback,
         })
+    obs.update(observation_status(obs))
     return cp, obs
 
 

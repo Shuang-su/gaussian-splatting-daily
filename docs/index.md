@@ -1,10 +1,15 @@
-# Gaussian Splatting Daily Docs
+# metaflow horizon 内容归档
 
-This directory is the durable, human-readable content layer for the project.
+研究稿、阅读版、文章、专题、应用与周报共同构成可追溯的内容归档。
 
-## Entry points
+## 入口
 
-- [公开门户](https://shuang-su.github.io/gaussian-splatting-daily/)
+- [编辑规范](editorial-style.md)
+- [独立文章与应用](articles/)
+- [阅读版](reading/)
+- [周报](weekly/)
+- [本轮历史审核与来源缺口](changes/20261113-metaflow-horizon/history-audit.json)
+- [公开门户](https://metaflow.shuang-su.com/horizon/)
 - [历史核验与待复核来源](history-audit.md)
 - [发布运行手册](publication.md)
 - [封面选择](cover-selection.md)

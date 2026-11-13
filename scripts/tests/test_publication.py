@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from record_publication import transition, verify_readback
+from record_publication import transition, verify_readback, observation_status
 
 
 class Publication(unittest.TestCase):
@@ -64,6 +64,18 @@ class Publication(unittest.TestCase):
         cp, obs = transition(self.cp, self.obs, '2026-09-18', 'sha', self.deployment, 'manual', readback={**self.evidence, 'report_id': 'gsd-2026-09-18'})
         self.assertEqual(cp['committed_through'], '2026-09-30')
         self.assertEqual(len(obs['runs']), 1)
+
+    def test_manual_and_same_day_retries_cannot_complete_scheduled_observation(self):
+        runs = [{'date':'2026-11-14','mode':mode,'state':'deployed-and-read-back','verified_at':f'2026-11-14T08:0{i}:00+08:00'} for i,mode in enumerate(['manual','scheduled','scheduled'])]
+        self.assertEqual(observation_status({'runs':runs})['scheduled_success_streak'],1)
+        self.assertEqual(observation_status({'runs':runs})['status'],'observing')
+
+    def test_three_dates_must_be_consecutive_and_a_failed_latest_run_resets_observation(self):
+        runs = [{'date':f'2026-11-{day}','mode':'scheduled','state':'deployed-and-read-back','verified_at':f'2026-11-{day}T08:10:00+08:00'} for day in [14,15,16]]
+        self.assertEqual(observation_status({'runs':runs})['status'],'observed')
+        self.assertEqual(observation_status({'runs':[runs[0],runs[2]]})['scheduled_success_streak'],1)
+        runs.append({'date':'2026-11-17','mode':'scheduled','state':'failed','failed_at':'2026-11-17T08:20:00+08:00'})
+        self.assertEqual(observation_status({'runs':runs})['scheduled_success_streak'],0)
 
 
 if __name__ == '__main__':

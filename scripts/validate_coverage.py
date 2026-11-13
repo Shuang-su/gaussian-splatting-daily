@@ -3,9 +3,13 @@
 import argparse,json,re
 from datetime import datetime,date
 from pathlib import Path
+from urllib.parse import urlsplit
 ROOT=Path(__file__).resolve().parents[1]
 STATUSES={'checked-no-new','candidates','unavailable','unchecked'}
 DISPOSITIONS={'included','merged','deferred','excluded'}
+def source_url(url):
+ p=urlsplit(url);return (p.scheme,p.netloc,p.path.rstrip("/"))
+
 def validate(record,registry,events):
  errors=[]
  try:
@@ -28,6 +32,18 @@ def validate(record,registry,events):
    if not check.get('urls'):errors.append('source check needs attempted URLs')
   if check.get('status') in {'unavailable','unchecked'} and not check.get('gap'):errors.append('source failure needs gap')
   if check.get('status')=='checked-no-new' and check.get('candidateIds'):errors.append('no-new source contains candidates')
+  if record.get('mode') in {'scheduled','manual'}:
+   source=next((s for s in registry['sources'] if s['id']==check.get('sourceId')), {})
+   receipts=check.get('urlResults',[])
+   for url in source.get('urls',[]):
+    receipt=next((r for r in receipts if source_url(r.get('url',''))==source_url(url)), None)
+    if not receipt:errors.append('registered source URL needs its own receipt: '+url);continue
+    if receipt.get('status') not in {'checked-no-new','candidates','unavailable'}:errors.append('source URL needs explicit access outcome')
+    try:
+     if not datetime.fromisoformat(receipt['checkedAt']).tzinfo:raise ValueError()
+    except (KeyError,ValueError,TypeError):errors.append('source URL needs actual timestamp')
+    if receipt.get('status')=='unavailable' and not receipt.get('gap'):errors.append('source URL failure needs gap')
+
  candidates=record.get('candidates',[]);candidate_ids=[c.get('id') for c in candidates]
  if len(candidate_ids)!=len(set(candidate_ids)):errors.append('duplicate candidate')
  for c in candidates:

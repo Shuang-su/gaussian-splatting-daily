@@ -17,3 +17,10 @@ class CoverageTests(unittest.TestCase):
  def test_important_event_cannot_defer(self):
   r=self.record();r['candidates']=[{'id':'a','importance':'important','disposition':'deferred','reason':'too short','sources':['https://example.com']}]
   self.assertTrue(any('important event' in e for e in validate(r,{'sources':[{'id':'x'}]},set())))
+
+ def test_family_success_cannot_hide_an_unchecked_registered_url(self):
+  r=self.record();registry={'sources':[{'id':'x','urls':['https://x.com/playcanvas','https://x.com/valigurskym']}]}
+  r['checks'][0]['urlResults']=[{'url':'https://x.com/playcanvas','status':'unavailable','checkedAt':'2026-11-13T07:55:00+08:00','gap':'login wall'}]
+  self.assertTrue(any('valigurskym' in e for e in validate(r,registry,set())))
+  r['checks'][0]['urlResults'].append({'url':'https://x.com/valigurskym','status':'unavailable','checkedAt':'2026-11-13T07:56:00+08:00','gap':'login wall'})
+  self.assertEqual(validate(r,registry,set()),[])

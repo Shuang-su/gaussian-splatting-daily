@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "timezone": "Asia/Tokyo",
-  "committed_through": "2026-10-20",
+  "committed_through": "2026-11-13",
   "last_workflow_run_id": null,
   "backfilled_dates": [
     "2026-09-18",
@@ -21,5 +21,7 @@
   "last_editorial_update": "2026-11-13T08:29:24+09:00",
   "generated_at": "2026-11-13T08:29:24+09:00",
   "last_completed_date": "2026-11-13",
-  "last_report_path": "docs/daily/2026/11/2026-11-13.md"
+  "last_report_path": "docs/daily/2026/11/2026-11-13.md",
+  "verified_main_sha": "b0100f400aa8919a6caa87c450bb227787c17f07",
+  "last_successful_window_end": "2026-11-13T17:47:13+08:00"
 }
