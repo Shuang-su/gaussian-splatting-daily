@@ -12,6 +12,8 @@
 
 按注册表检查 Radiance Fields 新闻和工具目录、厂商/应用更新及官方博客、X 官方账号与创作者、论文及项目页、GitHub 发布与讨论、中文及海外社区。Radiance Fields 用于发现和交叉核对，技术结论追溯原始发布。对每个来源记录实际检查时间、覆盖窗口、尝试 URL、候选链接及结果。区分 checked-no-new、candidates、unavailable、unchecked；当天正式任务不能把未检查冒充已检查。X 无法读到原帖时记录缺口，用作者网站等核验，不能把搜索摘要或访问失败写成无新增。对内容只有登录外壳的 HTTP 200 也记录不可读取。
 
+每个注册 URL 都必须在对应 checks[].urlResults 中有独立回执：url、checkedAt、status（checked-no-new/candidates/unavailable）、失败时的 gap，以及发现的候选。不能只用来源家族的一次成功覆盖其他未检查 URL；query 参数可以用于真实搜索。
+
 data/research/YYYY-MM-DD.json 使用现有 schema，mode 为 scheduled（人工触发本任务则 manual），六个来源家族均有检查；每条候选有稳定 ID、事件日期、sources、importance、disposition、reason。采用 included、合并 merged、延后 deferred、排除 excluded 均须说明；排除要有 exclusionEvidence。重要事件必须有可见阅读目标，或明确说明本期因此尚不能发布，不能静默延后。保留媒体发现链接、官方发布与有独立信息的原帖。相同发布版本不要重复当作新事件；原论文首次归档身份和旧锚点保留。
 
 ## 写作与审核
