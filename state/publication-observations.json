@@ -1,5 +1,24 @@
 {
   "schema_version": 1,
   "target_scheduled_runs": 3,
-  "runs": []
+  "runs": [
+    {
+      "key": "manual:2026-11-13:b0100f400aa8919a6caa87c450bb227787c17f07",
+      "date": "2026-11-13",
+      "mode": "manual",
+      "commit": "b0100f400aa8919a6caa87c450bb227787c17f07",
+      "verified_at": "2026-11-13T10:52:01.300991+00:00",
+      "state": "deployed-and-read-back",
+      "url": "https://metaflow.shuang-su.com/horizon/",
+      "readback": {
+        "report_id": "gsd-2026-11-13",
+        "content_sha256": "1799278febe23a5c1a8270ffd71575b038a335d09f6c043a114fd40611030da0",
+        "latest_report_date": "2026-11-13",
+        "homepage_url": "https://metaflow.shuang-su.com/horizon/",
+        "detail_url": "https://metaflow.shuang-su.com/horizon/daily/2026/11/13/"
+      }
+    }
+  ],
+  "scheduled_success_streak": 0,
+  "status": "observing"
 }

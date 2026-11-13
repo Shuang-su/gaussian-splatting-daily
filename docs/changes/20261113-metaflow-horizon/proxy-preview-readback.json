@@ -1,0 +1,31 @@
+[
+  {
+    "path": "/horizon",
+    "status": 200,
+    "url": "https://6af6e65d93d318c79774c315--charming-salamander-fc1af0.netlify.app/horizon",
+    "bytes": 271602
+  },
+  {
+    "path": "/horizon/",
+    "status": 200,
+    "url": "https://6af6e65d93d318c79774c315--charming-salamander-fc1af0.netlify.app/horizon/",
+    "bytes": 271602
+  },
+  {
+    "path": "/horizon/daily/2026/11/13/",
+    "status": 200,
+    "url": "https://6af6e65d93d318c79774c315--charming-salamander-fc1af0.netlify.app/horizon/daily/2026/11/13/",
+    "bytes": 199009
+  },
+  {
+    "path": "/horizon/deployment.json",
+    "status": 200,
+    "url": "https://6af6e65d93d318c79774c315--charming-salamander-fc1af0.netlify.app/horizon/deployment.json",
+    "bytes": 18942,
+    "commit": "b0100f400aa8919a6caa87c450bb227787c17f07"
+  },
+  {
+    "path": "/horizon/missing-final-check/",
+    "status": 404
+  }
+]

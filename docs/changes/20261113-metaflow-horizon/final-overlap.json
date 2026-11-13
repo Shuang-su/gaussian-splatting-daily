@@ -1,0 +1,163 @@
+{
+  "checkedAt": "2026-11-13T10:50:14.972608+00:00",
+  "window": {
+    "from": "2026-11-06",
+    "through": "2026-11-13"
+  },
+  "candidateCount": 30,
+  "articleCandidates": 27,
+  "excludedNonArticles": 3,
+  "newUnprocessedCandidates": [],
+  "dispositions": [
+    {
+      "url": "https://radiancefields.com/",
+      "disposition": "excluded",
+      "reason": "not an article with publication metadata"
+    },
+    {
+      "url": "https://radiancefields.com/authors",
+      "disposition": "excluded",
+      "reason": "not an article with publication metadata"
+    },
+    {
+      "url": "https://radiancefields.com/mipmap-makes-gaussian-splats-walkable-in-desktop-3.3",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/starlightgs-relights-gaussian-splats-inside-unreal-engine",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/insta360-launches-a-spatial-capture-challenge",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/splat3d-ships-a-swift-sdk-for-its-gaussian-splatting-api",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/spatialview-makes-gaussian-splats-queryable-by-ai-agents",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/tijerin-art-studio-rebuilds-quick-gs-editor-on-spark",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/splatpilot-3-0-1-turns-blender-scenes-into-gaussian-splats",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/bubo2-readies-a-cloud-gaussian-splatting-service",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/design4real-releases-splatmania-a-free-splat-editor",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/spaghetti-splatting-swaps-gaussian-points-for-curves",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/esri-adds-viewshed-and-shadow-cast-analysis-to-splats",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/spaitial-echo-3-api-opens-to-every-developer-account",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/training-gaussian-splats-from-renders-not-photos",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/unreal-engine-5-9-preview-adds-experimental-gaussian-splats",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/world-labs-opens-atlas-world-model-to-everyone",
+      "disposition": "already-reviewed",
+      "reason": "Already present in dated source records and reading editions."
+    },
+    {
+      "url": "https://radiancefields.com/papers",
+      "disposition": "excluded",
+      "reason": "not an article with publication metadata"
+    }
+  ]
+}
