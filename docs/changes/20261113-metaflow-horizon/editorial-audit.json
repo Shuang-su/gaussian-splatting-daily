@@ -401,5 +401,58 @@
       "canonicalPreserved": true,
       "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
     }
-  ]
+  ],
+  "independentArticles": [
+    {
+      "slug": "gaussian-format-interoperability",
+      "reviewedAt": "2026-11-13",
+      "result": "Fixed commit import list and release/main boundary rechecked; retained the original article and validation-method disclosure."
+    },
+    {
+      "slug": "gaussian-splat-lite-131-streaming-budgets",
+      "reviewedAt": "2026-11-13",
+      "result": "v1.3.1 release cache limits versus total memory and target/limit meanings rechecked; retained fixed-version article."
+    },
+    {
+      "slug": "resstreamgs-dual-stream",
+      "reviewedAt": "2026-11-13",
+      "result": "arXiv v1 date, dual-stream method, device and reported experiment numbers rechecked; retained author-report and no-reproduction limits."
+    },
+    {
+      "slug": "supersplat-381-sog-v3-update",
+      "reviewedAt": "2026-11-13",
+      "result": "New article: checked writer release tags, actual v3 layout, consumer versions and upstream test boundaries."
+    },
+    {
+      "slug": "spirula-studio-application",
+      "reviewedAt": "2026-11-13",
+      "result": "New researched app introduction: platform, GPL-3.0, version scope and absence of hands-on testing explicit."
+    }
+  ],
+  "weeklyEditorials": {
+    "reviewedWeeks": [
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+    ],
+    "revisedExisting": [
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "retrospectivelyAdded": [
+      43,
+      44,
+      45
+    ],
+    "date": "2026-11-13",
+    "result": "Broadened context to products, works and industry, preserved old-version links and exact raw report hashes."
+  }
 }

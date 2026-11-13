@@ -44,3 +44,13 @@ await buildShareImages(index);
 const urls = ["/","/daily/","/articles/","/features/","/papers/","/apps/","/search/","/subscribe/","/topics/","/tools/",...TOPICS.map(t=>`/topics/${t.slug}/`),...articles.map(a=>dailyUrl(a.date)),...editorials.map(a=>a.url),...weeks.map(w=>weeklyUrl(w))];
 fs.writeFileSync(path.join(ROOT,"site/public/sitemap.xml"),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(url=>`<url><loc>${escapeXml(SITE_URL+url)}</loc></url>`).join("")}</urlset>`);
 fs.writeFileSync(path.join(ROOT,"site/public/robots.txt"),`User-agent: *\nAllow: /horizon/\nSitemap: ${SITE_URL}/sitemap.xml\n`);
+
+// Keep the human-readable GitHub month archive in sync with the same reader titles.
+for (const month of new Set(index.daily.map(report => report.date.slice(0, 7)))) {
+  const [year, number] = month.split("-");
+  const reports = index.daily.filter(report => report.date.startsWith(month));
+  const markdown = `# ${year} 年 ${Number(number)} 月高斯日报\n\n` + reports.map(report =>
+    `- [${report.date}：${report.headline}](${report.date}.md)${["2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24"].includes(report.date) ? "（2026-11-13 补收）" : ""}`
+  ).join("\n") + "\n";
+  fs.writeFileSync(path.join(ROOT, `docs/daily/${year}/${number}/index.md`), markdown);
+}
