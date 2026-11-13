@@ -1,6 +1,7 @@
 "use client";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import { discussionFixture, sampleThread } from "../lib/discussions";
 import type { DiscussionThread, FixtureMode } from "../lib/discussions";
 
@@ -8,9 +9,13 @@ type ThreadUpdate = (current: DiscussionThread) => DiscussionThread;
 type State = { mode: FixtureMode | null; threads: Record<string, DiscussionThread>; update: (term: string, fallback: DiscussionThread, action: ThreadUpdate) => void };
 const Context = createContext<State>({ mode: null, threads: {}, update: () => {} });
 export default function DiscussionProvider({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
   const [mode, setMode] = useState<FixtureMode | null>(null);
   const [threads, setThreads] = useState<Record<string, DiscussionThread>>({});
-  useEffect(() => { setMode(discussionFixture(location.hostname, new URLSearchParams(location.search).get("commentFixture"))); }, []);
+  useEffect(() => {
+    setMode(discussionFixture(location.hostname, new URLSearchParams(location.search).get("commentFixture")));
+    setThreads({});
+  }, [pathname]);
   const update = useCallback((term: string, fallback: DiscussionThread, action: ThreadUpdate) => {
     setThreads(previous => ({ ...previous, [term]: action(previous[term] || fallback) }));
   }, []);

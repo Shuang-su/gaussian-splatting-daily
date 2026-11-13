@@ -4,6 +4,12 @@ import "./globals.css";
 import "./home.css";
 import "./card-navigation.css";
 import "./editorial.css";
+import "./reader.css";
+import "./glass.css";
+import "./reader-chrome.css";
+import ReaderProvider from "../components/ReaderProvider";
+import DiscussionProvider from "../components/DiscussionProvider";
+import GlassChrome from "../components/GlassChrome";
 import CardNavigation from "../components/CardNavigation";
 import Header from "../components/Header";
 import BrandMark from "../components/BrandMark";
@@ -19,8 +25,8 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <html lang="zh-CN" suppressHydrationWarning>
     <head>{Object.values(FEEDS).map(feed => <link key={feed.path} rel="alternate" type="application/rss+xml" title={`高斯日报 · ${feed.title}`} href={feed.url} />)}<script dangerouslySetInnerHTML={{ __html: "try{const t=localStorage.getItem('gsd-theme');document.documentElement.dataset.theme=['system','light','dark'].includes(t)?t:'system'}catch{}" }} /></head>
-    <body><CardNavigation><a className="skip-link" href="#main">跳至内容</a><Header /><main id="main">{children}</main>
+    <body><DiscussionProvider><ReaderProvider><CardNavigation><a className="skip-link" href="#main">跳至内容</a><GlassChrome><Header /></GlassChrome><main id="main">{children}</main>
       <footer className="site-footer"><a className="footer-brand" href={`${BASE}/`}><BrandMark />高斯日报</a><div><a href={`${BASE}/subscribe/`}>订阅高斯日报</a><a href={`${REPO}/blob/main/docs/corrections.md`}>纠错记录</a><a href={REPO}>GitHub</a></div></footer>
-    </CardNavigation></body>
+    </CardNavigation></ReaderProvider></DiscussionProvider></body>
   </html>;
 }

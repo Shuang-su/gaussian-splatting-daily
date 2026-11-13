@@ -13,7 +13,7 @@ import ReadingGuide from "../components/ReadingGuide";
 const archive=buildArchive();
 test('all migrated bodies retain their exact upstream bytes and map every source block once',async()=>{
  const {articles,index}=await archive;
- assert.equal(articles.length,31);
+ assert.equal(articles.length,53);
  for(const a of articles.filter(a=>a.date<='2026-10-03')){
   const md=fs.readFileSync(`${ROOT}/${a.path}`,'utf8');
   const change=a.date<'2026-10-01'?'20261004-daily-article-layout':'20261004-october-sync';
@@ -30,7 +30,7 @@ test('all migrated bodies retain their exact upstream bytes and map every source
   for(const e of a.events!){assert.ok(e.html.trim());if(e.group==='main')assert.ok(e.judgment,`${a.date}: missing judgment ${e.title}`);}
  }
  assert.equal(index.entries.filter(e=>e.kind==='paper' && e.date<'2026-10-01').length,42);
- assert.equal(index.entries.filter(e=>e.kind==='paper').length,116);
+ assert.equal(index.entries.filter(e=>e.kind==='paper').length,170);
 });
 test('missing and duplicate source blocks fail instead of silently dropping facts',async()=>{
  const md=fs.readFileSync(`${ROOT}/docs/daily/2026/09/2026-09-30.md`,'utf8');const source=matter(md);source.data.portal.editorial.events[0].blocks.push(source.data.portal.editorial.events[0].blocks[0]);

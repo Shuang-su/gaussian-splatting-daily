@@ -11,12 +11,14 @@ import ReadingGuide from "../components/ReadingGuide";
 import ArticleFooter from "../components/ArticleFooter";
 import Discussion from "../components/Discussion";
 const archive = buildArchive();
-test("all 31 covers are local, have intrinsic dimensions and accessible originals", async () => {
+test("archived covers are local, have intrinsic dimensions and accessible originals", async () => {
   const { articles } = await archive;
-  assert.equal(articles.length, 31);
-  for (const a of articles) {
-    assert.ok(a.image, `${a.date}: missing cover`);
-    assert.ok(a.image.url.startsWith("/media/"));
+  const historical = articles.filter(a => a.date <= "2026-10-18");
+  assert.equal(historical.length, 31);
+  for (const a of historical) assert.ok(a.image, `${a.date}: missing historical cover`);
+  for (const a of articles.filter(a => a.image)) {
+    assert.ok(a.image!.url.startsWith("/media/") || a.date > "2026-10-18" && a.image!.url.startsWith("/daily-media/"));
+    assert.ok(a.image);
     assert.ok(a.image.width! > 0 && a.image.height! > 0);
     assert.ok(a.image.variants?.every(v => v.width <= a.image!.width!));
     for (const file of [a.image.url, a.image.originalUrl!, ...a.image.variants!.map(v => v.url)]) assert.ok(fs.existsSync(`${ROOT}/site/public${file}`), file);
@@ -35,15 +37,18 @@ test("floating navigation follows reading order and every nested target exists i
     assert.deepEqual(items.slice(1, 1 + a.events!.filter(e => e.group === "main").length).map(i => i.id), a.events!.filter(e => e.group === "main").map(e => e.anchor));
   }
 });
-test("unconfigured discussions remain visible without invented comments or a submit form", async () => {
+test("discussion entry renders before opening without invented comments or a submit form", async () => {
   const discussion = renderToStaticMarkup(createElement(Discussion, { dailyId: "test", date: "2026-09-30", heading: true }));
   assert.ok(discussion.includes('id="discussion"'));
-  assert.ok(discussion.includes("讨论暂未开放"));
+  assert.ok(discussion.includes("查看本期讨论"));
+  assert.ok(discussion.includes('aria-haspopup="dialog"'));
+  assert.ok(!discussion.includes("<iframe"));
+  assert.ok(!discussion.includes("一级评论"));
   assert.ok(!discussion.includes("暂无评论"));
   assert.ok(!discussion.includes("本地样本"));
   assert.ok(!discussion.includes("<form"));
   assert.ok(!discussion.includes("<iframe"));
-  const a = (await archive).articles[0];
+  const a = (await archive).articles.find(a => a.date === "2026-10-18")!;
   const html = renderToStaticMarkup(createElement(ArticleFooter, { article: a }));
   assert.ok(html.includes(a.image!.source));
   assert.ok(html.includes('id="sources"'));

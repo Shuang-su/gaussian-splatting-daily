@@ -18,8 +18,8 @@
   },
   "default": {
     "url": "/share/default.png",
-    "date": "2026-10-18",
-    "sha256": "f42d3ce23081dae568955c8d806127150962c4bac7cbc77878350286c4584180"
+    "date": "2026-11-13",
+    "sha256": "f124d78ee599023411cd302bebe3f4cebb61596eb1f2e213ccffdab5d0b708c9"
   },
   "reports": {
     "2026-09-18": {
@@ -486,6 +486,204 @@
         "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示",
         "sha256": "60b44c3f274799ca316e70449a913535a7b93fc4781a97dc1bde7ea6466c85ae"
       }
+    },
+    "2026-10-19": {
+      "date": "2026-10-19",
+      "url": "/share/2026-10-19.png",
+      "title": "PlayCanvas 与 Gaussian-Splat-Lite 补齐四阶球谐",
+      "contentHash": "5b5914a58cba1276eb39384353f46c84b63f49bcec9d1caf754e3a8fbc334022",
+      "inputHash": "3381e08d9f43b2607b0febeb2cefcc2c5c7503fa312224163cc2810fbc33b8ec",
+      "sha256": "4f0f1f007f21587089b4818c10f076547ddd3e7c83bfecdd18e3aa0644b4fc2a",
+      "bytes": 25849
+    },
+    "2026-10-20": {
+      "date": "2026-10-20",
+      "url": "/share/2026-10-20.png",
+      "title": "SuperSplat Viewer 主干增加移动随机渲染和 WebGPU XR",
+      "contentHash": "72c2781849fea34284b27700bd0eae1746b9f8ba906837da8afe7dbb91773541",
+      "inputHash": "39e896cb88eff4513de8d88b443589f89a2d6f1f7e29f44df8d5ba5488615e22",
+      "sha256": "e92a7ea36bdeb7274c891628eaca7ff0aec3036ab9b1f475789648dd3fb37e2f",
+      "bytes": 31156
+    },
+    "2026-10-25": {
+      "date": "2026-10-25",
+      "url": "/share/2026-10-25.png",
+      "title": "LichtFeld 修复无界面训练丢失项目资源",
+      "contentHash": "57f91c3204186da78a32d6a1830b8c696980b4c03e97e1e25c5fe7d7ab9cf43f",
+      "inputHash": "6135ebf01721501dafe19e83739fbea11aad4e59c244fbeb25f84f6c33179568",
+      "sha256": "d07c6cd8ac58a86a41669408e2c65ea5dc4aaa16b15ae2ce7b49eec428f9b592",
+      "bytes": 24566
+    },
+    "2026-10-26": {
+      "date": "2026-10-26",
+      "url": "/share/2026-10-26.png",
+      "title": "LichtFeld 将 SteadySplats 接入 Vulkan 视口",
+      "contentHash": "f1fc83bfdeaba86e24a9fe291285e2ff5b7da4348b9fc36d289d1f36dff82804",
+      "inputHash": "540c38629f8acfcd3747a49bff1170712ec1b3f4df335d93782492090fa8257f",
+      "sha256": "c2cab952ff1728eb267bfa4a4341d2c1b9d11ea5542b376c4907a28d1494cd25",
+      "bytes": 23156
+    },
+    "2026-10-27": {
+      "date": "2026-10-27",
+      "url": "/share/2026-10-27.png",
+      "title": "SuperSplat 3.7.0 加入径向排序，LichtFeld 支持持久碰撞体",
+      "contentHash": "8bb59e7e3fd0eac9fda917d59a2a1214dd33e3d033c39a8402001bc689890653",
+      "inputHash": "69c185471efa5104aca025210b8b0c5897d22855b026e0f720e1599aa956a6da",
+      "sha256": "33589fd9cfe5538edbe2062db2c2192ef778af762471ab446f9161f0be8ea3fc",
+      "bytes": 29593
+    },
+    "2026-10-28": {
+      "date": "2026-10-28",
+      "url": "/share/2026-10-28.png",
+      "title": "LichtFeld 批量训练加入受监督 CLI",
+      "contentHash": "c613bd10c9264c28b80f05a086f72fcfc109a990b4bd054a9d0efbd5111bae29",
+      "inputHash": "74f42f34390dd4148b7a9b49f3db0e0d6581c89410fdad54dc8fbac3cefc2e15",
+      "sha256": "a057b97de1af3bee38e09ef499e291ce3217c42549acd6c23665a410815322eb",
+      "bytes": 21676
+    },
+    "2026-10-29": {
+      "date": "2026-10-29",
+      "url": "/share/2026-10-29.png",
+      "title": "PlayCanvas 修复大场景 WebGPU 黑屏，OOOSplat 0.7.1 可安装",
+      "contentHash": "2f55f45273f108f240cb66e72bd38d1a53081941adb2e0e97d249767e6b56993",
+      "inputHash": "4b09bef4f39a8f6705fec6bdc6976bcbd625997445e09b5060e68ca0f329e9df",
+      "sha256": "1738f90b8c70c6eb6cbbd5034c41709ec6dd1cf24f969370c9010ae5de54a9b6",
+      "bytes": 32338
+    },
+    "2026-10-30": {
+      "date": "2026-10-30",
+      "url": "/share/2026-10-30.png",
+      "title": "OOOSplat 把 MCP 操作接进本地工作流",
+      "contentHash": "10784d7150aa54d9dab44517610692f675462543b4777cec783b6eca6eae663b",
+      "inputHash": "608437a537d53c34d9b273f56ec1835680f0301f233350a927c114b4d5880692",
+      "sha256": "fe295b5c8b9eb8715fae1cfaad51a7b944e61d8864e81a67ad8cf3e2f2113266",
+      "bytes": 23268
+    },
+    "2026-10-31": {
+      "date": "2026-10-31",
+      "url": "/share/2026-10-31.png",
+      "title": "PlayCanvas 开始在运行时流式读取 LCC2",
+      "contentHash": "4f0b70de9e29333f98c03177078eded179155ec3c0624400023c96bb5e344628",
+      "inputHash": "90cc6cd0eef383c77207e700c7c021e075442cce26121fa3103863f38914795e",
+      "sha256": "b11fed0d5a6f1074b729325c3039c0b6c2d643dd7aea4347b42d012941ad4dd7",
+      "bytes": 24164
+    },
+    "2026-11-01": {
+      "date": "2026-11-01",
+      "url": "/share/2026-11-01.png",
+      "title": "SuperSplat 的 WebMCP 可以操作相机时间线",
+      "contentHash": "168c7a7899525cc5301779bd1318a8b92dfe838f334d2c1ceabf39bbaae5b1bf",
+      "inputHash": "f82ddfe095a80a4b59e274732799ffc6312a1766b57c8c3a2c899a42852a7535",
+      "sha256": "faaf53db4cdf41a8018ada4ecd26ed020820418d05a83ca0a15d4e80287afdb8",
+      "bytes": 26242
+    },
+    "2026-11-02": {
+      "date": "2026-11-02",
+      "url": "/share/2026-11-02.png",
+      "title": "PlayCanvas beta.28 收录 WebGPU XR 唤醒修复",
+      "contentHash": "e8771ed64445dbdf9feeda7101192e6169da116cee5ad12aa3590ea5fa1a767d",
+      "inputHash": "a3fa7d1e9174b00c0823f09503cd2adb2d5ebf994f4ff050331b7719429078ba",
+      "sha256": "56aace9a7c7d85648c55f8a21ad4f457c2ba66760f98c37656197d7278b2ff18",
+      "bytes": 27592
+    },
+    "2026-11-03": {
+      "date": "2026-11-03",
+      "url": "/share/2026-11-03.png",
+      "title": "Gaussian Splat Lite 1.6.1 加入 LCC2 流式加载",
+      "contentHash": "e21bebb60f9f3b58c56f5ff7c9915fe8b044c65e90c0eef3a6b0cae20525206b",
+      "inputHash": "0eabc4bd80d4a8449535874dcf70d2fc63fb37ef820e8b3eb9c512a513acb7a0",
+      "sha256": "7d777ce4157aebcf093922d1031ade738b1058933b2b8d63654b4a53963bf5b6",
+      "bytes": 25288
+    },
+    "2026-11-04": {
+      "date": "2026-11-04",
+      "url": "/share/2026-11-04.png",
+      "title": "UnityGaussianSplatting 2.0.0 可直接加载 PLY 和 SPZ",
+      "contentHash": "f4e0bb02a198b2aa68707a3e171cb262f6c0d3aa3a10fa97d2aea24e24cd52ad",
+      "inputHash": "abb3fe41df3021ddabc1bdbe32da17fcd69847e77ff9d31ce42e8a8507054804",
+      "sha256": "90a68a252dc21aafe9ffbd9889a8eb615750711cdd6e1d178dece18e2a984041",
+      "bytes": 26014
+    },
+    "2026-11-05": {
+      "date": "2026-11-05",
+      "url": "/share/2026-11-05.png",
+      "title": "GSPIM 公开动态高斯计算实验工件",
+      "contentHash": "88aa21ea4715ccaa3d6758a78dac33852faf01590ad3f9823aa16f0b35c4fd01",
+      "inputHash": "7c81112d58b2101c1a0489890e654ee37f5d2cb8cbf91a989ec19870bb9f5020",
+      "sha256": "33bff8d1d249ffc145b3e76c97ea73c0564c2e7389980560515c2003c5e28f56",
+      "bytes": 23116
+    },
+    "2026-11-06": {
+      "date": "2026-11-06",
+      "url": "/share/2026-11-06.png",
+      "title": "SuperSplat Viewer 1.42.1 修复 Quest 黑屏",
+      "contentHash": "8652fbf363e6d4d865f27cb0fe1eef8e2943cb71caafc6bb377a24cbf6924815",
+      "inputHash": "e2ed4632f0921b144812ce9835562c0526faf28b8357ed167579169dc99bd5f9",
+      "sha256": "b63d8acee858ea2cbe7a1c40b68ff9752908b6fd5c2b331601fda0730e6cc4fd",
+      "bytes": 22772
+    },
+    "2026-11-07": {
+      "date": "2026-11-07",
+      "url": "/share/2026-11-07.png",
+      "title": "PlayCanvas 主干合入 SOG v3 读取器",
+      "contentHash": "b00240115f5348e34a46123c0f6c9056eb87133c6cb4ca750a1e38602c3b4f32",
+      "inputHash": "e9ff9f686ba7c02ab406ec2831fa65140f92e502a725764fa643b5eb891f8f25",
+      "sha256": "1b9302f0d3e08babe16b82c690f30767ae0683835f2df25963cd4fede634e8c3",
+      "bytes": 22008
+    },
+    "2026-11-08": {
+      "date": "2026-11-08",
+      "url": "/share/2026-11-08.png",
+      "title": "Arcturus 公开双目采集到高斯重建脚本",
+      "contentHash": "c23d97db182e4de0322d104aa4b2e98ff9b6f2ee5ad8c4cd6e4dc65d32e7e2d9",
+      "inputHash": "95fd295fd0ad912bf4158f30e417128f7dffcf559722ef4e2ebe3925c589c92a",
+      "sha256": "f5264e97edb097a7e53e4e9ddc9f56af9ccd81aec9c35550ac902949e9b193d3",
+      "bytes": 23957
+    },
+    "2026-11-09": {
+      "date": "2026-11-09",
+      "url": "/share/2026-11-09.png",
+      "title": "LichtFeld 可追踪抽帧掩码并审批导出",
+      "contentHash": "10e1c933ee9a4c84a120f289fe8f7c0a246fe9b846d596df0aaeca8ea2944578",
+      "inputHash": "0d0e640a6414e9fc3cc7e16a6de23021c508491fc16c04f8ed54cee71971ec16",
+      "sha256": "abdbaaf985f7ae4b335c87f4b93d82eda8989b1f6c44432971236b236b45068c",
+      "bytes": 21040
+    },
+    "2026-11-10": {
+      "date": "2026-11-10",
+      "url": "/share/2026-11-10.png",
+      "title": "SplatTransform 默认输出 SOG v3，旧查看器需回归",
+      "contentHash": "70ab867b6b5c7975010e6d90f1daeb29a327d74d746d79271848ebbc841caf8f",
+      "inputHash": "f22c89ba8be0a10b7f2bd0623615828b8d11d1c5f0577af00578f88f25b4b10c",
+      "sha256": "fedf188d84a49cef855b11602312a4737056b47ae16a4cd8580c5cdea9b21c9f",
+      "bytes": 26551
+    },
+    "2026-11-11": {
+      "date": "2026-11-11",
+      "url": "/share/2026-11-11.png",
+      "title": "SuperSplat Viewer 1.43.0 直读 LCC2 和 SPZ",
+      "contentHash": "6ec67aefd3ff2630600ccb37b677e3ca9281c82ba309e1bcf31b096e081e466e",
+      "inputHash": "4adb85fd17ed773fd488ef44b690e31c9596bcde571e7c53c80684b5bdb7f1f9",
+      "sha256": "acfef00aeacd5b1857238eb417936703fec3cf032d7c597ee577a4bb81c8c45a",
+      "bytes": 22863
+    },
+    "2026-11-12": {
+      "date": "2026-11-12",
+      "url": "/share/2026-11-12.png",
+      "title": "SuperSplat 3.8.0 修复黑屏和 Chrome 157 文件读取",
+      "contentHash": "c8876d5ba4938fad5d58daee38286dbfe9a28b758a1aa686fc623100a6084ab5",
+      "inputHash": "5ff31b2049768641d54fe8d5c57cb039094eaefc83da9b1e76f3855f842c20fa",
+      "sha256": "128ba25c16042d01aa8bb690479bd87b587b9927abbfdee591894902985fcdb1",
+      "bytes": 28997
+    },
+    "2026-11-13": {
+      "date": "2026-11-13",
+      "url": "/share/2026-11-13.png",
+      "title": "SOG v3 更换旋转布局，SuperSplat 3.8.1 修复透明度",
+      "contentHash": "1799278febe23a5c1a8270ffd71575b038a335d09f6c043a114fd40611030da0",
+      "inputHash": "3fd4778965f3ac57bb63ccb978fad5ce25e4ef1c2dad5ff862a5df9f0d878578",
+      "sha256": "f124d78ee599023411cd302bebe3f4cebb61596eb1f2e213ccffdab5d0b708c9",
+      "bytes": 31472
     }
   }
 }

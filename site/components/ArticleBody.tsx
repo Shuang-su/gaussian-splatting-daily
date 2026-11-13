@@ -1,10 +1,17 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useImagePreview } from "./ImageGallery";
 import { readingHashTarget } from "../lib/reading-navigation";
+import FootnotePopover from "./FootnotePopover";
+import type { FootnoteSelection } from "./FootnotePopover";
 export default function ArticleBody({ html }: { html: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const preview = useImagePreview();
+  const [footnote, setFootnote] = useState<FootnoteSelection | null>(null);
+  const closeFootnote = useCallback((restore: boolean) => {
+    if (restore) footnote?.trigger.focus({ preventScroll: true });
+    setFootnote(null);
+  }, [footnote]);
   useEffect(() => {
     let closed: HTMLDetailsElement[] = [];
     const before = () => { closed = [...ref.current?.querySelectorAll<HTMLDetailsElement>("details:not([open])") || []]; closed.forEach(element => { element.open = true; }); };
@@ -68,12 +75,30 @@ export default function ArticleBody({ html }: { html: string }) {
   }, [html, preview]);
   function show(e: React.MouseEvent | React.KeyboardEvent) {
     const img = e.target as HTMLElement;
+    if ("button" in e && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.altKey && !e.shiftKey) {
+      const trigger = img.closest<HTMLAnchorElement>("a[data-footnote-ref]");
+      if (trigger) {
+        const hash = trigger.getAttribute("href");
+        if (!hash?.startsWith("#")) return;
+        let id;
+        try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
+        const definition = document.getElementById(id);
+        if (!definition?.closest("[data-footnotes]")) return;
+        e.preventDefault();
+        if (footnote?.trigger === trigger) closeFootnote(true);
+        else setFootnote({ trigger, definition });
+        return;
+      }
+    }
     if (img.tagName !== "IMG" || !preview) return;
     if ("key" in e && !["Enter", " "].includes(e.key)) return;
     e.preventDefault();
     preview(img.dataset.previewKey || (img as HTMLImageElement).getAttribute("src") || "", img);
   }
   return (
-    <div className="prose" ref={ref} onClick={show} onKeyDown={show} dangerouslySetInnerHTML={{ __html: html }} />
+    <>
+      <div className="prose" ref={ref} onClick={show} onKeyDown={show} dangerouslySetInnerHTML={{ __html: html }} />
+      {footnote && <FootnotePopover selection={footnote} close={closeFootnote}/>}
+    </>
   );
 }

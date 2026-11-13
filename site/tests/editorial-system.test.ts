@@ -48,7 +48,9 @@ test("editorial warnings are suggestions, and independent articles link to real 
   const warnings=editorialWarnings(parseMarkdown('## 其他内容\n\n'+"较长的说明。".repeat(70)));
   assert.ok(warnings.some(w=>w.code==="long-paragraph"));assert.ok(warnings.some(w=>w.code==="vague-heading"));
   const {editorials,articles,index,weeks,weeklyEditorials}=await archive;
-  assert.equal(editorials.length,3);assert.equal(weeks.length,5);assert.equal(weeklyEditorials.length,5);
+  assert.equal(editorials.length,3);
+  assert.deepEqual(weeks.map(week => week.week), [45, 44, 43, 42, 41, 40, 39, 38]);
+  assert.deepEqual(weeklyEditorials.map(week => week.week), [38, 39, 40, 41, 42]);
   assert.equal(index.entries.find(entry=>entry.id==="arxiv:2610.21121")!.anchor,
     articles.find(article=>article.date==="2026-10-18")!.events!.find(event=>event.id==="arxiv:2610.21121")!.anchor);
   for (const [query,id] of [["Make It Flow: Image-to-4D Generation", "arxiv:2610.13860"], ["Residual-Sensitive Dual-Stream", "arxiv:2610.21121"]])

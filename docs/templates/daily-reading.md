@@ -35,3 +35,11 @@ paperOriginalTitles: {}
 ```
 
 简讯仍各占一个事件和 H2，group=brief；研究简讯用 group=paper、kind=paper，并保留规范原文中的 arXiv marker 和首次归档身份。图片可增加到事件的 images，需遵循本地媒体清单，afterParagraph 从 1 开始。
+
+如果发布后有实质修订，可在前置元数据增加一行 JSON：
+
+```yaml
+revisions: [{"id":"update-1","date":"YYYY-MM-DD","title":"具体更正内容","body":"说明旧结论受到什么影响、现有证据和来源。"}]
+```
+
+正文脚注使用 `[^stable-id]` 及对应的 `[^stable-id]: 脚注正文`。脚注适合补充背景或比较口径。关键限制保留在正文。没有修订或脚注时可省略对应内容。

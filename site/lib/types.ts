@@ -46,7 +46,15 @@ export interface Daily {
   readingEdition?: { path: string; contentHash: string };
   editorialDisclosure?: string;
 }
+export interface ArticleRevision {
+  id: string;
+  date: string;
+  title: string;
+  html: string;
+}
 export interface Article extends Daily {
+  revisions?: ArticleRevision[];
+  footnotesHtml?: string;
   events?: ArticleEvent[];
   html: string;
   bodyHtml: string;
@@ -108,6 +116,8 @@ export interface EditorialArticleSummary {
   url: string;
 }
 export interface EditorialArticle extends EditorialArticleSummary {
+  revisions?: ArticleRevision[];
+  cover?: SourceImage;
   html: string;
   text: string;
   toc: { id: string; title: string; depth: number }[];

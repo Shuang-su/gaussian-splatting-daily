@@ -1,0 +1,36 @@
+[data-glass-optics] {
+  position: fixed;
+  inset: 0;
+  z-index: 68;
+  contain: strict;
+  overflow: clip;
+  pointer-events: none;
+}
+[data-glass-optics] > svg { position: absolute; }
+.glass-optical-strip {
+  position: absolute;
+  contain: strict;
+  overflow: clip;
+  pointer-events: none;
+}
+.glass-optical-plane {
+  position: absolute;
+  inset: 0;
+  contain: strict;
+  background: var(--bg);
+  will-change: filter;
+}
+[data-glass-surface] {
+  background-color: color-mix(in srgb, var(--bg) 76%, transparent);
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+}
+[data-glass-surface][data-glass-ready] {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+body:has([data-glass-state="fallback"]) [data-glass-surface] {
+  background-color: color-mix(in srgb, var(--bg) 72%, transparent);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+}

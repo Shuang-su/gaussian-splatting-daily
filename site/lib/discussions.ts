@@ -1,6 +1,14 @@
 export interface DiscussionConfig { repo: string; repoId: string; category: string; categoryId: string; lightTheme: string; darkTheme: string; }
-// Enable only after the repository, category and GitHub App have been verified.
-export const DISCUSSIONS: DiscussionConfig | null = null;
+// Verified 2026-11-13: official giscus installation selects only this public repository.
+// The Comments category uses announcement format so threads are created by the app.
+export const DISCUSSIONS: DiscussionConfig | null = {
+  repo: "Shuang-su/gaussian-splatting-daily",
+  repoId: "R_kgDOUxdQnw",
+  category: "Comments",
+  categoryId: "DIC_kwDOUxdQn84DLBLB",
+  lightTheme: "light",
+  darkTheme: "dark",
+};
 export const discussionTerm = (dailyId: string, eventId?: string) => eventId ? `${dailyId}::event::${eventId}` : `${dailyId}::daily`;
 export const FIXTURE_MODES = ["mixed", "populated", "single", "empty", "reactions", "failure"] as const;
 export type FixtureMode = typeof FIXTURE_MODES[number];

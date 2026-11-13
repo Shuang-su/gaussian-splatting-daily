@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
-import type { Article, EditorialArticle } from "./types";
+import type { Article, ArticleRevision, EditorialArticle } from "./types";
 import { TOPICS } from "./catalog";
 import { isoWeek } from "./feeds";
 
@@ -19,8 +19,13 @@ export async function loadLongform(root: string, reports: Article[], parse: Pars
     if (!Array.isArray(data.topics) || data.topics.some((topic: string) => !TOPICS.some(known => known.slug === topic))) throw Error(`${file}: unknown topic`);
     if (!data.sources?.length || data.sources.some((source: { title: string; url: string }) => !text(source.title) || !https(source.url))) throw Error(`${file}: missing article sources`);
     if (!data.related?.length || data.related.some((link: { date: string; event: string }) => !reports.find(report => report.date === link.date)?.events?.some(event => event.id === link.event))) throw Error(`${file}: missing related event`);
-    const prose = await parse(matter.stringify(content, { id, date: data.date, title: data.title, status: "published", source_count: 0, portal: { headline: data.title, summary: data.summary } }), file);
-    return { id, slug, genre: data.genre, title: data.title, summary: data.summary, date: data.date, author: data.author, topics: data.topics, sources: data.sources, related: data.related, disclosure: data.disclosure, url: `/articles/${slug}/`, html: prose.html, text: prose.text, toc: prose.toc, images: prose.images, readingMinutes: prose.readingMinutes };
+    const image = data.cover ?? data.image;
+    const prose = await parse(matter.stringify(content, {
+      id, date: data.date, title: data.title, status: "published", source_count: 0,
+      ...(data.revisions === undefined ? {} : { revisions: data.revisions }),
+      portal: { headline: data.title, summary: data.summary, ...(image === undefined ? {} : { image }) },
+    }), file);
+    return { id, slug, genre: data.genre, title: data.title, summary: data.summary, date: data.date, author: data.author, topics: data.topics, sources: data.sources, related: data.related, disclosure: data.disclosure, url: `/articles/${slug}/`, html: prose.html, text: prose.text, toc: prose.toc, images: prose.images, cover: prose.image, readingMinutes: prose.readingMinutes, revisions: prose.revisions };
   }));
 }
 
@@ -33,6 +38,7 @@ export interface WeeklyEditorial {
   releaseDate: string;
   html: string;
   disclosure: string;
+  revisions?: ArticleRevision[];
 }
 export async function loadWeeklyEditorial(root: string, reports: Article[], parse: Parser): Promise<WeeklyEditorial[]> {
   return Promise.all(files(root, "docs/weekly").map(async file => {
@@ -43,7 +49,7 @@ export async function loadWeeklyEditorial(root: string, reports: Article[], pars
     const week = isoWeek(matches[0].date);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(data.releaseDate) || data.releaseDate <= week.endDate) throw Error(`${file}: week has not closed at release date`);
     const id = `gsd-weekly-${data.year}-${String(data.week).padStart(2, "0")}`;
-    const prose = await parse(matter.stringify(content, { id, date: data.releaseDate, title: data.headline, status: "published", source_count: 0 }), file);
-    return { id, year: data.year, week: data.week, headline: data.headline, summary: data.summary, releaseDate: data.releaseDate, html: prose.html, disclosure: data.disclosure };
+    const prose = await parse(matter.stringify(content, { id, date: data.releaseDate, title: data.headline, status: "published", source_count: 0, ...(data.revisions === undefined ? {} : { revisions: data.revisions }) }), file);
+    return { id, year: data.year, week: data.week, headline: data.headline, summary: data.summary, releaseDate: data.releaseDate, html: prose.html, disclosure: data.disclosure, revisions: prose.revisions };
   }));
 }

@@ -13,7 +13,8 @@ import { readingNavigation } from "../../../../../lib/reading-navigation";
 import Subscription from "../../../../../components/Subscription";
 import ArticleEvents from "../../../../../components/ArticleEvents";
 import Discussion from "../../../../../components/Discussion";
-import DiscussionProvider from "../../../../../components/DiscussionProvider";
+import { ReaderArticle } from "../../../../../components/ReaderProvider";
+import { ArticleRevisionLinks, ArticleRevisions } from "../../../../../components/ArticleRevisions";
 import ArticleInteractionBar from "../../../../../components/ArticleInteractionBar";
 import PastDaily from "../../../../../components/PastDaily";
 import { weekPicks } from "../../../../../lib/week-picks";
@@ -40,7 +41,8 @@ export default async function Page({ params }: { params: RouteParams }) {
   const related = articles.filter((d) => d.date < a.date).slice(0,5);
   const week = weekPicks(a, articles);
   const weekday = ["周日","周一","周二","周三","周四","周五","周六"][new Date(`${a.date}T12:00:00+08:00`).getUTCDay()];
-  return <ImageGallery images={images}><DiscussionProvider key={a.id}>
+  return <ImageGallery images={images}>
+    <ReaderArticle article={{id:a.id,title:a.headline,url:dailyUrl(a.date),kind:"daily",date:a.date}}/>
     <ReadingNavigator items={readingNavigation(a, week.length > 0)} />
     <article id="article-top" className={`article-shell${a.readingEdition ? " article-reading-edition" : ""}`} data-report-id={a.id} data-source-sha256={a.contentHash} data-reading-sha256={a.readingEdition?.contentHash}>
       {a.image && <div className="article-cover"><SourceImage image={a.image} previewable priority sizes="(max-width: 639px) 100vw, 768px" /><div className="article-date" aria-hidden="true"><span>{weekday}</span><strong>{a.date.slice(8)}</strong></div></div>}
@@ -49,11 +51,14 @@ export default async function Page({ params }: { params: RouteParams }) {
         <div className="article-meta"><time dateTime={a.date}>{a.date}</time><span>{a.readingMinutes} 分钟阅读</span></div>
       </header>
       <div className="article-layout">
+        <ArticleRevisionLinks revisions={a.revisions}/>
         <ReadingGuide article={a} hasWeek={week.length > 0} />
         {!a.events && a.introductionHtml && <ArticleBody html={a.introductionHtml} />}
         {a.events ? <ArticleEvents article={a} /> : <ArticleBody html={a.bodyHtml} />}
+        {a.footnotesHtml && <ArticleBody html={a.footnotesHtml}/>}
         <ArticleTeasers articles={index.articles?.filter(article=>article.related.some(link=>link.date===a.date)) || []}/>
         {week.length > 0 && <section className="this-week" id="this-week"><h2>本周重要内容</h2><ul>{week.map(e=><li key={e.id}><Link href={entryUrl(e)}>{e.title}</Link>{!a.readingEdition && <p>{e.summary}</p>}<time dateTime={e.date}>{e.date}</time></li>)}</ul></section>}
+        <ArticleRevisions revisions={a.revisions}/>
         <ArticleFooter article={a} />
       </div>
     </article>
@@ -61,5 +66,5 @@ export default async function Page({ params }: { params: RouteParams }) {
     <ArticleInteractionBar dailyId={a.id}/>
     <PastDaily reports={related}/>
     <div className="article-subscription-wrap"><Subscription /></div>
-  </DiscussionProvider></ImageGallery>;
+  </ImageGallery>;
 }

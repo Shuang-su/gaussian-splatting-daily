@@ -28,7 +28,13 @@ test("recommendations use archived illustrations without duplicate lead covers o
   assert.equal(new Set(feeds.recommended.map((item) => item.id)).size, feeds.recommended.length);
   for (let i = 0; i < feeds.recommended.length; i++) {
     const item = feeds.recommended[i];
-    assert.ok(item.image, `${item.id} should have an archived illustration`);
+    if (item.kind === "daily" && item.date > "2026-10-18") {
+      const canonical = index.daily.find(report => report.id === item.id)!;
+      assert.equal(item.image?.url, canonical.image?.url);
+      assert.equal(item.url, dailyUrl(canonical.date));
+    } else {
+      assert.ok(item.image, `${item.id} should have an archived illustration`);
+    }
     if (i) assert.ok(feeds.recommended[i - 1].date >= item.date);
     if (item.kind !== "daily") assert.ok(!index.daily.some((d) => d.date === item.date && d.image?.url === item.image?.url));
   }

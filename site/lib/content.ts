@@ -18,6 +18,7 @@ import { assetUrl, imageKey, imageSrcSet, validImageUrl } from "./images";
 import { renderEvents } from "./editorial";
 import { applyReadingEdition } from "./reading-edition";
 import { parseMarkdown } from "./markdown";
+import { parseRevisions, validateFootnotes } from "./revisions";
 import { loadLongform, loadWeeklyEditorial } from "./longform";
 import { buildWeekly } from "./feeds";
 import { REPO, BASE, TOPICS, dailyUrl, entryUrl } from "./catalog";
@@ -90,6 +91,7 @@ export async function parseArticle(
 ): Promise<Article> {
   const { data: meta, content } = matter(markdown);
   const tree = parseMarkdown(content);
+  validateFootnotes(tree, content, filePath);
   const reportIndex = tree.children.findIndex(
     (n) => n.type === "heading" && /深度情报日报|今日概览/.test(plain(n)),
   );
@@ -100,6 +102,7 @@ export async function parseArticle(
       ? meta.date
       : meta.date.toISOString().slice(0, 10);
   const portal = meta.portal || {};
+  const revisions = await parseRevisions(meta.revisions, date, filePath);
   const paperSummaries: Record<string, string> = portal.paperSummaries || {};
   for (const [id, summary] of Object.entries(paperSummaries)) {
     if (!/^\d{4}\.\d{4,5}$/.test(id) || typeof summary !== "string" || !summary.trim())
@@ -119,10 +122,11 @@ export async function parseArticle(
     );
   let tableIndex = 0;
   let bodyHtml = "";
+  let footnotesHtml: string | undefined;
   const rawHighlights = (portal.highlights || []) as (Entry & { section?: string })[];
   const collect = () => (root: HastRoot) => {
     visit(root, "element", (node: Element) => {
-      if (/^h[1-6]$/.test(node.tagName)) {
+      if (/^h[1-6]$/.test(node.tagName) && !String(node.properties.id).endsWith("footnote-label")) {
         const depth = Number(node.tagName[1]);
         // Keep every historical heading ID, including the afternoon increment.
         if (depth === 1) node.tagName = "h2";
@@ -320,7 +324,9 @@ export async function parseArticle(
     }
     if (portal.layout === "events") {
       if (!portal.editorial || portal.editorial.version !== 1) throw Error(`${filePath}: invalid editorial layout`);
-      const eventNodes = root.children.map(splitProcessParagraph).filter((node): node is HastRoot["children"][number] => Boolean(node));
+      const footnotes = root.children.filter(node => node.type === "element" && Object.hasOwn(node.properties, "dataFootnotes"));
+      if (footnotes.length) footnotesHtml = serialize(footnotes);
+      const eventNodes = root.children.filter(node => !footnotes.includes(node)).map(splitProcessParagraph).filter((node): node is HastRoot["children"][number] => Boolean(node));
       const layout = renderEvents({ ...portal.editorial, events: portal.editorial.events.map((event: import("./types").EditorialEvent) => ({ ...event, images: event.images?.map(image => resolveImage(image, media)) })) }, tree.children, content, eventNodes, readingGuide, filePath);
       events = layout.events;
       introductionHtml = layout.introductionHtml;
@@ -331,8 +337,19 @@ export async function parseArticle(
     root.children = root.children.flatMap((node) => [...(additions.get(node) || []), node]);
   };
   const renderer = unified()
-    .use(remarkRehype)
+.use(remarkRehype, {
+      clobberPrefix: filePath.startsWith("docs/reading/") ? "reader-" : "user-content-",
+      footnoteLabel: "脚注", footnoteBackLabel: "返回正文",
+    })
     .use(rehypeSanitize, { ...defaultSchema, clobberPrefix: "", tagNames: [...defaultSchema.tagNames!, "details", "summary"], attributes: { ...defaultSchema.attributes, details: ["className"] } })
+    .use(() => (root: HastRoot) => {
+      if (!filePath.startsWith("docs/reading/")) return;
+      visit(root, "element", node => {
+        if (node.properties.id === "footnote-label") node.properties.id = "reader-footnote-label";
+        if (Array.isArray(node.properties.ariaDescribedBy) && node.properties.ariaDescribedBy.includes("footnote-label"))
+          node.properties.ariaDescribedBy = ["reader-footnote-label"];
+      });
+    })
     .use(rehypeSlug, { prefix: "section-" })
     .use(collect)
     .use(rehypeStringify);
@@ -352,6 +369,10 @@ export async function parseArticle(
       image: e.image ? resolveImage(e.image, media) : undefined,
     }),
   );
+  for (const revision of revisions || []) {
+    if (targets.has(revision.id)) throw Error(`${filePath}: duplicate revision anchor ${revision.id}`);
+    targets.add(revision.id);
+  }
   for (const e of highlights) {
     if (
       !e.id ||
@@ -434,6 +455,8 @@ export async function parseArticle(
     images,
     introductionHtml,
     archiveHtml,
+    footnotesHtml,
+    revisions,
     paperSummaries,
     readingGuide,
     events,
@@ -541,7 +564,7 @@ export async function buildArchive(root = ROOT) {
     (a, b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id),
   );
   const daily: Daily[] = published.map(
-    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, paperSummaries, paperTitles, paperOriginalTitles, events, ...d }) => d,
+    ({ html, bodyHtml, text, toc, targets, images, readingGuide, introductionHtml, archiveHtml, footnotesHtml, revisions, paperSummaries, paperTitles, paperOriginalTitles, events, ...d }) => d,
   );
   const entrySearchText = (entry: Entry) => {
     const article = published.find(a => a.date === entry.date && a.readingEdition);
@@ -579,7 +602,7 @@ export async function buildArchive(root = ROOT) {
     ],
   };
   const [editorials, weeklyEditorials] = await Promise.all([loadLongform(root, published, parseArticle), loadWeeklyEditorial(root, published, parseArticle)]);
-  index.articles = editorials.map(({ html, text, toc, images, readingMinutes, ...summary }) => summary);
+  index.articles = editorials.map(({ html, text, toc, images, readingMinutes, revisions, cover, ...summary }) => summary);
   index.search.push(...editorials.map(article => ({ id: article.id, kind: article.genre === "topic" ? "news" as const : article.genre, format: "article" as const, title: article.title, summary: article.summary, date: article.date, topics: article.topics, url: article.url, text: article.text })));
   const asOf = [published[0]?.date || "", ...weeklyEditorials.map(week => week.releaseDate)].sort().at(-1);
   const weeks = buildWeekly(published, asOf);

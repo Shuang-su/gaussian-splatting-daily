@@ -8,6 +8,9 @@ import BrandMark from "./BrandMark";
 import ArticleBack from "./ArticleBack";
 import Icon, { type IconName } from "./Icon";
 import SearchOverlay from "./SearchOverlay";
+import { ReaderFontControl, ReaderShareControl } from "./ReadingControls";
+import { useCardNavigation } from "./CardNavigation";
+import { useReader } from "./ReaderProvider";
 import { rememberSearch, searchTerm } from "../lib/search-history";
 
 type Panel = "mobile" | "topics" | "theme" | "search" | null;
@@ -22,9 +25,15 @@ export default function Header() {
   const [panel, setPanel] = useState<Panel>(null);
   const [theme, setTheme] = useState("system");
   const [mobileLayout, setMobileLayout] = useState(false);
+  const [phoneLayout, setPhoneLayout] = useState(false);
+  const cardNavigation = useCardNavigation();
+  const reader = useReader();
   const pathname = usePathname();
   const home = pathname === "/";
-  const article = /^\/daily\/\d{4}\/\d{2}\/\d{2}\/?$/.test(pathname);
+  const article = /^\/(?:daily\/\d{4}\/\d{2}\/\d{2}|articles\/[^/]+)\/?$/.test(pathname) || reader?.article?.kind === "weekly";
+  const immersive = article || (home && phoneLayout);
+  const fixedChrome = useRef(immersive);
+  fixedChrome.current = immersive;
   const header = useRef<HTMLElement>(null);
   const navigation = useRef<HTMLElement>(null);
   const trigger = useRef<HTMLButtonElement | null>(null);
@@ -36,12 +45,13 @@ export default function Header() {
   useEffect(() => {
     const width = window.matchMedia(`(max-width: ${home ? 1023 : 767}px)`);
     const sync = () => {
-      setMobileLayout(width.matches);
+      setMobileLayout(article || width.matches);
+      setPhoneLayout(window.innerWidth <= 767);
       setPanel((current) => current === (width.matches ? "search" : "mobile") ? null : current);
     };
-    sync(); width.addEventListener("change", sync);
-    return () => width.removeEventListener("change", sync);
-  }, [home]);
+    sync(); window.addEventListener("resize", sync);
+    return () => window.removeEventListener("resize", sync);
+  }, [home, article]);
   useEffect(() => {
     try { const saved = localStorage.getItem("gsd-theme"); if (saved && ["system", "light", "dark"].includes(saved)) setTheme(saved); } catch {}
     let last = window.scrollY, frame = 0;
@@ -49,7 +59,9 @@ export default function Header() {
       if (frame) return;
       frame = requestAnimationFrame(() => {
         const y = window.scrollY, delta = y - last;
-        if (readingDestination.current !== null) {
+        if (fixedChrome.current) {
+          header.current?.classList.remove("header-hidden");
+        } else if (readingDestination.current !== null) {
           header.current?.classList.remove("header-hidden");
           if (Math.abs(y - readingDestination.current) <= 1) readingDestination.current = null;
         } else {
@@ -120,9 +132,10 @@ export default function Header() {
     setTheme(value); document.documentElement.dataset.theme = value;
     try { localStorage.setItem("gsd-theme", value); } catch {}
   }
-  return <header ref={header} className={`site-header${home ? " home-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"} data-mobile-layout={mobileLayout}>
+  return <header ref={header} className={`site-header${home ? " home-header" : ""}${article ? " reader-header" : ""}`} data-menu-open={Boolean(panel)} data-mobile-open={panel === "mobile"} data-mobile-layout={mobileLayout} data-reader-chrome={immersive}>
+    <div className="progressive-header-blur" aria-hidden="true"><i/><i/><i/></div>
     <div className="header-inner">
-      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}<Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>
+      <div className="header-brand-group" inert={mobileLayout && panel === "mobile"}>{article && <ArticleBack />}{!article && <Link href="/" className="brand" aria-label="高斯日报首页" onClick={() => setPanel(null)}><BrandMark /><span>高斯日报</span></Link>}
         {home && <div id="home-feed-control" aria-hidden={panel === "mobile" || undefined} />}</div>
       <nav ref={navigation} className={panel === "mobile" ? "is-open" : ""} aria-label="主导航" id="main-nav" inert={mobileLayout && panel !== "mobile"} aria-hidden={mobileLayout && panel !== "mobile" || undefined}>
         <form className="mobile-nav-search" action={`${BASE}/search/`} method="get" role="search" onSubmit={(event) => {
@@ -139,13 +152,14 @@ export default function Header() {
           <div className="mobile-theme-control"><span id="mobile-theme-label">外观</span><div className="mobile-theme-options" role="group" aria-labelledby="mobile-theme-label">{themes.map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => changeTheme(value)}>{label}</button>)}</div></div>
         </div>
       </nav>
-      <div className="header-actions">
-        <button type="button" className="search-link" aria-label="搜索" aria-haspopup={mobileLayout ? "true" : "dialog"} aria-expanded={panel === "search" || panel === "mobile"} onClick={(event) => toggle(mobileLayout ? "mobile" : "search", event.currentTarget)} inert={mobileLayout && panel === "mobile"}><Icon name="search" /></button>
-        <div className="appearance-navigation desktop-action" inert={mobileLayout && panel === "mobile"} aria-hidden={mobileLayout && panel === "mobile" || undefined}><button className="appearance-toggle" aria-label="外观" aria-expanded={panel === "theme"} aria-controls="header-appearance" onClick={(e) => toggle("theme", e.currentTarget)}><Icon name="theme" /></button>
+      <div className="header-actions" inert={cardNavigation?.busy || undefined}>
+        {article ? <><ReaderFontControl onOpen={() => setPanel(null)}/><ReaderShareControl onOpen={() => setPanel(null)}/></> : <>
+        <button type="button" className="search-link" data-glass-surface={immersive ? "" : undefined} aria-label="搜索" aria-haspopup="dialog" aria-expanded={panel === "search" || panel === "mobile"} onClick={(event) => toggle("search", event.currentTarget)} inert={mobileLayout && panel === "mobile"}><Icon name="search" /></button>
+        <div className="appearance-navigation desktop-action" inert={mobileLayout && panel === "mobile"} aria-hidden={mobileLayout && panel === "mobile" || undefined}><button className="appearance-toggle" data-glass-surface={immersive ? "" : undefined} aria-label="外观" aria-expanded={panel === "theme"} aria-controls="header-appearance" onClick={(e) => toggle("theme", e.currentTarget)}><Icon name="theme" /></button>
           <div className="header-popover appearance-popover" id="header-appearance" hidden={panel !== "theme"} aria-label="显示主题">{[["light", "浅色"], ["dark", "暗色"], ["system", "跟随系统"]].map(([value, label]) => <button key={value} aria-pressed={theme === value} onClick={() => { changeTheme(value); setPanel(null); trigger.current?.focus({ preventScroll: true }); }}>{label}{theme === value && <Icon name="check" />}</button>)}</div>
         </div>
-        <Link className="subscribe-link desktop-action" href="/subscribe/" onClick={() => setPanel(null)} inert={mobileLayout && panel === "mobile"}>订阅</Link>
-        <button className="menu-toggle" aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : "grid"} /></button>
+        <Link className="subscribe-link desktop-action" href="/subscribe/" onClick={() => setPanel(null)} inert={mobileLayout && panel === "mobile"}>订阅</Link></>}
+        <button className="menu-toggle" data-glass-surface={immersive ? "" : undefined} aria-label={panel === "mobile" ? "关闭导航" : "打开导航"} aria-expanded={panel === "mobile"} aria-controls="main-nav" onClick={(e) => toggle("mobile", e.currentTarget)}><Icon name={panel === "mobile" ? "close" : immersive ? "more" : "grid"} /></button>
       </div>
     </div>
     <SearchOverlay open={panel === "search"} onClose={() => setPanel(null)} />

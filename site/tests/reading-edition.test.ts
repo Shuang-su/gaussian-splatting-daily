@@ -46,7 +46,7 @@ test("reader edition keeps source identity, old links and research while shorten
 
 test("all reader editions preserve research identity and anchors", async () => {
   const { articles, index } = await archive;
-  assert.equal(articles.filter(a => a.readingEdition).length, 31);
+  assert.equal(articles.filter(a => a.readingEdition).length, 53);
   for (const a of articles) {
     const baseline = await parseArticle(fs.readFileSync(`${ROOT}/${a.path}`, "utf8"), a.path);
     if (!a.readingEdition) {
@@ -75,7 +75,7 @@ test("all reader editions preserve research identity and anchors", async () => {
   }
   assert.equal(articles.find(a => a.date === "2026-10-01")!.events!.find(e => e.id.includes("blender"))!.group, "brief");
   assert.ok(!readingNavigation(articles.find(a => a.date === "2026-10-02")!, false).some(item => item.title === "研究简讯"), "a day without paper news needs no empty research section");
-  assert.equal(index.entries.filter(e => e.kind === "paper").length, 116);
+  assert.equal(index.entries.filter(e => e.kind === "paper").length, 170);
 });
 
 test("corrected sources retain stable event IDs, search terms and paper ownership", async () => {

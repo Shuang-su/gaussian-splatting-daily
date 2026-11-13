@@ -1,0 +1,84 @@
+/* Persistent chrome is a sibling of the moving card and its transition proxy. */
+.progressive-header-blur { display: none; }
+.reader-header { z-index: 72; border: 0; background: transparent; transform: none !important; }
+.reader-header .header-inner { max-width: none; height: var(--header-height); padding: 0 24px; }
+.reader-header .header-actions { gap: 8px; }
+.reader-header .article-back { margin: 0; }
+.reader-header .reader-chrome-control, .reader-header .menu-toggle {
+  display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; flex: 0 0 44px;
+  border: 1px solid color-mix(in srgb, var(--line) 55%, transparent); border-radius: 50%;
+  padding: 0; color: var(--ink); background: color-mix(in srgb, var(--bg) 70%, transparent);
+  box-shadow: 0 2px 10px rgb(0 0 0 / 5%); font-size: 19px;
+}
+.reader-header .header-inner .menu-toggle { width: 44px; }
+.reader-header .reader-chrome-control .icon, .reader-header .menu-toggle .icon { width: 22px; height: 22px; }
+.reader-header .progressive-header-blur { display: block; }
+.progressive-header-blur { position: absolute; inset: 0 0 -24px; z-index: -1; pointer-events: none; background: linear-gradient(var(--bg), color-mix(in srgb, var(--bg) 40%, transparent) 55%, transparent); }
+.progressive-header-blur i { position: absolute; inset: 0; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); mask-image: linear-gradient(#000 8%, transparent 75%); }
+.progressive-header-blur i:nth-child(2) { backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); mask-image: linear-gradient(#000 30%, transparent 90%); }
+.progressive-header-blur i:nth-child(3) { backdrop-filter: blur(2px); -webkit-backdrop-filter: blur(2px); mask-image: linear-gradient(#000 50%, transparent); }
+.reader-header .header-inner nav {
+  position: fixed; top: 64px; right: 24px; left: auto; bottom: auto; width: min(360px, calc(100vw - 32px));
+  height: auto; max-height: calc(100dvh - 84px); padding: 16px 22px; border: 1px solid var(--line); border-radius: 22px;
+  display: flex; flex-direction: column; align-items: stretch; gap: 0; overflow: auto; overscroll-behavior: contain;
+  background: var(--bg); color: var(--ink); box-shadow: var(--article-float-shadow);
+  opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px);
+  transition: opacity .2s, transform .24s cubic-bezier(.2,.8,.2,1), visibility 0s .24s;
+}
+.reader-header[data-mobile-open="true"] .header-inner nav { opacity: 1; visibility: visible; pointer-events: auto; transform: none; transition-delay: 0s; }
+.reader-header .topic-navigation { display: none; }
+.reader-header .mobile-nav-extra { display: flex; flex-direction: column; }
+.reader-header .mobile-nav-search { display: flex; align-items: center; gap: 10px; padding: 8px 0 14px; margin-bottom: 8px; border-bottom: 1px solid var(--line); }
+.reader-header .mobile-nav-search input { min-width: 0; width: 100%; padding: 0; border: 0; background: none; color: inherit; font-size: 16px; }
+.reader-header .mobile-nav-search button { display: flex; border: 0; padding: 4px; background: none; color: inherit; }
+.reader-header .header-inner nav > a, .reader-header .mobile-nav-extra > a { display: flex; align-items: center; gap: 12px; height: auto; padding: 14px 0; font-size: 17px; }
+.reader-header .mobile-route-icon, .reader-header .mobile-route-chevron { display: flex; }
+.reader-header .mobile-route-chevron, .reader-header .mobile-nav-extra > a > .icon:last-child { margin-left: auto; }
+.reader-header .mobile-route-chevron .icon, .reader-header .mobile-nav-extra > a > .icon:last-child { transform: rotate(-90deg); width: 16px; color: var(--muted); }
+.reader-header .header-inner nav > a[aria-current="page"]::after { display: none; }
+.reader-header .mobile-theme-control { margin-top: 8px; padding-top: 14px; }
+.reader-header .mobile-theme-options button { font-size: 13px; }
+.reader-header .reader-font-panel { z-index: 95; }
+.reader-header[data-mobile-layout="true"] .header-inner nav { top: 64px; left: auto; right: 24px; width: min(360px, calc(100vw - 32px)); height: auto; max-height: calc(100dvh - 84px); padding: 16px 22px; border: 1px solid var(--line); border-radius: 22px; box-shadow: var(--article-float-shadow); }
+.article-intro-cover { aspect-ratio: 16 / 9; margin: 24px 0 0; overflow: hidden; border-radius: 12px; background: var(--surface); }
+.article-intro-cover .source-image, .article-intro-cover img { width: 100%; height: 100%; object-fit: cover; }
+.article-intro-cover figcaption { display: none; }
+@media (max-width: 767px) {
+  .reader-header .header-inner { padding: 0 16px; }
+  .home-header { z-index: 72; border: 0; background: transparent; }
+  .home-header .progressive-header-blur { display: block; }
+  .home-header .header-inner { height: var(--header-height); padding: 0 16px; gap: 8px; }
+  .home-header .header-actions { gap: 8px; }
+  .home-header .header-actions .search-link, .home-header .header-actions .appearance-navigation { display: flex; }
+  .home-header .header-actions :is(.search-link,.appearance-toggle,.menu-toggle) {
+    display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0;
+    border: 1px solid color-mix(in srgb, var(--line) 55%, transparent); border-radius: 50%;
+    background: color-mix(in srgb, var(--bg) 70%, transparent); box-shadow: 0 2px 10px rgb(0 0 0 / 5%);
+  }
+  .home-header .brand { flex: 0 0 auto; }
+  .home-header .home-feed-select { gap: 4px; font-size: 19px; }
+  .home-header .header-brand-group { gap: 8px; }
+  .home-header .header-actions .subscribe-link { display: none; }
+  .reader-header[data-mobile-layout="true"] .header-inner nav, .reader-header .header-inner nav {
+    top: var(--header-height); right: 0; left: 0; width: 100%; height: calc(100dvh - var(--header-height)); max-height: none;
+    border: 0; border-radius: 0; box-shadow: none; padding: 16px 24px max(28px, env(safe-area-inset-bottom));
+  }
+  .reader-header .header-inner nav > a, .reader-header .mobile-nav-extra > a { padding: 20px 0; font-size: 20px; }
+  .reader-header .mobile-nav-search { padding: 12px 0 16px; }
+  .reader-header .mobile-route-icon .icon, .reader-header .mobile-nav-extra > a > .icon:first-child { width: 28px; height: 28px; }
+}
+@media (max-width: 359px) {
+  .home-header .brand-mark { width: 23px; }
+  .home-header .home-feed-select { font-size: 17px; }
+  .home-header .header-actions, .reader-header .header-actions { gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reader-header .header-inner nav { transition: none; }
+}
+
+/* These transparent surfaces reveal the independent optical strip underneath. */
+.reader-header .reader-chrome-control[data-glass-ready], .reader-header .menu-toggle[data-glass-ready],
+.home-header .header-actions :is(.search-link,.appearance-toggle,.menu-toggle)[data-glass-ready] { background: transparent; }
+@media (min-width: 1280px) {
+  .reading-nav-rail:not(.is-open) .reading-nav-panel { background: transparent; }
+}

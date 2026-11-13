@@ -24,6 +24,8 @@ export class CardBackdrop {
     this.layer.replaceChildren();
     this.layer.style.removeProperty("background");
     delete this.layer.dataset.nodes;
+    delete this.layer.dataset.retained;
+    delete this.layer.dataset.pullVisible;
   }
 
   capture(origin?: HTMLElement) {
@@ -60,6 +62,12 @@ export class CardBackdrop {
         copy.style.width = `${bounds.width}px`; copy.style.height = `${bounds.height}px`;
         copy.style.boxSizing = "border-box";
         copy.removeAttribute("src"); copy.removeAttribute("srcset");
+        if (source === origin) {
+          copy.dataset.sourceSlot = "";
+          copy.style.visibility = "visible";
+          copy.style.background = "color-mix(in srgb, var(--bg), var(--ink) 7%)";
+          copy.style.boxShadow = "inset 0 1px 6px rgb(0 0 0 / 12%)";
+        }
         return copy;
       }
       if (source instanceof HTMLImageElement) {
