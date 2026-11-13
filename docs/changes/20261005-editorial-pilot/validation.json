@@ -1,0 +1,143 @@
+{
+  "code_checkpoint": "117333ece2a46c2592faade52c2cf4c332db1cd5",
+  "preview_url": "http://127.0.0.1:4337/gaussian-splatting-daily/daily/2026/10/03/",
+  "reader_sha256": "f19fd14650438a4e4676062c8c8da2b376251768365dc41ec51ca8662e872d63",
+  "source_sha256": "f5f28e4822dbe28818424fc2db29273b760bcc1f99313c102fd098bd80a83929",
+  "daily_count": 16,
+  "paper_count": 52,
+  "entry_count": 105,
+  "reading_estimate_minutes": {
+    "before": 13,
+    "after": 6
+  },
+  "events": {
+    "main": 4,
+    "brief": 3,
+    "paper": 9
+  },
+  "checks": {
+    "canonical_validation": 16,
+    "editorial_validation": 16,
+    "python_tests": 31,
+    "site_tests": 35,
+    "typecheck": "pass",
+    "static_export": "pass",
+    "internal_paths_assets_anchors": "pass",
+    "legacy_paper_and_analysis_hash_reload": "pass",
+    "search_aliases_and_filters": "pass",
+    "gallery_rotation_zoom_escape_focus": "pass",
+    "theme_light_dark_system": "pass",
+    "browser_console_errors": 0
+  },
+  "responsive": [
+    {
+      "anchorY": 76,
+      "bodyWidth": 327,
+      "font": "15px",
+      "line": "27px",
+      "overflow": false,
+      "width": 375
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 342,
+      "font": "15px",
+      "line": "27px",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 382,
+      "font": "15px",
+      "line": "27px",
+      "overflow": false,
+      "width": 430
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 502,
+      "font": "15px",
+      "line": "27px",
+      "overflow": false,
+      "width": 550
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 680,
+      "font": "17px",
+      "line": "30.6px",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 680,
+      "font": "17px",
+      "line": "30.6px",
+      "overflow": false,
+      "width": 1024
+    },
+    {
+      "anchorY": 76,
+      "bodyWidth": 680,
+      "font": "17px",
+      "line": "30.6px",
+      "overflow": false,
+      "width": 1440
+    }
+  ],
+  "rss_sha256": {
+    "daily": "55adf548fc2e1df7707d8cb71928ba198fc513ec05502b8f86e5b741235c787f",
+    "weekly": "b7b867166f627ccbbc6b45fb688d9f0ae0415696c3a2fde2e3518d2f67923b66"
+  },
+  "screenshots": [
+    {
+      "path": ".codex-work/references/editorial-pilot/after-1440-dark-body.png",
+      "sha256": "30f2048b5ad3d22af8d00b5355389a99d6a24b6578b4753f647d8b166b5ce150"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-1440-full.png",
+      "sha256": "c3a5fc843db8504c4b63bcee08ee94ccf61b6454e49d18033511cea855391e84"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-1440-top.png",
+      "sha256": "1cdcbb88cafd9511b49491725eb283b42bcbe5af73b1b9b08f5973655d8a5b0b"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-390-body.png",
+      "sha256": "db69afd39f1d783fc55f4c21beb4a7839dc32c86e8cf0d14fdc3ec6686542506"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-390-full.png",
+      "sha256": "9d07658c7265966694d8f680b098ffc2aa60804549380963d8866a2ab7ce8de3"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-390-research.png",
+      "sha256": "7bd0aac9546db056757ecf731c969e61a5de8f026d9de43d7615281aa4bd83e4"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/after-550-dark-body.png",
+      "sha256": "877c05485bc6a14ab45b8bad039c1f44911ff4f0d8e93fffa6fff4e45c32d95b"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/before-390.png",
+      "sha256": "b1be2f3a432603d3af2d011af9a8c31a72a2d20f14ba8a3d03d1fcf3f18f8c4d"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/directory-550-dark.png",
+      "sha256": "760f53ca097b4387a533c36db7c3fc9749a0f9aff70782bdc6b2a02a469cad9e"
+    },
+    {
+      "path": ".codex-work/references/editorial-pilot/gallery-1440.png",
+      "sha256": "c454f5f709cdab09664c7c8425ef877446ceac2cd5c647587007df30087a1327"
+    }
+  ],
+  "not_run": [
+    "Real-device touch and pinch gestures",
+    "Upstream training, XR and performance benchmarks",
+    "Public deployment or GitHub writes",
+    "Live giscus comments",
+    "Scheduled task changes or RSS publishing"
+  ]
+}

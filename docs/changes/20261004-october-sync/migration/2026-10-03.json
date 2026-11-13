@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-03",
+  "baseline": "7b59a2c2b29c0ebc747718ece4935d561f12355d",
+  "body_sha256": "4809aaa488ec6750bff969e840db40e1bfbce1451c262bedd8ff0164ae013f90",
+  "source_blocks": 80,
+  "events": [
+    {
+      "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+      "anchor": "event-0e975fb36257",
+      "title": "Gaussian-Splat-Lite 1.2 更新 WebGPU、XR 与流式加载",
+      "group": "main",
+      "source_blocks": [
+        "b-391030e34724-1",
+        "b-3a3fa354fc3f-1"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+      "anchor": "event-b8ea1613f532",
+      "title": "SuperSplat 3.5.1、Viewer 1.37 与 SplatTransform 3.9 发布",
+      "group": "main",
+      "source_blocks": [
+        "b-b4a2d04b575f-1",
+        "b-c8c732e11daa-1",
+        "b-1f04a2415abd-1",
+        "b-db45ce60dadf-1",
+        "b-594a560838eb-1",
+        "b-a0d9ba8a755b-1"
+      ]
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+      "anchor": "event-364e0463c471",
+      "title": "LichtFeld 修复畸变评估与 masked LPIPS",
+      "group": "main",
+      "source_blocks": [
+        "b-2e1756611057-1",
+        "b-8294ac4ffdd5-1"
+      ]
+    },
+    {
+      "id": "github.com/leo-frank/LocusGS/commit/f5aac796ca6b80f8b271b0bc45051688e027b78b",
+      "anchor": "event-4c7048614107",
+      "title": "LocusGS 公开前馈高斯重建代码",
+      "group": "main",
+      "source_blocks": [
+        "b-3d79d44e6d2f-1",
+        "b-bea4b70f0564-1"
+      ]
+    },
+    {
+      "id": "huggingface.co/datasets/wonguen/3DROID",
+      "anchor": "event-9b7cfd1728eb",
+      "title": "3DROID 开放 114 个机器人重建场景",
+      "group": "main",
+      "source_blocks": [
+        "b-c5357d372b90-1",
+        "b-75da69507f61-1",
+        "b-e961a129c150-1",
+        "b-6706491752b1-1",
+        "b-5ea2d841971c-1"
+      ]
+    },
+    {
+      "id": "github.com/yindaheng98/track-4dgs/commit/9ee3ba9f2f8b334d2f75f9146c48237ab70fa98d",
+      "anchor": "event-45c5e03e2cd6",
+      "title": "track-4dgs 0.6 接入 VGGSfM 轨迹查询",
+      "group": "main",
+      "source_blocks": [
+        "b-27b40ee86ed4-1",
+        "b-4de00df2d16b-1"
+      ]
+    },
+    {
+      "id": "github.com/harry7557558/spirula-studio/commit/04da9085",
+      "anchor": "event-256af6ce66fa",
+      "title": "Spirula 改进航线接缝，并警示 AMD Windows 训练风险",
+      "group": "main",
+      "source_blocks": [
+        "b-e6470ba2ed89-1",
+        "b-45a4dc2bc514-1",
+        "b-d3d3dbf8e845-1",
+        "b-456872c73b3d-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00749",
+      "anchor": "paper-2610.00749",
+      "title": "What Builds the Scene? Luminance Dominates Geometry Formation in 3D Gaussian Splatting",
+      "group": "paper",
+      "source_blocks": [
+        "b-6b3ba3592356-1",
+        "b-df3416c6266c-1",
+        "b-d078bfac5c6c-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01229",
+      "anchor": "paper-2610.01229",
+      "title": "A Compact Explicit 4D Representation for Dynamic Scenes（Sparc4D）",
+      "group": "paper",
+      "source_blocks": [
+        "b-bd09502d281d-1",
+        "b-ed7f08b74ed3-1",
+        "b-79caf079b123-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01114",
+      "anchor": "paper-2610.01114",
+      "title": "Affine-Aligned Atlas for Canonical Gaussian Construction in Video Representation",
+      "group": "paper",
+      "source_blocks": [
+        "b-5d615bfd9d50-1",
+        "b-db5a052eb716-1",
+        "b-a8d3c1c0ea7c-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01707",
+      "anchor": "paper-2610.01707",
+      "title": "MEGA: Object-Level Watertight Mesh Extraction from 3D Gaussians",
+      "group": "paper",
+      "source_blocks": [
+        "b-a55c4fa7d691-1",
+        "b-b8c9af593306-1",
+        "b-0d930f4aea15-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.01876",
+      "anchor": "paper-2610.01876",
+      "title": "EvenSplat: Gaussian Splatting under Uneven Illumination",
+      "group": "paper",
+      "source_blocks": [
+        "b-dab5f2681cf9-1",
+        "b-f375005a9c6a-1",
+        "b-c789fca3ba2d-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.02207",
+      "anchor": "paper-2610.02207",
+      "title": "GALA: Gaussian Avatar Lightweight Animation",
+      "group": "paper",
+      "source_blocks": [
+        "b-5259ed2045e0-1",
+        "b-185b4ad4349e-1",
+        "b-4863e2004f40-1",
+        "b-fd5dec13f5dc-1",
+        "b-b8032dd7b474-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00822",
+      "anchor": "paper-2610.00822",
+      "title": "TRACE: Privacy-Preserving Next-Best-View over Distributed 3DGS Maps",
+      "group": "paper",
+      "source_blocks": [
+        "b-2d6e882dafe6-1",
+        "b-73df15f9fcf3-1",
+        "b-2371350db228-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00195",
+      "anchor": "paper-2610.00195",
+      "title": "GS-PQM: Full-Reference Quality Metric for Compressed Gaussian Splatting",
+      "group": "paper",
+      "source_blocks": [
+        "b-f0576e8fdde5-1",
+        "b-84b779e23b74-1",
+        "b-10c6f21155d6-1"
+      ]
+    },
+    {
+      "id": "arxiv:2610.00040",
+      "anchor": "paper-2610.00040",
+      "title": "DSSR-3D: View-Dependent Referring Segmentation on Semantic 3D Gaussians",
+      "group": "paper",
+      "source_blocks": [
+        "b-93670b2adf12-1",
+        "b-3f3a84410267-1",
+        "b-22c670bdcdb6-1"
+      ]
+    },
+    {
+      "id": "analysis-2026-10-03",
+      "anchor": "analysis",
+      "title": "分析与实践",
+      "group": "analysis",
+      "source_blocks": [
+        "b-c58b00d56d7b-1",
+        "b-c3aeb9ab248f-1",
+        "b-e16a2d40dbd6-1",
+        "b-0d9e0c437c23-1",
+        "b-276f290bfa9d-1",
+        "b-5e283154e039-1",
+        "b-3073460f2132-1",
+        "b-5f3d632aca2f-1",
+        "b-9163697bfb14-1",
+        "b-1e8ebc94427f-1",
+        "b-ae572ca7da29-1",
+        "b-650c5a01becd-1",
+        "b-c4efcd07d725-1",
+        "b-0d26e5a76e68-1",
+        "b-9b4908cc2424-1",
+        "b-0941118e6d9e-1",
+        "b-39cc6dc490b1-1",
+        "b-5cdbbd4a2291-1",
+        "b-0ed2591cf70d-1",
+        "b-fb917be861e2-1",
+        "b-fad9bb92925e-1"
+      ]
+    }
+  ],
+  "introduction": [
+    "b-20d457c9ace2-1",
+    "b-12ffcd8b59aa-1"
+  ],
+  "archive": [
+    "b-8cc09c9ebf87-1",
+    "b-c2d2047f580e-1",
+    "b-00e2a791f2d7-1"
+  ],
+  "omit": [
+    "b-9d01ed7c639d-1",
+    "b-414b850a67a4-1"
+  ],
+  "legacy_targets": [
+    "section-1-今日最值得看",
+    "section-2-supersplat--playcanvas-工具链",
+    "section-supersplat-v35140m-live-splats-以上强制-lod",
+    "section-supersplat-viewer-v1370昨天的-xr-改动正式可用",
+    "section-splattransform-390340341-从源码变成安装版本",
+    "section-3-可实际运行的开源项目",
+    "section-gaussian-splat-lite-v120",
+    "section-locusgs",
+    "section-4-4d--dynamic-gaussian",
+    "section-5-viewer--editor--web--mobile--xr",
+    "section-6-compression--format--lod--streaming",
+    "section-7-training--reconstruction--slam--robotics--mapping",
+    "section-lichtfeld-studio-正确性修复组",
+    "section-spirula-mapping-与-amd-风险",
+    "section-机器人数据",
+    "section-8-avatar--human--generative-3d",
+    "section-9-软件硬件和平台厂商",
+    "section-10-研究论文",
+    "section-what-builds-the-scene-luminance-dominates-geometry-formation-in-3d-gaussian-splatting",
+    "section-a-compact-explicit-4d-representation-for-dynamic-scenessparc4d",
+    "section-affine-aligned-atlas-for-canonical-gaussian-construction-in-video-representation",
+    "section-mega-object-level-watertight-mesh-extraction-from-3d-gaussians",
+    "section-3droid-a-dataset-for-3d-reconstruction-in-robotics",
+    "section-evensplat-gaussian-splatting-under-uneven-illumination",
+    "section-gala-gaussian-avatar-lightweight-animation",
+    "section-trace-privacy-preserving-next-best-view-over-distributed-3dgs-maps",
+    "section-gs-pqm-full-reference-quality-metric-for-compressed-gaussian-splatting",
+    "section-dssr-3d-view-dependent-referring-segmentation-on-semantic-3d-gaussians",
+    "section-11-海外开发者社区信号",
+    "section-12-中文社区信号",
+    "section-13-今天最值得实际测试--部署",
+    "section-1-gaussian-splat-lite-v120webgpuxrstreaming-回归",
+    "section-2-playcanvas-三件套发布版本锁版验证生产链",
+    "section-3-lichtfeld-26862688重算一组带畸变评估",
+    "section-核查与边界",
+    "event-0e975fb36257",
+    "event-b8ea1613f532",
+    "event-364e0463c471",
+    "event-4c7048614107",
+    "event-9b7cfd1728eb",
+    "event-45c5e03e2cd6",
+    "event-256af6ce66fa",
+    "event-28e81acf38a5"
+  ]
+}

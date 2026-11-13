@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: "Logical date YYYY-MM-DD; blank = today in Asia/Tokyo"
+        description: "Research-draft date YYYY-MM-DD; blank = today in Asia/Shanghai"
         required: false
         type: string
 
@@ -26,9 +26,7 @@ jobs:
     timeout-minutes: 30
     env:
       GH_TOKEN: ${{ secrets.GSD_BOT_TOKEN || secrets.GITHUB_TOKEN }}
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
-      TZ: Asia/Tokyo
+      TZ: Asia/Shanghai
 
     steps:
       - name: Checkout
@@ -50,7 +48,7 @@ jobs:
         run: |
           DATE="$DISPATCH_DATE"
           if [[ -z "$DATE" ]]; then
-            DATE="$(TZ=Asia/Tokyo date +%F)"
+            DATE="$(TZ=Asia/Shanghai date +%F)"
           fi
           if [[ ! "$DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
             echo "Invalid date: $DATE" >&2
@@ -84,8 +82,17 @@ jobs:
           DATE: ${{ steps.meta.outputs.date }}
         run: python scripts/generate_daily.py --date "$DATE"
 
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
       - name: Build site/search index
-        run: python scripts/build_index.py
+        run: |
+          python scripts/build_index.py
+          npm ci --prefix site
+          npm run content --prefix site
 
       - name: Validate before publishing
         env:
@@ -123,7 +130,7 @@ jobs:
             echo "publishable=true" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Create, record, and merge Daily PR
+      - name: Create or reuse research-draft PR
         if: steps.commit.outputs.publishable == 'true'
         shell: bash
         env:
@@ -131,7 +138,7 @@ jobs:
           BRANCH: ${{ steps.meta.outputs.branch }}
         run: |
           MARKER="<!-- daily-key:$DATE -->"
-          python scripts/publish_summary.py --date "$DATE" --output-dir /tmp/daily-summary
+          python scripts/publish_summary.py --date "$DATE" --output-dir .codex-work/tmp/daily-summary
 
           ISSUE_NUMBER="$(
             gh issue list               --repo "$GITHUB_REPOSITORY"               --state all               --limit 1000               --json number,body               --jq ".[] | select(.body != null and (.body | contains(\"$MARKER\"))) | .number"               | head -n 1
@@ -139,13 +146,11 @@ jobs:
 
           if [[ -z "$ISSUE_NUMBER" ]]; then
             ISSUE_URL="$(
-              gh issue create                 --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/issue-title.txt)"                 --body-file /tmp/daily-summary/issue-body.md
+              gh issue create                 --repo "$GITHUB_REPOSITORY"                 --title "$(cat .codex-work/tmp/daily-summary/issue-title.txt)"                 --body-file .codex-work/tmp/daily-summary/issue-body.md
             )"
             ISSUE_NUMBER="${ISSUE_URL##*/}"
-          else
-            gh issue edit "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/issue-title.txt)"                 --body-file /tmp/daily-summary/issue-body.md
           fi
-          python scripts/publish_summary.py --date "$DATE" --output-dir /tmp/daily-summary --issue-number "$ISSUE_NUMBER"
+          python scripts/publish_summary.py --date "$DATE" --output-dir .codex-work/tmp/daily-summary --issue-number "$ISSUE_NUMBER"
 
           PR_NUMBER="$(
             gh pr list               --repo "$GITHUB_REPOSITORY"               --state open               --head "$BRANCH"               --base main               --limit 10               --json number               --jq '.[0].number // empty'
@@ -153,16 +158,11 @@ jobs:
 
           if [[ -z "$PR_NUMBER" ]]; then
             PR_URL="$(
-              gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "$(cat /tmp/daily-summary/pr-title.txt)"                 --body-file /tmp/daily-summary/pr-body.md
+              gh pr create                 --repo "$GITHUB_REPOSITORY"                 --base main                 --head "$BRANCH"                 --title "$(cat .codex-work/tmp/daily-summary/pr-title.txt)"                 --body-file .codex-work/tmp/daily-summary/pr-body.md
             )"
             PR_NUMBER="${PR_URL##*/}"
           else
-            gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat /tmp/daily-summary/pr-title.txt)"                 --body-file /tmp/daily-summary/pr-body.md
+            gh pr edit "$PR_NUMBER" --repo "$GITHUB_REPOSITORY"                 --title "$(cat .codex-work/tmp/daily-summary/pr-title.txt)"                 --body-file .codex-work/tmp/daily-summary/pr-body.md
           fi
 
-          if python scripts/check_editorial.py --date "$DATE"; then
-            echo "The full Daily was validated; squash-merging PR #$PR_NUMBER."
-            gh pr merge "$PR_NUMBER"             --repo "$GITHUB_REPOSITORY"             --squash             --delete-branch
-          else
-            echo "The arXiv research draft remains in PR #$PR_NUMBER for the 13-section editorial pass."
-          fi
+          echo "Research draft preserved in PR #$PR_NUMBER. The ChatGPT editorial task must complete and validate it before adding daily-publish."

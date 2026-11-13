@@ -1,0 +1,172 @@
+{
+  "observedOn": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "previousStudy": "../../20261019-editorial-reading-system/reference-sample.json",
+  "range": {
+    "first": "2026-10-19",
+    "last": "2026-11-13"
+  },
+  "scope": "逐期读取公开正文块。保留链接和结构统计。",
+  "articles": [
+    {
+      "date": "2026-10-19",
+      "url": "https://sspai.com/post/116641",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-20",
+      "url": "https://sspai.com/post/116758",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-21",
+      "url": "https://sspai.com/post/116887",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-22",
+      "url": "https://sspai.com/post/116953",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-23",
+      "url": "https://sspai.com/post/117104",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-26",
+      "url": "https://sspai.com/post/117460",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-27",
+      "url": "https://sspai.com/post/117600",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-28",
+      "url": "https://sspai.com/post/117684",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-29",
+      "url": "https://sspai.com/post/117750",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-10-30",
+      "url": "https://sspai.com/post/117827",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-02",
+      "url": "https://sspai.com/post/118191",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-03",
+      "url": "https://sspai.com/post/118232",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-04",
+      "url": "https://sspai.com/post/118402",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-05",
+      "url": "https://sspai.com/post/118498",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-06",
+      "url": "https://sspai.com/post/118587",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-09",
+      "url": "https://sspai.com/post/118805",
+      "discovery": "official previous-editions cards"
+    },
+    {
+      "date": "2026-11-10",
+      "url": "https://sspai.com/post/118854",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-11",
+      "url": "https://sspai.com/post/118905",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-12",
+      "url": "https://sspai.com/post/118935",
+      "discovery": "official tag API"
+    },
+    {
+      "date": "2026-11-13",
+      "url": "https://sspai.com/post/118966",
+      "discovery": "official tag API"
+    }
+  ],
+  "structure": {
+    "mainNewsSections": 142,
+    "paragraphs": 369,
+    "mainNewsWithImages": 130,
+    "mainNewsWithLinks": 142,
+    "editionsWithBriefs": 12,
+    "mainSectionsWithH3": 2
+  },
+  "revisionAndFootnoteSamples": [
+    {
+      "url": "https://sspai.com/post/85735",
+      "topic": "Mac 选购",
+      "updates": 5,
+      "notes": 8
+    },
+    {
+      "url": "https://sspai.com/post/86328",
+      "topic": "铁路出行",
+      "updates": 3,
+      "notes": 2
+    },
+    {
+      "url": "https://sspai.com/post/68623",
+      "topic": "知识整理",
+      "updates": 2
+    },
+    {
+      "url": "https://sspai.com/post/79351",
+      "topic": "微信教程",
+      "updates": 1
+    },
+    {
+      "url": "https://sspai.com/post/90882",
+      "topic": "Apple Watch 设计",
+      "updates": 1
+    },
+    {
+      "url": "https://sspai.com/post/72089",
+      "topic": "共创",
+      "updates": 1
+    },
+    {
+      "url": "https://sspai.com/post/116181",
+      "topic": "创作手册修订说明",
+      "updates": 0,
+      "notes": 1
+    },
+    {
+      "url": "https://sspai.com/post/71724",
+      "topic": "写作课程介绍",
+      "updates": 0,
+      "notes": 0
+    },
+    {
+      "url": "https://sspai.com/post/118175",
+      "topic": "macOS California",
+      "updates": 0,
+      "notes": 0
+    }
+  ]
+}

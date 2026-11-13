@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-12",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-12T00:00:00+08:00",
+    "end": "2026-11-13T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu",
+        "radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing",
+        "radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:56.279968+00:00",
+      "urls": [
+        "https://evergine.com/gaussian-splatting-add-on-whats-new/",
+        "https://www.freegaussian.ai/blog/dji-osmo-360-gaussian-splatting"
+      ],
+      "candidateIds": [
+        "radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu",
+        "radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://evergine.com/gaussian-splatting-add-on-whats-new/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:12.806172+00:00",
+          "sha256": "67475af97f5a6d0fa6dc808152b2a38d4ddbba63b19b3ac052d224092b6af7be",
+          "characters": 13229
+        },
+        {
+          "url": "https://www.freegaussian.ai/blog/dji-osmo-360-gaussian-splatting",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:56.279968+00:00",
+          "sha256": "d29abd8c1e3beeb993c532c5a3792d4ea871b6fb3081686ca642d71c0ce25aac",
+          "characters": 4484
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:25.501087+00:00",
+      "urls": [
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:25.501087+00:00",
+          "sha256": "cdb965d1123fcc5f1834f72119a14b04897f658dd1ddbefaa734df38eb8ff106",
+          "characters": 4477
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu",
+      "title": "Evergine 将高斯处理移至 GPU",
+      "eventDate": "2026-11-12",
+      "reportDate": "2026-11-12",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu",
+        "https://evergine.com/gaussian-splatting-add-on-whats-new/"
+      ],
+      "eventId": "radiancefields.com/evergine-moves-gaussian-splat-processing-to-the-gpu"
+    },
+    {
+      "id": "radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing",
+      "title": "FreeGaussian 直接读取 DJI Osmo 360 原始文件",
+      "eventDate": "2026-11-12",
+      "reportDate": "2026-11-12",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing",
+        "https://www.freegaussian.ai/blog/dji-osmo-360-gaussian-splatting"
+      ],
+      "eventId": "radiancefields.com/freegaussian-adds-native-dji-osmo-360-osv-processing"
+    },
+    {
+      "id": "radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction",
+      "title": "Spirula 更新相机校正与全局重建",
+      "eventDate": "2026-11-12",
+      "reportDate": "2026-11-12",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12"
+      ],
+      "eventId": "radiancefields.com/spirula-studio-v2026-11-12-adds-calibration-correction"
+    }
+  ]
+}

@@ -1,0 +1,1104 @@
+{
+  "scope": "本次采用决策基于规范研究记录及现有媒体清单；不宣称已逐条重新检索所有上游图片。没有生成性能图或伪装新版截图。",
+  "reports": [
+    {
+      "date": "2026-09-18",
+      "cover": {
+        "url": "/media/images/blender-gaussian-480.webp",
+        "source": "https://developer.blender.org/docs/release_notes/5.3/rendering/",
+        "alt": "Blender 高斯渲染示例中的织物帽子",
+        "credit": "Blender Foundation",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Blender 高斯渲染示例中的织物帽子",
+        "displayCredit": "Blender Foundation"
+      },
+      "mainEvents": [
+        {
+          "id": "event-92ae17146406",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/engine/commit/113173b0ee1afa4fbc62b66071747926bcf29a2c",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-42647e6ca365",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-e7f82a8ef03c",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/commit/4b9f93604626019d55de73f50b1abc61eb9d01c0",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "cover": {
+        "url": "/media/images/supersplat-stochastic-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "alt": "SuperSplat 随机透明度演示中的温室与仙人掌",
+        "credit": "SuperSplat 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "SuperSplat 随机透明度演示中的温室与仙人掌",
+        "displayCredit": "SuperSplat 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/engine/pull/9443",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-2996f8109981",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/commit/6e0c0d3816ca00d61ce61441d0903d46a649dc73",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-f18c980d9c22",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-e3b30c3f0188",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "cover": {
+        "url": "/media/images/niantic-relighting-960.webp",
+        "source": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "alt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+        "credit": "Niantic Spatial · 9 月 18 日重光照测试公告配图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Niantic Spatial 展示同一寺庙场景在不同光照和天气下的外观",
+        "displayCredit": "Niantic Spatial · 9 月 18 日重光照测试公告配图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/KhronosGroup/glTF/commit/81762cc328b160eafaa0d577dd547a998401ade9",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/302",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/nerfstudio-project/gsplat/commit/512d366b67073d77ca099ede742683c165dfc23b",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-4ae0bbef820d",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/d94c6bfe61731b99016d0df5defaa05adb2aa6a1",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/commit/985707da0bfafe7626f308bde1553d00b5427467",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "cover": {
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "source": "https://lichtfeld.io/",
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "credit": "LichtFeld 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Studio 中的林间木屋训练界面",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2253",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-2304367d3548",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-f58a4b699fdf",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2254",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "cover": {
+        "url": "/media/images/supersplat-viewer-960.webp",
+        "source": "https://github.com/playcanvas/supersplat-viewer",
+        "alt": "SuperSplat Viewer 中的教堂与相机时间线",
+        "credit": "SuperSplat 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "SuperSplat Viewer 中的教堂与相机时间线",
+        "displayCredit": "SuperSplat 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "event-72dcd742026c",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-a10102e88b8a",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-44e74623592d",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-4f642c40f2ed",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "cover": {
+        "url": "/media/images/supersplat-webgpu-editor-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "alt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+        "credit": "SuperSplat 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+        "displayCredit": "SuperSplat 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/supersplat/pull/1053",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-d4afb71beb6d",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-829ed25f7cdd",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "event-99e26bcf93e7",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-2ae070d06991",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "cover": {
+        "url": "/media/images/amd-gsplat-counts-960.webp",
+        "source": "https://rocm.blogs.amd.com/software-tools-optimization/point-2-gaussian/README.html",
+        "alt": "同一庭院在不同高斯数量下的重建对比",
+        "credit": "AMD ROCm 博客",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "同一庭院在不同高斯数量下的重建对比",
+        "displayCredit": "AMD ROCm 博客"
+      },
+      "mainEvents": [
+        {
+          "id": "event-09960e11ed08",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-4bc743dffac6",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-eea55cdadbad",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-2b56144ca1bb",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-46de9b62be63",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "cover": {
+        "url": "/media/images/iags-studio-960.webp",
+        "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+        "alt": "IA’GS 的照片导入与新建重建任务界面",
+        "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "IA’GS 的照片导入与新建重建任务界面",
+        "displayCredit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2344",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/engine/commit/fe280fdbdc807fb9bf117e01b4d352c0879d07d3",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-853ff199e1f3",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/311",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-612142c975ea",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "cover": {
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "source": "https://lichtfeld.io/",
+        "alt": "LichtFeld Studio 中的林间木屋训练界面",
+        "credit": "LichtFeld Studio 官方训练界面演示；用于介绍项目，非 Metal 后端测试结果",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Studio 中的林间木屋训练界面",
+        "displayCredit": "LichtFeld Studio 官方训练界面演示；用于介绍项目，非 Metal 后端测试结果"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2436",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-496e8a440193",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-9c581c05d5ac",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-88022cfb5eeb",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-27",
+      "cover": {
+        "url": "/media/images/lichtfeld-viewer-600.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "alt": "LichtFeld Viewer 中的建筑与道路重建",
+        "credit": "LichtFeld 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Viewer 中的建筑与道路重建",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/314",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2460",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2444",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2461",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2463",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-73ace8cc165c",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-28",
+      "cover": {
+        "url": "/media/images/ooosplat-preview-960.webp",
+        "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+        "alt": "OOOSplat 高斯模型预览与变换调整界面",
+        "credit": "OOOSplat 官方高斯预览界面 · 9 月 28 日仓库快照，非高清补拍效果对比",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "OOOSplat 高斯模型预览与变换调整界面",
+        "displayCredit": "OOOSplat 官方高斯预览界面 · 9 月 28 日仓库快照，非高清补拍效果对比"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2530",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/d8e6a267f906261ba3207f55317c67a20081620b",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/f397c56259096438674dc7398d3d599badad7a24",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-3abe283ffc0b",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "cover": {
+        "url": "/media/images/supersplat-lod-controls-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "credit": "PlayCanvas 项目演示",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "displayCredit": "PlayCanvas 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/engine/pull/9584",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-76112746d721",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "event-7a05fcf4931b",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "event-6e28c9e743c9",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/52cfb6a7726119d9b1eeb889055c22b984004d63",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-30",
+      "cover": {
+        "url": "/media/images/spirula-rf-960.webp",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "displayCredit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "github.com/xiaobiaodu/Mobile-4DGS/commit/675f0a827764383edd749d2c98906761e0fc28fd",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9601",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "cover": {
+        "url": "/media/images/arkit-training-720.webp",
+        "source": "https://github.com/KuoFengYuan/arkit-3dgs-scanner/tree/92de1e64e286b83488cf69f1f71b63326279af86",
+        "alt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+        "credit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "ARKit 3DGS Scanner 在 iPhone 上训练桌面物体的界面",
+        "displayCredit": "ARKit 3DGS Scanner 官方采集与训练演示 · PR #58 合并版本中的素材，非性能对比"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9610",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/126",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9627",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "cover": {
+        "url": "/media/images/lulusplat-rf-960.webp",
+        "source": "https://radiancefields.com/lulusplat-trains-gaussian-splats-entirely-on-apple-silicon-macs",
+        "alt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+        "credit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LuluSplat macOS 界面的媒体导入、项目与批处理入口",
+        "displayCredit": "LuluSplat · Radiance Fields 9 月 30 日报道配图，展示 macOS 界面，非 Windows 版截图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/splat-transform/pull/340",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/130",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "liquiduslabs.com/lulusplat/",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "aescripts.com/gausser/",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "cover": {
+        "url": "/media/images/gslite-v120-demo-960.webp",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+        "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+        "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+        "displayCredit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.2.0",
+          "adopted": true,
+          "reason": "保留既有一手素材、图注与原图身份，放到相关完整段落后"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat/releases/tag/v3.5.1",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2686",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "huggingface.co/datasets/wonguen/3DROID",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "cover": {
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "source": "https://lichtfeld.io/",
+        "alt": "LichtFeld Studio 中的林间木屋训练界面（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Studio 中的林间木屋训练界面",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/klausi3D/godotGS/pull/1134",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2722",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2710",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "cover": {
+        "url": "/media/images/lichtfeld-viewer-600.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "alt": "LichtFeld Viewer 中的建筑与道路重建（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Viewer 中的建筑与道路重建",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/klausi3D/godotGS/pull/1138",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2756",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "cover": {
+        "url": "/media/images/supersplat-webgpu-editor-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-supersplat-editor-3-0-rebuilt-on-webgpu/",
+        "alt": "SuperSplat 编辑器中的庭院、自行车与长椅（历史素材）",
+        "credit": "SuperSplat 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "SuperSplat 编辑器中的庭院、自行车与长椅",
+        "displayCredit": "SuperSplat 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/supersplat/pull/1066",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/splat-transform/pull/347",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/101",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "cover": {
+        "url": "/media/images/spirula-rf-960.webp",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图（历史素材）",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "displayCredit": "Spirula Studio 9 月 30 日报道题图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.10.6",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2961",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2963",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/xiaobiaodu/Mobile-4DGS",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "cover": {
+        "url": "/media/images/supersplat-lod-controls-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件（历史素材）",
+        "credit": "PlayCanvas 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "displayCredit": "PlayCanvas 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/engine/pull/9694",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/splat-transform/pull/352",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3007",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/8ea07447efc0460cda721cff799f2425513a54d3",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "cover": {
+        "url": "/media/images/spirula-rf-960.webp",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图（历史素材）",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "displayCredit": "Spirula Studio 9 月 30 日报道题图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/154",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/56c3c41db108a8f7a3cb5cb0a991fddb238b2f50",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3092",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3108",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "cover": {
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "source": "https://lichtfeld.io/",
+        "alt": "LichtFeld Studio 中的林间木屋训练界面（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Studio 中的林间木屋训练界面",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3190",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/splat-transform/releases/tag/v3.10.1",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/5c9a9a378c225ba61e8320f453d2ded702e51b1f",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "cover": {
+        "url": "/media/images/lichtfeld-viewer-600.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "alt": "LichtFeld Viewer 中的建筑与道路重建（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Viewer 中的建筑与道路重建",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/Azusa309/3DGS-LOD",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/netolcc06/gaussian-splat-renderer",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/161",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3194",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "cover": {
+        "url": "/media/images/lichtfeld-meihogen-960.webp",
+        "source": "https://lichtfeld.io/",
+        "alt": "LichtFeld Studio 中的林间木屋训练界面（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Studio 中的林间木屋训练界面",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/Sun173558/DynaSem-GS",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/aryasentry/stillroom",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/HiroGitea/leafweave",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3283",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "cover": {
+        "url": "/media/images/spirula-rf-960.webp",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图（历史素材）",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "displayCredit": "Spirula Studio 9 月 30 日报道题图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/spirulae-splat/Spirulae-splat/commit/d76eba240d93cd741c564d9ab9ddc391293946a0",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3340",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9733",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3354",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "cover": {
+        "url": "/media/images/lichtfeld-viewer-600.webp",
+        "source": "https://github.com/MrNeRF/LichtFeld-Studio",
+        "alt": "LichtFeld Viewer 中的建筑与道路重建（历史素材）",
+        "credit": "LichtFeld 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "LichtFeld Viewer 中的建筑与道路重建",
+        "displayCredit": "LichtFeld 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/obraia/gausify-orbit/releases/tag/v0.5.0",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3381",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3361",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/commit/71d8a91666173f6f46b7e0274e9b1d78e1944c11",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "cover": {
+        "url": "/media/images/supersplat-lod-controls-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件（历史素材）",
+        "credit": "PlayCanvas 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "displayCredit": "PlayCanvas 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/engine/pull/9756",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3521",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3507",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3477",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "cover": {
+        "url": "/media/images/supersplat-lod-controls-960.webp",
+        "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "alt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件（历史素材）",
+        "credit": "PlayCanvas 项目演示；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "PlayCanvas Editor 中的玩偶猫高斯模型与 LOD 控件",
+        "displayCredit": "PlayCanvas 项目演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/playcanvas/engine/pull/9763",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3556",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/zju3dv/InfiniSplat/tree/main/InfiniSplat_v2",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/obraia/gausify-orbit",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "cover": {
+        "url": "/media/images/spirula-rf-960.webp",
+        "source": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+        "alt": "Spirula Studio 报道使用的彩色螺旋题图（历史素材）",
+        "credit": "Spirula Studio 9 月 30 日报道题图 · Radiance Fields；非分区训练结果图；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Spirula Studio 报道使用的彩色螺旋题图",
+        "displayCredit": "Spirula Studio 9 月 30 日报道题图"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.10.16",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3596",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3610",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3588",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "cover": {
+        "url": "/media/images/gslite-v120-demo-960.webp",
+        "source": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/tree/v1.2.0",
+        "alt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景（历史素材）",
+        "credit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示 · 非 XR 或排序性能对比；历史素材，非本次更新截图",
+        "decision": "逐期选择标题中所涉项目的现有素材；版本与核验说明保存在本记录，页面仅使用简洁图片描述和来源。",
+        "displayAlt": "Gaussian-Splat-Lite 展示桌面杂货摊模型的默认场景",
+        "displayCredit": "Gaussian-Splat-Lite v1.2.0 仓库默认场景演示"
+      },
+      "mainEvents": [
+        {
+          "id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/releases/tag/v1.3.1",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/ooolabdev/ooosplat/commit/9cd6b5ab1364",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/commit/5b0d5fed065d",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        },
+        {
+          "id": "github.com/SirJoeYama/4DGS-VR/commit/d8643206a15b",
+          "adopted": false,
+          "reason": "当期研究记录没有已核验并纳入媒体清单的独立配图；本次按文字来源改写，不以装饰图补数量"
+        }
+      ]
+    }
+  ]
+}

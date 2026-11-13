@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-30",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-30T00:00:00+08:00",
+    "end": "2026-10-31T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/2026-us-capitol-christmas-tree-becomes-a-gaussian-splat",
+        "radiancefields.com/mlslabsrenderer-pro-2-1-brings-gaussian-splats-to-pico",
+        "radiancefields.com/spirula-studio-v2026.10.30-adds-apriltag-alignment",
+        "radiancefields.com/world-labs-opens-gaussian-splat-creation-in-marble"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:51.686190+00:00",
+      "urls": [
+        "https://playcanv.as/p/7SQpBGmU/",
+        "https://uidronelab.org/2026/10/29/ui-drone-lab-captures-laser-scans-of-2026-us-capitol-christmas-tree/",
+        "https://docs.atlas-beta.worldlabs.ai/posed-images-to-splats"
+      ],
+      "candidateIds": [
+        "radiancefields.com/2026-us-capitol-christmas-tree-becomes-a-gaussian-splat",
+        "radiancefields.com/world-labs-opens-gaussian-splat-creation-in-marble"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://playcanv.as/p/7SQpBGmU/",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:39.253824+00:00",
+          "sha256": "0f0846051feb1ae8cbd9af31a62ee1453c7200c0ca96a40ee173dde9ce36f419",
+          "characters": 92,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://uidronelab.org/2026/10/29/ui-drone-lab-captures-laser-scans-of-2026-us-capitol-christmas-tree/",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:51.686190+00:00",
+          "error": "HTTP Error 503: Service Unavailable"
+        },
+        {
+          "url": "https://docs.atlas-beta.worldlabs.ai/posed-images-to-splats",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:11.199734+00:00",
+          "sha256": "b25eb4c3cf270dad1e6a9e6ebd5d56a9fd8562c4f5dc9b3be65ccf59e67c636d",
+          "characters": 4391
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:28.173962+00:00",
+      "urls": [
+        "https://github.com/mlslabs/MLSLabsGaussianSplattingRenderer-UE/releases/tag/Pro_V2.1.0.0",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.30"
+      ],
+      "candidateIds": [
+        "radiancefields.com/mlslabsrenderer-pro-2-1-brings-gaussian-splats-to-pico",
+        "radiancefields.com/spirula-studio-v2026.10.30-adds-apriltag-alignment"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/mlslabs/MLSLabsGaussianSplattingRenderer-UE/releases/tag/Pro_V2.1.0.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:28.173962+00:00",
+          "sha256": "5d886a4f4d53d359b4a5651102d5ba6edd6d107ef274c829f15304e9fbf7f842",
+          "characters": 3961
+        },
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.30",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:24.999482+00:00",
+          "sha256": "46cf00ab8313d902d0cd8cf34d583a9bbcfea6e9c5606e091dacf93b2efc410d",
+          "characters": 4749
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/2026-us-capitol-christmas-tree-becomes-a-gaussian-splat",
+      "title": "美国国会圣诞树被记录为高斯场景",
+      "eventDate": "2026-10-30",
+      "reportDate": "2026-10-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/2026-us-capitol-christmas-tree-becomes-a-gaussian-splat",
+        "https://playcanv.as/p/7SQpBGmU/",
+        "https://uidronelab.org/2026/10/29/ui-drone-lab-captures-laser-scans-of-2026-us-capitol-christmas-tree/"
+      ],
+      "eventId": "radiancefields.com/2026-us-capitol-christmas-tree-becomes-a-gaussian-splat"
+    },
+    {
+      "id": "radiancefields.com/mlslabsrenderer-pro-2-1-brings-gaussian-splats-to-pico",
+      "title": "MLSLabsRenderer-Pro 将高斯带到 Pico",
+      "eventDate": "2026-10-30",
+      "reportDate": "2026-10-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/mlslabsrenderer-pro-2-1-brings-gaussian-splats-to-pico",
+        "https://github.com/mlslabs/MLSLabsGaussianSplattingRenderer-UE/releases/tag/Pro_V2.1.0.0"
+      ],
+      "eventId": "radiancefields.com/mlslabsrenderer-pro-2-1-brings-gaussian-splats-to-pico"
+    },
+    {
+      "id": "radiancefields.com/spirula-studio-v2026.10.30-adds-apriltag-alignment",
+      "title": "Spirula 增加标记对齐与两点定标",
+      "eventDate": "2026-10-30",
+      "reportDate": "2026-10-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spirula-studio-v2026.10.30-adds-apriltag-alignment",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.10.30"
+      ],
+      "eventId": "radiancefields.com/spirula-studio-v2026.10.30-adds-apriltag-alignment"
+    },
+    {
+      "id": "radiancefields.com/world-labs-opens-gaussian-splat-creation-in-marble",
+      "title": "Marble 开放从已有视图创建高斯",
+      "eventDate": "2026-10-30",
+      "reportDate": "2026-10-30",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/world-labs-opens-gaussian-splat-creation-in-marble",
+        "https://docs.atlas-beta.worldlabs.ai/posed-images-to-splats"
+      ],
+      "eventId": "radiancefields.com/world-labs-opens-gaussian-splat-creation-in-marble"
+    }
+  ]
+}

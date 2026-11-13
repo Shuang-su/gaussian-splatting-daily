@@ -1,0 +1,53 @@
+/* Shared reading rhythm; daily events retain their more compact headings. */
+.article-shell .prose, .weekly-editorial .prose { font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
+.article-shell .prose > p, .article-shell .prose > ul, .article-shell .prose > ol, .weekly-editorial .prose > p { margin-bottom: 28px; }
+.article-shell .original-record .prose { font-size: 14px; line-height: 1.85; }
+.article-longform .prose h2 { font-size: 32px; line-height: 1.4; margin: 52px 0 28px; padding: 0; letter-spacing: -.02em; }
+.article-longform .prose h3 { font-size: 23px; line-height: 1.5; margin: 36px 0 20px; }
+.article-longform .article-header { padding-bottom: 40px; }
+.prose .deep-reading { border: 1px solid var(--line); border-radius: 12px; padding: 0 22px; margin: 28px 0; background: var(--surface); font-size: 15px; line-height: 1.8; }
+.prose .deep-reading > summary { cursor: pointer; padding: 18px 0; font-weight: 500; color: var(--text); }
+.prose .deep-reading > summary::marker { color: var(--muted); }
+.prose .deep-reading > summary:focus-visible { outline-offset: 4px; }
+.prose .deep-reading[open] > summary { margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.prose .deep-reading p, .prose .deep-reading ol, .prose .deep-reading ul { margin-bottom: 22px; }
+.article-shell .prose .event-figure { margin: 28px 0 36px; }
+.article-shell .prose .event-figure img { display: block; margin: 0 auto; width: auto; max-width: 100%; max-height: min(78svh, 760px); object-fit: contain; background: transparent; }
+.prose figcaption { margin-top: 10px; font-size: 12px; line-height: 1.7; color: var(--muted); text-align: left; }
+.prose table { max-width: 100%; overscroll-behavior-inline: contain; }
+.prose pre { max-width: 100%; white-space: pre; overflow-x: auto; }
+.prose :not(pre) > code { overflow-wrap: anywhere; }
+.author-byline { display: inline-flex; align-items: center; gap: 6px; }
+.author-byline svg, .author-byline .brand-mark { width: 17px; height: 17px; }
+.article-longform .article-meta { align-items: center; flex-wrap: wrap; }
+.editorial-disclosure { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 24px 0; }
+.editorial-teasers { margin: 44px 0; border-top: 1px solid var(--line); padding-top: 28px; }
+.editorial-teasers > h2, .longform-related > h2 { font-size: 22px; font-weight: 500; margin-bottom: 22px; }
+.editorial-teasers > div { display: grid; gap: 24px; }
+.editorial-teasers article { border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+.editorial-teasers h3 { font-size: 21px; line-height: 1.5; margin: 8px 0 12px; font-weight: 500; }
+.editorial-teasers p { font-size: 15px; line-height: 1.8; margin-bottom: 12px; color: var(--muted); }
+.editorial-teasers time { font-size: 12px; color: var(--muted); }
+.longform-related { border-top: 1px solid var(--line); padding-top: 30px; margin-top: 52px; }
+.longform-related p { margin: 16px 0; line-height: 1.7; }
+.article-longform .article-colophon ul { padding-left: 20px; line-height: 1.8; }
+.article-longform .article-colophon li { margin: 12px 0; }
+.weekly-editorial { margin-bottom: 54px; }
+.weekly-editorial .prose h2 { font-size: 26px; margin: 38px 0 24px; padding: 0; }
+.weekly-editorial .prose h2:first-child { margin-top: 0; }
+.weekly-event-index { margin: 36px 0; border-top: 1px solid var(--line); padding-top: 24px; }
+.weekly-event-index > summary { cursor: pointer; font-size: 18px; }
+@media (max-width: 767px) {
+  .article-shell .prose, .weekly-editorial .prose { font-size: 16px; line-height: 1.8; }
+  .article-shell .prose > p, .article-shell .prose > ul, .article-shell .prose > ol, .weekly-editorial .prose > p { margin-bottom: 24px; }
+  .article-longform .prose h2 { font-size: 24px; margin: 36px 0 24px; }
+  .article-longform .prose h3 { font-size: 20px; }
+  .article-longform .article-header { padding-bottom: 32px; }
+  .prose .deep-reading { padding: 0 16px; font-size: 15px; }
+  .weekly-editorial .prose h2 { font-size: 23px; }
+  .editorial-teasers h3 { font-size: 20px; }
+}
+@media print {
+  .deep-reading { break-inside: avoid; background: transparent; }
+  .reading-navigator, .article-interaction-wrap { display: none; }
+}

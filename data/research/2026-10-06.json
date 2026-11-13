@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-06",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-06T00:00:00+08:00",
+    "end": "2026-10-07T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/simactive-correlator3d-publishes-gaussian-splats-to-cesium",
+        "radiancefields.com/empire-at-sea-brings-4d-gaussian-splat-actors-to-apple-vision-pro",
+        "radiancefields.com/nzz-team-details-how-it-built-gaussian-splats-of-a-restricted-asylum-center-on-samos"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:07.470925+00:00",
+      "urls": [
+        "https://www.simactive.com/news-stories/simactive-enables-online-sharing-of-gaussian-splats",
+        "https://www.labiennale.org/en/news/official-awards-83rd-venice-international-film-festival",
+        "https://www.livedesignonline.com/news/excellence-awards-2026-empire-sea",
+        "https://medium.com/@splnlss/how-we-used-gaussian-splats-to-take-readers-inside-a-restricted-refugee-camp-f09c3a3324f0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/simactive-correlator3d-publishes-gaussian-splats-to-cesium",
+        "radiancefields.com/empire-at-sea-brings-4d-gaussian-splat-actors-to-apple-vision-pro",
+        "radiancefields.com/nzz-team-details-how-it-built-gaussian-splats-of-a-restricted-asylum-center-on-samos"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.simactive.com/news-stories/simactive-enables-online-sharing-of-gaussian-splats",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:07.470925+00:00",
+          "sha256": "34341264b9245792a778cef7c012400156f29b7ed54f2bb3ac0d556052e0988d",
+          "characters": 2307
+        },
+        {
+          "url": "https://www.labiennale.org/en/news/official-awards-83rd-venice-international-film-festival",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:01.935675+00:00",
+          "sha256": "701bbe71a1c61b2e9a414355c0ade1665813dc8e5a1ec049661ba8a0d36e2b66",
+          "characters": 8758
+        },
+        {
+          "url": "https://www.livedesignonline.com/news/excellence-awards-2026-empire-sea",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:37:03.659405+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://medium.com/@splnlss/how-we-used-gaussian-splats-to-take-readers-inside-a-restricted-refugee-camp-f09c3a3324f0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:35.933807+00:00",
+          "sha256": "ac51c3b2290986618fa2a5b8f397786b312127ab985ee38270c130b263de791c",
+          "characters": 29141
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/simactive-correlator3d-publishes-gaussian-splats-to-cesium",
+      "title": "Correlator3D 可直接发布高斯到 Cesium",
+      "eventDate": "2026-10-06",
+      "reportDate": "2026-10-06",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/simactive-correlator3d-publishes-gaussian-splats-to-cesium",
+        "https://www.simactive.com/news-stories/simactive-enables-online-sharing-of-gaussian-splats"
+      ],
+      "eventId": "radiancefields.com/simactive-correlator3d-publishes-gaussian-splats-to-cesium"
+    },
+    {
+      "id": "radiancefields.com/empire-at-sea-brings-4d-gaussian-splat-actors-to-apple-vision-pro",
+      "title": "《Empire At Sea》用动态高斯呈现沉浸式演员",
+      "eventDate": "2026-10-06",
+      "reportDate": "2026-10-06",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/empire-at-sea-brings-4d-gaussian-splat-actors-to-apple-vision-pro",
+        "https://www.labiennale.org/en/news/official-awards-83rd-venice-international-film-festival",
+        "https://www.livedesignonline.com/news/excellence-awards-2026-empire-sea"
+      ],
+      "eventId": "radiancefields.com/empire-at-sea-brings-4d-gaussian-splat-actors-to-apple-vision-pro"
+    },
+    {
+      "id": "radiancefields.com/nzz-team-details-how-it-built-gaussian-splats-of-a-restricted-asylum-center-on-samos",
+      "title": "NZZ 用高斯重建辅助受限现场报道",
+      "eventDate": "2026-10-06",
+      "reportDate": "2026-10-06",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/nzz-team-details-how-it-built-gaussian-splats-of-a-restricted-asylum-center-on-samos",
+        "https://medium.com/@splnlss/how-we-used-gaussian-splats-to-take-readers-inside-a-restricted-refugee-camp-f09c3a3324f0"
+      ],
+      "eventId": "radiancefields.com/nzz-team-details-how-it-built-gaussian-splats-of-a-restricted-asylum-center-on-samos"
+    }
+  ]
+}

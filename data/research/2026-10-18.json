@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-18",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-18T00:00:00+08:00",
+    "end": "2026-10-19T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/room-scan-exporter-v0-3-brings-gaussian-splats-to-quest-3"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:13.074577+00:00",
+      "urls": [
+        "https://zoynctech.itch.io/room-scan-exporter-for-meta-quest-3"
+      ],
+      "candidateIds": [
+        "radiancefields.com/room-scan-exporter-v0-3-brings-gaussian-splats-to-quest-3"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://zoynctech.itch.io/room-scan-exporter-for-meta-quest-3",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:13.074577+00:00",
+          "sha256": "61594a4858f376fbcd999dd9a407e205e2aa18b11d385c30e9f86cee7d49dbd4",
+          "characters": 10409
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/room-scan-exporter-v0-3-brings-gaussian-splats-to-quest-3",
+      "title": "Room Scan Exporter 把 Quest 房间扫描送回头显",
+      "eventDate": "2026-10-18",
+      "reportDate": "2026-10-18",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/room-scan-exporter-v0-3-brings-gaussian-splats-to-quest-3",
+        "https://zoynctech.itch.io/room-scan-exporter-for-meta-quest-3"
+      ],
+      "eventId": "radiancefields.com/room-scan-exporter-v0-3-brings-gaussian-splats-to-quest-3"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "date": "2026-10-05",
+  "implementationCommit": "722c541f4f5a55c9524fe8cd5b6e0f00fc808e61",
+  "branch": "codex/daily-editorial-more",
+  "canonicalReportsUnchanged": 16,
+  "existingReadingEditionUnchanged": "2026-10-03",
+  "contentValidationReports": 16,
+  "editorialValidationReports": 16,
+  "pythonTestsPassed": 31,
+  "websiteTestsPassed": 36,
+  "typecheck": "passed",
+  "staticBuild": "passed",
+  "exportHtmlPages": 36,
+  "editions": [
+    {
+      "date": "2026-10-02",
+      "headline": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "readingMinutes": 5,
+      "sourceCount": 0,
+      "canonicalHash": "e61d92ba07f48ed5862c7abb7607d27e466a9b6b10b626c263dd3100af207373",
+      "readingEdition": {
+        "path": "docs/reading/2026-10-02.md",
+        "contentHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb"
+      },
+      "events": [
+        {
+          "id": "github.com/playcanvas/splat-transform/pull/340",
+          "anchor": "event-bc8f0fd5b15b",
+          "title": "SplatTransform 加快 SOG 打包，同时修复 PLY 读取",
+          "group": "main"
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/322",
+          "anchor": "event-f5b48c8ee473",
+          "title": "SuperSplat 为独立头显调整预算，加入双手操作",
+          "group": "main"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/130",
+          "anchor": "event-48305d82f552",
+          "title": "Spirula 让 GPS 在重建过程中约束相机位置",
+          "group": "main"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2620",
+          "anchor": "event-488cb0ea7bb5",
+          "title": "LichtFeld 降低多个大型模型合并时的显存占用",
+          "group": "main"
+        },
+        {
+          "id": "liquiduslabs.com/lulusplat/",
+          "anchor": "event-853f99bec576",
+          "title": "LuluSplat 提供 Windows 版，通过 Vulkan 在本机训练",
+          "group": "main"
+        },
+        {
+          "id": "aescripts.com/gausser/",
+          "anchor": "event-201bdc7a485d",
+          "title": "Gausser 将高斯资产接入 Cinema 4D 动画工具",
+          "group": "main"
+        },
+        {
+          "id": "github.com/hsiang0117/sun-conditioned-3dgs",
+          "anchor": "event-8993d518faf0",
+          "title": "两个实验项目探索可变光照与单图重建",
+          "group": "brief"
+        }
+      ],
+      "previousReadingMinutes": 13
+    },
+    {
+      "date": "2026-10-01",
+      "headline": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "readingMinutes": 4,
+      "sourceCount": 0,
+      "canonicalHash": "c760ef8aa2055fa45dafe50f1a5ba80ead6b6b0ae81793243100d277452ca536",
+      "readingEdition": {
+        "path": "docs/reading/2026-10-01.md",
+        "contentHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb"
+      },
+      "events": [
+        {
+          "id": "github.com/KuoFengYuan/arkit-3dgs-scanner/pull/58",
+          "anchor": "event-e7ea69b3b4c1",
+          "title": "ARKit Scanner 加快 iPhone 本机训练",
+          "group": "main"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9610",
+          "anchor": "event-b6493d88439b",
+          "title": "PlayCanvas 修复高斯序列换帧时的黑帧",
+          "group": "main"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/pull/126",
+          "anchor": "event-4e6e23c8ff87",
+          "title": "Spirula 可以用外部点云初始化，加入 HEIC 照片支持",
+          "group": "main"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9627",
+          "anchor": "event-07e7794fda78",
+          "title": "PlayCanvas 修复 XR 会话、初始朝向与命中检测",
+          "group": "main"
+        },
+        {
+          "id": "github.com/blender/blender/commit/4676deff60a229c6225d84149536f88a112cf92e",
+          "anchor": "event-e4ddc85b16f4",
+          "title": "Blender 修复半精度高斯属性的动画识别",
+          "group": "brief"
+        },
+        {
+          "id": "www.reddit.com/r/GaussianSplatting/comments/1wu1c4x/art_galleries_are_moving_online_thanks_to_3d/",
+          "anchor": "story-a9af1bbaffc4",
+          "title": "线上画廊展示高分辨率照片的重建价值",
+          "group": "brief"
+        },
+        {
+          "id": "ar-go.co/blog/gaussian-splatting-deliverables/",
+          "anchor": "story-0328e31733c0",
+          "title": "ARGO 用同一场景比较七种交付物",
+          "group": "brief"
+        },
+        {
+          "id": "github.com/aesplat/AESplat",
+          "anchor": "event-0ffdaab6683f",
+          "title": "AESplat 提供权重入口，训练源码仍待补齐",
+          "group": "paper"
+        }
+      ],
+      "previousReadingMinutes": 10
+    },
+    {
+      "date": "2026-09-30",
+      "headline": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "readingMinutes": 7,
+      "sourceCount": 12,
+      "canonicalHash": "7b4a5d45ea25dc5e8b8066314398c933b6eac67894d3f839ba42530c14b949ba",
+      "readingEdition": {
+        "path": "docs/reading/2026-09-30.md",
+        "contentHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca"
+      },
+      "events": [
+        {
+          "id": "github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+          "anchor": "event-99a9815e4587",
+          "title": "SplatTransform 3.8 修复 .splat 导出方向，移除旧 LOD 参数",
+          "group": "main"
+        },
+        {
+          "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+          "anchor": "event-ce0f0200e4ce",
+          "title": "Spirula 正式支持分区训练，增加遮罩与显存预警",
+          "group": "main"
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+          "anchor": "event-377b0508efef",
+          "title": "LichtFeld 修复训练中断与导出失败未报错",
+          "group": "main"
+        },
+        {
+          "id": "github.com/xiaobiaodu/Mobile-4DGS/commit/675f0a827764383edd749d2c98906761e0fc28fd",
+          "anchor": "event-9968018ea0a0",
+          "title": "Mobile-4DGS 公开训练代码与移动端 WebGL 实现",
+          "group": "main"
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/9601",
+          "anchor": "event-175e2d9094b7",
+          "title": "PlayCanvas 修复 VR 重复启动、退出冻结与头姿剔除",
+          "group": "main"
+        },
+        {
+          "id": "event-67fd2513b02f",
+          "anchor": "story-67fd2513b02f",
+          "title": "SuperSplat Viewer 改善标注面板，随后更新引擎依赖",
+          "group": "brief"
+        },
+        {
+          "id": "event-49b828cf48b2",
+          "anchor": "story-49b828cf48b2",
+          "title": "Gaussian-Splat-Lite 1.1.8 修正抗锯齿后的色彩",
+          "group": "brief"
+        },
+        {
+          "id": "arxiv:2609.37816",
+          "anchor": "paper-2609.37816",
+          "title": "WINGS 直接在三维空间补全高斯场景",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.38177",
+          "anchor": "paper-2609.38177",
+          "title": "Imagine3D-LLM 让多模态模型先形成三维场景再回答",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.35619",
+          "anchor": "paper-2609.35619",
+          "title": "CollisionSplatting 在高斯场景中计算碰撞与规划路径",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.37115",
+          "anchor": "paper-2609.37115",
+          "title": "NRF-GS 用共享网络表达反光细节",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.36693",
+          "anchor": "paper-2609.36693",
+          "title": "AESplat 将基础颜色与视角相关外观分开预测",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.36940",
+          "anchor": "paper-2609.36940",
+          "title": "DispFlow-GS 区分相机移动与物体形变",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.37874",
+          "anchor": "paper-2609.37874",
+          "title": "EndoPrior-GS 改善内镜中的动态组织重建",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.36520",
+          "anchor": "paper-2609.36520",
+          "title": "一项机器人研究用动态高斯环境训练视觉避障",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.35612",
+          "anchor": "paper-2609.35612",
+          "title": "DIBR-GS 用伪视角补足遥感重建约束",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.35573",
+          "anchor": "paper-2609.35573",
+          "title": "Less Is More 从视频中挑选更有用的重建帧",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.36969",
+          "anchor": "paper-2609.36969",
+          "title": "深度与法线先验约束高斯几何",
+          "group": "paper"
+        },
+        {
+          "id": "arxiv:2609.37916",
+          "anchor": "paper-2609.37916",
+          "title": "RLX 将高斯算子纳入跨后端张量系统",
+          "group": "paper"
+        }
+      ],
+      "previousReadingMinutes": 13
+    }
+  ],
+  "responsiveChecks": [
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 327,
+      "fontSize": "15px",
+      "guideHeight": 831.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 375
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 342,
+      "fontSize": "15px",
+      "guideHeight": 831.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 390
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 382,
+      "fontSize": "15px",
+      "guideHeight": 727.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 430
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 502,
+      "fontSize": "15px",
+      "guideHeight": 608.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 550
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 613.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 768
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 613.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 1024
+    },
+    {
+      "date": "2026-09-30",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 613.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "46899b105d6b9c97273293b5a5b4465fecdd8db8275566f72c3e5fb7925b91ca",
+      "title": "SplatTransform 3.8 修复导出方向，Spirula 正式支持分区训练",
+      "width": 1440
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 327,
+      "fontSize": "15px",
+      "guideHeight": 678.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 375
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 342,
+      "fontSize": "15px",
+      "guideHeight": 678.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 390
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 382,
+      "fontSize": "15px",
+      "guideHeight": 601.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 430
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 502,
+      "fontSize": "15px",
+      "guideHeight": 532.296875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 550
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 536.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 768
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 536.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 1024
+    },
+    {
+      "date": "2026-10-01",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 536.296875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "d8203bb8e42fbbfbe9358a154492cb981dea6bc45fb630e0e71618dd6d479efb",
+      "title": "ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "width": 1440
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 327,
+      "fontSize": "15px",
+      "guideHeight": 917.546875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 375
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 342,
+      "fontSize": "15px",
+      "guideHeight": 863.546875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 390
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 382,
+      "fontSize": "15px",
+      "guideHeight": 740.546875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 430
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 502,
+      "fontSize": "15px",
+      "guideHeight": 644.546875,
+      "lineHeight": "27px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 550
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 650.546875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 768
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 650.546875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 1024
+    },
+    {
+      "date": "2026-10-02",
+      "bodyWidth": 680,
+      "fontSize": "17px",
+      "guideHeight": 650.546875,
+      "lineHeight": "30.6px",
+      "overflow": 0,
+      "readerHash": "df2a00777b0d951f71a98943bfa8af000b0a3175a059c3921487982c0ce684cb",
+      "title": "SplatTransform 加快 SOG 打包，SuperSplat 改善头显浏览",
+      "width": 1440
+    }
+  ],
+  "feedsFrozenSha256": {
+    "daily": "55adf548fc2e1df7707d8cb71928ba198fc513ec05502b8f86e5b741235c787f",
+    "weekly": "b7b867166f627ccbbc6b45fb688d9f0ae0415696c3a2fde2e3518d2f67923b66"
+  },
+  "browserChecks": [
+    "All three report URLs load and display the new titles and reading hashes",
+    "Guide links land below the fixed header",
+    "Floating directory shows the rewritten event titles",
+    "Legacy group-analysis opens the original research details",
+    "WINGS preview selects its matching original, rotates, zooms and restores focus on Escape",
+    "Chinese query 外部点云 + tool + 3dgs returns the October 1 Spirula entry",
+    "Keyboard activation opens the result at the stable event anchor; reload preserves it",
+    "Dark theme persists across reload; system preference and default viewport restored",
+    "No console error or warning observed"
+  ],
+  "screenshots": [
+    ".codex-work/references/editorial-more/09-30-mobile-dark-research.png",
+    ".codex-work/references/editorial-more/09-30-mobile-gallery.png",
+    ".codex-work/references/editorial-more/10-01-desktop-body.png",
+    ".codex-work/references/editorial-more/10-01-desktop-top.png",
+    ".codex-work/references/editorial-more/10-01-mobile-body.png",
+    ".codex-work/references/editorial-more/10-01-mobile-full.png",
+    ".codex-work/references/editorial-more/10-01-mobile-top.png",
+    ".codex-work/references/editorial-more/10-02-desktop-dark-body.png",
+    ".codex-work/references/editorial-more/2026-09-30-1440-full.png",
+    ".codex-work/references/editorial-more/2026-09-30-390-full.png",
+    ".codex-work/references/editorial-more/2026-10-01-1440-full.png",
+    ".codex-work/references/editorial-more/2026-10-01-390-full.png",
+    ".codex-work/references/editorial-more/2026-10-02-1440-full.png",
+    ".codex-work/references/editorial-more/2026-10-02-390-full.png"
+  ],
+  "notRun": [
+    "Real mobile touch gestures",
+    "Upstream training and GPU/XR benchmarks",
+    "Public deployment",
+    "Actual GitHub comment writes",
+    "Scheduled task changes or observation"
+  ],
+  "evidenceDirectory": ".codex-work/references/editorial-more/"
+}

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-03",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-03T00:00:00+08:00",
+    "end": "2026-10-04T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-splat-pro-v1.5.0-adds-source-trimming-and-keyframe-extraction",
+        "radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change",
+        "radiancefields.com/gaussian-splat-patch-brings-clone-stamp-and-healing-brushes-to-gaussian-splats-in-blender",
+        "radiancefields.com/playcanvas-splat-transform-v3.9.0-speeds-up-sog-compression"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:34.151782+00:00",
+      "urls": [
+        "https://gumroadfx.gumroad.com/?a=555385955"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-splat-pro-v1.5.0-adds-source-trimming-and-keyframe-extraction"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://gumroadfx.gumroad.com/?a=555385955",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:34.151782+00:00",
+          "sha256": "bbf15a4a0f14b5b6efe6664719fe5d67dccf8143f3614d07b67bdd3d5a68d680",
+          "characters": 97,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.007652+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2609.31339"
+      ],
+      "candidateIds": [
+        "radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2609.31339",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.007652+00:00",
+          "sha256": "65ac937308688276d79761a9ba74a29f50d8245f901615e667efd9f950cddba4",
+          "characters": 5387
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.512862+00:00",
+      "urls": [
+        "https://github.com/TobiasBat/ChronoFuseGS",
+        "https://github.com/timfennell/blender-splat-patch",
+        "https://github.com/playcanvas/splat-transform/releases/tag/v3.9.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change",
+        "radiancefields.com/gaussian-splat-patch-brings-clone-stamp-and-healing-brushes-to-gaussian-splats-in-blender",
+        "radiancefields.com/playcanvas-splat-transform-v3.9.0-speeds-up-sog-compression"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/TobiasBat/ChronoFuseGS",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:21.256393+00:00",
+          "sha256": "9809b3478099ed0b894a8939e98e8643f5a111d321d4b441ea53ecb41e303937",
+          "characters": 8207
+        },
+        {
+          "url": "https://github.com/timfennell/blender-splat-patch",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.512862+00:00",
+          "sha256": "59e089dc917a8311ce5a2183bb7033292ae4339b2874d88cbf01dd78b64ed16e",
+          "characters": 22044
+        },
+        {
+          "url": "https://github.com/playcanvas/splat-transform/releases/tag/v3.9.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:29.942598+00:00",
+          "sha256": "6be647730535215b8cd2f219f8ecf1216b87ad19a086a2805325d8aee423bfc4",
+          "characters": 2977
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/360-splat-pro-v1.5.0-adds-source-trimming-and-keyframe-extraction",
+      "title": "360 Splat Pro 增加视频裁切与关键帧抽取",
+      "eventDate": "2026-10-03",
+      "reportDate": "2026-10-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/360-splat-pro-v1.5.0-adds-source-trimming-and-keyframe-extraction",
+        "https://gumroadfx.gumroad.com/?a=555385955"
+      ],
+      "eventId": "radiancefields.com/360-splat-pro-v1.5.0-adds-source-trimming-and-keyframe-extraction"
+    },
+    {
+      "id": "radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change",
+      "title": "ChronoFuseGS 将不同日期的扫描合为可比较场景",
+      "eventDate": "2026-10-03",
+      "reportDate": "2026-10-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change",
+        "https://arxiv.org/abs/2609.31339",
+        "https://github.com/TobiasBat/ChronoFuseGS"
+      ],
+      "eventId": "radiancefields.com/chronofusegs-merges-gaussian-splat-captures-across-time-and-highlights-change"
+    },
+    {
+      "id": "radiancefields.com/gaussian-splat-patch-brings-clone-stamp-and-healing-brushes-to-gaussian-splats-in-blender",
+      "title": "Gaussian Splat Patch 在 Blender 中加入克隆修补",
+      "eventDate": "2026-10-03",
+      "reportDate": "2026-10-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gaussian-splat-patch-brings-clone-stamp-and-healing-brushes-to-gaussian-splats-in-blender",
+        "https://github.com/timfennell/blender-splat-patch"
+      ],
+      "eventId": "radiancefields.com/gaussian-splat-patch-brings-clone-stamp-and-healing-brushes-to-gaussian-splats-in-blender"
+    },
+    {
+      "id": "radiancefields.com/playcanvas-splat-transform-v3.9.0-speeds-up-sog-compression",
+      "title": "SplatTransform 3.9 加快 SOG 压缩",
+      "eventDate": "2026-10-03",
+      "reportDate": "2026-10-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/playcanvas-splat-transform-v3.9.0-speeds-up-sog-compression",
+        "https://github.com/playcanvas/splat-transform/releases/tag/v3.9.0"
+      ],
+      "eventId": "radiancefields.com/playcanvas-splat-transform-v3.9.0-speeds-up-sog-compression"
+    }
+  ]
+}

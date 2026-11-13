@@ -1,100 +1,46 @@
-# Gaussian Splatting Daily
+# metaflow horizon
 
-A Git-backed daily feed for **3D Gaussian Splatting (3DGS)**, **4D Gaussian Splatting (4DGS)**, neural rendering, reconstruction, viewers and tooling.
+面向读者的中文行业媒体：高斯、扫描与摄影测量、NeRF、空间 AI、XR、创作工具、作品及行业应用。**高斯日报**保留为每日栏目，另设文章、专题、研究和应用。
 
-## What this repository does
+[正式网站](https://metaflow.shuang-su.com/horizon/) · [内容契约](docs/horizon-spec.md) · [编辑与排版规范](docs/editorial-style.md) · [每日任务](docs/chatgpt-horizon-task.md)
 
-- Archives each logical day as `docs/daily/YYYY/MM/YYYY-MM-DD.md`.
-- Preserves the 2026-09-18–29 deep research reports by logical day; the earlier 22-paper bootstrap collection is preserved under `docs/research/` rather than attributed to one day.
-- Uses GitHub Actions to ingest recent Gaussian Splatting research every day.
-- Discovers the first usable figure from arXiv HTML and embeds it as an attributed remote image when available.
-- Keeps source metadata deterministic and auditable.
-- Opens a tracking Issue and a Pull Request for each Daily run, then automatically squash-merges it after in-workflow validation.
-- Never requires the website to be the source of truth: the site is rebuilt from `docs/`.
-- Optionally enriches the Daily with OpenAI summaries when `OPENAI_API_KEY` is configured.
+Markdown 保存研究原文、阅读版及独立文章，Next.js 静态导出。网站独立部署在与 Metaflow 相同的 Netlify 团队，通过主站 `/horizon/` 代理访问。GitHub 原仓库改名保留提交、Issue、PR 历史；不要创建同名旧仓库，以免破坏重定向。
 
-## Publication flow
+## 阅读与追溯
 
-```text
-arXiv API
-  -> normalize / deduplicate
-  -> optional OpenAI editorial enrichment
-  -> docs/daily/YYYY/MM/YYYY-MM-DD.md
-  -> deterministic validation
-  -> automation/daily/YYYY-MM-DD
-  -> Daily Issue
-  -> Pull Request
-  -> review / merge
-  -> site build
+- `docs/daily/`：研究稿；原有来源、论文首次归档和锚点保留。
+- `docs/reading/`：以读者为中心的正文，以哈希绑定研究稿和补充材料。
+- `docs/supplements/`：带事件日期和补收日期的新增证据。
+- `docs/articles/`、`docs/weekly/`：独立文章、应用资料与周报。
+- `data/source-registry.json`、`data/research/`：来源注册表、每轮检查结果和候选处置。
+- `data/portal-index.json`：统一栏目、应用元数据、相关推荐和搜索索引。
+
+本轮审核覆盖 2026-09-18 至 2026-11-13 共 57 个日期，包括注明事后补收的 10 月 21—24 日。来源可访问性和历史缺口详见[审核记录](docs/changes/20261113-metaflow-horizon/history-audit.json)。覆盖范围以来源清单和日期为准，不等于全网穷尽。
+
+## 每日发布
+
+复用原 ChatGPT 任务，每天北京时间 08:00 执行综合检索、编辑、归档与读回。最近 7 天重叠检查；失败保存稿件和 PR，不推进成功窗口。每日 PR 校验通过后受限自动合并，`Deploy Horizon` 工作流独立发布 Netlify，并读回正式站部署身份。运行提示词和阶段恢复要求见[每日任务](docs/chatgpt-horizon-task.md)。
+
+RSS 提供日报、周报、文章与应用；原日报和周报 GUID 与网址分离，改域名或更正正文不会改变条目身份。新网站上线不代表定时流程已观察完成；前三次真实定时成功记录在 `state/publication-observations.json`，人工执行单独计数。
+
+## 本地开发与检查
+
+```sh
+python3 scripts/build_index.py
+python3 scripts/validate_daily.py --all
+python3 scripts/check_editorial.py --all
+python3 scripts/validate_coverage.py --all
+python3 scripts/validate_media.py
+python3 -m unittest discover -s scripts/tests
+python3 -m unittest discover -s tests
+npm ci --prefix site
+npm test --prefix site
+npm run typecheck --prefix site
+npm run lint:editorial --prefix site
+npm run build --prefix site
+python3 scripts/verify_export.py
+python3 scripts/stage_site.py
+npm run dev --prefix site
 ```
 
-The automation intentionally does **not** push Daily content directly to `main`.
-
-## Repository layout
-
-```text
-.github/
-  workflows/
-    daily-ingest.yml
-    validate-content.yml
-  ISSUE_TEMPLATE/
-    correction.yml
-  pull_request_template.md
-
-docs/
-  index.md
-  architecture.md
-  schema.md
-  corrections.md
-  daily/
-    _template.md
-    YYYY/MM/YYYY-MM-DD.md
-
-data/
-  sources.yml
-  daily-index.json
-
-state/
-  checkpoint.json
-
-scripts/
-  generate_daily.py
-  validate_daily.py
-  build_index.py
-```
-
-## Daily schedule
-
-The default schedule is **08:17 Asia/Tokyo**. It avoids the top of the hour and gives the upstream research feeds time to settle.
-
-Manual runs can supply a logical date through `workflow_dispatch`.
-
-## Required repository setting for automated PR creation
-
-GitHub may block `GITHUB_TOKEN` from creating pull requests in a newly created repository. In:
-
-`Settings -> Actions -> General -> Workflow permissions`
-
-enable **Allow GitHub Actions to create and approve pull requests**, or add a fine-grained token / GitHub App token as the `GSD_BOT_TOKEN` repository secret.
-
-The workflow prefers `GSD_BOT_TOKEN` when present and falls back to `GITHUB_TOKEN`.
-
-## Optional OpenAI enrichment
-
-Add `OPENAI_API_KEY` as a repository Actions secret. The generator uses the Responses API to produce a concise Chinese editorial overview and per-paper summaries from the supplied arXiv metadata/abstracts.
-
-Optional repository variable:
-
-```text
-OPENAI_MODEL=gpt-5.6-luna
-```
-
-If no API key is configured, the Daily still succeeds and publishes deterministic source metadata without AI summaries.
-
-## Data-source acknowledgement
-
-Thank you to arXiv for use of its open access interoperability.
-
-## Design direction
-
-The long-term frontend is described in [docs/architecture.md](docs/architecture.md): a Radiance Fields-inspired research portal with Daily, Papers, Tools, Demos, Topics, Search and an optional interactive Gaussian Splat viewer.
+开发入口 `http://127.0.0.1:4317/horizon/`。`site/out/` 是导出内容，部署产物位于 `.codex-work/deploy/horizon-site/horizon/`。`netlify.toml` 保持不存在页面的真实 404；日常发布不构建或替换主站。应用条目必须区分资料核验和实际体验，未试用不称评测。

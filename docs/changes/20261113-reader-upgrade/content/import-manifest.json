@@ -1,0 +1,147 @@
+{
+  "upstream": "https://github.com/Shuang-su/gaussian-splatting-daily",
+  "commit": "9c9113b1ba65c5b523cbd537f0180b60abe9520b",
+  "localBaseline": "2b853f0",
+  "missingDates": [
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-24"
+  ],
+  "historicalCount": 31,
+  "newPaperCount": 54,
+  "reports": [
+    {
+      "date": "2026-10-19",
+      "source": "docs/daily/2026/10/2026-10-19.md",
+      "sha256": "5b5914a58cba1276eb39384353f46c84b63f49bcec9d1caf754e3a8fbc334022",
+      "readingEdition": "docs/reading/2026-10-19.md"
+    },
+    {
+      "date": "2026-10-20",
+      "source": "docs/daily/2026/10/2026-10-20.md",
+      "sha256": "72c2781849fea34284b27700bd0eae1746b9f8ba906837da8afe7dbb91773541",
+      "readingEdition": "docs/reading/2026-10-20.md"
+    },
+    {
+      "date": "2026-10-25",
+      "source": "docs/daily/2026/10/2026-10-25.md",
+      "sha256": "57f91c3204186da78a32d6a1830b8c696980b4c03e97e1e25c5fe7d7ab9cf43f",
+      "readingEdition": "docs/reading/2026-10-25.md"
+    },
+    {
+      "date": "2026-10-26",
+      "source": "docs/daily/2026/10/2026-10-26.md",
+      "sha256": "f1fc83bfdeaba86e24a9fe291285e2ff5b7da4348b9fc36d289d1f36dff82804",
+      "readingEdition": "docs/reading/2026-10-26.md"
+    },
+    {
+      "date": "2026-10-27",
+      "source": "docs/daily/2026/10/2026-10-27.md",
+      "sha256": "8bb59e7e3fd0eac9fda917d59a2a1214dd33e3d033c39a8402001bc689890653",
+      "readingEdition": "docs/reading/2026-10-27.md"
+    },
+    {
+      "date": "2026-10-28",
+      "source": "docs/daily/2026/10/2026-10-28.md",
+      "sha256": "c613bd10c9264c28b80f05a086f72fcfc109a990b4bd054a9d0efbd5111bae29",
+      "readingEdition": "docs/reading/2026-10-28.md"
+    },
+    {
+      "date": "2026-10-29",
+      "source": "docs/daily/2026/10/2026-10-29.md",
+      "sha256": "2f55f45273f108f240cb66e72bd38d1a53081941adb2e0e97d249767e6b56993",
+      "readingEdition": "docs/reading/2026-10-29.md"
+    },
+    {
+      "date": "2026-10-30",
+      "source": "docs/daily/2026/10/2026-10-30.md",
+      "sha256": "10784d7150aa54d9dab44517610692f675462543b4777cec783b6eca6eae663b",
+      "readingEdition": "docs/reading/2026-10-30.md"
+    },
+    {
+      "date": "2026-10-31",
+      "source": "docs/daily/2026/10/2026-10-31.md",
+      "sha256": "4f0b70de9e29333f98c03177078eded179155ec3c0624400023c96bb5e344628",
+      "readingEdition": "docs/reading/2026-10-31.md"
+    },
+    {
+      "date": "2026-11-01",
+      "source": "docs/daily/2026/11/2026-11-01.md",
+      "sha256": "168c7a7899525cc5301779bd1318a8b92dfe838f334d2c1ceabf39bbaae5b1bf",
+      "readingEdition": "docs/reading/2026-11-01.md"
+    },
+    {
+      "date": "2026-11-02",
+      "source": "docs/daily/2026/11/2026-11-02.md",
+      "sha256": "e8771ed64445dbdf9feeda7101192e6169da116cee5ad12aa3590ea5fa1a767d",
+      "readingEdition": "docs/reading/2026-11-02.md"
+    },
+    {
+      "date": "2026-11-03",
+      "source": "docs/daily/2026/11/2026-11-03.md",
+      "sha256": "e21bebb60f9f3b58c56f5ff7c9915fe8b044c65e90c0eef3a6b0cae20525206b",
+      "readingEdition": "docs/reading/2026-11-03.md"
+    },
+    {
+      "date": "2026-11-04",
+      "source": "docs/daily/2026/11/2026-11-04.md",
+      "sha256": "f4e0bb02a198b2aa68707a3e171cb262f6c0d3aa3a10fa97d2aea24e24cd52ad",
+      "readingEdition": "docs/reading/2026-11-04.md"
+    },
+    {
+      "date": "2026-11-05",
+      "source": "docs/daily/2026/11/2026-11-05.md",
+      "sha256": "88aa21ea4715ccaa3d6758a78dac33852faf01590ad3f9823aa16f0b35c4fd01",
+      "readingEdition": "docs/reading/2026-11-05.md"
+    },
+    {
+      "date": "2026-11-06",
+      "source": "docs/daily/2026/11/2026-11-06.md",
+      "sha256": "8652fbf363e6d4d865f27cb0fe1eef8e2943cb71caafc6bb377a24cbf6924815",
+      "readingEdition": "docs/reading/2026-11-06.md"
+    },
+    {
+      "date": "2026-11-07",
+      "source": "docs/daily/2026/11/2026-11-07.md",
+      "sha256": "b00240115f5348e34a46123c0f6c9056eb87133c6cb4ca750a1e38602c3b4f32",
+      "readingEdition": "docs/reading/2026-11-07.md"
+    },
+    {
+      "date": "2026-11-08",
+      "source": "docs/daily/2026/11/2026-11-08.md",
+      "sha256": "c23d97db182e4de0322d104aa4b2e98ff9b6f2ee5ad8c4cd6e4dc65d32e7e2d9",
+      "readingEdition": "docs/reading/2026-11-08.md"
+    },
+    {
+      "date": "2026-11-09",
+      "source": "docs/daily/2026/11/2026-11-09.md",
+      "sha256": "10e1c933ee9a4c84a120f289fe8f7c0a246fe9b846d596df0aaeca8ea2944578",
+      "readingEdition": "docs/reading/2026-11-09.md"
+    },
+    {
+      "date": "2026-11-10",
+      "source": "docs/daily/2026/11/2026-11-10.md",
+      "sha256": "70ab867b6b5c7975010e6d90f1daeb29a327d74d746d79271848ebbc841caf8f",
+      "readingEdition": "docs/reading/2026-11-10.md"
+    },
+    {
+      "date": "2026-11-11",
+      "source": "docs/daily/2026/11/2026-11-11.md",
+      "sha256": "6ec67aefd3ff2630600ccb37b677e3ca9281c82ba309e1bcf31b096e081e466e",
+      "readingEdition": "docs/reading/2026-11-11.md"
+    },
+    {
+      "date": "2026-11-12",
+      "source": "docs/daily/2026/11/2026-11-12.md",
+      "sha256": "c8876d5ba4938fad5d58daee38286dbfe9a28b758a1aa686fc623100a6084ab5",
+      "readingEdition": "docs/reading/2026-11-12.md"
+    },
+    {
+      "date": "2026-11-13",
+      "source": "docs/daily/2026/11/2026-11-13.md",
+      "sha256": "1799278febe23a5c1a8270ffd71575b038a335d09f6c043a114fd40611030da0",
+      "readingEdition": "docs/reading/2026-11-13.md"
+    }
+  ]
+}

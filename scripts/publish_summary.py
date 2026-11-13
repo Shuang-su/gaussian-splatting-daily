@@ -61,7 +61,7 @@ def main() -> None:
     output.mkdir(parents=True, exist_ok=True)
     title = f"[Daily] {args.date}｜{lead}"
     pr_title = f"docs(daily): {args.date} — {lead}"
-    link = f"https://github.com/Shuang-su/gaussian-splatting-daily/blob/main/{path.relative_to(ROOT)}"
+    link = f"https://github.com/Shuang-su/metaflow-horizon/blob/main/{path.relative_to(ROOT)}"
     body = (
         f"<!-- daily-key:{args.date} -->\n\n"
         f"## 今日判断\n\n{intro or '本轮已完成来源核查，详见完整日报。'}\n\n"

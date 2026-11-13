@@ -1,0 +1,115 @@
+.reading-hierarchy { display: contents; }
+.reading-parent { display: none; }
+
+@media (min-width: 960px) {
+  html:has([data-reading-hierarchy="active"]) { --reading-parent-width: clamp(240px, 27vw, 340px); }
+  .reading-hierarchy[data-reading-hierarchy="active"] {
+    display: grid;
+    grid-template-columns: var(--reading-parent-width) minmax(600px, 1fr);
+    align-items: start;
+  }
+  .reading-hierarchy[data-reading-hierarchy="active"] > main { min-width: 0; }
+  .reading-hierarchy[data-reading-hierarchy="active"] .catalogue-layout { display: block; }
+  .reading-hierarchy[data-reading-hierarchy="active"] .catalogue-aside { display: none; }
+  .reading-parent {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: var(--header-height);
+    height: calc(100dvh - var(--header-height));
+    min-height: 0;
+    background: var(--bg);
+    border-inline-end: 1px solid var(--line);
+  }
+  .reading-parent > nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+  }
+  .reading-parent > nav a { border-radius: 7px; padding: 2px 6px; }
+  .reading-parent > nav a + a::before { content: "›"; color: var(--muted); margin-inline-end: 12px; }
+  .reading-parent-list { overflow: auto; overscroll-behavior: contain; padding: 12px 18px 24px; }
+  .reading-parent-list ul { list-style: none; padding: 0; margin: 0; }
+  .reading-parent-list li + li { margin-block-start: 2px; }
+  .reading-parent-list a { display: block; border-radius: 9px; padding: 10px 12px; }
+  .reading-parent-list a:hover,
+  .reading-parent-list a[aria-current="page"] { background: var(--surface); }
+  .reading-parent-list a[aria-current="page"] { color: var(--accent); font-weight: 650; }
+  html:has([data-reading-hierarchy="active"]) .reader-header { inset-inline-start: var(--reading-parent-width); }
+  html:has([data-reading-hierarchy="active"]) .article-interaction-wrap { inset-inline-start: calc(50% + var(--reading-parent-width) / 2); }
+}
+
+@media (min-width: 1280px) {
+  html:has([data-reading-hierarchy="active"]) .reading-nav-rail {
+    inset-inline-start: auto;
+    width: max(24px, calc((100vw - var(--reading-parent-width)) / 2 - 420px));
+  }
+}
+
+/* The right segment owns the document and its fixed controls. Where there is
+   room, the existing parent list occupies the segment across the seam. */
+@media (horizontal-viewport-segments: 2) {
+  html {
+    --reading-pane-start: env(viewport-segment-left 1 0, 0px);
+    --reading-pane-width: env(viewport-segment-width 1 0, 100vw);
+    --reading-pane-right: env(viewport-segment-right 1 0, 100vw);
+    --reading-parent-pane-width: env(viewport-segment-width 0 0, 0px);
+  }
+  body {
+    margin-inline-start: var(--reading-pane-start);
+    inline-size: var(--reading-pane-width);
+    container: reading-pane / inline-size;
+  }
+  .reading-hierarchy[data-reading-hierarchy="active"] { display: contents; }
+  .reading-hierarchy .reading-parent { display: none; }
+  html .site-header,
+  html:has([data-reading-hierarchy="active"]) .reader-header {
+    left: var(--reading-pane-start);
+    right: calc(100vw - var(--reading-pane-right));
+  }
+  html .article-interaction-wrap,
+  html:has([data-reading-hierarchy="active"]) .article-interaction-wrap {
+    left: calc(var(--reading-pane-start) + var(--reading-pane-width) / 2);
+    width: min(520px, calc(var(--reading-pane-width) - 24px));
+  }
+  .reader-header .header-inner nav,
+  .reading-nav-panel {
+    max-width: calc(var(--reading-pane-width) - 32px);
+    inset-inline-start: auto;
+    inset-inline-end: calc(100vw - var(--reading-pane-right) + 16px);
+  }
+  .reading-nav-rail { inset-inline-start: auto; }
+  .skip-link { left: calc(var(--reading-pane-start) + 16px); }
+
+  @container reading-pane (width < 600px) {
+    .catalogue-layout { display: flex; flex-direction: column; }
+    .catalogue-aside { display: block; }
+    main .shell, main .article-layout { padding-inline: clamp(12px, 4cqi, 24px); }
+  }
+}
+
+@media (min-width: 960px) and (horizontal-viewport-segments: 2) {
+  @container reading-pane (min-width: 600px) {
+    .reading-hierarchy[data-reading-hierarchy="active"] .reading-parent {
+      display: flex;
+      position: fixed;
+      inset-inline-start: env(viewport-segment-left 0 0, 0px);
+      inline-size: var(--reading-parent-pane-width);
+    }
+  }
+}
+
+/* In tabletop posture keep persistent reading controls above the hinge.
+   The document continues to use native window scrolling. */
+@media (vertical-viewport-segments: 2) {
+  .article-interaction-wrap, .reading-actions {
+    bottom: calc(100dvh - env(viewport-segment-bottom 0 0, 100dvh) + 12px);
+  }
+  .reading-nav-panel {
+    max-height: calc(env(viewport-segment-height 0 0, 100dvh) - var(--header-height) - 64px);
+    overflow: auto;
+  }
+}

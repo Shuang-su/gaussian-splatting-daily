@@ -1,0 +1,29 @@
+#reference-root,.reference-document{display:contents}
+[hidden]{display:none!important}
+.reference-error{font:18px/1.6 system-ui;margin:80px auto;max-width:680px;padding:24px}
+.reference-search-results{position:fixed;z-index:100000;max-height:65vh;overflow:auto;border:1px solid #ddd;background:#fff;color:#222;border-radius:12px;box-shadow:0 12px 36px #0002;font:15px/1.6 system-ui}
+.reference-search-results a{display:block;padding:14px 18px;border-bottom:1px solid #eee;color:inherit;text-decoration:none}
+.reference-search-results a:hover,.reference-search-results a:focus{background:#f1f1f1;outline:none}
+.reference-search-results p{padding:18px;margin:0}
+.theme-dark .reference-search-results{background:#262626;color:#eee;border-color:#444}
+.theme-dark .reference-search-results a{border-color:#444}
+.theme-dark .reference-search-results a:hover,.theme-dark .reference-search-results a:focus{background:#333}
+.reference-directory:not(.reference-directory-open):not(.reference-directory-desktop){display:none!important}
+.reference-directory.reference-directory-open{display:flex!important}
+[data-anchor]{cursor:pointer;scroll-margin-top:96px}
+.ss__custom__header__user__avatar{color:var(--color-black,#333)}
+.theme-dark .ss__custom__header__user__avatar{color:#ddd}
+.ss__custom__header__user__avatar>i{font-size:24px}
+.ss__appearance__setting__wrapper{z-index:20000}
+.reference-empty{padding:48px 24px;text-align:center;color:#666;grid-column:1/-1}
+.reference-directory-toggle:focus-visible,[data-anchor]:focus-visible,[data-gallery]:focus-visible{outline:2px solid #d7191a;outline-offset:4px}
+.reference-nav-open [data-framer-name="Frame"] { transform: rotate(180deg) !important; }
+.reference-nav-open > [data-framer-component-type="RichTextContainer"] p { color: #888; }
+[id^="ss-hId-"]{scroll-margin-top:76px}
+.ss__desktop__submenu__transition__wrapper:has([data-reference-menu]:not([hidden])){pointer-events:auto}
+@media(min-width:768px){.ss__custom__header__mobile__menu{display:none!important}}
+.reference-search-results[aria-label="搜索结果"]{font-family:inherit;border-radius:16px}
+.ss__custom__header__search__input__wrapper{z-index:100001}
+.ss__custom__header__search__mask{z-index:99999}
+@media(max-width:1199px){.article__bar__share{display:none!important}}
+@media(min-width:1200px){.article__bar__action--catalog{display:none!important}}

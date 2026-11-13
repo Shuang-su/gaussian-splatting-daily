@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-22",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-22T00:00:00+08:00",
+    "end": "2026-09-23T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/carveout-segments-and-labels-objects-inside-trained-gaussian-splatting-scenes",
+        "radiancefields.com/spatial-film-9.2-adds-a-gaussian-splat-player-with-insta360-spatial-capture-links",
+        "radiancefields.com/splat.js-adds-in-browser-video-to-splat-and-avatars",
+        "radiancefields.com/splatara-rebuilds-splatarascan-s-desktop-pipeline-on-spirula"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.755287+00:00",
+      "urls": [
+        "https://apps.apple.com/us/app/spatial-film/id6670564820",
+        "https://arrival.space/splat-js"
+      ],
+      "candidateIds": [
+        "radiancefields.com/spatial-film-9.2-adds-a-gaussian-splat-player-with-insta360-spatial-capture-links",
+        "radiancefields.com/splat.js-adds-in-browser-video-to-splat-and-avatars"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://apps.apple.com/us/app/spatial-film/id6670564820",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:04.470358+00:00",
+          "sha256": "86a1a54154c0ac688d1e3ced3fda53ab98161a75b225ef6bdfe0a658a6ca9918",
+          "characters": 5379
+        },
+        {
+          "url": "https://arrival.space/splat-js",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.755287+00:00",
+          "sha256": "caa830a724ae4ac733e35485058c1b094b7f8d43e7dc13d3e1282780ef5ab1c7",
+          "characters": 2219
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:31.462274+00:00",
+      "urls": [
+        "https://github.com/smallfly/Carveout"
+      ],
+      "candidateIds": [
+        "radiancefields.com/carveout-segments-and-labels-objects-inside-trained-gaussian-splatting-scenes"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/smallfly/Carveout",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:31.462274+00:00",
+          "sha256": "c17f46145ec88c0744ba7588d6664313cf6cef521ea474de3b8c3e564a5c0e6b",
+          "characters": 20719
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/carveout-segments-and-labels-objects-inside-trained-gaussian-splatting-scenes",
+      "title": "Carveout 从已训练场景中拆出物体",
+      "eventDate": "2026-09-22",
+      "reportDate": "2026-09-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/carveout-segments-and-labels-objects-inside-trained-gaussian-splatting-scenes",
+        "https://github.com/smallfly/Carveout"
+      ],
+      "eventId": "radiancefields.com/carveout-segments-and-labels-objects-inside-trained-gaussian-splatting-scenes"
+    },
+    {
+      "id": "radiancefields.com/spatial-film-9.2-adds-a-gaussian-splat-player-with-insta360-spatial-capture-links",
+      "title": "Spatial Film 在 Vision Pro 中加入高斯播放",
+      "eventDate": "2026-09-22",
+      "reportDate": "2026-09-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spatial-film-9.2-adds-a-gaussian-splat-player-with-insta360-spatial-capture-links",
+        "https://apps.apple.com/us/app/spatial-film/id6670564820"
+      ],
+      "eventId": "radiancefields.com/spatial-film-9.2-adds-a-gaussian-splat-player-with-insta360-spatial-capture-links"
+    },
+    {
+      "id": "radiancefields.com/splat.js-adds-in-browser-video-to-splat-and-avatars",
+      "title": "Splat.js 可以直接从浏览器视频生成场景",
+      "eventDate": "2026-09-22",
+      "reportDate": "2026-09-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splat.js-adds-in-browser-video-to-splat-and-avatars",
+        "https://arrival.space/splat-js"
+      ],
+      "eventId": "radiancefields.com/splat.js-adds-in-browser-video-to-splat-and-avatars"
+    },
+    {
+      "id": "radiancefields.com/splatara-rebuilds-splatarascan-s-desktop-pipeline-on-spirula",
+      "title": "SplataraScan 更换桌面重建流程",
+      "eventDate": "2026-09-22",
+      "reportDate": "2026-09-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splatara-rebuilds-splatarascan-s-desktop-pipeline-on-spirula",
+        "https://killiancartelier.fr/SplataraScan/Light/SplataraScanViewerLight.zip"
+      ],
+      "eventId": "radiancefields.com/splatara-rebuilds-splatarascan-s-desktop-pipeline-on-spirula"
+    }
+  ]
+}

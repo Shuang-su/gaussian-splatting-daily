@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-08",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-08T00:00:00+08:00",
+    "end": "2026-11-09T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds",
+        "radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:09.045585+00:00",
+      "urls": [
+        "https://booth.pm/en/items/8063569",
+        "https://discourse.mcneel.com/t/gaussian-splat-view-in-rhino-8/224353"
+      ],
+      "candidateIds": [
+        "radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds",
+        "radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://booth.pm/en/items/8063569",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:06.015634+00:00",
+          "sha256": "c170625a912bfb31ae7c0b89e3f4390843298c124c66ae16d9ab6326406a5ee6",
+          "characters": 5571
+        },
+        {
+          "url": "https://discourse.mcneel.com/t/gaussian-splat-view-in-rhino-8/224353",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:09.045585+00:00",
+          "sha256": "2adf82a8278d10b3d9fbe820394cc18928e9d6ffd0a9d0a7a95bbeb21ca0d5e5",
+          "characters": 1390
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:20.644407+00:00",
+      "urls": [
+        "https://github.com/QROST/GaussianSplattingRhino"
+      ],
+      "candidateIds": [
+        "radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/QROST/GaussianSplattingRhino",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:20.644407+00:00",
+          "sha256": "39195bf4be9b8b040a7e1a64bd769350e84d2d6a83ca1915bd0dc8648f4e8500",
+          "characters": 11411
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds",
+      "title": "360 MCConverter 可读取 Metashape 稠密点云",
+      "eventDate": "2026-11-08",
+      "reportDate": "2026-11-08",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds",
+        "https://booth.pm/en/items/8063569"
+      ],
+      "eventId": "radiancefields.com/360-mcconverter-v1.7.0-reads-metashape-dense-point-clouds"
+    },
+    {
+      "id": "radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac",
+      "title": "GSRhino 在 Mac 的 Rhino 8 显示高斯",
+      "eventDate": "2026-11-08",
+      "reportDate": "2026-11-08",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac",
+        "https://discourse.mcneel.com/t/gaussian-splat-view-in-rhino-8/224353",
+        "https://github.com/QROST/GaussianSplattingRhino"
+      ],
+      "eventId": "radiancefields.com/gsrhino-brings-gaussian-splats-to-rhino-8-on-mac"
+    }
+  ]
+}

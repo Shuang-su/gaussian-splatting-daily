@@ -1,0 +1,13 @@
+# User request and accepted decisions
+
+Conversation: codex://threads/01a1d41b-a66c-7fe2-bfa0-9450ba431b60
+
+The user observed that 高斯日报 now contains daily news, features, articles and research, and may add app recommendations; requested reconsidering repository and main title. They questioned developer-heavy selection and missing Radiance Fields and X coverage, and said the day's major SuperSplat update and upgrade advice were too short and unclear for readers.
+
+During planning the user chose: comprehensive industry media; change brand and repository together; revise the complete historical archive. The selected brand is “metaflow horizon”. Coverage includes Gaussian and adjacent 3D ecosystems—scanning, photogrammetry, NeRF, spatial AI, XR, creative tools and works—with no requirement to explain a relationship to a 3D workflow in every article. The user selected full production launch and scheduled-task cutover, then selected https://metaflow.shuang-su.com/horizon/ as the official address.
+
+On 2026-11-13 the user explicitly requested IMPLEMENT THIS PLAN, including all of: repair selection/editorial/publishing; retain 高斯日报 as a daily series; 日报/文章/专题/研究/应用 navigation; ordinary-reader explanations and appropriate depth; revise 2026-11-13 SuperSplat/SOG with fixed-tag compatibility evidence and restored Spirula/LichtFeld stories; registry and actual per-source checks; seven-day overlap; disposition for every candidate; full-history audit from 2026-09-18 through cutover including 10-21—24; preserve dates, originals, anchors, paper ownership and RSS identities; source-bound supplemental material; isolated work and local checkpoints; related Horizon/Metaflow Issues and PRs; existing GitHub repository rename; separate static Netlify deployment at /horizon and same-team one-hop main-site routing from the live production baseline; update the original daily 08:00 task; staged collection/archive/deploy/readback receipts; retire obsolete arXiv schedule only after successful replacement; automated and responsive verification; one manual run plus three actual scheduled observations.
+
+The user strengthened the completion criterion to “重要事件都让读者知悉，不遗漏任何重要内容”, and added “还有把少数派的内容规范和写作排版规范计入”. Important candidates cannot be silently dropped in transformation. Known access gaps remain disclosed rather than represented as exhaustive knowledge. No paid collection service or new domain is requested. Application introductions must not be called reviews without actual experience.
+
+The complete original request and approved plan remain accessible in the linked chat; implementation contract and acceptance are in docs/horizon-spec.md and plan.md.

@@ -1,0 +1,53 @@
+name: Merge Validated Daily
+on:
+  workflow_run:
+    workflows: [Validate Daily Content]
+    types: [completed]
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+concurrency:
+  group: merge-validated-daily
+  cancel-in-progress: false
+jobs:
+  merge:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      # No checkout or execution of pull-request code in this privileged workflow.
+      - uses: actions/github-script@v9
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const run = context.payload.workflow_run;
+            const candidates = await github.paginate(github.rest.pulls.list, {owner,repo,state:'open',per_page:100});
+            for (const pr of candidates) {
+              if (pr.head.sha !== run.head_sha || pr.head.repo?.full_name !== `${owner}/${repo}`) continue;
+              if (!pr.head.ref.startsWith('automation/daily/') || !pr.labels.some(l=>l.name==='daily-publish')) continue;
+              if (pr.base.ref !== 'main' || pr.draft) continue;
+              if (![owner, 'github-actions[bot]'].includes(pr.user.login)) continue;
+              const files = await github.paginate(github.rest.pulls.listFiles, {owner,repo,pull_number:pr.number,per_page:100});
+              const media = p => /^site\/public\/daily-media\/\d{4}-\d{2}-\d{2}\/(?:manifest\.json|[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|jpg|jpeg|webp))$/.test(p);
+              const editorial = p => /^docs\/(?:reading|supplements)\/\d{4}-\d{2}-\d{2}(?:-[a-z0-9-]+)?\.md$/.test(p) || /^docs\/articles\/[a-z0-9-]+\.md$/.test(p) || /^docs\/weekly\/\d{4}-\d{2}\.md$/.test(p) || /^data\/research\/\d{4}-\d{2}-\d{2}\.json$/.test(p) || /^site\/public\/share\/(?:\d{4}-\d{2}-\d{2}\.png|default\.png|manifest\.json)$/.test(p);
+              const allowed = p => editorial(p) || media(p) || /^docs\/daily\/\d{4}\/\d{2}\/(?:\d{4}-\d{2}-\d{2}|index)\.md$/.test(p)
+                || ['docs/index.md','docs/corrections.md','data/daily-index.json','data/portal-index.json','state/checkpoint.json','state/publication-observations.json'].includes(p);
+              if (!files.length || files.some(f=>!allowed(f.filename) || f.status==='removed' || (f.previous_filename && !allowed(f.previous_filename)))) {
+                core.warning(`PR #${pr.number} changes files outside daily publication; requires separate review.`);continue;
+              }
+              // Data-only dated attachments. The validation job checks provenance,
+              // raster signatures, checksums, variants and per-day 40 MiB bounds.
+              // Schemas, global asset manifests, scripts and workflows stay excluded.
+              // PR checks can be attached to the synthetic merge SHA. Bind the gate
+              // to this successful workflow run and its verified PR head instead.
+              const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRun, {owner,repo,run_id:run.id,per_page:100});
+              const gate=jobs.find(j=>j.name==='validate');
+              if (!gate || gate.conclusion!=='success') {core.warning('Current-head validation is missing');continue;}
+              const current=await github.rest.pulls.get({owner,repo,pull_number:pr.number});
+              if(current.data.head.sha!==pr.head.sha)continue;
+              const result=await github.rest.pulls.merge({owner,repo,pull_number:pr.number,sha:pr.head.sha,merge_method:'squash'});
+              if (!result.data.merged) throw Error(`Merge failed: ${result.data.message}`);
+              // GITHUB_TOKEN merges do not trigger a push workflow. Dispatch deployment explicitly.
+              await github.rest.actions.createWorkflowDispatch({owner,repo,workflow_id:'pages.yml',ref:'main'});
+              core.summary.addRaw(`Merged PR #${pr.number} at ${result.data.sha}. Horizon deployment dispatched; publication is complete only after public deployment.json readback.`).write();
+            }

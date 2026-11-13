@@ -1,0 +1,47 @@
+import { notFound } from "next/navigation";
+import { loadArchive } from "../../../lib/content";
+import { TOPICS, SITE_URL } from "../../../lib/catalog";
+import Catalogue from "../../../components/Catalogue";
+import { DailyCard } from "../../../components/Cards";
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return TOPICS.map((t) => ({ slug: t.slug }));
+}
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  return { alternates: { canonical: `${SITE_URL}/topics/${slug}/` }, title: TOPICS.find((t) => t.slug === slug)?.label };
+}
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const t = TOPICS.find((t) => t.slug === slug);
+  if (!t) notFound();
+  const { index } = await loadArchive();
+  return (
+    <>
+      <Catalogue
+        title={t.label}
+        description=""
+        entries={index.entries.filter((e) => e.topics.includes(slug))}
+        articles={index.articles?.filter(article=>article.topics.includes(slug))}
+      />
+      <section className="shell related-daily">
+        <h2>相关日报</h2>
+        <div className="archive-grid">
+          {index.daily
+            .filter((d) => d.topics.includes(slug))
+            .map((d) => (
+              <DailyCard daily={d} key={d.id} />
+            ))}
+        </div>
+      </section>
+    </>
+  );
+}

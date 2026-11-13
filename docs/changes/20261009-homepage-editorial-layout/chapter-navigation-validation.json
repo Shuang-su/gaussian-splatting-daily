@@ -1,0 +1,358 @@
+{
+  "requestComments": {
+    "1": "desktop directory title absent in reference",
+    "2": "directory footer link absent in reference",
+    "3": "chapter jump needs smooth scrolling"
+  },
+  "reference": {
+    "url": "https://sspai.com/post/115532",
+    "desktopHeaderDisplay": "none",
+    "desktopCloseDisplay": "none",
+    "footerLinkAbsent": true,
+    "chapter": "XMG 发布 PRO 18 系列笔记本",
+    "trace": {
+      "samples": 39,
+      "first": {
+        "ms": 0,
+        "focus": "",
+        "hash": "",
+        "scroll": 1128,
+        "targetY": 3170.7578125
+      },
+      "last": {
+        "ms": 1508,
+        "focus": "appBody",
+        "hash": "",
+        "scroll": 4223,
+        "targetY": 75.7578125
+      },
+      "hasIntermediatePositions": true
+    },
+    "frozenSmoothLogic": "reference-sites/src/sspai.ts:115",
+    "frozenSnapshotModified": false
+  },
+  "implementation": {
+    "desktop": "pin and rows only; hidden title and close",
+    "compact": "retained title and close",
+    "directoryFooterRemoved": true,
+    "allChapterScroll": "native smooth",
+    "reducedMotion": "instant",
+    "hashFocusAndPinPreserved": true,
+    "pageHeaderClearancePx": 76
+  },
+  "traces": {
+    "desktopDownward": {
+      "samples": 45,
+      "first": {
+        "ms": 0,
+        "focus": "",
+        "hash": "#article-top",
+        "scroll": 0,
+        "targetY": 4178.8203125
+      },
+      "last": {
+        "ms": 1688,
+        "focus": "event-9b7cfd1728eb",
+        "hash": "#event-9b7cfd1728eb",
+        "scroll": 4103,
+        "targetY": 75.8203125
+      },
+      "hasIntermediatePositions": true
+    },
+    "desktopUserReportedUpward": {
+      "samples": 52,
+      "first": {
+        "ms": 0,
+        "focus": "event-9b7cfd1728eb",
+        "hash": "#event-9b7cfd1728eb",
+        "scroll": 4103,
+        "targetY": -1329.0078125
+      },
+      "last": {
+        "ms": 1959,
+        "focus": "event-b8ea1613f532",
+        "hash": "#event-b8ea1613f532",
+        "scroll": 2698,
+        "targetY": 75.9921875
+      },
+      "hasIntermediatePositions": true
+    }
+  },
+  "checks": [
+    {
+      "name": "keyboardEnter",
+      "trace": {
+        "samples": 21,
+        "first": {
+          "ms": 37,
+          "focus": "event-364e0463c471",
+          "hash": "#event-364e0463c471",
+          "overflow": "",
+          "scroll": 2700.5,
+          "targetY": 849.109375
+        },
+        "last": {
+          "ms": 816,
+          "focus": "event-364e0463c471",
+          "hash": "#event-364e0463c471",
+          "overflow": "",
+          "scroll": 3473.5,
+          "targetY": 76.109375
+        },
+        "hasIntermediatePositions": true
+      }
+    },
+    {
+      "name": "redirectDuringMotion",
+      "beforeSecondClick": {
+        "hash": "#event-9b7cfd1728eb",
+        "scroll": 3664.5
+      },
+      "trace": {
+        "samples": 24,
+        "first": {
+          "ms": 10,
+          "focus": "event-b8ea1613f532",
+          "hash": "#event-b8ea1613f532",
+          "overflow": "",
+          "scroll": 3772.5,
+          "targetY": -998.5078125
+        },
+        "last": {
+          "ms": 917,
+          "focus": "event-b8ea1613f532",
+          "hash": "#event-b8ea1613f532",
+          "overflow": "",
+          "scroll": 2698,
+          "targetY": 75.9921875
+        },
+        "hasIntermediatePositions": true
+      }
+    },
+    {
+      "name": "reducedMotionInstant",
+      "before": {
+        "reduce": true,
+        "scroll": 2698
+      },
+      "after": {
+        "focus": "event-9b7cfd1728eb",
+        "hash": "#event-9b7cfd1728eb",
+        "scroll": 4103,
+        "targetY": 75.8203125
+      }
+    },
+    {
+      "name": "desktopBoundary1280",
+      "state": {
+        "closeDisplay": "none",
+        "footerCount": 0,
+        "open": true,
+        "pin": "true",
+        "titleDisplay": "none",
+        "width": 1280
+      }
+    },
+    {
+      "name": "compactBoundary1279",
+      "state": {
+        "closeDisplay": "grid",
+        "footerCount": 0,
+        "hidden": "true",
+        "overflow": "",
+        "titleDisplay": "block",
+        "width": 1279
+      }
+    },
+    {
+      "name": "compactFocusTrapWithoutFooter",
+      "forward": {
+        "focus": "收起文章目录",
+        "footerCount": 0,
+        "overflow": "hidden"
+      },
+      "backward": {
+        "focusHref": "#discussion",
+        "overflow": "hidden"
+      }
+    },
+    {
+      "name": "tabletNestedChapter",
+      "final": {
+        "focus": "paper-2610.00040",
+        "footerCount": 0,
+        "hash": "#paper-2610.00040",
+        "horizontal": false,
+        "overflow": "",
+        "panelHidden": "true",
+        "scroll": 7402.5
+      },
+      "trace": {
+        "samples": 34,
+        "first": {
+          "ms": 11,
+          "focus": "paper-2610.00040",
+          "hash": "#paper-2610.00040",
+          "overflow": "",
+          "scroll": 4104,
+          "targetY": 3374.3515625
+        },
+        "last": {
+          "ms": 1632,
+          "focus": "paper-2610.00040",
+          "hash": "#paper-2610.00040",
+          "overflow": "",
+          "scroll": 7402.5,
+          "targetY": 75.8515625
+        },
+        "hasIntermediatePositions": true
+      }
+    },
+    {
+      "name": "phoneChapter",
+      "final": {
+        "focus": "event-b8ea1613f532",
+        "footerCount": 0,
+        "hash": "#event-b8ea1613f532",
+        "horizontal": false,
+        "overflow": "",
+        "panelHidden": "true",
+        "scroll": 2694.5
+      },
+      "trace": {
+        "samples": 43,
+        "first": {
+          "ms": 26,
+          "focus": "event-b8ea1613f532",
+          "hash": "#event-b8ea1613f532",
+          "overflow": "",
+          "scroll": 8293,
+          "targetY": -5522.3671875
+        },
+        "last": {
+          "ms": 1654,
+          "focus": "event-b8ea1613f532",
+          "hash": "#event-b8ea1613f532",
+          "overflow": "",
+          "scroll": 2694.5,
+          "targetY": 76.1328125
+        },
+        "hasIntermediatePositions": true
+      }
+    },
+    {
+      "name": "phoneScrollUnlocked",
+      "scroll": 2874.5,
+      "previous": 2694.5
+    },
+    {
+      "name": "phoneDialogChrome",
+      "state": {
+        "closeDisplay": "grid",
+        "footerCount": 0,
+        "opacity": "1",
+        "overflow": "hidden",
+        "titleDisplay": "block"
+      }
+    },
+    {
+      "name": "compactEscape",
+      "state": {
+        "focus": "打开文章目录",
+        "hidden": "true",
+        "overflow": ""
+      }
+    },
+    {
+      "name": "backtopRegression",
+      "trace": {
+        "samples": 34,
+        "first": {
+          "ms": 31,
+          "focus": "article-top",
+          "hash": "#article-top",
+          "overflow": "",
+          "scroll": 2858.5,
+          "targetY": -2774.5
+        },
+        "last": {
+          "ms": 1380,
+          "focus": "article-top",
+          "hash": "#article-top",
+          "overflow": "",
+          "scroll": 0,
+          "targetY": 84
+        },
+        "hasIntermediatePositions": true
+      }
+    },
+    {
+      "name": "hoverAndPin",
+      "unpinned": {
+        "open": false,
+        "pin": "false"
+      },
+      "hover": {
+        "open": true,
+        "pin": "false"
+      },
+      "pinned": {
+        "open": true,
+        "pin": "true"
+      }
+    }
+  ],
+  "validation": {
+    "typecheck": "passed",
+    "nextStaticBuild": "passed",
+    "exportHTML": 39,
+    "RSS": 2,
+    "canonicalReports": 16,
+    "baselineFilesUnchanged": 20,
+    "exportRSSByteEqual": true,
+    "consoleErrorWarn": 0,
+    "physicalDevices": "not tested",
+    "fullContentPythonSuite": "not repeated"
+  },
+  "capture": {
+    "frames": 78,
+    "durationSeconds": 1.722475,
+    "gif": "chapter-motion.gif",
+    "gifSHA256": "d06ec9cdcb54ca9042129e3d8cd7068dd6bbb112af156d920a1f7702c2e4179d",
+    "gifBytes": 3139157,
+    "timing": "actual browser frames; first/last dwell only",
+    "directory": ".codex-work/references/article-directory-jump-20261009"
+  },
+  "finalState": {
+    "referenceInitial": {
+      "pinned": false,
+      "scroll": 1128
+    },
+    "referenceRestored": {
+      "pinned": false,
+      "scroll": 1128
+    },
+    "local": {
+      "closeDisplay": "none",
+      "focus": "固定文章目录",
+      "footerCount": 0,
+      "headerDisplay": "none",
+      "height": 958,
+      "horizontal": false,
+      "overflow": "",
+      "pin": "true",
+      "reduce": false,
+      "scroll": 2698,
+      "targetY": 75.9921875,
+      "title": "Gaussian-Splat-Lite 1.2 发布，SuperSplat 更新大场景与 XR 支持 · 高斯日报",
+      "url": "http://127.0.0.1:4337/gaussian-splatting-daily/daily/2026/10/03/#event-b8ea1613f532",
+      "width": 1441
+    }
+  },
+  "scope": {
+    "localOnly": true,
+    "contentFeedsReferenceChanged": false,
+    "viewportMediaOverridesCleared": true
+  },
+  "codeCheckpoint": "a6c4bf581af59be27f67cd98737fd311cb53b2ad"
+}

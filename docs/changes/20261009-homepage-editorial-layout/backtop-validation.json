@@ -1,0 +1,235 @@
+{
+  "reference": {
+    "url": "https://sspai.com/post/115532",
+    "frozenLogic": "reference-sites/src/sspai.ts:126",
+    "behavior": "native smooth to page scrollY=0",
+    "hoverTransition": "color 150ms cubic-bezier(0,0,0,1)",
+    "iconTransform": "none",
+    "alwaysVisible": true,
+    "frozenReferenceModified": false
+  },
+  "implementation": [
+    "shared back-to-top handler for arrow and directory link",
+    "native smooth scroll with reduced-motion instant fallback",
+    "retained hash and focus; ordinary chapter jump remains instant"
+  ],
+  "desktopTrace": {
+    "viewport": [
+      1441,
+      958
+    ],
+    "startScrollY": 4000,
+    "referenceSamples": 35,
+    "localSamples": 36,
+    "referenceLandingObservedMs": 1512,
+    "localLandingObservedMs": 1537,
+    "referenceFinalY": 0,
+    "localFinalY": 0,
+    "localFinalHash": "#article-top",
+    "localFinalFocus": "article-top",
+    "fixedDuration": false
+  },
+  "checks": [
+    {
+      "name": "hover",
+      "before": {
+        "bg": "rgb(32, 32, 34)",
+        "color": "rgb(171, 171, 179)",
+        "icon": "none",
+        "transition": "color 0.15s cubic-bezier(0, 0, 0, 1)"
+      },
+      "sampleCount": 34,
+      "first": {
+        "ms": 0,
+        "bg": "rgb(32, 32, 34)",
+        "color": "rgb(192, 192, 198)",
+        "icon": "none"
+      },
+      "last": {
+        "ms": 209,
+        "bg": "rgb(32, 32, 34)",
+        "color": "rgb(237, 237, 238)",
+        "icon": "none"
+      }
+    },
+    {
+      "name": "keyboardEnter",
+      "sampleCount": 22,
+      "first": {
+        "ms": 12,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "overflow": "",
+        "scroll": 1600
+      },
+      "last": {
+        "ms": 951,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "overflow": "",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "repeatClick",
+      "start": 2400,
+      "secondClickAt": {
+        "scroll": 2220.5
+      },
+      "sampleCount": 18,
+      "first": {
+        "ms": 8,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "overflow": "",
+        "scroll": 655
+      },
+      "last": {
+        "ms": 905,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "overflow": "",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "reducedMotionRetry",
+      "before": {
+        "reduce": true,
+        "scroll": 1800,
+        "transition": "none"
+      },
+      "after": {
+        "focus": "article-top",
+        "hash": "#article-top",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "desktopDirectoryTop",
+      "before": {
+        "pinned": "true",
+        "scroll": 1800,
+        "x": 1194.5,
+        "y": 709.6953125
+      },
+      "pinnedAfter": "true",
+      "sampleCount": 23,
+      "first": {
+        "ms": 0,
+        "focus": "固定文章目录",
+        "hash": "#article-top",
+        "scroll": 1800
+      },
+      "last": {
+        "ms": 1059,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "phoneDirectoryTop",
+      "final": {
+        "dialogHidden": "true",
+        "focus": "article-top",
+        "hash": "#article-top",
+        "horizontal": false,
+        "overflow": "",
+        "scroll": 0,
+        "toolbarVisible": "visible"
+      },
+      "sampleCount": 21,
+      "first": {
+        "ms": 0,
+        "focus": "收起文章目录",
+        "hash": "#article-top",
+        "scroll": 1400
+      },
+      "last": {
+        "ms": 944,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "tabletDirectoryTop",
+      "before": {
+        "overflow": "hidden",
+        "start": 1259,
+        "x": 531,
+        "y": 1064.360595703125
+      },
+      "final": {
+        "dialogHidden": "true",
+        "focus": "article-top",
+        "horizontal": false,
+        "overflow": "",
+        "scroll": 0
+      },
+      "sampleCount": 20,
+      "first": {
+        "ms": 0,
+        "focus": "收起文章目录",
+        "hash": "#article-top",
+        "scroll": 1259
+      },
+      "last": {
+        "ms": 877,
+        "focus": "article-top",
+        "hash": "#article-top",
+        "scroll": 0
+      }
+    },
+    {
+      "name": "ordinaryChapterStillInstant",
+      "state": {
+        "focus": "event-364e0463c471",
+        "hash": "#event-364e0463c471",
+        "overflow": "",
+        "scroll": 3473.5,
+        "targetY": 76.109375
+      }
+    }
+  ],
+  "syntheticWheelInput": {
+    "result": "neither reference nor local native smooth scroll was interrupted by CDP wheel input",
+    "physicalUserInterruptionVerified": false,
+    "rawEvidence": [
+      "checks.json",
+      "reference-wheel-interruption.json"
+    ]
+  },
+  "validation": {
+    "typecheck": "passed",
+    "nextBuild": "passed",
+    "exportHTML": 39,
+    "RSS": 2,
+    "canonicalReports": 16,
+    "baselineFilesUnchanged": 20,
+    "exportRSSByteEqual": true,
+    "consoleErrorWarn": 0,
+    "physicalDevices": "not tested",
+    "fullContentPythonSuite": "not repeated"
+  },
+  "capture": {
+    "frames": 59,
+    "realCaptureDurationSeconds": 1.820949,
+    "gif": "backtop-motion.gif",
+    "gifSHA256": "f7bfb080f05ccaa2ed919692bb4a15cbade3a3568a79b916f9781d0692aa3195",
+    "gifBytes": 2292270,
+    "timing": "actual frame timestamps; extra dwell at first and last only",
+    "directory": ".codex-work/references/article-backtop-20261009"
+  },
+  "scope": {
+    "localOnly": true,
+    "contentAndFeedsChanged": false,
+    "referenceRestored": {
+      "scrollY": 1128,
+      "pinned": false
+    },
+    "viewportMediaRestored": true
+  },
+  "codeCheckpoint": "bbd6295c36a9c1e0e3a190b580988b8162a9731d"
+}

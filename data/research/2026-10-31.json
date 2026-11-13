@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-31",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-31T00:00:00+08:00",
+    "end": "2026-11-01T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/florian-hahlbohm-rebuilds-zip-nerf-in-fused-cuda",
+        "radiancefields.com/octave-adds-gaussian-splat-support-to-alto-2026-1",
+        "radiancefields.com/shining-3d-adds-gaussian-splatting-to-exstar-hub-2-0",
+        "radiancefields.com/yehe-liu-adds-a-public-dataset-catalog-to-colmapview"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:56.801697+00:00",
+      "urls": [
+        "https://www.globenewswire.com/news-release/2026/10/27/3388749/0/en/octave-alto-expands-visualization-capabilities.html",
+        "https://www.einstar.com/blogs/news/exstar-hub-2-0-update",
+        "https://colmapview.opsiclear.com/hub/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/octave-adds-gaussian-splat-support-to-alto-2026-1",
+        "radiancefields.com/shining-3d-adds-gaussian-splatting-to-exstar-hub-2-0",
+        "radiancefields.com/yehe-liu-adds-a-public-dataset-catalog-to-colmapview"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.globenewswire.com/news-release/2026/10/27/3388749/0/en/octave-alto-expands-visualization-capabilities.html",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:56.801697+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.einstar.com/blogs/news/exstar-hub-2-0-update",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:53.702827+00:00",
+          "sha256": "f8c7e8207706f9bda09089fc27893ab80bc172a4046b5ed50b7ff3ad16b52e66",
+          "characters": 12375
+        },
+        {
+          "url": "https://colmapview.opsiclear.com/hub/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:07.849980+00:00",
+          "sha256": "8d25690b502a3da06229f896e66e6846b31e2d427dc9a4d7a84bf83050caf99c",
+          "characters": 9666
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:28.821064+00:00",
+      "urls": [
+        "https://github.com/nerficg-project/nerficg",
+        "https://github.com/fhahlbohm/fused-zipnerf"
+      ],
+      "candidateIds": [
+        "radiancefields.com/florian-hahlbohm-rebuilds-zip-nerf-in-fused-cuda"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/nerficg-project/nerficg",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:28.821064+00:00",
+          "sha256": "c603966149d5e15c25b755ba4bacac7495cd2629238995fb1b474e153c1460c7",
+          "characters": 11826
+        },
+        {
+          "url": "https://github.com/fhahlbohm/fused-zipnerf",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:23.349579+00:00",
+          "sha256": "bfe48fda4c7795b77e66f3d9df5db15cc5e41c6f63a9c3004a92d1f8615ee6aa",
+          "characters": 10230
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/florian-hahlbohm-rebuilds-zip-nerf-in-fused-cuda",
+      "title": "Fused Zip-NeRF 用融合 CUDA 改写训练与渲染",
+      "eventDate": "2026-10-31",
+      "reportDate": "2026-10-31",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/florian-hahlbohm-rebuilds-zip-nerf-in-fused-cuda",
+        "https://github.com/nerficg-project/nerficg",
+        "https://github.com/fhahlbohm/fused-zipnerf"
+      ],
+      "eventId": "radiancefields.com/florian-hahlbohm-rebuilds-zip-nerf-in-fused-cuda"
+    },
+    {
+      "id": "radiancefields.com/octave-adds-gaussian-splat-support-to-alto-2026-1",
+      "title": "Octave Alto 增加高斯地图内容支持",
+      "eventDate": "2026-10-31",
+      "reportDate": "2026-10-31",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/octave-adds-gaussian-splat-support-to-alto-2026-1",
+        "https://www.globenewswire.com/news-release/2026/10/27/3388749/0/en/octave-alto-expands-visualization-capabilities.html"
+      ],
+      "eventId": "radiancefields.com/octave-adds-gaussian-splat-support-to-alto-2026-1"
+    },
+    {
+      "id": "radiancefields.com/shining-3d-adds-gaussian-splatting-to-exstar-hub-2-0",
+      "title": "EXStar Hub 2.0 增加云端高斯处理",
+      "eventDate": "2026-10-31",
+      "reportDate": "2026-10-31",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/shining-3d-adds-gaussian-splatting-to-exstar-hub-2-0",
+        "https://www.einstar.com/blogs/news/exstar-hub-2-0-update"
+      ],
+      "eventId": "radiancefields.com/shining-3d-adds-gaussian-splatting-to-exstar-hub-2-0"
+    },
+    {
+      "id": "radiancefields.com/yehe-liu-adds-a-public-dataset-catalog-to-colmapview",
+      "title": "ColmapView 建立公开重建数据目录",
+      "eventDate": "2026-10-31",
+      "reportDate": "2026-10-31",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/yehe-liu-adds-a-public-dataset-catalog-to-colmapview",
+        "https://colmapview.opsiclear.com/hub/"
+      ],
+      "eventId": "radiancefields.com/yehe-liu-adds-a-public-dataset-catalog-to-colmapview"
+    }
+  ]
+}

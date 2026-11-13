@@ -1,0 +1,1227 @@
+{
+  "generatedAt": "2026-10-03T04:01:35.853Z",
+  "baseline": "d0b4ebba2e792150b72f5ef9b9a66b648c783a5b",
+  "browser": "Codex in-app browser on macOS",
+  "matrix": [
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 375,
+      "sourceHeight": 6833,
+      "localHeight": 6842,
+      "heightDifference": 9,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:50.049Z",
+      "localCapturedAt": "2026-10-03T03:53:27.065Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "4fd57aecdf6f542025cf59bc677881442a445601bf8e491fa139673b7d617c29"
+        },
+        "qa": {
+          "file": "qa/sspai-home-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "ec6405c9db7923611befeec0416e6c00c9d96c4de1925cce421b6c1a74998832"
+        }
+      }
+    },
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 390,
+      "sourceHeight": 6868,
+      "localHeight": 6868,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:48.736Z",
+      "localCapturedAt": "2026-10-03T03:57:02.991Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-390.jpg",
+          "width": 390,
+          "height": 6868,
+          "sha256": "9dd0dc3bbd26eb8fb6a0ecfad26f2b77156e81d7ed8957e8ea0b95206a854b0c"
+        },
+        "qa": {
+          "file": "qa/sspai-home-390.jpg",
+          "width": 390,
+          "height": 6868,
+          "sha256": "e89b7bc499815c545188d6bce8537df8a0bbc6035d4a27bc66d2d41f7b4546c9"
+        }
+      }
+    },
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 430,
+      "sourceHeight": 6980,
+      "localHeight": 6979,
+      "heightDifference": -1,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:48.534Z",
+      "localCapturedAt": "2026-10-03T03:53:28.351Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "954bd047b18de79fcc373cf1cb3e65d67dc78f98e142702e2a086a6f76bc6e4f"
+        },
+        "qa": {
+          "file": "qa/sspai-home-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "62ce62cee105bf8933f1907926b3922df0e1d96dbef7c46ff9bf91e70d463363"
+        }
+      }
+    },
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 768,
+      "sourceHeight": 8130,
+      "localHeight": 8110,
+      "heightDifference": -20,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:48.316Z",
+      "localCapturedAt": "2026-10-03T03:53:28.445Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "27c305eaf22ac3dda47ba540d12b8ae7d18899bd8cc9e5b24fa6dd3e14249401"
+        },
+        "qa": {
+          "file": "qa/sspai-home-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "ca1be397236a2eff44c7720c07ceb9bfb4aeea85b5d94e5087f43c8de3404dc0"
+        }
+      }
+    },
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 1024,
+      "sourceHeight": 8236,
+      "localHeight": 8235,
+      "heightDifference": -1,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:48.104Z",
+      "localCapturedAt": "2026-10-03T03:53:28.560Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "8c1f9d6b62ab34bd9693ad9e486c1ace5c766c83e3be17aaab178294655835ae"
+        },
+        "qa": {
+          "file": "qa/sspai-home-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "8e67699a5762959000b1b28405b188b5a8fb3ef4e1116f93f553aca07019a5cf"
+        }
+      }
+    },
+    {
+      "page": "sspai-home",
+      "sourceUrl": "https://sspai.com/",
+      "width": 1440,
+      "sourceHeight": 8488,
+      "localHeight": 8488,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:46.634Z",
+      "localCapturedAt": "2026-10-03T03:53:29.878Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-home-1440.jpg",
+          "width": 1440,
+          "height": 8488,
+          "sha256": "9e156e41c2a4f66df59eba5765aee1660b4cd140f92779b87e6f4706ae0f64fc"
+        },
+        "qa": {
+          "file": "qa/sspai-home-1440.jpg",
+          "width": 1440,
+          "height": 8488,
+          "sha256": "2b9d17f497535cead2db24ca6bb24cbbb707e5415559ff97d56c7c8379f77f0e"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 375,
+      "sourceHeight": 7685,
+      "localHeight": 7675,
+      "heightDifference": -10,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:17.658Z",
+      "localCapturedAt": "2026-10-03T03:54:10.505Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "bfbeb2803482a502f35dd82786d30c3456d6d6fa7d32c046dbe65a2327afa2e9"
+        },
+        "qa": {
+          "file": "qa/sspai-list-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "06d9f9218c1fdaa9c9e39dc79f105d4dda1f454ff3b46c3eb453e2631837a507"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 390,
+      "sourceHeight": 7807,
+      "localHeight": 7807,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:16.354Z",
+      "localCapturedAt": "2026-10-03T03:57:35.454Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-390.jpg",
+          "width": 390,
+          "height": 7807,
+          "sha256": "897c8e996850a2b181c8909198fd1b7330e2a9f108891bf27f6fe737f2fc91ba"
+        },
+        "qa": {
+          "file": "qa/sspai-list-390.jpg",
+          "width": 390,
+          "height": 7807,
+          "sha256": "1e1ebb7e36a3839b4981487222e20b6b1623e5edc0299029f1d3787919c1f557"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 430,
+      "sourceHeight": 8111,
+      "localHeight": 8201,
+      "heightDifference": 90,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:16.168Z",
+      "localCapturedAt": "2026-10-03T03:54:11.848Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "61065ab7ab85285b603cf2d7884e66285fc2468a7027535b578c149025d171c0"
+        },
+        "qa": {
+          "file": "qa/sspai-list-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "931076bfe3659f649279dd736f4c1832614e1524722a546838f5bb24ba63dea5"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 768,
+      "sourceHeight": 4724,
+      "localHeight": 4724,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:15.947Z",
+      "localCapturedAt": "2026-10-03T03:54:12.021Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "442f3971a6c3e7f9c4dad153fb867ba878b7cf5510f1a1ad379af2f6e998d488"
+        },
+        "qa": {
+          "file": "qa/sspai-list-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "1f86a4e296d5ad9777c06973a7e8f33689bd769c52797d4c048b299e94475152"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 1024,
+      "sourceHeight": 3587,
+      "localHeight": 3587,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:15.749Z",
+      "localCapturedAt": "2026-10-03T03:54:12.225Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "b17d5cc56ce90f9434bab5f5da25938e0f16c161de206679e7dae6fabc1dd28d"
+        },
+        "qa": {
+          "file": "qa/sspai-list-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "fe02bbefe289c6184cd98b5a204f0411ca25fe5a543c964ceadeda2ab712e3e8"
+        }
+      }
+    },
+    {
+      "page": "sspai-list",
+      "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+      "width": 1440,
+      "sourceHeight": 2672,
+      "localHeight": 2672,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:18:14.405Z",
+      "localCapturedAt": "2026-10-03T03:54:13.447Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-list-1440.jpg",
+          "width": 1440,
+          "height": 2672,
+          "sha256": "77f70b60c40f7ce3b9cb21eb6eb5cacb163589a13138ddfdc5475751332d128b"
+        },
+        "qa": {
+          "file": "qa/sspai-list-1440.jpg",
+          "width": 1440,
+          "height": 2672,
+          "sha256": "d7bdca9456586b2162d4007b1a2c86b73c0efe5e105f23c78aa5103e475d9fdc"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 375,
+      "sourceHeight": 11375,
+      "localHeight": 11377,
+      "heightDifference": 2,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:17:03.441Z",
+      "localCapturedAt": "2026-10-03T03:54:13.868Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "81dbe67148e718b01ebe537d65492107624ccce3e896306e1881ba97a509ebe8"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "e588563890bf83e905a02a45e1e51646e2b2862481abd0b069caa23c512bfa3b"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 390,
+      "sourceHeight": 11137,
+      "localHeight": 11137,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:15:24.630Z",
+      "localCapturedAt": "2026-10-03T03:56:49.166Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-390.jpg",
+          "width": 390,
+          "height": 11137,
+          "sha256": "ae2bd7de2fbf268b9511b4cbb57d1d5167e7ba032971f26bcc219cdab334685f"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-390.jpg",
+          "width": 390,
+          "height": 11137,
+          "sha256": "e31db613899aa3cf756586c2dfab4db8cd5fb2a2a122d9322366b6b423764d19"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 430,
+      "sourceHeight": 10769,
+      "localHeight": 10769,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:17:03.694Z",
+      "localCapturedAt": "2026-10-03T03:54:15.235Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "6e5863ace1a9db02de8aa71a87771df346f22a4816001f27dfdd8f596511c42c"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "492dae5435682741e04cbfaf5925e223461e2e2e41ece0b8be8a8145d3d68d71"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 768,
+      "sourceHeight": 11906,
+      "localHeight": 11906,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:17:03.940Z",
+      "localCapturedAt": "2026-10-03T03:54:15.401Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "8c74d9dc15b6ae4e4c91bab8299df3948e1d7b3d200aa2fdca66147f88bbd332"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "087a0155ff08f3f59c0fa660b114d341c66efe3ee36505daede7a06140f78a7a"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 1024,
+      "sourceHeight": 11906,
+      "localHeight": 11906,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:17:04.171Z",
+      "localCapturedAt": "2026-10-03T03:54:15.533Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "5118193519093c4bb6849a5ae37645d12a1bb81d8a2c24340a62ed9ba77524b9"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "87a6d01020f93857a1feb98461b97498ce133b696013b43866b28e2c65954c5b"
+        }
+      }
+    },
+    {
+      "page": "sspai-daily",
+      "sourceUrl": "https://sspai.com/post/115197",
+      "width": 1440,
+      "sourceHeight": 11906,
+      "localHeight": 11906,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:17:04.429Z",
+      "localCapturedAt": "2026-10-03T03:54:16.994Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/sspai-daily-1440.jpg",
+          "width": 1440,
+          "height": 11906,
+          "sha256": "3e08e03aff11943abfd671140a3d8895645a717bb88de557807dc4ed14f91af4"
+        },
+        "qa": {
+          "file": "qa/sspai-daily-1440.jpg",
+          "width": 1440,
+          "height": 11906,
+          "sha256": "a195be35e6cac429d86feeb0e0c60398f11feb87a685b85c6d9608a2c3a7c1d0"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 375,
+      "sourceHeight": 21754,
+      "localHeight": 21754,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:20:20.720Z",
+      "localCapturedAt": "2026-10-02T17:34:26.167Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "001c68b089e316e6cdd3421578915cb0397ad02bc3fe8d2159e3c71a20e4ba00"
+        },
+        "qa": {
+          "file": "qa/rf-home-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "c3fbe69795cdc45078495b744c19b6550e375434a6405b088fe198d31b101129"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 390,
+      "sourceHeight": 21162,
+      "localHeight": 21162,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:08.357Z",
+      "localCapturedAt": "2026-10-02T17:34:24.160Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-390.jpg",
+          "width": 390,
+          "height": 21162,
+          "sha256": "e2bb57a111a900d10552f76c68b74fed18c501754cba574a45a4e7fea4f94ee6"
+        },
+        "qa": {
+          "file": "qa/rf-home-390.jpg",
+          "width": 390,
+          "height": 21162,
+          "sha256": "94cee3e5e6c66c00f3f8bc0373d95ece339c1c58859d4b62bf7617f6a11a1469"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 430,
+      "sourceHeight": 19976,
+      "localHeight": 19976,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:20:18.639Z",
+      "localCapturedAt": "2026-10-02T17:34:23.713Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "30e63d6f607d8fe7855ba2f0beb2022267d9561ef95178a83a61de2b706c9d9f"
+        },
+        "qa": {
+          "file": "qa/rf-home-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "d30d430400380aef8c3255a834653eff8f3c7e604580587d712a4bd22bf768d4"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 768,
+      "sourceHeight": 15812,
+      "localHeight": 15852,
+      "heightDifference": 40,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:20:18.253Z",
+      "localCapturedAt": "2026-10-02T17:34:23.265Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "947fc26c77eff19286d39ec1026457a0511be283d658ca05bbc025f55489782a"
+        },
+        "qa": {
+          "file": "qa/rf-home-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "67c19566687be30ed97c293dccf31b97f1a5dd1eb0b6e7334d98693d62841462"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 1024,
+      "sourceHeight": 11508,
+      "localHeight": 11508,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:36:29.192Z",
+      "localCapturedAt": "2026-10-02T17:34:22.766Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "94dea792e61b042d16799721702a53726d397b119458ea9786a03c0471a03683"
+        },
+        "qa": {
+          "file": "qa/rf-home-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "41ab60b51444b84dc767ef651318d19cc258eddb4f1563983a595e2c2d270655"
+        }
+      }
+    },
+    {
+      "page": "rf-home",
+      "sourceUrl": "https://radiancefields.com/",
+      "width": 1440,
+      "sourceHeight": 10404,
+      "localHeight": 10404,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:06.539Z",
+      "localCapturedAt": "2026-10-02T17:34:20.446Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-home-1440.jpg",
+          "width": 1440,
+          "height": 10404,
+          "sha256": "70df46656166fb5053352e53bfe5a5f2cfd9947977ea84102a363173c14c10df"
+        },
+        "qa": {
+          "file": "qa/rf-home-1440.jpg",
+          "width": 1440,
+          "height": 10404,
+          "sha256": "884ccd01a59f8407bebdcfa9f56e11bbd896f9f513dfb225c55dee63dc80a0b8"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 375,
+      "sourceHeight": 7424,
+      "localHeight": 7424,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:21:41.826Z",
+      "localCapturedAt": "2026-10-02T17:34:42.495Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "1cc1e64dea905426d01d55dae070b03d72d4aa80a02efa5217aa33f224a6e324"
+        },
+        "qa": {
+          "file": "qa/rf-article-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "e68a8ff845eb909ea98dd109ca894e75c85e206f5edee5d97288d37a06d8c714"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 390,
+      "sourceHeight": 7262,
+      "localHeight": 7262,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:11.719Z",
+      "localCapturedAt": "2026-10-02T17:34:41.024Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-390.jpg",
+          "width": 390,
+          "height": 7262,
+          "sha256": "acd65ba46f46f144ea780a25cf19f1f1e5ee0799897118d9f2ec7c104c98cad4"
+        },
+        "qa": {
+          "file": "qa/rf-article-390.jpg",
+          "width": 390,
+          "height": 7262,
+          "sha256": "0c566bc0b7fd2f6e38cb1d46ad93e62a24f0c40819f2db62e80b05c89ed1b6ab"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 430,
+      "sourceHeight": 7004,
+      "localHeight": 7004,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:21:40.236Z",
+      "localCapturedAt": "2026-10-02T17:34:40.698Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "43c371ac0f8b89b42e5f9b7d6ed410c228145bd464fb8cca8eae82cc863b7840"
+        },
+        "qa": {
+          "file": "qa/rf-article-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "99bf42b94ade5a25d551454834480d9be623e35669f432576b753e23d51529d9"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 768,
+      "sourceHeight": 6210,
+      "localHeight": 6210,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:21:39.968Z",
+      "localCapturedAt": "2026-10-02T17:34:40.366Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "e8f92e3aa842fed26a81c60068195152ebc1f9f91a0ce6acbe1c23279acaa70c"
+        },
+        "qa": {
+          "file": "qa/rf-article-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "177d212f88ce6198ef2b8a68510c6d4abea938351a22102517eb5331e5a4dddf"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 1024,
+      "sourceHeight": 4753,
+      "localHeight": 4753,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:21:39.677Z",
+      "localCapturedAt": "2026-10-02T17:34:39.980Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "d2c927e1cd5df6d0889685d2646f109473884005d54e304744a92db613ea1da4"
+        },
+        "qa": {
+          "file": "qa/rf-article-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "001db8faa152ab4f25cc3c55509130ae9949551dd316e4f6267f01be2fc6a9eb"
+        }
+      }
+    },
+    {
+      "page": "rf-article",
+      "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+      "width": 1440,
+      "sourceHeight": 4923,
+      "localHeight": 4923,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:10.268Z",
+      "localCapturedAt": "2026-10-02T17:34:38.350Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-article-1440.jpg",
+          "width": 1440,
+          "height": 4923,
+          "sha256": "5f9d10d8044ce61517adf4ada64212e64729f452750e1374f1af51850dc657c8"
+        },
+        "qa": {
+          "file": "qa/rf-article-1440.jpg",
+          "width": 1440,
+          "height": 4923,
+          "sha256": "a850f969d3868511aea87ded89e28e6c7e6244331342b2f56cecefa1e816811c"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 375,
+      "sourceHeight": 19075,
+      "localHeight": 19075,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:22:17.613Z",
+      "localCapturedAt": "2026-10-02T17:34:51.379Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "79831315ac50259a24f064ebf0b8ea9eb41d5c5a96c37215296d3b901bb73434"
+        },
+        "qa": {
+          "file": "qa/rf-papers-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "79831315ac50259a24f064ebf0b8ea9eb41d5c5a96c37215296d3b901bb73434"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 390,
+      "sourceHeight": 18534,
+      "localHeight": 18534,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:16.144Z",
+      "localCapturedAt": "2026-10-02T17:34:48.459Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-390.jpg",
+          "width": 390,
+          "height": 18534,
+          "sha256": "c5a42ce24a8b47ce76deff3195de4bd7b78b824d0e30ad20a5dafd15b7e7af7e"
+        },
+        "qa": {
+          "file": "qa/rf-papers-390.jpg",
+          "width": 390,
+          "height": 18534,
+          "sha256": "cb1cde768505ee58f7eb7a79f3522ecb3835b5a8c54bf22b103e1ec6774dac92"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 430,
+      "sourceHeight": 17211,
+      "localHeight": 17211,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:22:15.380Z",
+      "localCapturedAt": "2026-10-02T17:34:47.925Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "756def9029f827200f63441f33edad5ce579a454cc87a8f27d318d8c71b13cfc"
+        },
+        "qa": {
+          "file": "qa/rf-papers-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "0ffe0bb338abda1b1c418b9df28e920050d3b8342dbdaa44fe74c21d26467c59"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 768,
+      "sourceHeight": 12872,
+      "localHeight": 12872,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:22:14.928Z",
+      "localCapturedAt": "2026-10-02T17:34:47.358Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "ba4494e7f2b67a33ac5a0708244bfd0ac8ec214787e0190c678fcd03050389cb"
+        },
+        "qa": {
+          "file": "qa/rf-papers-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "6fbf9944816b3abe47a95ed95b0641a2d1fd1f101e93a261c939102c5ff60640"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 1024,
+      "sourceHeight": 11127,
+      "localHeight": 11127,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:22:14.450Z",
+      "localCapturedAt": "2026-10-02T17:34:46.674Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "100dd0043a9beb30f68f0b5ccf5005dfcebd341c96cf739f4e0436fa34977ce6"
+        },
+        "qa": {
+          "file": "qa/rf-papers-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "07d42215f76727fc7880927a2e11b69d872cefd84b07eacf270c5a7a5002b84a"
+        }
+      }
+    },
+    {
+      "page": "rf-papers",
+      "sourceUrl": "https://radiancefields.com/papers",
+      "width": 1440,
+      "sourceHeight": 10777,
+      "localHeight": 10777,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:28:14.305Z",
+      "localCapturedAt": "2026-10-02T17:34:43.490Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-papers-1440.jpg",
+          "width": 1440,
+          "height": 10777,
+          "sha256": "57517c27ae3905066840ab413d9c0eee5acc4ebb6b5a63232a244f22ba5b2c2e"
+        },
+        "qa": {
+          "file": "qa/rf-papers-1440.jpg",
+          "width": 1440,
+          "height": 10777,
+          "sha256": "12671507e425e6098196f79ab53587e9f1b5378e23af05491d86ac0d9d7f3bd5"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 375,
+      "sourceHeight": 17579,
+      "localHeight": 24678,
+      "heightDifference": 7099,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:23:10.688Z",
+      "localCapturedAt": "2026-10-02T17:35:01.746Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "371e17cb01520df24d2f16f22d69c6caa0bee26fcb723768d4624d99db67a76c"
+        },
+        "qa": {
+          "file": "qa/rf-tools-375.jpg",
+          "width": 375,
+          "height": 844,
+          "sha256": "371e17cb01520df24d2f16f22d69c6caa0bee26fcb723768d4624d99db67a76c"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 390,
+      "sourceHeight": 24678,
+      "localHeight": 24678,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:25:30.393Z",
+      "localCapturedAt": "2026-10-02T17:34:59.653Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-390.jpg",
+          "width": 390,
+          "height": 24678,
+          "sha256": "fe688793f36d70c7d04c34839b80ff7cdcc942e760fa895424d6e94d0644ef46"
+        },
+        "qa": {
+          "file": "qa/rf-tools-390.jpg",
+          "width": 390,
+          "height": 24678,
+          "sha256": "b4b2faff31ac1a8cfffcca1c07e1e137e8b211d5a3aa85561a1771eb010ce57b"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 430,
+      "sourceHeight": 17393,
+      "localHeight": 24492,
+      "heightDifference": 7099,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:23:08.524Z",
+      "localCapturedAt": "2026-10-02T17:34:58.906Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "3ed502958d75f3739c246e749aa72d13e7bddb953f017d37eb2766b840144706"
+        },
+        "qa": {
+          "file": "qa/rf-tools-430.jpg",
+          "width": 430,
+          "height": 844,
+          "sha256": "3ed502958d75f3739c246e749aa72d13e7bddb953f017d37eb2766b840144706"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 768,
+      "sourceHeight": 9791,
+      "localHeight": 13340,
+      "heightDifference": 3549,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:23:07.989Z",
+      "localCapturedAt": "2026-10-02T17:34:58.127Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "fa21912ca63029e596bd894dcad1208c35ed7b2660cdd1ae8c1af7dd418e9d8c"
+        },
+        "qa": {
+          "file": "qa/rf-tools-768.jpg",
+          "width": 768,
+          "height": 1000,
+          "sha256": "d4d806f4a288ad20c77698e9fe1c0d7481fd05754821a2f2080eda12ca253085"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 1024,
+      "sourceHeight": 6003,
+      "localHeight": 13645,
+      "heightDifference": 7642,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:36:51.063Z",
+      "localCapturedAt": "2026-10-02T17:34:56.429Z",
+      "fullPage": false,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "2c35927b7a705bad05b3f337202d2465922cbbd9e6d20a684f1cbdf8346b4816"
+        },
+        "qa": {
+          "file": "qa/rf-tools-1024.jpg",
+          "width": 1024,
+          "height": 1000,
+          "sha256": "b11a0d5198325255be49f8faa83e4cb345f2d7038cc7d42f4c2398440372beb5"
+        }
+      }
+    },
+    {
+      "page": "rf-tools",
+      "sourceUrl": "https://radiancefields.com/platforms",
+      "width": 1440,
+      "sourceHeight": 13085,
+      "localHeight": 13085,
+      "heightDifference": 0,
+      "overflow": false,
+      "brokenImages": 0,
+      "pendingImages": 0,
+      "externalResources": [],
+      "sourceCapturedAt": "2026-10-02T15:25:28.354Z",
+      "localCapturedAt": "2026-10-02T17:34:53.228Z",
+      "fullPage": true,
+      "screenshots": {
+        "source": {
+          "file": "source/rf-tools-1440.jpg",
+          "width": 1440,
+          "height": 13085,
+          "sha256": "90857fc2262ce3b874c776adea6b285aabc66303f5c0b5a9691f91bd549b4971"
+        },
+        "qa": {
+          "file": "qa/rf-tools-1440.jpg",
+          "width": 1440,
+          "height": 13085,
+          "sha256": "b69363f0bcd18f68fb68aa4894f5f2732c552b36bd6f3ac8e8f3d0a44717fcbd"
+        }
+      }
+    }
+  ],
+  "physicalDeviceTests": false,
+  "pinchSimulation": "Unsupported by the browser CDP adapter; not verified"
+}

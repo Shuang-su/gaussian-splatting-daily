@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-05",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-05T00:00:00+08:00",
+    "end": "2026-10-06T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/octane-for-cinema-4d-2-0-0-brings-gaussian-splats-to-the-viewport",
+        "radiancefields.com/stonex-cube-3d-genesys-replaces-gopost-with-gaussian-splatting-export"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:13.735921+00:00",
+      "urls": [
+        "https://render.otoy.com/forum/viewtopic.php?t=85864",
+        "https://www.stonex.it/product/cube-3d-software/",
+        "https://www.stonex.it/new-products/cube-3d-genesys-software/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/octane-for-cinema-4d-2-0-0-brings-gaussian-splats-to-the-viewport",
+        "radiancefields.com/stonex-cube-3d-genesys-replaces-gopost-with-gaussian-splatting-export"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://render.otoy.com/forum/viewtopic.php?t=85864",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:40.350494+00:00",
+          "sha256": "6ed6f96ac6e46c4d8f222e2801b58bd2e6d7dd58277bcad520eda833cde96ba2",
+          "characters": 20553
+        },
+        {
+          "url": "https://www.stonex.it/product/cube-3d-software/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:13.735921+00:00",
+          "sha256": "90e90be6d4112164395f45df9baa12a640b658b535b82da36850274ee3757882",
+          "characters": 12087
+        },
+        {
+          "url": "https://www.stonex.it/new-products/cube-3d-genesys-software/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:12.454086+00:00",
+          "sha256": "60a62b7f88f8151bdf354f618f2de50f127f10fd4c7467b1f58a415d8d2a41aa",
+          "characters": 4969
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/octane-for-cinema-4d-2-0-0-brings-gaussian-splats-to-the-viewport",
+      "title": "Octane 将高斯带进 Cinema 4D 视口",
+      "eventDate": "2026-10-05",
+      "reportDate": "2026-10-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/octane-for-cinema-4d-2-0-0-brings-gaussian-splats-to-the-viewport",
+        "https://render.otoy.com/forum/viewtopic.php?t=85864"
+      ],
+      "eventId": "radiancefields.com/octane-for-cinema-4d-2-0-0-brings-gaussian-splats-to-the-viewport"
+    },
+    {
+      "id": "radiancefields.com/stonex-cube-3d-genesys-replaces-gopost-with-gaussian-splatting-export",
+      "title": "Stonex 重建软件增加高斯导出",
+      "eventDate": "2026-10-05",
+      "reportDate": "2026-10-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/stonex-cube-3d-genesys-replaces-gopost-with-gaussian-splatting-export",
+        "https://www.stonex.it/product/cube-3d-software/",
+        "https://www.stonex.it/new-products/cube-3d-genesys-software/"
+      ],
+      "eventId": "radiancefields.com/stonex-cube-3d-genesys-replaces-gopost-with-gaussian-splatting-export"
+    }
+  ]
+}

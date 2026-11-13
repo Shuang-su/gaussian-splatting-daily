@@ -4,6 +4,10 @@ This directory is the durable, human-readable content layer for the project.
 
 ## Entry points
 
+- [公开门户](https://shuang-su.github.io/gaussian-splatting-daily/)
+- [历史核验与待复核来源](history-audit.md)
+- [发布运行手册](publication.md)
+- [封面选择](cover-selection.md)
 - [Architecture](architecture.md)
 - [Content schema](schema.md)
 - [Corrections](corrections.md)

@@ -1,0 +1,1725 @@
+{
+  "scope": "63 main events, 2026-09-18 through 2026-09-30",
+  "records": [
+    {
+      "date": "2026-09-18",
+      "event_id": "event-92ae17146406",
+      "title": "Blender 加固 PLY/SPZ 导入并统一高斯默认属性",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/blender/blender/commit/fe3d4436cce3cfc121870c908f625ab54913f0e9"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/blender/blender/commit/fe3d4436cce3cfc121870c908f625ab54913f0e9",
+          "retrieved_at": "2026-10-03T16:37:55.892835+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-17T15:35:43Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-18",
+      "event_id": "github.com/playcanvas/engine/commit/113173b0ee1afa4fbc62b66071747926bcf29a2c",
+      "title": "PlayCanvas 跳过缓存阴影计算并修正阴影更新调度",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/engine/commit/113173b0ee1afa4fbc62b66071747926bcf29a2c",
+        "https://github.com/playcanvas/engine/commit/45e2cca46015dd0c45ac4674dde506d6a998f7d2"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/commit/113173b0ee1afa4fbc62b66071747926bcf29a2c",
+          "retrieved_at": "2026-10-03T16:37:59.471600+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-17T15:02:45Z",
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/commit/45e2cca46015dd0c45ac4674dde506d6a998f7d2",
+          "retrieved_at": "2026-10-03T16:37:59.625594+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-17T16:23:26Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-18",
+      "event_id": "event-42647e6ca365",
+      "title": "Arcturus Vision 公开空间视频到 SOG 的转换脚本",
+      "sources": [
+        "https://arcturus.vision/ja/apps"
+      ],
+      "inspections": [
+        {
+          "url": "https://arcturus.vision/ja/apps",
+          "status": "retrieved",
+          "note": "Page retrieved today; image date requires separate verification."
+        }
+      ],
+      "candidate_urls": [
+        "https://arcturus.vision/images/arcturus-vision-wordmark.svg?dpl=dpl_CGLvk5s7VoV4AVLMzd7Lso9KvRB6",
+        "https://cdn.arcturus.vision/images/apps/camera.png",
+        "https://cdn.arcturus.vision/images/apps/gaussian-xr.png"
+      ],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-18",
+      "event_id": "event-e7f82a8ef03c",
+      "title": "PrecisionReach-GS 公开机器人抓取代码与双视图查看器",
+      "sources": [
+        "https://github.com/001-Wang/PrecisionReach-GS",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/001-Wang/PrecisionReach-GS/blob/da67eefe089ebdaffb33d72e628f2ba533827586/README.md",
+          "status": "retrieved",
+          "commit": "da67eefe089ebdaffb33d72e628f2ba533827586",
+          "created_at": "2026-09-17T23:33:25Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "precisionreach-workflow",
+          "source": "https://github.com/001-Wang/PrecisionReach-GS/tree/da67eefe089ebdaffb33d72e628f2ba533827586",
+          "credit": "PrecisionReach-GS 作者 · 9 月 17 日仓库版本",
+          "original": "/media/originals/precisionreach-workflow.png",
+          "sha256": "56ea6de04ad536d4f30067e0b41a9a33ee037a8d51316411754d9d0592b3cb70"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-18",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/commit/4b9f93604626019d55de73f50b1abc61eb9d01c0",
+      "title": "LichtFeld 修复工程管理、Gallery 同步与主题显示",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/commit/4b9f93604626019d55de73f50b1abc61eb9d01c0",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/MrNeRF/LichtFeld-Studio/commit/f91cab7417b6868d3aeb74b385967976ce0b040b"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/commit/4b9f93604626019d55de73f50b1abc61eb9d01c0",
+          "retrieved_at": "2026-10-03T16:37:45.139681+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-18T07:48:50Z",
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/commit/f91cab7417b6868d3aeb74b385967976ce0b040b",
+          "retrieved_at": "2026-10-03T16:37:45.151087+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-18T08:24:09Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-19",
+      "event_id": "github.com/playcanvas/engine/pull/9443",
+      "title": "PlayCanvas GPU 渲染器加入随机透明度",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/engine/pull/9443"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9443",
+          "retrieved_at": "2026-10-03T16:38:00.308397+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-18T10:44:36Z",
+          "updated_at": "2026-09-18T16:05:36Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-19",
+      "event_id": "event-2996f8109981",
+      "title": "Blender 原生导入 OpenUSD 高斯数据",
+      "sources": [
+        "https://github.com/blender/blender/commit/cfd6ba27e049ef734824f5771f6c3c4b726ab7f1",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://openusd.org/release/user_guides/schemas/usdVol/overview.html"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/blender/blender/commit/cfd6ba27e049ef734824f5771f6c3c4b726ab7f1",
+          "retrieved_at": "2026-10-03T16:37:55.724192+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-18T19:18:51Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-19",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/commit/6e0c0d3816ca00d61ce61441d0903d46a649dc73",
+      "title": "LichtFeld 为大画幅训练增加精确分批渲染",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/commit/6e0c0d3816ca00d61ce61441d0903d46a649dc73",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/commit/6e0c0d3816ca00d61ce61441d0903d46a649dc73",
+          "retrieved_at": "2026-10-03T16:37:45.004171+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-18T12:49:55Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-19",
+      "event_id": "event-f18c980d9c22",
+      "title": "LichtFeld 修复 GUT 屏幕占比限制与早期精度损失",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2194",
+          "status": "retrieved",
+          "created_at": "2026-09-18T20:38:16Z",
+          "updated_at": "2026-09-18T21:41:21Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-19",
+      "event_id": "event-e3b30c3f0188",
+      "title": "fVDB 0.6.0 发布，高斯高层 API 移至独立项目",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/openvdb/fvdb-core/blob/3c9e2727678faafa88a0e9589de831c290c37133/README.md",
+          "status": "retrieved",
+          "commit": "3c9e2727678faafa88a0e9589de831c290c37133",
+          "created_at": "2026-09-18T11:50:45Z"
+        }
+      ],
+      "candidate_urls": [
+        "https://raw.githubusercontent.com/openvdb/fvdb-core/3c9e2727678faafa88a0e9589de831c290c37133/docs/imgs/fvdb_teaser.jpg"
+      ],
+      "selected": [
+        {
+          "key": "fvdb-overview",
+          "source": "https://github.com/openvdb/fvdb-core/tree/3c9e2727678faafa88a0e9589de831c290c37133",
+          "credit": "fVDB 项目概览 · 用于说明数据表示，非 0.6.0 性能结果",
+          "original": "/media/originals/fvdb-overview.jpg",
+          "sha256": "a585bc8f2e603c0a18744b3d3da3a1dedac902d08dd91252b4fdc809e3258cd5"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "github.com/KhronosGroup/glTF/commit/81762cc328b160eafaa0d577dd547a998401ade9",
+      "title": "KHR_gaussian_splatting 已于 9 月 3 日批准",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "github.com/playcanvas/supersplat-viewer/pull/302",
+      "title": "SuperSplat Viewer 提供宿主控制 API",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/supersplat-viewer/pull/302"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/302",
+          "retrieved_at": "2026-10-03T16:38:05.803736+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-19T20:01:29Z",
+          "updated_at": "2026-09-19T20:08:00Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "github.com/nerfstudio-project/gsplat/commit/512d366b67073d77ca099ede742683c165dfc23b",
+      "title": "gsplat 增加可选图片缓存，完整训练耗时仍需区分",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/nerfstudio-project/gsplat/commit/512d366b67073d77ca099ede742683c165dfc23b"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/nerfstudio-project/gsplat/commit/512d366b67073d77ca099ede742683c165dfc23b",
+          "retrieved_at": "2026-10-03T16:37:58.509529+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-19T07:14:27Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "github.com/harry7557558/spirula-studio/commit/d94c6bfe61731b99016d0df5defaa05adb2aa6a1",
+      "title": "Spirula 支持使用已有 PLY 启动新训练",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/harry7557558/spirula-studio/commit/d94c6bfe61731b99016d0df5defaa05adb2aa6a1"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/commit/d94c6bfe61731b99016d0df5defaa05adb2aa6a1",
+          "retrieved_at": "2026-10-03T16:37:56.803300+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-19T16:21:05Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/commit/985707da0bfafe7626f308bde1553d00b5427467",
+      "title": "LichtFeld 修复 SOG 发布、工程恢复与 MCP 状态",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/MrNeRF/LichtFeld-Studio/commit/985707da0bfafe7626f308bde1553d00b5427467"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/commit/985707da0bfafe7626f308bde1553d00b5427467",
+          "retrieved_at": "2026-10-03T16:37:44.972173+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-19T21:01:17Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-20",
+      "event_id": "event-4ae0bbef820d",
+      "title": "Niantic Spatial 开放高斯重光照测试",
+      "sources": [
+        "https://www-website-dev-tf1.eng.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://www-website-dev-tf1.eng.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+          "status": "retrieved",
+          "note": "Page retrieved today; image date requires separate verification."
+        }
+      ],
+      "candidate_urls": [
+        "https://lh3.googleusercontent.com/CWzM_IPNEsE2zs83iWDOdmsbuWoMLeuIU0lDVXBmXrjnaMK3hYj5J8qZeQlTpd7PlH1ib-rA-5iwSbO6eCX4VIj3sQrLsyRZE8rUZwI-j2GR1eY",
+        "https://lh3.googleusercontent.com/zotRxUXg3QAJK56iMju8nfqNpOYHcjQtiA2VR4stGuhSsprSu9hsBFWujTRHO4OweCKCSsAA8EZW4TasNqGzPNx0wiMSQQTazPSjkR5yPCgrYg",
+        "https://lh3.googleusercontent.com/XxzZ0zUpSkCkb5P5ZJM8bnwdhe0QpOWxfdmNsT_99aE8rSYg3zDZ7XxK5s5d0f1zMfuPGZFVOJfhAKLSDVqOl6tqOdB27URcJAz1eb-hcbO5",
+        "https://lh3.googleusercontent.com/v3kd5VuL7RrVjFPYA9v0-oSFNF14WC3YevmZAwSmmaHLgKB2_Rq-CoE6zarwnVJse2UYh-DAOa1DkAx16_wyHtnGC1coWI5NoB-msrF4EByusA",
+        "https://lh3.googleusercontent.com/HYteFJHL2vMCsk6SRxkTwFRu-FjEEXRXHKj9FcMI6TE-Ks4m_86X8aj13-7KXwkbtempmasVZX0uU0iUOhv6T7C1BCOtFVi8xf0s24xCYke1",
+        "https://lh3.googleusercontent.com/eYSEKpovI4BLkkCA94QGw6jA4JfUSngjQi3ZAz18evQ21T8xsG24oAiZ2C5k0Ql-tqnD75Fea_mbGnbDHBDj-2t_-GK44_1c9uU",
+        "https://lh3.googleusercontent.com/MdodH7Ya8M7ut1WmJxVW8pQ98g_i6hQG09L-mHzn9_Z7cED63ArBVxvHvd2Tv6YVAWYLVkfH_6K5LEhzbkr9510FTJK71VjzlUIx",
+        "https://lh3.googleusercontent.com/U-m1__mzzGsj0Mo3U4Hb_udn3NXGYwSduF_xQ-ukcf4D3GGa_yCpnPjHy5ettMD4ffgKRt0iPzctldppn807oWvBIs4NOTR-a7q8E9FeDknDWw",
+        "https://lh3.googleusercontent.com/CWzM_IPNEsE2zs83iWDOdmsbuWoMLeuIU0lDVXBmXrjnaMK3hYj5J8qZeQlTpd7PlH1ib-rA-5iwSbO6eCX4VIj3sQrLsyRZE8rUZwI-j2GR1eY",
+        "https://lh3.googleusercontent.com/zotRxUXg3QAJK56iMju8nfqNpOYHcjQtiA2VR4stGuhSsprSu9hsBFWujTRHO4OweCKCSsAA8EZW4TasNqGzPNx0wiMSQQTazPSjkR5yPCgrYg",
+        "https://lh3.googleusercontent.com/XxzZ0zUpSkCkb5P5ZJM8bnwdhe0QpOWxfdmNsT_99aE8rSYg3zDZ7XxK5s5d0f1zMfuPGZFVOJfhAKLSDVqOl6tqOdB27URcJAz1eb-hcbO5",
+        "https://lh3.googleusercontent.com/v3kd5VuL7RrVjFPYA9v0-oSFNF14WC3YevmZAwSmmaHLgKB2_Rq-CoE6zarwnVJse2UYh-DAOa1DkAx16_wyHtnGC1coWI5NoB-msrF4EByusA",
+        "https://lh3.googleusercontent.com/HYteFJHL2vMCsk6SRxkTwFRu-FjEEXRXHKj9FcMI6TE-Ks4m_86X8aj13-7KXwkbtempmasVZX0uU0iUOhv6T7C1BCOtFVi8xf0s24xCYke1",
+        "https://lh3.googleusercontent.com/eYSEKpovI4BLkkCA94QGw6jA4JfUSngjQi3ZAz18evQ21T8xsG24oAiZ2C5k0Ql-tqnD75Fea_mbGnbDHBDj-2t_-GK44_1c9uU",
+        "https://lh3.googleusercontent.com/MdodH7Ya8M7ut1WmJxVW8pQ98g_i6hQG09L-mHzn9_Z7cED63ArBVxvHvd2Tv6YVAWYLVkfH_6K5LEhzbkr9510FTJK71VjzlUIx",
+        "https://lh3.googleusercontent.com/U-m1__mzzGsj0Mo3U4Hb_udn3NXGYwSduF_xQ-ukcf4D3GGa_yCpnPjHy5ettMD4ffgKRt0iPzctldppn807oWvBIs4NOTR-a7q8E9FeDknDWw",
+        "https://lh3.googleusercontent.com/ia2GsGs_oIx7zZtI0usVJfsF2fgR8wSaY2ZYZWtGQg1LSS_sSFVqJu-oL641KpjwQxR07lqriBfsVvLWzdjJmc_NIQjUhCV5reipp3Cgx92Ofg=s0-e365",
+        "https://lh3.googleusercontent.com/hVeBjH6BU73Zwpg8fc2_Qzt6V9Y36agYWFmpCza-4TcSDrHJ7Q4i0tMGSAG1ttpmf_qIn6gFF6S39GqctNwr5v_jgmZqi2YlsA=e365-pa-nu-w600-rw"
+      ],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-21",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2253",
+      "title": "LichtFeld 提前启动大数据集训练",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2253",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2253",
+          "retrieved_at": "2026-10-03T16:37:46.160486+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-20T20:32:11Z",
+          "updated_at": "2026-09-23T06:55:02Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-21",
+      "event_id": "event-2304367d3548",
+      "title": "Spirula Studio v2026.9.20 正式发布",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.20"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.20",
+          "retrieved_at": "2026-10-03T16:37:57.682696+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-20T02:10:33Z",
+          "updated_at": "2026-09-20T03:17:23Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-21",
+      "event_id": "event-f58a4b699fdf",
+      "title": "Spirula 开发选择、删除与 MCP GUI 自动化",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/blob/66342882a19ca85185e9a08e9dd1193b6b0512fb/README.md",
+          "status": "retrieved",
+          "commit": "66342882a19ca85185e9a08e9dd1193b6b0512fb",
+          "created_at": "2026-09-21T14:35:45Z"
+        }
+      ],
+      "candidate_urls": [
+        "https://raw.githubusercontent.com/harry7557558/spirula-studio/66342882a19ca85185e9a08e9dd1193b6b0512fb/assets/banner.png",
+        "https://spirula.studio/assets/video/spirula-studio-hero.webp?md5=0ff79909f5c779509664da20b9f9dd61",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/643dadb5/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/ed448729/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/05e46a4b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/9dd8696b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/0bcb61c6/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/cdd6f9a2/v1/m.webp"
+      ],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-21",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2254",
+      "title": "LichtFeld 减少缩略图更新时的工程文件写入",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2254",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2254",
+          "retrieved_at": "2026-10-03T16:37:46.215276+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-20T21:07:51Z",
+          "updated_at": "2026-09-23T06:55:01Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-22",
+      "event_id": "event-72dcd742026c",
+      "title": "SuperSplat Viewer 1.32.0 发布宿主控制 API",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/supersplat-viewer/releases/tag/v1.32.0"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/releases/tag/v1.32.0",
+          "retrieved_at": "2026-10-03T16:38:08.171957+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-21T11:03:22Z",
+          "updated_at": "2026-09-21T11:04:32Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-22",
+      "event_id": "event-a10102e88b8a",
+      "title": "SplatTransform 3.5.1 更新景深与工具链",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/splat-transform/releases/tag/v3.5.1"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/splat-transform/releases/tag/v3.5.1",
+          "retrieved_at": "2026-10-03T16:38:04.853437+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-21T11:49:51Z",
+          "updated_at": "2026-09-21T11:51:24Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-22",
+      "event_id": "event-44e74623592d",
+      "title": "LichtFeld 修复 warm-start 坐标与 Crop Box 种子裁剪",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2260",
+          "status": "retrieved",
+          "created_at": "2026-09-21T12:29:44Z",
+          "updated_at": "2026-09-23T06:54:55Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2273",
+          "status": "retrieved",
+          "created_at": "2026-09-21T21:05:33Z",
+          "updated_at": "2026-09-23T06:54:49Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-22",
+      "event_id": "event-4f642c40f2ed",
+      "title": "Spirula 开发图片与视频 Render Mode",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/blob/ae779a012b0ed84f96a5651fe8e10dab14c13218/README.md",
+          "status": "retrieved",
+          "commit": "ae779a012b0ed84f96a5651fe8e10dab14c13218",
+          "created_at": "2026-09-22T05:14:40Z"
+        }
+      ],
+      "candidate_urls": [
+        "https://raw.githubusercontent.com/harry7557558/spirula-studio/ae779a012b0ed84f96a5651fe8e10dab14c13218/assets/banner.png",
+        "https://spirula.studio/assets/video/spirula-studio-hero.webp?md5=0ff79909f5c779509664da20b9f9dd61",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/643dadb5/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/ed448729/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/05e46a4b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/9dd8696b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/0bcb61c6/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/cdd6f9a2/v1/m.webp"
+      ],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-23",
+      "event_id": "github.com/playcanvas/supersplat/pull/1053",
+      "title": "SuperSplat 优化 PLY 加载与 Morton 排序",
+      "sources": [
+        "https://github.com/playcanvas/supersplat/pull/1053",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat/pull/1053",
+          "retrieved_at": "2026-10-03T16:38:08.631534+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-22T16:38:21Z",
+          "updated_at": "2026-09-22T16:42:42Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-23",
+      "event_id": "event-d4afb71beb6d",
+      "title": "SplatTransform 3.6.1 优化减采样、SOG 转换与相机轨迹",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://github.com/playcanvas/splat-transform/releases/tag/v3.6.1"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/splat-transform/releases/tag/v3.6.1",
+          "retrieved_at": "2026-10-03T16:38:04.777887+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-22T14:12:43Z",
+          "updated_at": "2026-09-22T14:14:14Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-23",
+      "event_id": "event-829ed25f7cdd",
+      "title": "PlayCanvas Editor 2.32 调整流式 SOG 预算控制",
+      "sources": [
+        "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9458",
+          "status": "retrieved",
+          "created_at": "2026-09-18T13:31:26Z",
+          "updated_at": "2026-09-18T13:54:13Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "supersplat-lod-controls",
+          "source": "https://blog.playcanvas.com/new-in-playcanvas-editor-joints-parallax-occlusion-and-splat-lod/",
+          "credit": "PlayCanvas 项目演示",
+          "original": "/media/originals/supersplat-lod-controls.png",
+          "sha256": "45d773d4d02711a42d5dd4df6165d945c945b3496fd6d8dc3483d611a62521c0"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-23",
+      "event_id": "event-99e26bcf93e7",
+      "title": "LichtFeld 修复图片尺寸与切换训练项目时的崩溃",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2286",
+          "status": "retrieved",
+          "created_at": "2026-09-22T19:08:33Z",
+          "updated_at": "2026-09-23T06:54:37Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2287",
+          "status": "retrieved",
+          "created_at": "2026-09-22T20:24:20Z",
+          "updated_at": "2026-09-23T06:54:36Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-23",
+      "event_id": "event-2ae070d06991",
+      "title": "Spirula 为顺序采集提供专用 SfM 映射",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/blob/3a972c92c9166d6530c40f9adf2dd5a61f801fed/README.md",
+          "status": "retrieved",
+          "commit": "3a972c92c9166d6530c40f9adf2dd5a61f801fed",
+          "created_at": "2026-09-23T04:36:08Z"
+        }
+      ],
+      "candidate_urls": [
+        "https://raw.githubusercontent.com/harry7557558/spirula-studio/3a972c92c9166d6530c40f9adf2dd5a61f801fed/assets/banner.png",
+        "https://spirula.studio/assets/video/spirula-studio-hero.webp?md5=0ff79909f5c779509664da20b9f9dd61",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/643dadb5/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/ed448729/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/05e46a4b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/9dd8696b/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/0bcb61c6/v1/m.webp",
+        "https://s3-eu-west-1.amazonaws.com/images.playcanvas.com/splat/cdd6f9a2/v1/m.webp"
+      ],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-24",
+      "event_id": "event-09960e11ed08",
+      "title": "AMD 官方 ROCm GSplat 1.5.3b2 已可安装",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88",
+        "https://rocm.docs.amd.com/projects/gsplat/en/latest/install/gsplat-install.html",
+        "https://pypi.amd.com/rocm-7.0.0/simple/",
+        "https://rocm.docs.amd.com/projects/gsplat/en/latest/reference/benchmark-evaluation.html",
+        "https://rocm.docs.amd.com/projects/gsplat/en/docs-25.11/",
+        "https://rocm.docs.amd.com/projects/rocm-simulation/en/docs-25.11/about/release-notes.html"
+      ],
+      "inspections": [
+        {
+          "url": "https://rocm.docs.amd.com/projects/gsplat/en/latest/install/gsplat-install.html",
+          "status": "retrieved",
+          "note": "Page retrieved today; image date requires separate verification."
+        },
+        {
+          "url": "https://pypi.amd.com/rocm-7.0.0/simple/",
+          "status": "retrieved",
+          "note": "Page retrieved today; image date requires separate verification."
+        }
+      ],
+      "candidate_urls": [
+        "https://rocm.docs.amd.com/projects/gsplat/en/latest/_static/images/amd-header-logo.svg",
+        "https://rocm.docs.amd.com/projects/gsplat/en/latest/_static/images/alpha-watermark.svg"
+      ],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-24",
+      "event_id": "event-4bc743dffac6",
+      "title": "SuperSplat Viewer 1.35 更新碰撞加载与标注系统",
+      "sources": [
+        "https://github.com/playcanvas/supersplat-viewer/releases/tag/v1.33.0",
+        "https://github.com/playcanvas/supersplat-viewer/pull/306",
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/releases/tag/v1.33.0",
+          "retrieved_at": "2026-10-03T16:38:08.173007+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-23T09:48:49Z",
+          "updated_at": "2026-09-23T09:49:54Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/306",
+          "retrieved_at": "2026-10-03T16:38:05.973165+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-23T09:41:13Z",
+          "updated_at": "2026-09-23T09:48:13Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-24",
+      "event_id": "event-eea55cdadbad",
+      "title": "SuperSplat 3.4.2 发布 PLY 加载优化",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat/pull/1053",
+          "status": "retrieved",
+          "created_at": "2026-09-22T16:38:21Z",
+          "updated_at": "2026-09-22T16:42:42Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-24",
+      "event_id": "event-2b56144ca1bb",
+      "title": "PlayCanvas 修复高斯排序精度、阴影与鱼眼渲染",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9493",
+          "status": "retrieved",
+          "created_at": "2026-09-23T11:36:26Z",
+          "updated_at": "2026-09-23T11:51:09Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9490",
+          "status": "retrieved",
+          "created_at": "2026-09-23T10:50:01Z",
+          "updated_at": "2026-09-23T11:11:21Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9495",
+          "status": "retrieved",
+          "created_at": "2026-09-23T11:48:05Z",
+          "updated_at": "2026-09-23T13:08:35Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-24",
+      "event_id": "event-46de9b62be63",
+      "title": "LichtFeld 分离训练与视口同步，并保留 SOG 许可",
+      "sources": [
+        "https://chatgpt.com/share/6abb77e3-2854-83ee-a59d-1b8d31259f88"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2325",
+          "status": "retrieved",
+          "created_at": "2026-09-23T17:05:16Z",
+          "updated_at": "2026-09-23T17:46:03Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2322",
+          "status": "retrieved",
+          "created_at": "2026-09-23T12:49:37Z",
+          "updated_at": "2026-09-23T13:15:26Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2328",
+          "status": "retrieved",
+          "created_at": "2026-09-23T22:00:53Z",
+          "updated_at": "2026-09-23T22:29:47Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-25",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2344",
+      "title": "LichtFeld 加入 glTF/GLB 高斯导入导出",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2344",
+        "https://github.com/KhronosGroup/glTF/blob/main/extensions/2.0/Khronos/KHR_gaussian_splatting/README.md",
+        "https://github.com/spz-ecosystem/spz2glb",
+        "https://github.com/WilliamLiu-1997/3D-Tiles-RendererJS-3DGS-Plugin"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2344",
+          "retrieved_at": "2026-10-03T16:37:46.612081+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-24T07:21:07Z",
+          "updated_at": "2026-09-24T21:09:26Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-25",
+      "event_id": "github.com/playcanvas/engine/commit/fe280fdbdc807fb9bf117e01b4d352c0879d07d3",
+      "title": "PlayCanvas 为流式高斯 LOD 增加下载优先级",
+      "sources": [
+        "https://github.com/playcanvas/engine/commit/fe280fdbdc807fb9bf117e01b4d352c0879d07d3"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/commit/fe280fdbdc807fb9bf117e01b4d352c0879d07d3",
+          "retrieved_at": "2026-10-03T16:38:00.095135+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-24T14:11:11Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-25",
+      "event_id": "github.com/playcanvas/supersplat-viewer/pull/311",
+      "title": "SuperSplat Viewer 修复透明层拾取与标注旋转中心",
+      "sources": [
+        "https://github.com/playcanvas/supersplat-viewer/pull/311",
+        "https://github.com/playcanvas/supersplat-viewer/pull/310"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/311",
+          "retrieved_at": "2026-10-03T16:38:07.500422+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-24T16:50:06Z",
+          "updated_at": "2026-09-24T16:50:30Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/310",
+          "retrieved_at": "2026-10-03T16:38:06.461525+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-24T10:18:43Z",
+          "updated_at": "2026-09-24T11:04:46Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-25",
+      "event_id": "event-853ff199e1f3",
+      "title": "Spirula Studio v2026.9.24 提供三平台安装包",
+      "sources": [
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.24",
+        "https://radiancefields.com/spirula-studio-v2026.9.24-adds-editing-and-an-mcp-server"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.24",
+          "retrieved_at": "2026-10-03T16:37:57.980275+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-24T03:56:06Z",
+          "updated_at": "2026-09-24T04:51:20Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-25",
+      "event_id": "event-612142c975ea",
+      "title": "IA’GS 发布 Apple Silicon 本地照片重建工具",
+      "sources": [
+        "https://github.com/by-lastime/IA-GS"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/by-lastime/IA-GS/blob/58278f55c3c0325d12c9e628edec0eb18438eca5/README.md",
+          "status": "retrieved",
+          "commit": "58278f55c3c0325d12c9e628edec0eb18438eca5",
+          "created_at": "2026-09-24T11:02:32Z"
+        }
+      ],
+      "candidate_urls": [
+        "https://raw.githubusercontent.com/by-lastime/IA-GS/58278f55c3c0325d12c9e628edec0eb18438eca5/assets/screenshots/studio.png"
+      ],
+      "selected": [
+        {
+          "key": "iags-studio",
+          "source": "https://github.com/by-lastime/IA-GS/tree/58278f55c3c0325d12c9e628edec0eb18438eca5",
+          "credit": "IA’GS 项目界面 · 9 月 25 日前的仓库版本",
+          "original": "/media/originals/iags-studio.png",
+          "sha256": "16ed64047bb31aedf540aae5e04660a460d4ec1c8107caa8b7dc495eaf0035ef"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-26",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2436",
+      "title": "LichtFeld 开发分支加入原生 Metal 张量后端",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2436",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2427",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2434"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2436",
+          "retrieved_at": "2026-10-03T16:37:47.202844+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T21:59:37Z",
+          "updated_at": "2026-09-26T07:00:16Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2427",
+          "retrieved_at": "2026-10-03T16:37:46.502608+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T17:42:16Z",
+          "updated_at": "2026-09-25T20:12:58Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2434",
+          "retrieved_at": "2026-10-03T16:37:47.251064+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T20:53:34Z",
+          "updated_at": "2026-09-26T07:00:17Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-26",
+      "event_id": "event-496e8a440193",
+      "title": "PlayCanvas 调整高斯 MSAA 并修复正交相机球谐颜色",
+      "sources": [
+        "https://github.com/playcanvas/engine/pull/9532",
+        "https://github.com/playcanvas/engine/pull/9531"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9532",
+          "retrieved_at": "2026-10-03T16:38:00.652472+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T09:22:11Z",
+          "updated_at": "2026-09-25T09:31:19Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9531",
+          "retrieved_at": "2026-10-03T16:38:00.399591+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T08:53:24Z",
+          "updated_at": "2026-09-26T08:06:58Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-26",
+      "event_id": "event-9c581c05d5ac",
+      "title": "PlayCanvas 修复相机与高斯对象的生命周期问题",
+      "sources": [
+        "https://github.com/playcanvas/engine/pull/9533",
+        "https://github.com/playcanvas/engine/pull/9535",
+        "https://github.com/playcanvas/engine/pull/9536"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9533",
+          "retrieved_at": "2026-10-03T16:38:02.627401+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T10:18:12Z",
+          "updated_at": "2026-09-25T11:33:01Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9535",
+          "retrieved_at": "2026-10-03T16:38:01.262945+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T11:15:10Z",
+          "updated_at": "2026-09-25T11:46:31Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9536",
+          "retrieved_at": "2026-10-03T16:38:01.592437+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-25T11:15:19Z",
+          "updated_at": "2026-09-25T11:22:16Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-26",
+      "event_id": "event-88022cfb5eeb",
+      "title": "C³Splat 公开跨视角因果压缩代码",
+      "sources": [
+        "https://github.com/dongjiazhen89/C3Splat"
+      ],
+      "inspections": [],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "正文指向的项目仓库本轮返回不可用，未获得可核实的历史配图。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "github.com/playcanvas/supersplat-viewer/pull/314",
+      "title": "SuperSplat Viewer 合入实验性随机渲染器",
+      "sources": [
+        "https://github.com/playcanvas/supersplat-viewer/pull/314"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/314",
+          "retrieved_at": "2026-10-03T16:38:07.861113+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T12:47:50Z",
+          "updated_at": "2026-09-26T21:08:19Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2460",
+      "title": "LichtFeld 减少训练显存占用",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2460"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2460",
+          "retrieved_at": "2026-10-03T16:37:48.489417+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T11:03:32Z",
+          "updated_at": "2026-09-26T11:10:13Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2461",
+      "title": "LichtFeld 在主机内存不足时释放图片缓存",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2461"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2461",
+          "retrieved_at": "2026-10-03T16:37:48.701437+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T11:07:04Z",
+          "updated_at": "2026-09-26T12:40:21Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2463",
+      "title": "LichtFeld 减少 Viewer 显存并记录用量时间线",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2463",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2466",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2502"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2463",
+          "retrieved_at": "2026-10-03T16:37:48.961608+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T11:20:40Z",
+          "updated_at": "2026-09-26T12:40:20Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2466",
+          "retrieved_at": "2026-10-03T16:37:49.474243+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T11:34:09Z",
+          "updated_at": "2026-09-26T12:54:45Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2502",
+          "retrieved_at": "2026-10-03T16:37:50.730451+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T16:28:44Z",
+          "updated_at": "2026-09-27T18:45:41Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2444",
+      "title": "LichtFeld Mac Viewer 接入 Metal，并扩展格式转换",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2444",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2448",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2447",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2495",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2496",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2500",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2503"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2444",
+          "retrieved_at": "2026-10-03T16:37:47.785650+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T04:09:33Z",
+          "updated_at": "2026-09-26T07:00:13Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2448",
+          "retrieved_at": "2026-10-03T16:37:48.524078+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T05:45:06Z",
+          "updated_at": "2026-09-26T07:00:06Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2447",
+          "retrieved_at": "2026-10-03T16:37:47.710333+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T05:42:02Z",
+          "updated_at": "2026-09-26T07:00:07Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2495",
+          "retrieved_at": "2026-10-03T16:37:49.823018+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T15:38:52Z",
+          "updated_at": "2026-09-27T18:45:45Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2496",
+          "retrieved_at": "2026-10-03T16:37:49.666852+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T15:44:38Z",
+          "updated_at": "2026-09-27T18:45:44Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2500",
+          "retrieved_at": "2026-10-03T16:37:50.582892+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-26T16:02:59Z",
+          "updated_at": "2026-09-27T18:45:38Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-27",
+      "event_id": "event-73ace8cc165c",
+      "title": "ComfyUI Meridian 公开单图到高斯的工作流",
+      "sources": [
+        "https://github.com/Enndee/ComfyUI_Meridian_for_Gaussian_Splatting"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/Enndee/ComfyUI_Meridian_for_Gaussian_Splatting/blob/4d54a73f28b20dd7e0fb3dbb3a4d8a7e3bea15e0/README.md",
+          "status": "retrieved",
+          "commit": "4d54a73f28b20dd7e0fb3dbb3a4d8a7e3bea15e0",
+          "created_at": "2026-09-26T18:55:44Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-28",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2530",
+      "title": "LichtFeld Trainer 支持无 CUDA 构建与启动",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/blob/master/README.md",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2530",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2532",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2535",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2536",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2537",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2538",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2543",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2539"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2530",
+          "retrieved_at": "2026-10-03T16:37:50.722361+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T05:40:49Z",
+          "updated_at": "2026-09-27T18:44:58Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2532",
+          "retrieved_at": "2026-10-03T16:37:51.119440+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T07:33:33Z",
+          "updated_at": "2026-09-27T18:44:59Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2535",
+          "retrieved_at": "2026-10-03T16:37:51.958148+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T10:42:23Z",
+          "updated_at": "2026-09-27T18:45:10Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2536",
+          "retrieved_at": "2026-10-03T16:37:52.031586+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T11:15:10Z",
+          "updated_at": "2026-09-27T18:45:09Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2537",
+          "retrieved_at": "2026-10-03T16:37:52.618873+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T15:38:49Z",
+          "updated_at": "2026-09-27T18:45:08Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2538",
+          "retrieved_at": "2026-10-03T16:37:52.216258+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T17:46:28Z",
+          "updated_at": "2026-09-27T18:45:06Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-28",
+      "event_id": "github.com/harry7557558/spirula-studio/commit/d8e6a267f906261ba3207f55317c67a20081620b",
+      "title": "Spirula 加入场景分区与 ROI 训练",
+      "sources": [
+        "https://github.com/harry7557558/spirula-studio/commit/d8e6a267f906261ba3207f55317c67a20081620b",
+        "https://github.com/harry7557558/spirula-studio/releases"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/commit/d8e6a267f906261ba3207f55317c67a20081620b",
+          "retrieved_at": "2026-10-03T16:37:57.314982+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T06:00:24Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-28",
+      "event_id": "github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/f397c56259096438674dc7398d3d599badad7a24",
+      "title": "Gaussian-Splat-Lite 更新排序与 TAA",
+      "sources": [
+        "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite",
+        "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/f397c56259096438674dc7398d3d599badad7a24",
+        "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/b2dcfe65cf783d7cc73541a2ac58a3e54bac3784",
+        "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/7caa9b1bbc393a27412f0118ed125362d61a1262"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/f397c56259096438674dc7398d3d599badad7a24",
+          "retrieved_at": "2026-10-03T16:37:55.819392+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T11:21:04Z",
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/b2dcfe65cf783d7cc73541a2ac58a3e54bac3784",
+          "retrieved_at": "2026-10-03T16:37:54.976842+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T05:01:05Z",
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/7caa9b1bbc393a27412f0118ed125362d61a1262",
+          "retrieved_at": "2026-10-03T16:37:54.930214+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T12:14:55Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-28",
+      "event_id": "event-3abe283ffc0b",
+      "title": "OOOSplat 增加高清补拍与 Adaptive Brush Planner",
+      "sources": [
+        "https://github.com/ooolabdev/ooosplat",
+        "https://github.com/ooolabdev/ooosplat/commit/a9c64aa659c17db5270987cb06de55465801294c",
+        "https://github.com/ooolabdev/ooosplat/commit/b920341d316d23f6581b48583873827898bbb232"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/ooolabdev/ooosplat/commit/a9c64aa659c17db5270987cb06de55465801294c",
+          "retrieved_at": "2026-10-03T16:37:59.260247+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T02:51:40Z",
+          "updated_at": null
+        },
+        {
+          "url": "https://github.com/ooolabdev/ooosplat/commit/b920341d316d23f6581b48583873827898bbb232",
+          "retrieved_at": "2026-10-03T16:37:59.105588+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T14:45:25Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "ooosplat-workspace",
+          "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+          "credit": "OOOSplat 0.3.0 任务界面（后续 README 沿用）；用于说明任务创建，不展示新版补拍功能",
+          "original": "/media/originals/ooosplat-workspace.png",
+          "sha256": "c7486c75b2201d83b75004248d2e1705dac7d6a78dcbf668ec5754c4069d9698"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-29",
+      "event_id": "github.com/playcanvas/engine/pull/9584",
+      "title": "PlayCanvas 调整流式高斯 LOD 策略与预算",
+      "sources": [
+        "https://github.com/playcanvas/engine/pull/9584",
+        "https://github.com/playcanvas/engine/pull/9586"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9584",
+          "retrieved_at": "2026-10-03T16:38:01.754497+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T13:49:51Z",
+          "updated_at": "2026-09-28T14:18:52Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9586",
+          "retrieved_at": "2026-10-03T16:38:02.579080+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T14:49:35Z",
+          "updated_at": "2026-09-28T15:19:13Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-29",
+      "event_id": "event-76112746d721",
+      "title": "SuperSplat Viewer 1.36.0 正式发布随机渲染器",
+      "sources": [
+        "https://www.npmjs.com/package/%40playcanvas/supersplat-viewer?activeTab=code",
+        "https://github.com/playcanvas/supersplat-viewer",
+        "https://github.com/playcanvas/supersplat-viewer/pull/315"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/supersplat-viewer/pull/315",
+          "retrieved_at": "2026-10-03T16:38:07.459254+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-27T15:44:28Z",
+          "updated_at": "2026-09-28T11:01:23Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-29",
+      "event_id": "event-6e28c9e743c9",
+      "title": "SplatTransform 3.7.0 支持指定 Dawn 后端",
+      "sources": [
+        "https://www.npmjs.com/package/%40playcanvas/splat-transform?activeTab=dependents",
+        "https://github.com/playcanvas/splat-transform/pull/334"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/splat-transform/pull/334",
+          "retrieved_at": "2026-10-03T16:38:04.298174+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T11:38:47Z",
+          "updated_at": "2026-09-28T11:40:01Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-29",
+      "event_id": "event-7a05fcf4931b",
+      "title": "OOOSplat 0.5.0 发布 Auto Optimize 与高清补拍",
+      "sources": [
+        "https://github.com/ooolabdev/ooosplat",
+        "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/53ac5da8b69e95319e1ca3eb7e76a96a544473bf"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/WilliamLiu-1997/Gaussian-Splat-Lite/commit/53ac5da8b69e95319e1ca3eb7e76a96a544473bf",
+          "retrieved_at": "2026-10-03T16:37:54.853829+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T07:39:30Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "ooosplat-preview",
+          "source": "https://github.com/ooolabdev/ooosplat/tree/0e19a3b74122c3bab0103bc2ad3140da0853c74f",
+          "credit": "OOOSplat 既有预览界面 · 不作为 Auto Optimize 的性能结果",
+          "original": "/media/originals/ooosplat-preview.png",
+          "sha256": "0583a5f03b1e29e6b37db244c25ff298ff0adaf6cdfe0513ad2356a6b7e6a1ae"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-29",
+      "event_id": "github.com/harry7557558/spirula-studio/commit/52cfb6a7726119d9b1eeb889055c22b984004d63",
+      "title": "Spirula 调整分区策略并公开质量与耗时结果",
+      "sources": [
+        "https://github.com/harry7557558/spirula-studio/commit/52cfb6a7726119d9b1eeb889055c22b984004d63"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/commit/52cfb6a7726119d9b1eeb889055c22b984004d63",
+          "retrieved_at": "2026-10-03T16:37:57.182709+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T13:00:26Z",
+          "updated_at": null
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-30",
+      "event_id": "github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+      "title": "SplatTransform 3.8 修复旋转写入并迁移 LOD 参数",
+      "sources": [
+        "https://github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+        "https://github.com/playcanvas/splat-transform/pull/336",
+        "https://github.com/playcanvas/splat-transform/pull/339",
+        "https://github.com/playcanvas/engine/pull/9584"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/splat-transform/releases/tag/v3.8.0",
+          "retrieved_at": "2026-10-03T16:38:05.023700+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T17:42:00Z",
+          "updated_at": "2026-09-29T17:43:24Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/splat-transform/pull/336",
+          "retrieved_at": "2026-10-03T16:38:03.743403+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T04:51:16Z",
+          "updated_at": "2026-09-29T12:22:56Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/splat-transform/pull/339",
+          "retrieved_at": "2026-10-03T16:38:04.054232+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T17:38:33Z",
+          "updated_at": "2026-09-29T17:40:14Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9584",
+          "retrieved_at": "2026-10-03T16:38:01.754497+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T13:49:51Z",
+          "updated_at": "2026-09-28T14:18:52Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    },
+    {
+      "date": "2026-09-30",
+      "event_id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+      "title": "Spirula 分区训练进入正式版本",
+      "sources": [
+        "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+        "https://github.com/harry7557558/spirula-studio/pull/119",
+        "https://github.com/harry7557558/spirula-studio/issues/121"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/releases/tag/v2026.9.30",
+          "retrieved_at": "2026-10-03T16:37:58.030510+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-30T00:53:45Z",
+          "updated_at": "2026-09-30T01:37:48Z"
+        },
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/pull/119",
+          "retrieved_at": "2026-10-03T16:37:58.834206+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-28T20:47:43Z",
+          "updated_at": "2026-09-30T00:01:37Z"
+        },
+        {
+          "url": "https://github.com/harry7557558/spirula-studio/issues/121",
+          "retrieved_at": "2026-10-03T16:37:56.663852+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T14:47:19Z",
+          "updated_at": "2026-09-29T21:52:54Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "来源版本记录主要是代码与文字说明；现有 Mandelbulb 画面不能说明分区、SfM 或视频功能，本轮未采用。"
+    },
+    {
+      "date": "2026-09-30",
+      "event_id": "github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+      "title": "LichtFeld 修复训练与导出问题",
+      "sources": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2574",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2602",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2606",
+        "https://github.com/MrNeRF/LichtFeld-Studio/pull/2607"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2574",
+          "retrieved_at": "2026-10-03T16:37:53.047504+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T08:46:43Z",
+          "updated_at": "2026-09-29T08:52:30Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2602",
+          "retrieved_at": "2026-10-03T16:37:53.248856+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-30T07:38:00Z",
+          "updated_at": "2026-09-30T07:43:34Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2608",
+          "retrieved_at": "2026-10-03T16:37:55.238778+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-30T08:49:30Z",
+          "updated_at": "2026-09-30T09:10:46Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2606",
+          "retrieved_at": "2026-10-03T16:37:53.423843+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-30T08:49:22Z",
+          "updated_at": "2026-09-30T09:10:47Z"
+        },
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/pull/2607",
+          "retrieved_at": "2026-10-03T16:37:53.892483+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-30T08:49:26Z",
+          "updated_at": "2026-09-30T09:10:47Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "lichtfeld-meihogen",
+          "source": "https://lichtfeld.io/",
+          "credit": "LichtFeld 官方训练界面演示 · 用于说明工作界面，非本期修复的测试结果",
+          "original": "/media/originals/lichtfeld-meihogen.jpg",
+          "sha256": "08d81120c2097d151bcf356e09323f16189882791dc5f44241c7f45cb147bbe5"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-30",
+      "event_id": "github.com/xiaobiaodu/Mobile-4DGS/commit/675f0a827764383edd749d2c98906761e0fc28fd",
+      "title": "Mobile-4DGS 公开训练与 WebGL 代码",
+      "sources": [
+        "https://github.com/xiaobiaodu/mobile-4dgs-project",
+        "https://github.com/xiaobiaodu/Mobile-4DGS",
+        "https://arxiv.org/abs/2609.36940",
+        "https://arxiv.org/abs/2609.37874",
+        "https://github.com/hustvl/4DGaussians",
+        "https://github.com/fudan-zvg/4d-gaussian-splatting"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/xiaobiaodu/mobile-4dgs-project/blob/8a69ef8cf06031cbe70f211c3ff53e8cfce9b9cb/README.md",
+          "status": "retrieved",
+          "commit": "8a69ef8cf06031cbe70f211c3ff53e8cfce9b9cb",
+          "created_at": "2026-09-29T08:13:55Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [
+        {
+          "key": "mobile-4dgs-method",
+          "source": "https://github.com/xiaobiaodu/Mobile-4DGS/tree/675f0a827764383edd749d2c98906761e0fc28fd",
+          "credit": "Mobile-4DGS 作者 · 9 月 29 日仓库版本的方法图",
+          "original": "/media/originals/mobile-4dgs-method.png",
+          "sha256": "e2c3da5fe84e8c61a13e5aa41e8edf5255bee7bfed74780ede33e653f3023bb2"
+        }
+      ],
+      "result": "采用项目历史界面或方法图，说明用途；版本与限制见图注。"
+    },
+    {
+      "date": "2026-09-30",
+      "event_id": "github.com/playcanvas/engine/pull/9601",
+      "title": "PlayCanvas 修复 XR 重复启动与退出问题",
+      "sources": [
+        "https://github.com/playcanvas/engine/pull/9599",
+        "https://github.com/playcanvas/engine/pull/9600",
+        "https://github.com/playcanvas/engine/pull/9601"
+      ],
+      "inspections": [
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9599",
+          "retrieved_at": "2026-10-03T16:38:02.753944+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T22:10:42Z",
+          "updated_at": "2026-09-29T22:17:10Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9600",
+          "retrieved_at": "2026-10-03T16:38:02.873643+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T22:29:29Z",
+          "updated_at": "2026-09-29T22:34:29Z"
+        },
+        {
+          "url": "https://github.com/playcanvas/engine/pull/9601",
+          "retrieved_at": "2026-10-03T16:38:04.332703+00:00",
+          "status": "retrieved",
+          "created_at": "2026-09-29T22:56:43Z",
+          "updated_at": "2026-09-29T23:00:07Z"
+        }
+      ],
+      "candidate_urls": [],
+      "selected": [],
+      "result": "已检查来源，未取得同时符合该事件内容和报告时点的图片，保留文字。"
+    }
+  ]
+}

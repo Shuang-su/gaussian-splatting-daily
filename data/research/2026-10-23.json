@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-23",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-23T00:00:00+08:00",
+    "end": "2026-10-24T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/chcnav-cocloud-adds-a-new-gaussian-splat-renderer",
+        "radiancefields.com/framestore-details-its-superman-4d-splatting-pipeline",
+        "radiancefields.com/geosplats-sdk-1.2.0-pins-annotations-to-splat-models",
+        "radiancefields.com/lens-optics-1.5.1-adds-lens-looks-to-gaussian-splats",
+        "radiancefields.com/tommy-oshima-turns-kenji-kohiyamas-macro-insect-photogrammetry-into-gaussian-splats",
+        "radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:12.696691+00:00",
+      "urls": [
+        "https://geospatial.chcnav.com/products/chcnav-cocloud",
+        "https://www.linkedin.com/feed/update/urn:li:activity:7518914152707407872/",
+        "https://www.youtube.com/watch?v=ARnEPc2j_gU",
+        "https://docs.maptiler.com/geosplats-sdk/",
+        "https://www.instagram.com/p/De1VKkbABUW/",
+        "https://superhivemarket.com/products/lens-optics",
+        "https://www.kaukokaipuukobo.com",
+        "https://topmuseum.jp/exhibition/5454/?lang=en",
+        "https://www.ntticc.or.jp/en/archive/works/micro-presence/",
+        "https://stulab.jp/gallery_categories/photographic-3dmodels/",
+        "https://stulab.jp/gallery_categories/photographic-objects/",
+        "https://sketchfab.com/kohiyama",
+        "https://superspl.at/scene/21575f53",
+        "https://superspl.at/scene/1528c7be",
+        "https://youtu.be/TziLEMJ9BsE",
+        "https://www.okayama-kenbi.info/exh-20261009-mushi_ten/",
+        "https://crevis.co.jp/exhibitions/mushi_ten/",
+        "https://apps.apple.com/us/app/tutticam-multi-camera-sync/id6820396336"
+      ],
+      "candidateIds": [
+        "radiancefields.com/chcnav-cocloud-adds-a-new-gaussian-splat-renderer",
+        "radiancefields.com/framestore-details-its-superman-4d-splatting-pipeline",
+        "radiancefields.com/geosplats-sdk-1.2.0-pins-annotations-to-splat-models",
+        "radiancefields.com/lens-optics-1.5.1-adds-lens-looks-to-gaussian-splats",
+        "radiancefields.com/tommy-oshima-turns-kenji-kohiyamas-macro-insect-photogrammetry-into-gaussian-splats",
+        "radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://geospatial.chcnav.com/products/chcnav-cocloud",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:14.931348+00:00",
+          "sha256": "322ae1f1ea06b00d7ce05095efe528e6131fec34ea0d21f3c7fdb868a73952d8",
+          "characters": 8625
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518914152707407872/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:00.870152+00:00",
+          "sha256": "35a580ea76de0e124ab7486d8c505fddf3175d702e1b7218fbfb487f306d1388",
+          "characters": 14433
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=ARnEPc2j_gU",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:37:10.649760+00:00",
+          "sha256": "f70edcaacaa90e4705136a080ebf3c89514984eeaebda3788f1055b50188f20d",
+          "characters": 136,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://docs.maptiler.com/geosplats-sdk/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:10.974653+00:00",
+          "sha256": "ad389e2f2937f4a3b4862c92a13a8713dd15ee83d3cfd2f99e7c39612af43f3d",
+          "characters": 11335
+        },
+        {
+          "url": "https://www.instagram.com/p/De1VKkbABUW/",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:37:03.190154+00:00",
+          "sha256": "bad57ef7837c8e6bf99c2a5935cc9d6fe5324a53d88744ad5551db0e46b03cd6",
+          "characters": 9,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://superhivemarket.com/products/lens-optics",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:47.472973+00:00",
+          "sha256": "104464e3c2ceeb20c4b03a992d5d4150d031a0ec816e74f1ae4fed678d28d9fd",
+          "characters": 1844
+        },
+        {
+          "url": "https://www.kaukokaipuukobo.com",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:59.015835+00:00",
+          "sha256": "fbc95cdda2fb0515dbdbe58e21718c47ad82c7ace39c336f2aae6ea8c90bc178",
+          "characters": 176,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://topmuseum.jp/exhibition/5454/?lang=en",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:50.619788+00:00",
+          "sha256": "816eaeb42b70c433539a92ee3b1036766218088b4e858244aab99823c30d8342",
+          "characters": 2724
+        },
+        {
+          "url": "https://www.ntticc.or.jp/en/archive/works/micro-presence/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:06.050251+00:00",
+          "sha256": "c229a434f582884c4b0833bc1c617bd0fb3a69a17d540fdf609e5d66df97a004",
+          "characters": 2212
+        },
+        {
+          "url": "https://stulab.jp/gallery_categories/photographic-3dmodels/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:47.236137+00:00",
+          "sha256": "a9ca0c80d29e3f060faf361f2f4d4d969fdfc06413a909d2578a56205ab127e5",
+          "characters": 702
+        },
+        {
+          "url": "https://stulab.jp/gallery_categories/photographic-objects/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:47.186668+00:00",
+          "sha256": "69db8438c4e753f6ae37444607210450f66cbbf64cb0afcaed4f159e2dd3a45b",
+          "characters": 831
+        },
+        {
+          "url": "https://sketchfab.com/kohiyama",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:45.832511+00:00",
+          "sha256": "1ca1056d9a693e46f9209aee2a5a6e1a30253b58eb038708aa98e9ed4ac40ca1",
+          "characters": 2246
+        },
+        {
+          "url": "https://superspl.at/scene/21575f53",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:48.462020+00:00",
+          "sha256": "f4b033b63fbd79ffbe2b5499dd5b84d17b0a24d082aae9d04894dbe3526484bd",
+          "characters": 388
+        },
+        {
+          "url": "https://superspl.at/scene/1528c7be",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:49.071132+00:00",
+          "sha256": "a0e25646f1ce1c507f7eba92d7e1807b36fd442d173d1786e1e91c1b651b6726",
+          "characters": 435
+        },
+        {
+          "url": "https://youtu.be/TziLEMJ9BsE",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:37:12.696691+00:00",
+          "sha256": "de466f9c5a3ec8418deeb63a8bede190761280de74f54b6256a9284f54d57b35",
+          "characters": 146,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://www.okayama-kenbi.info/exh-20261009-mushi_ten/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:06.537659+00:00",
+          "sha256": "5e3d554e3537a120b99d9054caf77b488e5a7ef385641ea8d0c99862c312490a",
+          "characters": 5690
+        },
+        {
+          "url": "https://crevis.co.jp/exhibitions/mushi_ten/",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:07.909665+00:00",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        },
+        {
+          "url": "https://apps.apple.com/us/app/tutticam-multi-camera-sync/id6820396336",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:04.753498+00:00",
+          "sha256": "2b9bc011826c2224a087e83180634e7e35322c486e5c507c6f6a45b32f165519",
+          "characters": 5432
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:22.807239+00:00",
+      "urls": [
+        "https://github.com/dtpoi/TuttiCam-Android/releases"
+      ],
+      "candidateIds": [
+        "radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/dtpoi/TuttiCam-Android/releases",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:22.807239+00:00",
+          "sha256": "565b592a6f5abf1f55de70ef99108129fe844f073b72988ef87280a4da546417",
+          "characters": 10993
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/chcnav-cocloud-adds-a-new-gaussian-splat-renderer",
+      "title": "CoCloud 更新高斯渲染和行人过滤",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/chcnav-cocloud-adds-a-new-gaussian-splat-renderer",
+        "https://geospatial.chcnav.com/products/chcnav-cocloud",
+        "https://www.linkedin.com/feed/update/urn:li:activity:7518914152707407872/"
+      ],
+      "eventId": "radiancefields.com/chcnav-cocloud-adds-a-new-gaussian-splat-renderer"
+    },
+    {
+      "id": "radiancefields.com/framestore-details-its-superman-4d-splatting-pipeline",
+      "title": "Framestore 拆解《超人》的动态高斯制作",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/framestore-details-its-superman-4d-splatting-pipeline",
+        "https://www.youtube.com/watch?v=ARnEPc2j_gU"
+      ],
+      "eventId": "radiancefields.com/framestore-details-its-superman-4d-splatting-pipeline"
+    },
+    {
+      "id": "radiancefields.com/geosplats-sdk-1.2.0-pins-annotations-to-splat-models",
+      "title": "GeoSplats 可以在地图高斯上固定标注",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/geosplats-sdk-1.2.0-pins-annotations-to-splat-models",
+        "https://docs.maptiler.com/geosplats-sdk/"
+      ],
+      "eventId": "radiancefields.com/geosplats-sdk-1.2.0-pins-annotations-to-splat-models"
+    },
+    {
+      "id": "radiancefields.com/lens-optics-1.5.1-adds-lens-looks-to-gaussian-splats",
+      "title": "Lens Optics 把镜头外观带到 Blender 高斯",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/lens-optics-1.5.1-adds-lens-looks-to-gaussian-splats",
+        "https://www.instagram.com/p/De1VKkbABUW/",
+        "https://superhivemarket.com/products/lens-optics"
+      ],
+      "eventId": "radiancefields.com/lens-optics-1.5.1-adds-lens-looks-to-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/tommy-oshima-turns-kenji-kohiyamas-macro-insect-photogrammetry-into-gaussian-splats",
+      "title": "昆虫微距摄影测量被重新呈现为高斯作品",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/tommy-oshima-turns-kenji-kohiyamas-macro-insect-photogrammetry-into-gaussian-splats",
+        "https://www.kaukokaipuukobo.com",
+        "https://topmuseum.jp/exhibition/5454/?lang=en",
+        "https://www.ntticc.or.jp/en/archive/works/micro-presence/",
+        "https://stulab.jp/gallery_categories/photographic-3dmodels/",
+        "https://stulab.jp/gallery_categories/photographic-objects/",
+        "https://sketchfab.com/kohiyama",
+        "https://superspl.at/scene/21575f53",
+        "https://superspl.at/scene/1528c7be",
+        "https://youtu.be/TziLEMJ9BsE",
+        "https://www.okayama-kenbi.info/exh-20261009-mushi_ten/",
+        "https://crevis.co.jp/exhibitions/mushi_ten/"
+      ],
+      "eventId": "radiancefields.com/tommy-oshima-turns-kenji-kohiyamas-macro-insect-photogrammetry-into-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture",
+      "title": "TuttiCam 为多机采集提供同步工具",
+      "eventDate": "2026-10-23",
+      "reportDate": "2026-10-23",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture",
+        "https://apps.apple.com/us/app/tutticam-multi-camera-sync/id6820396336",
+        "https://github.com/dtpoi/TuttiCam-Android/releases"
+      ],
+      "eventId": "radiancefields.com/tutticam-syncs-up-to-8-cameras-for-gaussian-splat-capture"
+    }
+  ]
+}

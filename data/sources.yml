@@ -14,3 +14,8 @@ sources:
     type: future
     enabled: false
     notes: Reserved for manually curated project/demo/tool links.
+
+# Full newsroom registry and receipts are authoritative for daily publication.
+# The legacy arXiv-only collector is a manual research aid, not coverage proof.
+newsroom_registry: data/source-registry.json
+source_receipts: data/research/YYYY-MM-DD.json

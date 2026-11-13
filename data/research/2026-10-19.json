@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-19T00:00:00+08:00",
+    "end": "2026-10-20T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/lichtfeld-studio-v0-5-4-1-drags-splats-into-blender-and-trains-inside-a-live-crop-box",
+        "radiancefields.com/viggle-launches-jst-2-a-world-model-that-builds-3d-characters-and-scenes-from-gaussian-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:51.256210+00:00",
+      "urls": [
+        "https://viggle.ai/jst2",
+        "https://viggle.ai/pinoc/mcp"
+      ],
+      "candidateIds": [
+        "radiancefields.com/viggle-launches-jst-2-a-world-model-that-builds-3d-characters-and-scenes-from-gaussian-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://viggle.ai/jst2",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:51.255972+00:00",
+          "sha256": "353fdce3815c615d894f167db38b036670f1696e787aed0e44a15275a6d163f1",
+          "characters": 16033
+        },
+        {
+          "url": "https://viggle.ai/pinoc/mcp",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:51.256210+00:00",
+          "sha256": "d2e04c8ece943b202b817bbd9124350c8ad30696f922c30b4f7530ae5acf1bcd",
+          "characters": 9357
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:18.664583+00:00",
+      "urls": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/untagged-b05a65ef39ba5e2a7264"
+      ],
+      "candidateIds": [
+        "radiancefields.com/lichtfeld-studio-v0-5-4-1-drags-splats-into-blender-and-trains-inside-a-live-crop-box"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/untagged-b05a65ef39ba5e2a7264",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:18.664583+00:00",
+          "sha256": "42a751a7142b730c7da3c3cacbe7d60447d8f751463e150a65e1bc3768353512",
+          "characters": 3489
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/lichtfeld-studio-v0-5-4-1-drags-splats-into-blender-and-trains-inside-a-live-crop-box",
+      "title": "LichtFeld 可把高斯直接拖进 Blender",
+      "eventDate": "2026-10-19",
+      "reportDate": "2026-10-19",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/lichtfeld-studio-v0-5-4-1-drags-splats-into-blender-and-trains-inside-a-live-crop-box",
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/untagged-b05a65ef39ba5e2a7264"
+      ],
+      "eventId": "radiancefields.com/lichtfeld-studio-v0-5-4-1-drags-splats-into-blender-and-trains-inside-a-live-crop-box"
+    },
+    {
+      "id": "radiancefields.com/viggle-launches-jst-2-a-world-model-that-builds-3d-characters-and-scenes-from-gaussian-splats",
+      "title": "Viggle 发布 JST 2 世界模型",
+      "eventDate": "2026-10-19",
+      "reportDate": "2026-10-19",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/viggle-launches-jst-2-a-world-model-that-builds-3d-characters-and-scenes-from-gaussian-splats",
+        "https://viggle.ai/jst2",
+        "https://viggle.ai/pinoc/mcp"
+      ],
+      "eventId": "radiancefields.com/viggle-launches-jst-2-a-world-model-that-builds-3d-characters-and-scenes-from-gaussian-splats"
+    }
+  ]
+}

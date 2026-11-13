@@ -1,0 +1,275 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-24",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-24T00:00:00+08:00",
+    "end": "2026-10-25T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model",
+        "radiancefields.com/freegaussian-rebuilds-its-viewer-for-walking-and-measuring",
+        "radiancefields.com/new-unity-package-ray-traces-gaussian-splats-with-meshes",
+        "radiancefields.com/stageit-optimiser-turns-video-into-animated-gaussian-splats",
+        "radiancefields.com/split-view-studio-splat-toolkit-aligns-gaussian-splat-scans-into-4d-tours",
+        "radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper",
+        "radiancefields.com/cairn-js-brings-captions-to-walkable-gaussian-splats"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:09.425059+00:00",
+      "urls": [
+        "https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-Foundation4D",
+        "https://www.freegaussian.ai/blog/new-3d-viewer",
+        "https://spatialcreative.com/stageit-optimiser/",
+        "https://splitview.studio/?ref=radiancefields",
+        "https://www.w3.org/community/reports/immersive-captions/CG-FINAL-360-captions-20240412/",
+        "https://www.npmjs.com/package/cairn-spec"
+      ],
+      "candidateIds": [
+        "radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model",
+        "radiancefields.com/freegaussian-rebuilds-its-viewer-for-walking-and-measuring",
+        "radiancefields.com/stageit-optimiser-turns-video-into-animated-gaussian-splats",
+        "radiancefields.com/split-view-studio-splat-toolkit-aligns-gaussian-splat-scans-into-4d-tours",
+        "radiancefields.com/cairn-js-brings-captions-to-walkable-gaussian-splats"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-Foundation4D",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:34.632793+00:00",
+          "sha256": "cec440b22e78556395bc54e9c24df51aa3de5859e2ab256e48834cc26228ce80",
+          "characters": 22656
+        },
+        {
+          "url": "https://www.freegaussian.ai/blog/new-3d-viewer",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:56.842686+00:00",
+          "sha256": "491b540adf06e865bd375ae90942e8a0cb7c5d3cb2863f36a50b45b4e42b3286",
+          "characters": 5514
+        },
+        {
+          "url": "https://spatialcreative.com/stageit-optimiser/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:41.634210+00:00",
+          "sha256": "67ef8149e36dd6fcfa45527d829d8eea879c7d4c3a55b45052021f7880d56786",
+          "characters": 5513
+        },
+        {
+          "url": "https://splitview.studio/?ref=radiancefields",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:43.707084+00:00",
+          "sha256": "93ff4572184615e990121ca8a04b1e04acdcd2cbf18422ca25543fbe0a2782d4",
+          "characters": 11564
+        },
+        {
+          "url": "https://www.w3.org/community/reports/immersive-captions/CG-FINAL-360-captions-20240412/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:09.425059+00:00",
+          "sha256": "f48ffed22f79a7482055ff84ca3915511153e39dd5e0f2d41b3c05d84898ac5a",
+          "characters": 26376
+        },
+        {
+          "url": "https://www.npmjs.com/package/cairn-spec",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:37:05.041961+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.283203+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2610.30340",
+        "https://arxiv.org/abs/2610.09116",
+        "https://arxiv.org/abs/2610.30468"
+      ],
+      "candidateIds": [
+        "radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model",
+        "radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2610.30340",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.283203+00:00",
+          "sha256": "346a6d13f92ba2f94912ee9ef80599c25652391b3b9c2592cbf9f432dce99a69",
+          "characters": 5112
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.09116",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.149758+00:00",
+          "sha256": "fa811b497c9338144dcb7b5103a1730692546dd0c52ac290acf6ce4e88df919a",
+          "characters": 5273
+        },
+        {
+          "url": "https://arxiv.org/abs/2610.30468",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.282990+00:00",
+          "sha256": "8a9fcafeda5b7db8821105d07f579c9b39d11e234d737444e49df5df51414be2",
+          "characters": 5493
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:31.250876+00:00",
+      "urls": [
+        "https://github.com/ElHamb1/Unity-Gaussian-Ray-Tracing",
+        "https://github.com/seemandhar/SplatLab"
+      ],
+      "candidateIds": [
+        "radiancefields.com/new-unity-package-ray-traces-gaussian-splats-with-meshes",
+        "radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/ElHamb1/Unity-Gaussian-Ray-Tracing",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:18.690909+00:00",
+          "sha256": "7451b146b4c14fadd07c3270818cf54865d3f21182d4f228f11458e47b23fb3d",
+          "characters": 21277
+        },
+        {
+          "url": "https://github.com/seemandhar/SplatLab",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:31.250876+00:00",
+          "sha256": "b2e6e648f8457989a419e5ffc7a3653cef1c4da250311e1a5a810330f71204b1",
+          "characters": 17650
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model",
+      "title": "Foundation4D 统一预测驾驶场景信息",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model",
+        "https://huggingface.co/datasets/nvidia/PhysicalAI-Autonomous-Vehicles-Foundation4D",
+        "https://arxiv.org/abs/2610.30340"
+      ],
+      "eventId": "radiancefields.com/foundation4d-puts-av-perception-and-splats-in-one-model"
+    },
+    {
+      "id": "radiancefields.com/freegaussian-rebuilds-its-viewer-for-walking-and-measuring",
+      "title": "FreeGaussian 加入行走、碰撞和测量",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/freegaussian-rebuilds-its-viewer-for-walking-and-measuring",
+        "https://www.freegaussian.ai/blog/new-3d-viewer"
+      ],
+      "eventId": "radiancefields.com/freegaussian-rebuilds-its-viewer-for-walking-and-measuring"
+    },
+    {
+      "id": "radiancefields.com/new-unity-package-ray-traces-gaussian-splats-with-meshes",
+      "title": "实验性 Unity 包将高斯与网格一起光线追踪",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/new-unity-package-ray-traces-gaussian-splats-with-meshes",
+        "https://github.com/ElHamb1/Unity-Gaussian-Ray-Tracing"
+      ],
+      "eventId": "radiancefields.com/new-unity-package-ray-traces-gaussian-splats-with-meshes"
+    },
+    {
+      "id": "radiancefields.com/stageit-optimiser-turns-video-into-animated-gaussian-splats",
+      "title": "STAGEit Optimiser 尝试把视频变成动态高斯",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/stageit-optimiser-turns-video-into-animated-gaussian-splats",
+        "https://spatialcreative.com/stageit-optimiser/"
+      ],
+      "eventId": "radiancefields.com/stageit-optimiser-turns-video-into-animated-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/split-view-studio-splat-toolkit-aligns-gaussian-splat-scans-into-4d-tours",
+      "title": "Splat Toolkit 把多个扫描组织成时间导览",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/split-view-studio-splat-toolkit-aligns-gaussian-splat-scans-into-4d-tours",
+        "https://splitview.studio/?ref=radiancefields"
+      ],
+      "eventId": "radiancefields.com/split-view-studio-splat-toolkit-aligns-gaussian-splat-scans-into-4d-tours"
+    },
+    {
+      "id": "radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper",
+      "title": "SplatLab 将研究实验与论文生成连接",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper",
+        "https://arxiv.org/abs/2610.09116",
+        "https://github.com/seemandhar/SplatLab",
+        "https://arxiv.org/abs/2610.30468"
+      ],
+      "eventId": "radiancefields.com/splatlab-automates-3dgs-research-from-prompt-to-paper"
+    },
+    {
+      "id": "radiancefields.com/cairn-js-brings-captions-to-walkable-gaussian-splats",
+      "title": "cairn.js 为可漫游扫描增加字幕与讲述",
+      "eventDate": "2026-10-24",
+      "reportDate": "2026-10-24",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/cairn-js-brings-captions-to-walkable-gaussian-splats",
+        "https://www.w3.org/community/reports/immersive-captions/CG-FINAL-360-captions-20240412/",
+        "https://www.npmjs.com/package/cairn-spec"
+      ],
+      "eventId": "radiancefields.com/cairn-js-brings-captions-to-walkable-gaussian-splats"
+    }
+  ]
+}

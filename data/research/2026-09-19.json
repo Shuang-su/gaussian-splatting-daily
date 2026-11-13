@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-19",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-19T00:00:00+08:00",
+    "end": "2026-09-20T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/babylon.js-9.27.1-puts-gaussian-splats-in-frame-graph",
+        "radiancefields.com/niantic-spatial-launches-gaussian-splat-relighting"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:04.730725+00:00",
+      "urls": [
+        "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting"
+      ],
+      "candidateIds": [
+        "radiancefields.com/niantic-spatial-launches-gaussian-splat-relighting"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:04.730725+00:00",
+          "sha256": "f0789dd7bcf8d2a42d16279ee1de5f466b75609d4e5f1e8a232cd31f8c1e4e76",
+          "characters": 12431
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:17.607092+00:00",
+      "urls": [
+        "https://github.com/BabylonJS/Babylon.js/pull/18930",
+        "https://github.com/BabylonJS/Babylon.js/releases/tag/9.27.1"
+      ],
+      "candidateIds": [
+        "radiancefields.com/babylon.js-9.27.1-puts-gaussian-splats-in-frame-graph"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/BabylonJS/Babylon.js/pull/18930",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:17.607092+00:00",
+          "sha256": "6fd200ab54105a264d3e1c7b51ccae5b55df3d5e88092a5c59ecbdff4c1e4634",
+          "characters": 33475
+        },
+        {
+          "url": "https://github.com/BabylonJS/Babylon.js/releases/tag/9.27.1",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:16.775678+00:00",
+          "sha256": "e10e70e03f06cc28cb850c1f46c5af29fa0f7dd46c765dec09ea73a987d1083a",
+          "characters": 3509
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/babylon.js-9.27.1-puts-gaussian-splats-in-frame-graph",
+      "title": "Babylon.js 为高斯提供深度与法线输出",
+      "eventDate": "2026-09-19",
+      "reportDate": "2026-09-19",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/babylon.js-9.27.1-puts-gaussian-splats-in-frame-graph",
+        "https://github.com/BabylonJS/Babylon.js/pull/18930",
+        "https://github.com/BabylonJS/Babylon.js/releases/tag/9.27.1"
+      ],
+      "eventId": "radiancefields.com/babylon.js-9.27.1-puts-gaussian-splats-in-frame-graph"
+    },
+    {
+      "id": "radiancefields.com/niantic-spatial-launches-gaussian-splat-relighting",
+      "title": "Niantic Spatial 测试高斯场景重光照",
+      "eventDate": "2026-09-19",
+      "reportDate": "2026-09-19",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/niantic-spatial-launches-gaussian-splat-relighting",
+        "https://www.nianticspatial.com/blog/introducing-gaussian-splat-relighting"
+      ],
+      "eventId": "radiancefields.com/niantic-spatial-launches-gaussian-splat-relighting"
+    }
+  ]
+}

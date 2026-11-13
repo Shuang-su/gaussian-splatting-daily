@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-18",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-09-18T00:00:00+08:00",
+    "end": "2026-09-19T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corbeausplat-2.0.0-beta.4-fixes-its-4dgs-colmap-step",
+        "radiancefields.com/fvdb-v0.6.0-moves-gaussian-splatting-api-to-reality-capture"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:29.864065+00:00",
+      "urls": [
+        "https://github.com/playcanvas/splat-transform",
+        "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0-beta.4",
+        "https://api.github.com/repos/openvdb/fvdb-core/releases"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corbeausplat-2.0.0-beta.4-fixes-its-4dgs-colmap-step",
+        "radiancefields.com/fvdb-v0.6.0-moves-gaussian-splatting-api-to-reality-capture"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/playcanvas/splat-transform",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:29.864065+00:00",
+          "sha256": "3656f8775fcb986b34a6345aa0f9a68e8bcc485dcf07f0e788c1087ff81ba3b3",
+          "characters": 35735
+        },
+        {
+          "url": "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0-beta.4",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:24.084308+00:00",
+          "sha256": "907bfee49890f93864da04d4235ddf1ee3a50550ce90ee357ea659b8060cf4a9",
+          "characters": 9705
+        },
+        {
+          "url": "https://api.github.com/repos/openvdb/fvdb-core/releases",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.211609+00:00",
+          "sha256": "c010ca393e17fb2f6b9fee1a96426a049e664ec64e9593006c124e92dd0cdb16",
+          "characters": 65659
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/corbeausplat-2.0.0-beta.4-fixes-its-4dgs-colmap-step",
+      "title": "CorbeauSplat 修正动态重建的相机配准",
+      "eventDate": "2026-09-18",
+      "reportDate": "2026-09-18",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/corbeausplat-2.0.0-beta.4-fixes-its-4dgs-colmap-step",
+        "https://github.com/playcanvas/splat-transform",
+        "https://github.com/freddewitt/CorbeauSplat/releases/tag/v2.0.0-beta.4"
+      ],
+      "eventId": "radiancefields.com/corbeausplat-2.0.0-beta.4-fixes-its-4dgs-colmap-step"
+    },
+    {
+      "id": "radiancefields.com/fvdb-v0.6.0-moves-gaussian-splatting-api-to-reality-capture",
+      "title": "fVDB 将高斯接口迁入 Reality Capture",
+      "eventDate": "2026-09-18",
+      "reportDate": "2026-09-18",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/fvdb-v0.6.0-moves-gaussian-splatting-api-to-reality-capture",
+        "https://api.github.com/repos/openvdb/fvdb-core/releases"
+      ],
+      "eventId": "radiancefields.com/fvdb-v0.6.0-moves-gaussian-splatting-api-to-reality-capture"
+    }
+  ]
+}

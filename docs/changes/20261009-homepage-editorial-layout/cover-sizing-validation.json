@@ -1,0 +1,1098 @@
+{
+  "date": "2026-10-09",
+  "codeCheckpoint": "55d0c46ae4d5f1e055e05c4e368e4ea788455b3b",
+  "portal": "http://127.0.0.1:4337/gaussian-splatting-daily/",
+  "scope": [
+    "constrain portrait cover to proportional frame",
+    "align tablet and desktop feed geometry"
+  ],
+  "cases": 140,
+  "failures": [],
+  "unstableGroups": [],
+  "groups": [
+    {
+      "theme": "light",
+      "width": 375,
+      "slides": 5,
+      "cardHeight": 349.984375,
+      "frameHeight": 236.984375,
+      "feedX": 16,
+      "feedWidth": 343,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 390,
+      "slides": 5,
+      "cardHeight": 360.40625,
+      "frameHeight": 247.40625,
+      "feedX": 16,
+      "feedWidth": 358,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 430,
+      "slides": 5,
+      "cardHeight": 398,
+      "frameHeight": 275.203125,
+      "feedX": 16,
+      "feedWidth": 398,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 550,
+      "slides": 5,
+      "cardHeight": 518,
+      "frameHeight": 358.6015625,
+      "feedX": 16,
+      "feedWidth": 518,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 767,
+      "slides": 5,
+      "cardHeight": 735,
+      "frameHeight": 509.4140625,
+      "feedX": 16,
+      "feedWidth": 735,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 768,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 600,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 820,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 652,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1023,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 855,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1024,
+      "slides": 5,
+      "cardHeight": 411.1875,
+      "frameHeight": 276.59375,
+      "feedX": 252,
+      "feedWidth": 520,
+      "railX": 32,
+      "railWidth": 164,
+      "sidebarX": 828,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1180,
+      "slides": 5,
+      "cardHeight": 478,
+      "frameHeight": 330.8046875,
+      "feedX": 330,
+      "feedWidth": 520,
+      "railX": 110,
+      "railWidth": 164,
+      "sidebarX": 906,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1279,
+      "slides": 5,
+      "cardHeight": 527.5,
+      "frameHeight": 365.203125,
+      "feedX": 379.5,
+      "feedWidth": 520,
+      "railX": 159.5,
+      "railWidth": 164,
+      "sidebarX": 955.5,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1280,
+      "slides": 5,
+      "cardHeight": 528,
+      "frameHeight": 365.5546875,
+      "feedX": 346,
+      "feedWidth": 588,
+      "railX": 40,
+      "railWidth": 200,
+      "sidebarX": 1040,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1440,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 426,
+      "feedWidth": 588,
+      "railX": 120,
+      "railWidth": 200,
+      "sidebarX": 1120,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "light",
+      "width": 1441,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 426.5,
+      "feedWidth": 588,
+      "railX": 120.5,
+      "railWidth": 200,
+      "sidebarX": 1120.5,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 375,
+      "slides": 5,
+      "cardHeight": 349.984375,
+      "frameHeight": 236.984375,
+      "feedX": 16,
+      "feedWidth": 343,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "slides": 5,
+      "cardHeight": 360.40625,
+      "frameHeight": 247.40625,
+      "feedX": 16,
+      "feedWidth": 358,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 430,
+      "slides": 5,
+      "cardHeight": 398,
+      "frameHeight": 275.203125,
+      "feedX": 16,
+      "feedWidth": 398,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 550,
+      "slides": 5,
+      "cardHeight": 518,
+      "frameHeight": 358.6015625,
+      "feedX": 16,
+      "feedWidth": 518,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 767,
+      "slides": 5,
+      "cardHeight": 735,
+      "frameHeight": 509.4140625,
+      "feedX": 16,
+      "feedWidth": 735,
+      "railX": 0,
+      "railWidth": 0,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 768,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 600,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 820,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 652,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1023,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 124,
+      "feedWidth": 855,
+      "railX": 0,
+      "railWidth": 80,
+      "sidebarX": 0,
+      "sidebarWidth": 0,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1024,
+      "slides": 5,
+      "cardHeight": 411.1875,
+      "frameHeight": 276.59375,
+      "feedX": 252,
+      "feedWidth": 520,
+      "railX": 32,
+      "railWidth": 164,
+      "sidebarX": 828,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1180,
+      "slides": 5,
+      "cardHeight": 478,
+      "frameHeight": 330.8046875,
+      "feedX": 330,
+      "feedWidth": 520,
+      "railX": 110,
+      "railWidth": 164,
+      "sidebarX": 906,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1279,
+      "slides": 5,
+      "cardHeight": 527.5,
+      "frameHeight": 365.203125,
+      "feedX": 379.5,
+      "feedWidth": 520,
+      "railX": 159.5,
+      "railWidth": 164,
+      "sidebarX": 955.5,
+      "sidebarWidth": 164,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1280,
+      "slides": 5,
+      "cardHeight": 528,
+      "frameHeight": 365.5546875,
+      "feedX": 346,
+      "feedWidth": 588,
+      "railX": 40,
+      "railWidth": 200,
+      "sidebarX": 1040,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1440,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 426,
+      "feedWidth": 588,
+      "railX": 120,
+      "railWidth": 200,
+      "sidebarX": 1120,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    },
+    {
+      "theme": "dark",
+      "width": 1441,
+      "slides": 5,
+      "cardHeight": 588,
+      "frameHeight": 407.25,
+      "feedX": 426.5,
+      "feedWidth": 588,
+      "railX": 120.5,
+      "railWidth": 200,
+      "sidebarX": 1120.5,
+      "sidebarWidth": 200,
+      "cardHeightSpread": 0,
+      "frameHeightSpread": 0,
+      "contentTopSpread": 0,
+      "calendarTopSpread": 0
+    }
+  ],
+  "referenceGeometry": [
+    {
+      "feed": {
+        "marginLeft": "44px",
+        "marginRight": "44px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 600,
+        "x": 124
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 80,
+        "x": 0
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px",
+        "width": 80,
+        "x": 0
+      },
+      "width": 768
+    },
+    {
+      "feed": {
+        "marginLeft": "44px",
+        "marginRight": "44px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 652,
+        "x": 124
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 80,
+        "x": 0
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px",
+        "width": 80,
+        "x": 0
+      },
+      "width": 820
+    },
+    {
+      "feed": {
+        "marginLeft": "44px",
+        "marginRight": "44px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 855,
+        "x": 124
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 80,
+        "x": 0
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "16px",
+        "paddingRight": "16px",
+        "width": 80,
+        "x": 0
+      },
+      "width": 1023
+    },
+    {
+      "feed": {
+        "marginLeft": "56px",
+        "marginRight": "56px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 520,
+        "x": 252
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 164,
+        "x": 32
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 164,
+        "x": 32
+      },
+      "width": 1024
+    },
+    {
+      "feed": {
+        "marginLeft": "56px",
+        "marginRight": "56px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 520,
+        "x": 330
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 164,
+        "x": 110
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 164,
+        "x": 110
+      },
+      "width": 1180
+    },
+    {
+      "feed": {
+        "marginLeft": "106px",
+        "marginRight": "106px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 588,
+        "x": 426.5
+      },
+      "rail": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 200,
+        "x": 120.5
+      },
+      "railButton": {
+        "marginLeft": "0px",
+        "marginRight": "0px",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 200,
+        "x": 120.5
+      },
+      "width": 1441
+    }
+  ],
+  "localBeforeGeometry": [
+    {
+      "content": {
+        "gap": "32px",
+        "paddingLeft": "16px",
+        "paddingRight": "32px",
+        "width": 768,
+        "x": 0
+      },
+      "feed": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 624,
+        "x": 112
+      },
+      "rail": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 64,
+        "x": 16
+      },
+      "width": 768
+    },
+    {
+      "content": {
+        "gap": "32px",
+        "paddingLeft": "16px",
+        "paddingRight": "32px",
+        "width": 820,
+        "x": 0
+      },
+      "feed": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 676,
+        "x": 112
+      },
+      "rail": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 64,
+        "x": 16
+      },
+      "width": 820
+    },
+    {
+      "content": {
+        "gap": "32px",
+        "paddingLeft": "16px",
+        "paddingRight": "32px",
+        "width": 1023,
+        "x": 0
+      },
+      "feed": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 879,
+        "x": 112
+      },
+      "rail": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 64,
+        "x": 16
+      },
+      "width": 1023
+    },
+    {
+      "content": {
+        "gap": "24px",
+        "paddingLeft": "32px",
+        "paddingRight": "32px",
+        "width": 1024,
+        "x": 0
+      },
+      "feed": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 400,
+        "x": 312
+      },
+      "rail": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 256,
+        "x": 32
+      },
+      "width": 1024
+    },
+    {
+      "content": {
+        "gap": "24px",
+        "paddingLeft": "32px",
+        "paddingRight": "32px",
+        "width": 1180,
+        "x": 0
+      },
+      "feed": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 478,
+        "x": 351
+      },
+      "rail": {
+        "gap": "normal",
+        "paddingLeft": "0px",
+        "paddingRight": "0px",
+        "width": 295,
+        "x": 32
+      },
+      "width": 1180
+    }
+  ],
+  "portraitBefore": [
+    {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 478.25
+      },
+      "card": {
+        "height": 588,
+        "width": 588,
+        "y": 88
+      },
+      "content": {
+        "height": 1322.1953125,
+        "width": 1264,
+        "y": 709
+      },
+      "date": "2026-10-03",
+      "figure": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "image": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "picture": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "title": {
+        "height": 178.75,
+        "width": 586,
+        "y": 496.25
+      }
+    },
+    {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 478.25
+      },
+      "card": {
+        "height": 588,
+        "width": 588,
+        "y": 88
+      },
+      "content": {
+        "height": 1322.1953125,
+        "width": 1264,
+        "y": 709
+      },
+      "date": "2026-10-02",
+      "figure": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "image": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "picture": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "title": {
+        "height": 178.75,
+        "width": 586,
+        "y": 496.25
+      }
+    },
+    {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 1345.546875
+      },
+      "card": {
+        "height": 1409.140625,
+        "width": 588,
+        "y": 88
+      },
+      "content": {
+        "height": 1322.1953125,
+        "width": 1264,
+        "y": 1530.140625
+      },
+      "date": "2026-10-01",
+      "figure": {
+        "height": 1274.546875,
+        "width": 586,
+        "y": 89
+      },
+      "image": {
+        "height": 1274.546875,
+        "width": 586,
+        "y": 89
+      },
+      "picture": {
+        "height": 1274.546875,
+        "width": 586,
+        "y": 89
+      },
+      "title": {
+        "height": 132.59375,
+        "width": 586,
+        "y": 1363.546875
+      }
+    },
+    {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 478.25
+      },
+      "card": {
+        "height": 588,
+        "width": 588,
+        "y": 88
+      },
+      "content": {
+        "height": 1322.1953125,
+        "width": 1264,
+        "y": 709
+      },
+      "date": "2026-09-30",
+      "figure": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "image": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "picture": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "title": {
+        "height": 178.75,
+        "width": 586,
+        "y": 496.25
+      }
+    },
+    {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 478.25
+      },
+      "card": {
+        "height": 588,
+        "width": 588,
+        "y": 88
+      },
+      "content": {
+        "height": 1322.1953125,
+        "width": 1264,
+        "y": 709
+      },
+      "date": "2026-09-29",
+      "figure": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "image": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "picture": {
+        "height": 407.25,
+        "width": 586,
+        "y": 89
+      },
+      "title": {
+        "height": 178.75,
+        "width": 586,
+        "y": 496.25
+      }
+    }
+  ],
+  "imageFailure": {
+    "failure": {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "y": 330.203125
+      },
+      "card": {
+        "height": 398,
+        "width": 398,
+        "y": 72
+      },
+      "fallback": {
+        "height": 275.203125,
+        "width": 396,
+        "y": 73
+      },
+      "frame": {
+        "height": 275.203125,
+        "width": 396,
+        "y": 73
+      },
+      "href": "/gaussian-splatting-daily/daily/2026/10/01/",
+      "overflow": false,
+      "text": "图片暂不可用\n查看来源",
+      "title": {
+        "height": 120.796875,
+        "width": 396,
+        "y": 348.203125
+      },
+      "viewport": 430
+    },
+    "recovery": {
+      "calendar": {
+        "height": 50,
+        "width": 50,
+        "x": 41,
+        "y": 330.203125
+      },
+      "card": {
+        "height": 398,
+        "width": 398,
+        "x": 16,
+        "y": 72
+      },
+      "content": {
+        "height": 1132.2890625,
+        "width": 430,
+        "x": 0,
+        "y": 487
+      },
+      "date": "2026-10-01",
+      "feed": {
+        "height": 1052.2890625,
+        "width": 398,
+        "x": 16,
+        "y": 519
+      },
+      "figure": {
+        "height": 275.203125,
+        "width": 396,
+        "x": 17,
+        "y": 73
+      },
+      "fit": "cover",
+      "frame": {
+        "height": 275.203125,
+        "width": 396,
+        "x": 17,
+        "y": 73
+      },
+      "image": {
+        "height": 275.203125,
+        "width": 396,
+        "x": 17,
+        "y": 73
+      },
+      "loaded": true,
+      "metaHeight": 16,
+      "metaLineHeight": 16,
+      "overflow": false,
+      "rail": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "selected": "2026-10-01 日报：ARKit Scanner 加快 iPhone 训练，Spirula 可用外部点云初始化",
+      "sidebar": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "theme": "dark",
+      "title": {
+        "height": 120.796875,
+        "width": 396,
+        "x": 17,
+        "y": 348.203125
+      },
+      "viewport": {
+        "height": 932,
+        "width": 430
+      }
+    },
+    "normalReloadWarningsAndErrors": [],
+    "networkRulesRestored": true,
+    "cacheRestored": true
+  },
+  "contentAndFeedIntegrity": {
+    "canonicalAndIndexFiles": 18,
+    "changed": [],
+    "exportedFeedMismatches": [],
+    "feeds": {
+      "daily": "55adf548fc2e1df7707d8cb71928ba198fc513ec05502b8f86e5b741235c787f",
+      "weekly": "b7b867166f627ccbbc6b45fb688d9f0ae0415696c3a2fde2e3518d2f67923b66"
+    }
+  },
+  "checks": [
+    "Next production build and TypeScript passed",
+    "36 HTML files, 2 RSS feeds, 16 canonical reports, internal links/assets/anchors passed"
+  ],
+  "notRun": [
+    "physical iPad and phone interaction",
+    "full existing unit suites rerun in this CSS-only follow-up",
+    "real GitHub comments",
+    "public deployment"
+  ],
+  "evidenceDirectory": ".codex-work/references/homepage-cover-sizing-20261009"
+}

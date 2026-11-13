@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-10T00:00:00+08:00",
+    "end": "2026-10-11T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/lichtfeld-studio-0.5.4-adds-licht-projects-normal-guided-training-and-gallery-publishing",
+        "radiancefields.com/artec-3d-launches-artec-twins-with-gaussian-splat-generation",
+        "radiancefields.com/chcnav-releases-coviewer-a-free-desktop-viewer-for-gaussian-splats",
+        "radiancefields.com/tactyc-gaussian-splat-v2-0-renders-and-relights-gaussian-splats-in-cinema-4d-with-redshift"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:51.419003+00:00",
+      "urls": [
+        "https://lichtfeld.io/showcase",
+        "https://lichtfeld.io/",
+        "https://www.artec3d.com/news/artec-twins-press-release",
+        "https://geospatial.chcnav.com/products/chcnav-coviewer",
+        "https://tactyc.gumroad.com/l/dgmnyj?a=555385955"
+      ],
+      "candidateIds": [
+        "radiancefields.com/lichtfeld-studio-0.5.4-adds-licht-projects-normal-guided-training-and-gallery-publishing",
+        "radiancefields.com/artec-3d-launches-artec-twins-with-gaussian-splat-generation",
+        "radiancefields.com/chcnav-releases-coviewer-a-free-desktop-viewer-for-gaussian-splats",
+        "radiancefields.com/tactyc-gaussian-splat-v2-0-renders-and-relights-gaussian-splats-in-cinema-4d-with-redshift"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://lichtfeld.io/showcase",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:35.311459+00:00",
+          "sha256": "f74c84d14b49aea33c203dff0750065497d201c9359a12b3cad28c10c1c25cc7",
+          "characters": 2109
+        },
+        {
+          "url": "https://lichtfeld.io/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:35.067923+00:00",
+          "sha256": "fd84bf24eaa621ed21cd1d2868ce8436b66169b7b832612df6aed776acfee1d5",
+          "characters": 5434
+        },
+        {
+          "url": "https://www.artec3d.com/news/artec-twins-press-release",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:51.419003+00:00",
+          "sha256": "f7db1c6e9a02d6292cb95e98a97d04ff261701fa250d3de36e30c79baebe55c7",
+          "characters": 165,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://geospatial.chcnav.com/products/chcnav-coviewer",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:15.127980+00:00",
+          "sha256": "350092e832ba95bb1f53bedfb453fdd6be047ee2a079f196d267df3140501cb0",
+          "characters": 8434
+        },
+        {
+          "url": "https://tactyc.gumroad.com/l/dgmnyj?a=555385955",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:49.037621+00:00",
+          "sha256": "165fd86f990239743a6f5f3a6b86a59a6b5577c04d236ba0620043f5a6c93b16",
+          "characters": 7250
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:19.798387+00:00",
+      "urls": [
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4"
+      ],
+      "candidateIds": [
+        "radiancefields.com/lichtfeld-studio-0.5.4-adds-licht-projects-normal-guided-training-and-gallery-publishing"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:19.798387+00:00",
+          "sha256": "bf24a9f6d9948cc3482d595c4fb029f5e36cc12ca1fe1131bd4e1aac10a60f00",
+          "characters": 82065
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/lichtfeld-studio-0.5.4-adds-licht-projects-normal-guided-training-and-gallery-publishing",
+      "title": "LichtFeld 0.5.4 用项目文件保存工作状态",
+      "eventDate": "2026-10-08",
+      "reportDate": "2026-10-10",
+      "importance": "standard",
+      "disposition": "merged",
+      "reason": "与阅读版相同的固定发行/PR/提交合并，补充原始报道线索。",
+      "sources": [
+        "https://radiancefields.com/lichtfeld-studio-0.5.4-adds-licht-projects-normal-guided-training-and-gallery-publishing",
+        "https://lichtfeld.io/showcase",
+        "https://github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4",
+        "https://lichtfeld.io/"
+      ],
+      "eventId": "github.com/MrNeRF/LichtFeld-Studio/releases/tag/v0.5.4"
+    },
+    {
+      "id": "radiancefields.com/artec-3d-launches-artec-twins-with-gaussian-splat-generation",
+      "title": "Artec Twins 将扫描转成高斯与几何成果",
+      "eventDate": "2026-10-10",
+      "reportDate": "2026-10-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/artec-3d-launches-artec-twins-with-gaussian-splat-generation",
+        "https://www.artec3d.com/news/artec-twins-press-release"
+      ],
+      "eventId": "radiancefields.com/artec-3d-launches-artec-twins-with-gaussian-splat-generation"
+    },
+    {
+      "id": "radiancefields.com/chcnav-releases-coviewer-a-free-desktop-viewer-for-gaussian-splats",
+      "title": "华测发布免费的 CoViewer 高斯查看器",
+      "eventDate": "2026-10-10",
+      "reportDate": "2026-10-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/chcnav-releases-coviewer-a-free-desktop-viewer-for-gaussian-splats",
+        "https://geospatial.chcnav.com/products/chcnav-coviewer"
+      ],
+      "eventId": "radiancefields.com/chcnav-releases-coviewer-a-free-desktop-viewer-for-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/tactyc-gaussian-splat-v2-0-renders-and-relights-gaussian-splats-in-cinema-4d-with-redshift",
+      "title": "TACTYC 在 Cinema 4D 中重光照高斯",
+      "eventDate": "2026-10-10",
+      "reportDate": "2026-10-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/tactyc-gaussian-splat-v2-0-renders-and-relights-gaussian-splats-in-cinema-4d-with-redshift",
+        "https://tactyc.gumroad.com/l/dgmnyj?a=555385955"
+      ],
+      "eventId": "radiancefields.com/tactyc-gaussian-splat-v2-0-renders-and-relights-gaussian-splats-in-cinema-4d-with-redshift"
+    }
+  ]
+}

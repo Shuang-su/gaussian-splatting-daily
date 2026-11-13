@@ -1,0 +1,405 @@
+{
+  "date": "2026-11-13",
+  "scope": "57 editions; structural/content mapping review with explicit source gaps, not a claim of exhaustive primary-source fact checking",
+  "reports": [
+    {
+      "date": "2026-09-18",
+      "readingEvents": 11,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-19",
+      "readingEvents": 12,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-20",
+      "readingEvents": 9,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-21",
+      "readingEvents": 7,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-22",
+      "readingEvents": 14,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-23",
+      "readingEvents": 13,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-24",
+      "readingEvents": 11,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-25",
+      "readingEvents": 10,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-26",
+      "readingEvents": 11,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-27",
+      "readingEvents": 8,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-28",
+      "readingEvents": 9,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-29",
+      "readingEvents": 13,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-09-30",
+      "readingEvents": 24,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-01",
+      "readingEvents": 9,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-02",
+      "readingEvents": 10,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-03",
+      "readingEvents": 20,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-04",
+      "readingEvents": 10,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-05",
+      "readingEvents": 11,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-06",
+      "readingEvents": 15,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-07",
+      "readingEvents": 23,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-08",
+      "readingEvents": 15,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-09",
+      "readingEvents": 19,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-10",
+      "readingEvents": 17,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-11",
+      "readingEvents": 9,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-12",
+      "readingEvents": 10,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-13",
+      "readingEvents": 17,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-14",
+      "readingEvents": 15,
+      "importantCandidates": 2,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-15",
+      "readingEvents": 13,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-16",
+      "readingEvents": 14,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-17",
+      "readingEvents": 16,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-18",
+      "readingEvents": 10,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-19",
+      "readingEvents": 5,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-20",
+      "readingEvents": 19,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-21",
+      "readingEvents": 1,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-22",
+      "readingEvents": 6,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-23",
+      "readingEvents": 6,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-24",
+      "readingEvents": 7,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-25",
+      "readingEvents": 5,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-26",
+      "readingEvents": 6,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-27",
+      "readingEvents": 9,
+      "importantCandidates": 4,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-28",
+      "readingEvents": 7,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-29",
+      "readingEvents": 12,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-30",
+      "readingEvents": 6,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-10-31",
+      "readingEvents": 6,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-01",
+      "readingEvents": 5,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-02",
+      "readingEvents": 4,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-03",
+      "readingEvents": 6,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-04",
+      "readingEvents": 15,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-05",
+      "readingEvents": 13,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-06",
+      "readingEvents": 7,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-07",
+      "readingEvents": 12,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-08",
+      "readingEvents": 4,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-09",
+      "readingEvents": 3,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-10",
+      "readingEvents": 13,
+      "importantCandidates": 3,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-11",
+      "readingEvents": 19,
+      "importantCandidates": 3,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-12",
+      "readingEvents": 15,
+      "importantCandidates": 0,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    },
+    {
+      "date": "2026-11-13",
+      "readingEvents": 7,
+      "importantCandidates": 1,
+      "canonicalPreserved": true,
+      "review": "checked retained identities, current lead mapping, source-bound supplements and specific title/summary; historical inaccessible sources remain explicit"
+    }
+  ]
+}

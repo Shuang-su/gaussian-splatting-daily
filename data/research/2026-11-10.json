@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-10",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-10T00:00:00+08:00",
+    "end": "2026-11-11T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support",
+        "radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night",
+        "radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles",
+        "radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis",
+        "radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation",
+        "radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:13.858565+00:00",
+      "urls": [
+        "https://developer.blender.org/docs/release_notes/5.3/",
+        "https://journal.burningman.org/2026/03/burning-man-arts/brc-art/introducing-brc-2026-honoraria-art-honoraria/",
+        "https://www.instagram.com/dobasketsdream/",
+        "https://www.dobasketsdream.com/",
+        "https://burnersphere.com/",
+        "https://www.xgrids.com/intl/support/download/lcc-model-editor",
+        "https://www.xgrids.com/intl/support/download/lcc-studio",
+        "https://www.lutraconsulting.co.uk/crowdfunding/qgis-3d-reality-capture-animation",
+        "https://www.nianticspatial.com/blog/introducing-object-interaction",
+        "https://www.linkedin.com/posts/trimbledimensions-xgrids-lixelstudio-ugcPost-7525618393735995392-nJ8c/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support",
+        "radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night",
+        "radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles",
+        "radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis",
+        "radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation",
+        "radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://developer.blender.org/docs/release_notes/5.3/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:09.388950+00:00",
+          "sha256": "7e5a4b548c2fef7c0494fd0b03ef7af528a07933b10fd5cadd96355f9c8c999b",
+          "characters": 15798
+        },
+        {
+          "url": "https://journal.burningman.org/2026/03/burning-man-arts/brc-art/introducing-brc-2026-honoraria-art-honoraria/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:36.238357+00:00",
+          "sha256": "a61d559867a2931d91e40c700a8650c61a48203d25e9c2fa87e76d41f41286ac",
+          "characters": 28061
+        },
+        {
+          "url": "https://www.instagram.com/dobasketsdream/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:03.896512+00:00",
+          "sha256": "6fa5b23e2a643cdca8a767dd38ce41288562316b278344066c472c1ba8529937",
+          "characters": 1089
+        },
+        {
+          "url": "https://www.dobasketsdream.com/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:52.232642+00:00",
+          "sha256": "5fbe10f9aadc4d1dc87a30c64b1ff9d651029ddd008cb92370b170cbbe14d6fb",
+          "characters": 2505
+        },
+        {
+          "url": "https://burnersphere.com/",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:07.186139+00:00",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "characters": 0,
+          "gap": "No readable body in response."
+        },
+        {
+          "url": "https://www.xgrids.com/intl/support/download/lcc-model-editor",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:13.858565+00:00",
+          "sha256": "0e87403981e1d230d9323706dd45a183977d5a7d06167b872e36d1cf882818c0",
+          "characters": 4971
+        },
+        {
+          "url": "https://www.xgrids.com/intl/support/download/lcc-studio",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:11.490863+00:00",
+          "sha256": "4c33fd4772f55014ee78e0973d52b9c17064094215f691a83d6707c8781f776f",
+          "characters": 6548
+        },
+        {
+          "url": "https://www.lutraconsulting.co.uk/crowdfunding/qgis-3d-reality-capture-animation",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:03.496607+00:00",
+          "sha256": "75093ac8de318eae2fb161808c08072851a993c9ff5fee0575278dced599548d",
+          "characters": 16062
+        },
+        {
+          "url": "https://www.nianticspatial.com/blog/introducing-object-interaction",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:05.773562+00:00",
+          "sha256": "1ae94c49f6978696e360b3aef6d46ff0a532f45bafc1186ae9b2495aaf53f7c3",
+          "characters": 7087
+        },
+        {
+          "url": "https://www.linkedin.com/posts/trimbledimensions-xgrids-lixelstudio-ugcPost-7525618393735995392-nJ8c/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:02.419323+00:00",
+          "sha256": "774dfdb23be0210f80f09dd415361e57c6f28c9369ec76ad24109a4dc0f08306",
+          "characters": 3658
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support",
+      "title": "Blender 5.3 正式加入原生高斯支持",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support",
+        "https://developer.blender.org/docs/release_notes/5.3/"
+      ],
+      "eventId": "radiancefields.com/blender-5-3-ships-with-native-gaussian-splat-support"
+    },
+    {
+      "id": "radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night",
+      "title": "BurnerSphere 保存艺术装置的昼夜高斯",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night",
+        "https://journal.burningman.org/2026/03/burning-man-arts/brc-art/introducing-brc-2026-honoraria-art-honoraria/",
+        "https://www.instagram.com/dobasketsdream/",
+        "https://www.dobasketsdream.com/",
+        "https://burnersphere.com/"
+      ],
+      "eventId": "radiancefields.com/do-baskets-dream-enters-burnersphere-by-day-and-night"
+    },
+    {
+      "id": "radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles",
+      "title": "LCC Studio 扩展融合成果的格式输出",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles",
+        "https://www.xgrids.com/intl/support/download/lcc-model-editor",
+        "https://www.xgrids.com/intl/support/download/lcc-studio"
+      ],
+      "eventId": "radiancefields.com/xgrids-lcc-studio-v2.7.0-exports-fusion-results-to-usd-and-3d-tiles"
+    },
+    {
+      "id": "radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis",
+      "title": "QGIS 高斯支持进入众筹阶段",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis",
+        "https://www.lutraconsulting.co.uk/crowdfunding/qgis-3d-reality-capture-animation"
+      ],
+      "eventId": "radiancefields.com/lutra-and-north-road-crowdfund-gaussian-splats-for-qgis"
+    },
+    {
+      "id": "radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation",
+      "title": "Niantic Spatial 测试可移动的扫描物体",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation",
+        "https://www.nianticspatial.com/blog/introducing-object-interaction"
+      ],
+      "eventId": "radiancefields.com/niantic-spatial-makes-splat-objects-movable-in-simulation"
+    },
+    {
+      "id": "radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect",
+      "title": "XGRIDS 预告与 Trimble Connect 的上传连接",
+      "eventDate": "2026-11-10",
+      "reportDate": "2026-11-10",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect",
+        "https://www.linkedin.com/posts/trimbledimensions-xgrids-lixelstudio-ugcPost-7525618393735995392-nJ8c/"
+      ],
+      "eventId": "radiancefields.com/xgrids-lixelstudio-will-upload-scans-to-trimble-connect"
+    }
+  ]
+}

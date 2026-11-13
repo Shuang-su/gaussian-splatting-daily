@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-26",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-26T00:00:00+08:00",
+    "end": "2026-10-27T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/arnold-for-maya-5-6-4-puts-any-shader-on-gaussian-splats",
+        "radiancefields.com/tommy-oshimas-splat-dissolve-v4-5-adds-up-to-four-lights",
+        "radiancefields.com/unity-gaussian-splatting-v1.1.2-fixes-orthographic-cameras",
+        "radiancefields.com/world-to-world-mapping-rebuilds-splats-as-blender-nodes"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:44.383470+00:00",
+      "urls": [
+        "https://forums.autodesk.com/t5/arnold-for-maya-forum/arnold-for-maya-mtoa-5-6-4-is-here/td-p/14325408",
+        "https://splat-dissolve-v4-5.netlify.app/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/arnold-for-maya-5-6-4-puts-any-shader-on-gaussian-splats",
+        "radiancefields.com/tommy-oshimas-splat-dissolve-v4-5-adds-up-to-four-lights"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://forums.autodesk.com/t5/arnold-for-maya-forum/arnold-for-maya-mtoa-5-6-4-is-here/td-p/14325408",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:12.634226+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://splat-dissolve-v4-5.netlify.app/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:44.383470+00:00",
+          "sha256": "48a7b2924a92db977b963df40a90ba0914c36f97ee9e77569f3092a17a76c77f",
+          "characters": 8328
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:24.999206+00:00",
+      "urls": [
+        "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v1.1.2",
+        "https://github.com/gokayfem/gaussian-splat-to-blender-nodes"
+      ],
+      "candidateIds": [
+        "radiancefields.com/unity-gaussian-splatting-v1.1.2-fixes-orthographic-cameras",
+        "radiancefields.com/world-to-world-mapping-rebuilds-splats-as-blender-nodes"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v1.1.2",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:21.703694+00:00",
+          "sha256": "6b0fde5078a3da112e6bd8a32cd369b0939760cf76637ceeb6008d08350e99ed",
+          "characters": 3323
+        },
+        {
+          "url": "https://github.com/gokayfem/gaussian-splat-to-blender-nodes",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:24.999206+00:00",
+          "sha256": "141f0c56bacd502275d377774b59445ecee9a02ecce2cb9c0881c2d7a99d32f3",
+          "characters": 12066
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/arnold-for-maya-5-6-4-puts-any-shader-on-gaussian-splats",
+      "title": "Arnold for Maya 允许给高斯使用不同着色器",
+      "eventDate": "2026-10-26",
+      "reportDate": "2026-10-26",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/arnold-for-maya-5-6-4-puts-any-shader-on-gaussian-splats",
+        "https://forums.autodesk.com/t5/arnold-for-maya-forum/arnold-for-maya-mtoa-5-6-4-is-here/td-p/14325408"
+      ],
+      "eventId": "radiancefields.com/arnold-for-maya-5-6-4-puts-any-shader-on-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/tommy-oshimas-splat-dissolve-v4-5-adds-up-to-four-lights",
+      "title": "Splat Dissolve 增加多灯光控制",
+      "eventDate": "2026-10-26",
+      "reportDate": "2026-10-26",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/tommy-oshimas-splat-dissolve-v4-5-adds-up-to-four-lights",
+        "https://splat-dissolve-v4-5.netlify.app/"
+      ],
+      "eventId": "radiancefields.com/tommy-oshimas-splat-dissolve-v4-5-adds-up-to-four-lights"
+    },
+    {
+      "id": "radiancefields.com/unity-gaussian-splatting-v1.1.2-fixes-orthographic-cameras",
+      "title": "Unity Gaussian Splatting 修复正交视图与大文件",
+      "eventDate": "2026-10-26",
+      "reportDate": "2026-10-26",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/unity-gaussian-splatting-v1.1.2-fixes-orthographic-cameras",
+        "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v1.1.2"
+      ],
+      "eventId": "radiancefields.com/unity-gaussian-splatting-v1.1.2-fixes-orthographic-cameras"
+    },
+    {
+      "id": "radiancefields.com/world-to-world-mapping-rebuilds-splats-as-blender-nodes",
+      "title": "World to World Mapping 尝试把扫描重建为节点",
+      "eventDate": "2026-10-26",
+      "reportDate": "2026-10-26",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/world-to-world-mapping-rebuilds-splats-as-blender-nodes",
+        "https://github.com/gokayfem/gaussian-splat-to-blender-nodes"
+      ],
+      "eventId": "radiancefields.com/world-to-world-mapping-rebuilds-splats-as-blender-nodes"
+    }
+  ]
+}

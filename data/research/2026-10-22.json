@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-22",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-22T00:00:00+08:00",
+    "end": "2026-10-23T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser",
+        "radiancefields.com/rivian-acquires-third-dimension-ai-maker-of-supersim",
+        "radiancefields.com/splat-tour-turns-phone-video-into-3d-property-tours",
+        "radiancefields.com/supersplat-3.6-straightens-splats-from-a-vertical-edge",
+        "radiancefields.com/switchsplat-learns-switchable-object-states-from-video",
+        "radiancefields.com/voxelo-3-0-targets-shoppers-and-ai-agents"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:09.240953+00:00",
+      "urls": [
+        "https://michael.software/painterly-splat?v=color-1",
+        "https://thirddimension.ai/blog/posts/reconstruct-the-real-world-with-supersim",
+        "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/",
+        "https://thirddimension.ai/blog/posts/world-models-at-third-dimension-ai",
+        "https://www.businesswire.com/news/home/20261022561907/en/",
+        "https://splattour.com/",
+        "https://switchsplat.github.io/viewer/",
+        "https://www.voxelo.ai/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser",
+        "radiancefields.com/rivian-acquires-third-dimension-ai-maker-of-supersim",
+        "radiancefields.com/splat-tour-turns-phone-video-into-3d-property-tours",
+        "radiancefields.com/switchsplat-learns-switchable-object-states-from-video",
+        "radiancefields.com/voxelo-3-0-targets-shoppers-and-ai-agents"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://michael.software/painterly-splat?v=color-1",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:36.906756+00:00",
+          "sha256": "4b5c9032f6adfa2985c458a8bce9064b3dd4ba4d3a1f1f25e3b13a37c2effdad",
+          "characters": 2342
+        },
+        {
+          "url": "https://thirddimension.ai/blog/posts/reconstruct-the-real-world-with-supersim",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:50.519475+00:00",
+          "sha256": "b190ecfa0654b91078135a20bbdbe6b121fdcb683e72efb7074538f3de5d6bb5",
+          "characters": 4494
+        },
+        {
+          "url": "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:48.676469+00:00",
+          "sha256": "b20d57d116aad1d2f5c68a324c8ea6f54140e16fc534b361fceaca54124c6052",
+          "characters": 7396
+        },
+        {
+          "url": "https://thirddimension.ai/blog/posts/world-models-at-third-dimension-ai",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:50.518773+00:00",
+          "sha256": "0525a6808aa2fd7afd5502cb863f90ee09f485853e230dd91496f538d083d363",
+          "characters": 7703
+        },
+        {
+          "url": "https://www.businesswire.com/news/home/20261022561907/en/",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:37:04.837699+00:00",
+          "error": "Remote end closed connection without response"
+        },
+        {
+          "url": "https://splattour.com/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:42.783089+00:00",
+          "sha256": "b1ff2f9b1faae0e71ebf78028543f346a230920eff1acb39015cfcd8f82e4a96",
+          "characters": 4888
+        },
+        {
+          "url": "https://switchsplat.github.io/viewer/",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:48.418008+00:00",
+          "sha256": "a631678a1ba65220f33b05340b50eb63f50fd922346b128643facd8d8b699fcb",
+          "characters": 32,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://www.voxelo.ai/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:09.240953+00:00",
+          "sha256": "576bcf3175aacb5d85ff5769beb347e34b32a2dfcf6ad4dae814ec9ce988f945",
+          "characters": 1306
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:05.218361+00:00",
+      "urls": [
+        "https://arxiv.org/abs/2610.24812"
+      ],
+      "candidateIds": [
+        "radiancefields.com/switchsplat-learns-switchable-object-states-from-video"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://arxiv.org/abs/2610.24812",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:05.218361+00:00",
+          "sha256": "f40bfe245909b5ed2edfa3f1d6aebed498cde61d4edd0bf59419f2471270a084",
+          "characters": 5241
+        }
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.046687+00:00",
+      "urls": [
+        "https://github.com/glaseagle/painterly-splat",
+        "https://github.com/playcanvas/supersplat/releases/tag/v3.6.0",
+        "https://github.com/theialab/switchsplat"
+      ],
+      "candidateIds": [
+        "radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser",
+        "radiancefields.com/supersplat-3.6-straightens-splats-from-a-vertical-edge",
+        "radiancefields.com/switchsplat-learns-switchable-object-states-from-video"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/glaseagle/painterly-splat",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:24.416447+00:00",
+          "sha256": "99ff39815a60d74bbf5f1ebbc0c4f50a9a1fe6a0a4fa7a5aec37e15559255839",
+          "characters": 12758
+        },
+        {
+          "url": "https://github.com/playcanvas/supersplat/releases/tag/v3.6.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:30.599925+00:00",
+          "sha256": "3d359d73e2d6be861f9afe4d682870db39fb0d88cf79a31f6b61dce15c493e76",
+          "characters": 3116
+        },
+        {
+          "url": "https://github.com/theialab/switchsplat",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.046687+00:00",
+          "sha256": "e1686d9e3284e3cba9d96eb0d0f45c6d4a22668dc6c86600bdf378f555a5435d",
+          "characters": 6002
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser",
+      "title": "Painterly Splat 将扫描表现为画笔笔触",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser",
+        "https://github.com/glaseagle/painterly-splat",
+        "https://michael.software/painterly-splat?v=color-1"
+      ],
+      "eventId": "radiancefields.com/painterly-splat-paints-gaussian-splat-scans-in-the-browser"
+    },
+    {
+      "id": "radiancefields.com/rivian-acquires-third-dimension-ai-maker-of-supersim",
+      "title": "Rivian 收购 SuperSim 开发商 Third Dimension AI",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/rivian-acquires-third-dimension-ai-maker-of-supersim",
+        "https://thirddimension.ai/blog/posts/reconstruct-the-real-world-with-supersim",
+        "https://techcrunch.com/2026/10/22/rivian-buys-world-model-startup-to-accelerate-self-driving-ambitions/",
+        "https://thirddimension.ai/blog/posts/world-models-at-third-dimension-ai",
+        "https://www.businesswire.com/news/home/20261022561907/en/"
+      ],
+      "eventId": "radiancefields.com/rivian-acquires-third-dimension-ai-maker-of-supersim"
+    },
+    {
+      "id": "radiancefields.com/splat-tour-turns-phone-video-into-3d-property-tours",
+      "title": "Splat Tour 把手机视频转为房产导览",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splat-tour-turns-phone-video-into-3d-property-tours",
+        "https://splattour.com/"
+      ],
+      "eventId": "radiancefields.com/splat-tour-turns-phone-video-into-3d-property-tours"
+    },
+    {
+      "id": "radiancefields.com/supersplat-3.6-straightens-splats-from-a-vertical-edge",
+      "title": "SuperSplat 3.6 可以用垂直边校正场景",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/supersplat-3.6-straightens-splats-from-a-vertical-edge",
+        "https://github.com/playcanvas/supersplat/releases/tag/v3.6.0"
+      ],
+      "eventId": "radiancefields.com/supersplat-3.6-straightens-splats-from-a-vertical-edge"
+    },
+    {
+      "id": "radiancefields.com/switchsplat-learns-switchable-object-states-from-video",
+      "title": "SwitchSplat 从视频学习可切换物体状态",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/switchsplat-learns-switchable-object-states-from-video",
+        "https://arxiv.org/abs/2610.24812",
+        "https://switchsplat.github.io/viewer/",
+        "https://github.com/theialab/switchsplat"
+      ],
+      "eventId": "radiancefields.com/switchsplat-learns-switchable-object-states-from-video"
+    },
+    {
+      "id": "radiancefields.com/voxelo-3-0-targets-shoppers-and-ai-agents",
+      "title": "Voxelo 3.0 同时面向顾客与购物代理",
+      "eventDate": "2026-10-22",
+      "reportDate": "2026-10-22",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/voxelo-3-0-targets-shoppers-and-ai-agents",
+        "https://www.voxelo.ai/"
+      ],
+      "eventId": "radiancefields.com/voxelo-3-0-targets-shoppers-and-ai-agents"
+    }
+  ]
+}

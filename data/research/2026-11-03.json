@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-03",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-03T00:00:00+08:00",
+    "end": "2026-11-04T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/oko-2026-22-brings-depth-of-field-to-gaussian-splats",
+        "radiancefields.com/skyline-brings-splat-analysis-to-terraexplorer-8-1",
+        "radiancefields.com/uefn-43-00-adds-experimental-gaussian-splat-import",
+        "radiancefields.com/unity-gaussian-splatting-2-0-0-loads-ply-and-spz-directly"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:07.978809+00:00",
+      "urls": [
+        "https://docs.oko.live/oko-2026-22",
+        "https://www.skylinesoft.com/news/skylineglobe-server-and-terraexplorer-fusion-8-5-release/",
+        "https://www.linkedin.com/posts/gaussiansplatting-3dgeospatialtechnology-ugcPost-7522993461872967680-HNFI/",
+        "https://dev.epicgames.com/documentation/fortnite/43-00-fortnite-ecosystem-updates-and-release-notes?lang=en-US"
+      ],
+      "candidateIds": [
+        "radiancefields.com/oko-2026-22-brings-depth-of-field-to-gaussian-splats",
+        "radiancefields.com/skyline-brings-splat-analysis-to-terraexplorer-8-1",
+        "radiancefields.com/uefn-43-00-adds-experimental-gaussian-splat-import"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://docs.oko.live/oko-2026-22",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:11.276131+00:00",
+          "sha256": "97f457d8e5c5574907e5ab256580df81b695b9d27ff2d426eb3eab17882c1085",
+          "characters": 3900
+        },
+        {
+          "url": "https://www.skylinesoft.com/news/skylineglobe-server-and-terraexplorer-fusion-8-5-release/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:07.978809+00:00",
+          "sha256": "f74b1d915ad20cadfed1b74bf652da1f03eee62124009e6593608c5982f575d4",
+          "characters": 9450
+        },
+        {
+          "url": "https://www.linkedin.com/posts/gaussiansplatting-3dgeospatialtechnology-ugcPost-7522993461872967680-HNFI/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:01.589744+00:00",
+          "sha256": "d6cd14d6d19193dba5119dffe54eabc0521e0c2f28183155e94446a505c18ccb",
+          "characters": 2525
+        },
+        {
+          "url": "https://dev.epicgames.com/documentation/fortnite/43-00-fortnite-ecosystem-updates-and-release-notes?lang=en-US",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:08.413114+00:00",
+          "sha256": "b9be76c36f2cad5dc027d4d6910c3bfc68406b0aa1b5066bc60d190a34c9dcb1",
+          "characters": 50508
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:21.704187+00:00",
+      "urls": [
+        "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v2.0.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/unity-gaussian-splatting-2-0-0-loads-ply-and-spz-directly"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v2.0.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:21.704187+00:00",
+          "sha256": "3b1b5e283e402af496dda23250ad59d82b6842dbab1bef9322b5c68395a515c9",
+          "characters": 5214
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/oko-2026-22-brings-depth-of-field-to-gaussian-splats",
+      "title": "OKO 为网页高斯增加景深",
+      "eventDate": "2026-11-03",
+      "reportDate": "2026-11-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/oko-2026-22-brings-depth-of-field-to-gaussian-splats",
+        "https://docs.oko.live/oko-2026-22"
+      ],
+      "eventId": "radiancefields.com/oko-2026-22-brings-depth-of-field-to-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/skyline-brings-splat-analysis-to-terraexplorer-8-1",
+      "title": "TerraExplorer 将高斯纳入地理分析",
+      "eventDate": "2026-11-03",
+      "reportDate": "2026-11-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/skyline-brings-splat-analysis-to-terraexplorer-8-1",
+        "https://www.skylinesoft.com/news/skylineglobe-server-and-terraexplorer-fusion-8-5-release/",
+        "https://www.skylinesoft.com/KB_Resources/PM/PDFs/PM%2081%20Release%20Notes.pdf",
+        "https://www.linkedin.com/posts/gaussiansplatting-3dgeospatialtechnology-ugcPost-7522993461872967680-HNFI/"
+      ],
+      "eventId": "radiancefields.com/skyline-brings-splat-analysis-to-terraexplorer-8-1"
+    },
+    {
+      "id": "radiancefields.com/uefn-43-00-adds-experimental-gaussian-splat-import",
+      "title": "UEFN 开始实验性导入高斯",
+      "eventDate": "2026-11-03",
+      "reportDate": "2026-11-03",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/uefn-43-00-adds-experimental-gaussian-splat-import",
+        "https://dev.epicgames.com/documentation/fortnite/43-00-fortnite-ecosystem-updates-and-release-notes?lang=en-US"
+      ],
+      "eventId": "radiancefields.com/uefn-43-00-adds-experimental-gaussian-splat-import"
+    },
+    {
+      "id": "radiancefields.com/unity-gaussian-splatting-2-0-0-loads-ply-and-spz-directly",
+      "title": "Unity Gaussian Splatting 2.0 直接加载文件",
+      "eventDate": "2026-11-03",
+      "reportDate": "2026-11-03",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/unity-gaussian-splatting-2-0-0-loads-ply-and-spz-directly",
+        "https://github.com/aras-p/UnityGaussianSplatting/releases/tag/v2.0.0"
+      ],
+      "eventId": "radiancefields.com/unity-gaussian-splatting-2-0-0-loads-ply-and-spz-directly"
+    }
+  ]
+}

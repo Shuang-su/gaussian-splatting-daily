@@ -1,0 +1,164 @@
+{
+  "observedOn": "2026-10-19",
+  "collection": "https://sspai.com/tag/派早报",
+  "ordering": "栏目最新发布顺序，非文章 ID 数值排序",
+  "range": {
+    "first": "2026-08-28",
+    "last": "2026-10-16"
+  },
+  "scope": "30 篇正文，未保存第三方全文；只记录结构统计和链接",
+  "articles": [
+    {
+      "ordinal": 1,
+      "url": "https://sspai.com/post/116355"
+    },
+    {
+      "ordinal": 2,
+      "url": "https://sspai.com/post/116193"
+    },
+    {
+      "ordinal": 3,
+      "url": "https://sspai.com/post/116138"
+    },
+    {
+      "ordinal": 4,
+      "url": "https://sspai.com/post/116033"
+    },
+    {
+      "ordinal": 5,
+      "url": "https://sspai.com/post/115845"
+    },
+    {
+      "ordinal": 6,
+      "url": "https://sspai.com/post/115532"
+    },
+    {
+      "ordinal": 7,
+      "url": "https://sspai.com/post/115455"
+    },
+    {
+      "ordinal": 8,
+      "url": "https://sspai.com/post/115197"
+    },
+    {
+      "ordinal": 9,
+      "url": "https://sspai.com/post/115134"
+    },
+    {
+      "ordinal": 10,
+      "url": "https://sspai.com/post/115079"
+    },
+    {
+      "ordinal": 11,
+      "url": "https://sspai.com/post/114913"
+    },
+    {
+      "ordinal": 12,
+      "url": "https://sspai.com/post/114889"
+    },
+    {
+      "ordinal": 13,
+      "url": "https://sspai.com/post/114840"
+    },
+    {
+      "ordinal": 14,
+      "url": "https://sspai.com/post/114788"
+    },
+    {
+      "ordinal": 15,
+      "url": "https://sspai.com/post/114699"
+    },
+    {
+      "ordinal": 16,
+      "url": "https://sspai.com/post/114658"
+    },
+    {
+      "ordinal": 17,
+      "url": "https://sspai.com/post/114638"
+    },
+    {
+      "ordinal": 18,
+      "url": "https://sspai.com/post/114593"
+    },
+    {
+      "ordinal": 19,
+      "url": "https://sspai.com/post/114539"
+    },
+    {
+      "ordinal": 20,
+      "url": "https://sspai.com/post/114439"
+    },
+    {
+      "ordinal": 21,
+      "url": "https://sspai.com/post/114394"
+    },
+    {
+      "ordinal": 22,
+      "url": "https://sspai.com/post/114352"
+    },
+    {
+      "ordinal": 23,
+      "url": "https://sspai.com/post/114307"
+    },
+    {
+      "ordinal": 24,
+      "url": "https://sspai.com/post/114250"
+    },
+    {
+      "ordinal": 25,
+      "url": "https://sspai.com/post/114164"
+    },
+    {
+      "ordinal": 26,
+      "url": "https://sspai.com/post/114113"
+    },
+    {
+      "ordinal": 27,
+      "url": "https://sspai.com/post/114093"
+    },
+    {
+      "ordinal": 28,
+      "url": "https://sspai.com/post/114055"
+    },
+    {
+      "ordinal": 29,
+      "url": "https://sspai.com/post/113813"
+    },
+    {
+      "ordinal": 30,
+      "url": "https://sspai.com/post/113922"
+    }
+  ],
+  "observations": {
+    "articles": 30,
+    "mainItems": 191,
+    "mainItemsPerArticle": {
+      "min": 4,
+      "max": 9
+    },
+    "readingMinutes": {
+      "min": 5,
+      "median": 8,
+      "max": 14
+    },
+    "mainParagraphs": 562,
+    "paragraphsPerMainItem": {
+      "min": 1,
+      "median": 3,
+      "max": 8
+    },
+    "paragraphCharacters": {
+      "min": 26,
+      "q25": 108,
+      "median": 153,
+      "q75": 215,
+      "max": 699,
+      "over300": 66,
+      "over500": 8
+    },
+    "articlesWithBriefs": 24,
+    "mainItemsWithImages": 93,
+    "mainItemsWithSourceLinks": 187
+  },
+  "interpretation": "描述样本分布，不作为写作配额或质量证明。"
+}

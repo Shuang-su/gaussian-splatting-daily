@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-05",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-11-05T00:00:00+08:00",
+    "end": "2026-11-06T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corona-16-lets-gaussian-splats-receive-scene-lighting",
+        "radiancefields.com/gaussian-splat-patch-turns-blender-meshes-into-splats",
+        "radiancefields.com/iconem-streams-gaussian-splat-3d-tiles-into-blender",
+        "radiancefields.com/playcanvas-releases-supersplat-for-blender-0-1-0",
+        "radiancefields.com/splat-slides-brings-gaussian-splat-scenes-to-powerpoint",
+        "radiancefields.com/the-pixel-lab-ships-a-gaussian-splat-nebula-pack"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:08.469310+00:00",
+      "urls": [
+        "https://documentation.chaos.com/space/CRMAX/1436221661/16.0.0",
+        "https://marketplace.microsoft.com/en-us/product/wa200013032",
+        "https://www.thepixellab.net/3d-gaussian-splat-pack-nebula"
+      ],
+      "candidateIds": [
+        "radiancefields.com/corona-16-lets-gaussian-splats-receive-scene-lighting",
+        "radiancefields.com/splat-slides-brings-gaussian-splat-scenes-to-powerpoint",
+        "radiancefields.com/the-pixel-lab-ships-a-gaussian-splat-nebula-pack"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://documentation.chaos.com/space/CRMAX/1436221661/16.0.0",
+          "status": "shell-only",
+          "checkedAt": "2026-11-13T09:36:11.905428+00:00",
+          "sha256": "d4f43231a0a59b080df6b5d7ae2015074b26685528c2e12d39a6b03717ff1e1e",
+          "characters": 6,
+          "gap": "HTTP responded but text extraction did not expose the claimed feature; do not treat as primary fact verification."
+        },
+        {
+          "url": "https://marketplace.microsoft.com/en-us/product/wa200013032",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:35.361237+00:00",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.thepixellab.net/3d-gaussian-splat-pack-nebula",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:08.469310+00:00",
+          "sha256": "d43569583f38c8bfd358946da4bc9b35c9dfda31ddc5dfc7c81ab836ef37112a",
+          "characters": 3126
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.287299+00:00",
+      "urls": [
+        "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.2.0",
+        "https://github.com/Iconem/blender_ogc3dtiles/releases/tag/v0.5.1",
+        "https://github.com/playcanvas/supersplat-blender-extension/releases/tag/v0.1.0"
+      ],
+      "candidateIds": [
+        "radiancefields.com/gaussian-splat-patch-turns-blender-meshes-into-splats",
+        "radiancefields.com/iconem-streams-gaussian-splat-3d-tiles-into-blender",
+        "radiancefields.com/playcanvas-releases-supersplat-for-blender-0-1-0"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.2.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.287299+00:00",
+          "sha256": "c5e5817bbd6e357c7be0c109def89687cb588cc6095aa9e63e047ef07c4652d4",
+          "characters": 3096
+        },
+        {
+          "url": "https://github.com/Iconem/blender_ogc3dtiles/releases/tag/v0.5.1",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:18.595417+00:00",
+          "sha256": "3839e0838e8b31b848be2d863ff50015051dd8cd2f9c07d811f4e210ba235c8d",
+          "characters": 3055
+        },
+        {
+          "url": "https://github.com/playcanvas/supersplat-blender-extension/releases/tag/v0.1.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:30.356005+00:00",
+          "sha256": "830a1a00ef52655a8040d7610f14a7461fc400ea9f0375497eec6ce91181566b",
+          "characters": 4321
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/corona-16-lets-gaussian-splats-receive-scene-lighting",
+      "title": "Corona 16 让扫描接受场景灯光",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/corona-16-lets-gaussian-splats-receive-scene-lighting",
+        "https://documentation.chaos.com/space/CRMAX/1436221661/16.0.0"
+      ],
+      "eventId": "radiancefields.com/corona-16-lets-gaussian-splats-receive-scene-lighting"
+    },
+    {
+      "id": "radiancefields.com/gaussian-splat-patch-turns-blender-meshes-into-splats",
+      "title": "Gaussian Splat Patch 可把网格转成高斯",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gaussian-splat-patch-turns-blender-meshes-into-splats",
+        "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.2.0"
+      ],
+      "eventId": "radiancefields.com/gaussian-splat-patch-turns-blender-meshes-into-splats"
+    },
+    {
+      "id": "radiancefields.com/iconem-streams-gaussian-splat-3d-tiles-into-blender",
+      "title": "Iconem 将高斯 3D Tiles 流式带入 Blender",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/iconem-streams-gaussian-splat-3d-tiles-into-blender",
+        "https://github.com/Iconem/blender_ogc3dtiles/releases/tag/v0.5.1"
+      ],
+      "eventId": "radiancefields.com/iconem-streams-gaussian-splat-3d-tiles-into-blender"
+    },
+    {
+      "id": "radiancefields.com/playcanvas-releases-supersplat-for-blender-0-1-0",
+      "title": "SuperSplat for Blender 打通场景导入与发布",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/playcanvas-releases-supersplat-for-blender-0-1-0",
+        "https://github.com/playcanvas/supersplat-blender-extension/releases/tag/v0.1.0"
+      ],
+      "eventId": "radiancefields.com/playcanvas-releases-supersplat-for-blender-0-1-0"
+    },
+    {
+      "id": "radiancefields.com/splat-slides-brings-gaussian-splat-scenes-to-powerpoint",
+      "title": "Splat Slides 将三维扫描放进 PowerPoint",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splat-slides-brings-gaussian-splat-scenes-to-powerpoint",
+        "https://marketplace.microsoft.com/en-us/product/wa200013032"
+      ],
+      "eventId": "radiancefields.com/splat-slides-brings-gaussian-splat-scenes-to-powerpoint"
+    },
+    {
+      "id": "radiancefields.com/the-pixel-lab-ships-a-gaussian-splat-nebula-pack",
+      "title": "The Pixel Lab 发布星云高斯素材",
+      "eventDate": "2026-11-05",
+      "reportDate": "2026-11-05",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/the-pixel-lab-ships-a-gaussian-splat-nebula-pack",
+        "https://www.thepixellab.net/3d-gaussian-splat-pack-nebula"
+      ],
+      "eventId": "radiancefields.com/the-pixel-lab-ships-a-gaussian-splat-nebula-pack"
+    }
+  ]
+}

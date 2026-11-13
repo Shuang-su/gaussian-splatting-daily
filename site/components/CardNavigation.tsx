@@ -1,0 +1,463 @@
+"use client";
+
+import { createContext, useCallback, useContext, useEffect, useLayoutEffect, useRef, useState, type MouseEvent, type ReactNode } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import { animate } from "motion";
+import { BASE } from "../lib/catalog";
+import { articlePath, HISTORY_CHANGE, markerFrom, mergeMarker, navigationStore, ordinaryClick, returnDistance, sameDocument, sitePath, UI_CAPTURE, type NavigationMarker, type PageSnapshot, type PageUI } from "../lib/card-navigation";
+import { CARD_TIMING, CardAnimator, captureCard, matchingCardImages, retainThumbnail, visualElements, type CardVisual } from "../lib/card-transition-visual";
+import { CardBackdrop } from "../lib/card-transition-backdrop";
+import { attachPullDismiss } from "../lib/card-pull-dismiss";
+import { readingHashTarget } from "../lib/reading-navigation";
+import { hierarchyPath, isHierarchyLink } from "../lib/reading-hierarchy";
+import { READER_ROUTE_READY } from "../lib/reading-progress";
+
+type Transaction = {
+  kind: "enter" | "return" | "history"; href: string; marker: NavigationMarker;
+  snapshot?: PageSnapshot; visual: CardVisual | null; origin?: HTMLElement; cancelled: boolean; token: number; inputTime?: number; arrived?: boolean; expired?: boolean; resized?: boolean; swipe?: boolean;
+};
+type Context = { busy: boolean; returnHref: string; hasSource: boolean; contextPath?: string; navigateHierarchy: (event: MouseEvent<HTMLAnchorElement>, parent?: string) => void; navigate: (event: MouseEvent<HTMLAnchorElement>) => void; back: (event: MouseEvent<HTMLAnchorElement>) => void };
+const NavigationContext = createContext<Context | null>(null);
+export const useCardNavigation = () => useContext(NavigationContext);
+const currentURL = () => location.pathname + location.search + location.hash;
+const nextHref = (url: string) => url.slice(BASE.length) || "/";
+const routeReady = (kind: Transaction["kind"]) => window.dispatchEvent(new CustomEvent(READER_ROUTE_READY, { detail: { kind } }));
+const findOrigin = (key?: string) => key ? document.querySelector<HTMLElement>(`[data-article-origin="${CSS.escape(key)}"]`) : null;
+const linksIn = (root: HTMLElement) => root.matches("a[href]") ? [root] : [...root.querySelectorAll<HTMLElement>("a[href]")];
+const reduceMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+export default function CardNavigation({ children }: { children: ReactNode }) {
+  const router = useRouter(), pathname = usePathname();
+  const layer = useRef<HTMLDivElement>(null), animator = useRef<CardAnimator | null>(null);
+  const backdropLayer = useRef<HTMLDivElement>(null), backdrop = useRef<CardBackdrop | null>(null);
+  const active = useRef<NavigationMarker | null>(null), activeURL = useRef("");
+  const pending = useRef<Transaction | null>(null), sequence = useRef(0);
+  const frame = useRef(0), watchdog = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const returnTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const restoring = useRef(false), animatedScroll = useRef(0);
+  const fade = useRef<ReturnType<typeof animate> | null>(null);
+  const retained = useRef<{ article: string; source: string } | null>(null);
+  const abortPull = useRef<(() => void) | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [contextPath, setContextPath] = useState<string>();
+  const [source, setSource] = useState<PageSnapshot | null>(null);
+
+  const syncSource = useCallback((marker: NavigationMarker) => {
+    setContextPath(marker.contextPath);
+    const candidate = navigationStore().get(marker.sourceId);
+    setSource(candidate && sitePath(candidate.url) ? candidate : null);
+  }, []);
+  const ensureMarker = useCallback(() => {
+    if (active.current) return active.current;
+    const existing = markerFrom(history.state);
+    const marker = existing || { session: crypto.randomUUID(), id: crypto.randomUUID(), index: 0 };
+    active.current = marker; activeURL.current = currentURL();
+    history.replaceState(mergeMarker(history.state, marker), "");
+    return marker;
+  }, []);
+  const capture = useCallback((origin?: HTMLElement, anchor?: HTMLElement) => {
+    const marker = ensureMarker(), previous = navigationStore().get(marker.id);
+    const ui: PageUI = {};
+    window.dispatchEvent(new CustomEvent(UI_CAPTURE, { detail: { ui } }));
+    const snapshot: PageSnapshot = { marker, url: activeURL.current || currentURL(), scroll: scrollY, width: innerWidth, ui,
+      ...(previous?.originKey ? { originKey: previous.originKey, originTop: previous.originTop, focusIndex: previous.focusIndex } : {}) };
+    // Queries can change without a route render (the search filter uses replaceState).
+    if (sameDocument(activeURL.current.split("?")[0], location.pathname)) snapshot.url = currentURL();
+    if (origin) { snapshot.originKey = origin.dataset.articleOrigin; snapshot.originTop = origin.getBoundingClientRect().top; snapshot.focusIndex = anchor ? Math.max(0, linksIn(origin).indexOf(anchor)) : 0; }
+    if (!origin && previous?.focusHref) snapshot.focusHref = previous.focusHref;
+    navigationStore().save(snapshot); return snapshot;
+  }, [ensureMarker]);
+
+  const clearVisual = useCallback((preserveBackdrop = false) => {
+    animator.current?.clear();
+    if (!preserveBackdrop) { backdrop.current?.clear(); retained.current = null; }
+    if (!preserveBackdrop) delete document.documentElement.dataset.cardGlassHold;
+    fade.current?.stop(); fade.current = null;
+    document.querySelector<HTMLElement>("main")?.style.removeProperty("opacity");
+    document.querySelector<HTMLElement>("main")?.removeAttribute("data-card-reveal");
+    document.querySelector<HTMLElement>("main")?.removeAttribute("data-card-exited");
+    document.querySelectorAll<HTMLElement>("[data-card-opening]").forEach(element => { delete element.dataset.cardOpening; });
+    document.querySelectorAll<HTMLElement>("[data-card-returning]").forEach(element => { element.style.removeProperty("transform"); element.style.removeProperty("opacity"); delete element.dataset.cardReturning; });
+    if (layer.current) layer.current.dataset.state = "idle";
+  }, []);
+  const finish = useCallback(() => {
+    const keep = pending.current?.kind === "enter" && pending.current.arrived && !pending.current.cancelled && Boolean(retained.current);
+    clearVisual(keep);
+    if (keep && backdropLayer.current) backdropLayer.current.dataset.retained = "true";
+    clearTimeout(watchdog.current); clearTimeout(returnTimer.current); cancelAnimationFrame(frame.current);
+    restoring.current = false; navigationStore().restoration = null;
+    pending.current = null;
+    delete document.documentElement.dataset.readerRoutePending;
+    setBusy(false);
+  }, [clearVisual]);
+  const cancelVisual = useCallback(() => {
+    const waiting = pending.current && (!pending.current.arrived || restoring.current);
+    if (pending.current) pending.current.cancelled = true;
+    if (waiting) { clearVisual(); setBusy(false); }
+    else {
+      const kind = pending.current?.kind;
+      finish();
+      if (kind) routeReady(kind);
+    }
+  }, [clearVisual, finish]);
+
+  const begin = useCallback((transaction: Transaction) => {
+    cancelAnimationFrame(frame.current); clearTimeout(watchdog.current); clearTimeout(returnTimer.current);
+    // A reversal during expansion keeps the frozen list until its real route is restored.
+    clearVisual(transaction.kind === "return" && Boolean(transaction.visual || transaction.swipe));
+    pending.current = transaction;
+    document.documentElement.dataset.readerRoutePending = "";
+    restoring.current = Boolean(transaction.snapshot);
+    navigationStore().restoration = transaction.snapshot || null;
+    setBusy(true);
+    if (layer.current) {
+      layer.current.dataset.state = "waiting";
+      layer.current.dataset.kind = transaction.kind;
+      layer.current.dataset.duration = String(transaction.kind === "enter" ? CARD_TIMING.enter : CARD_TIMING.return);
+      if (!animator.current) animator.current = new CardAnimator(layer.current, backdropLayer.current);
+    }
+    const canRetainSource = transaction.kind === "enter" && Boolean(transaction.marker.sourceId && transaction.origin) &&
+      matchMedia("(max-width: 767px) and (pointer: coarse)").matches;
+    if ((transaction.visual || canRetainSource) && !reduceMotion()) {
+      try {
+        if (!backdrop.current && backdropLayer.current) backdrop.current = new CardBackdrop(backdropLayer.current);
+        if (transaction.kind === "enter") {
+          if (!backdrop.current?.capture(transaction.origin, canRetainSource)) transaction.visual = null;
+          else if (canRetainSource && transaction.marker.sourceId) {
+            retained.current = { article: transaction.marker.id, source: transaction.marker.sourceId };
+          }
+        }
+        if (backdropLayer.current && transaction.kind === "enter") delete backdropLayer.current.dataset.retained;
+        if (!transaction.visual && retained.current && backdropLayer.current) backdropLayer.current.dataset.retained = "true";
+        if (transaction.visual) {
+          if (transaction.visual.visibleRadius !== undefined && transaction.kind === "return") animator.current?.hold(transaction.visual);
+          else animator.current?.preview(transaction.visual);
+        }
+      }
+      catch { clearVisual(); transaction.visual = null; }
+    }
+    performance.clearMarks("gsd-navigation-input"); performance.clearMarks("gsd-navigation-feedback");
+    performance.mark("gsd-navigation-input", { startTime: transaction.inputTime ?? performance.now() });
+    requestAnimationFrame(() => {
+      performance.mark("gsd-navigation-feedback");
+      performance.measure("gsd-navigation-feedback", "gsd-navigation-input", "gsd-navigation-feedback");
+    });
+    watchdog.current = setTimeout(() => {
+      if (pending.current?.token !== transaction.token) return;
+      // A slow/failed route must leave a usable page, without an abandoned proxy.
+      pending.current.expired = true;
+      cancelVisual(); restoring.current = false;
+    }, 2000);
+  }, [cancelVisual, clearVisual]);
+
+  const navigate = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+    const anchor = event.currentTarget;
+    if (!ordinaryClick(event, anchor.target, anchor.hasAttribute("download"))) return;
+    const url = new URL(anchor.href), href = url.pathname + url.search + url.hash;
+    const origin = anchor.closest<HTMLElement>("[data-article-origin]");
+    if (url.origin !== location.origin || !articlePath(href) || !origin || url.pathname === location.pathname) return;
+    if (pending.current?.href === href) {
+      if (pending.current.expired) finish(); // A failed route can be retried as an ordinary link.
+      else event.preventDefault();
+      return;
+    }
+    event.preventDefault();
+    const inputTime = performance.now();
+    const snapshot = capture(origin, anchor), marker = snapshot.marker;
+    begin({ kind: "enter", href, marker: { session: marker.session, id: crypto.randomUUID(), index: marker.index + 1, sourceId: marker.id, sourceKey: origin.dataset.articleOrigin },
+      visual: url.hash ? null : captureCard(origin), origin, cancelled: false, token: ++sequence.current, inputTime });
+    origin.dataset.cardOpening = "true";
+    router.push(nextHref(href), { scroll: false });
+  }, [begin, capture, finish, router]);
+
+  const navigateHierarchy = useCallback((event: MouseEvent<HTMLAnchorElement>, parent?: string) => {
+    const anchor = event.currentTarget;
+    if (!ordinaryClick(event, anchor.target, anchor.hasAttribute("download"))) return;
+    const url = new URL(anchor.href);
+    const href = url.pathname + url.search + url.hash;
+    const context = parent || hierarchyPath(location.pathname);
+    if (url.origin !== location.origin || sameDocument(currentURL(), href)) return;
+    if (!isHierarchyLink(context, href)) { if (!pending.current) capture(); return; }
+    event.preventDefault();
+    if (pending.current?.href === href && !pending.current.expired) return;
+    const snapshot = capture();
+    const { marker } = snapshot;
+    const fromParent = hierarchyPath(location.pathname) === context;
+    const contextId = fromParent ? marker.id : marker.contextId;
+    const parentSnapshot = fromParent ? snapshot : navigationStore().get(contextId);
+    if (parentSnapshot) navigationStore().save({
+      ...parentSnapshot, originKey: undefined, originTop: undefined, focusIndex: undefined, focusHref: href,
+    });
+    begin({ kind: "enter", href, marker: { session: marker.session, id: crypto.randomUUID(), index: marker.index + 1, contextPath: context, contextId },
+      visual: null, cancelled: false, token: ++sequence.current });
+    router.push(nextHref(href), { scroll: false });
+  }, [begin, capture, router]);
+
+  const returnToSource = useCallback((dragged?: CardVisual | null, swipe = false) => {
+    const current = ensureMarker(), target = navigationStore().get(current.sourceId);
+    if (!target || !sitePath(target.url)) return; // The ordinary link opens the archive.
+    if (pending.current?.kind === "return") return;
+    const inputTime = performance.now();
+    const article = document.querySelector<HTMLElement>(".article-shell");
+    const visual = dragged === undefined ? animator.current?.current() || (article ? captureCard(article, true) : null) : dragged;
+    capture();
+    const token = ++sequence.current;
+    begin({ kind: "return", href: target.url, marker: target.marker, snapshot: target, visual, cancelled: false, token, inputTime, swipe });
+    if (swipe) document.querySelector<HTMLElement>("main")?.setAttribute("data-card-exited", "");
+    const distance = returnDistance(current, target);
+    const navigateBack = () => {
+      if (pending.current?.token !== token) return;
+      if (distance !== null) history.go(distance);
+      else router.replace(nextHref(target.url), { scroll: false });
+    };
+    if (!visual && !swipe && !reduceMotion()) {
+      const main = document.querySelector<HTMLElement>("main");
+      if (main) fade.current = animate(main, { opacity: 0 }, { duration: .12 });
+      // Scrolling may cancel the visual, but it must not swallow the requested return.
+      returnTimer.current = setTimeout(navigateBack, 120);
+    } else navigateBack();
+  }, [begin, capture, ensureMarker, router]);
+
+  const back = useCallback((event: MouseEvent<HTMLAnchorElement>) => {
+    if (!ordinaryClick(event, event.currentTarget.target)) return;
+    const marker = ensureMarker();
+    const target = navigationStore().get(marker.sourceId);
+    if (target && sitePath(target.url)) {
+      event.preventDefault();
+      abortPull.current?.();
+      returnToSource();
+      return;
+    }
+    const parent = navigationStore().get(marker.contextId);
+    if (!parent || marker.session !== parent.marker.session || parent.marker.index >= marker.index ||
+      hierarchyPath(parent.url) !== marker.contextPath || !sitePath(parent.url)) return;
+    event.preventDefault();
+    if (pending.current?.kind === "return") return;
+    capture();
+    begin({ kind: "return", href: parent.url, marker: parent.marker, snapshot: parent, visual: null, cancelled: false, token: ++sequence.current });
+    history.go(parent.marker.index - marker.index);
+  }, [begin, capture, ensureMarker, returnToSource]);
+
+  useEffect(() => {
+    const main = document.querySelector<HTMLElement>("main");
+    if (!main) return;
+    const pull = attachPullDismiss(main, {
+      eligible: () => {
+        const saved = retained.current;
+        const marker = active.current;
+        return !pending.current && Boolean(saved && marker && saved.article === marker.id &&
+          navigationStore().get(saved.source)?.originKey && backdropLayer.current?.dataset.retained && main.querySelector(".article-shell"));
+      },
+      show: (visible) => {
+        if (visible && main.dataset.cardPulling === "right") document.documentElement.dataset.cardGlassHold = "";
+        if (visible && backdropLayer.current) backdropLayer.current.dataset.pullDirection = main.dataset.cardPulling;
+        if (!visible && pending.current?.kind === "return" && (pending.current.swipe || pending.current.visual?.visibleRadius !== undefined)) return;
+        backdropLayer.current?.toggleAttribute("data-pull-visible", visible);
+        if (!visible) {
+          delete document.documentElement.dataset.cardGlassHold;
+          if (backdropLayer.current) delete backdropLayer.current.dataset.pullDirection;
+        }
+      },
+      commit: (geometry) => {
+        const article = main.querySelector<HTMLElement>(".article-shell");
+        const visual = article && captureCard(article, true);
+        if (visual) {
+          visual.rect = geometry.rect;
+          visual.surface = { radius: geometry.radius, shadow: "0 18px 54px rgb(0 0 0 / 18%)", border: "0px solid transparent" };
+          visual.fullscreen = false;
+          visual.expansion = .94;
+          visual.visibleRadius = geometry.radius;
+          visual.elevation = 1;
+        }
+        returnToSource(visual);
+      },
+      swipe: () => returnToSource(null, true),
+      invalidate: () => { retained.current = null; backdrop.current?.clear(); },
+    });
+    abortPull.current = pull.abort;
+    return () => { abortPull.current = null; pull.dispose(); };
+  }, [returnToSource]);
+
+  const arrive = useCallback(() => {
+    let transaction = pending.current;
+    if (transaction && !sameDocument(transaction.href, currentURL())) {
+      // A regular menu/header link can take over a pending card route too.
+      finish(); transaction = null;
+    }
+    if (!transaction) {
+      abortPull.current?.();
+      if (retained.current && !sameDocument(activeURL.current, currentURL())) { retained.current = null; backdrop.current?.clear(); }
+      const existing = markerFrom(history.state);
+      const marker = existing && (!active.current || existing.id !== active.current.id || sameDocument(activeURL.current, currentURL())) ? existing
+        : { session: ensureMarker().session, id: crypto.randomUUID(), index: ensureMarker().index + 1 };
+      active.current = marker; activeURL.current = currentURL();
+      history.replaceState(mergeMarker(history.state, marker), ""); syncSource(marker);
+      return;
+    }
+    transaction.arrived = true;
+    if (transaction.snapshot) {
+      fade.current?.stop(); fade.current = null;
+      document.querySelector<HTMLElement>("main")?.style.removeProperty("opacity");
+    }
+    // Mask the incoming page in the layout phase, before its first paint. Geometry is
+    // measured over the next frames while the already-visible source proxy stays in place.
+    if (transaction.kind === "enter" && transaction.visual && !transaction.cancelled && !reduceMotion()) {
+      const main = document.querySelector<HTMLElement>("main");
+      if (main) { main.dataset.cardReveal = "true"; main.style.opacity = "0"; }
+    }
+    active.current = transaction.marker; activeURL.current = currentURL();
+    history.replaceState(mergeMarker(history.state, transaction.marker), ""); syncSource(transaction.marker);
+    clearTimeout(watchdog.current);
+    const started = performance.now();
+    let scrollWaitStarted: number | undefined;
+    const settle = () => {
+      if (pending.current?.token !== transaction.token) return;
+      const snapshot = transaction.snapshot;
+      const target = snapshot?.originKey ? findOrigin(snapshot.originKey)
+        : document.querySelector<HTMLElement>(".article-shell") || (snapshot ? document.querySelector<HTMLElement>("main") : null);
+      let chapterFocus: HTMLElement | null = null;
+      // Search results and restored load-more rows can mount after the route shell.
+      if (!target && performance.now() - started < 1800) { frame.current = requestAnimationFrame(settle); return; }
+      if (snapshot) {
+        const top = (transaction.resized || snapshot.width !== innerWidth) && target && snapshot.originTop !== undefined
+          ? scrollY + target.getBoundingClientRect().top - snapshot.originTop : snapshot.scroll;
+        window.scrollTo({ top, behavior: "instant" });
+        // The source route can mount before its final scroll extent is available.
+        // Re-measure the origin on each retry so resize restoration stays relative.
+        if (scrollY + 1 < top) {
+          scrollWaitStarted ??= performance.now();
+          if (performance.now() - scrollWaitStarted < 200) {
+            frame.current = requestAnimationFrame(settle);
+            return;
+          }
+        }
+      } else {
+        const hash = new URL(transaction.href, location.origin).hash;
+        let destination: HTMLElement | null = null;
+        try { destination = hash ? document.getElementById(decodeURIComponent(hash.slice(1))) : null; } catch {}
+        if (destination) {
+          const section = destination.closest<HTMLElement>("[data-event-id], section") || destination;
+          chapterFocus = section.querySelector<HTMLElement>("h1, h2, h3, h4") || section;
+        }
+        if (destination) readingHashTarget(destination).scrollIntoView({ block: "start", behavior: "instant" });
+        else window.scrollTo({ top: 0, behavior: "instant" });
+      }
+      frame.current = requestAnimationFrame(() => {
+        if (pending.current?.token !== transaction.token) return;
+        restoring.current = false; animatedScroll.current = scrollY;
+        const hierarchyFocus = snapshot?.focusHref && Array.from(document.querySelectorAll<HTMLAnchorElement>("main a[href]")).find(anchor =>
+          anchor.pathname + anchor.search + anchor.hash === snapshot.focusHref);
+        const focus = hierarchyFocus || (snapshot?.originKey && target ? linksIn(target)[snapshot.focusIndex || 0] || target
+          : chapterFocus || document.querySelector<HTMLElement>(".article-header h1") || (transaction.marker.contextPath ? document.querySelector<HTMLElement>("main h1") : null));
+        const complete = () => {
+          if (pending.current?.token !== transaction.token) return;
+          finish();
+          // Focusing before hiding the real title for the proxy makes browsers blur it.
+          if (focus?.isConnected) { if (!focus.matches("a, button")) focus.tabIndex = -1; focus.focus({ preventScroll: true }); }
+          routeReady(transaction.kind);
+        };
+        const starting = animator.current?.current() || transaction.visual;
+        const destination = target ? captureCard(target, !snapshot, starting) : null;
+        const canMorph = transaction.kind !== "history" && !transaction.cancelled && !reduceMotion() && transaction.visual && destination &&
+          matchingCardImages(transaction.visual, destination) && (!snapshot || snapshot.width === innerWidth);
+        if (canMorph && target) {
+          try {
+            if (transaction.kind === "return") backdrop.current?.clear();
+            layer.current!.dataset.state = transaction.kind;
+            retainThumbnail(target, starting!);
+            // The proxy owns the returning card's surface as well as its fields.
+            // Hiding the real card prevents its shadow doubling under the landing proxy.
+            animator.current?.hide(snapshot ? [target] : visualElements(target, true));
+            animator.current?.morph(starting!, destination!, transaction.kind === "enter" ? "enter" : "return", complete);
+            return;
+          } catch { /* Return control to the real page if geometry/animation setup fails. */ }
+        }
+        const keep = transaction.kind === "enter" && !transaction.cancelled && Boolean(retained.current);
+        clearVisual(keep);
+        if (keep && backdropLayer.current) backdropLayer.current.dataset.retained = "true";
+        if (transaction.swipe || transaction.marker.contextPath || transaction.kind === "history" || reduceMotion() || transaction.cancelled) { complete(); return; }
+        layer.current!.dataset.state = "fade";
+        const element = snapshot && target ? target : document.querySelector<HTMLElement>("main");
+        if (!element) { complete(); return; }
+        if (snapshot) element.dataset.cardReturning = "true";
+        fade.current = animate(element, { opacity: [.65, 1] }, { duration: .12, onComplete: complete });
+      });
+    };
+    frame.current = requestAnimationFrame(settle);
+  }, [clearVisual, ensureMarker, finish, syncSource]);
+
+  useLayoutEffect(() => { arrive(); }, [pathname, arrive]);
+  useEffect(() => {
+    ensureMarker(); syncSource(active.current!);
+    const beforeHistory = () => capture();
+    const hashChanged = () => {
+      const marker = markerFrom(history.state);
+      if (marker) { active.current = marker; activeURL.current = currentURL(); syncSource(marker); }
+    };
+    const pop = (event: PopStateEvent) => {
+      abortPull.current?.();
+      const previousURL = activeURL.current;
+      // Capture against the outgoing entry, before React handles this popstate.
+      const ui: PageUI = {}; window.dispatchEvent(new CustomEvent(UI_CAPTURE, { detail: { ui } }));
+      if (active.current) navigationStore().save({ ...navigationStore().get(active.current.id), marker: active.current, url: previousURL, scroll: scrollY, width: innerWidth, ui });
+      const marker = markerFrom(event.state);
+      if (!marker) { finish(); active.current = null; return; }
+      if (pending.current?.kind === "return" && pending.current.marker.id === marker.id) return;
+      finish();
+      active.current = marker; activeURL.current = currentURL(); syncSource(marker);
+      if (sameDocument(previousURL, currentURL())) return; // Native anchor traversal.
+      const snapshot = navigationStore().get(marker.id);
+      if (!snapshot) return; // Leave unrelated history entries to the browser/router.
+      const transaction: Transaction = { kind: "history", href: currentURL(), marker, snapshot, visual: null, cancelled: false, token: ++sequence.current };
+      begin(transaction);
+    };
+    const userInput = () => { if (pending.current) cancelVisual(); };
+    const otherLink = (event: globalThis.MouseEvent) => {
+      if (!pending.current || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || !(event.target instanceof Element)) return;
+      const anchor = event.target.closest<HTMLAnchorElement>("a[href]");
+      if (!anchor || anchor.download || (anchor.target && anchor.target !== "_self")) return;
+      const url = new URL(anchor.href);
+      if (url.origin === location.origin && url.pathname + url.search + url.hash !== pending.current.href) finish();
+    };
+    const scroll = () => { if (!restoring.current && pending.current && Math.abs(scrollY - animatedScroll.current) > 1 && layer.current?.dataset.state !== "waiting") cancelVisual(); };
+    const keys = (event: KeyboardEvent) => { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) userInput(); };
+    const resize = () => {
+      const transaction = pending.current;
+      if (!transaction) return;
+      transaction.cancelled = true; transaction.resized = true;
+      // Responsive reflow can trigger scroll anchoring on entry as well as return.
+      // Do not treat that browser-generated scroll as user cancellation.
+      restoring.current = true;
+      clearVisual(); cancelAnimationFrame(frame.current);
+      // Keep the navigation alive until its destination is settled and focused.
+      // A new layout can move a restored list entry, including on height changes.
+      // If the route is still loading, its normal arrival performs this same work.
+      if (transaction.arrived) arrive();
+    };
+    const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
+    motionPreference.addEventListener("change", userInput);
+    window.addEventListener("popstate", pop, true);
+    window.addEventListener(UI_CAPTURE + "-before-history", beforeHistory);
+    window.addEventListener(HISTORY_CHANGE, hashChanged);
+    window.addEventListener("pagehide", beforeHistory);
+    document.addEventListener("click", otherLink);
+    window.addEventListener("wheel", userInput, { passive: true }); window.addEventListener("touchmove", userInput, { passive: true });
+    window.addEventListener("scroll", scroll, { passive: true }); window.addEventListener("keydown", keys); window.addEventListener("resize", resize);
+    return () => {
+      window.removeEventListener("popstate", pop, true); window.removeEventListener(UI_CAPTURE + "-before-history", beforeHistory);
+      window.removeEventListener(HISTORY_CHANGE, hashChanged); window.removeEventListener("pagehide", beforeHistory);
+      document.removeEventListener("click", otherLink);
+      motionPreference.removeEventListener("change", userInput);
+      window.removeEventListener("wheel", userInput); window.removeEventListener("touchmove", userInput); window.removeEventListener("scroll", scroll);
+      window.removeEventListener("keydown", keys); window.removeEventListener("resize", resize);
+      delete document.documentElement.dataset.readerRoutePending;
+      delete document.documentElement.dataset.cardGlassHold;
+      clearTimeout(watchdog.current); clearTimeout(returnTimer.current); cancelAnimationFrame(frame.current); animator.current?.clear(); backdrop.current?.clear(); fade.current?.stop();
+    };
+  }, [arrive, begin, cancelVisual, capture, clearVisual, ensureMarker, finish, syncSource]);
+
+  return <NavigationContext.Provider value={{ busy, returnHref: source?.url ? nextHref(source.url) : "/daily/", hasSource: Boolean(source), contextPath, navigateHierarchy, navigate, back }}>
+    {children}<div ref={backdropLayer} className="card-transition-backdrop" aria-hidden="true" inert />
+    <div ref={layer} className="card-transition-layer" data-state="idle" aria-hidden="true" inert />
+  </NavigationContext.Provider>;
+}

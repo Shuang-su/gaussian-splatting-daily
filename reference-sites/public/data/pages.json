@@ -1,0 +1,180 @@
+[
+  {
+    "id": "sspai-home",
+    "site": "sspai",
+    "route": "/",
+    "sourceUrl": "https://sspai.com/",
+    "title": "少数派 - 高效工作，品质生活",
+    "styles": "/styles/sspai-home.css",
+    "variants": {
+      "desktop": "/pages/sspai-home/desktop.html",
+      "tablet": "/pages/sspai-home/tablet.html",
+      "mobile": "/pages/sspai-home/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "zh-CN"
+      ],
+      [
+        "id",
+        "html"
+      ],
+      [
+        "class",
+        ""
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:18:46.634Z",
+    "sourceHash": "212634124d20117210fa59f5a42248e525f9fa7b0a9fd23540cd80ceb9f3b197"
+  },
+  {
+    "id": "sspai-list",
+    "site": "sspai",
+    "route": "/tag/派早报",
+    "sourceUrl": "https://sspai.com/tag/%E6%B4%BE%E6%97%A9%E6%8A%A5",
+    "title": "#派早报 - 少数派",
+    "styles": "/styles/sspai-list.css",
+    "variants": {
+      "desktop": "/pages/sspai-list/desktop.html",
+      "tablet": "/pages/sspai-list/tablet.html",
+      "mobile": "/pages/sspai-list/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "zh-CN"
+      ],
+      [
+        "id",
+        "html"
+      ],
+      [
+        "class",
+        ""
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:18:14.405Z",
+    "sourceHash": "c65b97227bd652c9eddb42e9f61ea3efa9d22fc05735be83eebbee085b1bc2b4"
+  },
+  {
+    "id": "sspai-daily",
+    "site": "sspai",
+    "route": "/post/115197",
+    "sourceUrl": "https://sspai.com/post/115197",
+    "title": "派早报：OpenAI 发布 Dot 智能体、Apple 移动睡眠呼吸暂停迹象提示软件国内获批等 - 少数派",
+    "styles": "/styles/sspai-daily.css",
+    "variants": {
+      "desktop": "/pages/sspai-daily/desktop.html",
+      "tablet": "/pages/sspai-daily/tablet.html",
+      "mobile": "/pages/sspai-daily/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "zh-CN"
+      ],
+      [
+        "id",
+        "html"
+      ],
+      [
+        "class",
+        ""
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:17:04.429Z",
+    "sourceHash": "451b212aa350d4e4fb3444479546fa193ebc13024063d14dc846978abf61f1b5"
+  },
+  {
+    "id": "rf-home",
+    "site": "radiance",
+    "route": "/",
+    "sourceUrl": "https://radiancefields.com/",
+    "title": "Gaussian Splatting News — Radiance Fields",
+    "styles": "/styles/rf-home.css",
+    "variants": {
+      "desktop": "/pages/rf-home/desktop.html",
+      "tablet": "/pages/rf-home/tablet.html",
+      "mobile": "/pages/rf-home/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "en"
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:28:06.539Z",
+    "sourceHash": "d5e283419d08c8146ed4123f2a7e3aa7669b545ec0a09e1b120fe144587bb374"
+  },
+  {
+    "id": "rf-article",
+    "site": "radiance",
+    "route": "/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+    "sourceUrl": "https://radiancefields.com/spirula-studio-v2026.9.30-trains-large-scenes-in-parts-and-merges-them",
+    "title": "Spirula Studio v2026.9.30 Trains Large Scenes in Parts",
+    "styles": "/styles/rf-article.css",
+    "variants": {
+      "desktop": "/pages/rf-article/desktop.html",
+      "tablet": "/pages/rf-article/tablet.html",
+      "mobile": "/pages/rf-article/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "en"
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:28:10.268Z",
+    "sourceHash": "16a75b198d96550c5f95645e5313be3aa9e98f9e64fb6c64c17c3b9cc879035b"
+  },
+  {
+    "id": "rf-papers",
+    "site": "radiance",
+    "route": "/papers",
+    "sourceUrl": "https://radiancefields.com/papers",
+    "title": "Gaussian Splatting & NeRF Papers — Research Database",
+    "styles": "/styles/rf-papers.css",
+    "variants": {
+      "desktop": "/pages/rf-papers/desktop.html",
+      "tablet": "/pages/rf-papers/tablet.html",
+      "mobile": "/pages/rf-papers/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "en"
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:28:14.305Z",
+    "sourceHash": "b8d74bdc03e5510ca7be46955feb1727a4fc4c52c119f55c65cedbea4e932879"
+  },
+  {
+    "id": "rf-tools",
+    "site": "radiance",
+    "route": "/platforms",
+    "sourceUrl": "https://radiancefields.com/platforms",
+    "title": "Gaussian Splatting Software & Tools — Platform Directory",
+    "styles": "/styles/rf-tools.css",
+    "variants": {
+      "desktop": "/pages/rf-tools/desktop.html",
+      "tablet": "/pages/rf-tools/tablet.html",
+      "mobile": "/pages/rf-tools/mobile.html"
+    },
+    "htmlAttrs": [
+      [
+        "lang",
+        "en"
+      ]
+    ],
+    "bodyAttrs": [],
+    "capturedAt": "2026-10-02T15:25:28.354Z",
+    "sourceHash": "78b47d8aa471b63b2ea7da376b1b4b70ec4fea8b397b87b7809a96cb837746dc"
+  }
+]

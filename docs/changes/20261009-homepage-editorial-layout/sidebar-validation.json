@@ -1,0 +1,1228 @@
+{
+  "date": "2026-10-09",
+  "implementation": "Homepage sidebar and compact desktop refinement",
+  "method": "Per-tab CDP viewport; asserted actual innerWidth/innerHeight; DOM coordinates relative to reading section, with original screenshot scroll offset aligned separately.",
+  "referenceComparisons": [
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "reference": {
+        "sidebarX": 120.5,
+        "icon": 32,
+        "label": "20px",
+        "weight": "500",
+        "pitch": 64,
+        "iconTop": 64,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      },
+      "local": {
+        "sidebarX": 120.5,
+        "icon": 32,
+        "label": "20px",
+        "weight": "500",
+        "pitch": 64,
+        "iconTop": 64,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 820
+      },
+      "reference": {
+        "sidebarX": 240.5,
+        "icon": 24,
+        "label": "17px",
+        "weight": "500",
+        "pitch": 56,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      },
+      "local": {
+        "sidebarX": 240.5,
+        "icon": 24,
+        "label": "17px",
+        "weight": "500",
+        "pitch": 56,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      }
+    },
+    {
+      "viewport": {
+        "width": 1180,
+        "height": 820
+      },
+      "reference": {
+        "sidebarX": 110,
+        "icon": 24,
+        "label": "17px",
+        "weight": "500",
+        "pitch": 56,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      },
+      "local": {
+        "sidebarX": 110,
+        "icon": 24,
+        "label": "17px",
+        "weight": "500",
+        "pitch": 56,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      }
+    },
+    {
+      "viewport": {
+        "width": 820,
+        "height": 1180
+      },
+      "reference": {
+        "sidebarX": 0,
+        "icon": 32,
+        "label": "11px",
+        "weight": "400",
+        "pitch": 83,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      },
+      "local": {
+        "sidebarX": 0,
+        "icon": 32,
+        "label": "11px",
+        "weight": "400",
+        "pitch": 83,
+        "iconTop": 32,
+        "active": "rgb(226, 226, 230)",
+        "inactive": "rgb(94, 94, 97)"
+      }
+    }
+  ],
+  "matrix": [
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1441
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 820,
+        "width": 1441
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 820,
+        "width": 1180
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 820
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "80px 652px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 767
+      },
+      "theme": "light",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 735,
+        "height": 735
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 768
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "80px 600px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 1023
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "80px 855px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 1024
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1279
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1280
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 900,
+        "width": 1441
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 901,
+        "width": 1441
+      },
+      "theme": "light",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 812,
+        "width": 375
+      },
+      "theme": "light",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 343,
+        "height": 349.984375
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 932,
+        "width": 430
+      },
+      "theme": "light",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(0, 0, 0)",
+      "inactive": "rgb(205, 205, 206)",
+      "hero": {
+        "width": 398,
+        "height": 398
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1441
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 820,
+        "width": 1441
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 820,
+        "width": 1180
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 820
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "80px 652px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 767
+      },
+      "theme": "dark",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 735,
+        "height": 735
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 768
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "80px 600px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 1023
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "80px 855px",
+      "font": "11px",
+      "weight": "400",
+      "icon": 32,
+      "pitch": 83,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 1180,
+        "width": 1024
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1279
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 958,
+        "width": 1280
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 900,
+        "width": 1441
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "164px 520px 164px",
+      "font": "17px",
+      "weight": "500",
+      "icon": 24,
+      "pitch": 56,
+      "iconTop": 32,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 480,
+        "height": 480
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 901,
+        "width": 1441
+      },
+      "theme": "dark",
+      "sidebarVisible": true,
+      "grid": "200px 588px 200px",
+      "font": "20px",
+      "weight": "500",
+      "icon": 32,
+      "pitch": 64,
+      "iconTop": 64,
+      "firstContentTop": 64,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 588,
+        "height": 588
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 812,
+        "width": 375
+      },
+      "theme": "dark",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 343,
+        "height": 349.984375
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    },
+    {
+      "viewport": {
+        "height": 932,
+        "width": 430
+      },
+      "theme": "dark",
+      "sidebarVisible": false,
+      "grid": "200px minmax(0px, 588px) 200px",
+      "font": "15px",
+      "weight": "500",
+      "icon": 0,
+      "pitch": null,
+      "iconTop": null,
+      "firstContentTop": 32,
+      "active": "rgb(226, 226, 230)",
+      "inactive": "rgb(94, 94, 97)",
+      "hero": {
+        "width": 398,
+        "height": 398
+      },
+      "checks": {
+        "viewport": true,
+        "overflow": true,
+        "calendar": true,
+        "images": true,
+        "metadata": true,
+        "sidebar": true,
+        "hero": true
+      }
+    }
+  ],
+  "carousel": [
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 820
+      },
+      "date": "2026-10-03",
+      "width": 480,
+      "height": 480,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 820
+      },
+      "date": "2026-10-02",
+      "width": 480,
+      "height": 480,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 820
+      },
+      "date": "2026-10-01",
+      "width": 480,
+      "height": 480,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 820
+      },
+      "date": "2026-09-30",
+      "width": 480,
+      "height": 480,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 820
+      },
+      "date": "2026-09-29",
+      "width": 480,
+      "height": 480,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "date": "2026-10-03",
+      "width": 588,
+      "height": 588,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "date": "2026-10-02",
+      "width": 588,
+      "height": 588,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "date": "2026-10-01",
+      "width": 588,
+      "height": 588,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "date": "2026-09-30",
+      "width": 588,
+      "height": 588,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    },
+    {
+      "viewport": {
+        "width": 1441,
+        "height": 958
+      },
+      "date": "2026-09-29",
+      "width": 588,
+      "height": 588,
+      "calendar": true,
+      "loaded": true,
+      "pass": true
+    }
+  ],
+  "interactions": [
+    {
+      "test": "phone menu open",
+      "pass": true
+    },
+    {
+      "test": "phone daily load more",
+      "before": 12,
+      "after": 16,
+      "pass": true
+    },
+    {
+      "test": "phone to tablet state",
+      "expected": 16,
+      "actual": 16,
+      "pass": true
+    },
+    {
+      "test": "tablet arrow to paper",
+      "pass": true
+    },
+    {
+      "test": "tablet arrow to tool",
+      "pass": true
+    },
+    {
+      "test": "phone Escape and focus",
+      "pass": true
+    },
+    {
+      "test": "phone full-height navigation",
+      "pass": true
+    },
+    {
+      "test": "desktop sticky navigation",
+      "pass": true
+    },
+    {
+      "test": "tablet sticky navigation",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Browser viewport emulation, not a physical iPad or phone.",
+    "Reference has five navigation items; Daily retains its four real categories.",
+    "Portrait tablet hero retains the previously approved central-card size; reference top-panel composition differs."
+  ],
+  "captureNote": "The first generic tablet screenshot was discarded because capture canvas did not follow the tab viewport. Final tablet proof uses Page.captureScreenshot with an explicit 820×1180 CSS clip.",
+  "toolIcon": {
+    "before": {
+      "path": {
+        "height": 19.3447265625,
+        "width": 19.3447265625,
+        "x": 0.757354736328125,
+        "y": 3.89788818359375
+      },
+      "svg": {
+        "height": 24,
+        "width": 24
+      }
+    },
+    "after": [
+      {
+        "menu": null,
+        "metadata": {
+          "color": "rgb(218, 40, 42)",
+          "path": {
+            "height": 19.00493512834821,
+            "width": 19.004987444196427,
+            "x": 2.9986397879464284,
+            "y": 1.9963727678571428
+          },
+          "size": 14,
+          "strokeInside": true
+        },
+        "sidebar": {
+          "color": "rgb(226, 226, 230)",
+          "path": {
+            "height": 19.004974365234375,
+            "width": 19.00495719909668,
+            "x": 2.998678207397461,
+            "y": 1.9963531494140625
+          },
+          "size": 32,
+          "strokeInside": true
+        },
+        "viewport": [
+          1441,
+          958
+        ]
+      },
+      {
+        "menu": null,
+        "metadata": {
+          "color": "rgb(218, 40, 42)",
+          "path": {
+            "height": 19.00493512834821,
+            "width": 19.004987444196427,
+            "x": 2.9986397879464284,
+            "y": 1.9963727678571428
+          },
+          "size": 14,
+          "strokeInside": true
+        },
+        "sidebar": {
+          "color": "rgb(226, 226, 230)",
+          "path": {
+            "height": 19.00494384765625,
+            "width": 19.004959106445312,
+            "x": 2.9986724853515625,
+            "y": 1.996368408203125
+          },
+          "size": 24,
+          "strokeInside": true
+        },
+        "viewport": [
+          1441,
+          820
+        ]
+      },
+      {
+        "menu": {
+          "color": "rgb(237, 237, 238)",
+          "path": {
+            "height": 19.00494384765625,
+            "width": 19.004959106445312,
+            "x": 2.9986801147460938,
+            "y": 1.996368408203125
+          },
+          "size": 24,
+          "strokeInside": true
+        },
+        "metadata": {
+          "color": "rgb(218, 40, 42)",
+          "path": {
+            "height": 19.0050048828125,
+            "width": 19.004959106445312,
+            "x": 2.9986724853515625,
+            "y": 1.996337890625
+          },
+          "size": 12,
+          "strokeInside": true
+        },
+        "sidebar": null,
+        "viewport": [
+          430,
+          932
+        ]
+      }
+    ],
+    "diagnosis": "Old path bounds: left 0.757, bottom 23.243 in a 24px viewBox. Half of the 1.7px stroke crosses the left and bottom edges. New inset path preserves a rounded wrench mouth and handle.",
+    "pass": true
+  }
+}

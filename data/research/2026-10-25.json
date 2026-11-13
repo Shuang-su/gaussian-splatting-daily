@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-25",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-25T00:00:00+08:00",
+    "end": "2026-10-26T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/3dgs-weather-brings-rain-and-snow-to-gaussian-splats",
+        "radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:39.559069+00:00",
+      "urls": [
+        "https://pryme8.github.io/splat-lab/"
+      ],
+      "candidateIds": [
+        "radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://pryme8.github.io/splat-lab/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:39.559069+00:00",
+          "sha256": "0c186c57e6b2f643e16485f3f9fe11a08e1788c7376c83fa6af91f04d1e7e86b",
+          "characters": 1903
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:25.423703+00:00",
+      "urls": [
+        "https://github.com/hh-hang/3dgs-weather",
+        "https://github.com/Pryme8/splat-lab"
+      ],
+      "candidateIds": [
+        "radiancefields.com/3dgs-weather-brings-rain-and-snow-to-gaussian-splats",
+        "radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/hh-hang/3dgs-weather",
+          "status": "unavailable",
+          "checkedAt": "2026-11-13T09:36:25.423703+00:00",
+          "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1147)>"
+        },
+        {
+          "url": "https://github.com/Pryme8/splat-lab",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:19.735797+00:00",
+          "sha256": "e494133d7872368ca2734ecaaf932330fbe8c5684c1623e7373af18b1d948f5c",
+          "characters": 8483
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/3dgs-weather-brings-rain-and-snow-to-gaussian-splats",
+      "title": "3DGS Weather 在网页扫描中加入天气",
+      "eventDate": "2026-10-25",
+      "reportDate": "2026-10-25",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/3dgs-weather-brings-rain-and-snow-to-gaussian-splats",
+        "https://github.com/hh-hang/3dgs-weather"
+      ],
+      "eventId": "radiancefields.com/3dgs-weather-brings-rain-and-snow-to-gaussian-splats"
+    },
+    {
+      "id": "radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab",
+      "title": "Splat Lab 在浏览器比较多种三维基元",
+      "eventDate": "2026-10-25",
+      "reportDate": "2026-10-25",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab",
+        "https://github.com/Pryme8/splat-lab",
+        "https://pryme8.github.io/splat-lab/"
+      ],
+      "eventId": "radiancefields.com/splat-lab-trains-four-splat-types-in-a-browser-tab"
+    }
+  ]
+}

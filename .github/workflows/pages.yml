@@ -1,0 +1,61 @@
+name: Deploy Horizon
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: horizon-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - run: npm ci --prefix site
+      - name: Validate complete publication
+        run: |
+          python scripts/validate_daily.py --all
+          python scripts/check_editorial.py --all
+          python scripts/validate_coverage.py --all
+          python scripts/validate_media.py
+          python -m unittest discover -s scripts/tests
+          python -m unittest discover -s tests
+          npm test --prefix site
+          npm run typecheck --prefix site
+          npm run lint:editorial --prefix site
+      - name: Build and verify static export
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
+        run: |
+          npm run build --prefix site
+          python scripts/verify_export.py
+          python scripts/stage_site.py
+      - name: Deploy independent Horizon site
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: npx --yes netlify-cli@27.17.0 deploy --prod --no-build --dir .codex-work/deploy/horizon-site --json > .codex-work/deploy/netlify-result.json
+      - name: Read back public deployment
+        env:
+          EXPECTED_SHA: ${{ github.sha }}
+        run: python scripts/verify_publication.py --commit "$EXPECTED_SHA" --output .codex-work/deploy/public-readback.json
+      - name: Preserve deployment and readback receipts
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: horizon-publication-${{ github.sha }}
+          path: |
+            .codex-work/deploy/netlify-result.json
+            .codex-work/deploy/public-readback.json
+          if-no-files-found: ignore

@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "mode": "retrospective",
+  "window": {
+    "start": "2026-10-20T00:00:00+08:00",
+    "end": "2026-10-21T00:00:00+08:00"
+  },
+  "reviewedAt": "2026-11-13T09:47:13.106Z",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:47:13.106Z",
+      "urls": [
+        "https://radiancefields.com/sitemap.xml"
+      ],
+      "candidateIds": [
+        "radiancefields.com/ahmad-emranian-releases-abu-align-and-train-a-free-desktop-app-for-camera-alignment-and-gaussian-splat-training",
+        "radiancefields.com/freegaussian-trains-gaussian-splats-from-raw-insta360-insv-files-and-ships-sim-ready-meshes",
+        "radiancefields.com/gaussian-splat-patch-merges-splat-objects-and-bakes-edits-permanently-in-blender",
+        "radiancefields.com/linker-vision-plans-urban-tree-planting-on-a-gaussian-splat-city-twin-with-mvrdv",
+        "radiancefields.com/share-pointclouds-studio-v2-7-turns-point-clouds-into-meshes-and-extends-cropping-to-3dgs",
+        "radiancefields.com/storysplat-2-5-adds-splat-clouds-light-shadows-and-a-webmcp-scene-agent",
+        "radiancefields.com/the-pixel-lab-ships-more-than-100-pirate-gaussian-splat-assets-in-davy-joness-locker",
+        "radiancefields.com/spark-2.4.0-reads-spz-v4-files-and-opens-paged-lod-to-custom-fetchers",
+        "radiancefields.com/colmap-wasm-runs-colmap-and-glomap-in-the-browser"
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:37:08.403330+00:00",
+      "urls": [
+        "https://www.freegaussian.ai/blog/insv-native-fisheye-gaussian-splatting",
+        "https://www.linkervision.com/post/linker-vision-announces-esg-agent-to-help-cities-plan-more-sustainable-urban-environments",
+        "https://www.share3dcam.com/en/app.html",
+        "https://storysplat.com/",
+        "https://www.thepixellab.net/3d-gaussian-splat-pack-davy-jones-locker"
+      ],
+      "candidateIds": [
+        "radiancefields.com/freegaussian-trains-gaussian-splats-from-raw-insta360-insv-files-and-ships-sim-ready-meshes",
+        "radiancefields.com/linker-vision-plans-urban-tree-planting-on-a-gaussian-splat-city-twin-with-mvrdv",
+        "radiancefields.com/share-pointclouds-studio-v2-7-turns-point-clouds-into-meshes-and-extends-cropping-to-3dgs",
+        "radiancefields.com/storysplat-2-5-adds-splat-clouds-light-shadows-and-a-webmcp-scene-agent",
+        "radiancefields.com/the-pixel-lab-ships-more-than-100-pirate-gaussian-splat-assets-in-davy-joness-locker"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://www.freegaussian.ai/blog/insv-native-fisheye-gaussian-splatting",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:56.630969+00:00",
+          "sha256": "402d3dfb1bb455e273b341fc328e608b8a561e08ed96102bdbbc282925472d70",
+          "characters": 8009
+        },
+        {
+          "url": "https://www.linkervision.com/post/linker-vision-announces-esg-agent-to-help-cities-plan-more-sustainable-urban-environments",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:06.321995+00:00",
+          "sha256": "028a98cc1488c512fb9e2ecf3d10d727bcf766bb6205b857a1d163c7d25b5c39",
+          "characters": 3768
+        },
+        {
+          "url": "https://www.share3dcam.com/en/app.html",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:06.447718+00:00",
+          "sha256": "fa37e13fe1477e72b05631324097ee0998a7e750606d586c9af4bd871f5b019e",
+          "characters": 12558
+        },
+        {
+          "url": "https://storysplat.com/",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:44.876319+00:00",
+          "sha256": "590e31a845c44bf805638077d68ad0aea500d5654c6c690b48a7287d59f1add3",
+          "characters": 7872
+        },
+        {
+          "url": "https://www.thepixellab.net/3d-gaussian-splat-pack-davy-jones-locker",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:37:08.403330+00:00",
+          "sha256": "885208b622f0cb670eef97907e8a2c1511ed7c0240101b4697dd43b466cd8d08",
+          "characters": 2974
+        }
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "research",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-13T09:36:33.245733+00:00",
+      "urls": [
+        "https://github.com/saemranian/abu-align-train/releases",
+        "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.1.15",
+        "https://github.com/sparkjsdev/spark/releases/tag/v2.4.0",
+        "https://github.com/obraia/colmap-wasm"
+      ],
+      "candidateIds": [
+        "radiancefields.com/ahmad-emranian-releases-abu-align-and-train-a-free-desktop-app-for-camera-alignment-and-gaussian-splat-training",
+        "radiancefields.com/gaussian-splat-patch-merges-splat-objects-and-bakes-edits-permanently-in-blender",
+        "radiancefields.com/spark-2.4.0-reads-spz-v4-files-and-opens-paged-lod-to-custom-fetchers",
+        "radiancefields.com/colmap-wasm-runs-colmap-and-glomap-in-the-browser"
+      ],
+      "coverageLevel": "linked-sources-only",
+      "results": [
+        {
+          "url": "https://github.com/saemranian/abu-align-train/releases",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:31.244323+00:00",
+          "sha256": "b6401c0c8bbffd31c34345340dc00d2ae2666e79100b7cb86a3d69e368ba05d9",
+          "characters": 6509
+        },
+        {
+          "url": "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.1.15",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:33.245733+00:00",
+          "sha256": "2baeac03f5f82f9a8626ac99fcf0e2896cea8da20bc18a2e62df22ee2c54175b",
+          "characters": 3100
+        },
+        {
+          "url": "https://github.com/sparkjsdev/spark/releases/tag/v2.4.0",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:32.215872+00:00",
+          "sha256": "e063e21ee3cea0556db06e5941f0c6335d40faee3617db3a38b73eed7737bc0f",
+          "characters": 5168
+        },
+        {
+          "url": "https://github.com/obraia/colmap-wasm",
+          "status": "retrieved",
+          "checkedAt": "2026-11-13T09:36:29.294899+00:00",
+          "sha256": "0f6fe29f820aa390b8f87e33fb1063feaf03f88aaec6d4b4624454f6eb03798a",
+          "characters": 8968
+        }
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "unchecked",
+      "gap": "本次历史修订未宣称逐日穷尽该来源；保留已有研究及可访问的关联一手材料，后续来源检查单独记录。"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "radiancefields.com/ahmad-emranian-releases-abu-align-and-train-a-free-desktop-app-for-camera-alignment-and-gaussian-splat-training",
+      "title": "Abu Align & Train 组织多种重建工具",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/ahmad-emranian-releases-abu-align-and-train-a-free-desktop-app-for-camera-alignment-and-gaussian-splat-training",
+        "https://github.com/saemranian/abu-align-train/releases"
+      ],
+      "eventId": "radiancefields.com/ahmad-emranian-releases-abu-align-and-train-a-free-desktop-app-for-camera-alignment-and-gaussian-splat-training"
+    },
+    {
+      "id": "radiancefields.com/freegaussian-trains-gaussian-splats-from-raw-insta360-insv-files-and-ships-sim-ready-meshes",
+      "title": "FreeGaussian 直接处理 Insta360 原始鱼眼文件",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/freegaussian-trains-gaussian-splats-from-raw-insta360-insv-files-and-ships-sim-ready-meshes",
+        "https://www.freegaussian.ai/blog/insv-native-fisheye-gaussian-splatting"
+      ],
+      "eventId": "radiancefields.com/freegaussian-trains-gaussian-splats-from-raw-insta360-insv-files-and-ships-sim-ready-meshes"
+    },
+    {
+      "id": "radiancefields.com/gaussian-splat-patch-merges-splat-objects-and-bakes-edits-permanently-in-blender",
+      "title": "Gaussian Splat Patch 增加合并与烘焙",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/gaussian-splat-patch-merges-splat-objects-and-bakes-edits-permanently-in-blender",
+        "https://github.com/timfennell/blender-splat-patch/releases/tag/v0.1.15"
+      ],
+      "eventId": "radiancefields.com/gaussian-splat-patch-merges-splat-objects-and-bakes-edits-permanently-in-blender"
+    },
+    {
+      "id": "radiancefields.com/linker-vision-plans-urban-tree-planting-on-a-gaussian-splat-city-twin-with-mvrdv",
+      "title": "Linker Vision 在城市三维记录中规划植树",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "important",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/linker-vision-plans-urban-tree-planting-on-a-gaussian-splat-city-twin-with-mvrdv",
+        "https://www.linkervision.com/post/linker-vision-announces-esg-agent-to-help-cities-plan-more-sustainable-urban-environments"
+      ],
+      "eventId": "radiancefields.com/linker-vision-plans-urban-tree-planting-on-a-gaussian-splat-city-twin-with-mvrdv"
+    },
+    {
+      "id": "radiancefields.com/share-pointclouds-studio-v2-7-turns-point-clouds-into-meshes-and-extends-cropping-to-3dgs",
+      "title": "SHARE PointClouds Studio 增加网格生成",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/share-pointclouds-studio-v2-7-turns-point-clouds-into-meshes-and-extends-cropping-to-3dgs",
+        "https://www.share3dcam.com/en/app.html"
+      ],
+      "eventId": "radiancefields.com/share-pointclouds-studio-v2-7-turns-point-clouds-into-meshes-and-extends-cropping-to-3dgs"
+    },
+    {
+      "id": "radiancefields.com/storysplat-2-5-adds-splat-clouds-light-shadows-and-a-webmcp-scene-agent",
+      "title": "StorySplat 加入阴影与场景代理",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/storysplat-2-5-adds-splat-clouds-light-shadows-and-a-webmcp-scene-agent",
+        "https://storysplat.com/"
+      ],
+      "eventId": "radiancefields.com/storysplat-2-5-adds-splat-clouds-light-shadows-and-a-webmcp-scene-agent"
+    },
+    {
+      "id": "radiancefields.com/the-pixel-lab-ships-more-than-100-pirate-gaussian-splat-assets-in-davy-joness-locker",
+      "title": "The Pixel Lab 发布海盗主题高斯素材包",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/the-pixel-lab-ships-more-than-100-pirate-gaussian-splat-assets-in-davy-joness-locker",
+        "https://www.thepixellab.net/3d-gaussian-splat-pack-davy-jones-locker"
+      ],
+      "eventId": "radiancefields.com/the-pixel-lab-ships-more-than-100-pirate-gaussian-splat-assets-in-davy-joness-locker"
+    },
+    {
+      "id": "radiancefields.com/spark-2.4.0-reads-spz-v4-files-and-opens-paged-lod-to-custom-fetchers",
+      "title": "Spark 2.4 支持 SPZ v4",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/spark-2.4.0-reads-spz-v4-files-and-opens-paged-lod-to-custom-fetchers",
+        "https://github.com/sparkjsdev/spark/releases/tag/v2.4.0"
+      ],
+      "eventId": "radiancefields.com/spark-2.4.0-reads-spz-v4-files-and-opens-paged-lod-to-custom-fetchers"
+    },
+    {
+      "id": "radiancefields.com/colmap-wasm-runs-colmap-and-glomap-in-the-browser",
+      "title": "colmap-wasm 在浏览器完成相机求解",
+      "eventDate": "2026-10-20",
+      "reportDate": "2026-10-20",
+      "importance": "standard",
+      "disposition": "included",
+      "reason": "原归档未保留此报道的独立阅读入口；按事件日期补收。",
+      "sources": [
+        "https://radiancefields.com/colmap-wasm-runs-colmap-and-glomap-in-the-browser",
+        "https://github.com/obraia/colmap-wasm"
+      ],
+      "eventId": "radiancefields.com/colmap-wasm-runs-colmap-and-glomap-in-the-browser"
+    }
+  ]
+}
