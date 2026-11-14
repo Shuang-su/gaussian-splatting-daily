@@ -1,7 +1,339 @@
 {
   "schemaVersion": 1,
-  "updatedThrough": "2026-11-13",
+  "updatedThrough": "2026-11-14",
   "daily": [
+    {
+      "id": "gsd-2026-11-14",
+      "contentHash": "fb7f7a6899f56bd6cb79b8a09d801b0243b9651885a71a3436820e960407ba0b",
+      "date": "2026-11-14",
+      "title": "Horizon 行业日报 — 2026-11-14",
+      "headline": "SuperSplat 开始编排动态高斯，LichtFeld 把裁剪与文字选区带入主干",
+      "summary": "GSAF 动态资产可以进入 SuperSplat 时间线并与多段序列同时播放；LichtFeld 的非破坏裁剪和文本遮罩减少扫描清理中的返工。三项能力都尚未正式发版，适合锁定提交测试。",
+      "status": "published",
+      "path": "docs/daily/2026/11/2026-11-14.md",
+      "sourceCount": 5,
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "highlights": [
+        {
+          "id": "github.com/playcanvas/supersplat/pull/1108",
+          "anchor": "event-c8bd6da4e505",
+          "kind": "tool",
+          "source": "https://github.com/playcanvas/supersplat/pull/1108",
+          "title": "SuperSplat 开始编排动态高斯",
+          "summary": "SuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3886",
+          "anchor": "event-558b26d5b7b7",
+          "kind": "tool",
+          "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3886",
+          "title": "LichtFeld 把裁剪变成可撤销的编辑状态",
+          "summary": "LichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4057",
+          "anchor": "event-8a0091ec4cf0",
+          "kind": "tool",
+          "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4057",
+          "title": "LichtFeld 用文字生成对象遮罩候选",
+          "summary": "文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "hexagon-mantis-2026-11-12",
+          "anchor": "event-0e1884dbc7d1",
+          "kind": "news",
+          "source": "https://hexagon.com/about/news-media/press-releases/2026/hexagon-launches-mantis-to-capture-3d-scene-data-as-cameras-roll",
+          "title": "Leica MANTIS 同步采集镜头、深度与相机运动",
+          "summary": "Leica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "arxiv:2611.15153",
+          "anchor": "event-5892a2d6cabd",
+          "kind": "paper",
+          "source": "https://arxiv.org/abs/2611.15153",
+          "title": "MatrixSplat 用 Tensor Core 加速高维特征渲染",
+          "summary": "MatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/playcanvas/supersplat/pull/1107",
+          "anchor": "event-35abccdb99e8",
+          "kind": "tool",
+          "source": "https://github.com/playcanvas/supersplat/pull/1107",
+          "title": "SuperSplat 批量导入不再被无关文件拖垮",
+          "summary": "多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/playcanvas/engine/pull/10021",
+          "anchor": "event-feafcce3999f",
+          "kind": "tool",
+          "source": "https://github.com/playcanvas/engine/pull/10021",
+          "title": "PlayCanvas 修复设备恢复后的高斯阴影",
+          "summary": "WebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/playcanvas/supersplat-viewer/pull/366",
+          "anchor": "event-baed662a795b",
+          "kind": "tool",
+          "source": "https://github.com/playcanvas/supersplat-viewer/pull/366",
+          "title": "Viewer 把注释创作上限提高到 50",
+          "summary": "SuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4061",
+          "anchor": "event-89bd414d02fd",
+          "kind": "tool",
+          "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4061",
+          "title": "LichtFeld 缩短部分 SOG 球谐导出",
+          "summary": "LichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "niantic-physical-ai-place-2026-11-12",
+          "anchor": "event-c24785a3cb1b",
+          "kind": "news",
+          "source": "https://www.nianticspatial.com/blog/physical-ai-in-its-place",
+          "title": "Niantic 展示不依赖专门扫描的城市级定位",
+          "summary": "Niantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "prevu3d-2026-outline",
+          "anchor": "event-32376c3a4880",
+          "kind": "news",
+          "source": "https://doc.prevu3d.com/en/release-notes/2026/",
+          "title": "Prevu3D 为高斯资产加入轮廓显示",
+          "summary": "Prevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "arxiv:2611.16012",
+          "anchor": "event-19d7bd64614b",
+          "kind": "paper",
+          "source": "https://arxiv.org/abs/2611.16012",
+          "title": "TopoEgo 表示 4D 场景中的分裂与融合",
+          "summary": "TopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "arxiv:2611.16259",
+          "anchor": "event-723a0fa73d35",
+          "kind": "paper",
+          "source": "https://arxiv.org/abs/2611.16259",
+          "title": "ReCan-GS 分离稳定场景与视角相关干扰",
+          "summary": "ReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "arxiv:2611.16840",
+          "anchor": "event-7df60433af7c",
+          "kind": "paper",
+          "source": "https://arxiv.org/abs/2611.16840",
+          "title": "Kosmo-GFM 组织几何预测与位姿优化",
+          "summary": "Kosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        },
+        {
+          "id": "arxiv:2611.15435",
+          "anchor": "event-4f9067ab1b91",
+          "kind": "paper",
+          "source": "https://arxiv.org/abs/2611.15435",
+          "title": "ThermalSplat 面向无 RGB 的稀疏热成像重建",
+          "summary": "ThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。",
+          "date": "2026-11-14",
+          "topics": [
+            "capture",
+            "spatial-ai",
+            "xr",
+            "industry",
+            "3dgs",
+            "4dgs",
+            "webgpu",
+            "slam",
+            "formats"
+          ]
+        }
+      ],
+      "prs": [],
+      "readingMinutes": 4,
+      "unresolvedSources": 0,
+      "editorialDisclosure": "Codex 依据本期原始研究记录编辑阅读版。来源和版本状态以当期记录为准，未独立运行软件、复现论文实验或进行设备验收。",
+      "readingEdition": {
+        "path": "docs/reading/2026-11-14.md",
+        "contentHash": "dfce40dd7e137a2d731ae1ae6b33f18ca63ab5799deab1b56d5b4d7623d6bd7e"
+      }
+    },
     {
       "id": "gsd-2026-11-13",
       "contentHash": "1799278febe23a5c1a8270ffd71575b038a335d09f6c043a114fd40611030da0",
@@ -16932,6 +17264,258 @@
   ],
   "entries": [
     {
+      "id": "arxiv:2611.15153",
+      "kind": "paper",
+      "date": "2026-11-14",
+      "title": "MatrixSplat: Tensor-Core Matrix-Parallel Gaussian Splatting",
+      "summary": "MatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。",
+      "source": "https://arxiv.org/abs/2611.15153",
+      "anchor": "event-5892a2d6cabd",
+      "topics": []
+    },
+    {
+      "id": "arxiv:2611.15435",
+      "kind": "paper",
+      "date": "2026-11-14",
+      "title": "ThermalSplat",
+      "summary": "ThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。",
+      "source": "https://arxiv.org/abs/2611.15435",
+      "anchor": "event-4f9067ab1b91",
+      "topics": []
+    },
+    {
+      "id": "arxiv:2611.16012",
+      "kind": "paper",
+      "date": "2026-11-14",
+      "title": "Topology-Aware 4D Gaussian Splatting for Egocentric Videos",
+      "summary": "TopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。",
+      "source": "https://arxiv.org/abs/2611.16012",
+      "anchor": "event-19d7bd64614b",
+      "topics": [
+        "3dgs"
+      ]
+    },
+    {
+      "id": "arxiv:2611.16259",
+      "kind": "paper",
+      "date": "2026-11-14",
+      "title": "Reconstruct What You Can: Distractor-free 4D Gaussian Splatting",
+      "summary": "ReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。",
+      "source": "https://arxiv.org/abs/2611.16259",
+      "anchor": "event-723a0fa73d35",
+      "topics": []
+    },
+    {
+      "id": "arxiv:2611.16840",
+      "kind": "paper",
+      "date": "2026-11-14",
+      "title": "Kosmo-GFM: A Production-Ready Geometry Foundation Model",
+      "summary": "Kosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。",
+      "source": "https://arxiv.org/abs/2611.16840",
+      "anchor": "event-7df60433af7c",
+      "topics": []
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3886",
+      "anchor": "event-558b26d5b7b7",
+      "kind": "tool",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/3886",
+      "title": "LichtFeld 把裁剪变成可撤销的编辑状态",
+      "summary": "LichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4057",
+      "anchor": "event-8a0091ec4cf0",
+      "kind": "tool",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4057",
+      "title": "LichtFeld 用文字生成对象遮罩候选",
+      "summary": "文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4061",
+      "anchor": "event-89bd414d02fd",
+      "kind": "tool",
+      "source": "https://github.com/MrNeRF/LichtFeld-Studio/pull/4061",
+      "title": "LichtFeld 缩短部分 SOG 球谐导出",
+      "summary": "LichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/10021",
+      "anchor": "event-feafcce3999f",
+      "kind": "tool",
+      "source": "https://github.com/playcanvas/engine/pull/10021",
+      "title": "PlayCanvas 修复设备恢复后的高斯阴影",
+      "summary": "WebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/366",
+      "anchor": "event-baed662a795b",
+      "kind": "tool",
+      "source": "https://github.com/playcanvas/supersplat-viewer/pull/366",
+      "title": "Viewer 把注释创作上限提高到 50",
+      "summary": "SuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/pull/1107",
+      "anchor": "event-35abccdb99e8",
+      "kind": "tool",
+      "source": "https://github.com/playcanvas/supersplat/pull/1107",
+      "title": "SuperSplat 批量导入不再被无关文件拖垮",
+      "summary": "多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/pull/1108",
+      "anchor": "event-c8bd6da4e505",
+      "kind": "tool",
+      "source": "https://github.com/playcanvas/supersplat/pull/1108",
+      "title": "SuperSplat 开始编排动态高斯",
+      "summary": "SuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "hexagon-mantis-2026-11-12",
+      "anchor": "event-0e1884dbc7d1",
+      "kind": "news",
+      "source": "https://hexagon.com/about/news-media/press-releases/2026/hexagon-launches-mantis-to-capture-3d-scene-data-as-cameras-roll",
+      "title": "Leica MANTIS 同步采集镜头、深度与相机运动",
+      "summary": "Leica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "niantic-physical-ai-place-2026-11-12",
+      "anchor": "event-c24785a3cb1b",
+      "kind": "news",
+      "source": "https://www.nianticspatial.com/blog/physical-ai-in-its-place",
+      "title": "Niantic 展示不依赖专门扫描的城市级定位",
+      "summary": "Niantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
+      "id": "prevu3d-2026-outline",
+      "anchor": "event-32376c3a4880",
+      "kind": "news",
+      "source": "https://doc.prevu3d.com/en/release-notes/2026/",
+      "title": "Prevu3D 为高斯资产加入轮廓显示",
+      "summary": "Prevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ]
+    },
+    {
       "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12",
       "anchor": "event-06fa9f081d60",
       "kind": "tool",
@@ -29772,6 +30356,26 @@
   ],
   "search": [
     {
+      "id": "gsd-2026-11-14",
+      "kind": "daily",
+      "title": "SuperSplat 开始编排动态高斯，LichtFeld 把裁剪与文字选区带入主干",
+      "summary": "GSAF 动态资产可以进入 SuperSplat 时间线并与多段序列同时播放；LichtFeld 的非破坏裁剪和文本遮罩减少扫描清理中的返工。三项能力都尚未正式发版，适合锁定提交测试。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/",
+      "text": "SuperSplat 开始编排动态高斯\nSuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。\n用户可以通过拖放、文件选择器、最近导入和 URL 参数打开 .gsaf，选择保留为序列或拆成独立帧。较短序列会停在末帧，播放途中加入的序列从当前播放头开始。视频导出也会在帧变化后重新排序，修正 360° 导出错帧的竞态。\n功能与测试边界\nLichtFeld 把裁剪变成可撤销的编辑状态\nLichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。\n盒体、椭球和多边形裁剪可以叠加，也可以反转为排除区域。只有用户执行 Bake 后，点才被永久删除。维护者完整测试的是 Windows、CUDA 12.8 和 RTX 5060 Ti；Linux 尚缺等价的全应用 GPU 验证。\n实现与平台测试\nLichtFeld 用文字生成对象遮罩候选\n文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。\n这条路径使用原生 CUDA 算子，不需要 Torch 或 ONNX Runtime。模型下载后会校验 SHA-256。它适合把“人物”“车辆”等英文描述变成初始候选，但不能替代人工审核，也不会在目标消失又出现时自动重新发现。\n功能与限制\nLeica MANTIS 同步采集镜头、深度与相机运动\nLeica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。\n配套软件计划输出 LiDAR 修正深度、相机轨迹、位置数据和点云，格式包括 EXR、FBX 与 Alembic。它不是高斯训练器，但输出可能直接进入重建、合成和空间内容管线。\n官方发布\nMatrixSplat 用 Tensor Core 加速高维特征渲染\nMatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。\n这条路线更直接影响语言高斯、开放词汇语义和中间特征渲染。复现时需要固定通道数、分辨率、Gaussian 数和质量指标，并区分 kernel 时间与端到端帧时间。\n论文原文\nSuperSplat 批量导入不再被无关文件拖垮\n多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。\n合并记录\nPlayCanvas 修复设备恢复后的高斯阴影\nWebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。\n合并记录\nViewer 把注释创作上限提高到 50\nSuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。\n合并记录\nLichtFeld 缩短部分 SOG 球谐导出\nLichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。\n实现与作者基准\nNiantic 展示不依赖专门扫描的城市级定位\nNiantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。\n官方说明\nPrevu3D 为高斯资产加入轮廓显示\nPrevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。\n发布记录\nTopoEgo 表示 4D 场景中的分裂与融合\nTopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。\n论文原文 · 项目页\nReCan-GS 分离稳定场景与视角相关干扰\nReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。\n论文原文\nKosmo-GFM 组织几何预测与位姿优化\nKosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。\n论文原文\nThermalSplat 面向无 RGB 的稀疏热成像重建\nThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。\n论文原文"
+    },
+    {
       "id": "gsd-2026-11-13",
       "kind": "daily",
       "title": "SuperSplat 修复模型发雾与透明度导出，SOG v3 工具链同步更新",
@@ -31013,6 +31617,258 @@
       ],
       "url": "/daily/2026/09/18/",
       "text": "Blender 加固 PLY/SPZ 导入并统一高斯默认属性\nBlender 的高斯导入代码补上了异常文件与缺失属性的处理。PLY 中用于描述视角相关颜色的球谐系数按颜色通道排列；旧实现遇到不完整的系数层级时，可能读错红、绿、蓝通道的位置，导致颜色异常。\n此次修复按文件实际提供的系数计算偏移，并为不支持的属性数量给出警告。另一项修复让 Cycles 在缺少颜色、缩放或旋转属性时采用与 EEVEE 一致的默认值，减少同一资产在两个渲染器中表现不同的问题。历史记录中的部分提交还缺直接的一手回链，具体核对状态见研究归档。\n导入时需要检查哪些属性文件能打开，只能证明解析流程走通。交换资产时还应核对位置、缩放、旋转、不透明度、球谐系数的排列及坐标约定。此次记录的导入边界包括最高四阶球谐、最多 72 个 f_rest 属性；不完整层级采用可用部分并警告。\n来源\nPlayCanvas 跳过缓存阴影计算并修正阴影更新调度\nPlayCanvas Engine 调整了高斯阴影的计算时机。灯光的阴影已经缓存、无需重新绘制时，现在可以跳过数据上传、变换刷新和候选高斯剔除等准备工作。\n后续调度修复又把方向光的剔除请求绑定到实际启用的阴影通道，减少没有安排重绘却仍进行计算的情况。收益主要面向静态场景与缓存阴影；只有应用使用了相应高斯阴影路径，升级才可能影响这部分开销。\n来源\nArcturus Vision 公开空间视频到 SOG 的转换脚本\nArcturus Vision 公开了一套把空间视频转为 SOG 高斯场景的脚本。它利用双目视频随附的标定和轨迹，整理出 COLMAP 场景，再调用 LichtFeld 训练，最后输出可供查看器使用的文件。\n这项内容发布于 9 月 16 日，本期属于补收。官方目标环境为 Linux 工作站，并依赖 NVIDIA GPU、COLMAP 和 LichtFeld；脚本可下载，但当期尚未确认明确的开源许可证。\n采集与训练条件记录中的要求包括 NVIDIA Compute Capability 7.5 及以上、570 系列及以上驱动和 uv。默认采用半分辨率训练，上限为 150 万高斯；全分辨率、断点恢复和无界面运行需使用相应参数。双目轨迹提供了初始化条件，仍需检查标定、同步与最终几何质量。\n来源\nPrecisionReach-GS 公开机器人抓取代码与双视图查看器\nPrecisionReach-GS 公开了从实景重建到机器人观察数据生成的一段工作流。项目把 COLMAP 与高斯场景对齐到机器人基座坐标系，随后生成腕部相机轨迹及对应的末端执行器位姿，用于视觉、语言与动作模型的数据准备。\n随附查看器可以同时呈现腕部相机和第三人称视角，并导出视频与逐帧位姿。公开内容不包含完整数据集、训练策略和最终实验输出；当期仓库也未声明许可证，因此不能据此声称最终抓取成功率已经可复现。\n来源\nLichtFeld 修复工程管理、Gallery 同步与主题显示\nLichtFeld 的更新集中在工程管理界面：Inspector 改为按需覆盖显示，列表只在可见行或列数变化时重建，Gallery 重连失败也有了集中提示和明确的重试入口。\n这些改动改善大量项目的浏览和同步过程。另有主题、透明度显示修复，均属于界面与工程管理调整，不代表训练算法或重建质量发生变化。\n来源\nCorbeauSplat 修正动态重建的相机配准\nCorbeauSplat 把 Mac 上的相机配准、训练和编辑工具串在一起。2.0.0-beta.4 修正了动态重建时把不同时间的所有画面一起交给 COLMAP 的问题，改为先取各相机的同一参考时刻。它解决的是重建输入错误，仍属于预发布版。\n报道与来源 · 原始材料\nfVDB 将高斯接口迁入 Reality Capture\nfVDB 0.6 将高层高斯 Python 接口迁到 fVDB Reality Capture，底层 CUDA 运算继续保留。直接从旧模块导入训练或渲染接口的程序需要调整；新版本还加入多 GPU 3DGUT 支持。升级前应先检查调用路径，不能只替换包版本。\n报道与来源 · 原始材料\nNormLift 用跨视角一致性改善语义判断\nNormLift 将不同视角的视觉语言特征映射回三维，再用聚合特征的强度估计这些观察是否一致。这个信号用于细化语义投票，关注的是物体含义的可靠性，而非单纯提高画面分辨率。\n来源\nGeometry beneath the Waves 改善水下稀疏视角重建\n利用密集几何先验改善水下稀疏视角高斯重建的初始化。可运行的官方代码尚未明确。\n来源\n面部关键点引导的高斯说话头像研究\n这项研究用面部关键点引导高斯说话头像合成，关注表情与口型如何驱动外观。它是此前已有的论文，本期收录不代表 9 月 18 日新提交；具体方法和公开状态保留在研究归档中。\n来源\nThree.js 原生高斯渲染仍需区分显示与完整工作流\nThree.js r186 的原生高斯路径让场景显示更方便，但选型时仍需分别核对层次细节、流式加载和后处理支持。历史记录把它与 Spark、PlayCanvas 的能力边界放在一起讨论；“原生支持”这一标签本身不足以说明大场景交付条件。\n这部分作为当时的工程观察保留，具体限制与待补来源见研究归档。\n来源"
+    },
+    {
+      "id": "arxiv:2611.15153",
+      "kind": "paper",
+      "title": "MatrixSplat: Tensor-Core Matrix-Parallel Gaussian Splatting",
+      "summary": "MatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。",
+      "date": "2026-11-14",
+      "topics": [],
+      "url": "/daily/2026/11/14/#event-5892a2d6cabd",
+      "text": "MatrixSplat: Tensor-Core Matrix-Parallel Gaussian Splatting MatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。 https://arxiv.org/abs/2611.15153 MatrixSplat 用 Tensor Core 加速高维特征渲染 ## MatrixSplat 用 Tensor Core 加速高维特征渲染\n\nMatrixSplat 把高维 Gaussian 特征贡献组织为 Tensor Core 矩阵运算，并以顺序无关加权换取并行性。作者报告的倍数来自特定数据集、通道数和 GPU 条件；没有公开代码时，不能把 kernel 加速直接写成普通 RGB viewer 的整体帧率。\n\n这条路线更直接影响语言高斯、开放词汇语义和中间特征渲染。复现时需要固定通道数、分辨率、Gaussian 数和质量指标，并区分 kernel 时间与端到端帧时间。\n\n[论文原文](https://arxiv.org/abs/2611.15153)"
+    },
+    {
+      "id": "arxiv:2611.15435",
+      "kind": "paper",
+      "title": "ThermalSplat",
+      "summary": "ThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。",
+      "date": "2026-11-14",
+      "topics": [],
+      "url": "/daily/2026/11/14/#event-4f9067ab1b91",
+      "text": "ThermalSplat ThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。 https://arxiv.org/abs/2611.15435 ThermalSplat 面向无 RGB 的稀疏热成像重建 ## ThermalSplat 面向无 RGB 的稀疏热成像重建\n\nThermalSplat 从稀疏热红外图像前馈生成 Gaussian，不要求 RGB、已知相机位姿或逐场景优化。它针对热成像低纹理与强度差异设计损失，但当前未找到代码、权重或独立设备测试。\n\n[论文原文](https://arxiv.org/abs/2611.15435)"
+    },
+    {
+      "id": "arxiv:2611.16012",
+      "kind": "paper",
+      "title": "Topology-Aware 4D Gaussian Splatting for Egocentric Videos",
+      "summary": "TopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。",
+      "date": "2026-11-14",
+      "topics": [
+        "3dgs"
+      ],
+      "url": "/daily/2026/11/14/#event-19d7bd64614b",
+      "text": "Topology-Aware 4D Gaussian Splatting for Egocentric Videos TopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。 https://arxiv.org/abs/2611.16012 TopoEgo 表示 4D 场景中的分裂与融合 ## TopoEgo 表示 4D 场景中的分裂与融合\n\nTopoEgo 用部件级刚体运动和随时间变化的 Gaussian 激活状态表示断开、合并、打开和关闭，处理连续形变场难以表达的拓扑变化。项目页写明代码与数据将公开，但本次核查仍是论文无代码。\n\n[论文原文](https://arxiv.org/abs/2611.16012) · [项目页](https://topoego.github.io/)"
+    },
+    {
+      "id": "arxiv:2611.16259",
+      "kind": "paper",
+      "title": "Reconstruct What You Can: Distractor-free 4D Gaussian Splatting",
+      "summary": "ReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。",
+      "date": "2026-11-14",
+      "topics": [],
+      "url": "/daily/2026/11/14/#event-723a0fa73d35",
+      "text": "Reconstruct What You Can: Distractor-free 4D Gaussian Splatting ReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。 https://arxiv.org/abs/2611.16259 ReCan-GS 分离稳定场景与视角相关干扰 ## ReCan-GS 分离稳定场景与视角相关干扰\n\nReCan-GS 通过形变敏感度区分跨视角一致的核心与每个视角的干扰 Gaussian，目标是无需外部分割器或人工遮罩地去除遮挡、反射、烟雾和薄雾。当前未找到官方代码或权重。\n\n[论文原文](https://arxiv.org/abs/2611.16259)"
+    },
+    {
+      "id": "arxiv:2611.16840",
+      "kind": "paper",
+      "title": "Kosmo-GFM: A Production-Ready Geometry Foundation Model",
+      "summary": "Kosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。",
+      "date": "2026-11-14",
+      "topics": [],
+      "url": "/daily/2026/11/14/#event-7df60433af7c",
+      "text": "Kosmo-GFM: A Production-Ready Geometry Foundation Model Kosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。 https://arxiv.org/abs/2611.16840 Kosmo-GFM 组织几何预测与位姿优化 ## Kosmo-GFM 组织几何预测与位姿优化\n\nKosmo-GFM 把相机、深度、对应关系和动态点预测，与后续位姿及几何优化组织成一条重建管线。论文给出 34 个场景的累计耗时，但这是作者汇总，不是第三方生产评测；当前也没有公开实现可供复核。\n\n[论文原文](https://arxiv.org/abs/2611.16840)"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/3886",
+      "kind": "tool",
+      "title": "LichtFeld 把裁剪变成可撤销的编辑状态",
+      "summary": "LichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-558b26d5b7b7",
+      "text": "LichtFeld 把裁剪变成可撤销的编辑状态 LichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。 https://github.com/MrNeRF/LichtFeld-Studio/pull/3886 LichtFeld 把裁剪变成可撤销的编辑状态 ## LichtFeld 把裁剪变成可撤销的编辑状态\n\nLichtFeld 将裁剪从立即删除改为可开关、可撤销、可延后烘焙的编辑状态，适合反复调整扫描边界和生成多个交付范围。当前范围是单个 splat 对象，组与混合选择尚不支持。\n\n盒体、椭球和多边形裁剪可以叠加，也可以反转为排除区域。只有用户执行 Bake 后，点才被永久删除。维护者完整测试的是 Windows、CUDA 12.8 和 RTX 5060 Ti；Linux 尚缺等价的全应用 GPU 验证。\n\n[实现与平台测试](https://github.com/MrNeRF/LichtFeld-Studio/pull/3886)"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4057",
+      "kind": "tool",
+      "title": "LichtFeld 用文字生成对象遮罩候选",
+      "summary": "文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-8a0091ec4cf0",
+      "text": "LichtFeld 用文字生成对象遮罩候选 文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。 https://github.com/MrNeRF/LichtFeld-Studio/pull/4057 LichtFeld 用文字生成对象遮罩候选 ## LichtFeld 用文字生成对象遮罩候选\n\n文本类别检测现在可以为 SAM 2.1 提供候选遮罩，减少逐帧点选。系统仍要求人工确认，而且只在当前帧重新检测；误检、目标重现和 CUDA 依赖是实际采用前必须验证的边界。\n\n这条路径使用原生 CUDA 算子，不需要 Torch 或 ONNX Runtime。模型下载后会校验 SHA-256。它适合把“人物”“车辆”等英文描述变成初始候选，但不能替代人工审核，也不会在目标消失又出现时自动重新发现。\n\n[功能与限制](https://github.com/MrNeRF/LichtFeld-Studio/pull/4057)"
+    },
+    {
+      "id": "github.com/MrNeRF/LichtFeld-Studio/pull/4061",
+      "kind": "tool",
+      "title": "LichtFeld 缩短部分 SOG 球谐导出",
+      "summary": "LichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-89bd414d02fd",
+      "text": "LichtFeld 缩短部分 SOG 球谐导出 LichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。 https://github.com/MrNeRF/LichtFeld-Studio/pull/4061 LichtFeld 缩短部分 SOG 球谐导出 ## LichtFeld 缩短部分 SOG 球谐导出\n\nLichtFeld 以 e-means 替换高阶球谐调色板的 k-means。作者在 RTX 4090 与 4 个场景上报告 SH1、SH2 导出明显缩短，但 SH3 基本不变；图像编码成为新瓶颈，不能概括成所有 SOG 导出都更快。\n\n[实现与作者基准](https://github.com/MrNeRF/LichtFeld-Studio/pull/4061)"
+    },
+    {
+      "id": "github.com/playcanvas/engine/pull/10021",
+      "kind": "tool",
+      "title": "PlayCanvas 修复设备恢复后的高斯阴影",
+      "summary": "WebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-feafcce3999f",
+      "text": "PlayCanvas 修复设备恢复后的高斯阴影 WebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。 https://github.com/playcanvas/engine/pull/10021 PlayCanvas 修复设备恢复后的高斯阴影 ## PlayCanvas 修复设备恢复后的高斯阴影\n\nWebGL2 或 WebGPU 图形设备丢失后，GPU sort 会重传必要数据，CPU sort 会重新应用最后一次排序，避免恢复首帧把高斯阴影缓存成白色。代价是 CPU 路径会保留一份排序大小的缓冲。\n\n[合并记录](https://github.com/playcanvas/engine/pull/10021)"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat-viewer/pull/366",
+      "kind": "tool",
+      "title": "Viewer 把注释创作上限提高到 50",
+      "summary": "SuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-baed662a795b",
+      "text": "Viewer 把注释创作上限提高到 50 SuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。 https://github.com/playcanvas/supersplat-viewer/pull/366 Viewer 把注释创作上限提高到 50 ## Viewer 把注释创作上限提高到 50\n\nSuperSplat Viewer 的导出校验现在允许 50 条注释。播放端原本就能显示超过 25 条，因此这不是渲染器扩容，而是创作端限制放宽；标题和正文长度上限没有变化。\n\n[合并记录](https://github.com/playcanvas/supersplat-viewer/pull/366)"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/pull/1107",
+      "kind": "tool",
+      "title": "SuperSplat 批量导入不再被无关文件拖垮",
+      "summary": "多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-35abccdb99e8",
+      "text": "SuperSplat 批量导入不再被无关文件拖垮 多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。 https://github.com/playcanvas/supersplat/pull/1107 SuperSplat 批量导入不再被无关文件拖垮 ## SuperSplat 批量导入不再被无关文件拖垮\n\n多文件导入现在会先识别 PLY 序列、SOG、LCC、项目文件及其配套文件，夹杂一份不支持的文件不会让整批失败。真实操作系统拖放以及 SOG、LCC 的完整审阅路径仍待补测。\n\n[合并记录](https://github.com/playcanvas/supersplat/pull/1107)"
+    },
+    {
+      "id": "github.com/playcanvas/supersplat/pull/1108",
+      "kind": "tool",
+      "title": "SuperSplat 开始编排动态高斯",
+      "summary": "SuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-c8bd6da4e505",
+      "text": "SuperSplat 开始编排动态高斯 SuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。 https://github.com/playcanvas/supersplat/pull/1108 SuperSplat 开始编排动态高斯 ## SuperSplat 开始编排动态高斯\n\nSuperSplat 首次把 GSAF 动态高斯作为时间线序列导入，并能同时播放多段序列。它把动态资产从单独播放器带进编辑与视频输出流程，但目前只是主干合并，仍有系统拖放、最终视频和 PWA 文件关联等未测边界。\n\n用户可以通过拖放、文件选择器、最近导入和 URL 参数打开 `.gsaf`，选择保留为序列或拆成独立帧。较短序列会停在末帧，播放途中加入的序列从当前播放头开始。视频导出也会在帧变化后重新排序，修正 360° 导出错帧的竞态。\n\n[功能与测试边界](https://github.com/playcanvas/supersplat/pull/1108)"
+    },
+    {
+      "id": "hexagon-mantis-2026-11-12",
+      "kind": "news",
+      "title": "Leica MANTIS 同步采集镜头、深度与相机运动",
+      "summary": "Leica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-0e1884dbc7d1",
+      "text": "Leica MANTIS 同步采集镜头、深度与相机运动 Leica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。 https://hexagon.com/about/news-media/press-releases/2026/hexagon-launches-mantis-to-capture-3d-scene-data-as-cameras-roll Leica MANTIS 同步采集镜头、深度与相机运动 ## Leica MANTIS 同步采集镜头、深度与相机运动\n\nLeica MANTIS 在拍摄过程中同步采集场景几何和相机运动，试图把影视现场的数据准备前移。它计划 2027 年第一季度出货，价格、精度、支持机型和现场基准尚未公开，现阶段只能按产品发布而非交付能力评估。\n\n配套软件计划输出 LiDAR 修正深度、相机轨迹、位置数据和点云，格式包括 EXR、FBX 与 Alembic。它不是高斯训练器，但输出可能直接进入重建、合成和空间内容管线。\n\n[官方发布](https://hexagon.com/about/news-media/press-releases/2026/hexagon-launches-mantis-to-capture-3d-scene-data-as-cameras-roll)"
+    },
+    {
+      "id": "niantic-physical-ai-place-2026-11-12",
+      "kind": "news",
+      "title": "Niantic 展示不依赖专门扫描的城市级定位",
+      "summary": "Niantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-c24785a3cb1b",
+      "text": "Niantic 展示不依赖专门扫描的城市级定位 Niantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。 https://www.nianticspatial.com/blog/physical-ai-in-its-place Niantic 展示不依赖专门扫描的城市级定位 ## Niantic 展示不依赖专门扫描的城市级定位\n\nNiantic Spatial 把地面相机画面与卫星图和数字地图匹配，返回带不确定度的位置和朝向候选，并可与 SLAM、IMU 或里程计融合。当前公开的是定位能力，不是直接返回完整三维重建。\n\n[官方说明](https://www.nianticspatial.com/blog/physical-ai-in-its-place)"
+    },
+    {
+      "id": "prevu3d-2026-outline",
+      "kind": "news",
+      "title": "Prevu3D 为高斯资产加入轮廓显示",
+      "summary": "Prevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。",
+      "date": "2026-11-14",
+      "topics": [
+        "capture",
+        "spatial-ai",
+        "xr",
+        "industry",
+        "3dgs",
+        "4dgs",
+        "webgpu",
+        "slam",
+        "formats"
+      ],
+      "url": "/daily/2026/11/14/#event-32376c3a4880",
+      "text": "Prevu3D 为高斯资产加入轮廓显示 Prevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。 https://doc.prevu3d.com/en/release-notes/2026/ Prevu3D 为高斯资产加入轮廓显示 ## Prevu3D 为高斯资产加入轮廓显示\n\nPrevu3D 的 2026 更新记录写明 Gaussian splat 可以显示轮廓，RealityComposer 中的资产也在范围内。官方没有同时给出独立版本号、性能数据或价格变化，本期仅按发布说明记录。\n\n[发布记录](https://doc.prevu3d.com/en/release-notes/2026/)"
     },
     {
       "id": "github.com/harry7557558/spirula-studio/releases/tag/v2026.11.12",

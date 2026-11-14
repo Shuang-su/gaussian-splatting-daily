@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-14",
+  "mode": "scheduled",
+  "window": {
+    "start": "2026-11-13T17:47:13+08:00",
+    "end": "2026-11-14T08:39:07+08:00"
+  },
+  "reviewedAt": "2026-11-14T08:39:07+08:00",
+  "checks": [
+    {
+      "sourceId": "radiancefields",
+      "status": "candidates",
+      "checkedAt": "2026-11-14T08:08:00+08:00",
+      "urls": ["https://radiancefields.com/", "https://radiancefields.com/platforms"],
+      "candidateIds": ["radiancefields-atlas-duplicate", "radiancefields-frankensplat-duplicate"],
+      "urlResults": [
+        {"url": "https://radiancefields.com/", "status": "candidates", "checkedAt": "2026-11-14T08:05:00+08:00"},
+        {"url": "https://radiancefields.com/platforms", "status": "checked-no-new", "checkedAt": "2026-11-14T08:08:00+08:00"}
+      ]
+    },
+    {
+      "sourceId": "official",
+      "status": "candidates",
+      "checkedAt": "2026-11-14T08:14:00+08:00",
+      "urls": ["https://blog.playcanvas.com/", "https://www.blender.org/news/"],
+      "candidateIds": ["hexagon-mantis-2026-11-12", "niantic-physical-ai-place-2026-11-12", "prevu3d-2026-outline"],
+      "urlResults": [
+        {"url": "https://blog.playcanvas.com/", "status": "checked-no-new", "checkedAt": "2026-11-14T08:10:00+08:00"},
+        {"url": "https://www.blender.org/news/", "status": "unavailable", "checkedAt": "2026-11-14T08:14:00+08:00", "gap": "HTTP 403；另查到的 Blender 5.3 官方资料已在 2026-11-10 归档，不能据此把本次访问失败写成无新增。"}
+      ]
+    },
+    {
+      "sourceId": "x",
+      "status": "unavailable",
+      "checkedAt": "2026-11-14T08:18:00+08:00",
+      "urls": ["https://x.com/radiancefields", "https://x.com/playcanvas", "https://x.com/willeastcott", "https://x.com/valigurskym"],
+      "candidateIds": [],
+      "gap": "4 个登记账号均无法读取可验证原帖，只得到登录外壳、403 或禁用错误；已以作者官网、项目页和 GitHub 一手记录替代核验。",
+      "urlResults": [
+        {"url": "https://x.com/radiancefields", "status": "unavailable", "checkedAt": "2026-11-14T08:15:00+08:00", "gap": "登录外壳或访问失败，无可核验正文。"},
+        {"url": "https://x.com/playcanvas", "status": "unavailable", "checkedAt": "2026-11-14T08:16:00+08:00", "gap": "登录外壳或访问失败，无可核验正文。"},
+        {"url": "https://x.com/willeastcott", "status": "unavailable", "checkedAt": "2026-11-14T08:17:00+08:00", "gap": "登录外壳或访问失败，无可核验正文。"},
+        {"url": "https://x.com/valigurskym", "status": "unavailable", "checkedAt": "2026-11-14T08:18:00+08:00", "gap": "登录外壳或访问失败，无可核验正文。"}
+      ]
+    },
+    {
+      "sourceId": "research",
+      "status": "candidates",
+      "checkedAt": "2026-11-14T08:24:00+08:00",
+      "urls": ["https://export.arxiv.org/api/query", "https://huggingface.co/papers"],
+      "candidateIds": ["arxiv:2611.16012", "arxiv:2611.16259", "arxiv:2611.16840", "arxiv:2611.15435", "arxiv:2611.15153"],
+      "urlResults": [
+        {"url": "https://export.arxiv.org/api/query", "status": "unavailable", "checkedAt": "2026-11-14T08:20:00+08:00", "gap": "API 端点未能直接读取；候选改由各 arXiv 官方摘要页逐条核验。"},
+        {"url": "https://huggingface.co/papers", "status": "checked-no-new", "checkedAt": "2026-11-14T08:24:00+08:00"}
+      ]
+    },
+    {
+      "sourceId": "github",
+      "status": "candidates",
+      "checkedAt": "2026-11-14T08:29:00+08:00",
+      "urls": ["https://github.com/playcanvas/supersplat", "https://github.com/MrNeRF/LichtFeld-Studio"],
+      "candidateIds": ["github.com/playcanvas/supersplat/pull/1108", "github.com/playcanvas/supersplat/pull/1107", "github.com/playcanvas/supersplat-viewer/pull/366", "github.com/playcanvas/engine/pull/10021", "github.com/MrNeRF/LichtFeld-Studio/pull/3886", "github.com/MrNeRF/LichtFeld-Studio/pull/4057", "github.com/MrNeRF/LichtFeld-Studio/pull/4061"],
+      "urlResults": [
+        {"url": "https://github.com/playcanvas/supersplat", "status": "candidates", "checkedAt": "2026-11-14T08:26:00+08:00"},
+        {"url": "https://github.com/MrNeRF/LichtFeld-Studio", "status": "candidates", "checkedAt": "2026-11-14T08:29:00+08:00"}
+      ]
+    },
+    {
+      "sourceId": "community",
+      "status": "candidates",
+      "checkedAt": "2026-11-14T08:35:00+08:00",
+      "urls": ["https://www.reddit.com/r/GaussianSplatting/", "https://www.bilibili.com/", "https://sspai.com/"],
+      "candidateIds": ["reddit-storysplat-2-5-duplicate", "reddit-colmap-wasm-duplicate"],
+      "gap": "B 站首页只返回浏览器兼容提示；中文检索未取得可独立核验的新事件。",
+      "urlResults": [
+        {"url": "https://www.reddit.com/r/GaussianSplatting/", "status": "candidates", "checkedAt": "2026-11-14T08:31:00+08:00"},
+        {"url": "https://www.bilibili.com/", "status": "unavailable", "checkedAt": "2026-11-14T08:33:00+08:00", "gap": "仅返回浏览器版本过旧提示，未得到可核验列表。"},
+        {"url": "https://sspai.com/", "status": "checked-no-new", "checkedAt": "2026-11-14T08:35:00+08:00"}
+      ]
+    }
+  ],
+  "candidates": [
+    {"id":"github.com/playcanvas/supersplat/pull/1108","title":"SuperSplat 导入 GSAF 动态序列并支持多时间线并行播放","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"已合并主干、可直接锁 SHA 测试，改变动态高斯进入编辑与导出的方式。","sources":["https://github.com/playcanvas/supersplat/pull/1108","https://github.com/playcanvas/supersplat/commit/b4f3b2557f8761170150f4766fa08c3ddcdfd5c5"],"eventId":"github.com/playcanvas/supersplat/pull/1108"},
+    {"id":"github.com/playcanvas/supersplat/pull/1107","title":"SuperSplat 重做多文件导入审阅","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"已合并主干，修复批量导入分组和 stray file 失败。","sources":["https://github.com/playcanvas/supersplat/pull/1107","https://github.com/playcanvas/supersplat/commit/c2ac89897cfd697ad41376e5fc2da94e3b5e98d4"],"eventId":"github.com/playcanvas/supersplat/pull/1107"},
+    {"id":"github.com/playcanvas/supersplat-viewer/pull/366","title":"SuperSplat Viewer 注释创作上限提高到 50","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"主干已合并，影响导览和标注配置导出。","sources":["https://github.com/playcanvas/supersplat-viewer/pull/366","https://github.com/playcanvas/supersplat-viewer/commit/964770ec03021f92895e81f3a188b19e31819994"],"eventId":"github.com/playcanvas/supersplat-viewer/pull/366"},
+    {"id":"github.com/playcanvas/engine/pull/10021","title":"PlayCanvas Engine 修复设备恢复后的高斯阴影","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"主干已合并，属于 WebGL2/WebGPU 稳定性修复。","sources":["https://github.com/playcanvas/engine/pull/10021","https://github.com/playcanvas/engine/commit/ae62fc81c67d66397892fac3580cfd55036219b4"],"eventId":"github.com/playcanvas/engine/pull/10021"},
+    {"id":"github.com/MrNeRF/LichtFeld-Studio/pull/3886","title":"LichtFeld Studio 加入非破坏式裁剪","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"主干已合并，显著改变扫描清理与范围复核工作流。","sources":["https://github.com/MrNeRF/LichtFeld-Studio/pull/3886","https://github.com/MrNeRF/LichtFeld-Studio/commit/ee6d3cb617b8c45054247c1dd87291da454f44f5"],"eventId":"github.com/MrNeRF/LichtFeld-Studio/pull/3886"},
+    {"id":"github.com/MrNeRF/LichtFeld-Studio/pull/4057","title":"LichtFeld 用文本类别驱动 SAM 2.1 遮罩候选","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"主干已合并，可减少大批量对象遮罩的手工点选。","sources":["https://github.com/MrNeRF/LichtFeld-Studio/pull/4057","https://github.com/MrNeRF/LichtFeld-Studio/commit/5af1d7a56f6c0687c1b3cc48bad3c787c27d319c"],"eventId":"github.com/MrNeRF/LichtFeld-Studio/pull/4057"},
+    {"id":"github.com/MrNeRF/LichtFeld-Studio/pull/4061","title":"LichtFeld 用 e-means 优化部分 SOG 球谐导出","eventDate":"2026-11-14","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"主干已合并且有明确、有边界的作者 benchmark。","sources":["https://github.com/MrNeRF/LichtFeld-Studio/pull/4061","https://github.com/MrNeRF/LichtFeld-Studio/commit/1c4d481a6cc53b984cb2b83c6dd7e5c437c0224b","https://arxiv.org/abs/2611.09501"],"eventId":"github.com/MrNeRF/LichtFeld-Studio/pull/4061"},
+    {"id":"hexagon-mantis-2026-11-12","title":"Hexagon 发布 Leica MANTIS 现场三维采集与相机跟踪系统","eventDate":"2026-11-12","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"7 日重查补收的重要商业产品发布，事件日期与补收日期分开保留。","sources":["https://hexagon.com/about/news-media/press-releases/2026/hexagon-launches-mantis-to-capture-3d-scene-data-as-cameras-roll"],"eventId":"hexagon-mantis-2026-11-12"},
+    {"id":"niantic-physical-ai-place-2026-11-12","title":"Niantic Spatial 展示城市级视觉定位","eventDate":"2026-11-12","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"7 日重查补收，定位能力与先前可移动物体事件不同。","sources":["https://www.nianticspatial.com/blog/physical-ai-in-its-place"],"eventId":"niantic-physical-ai-place-2026-11-12"},
+    {"id":"prevu3d-2026-outline","title":"Prevu3D 为 Gaussian splat 加入轮廓显示","eventDate":"2026-11-12","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"商业工具发布说明提供了明确新增功能。","sources":["https://doc.prevu3d.com/en/release-notes/2026/"],"eventId":"prevu3d-2026-outline"},
+    {"id":"arxiv:2611.16012","title":"Topology-Aware 4D Gaussian Splatting for Egocentric Videos","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"直接处理 4D 高斯难以表达的拓扑变化，论文虽无代码仍有明显方法价值。","sources":["https://arxiv.org/abs/2611.16012","https://topoego.github.io/"],"eventId":"arxiv:2611.16012"},
+    {"id":"arxiv:2611.16259","title":"Reconstruct What You Can: Distractor-free 4D Gaussian Splatting","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"无需外部分割器的动态干扰分离值得跟踪。","sources":["https://arxiv.org/abs/2611.16259"],"eventId":"arxiv:2611.16259"},
+    {"id":"arxiv:2611.16840","title":"Kosmo-GFM: A Production-Ready Geometry Foundation Model","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"把几何基础模型与 3D/4D 重建位姿优化组织为生产管线，作者规模化结果值得报道。","sources":["https://arxiv.org/abs/2611.16840"],"eventId":"arxiv:2611.16840"},
+    {"id":"arxiv:2611.15435","title":"ThermalSplat","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"standard","disposition":"included","reason":"把无 RGB、无位姿的热成像稀疏重建带入前馈高斯路线。","sources":["https://arxiv.org/abs/2611.15435"],"eventId":"arxiv:2611.15435"},
+    {"id":"arxiv:2611.15153","title":"MatrixSplat: Tensor-Core Matrix-Parallel Gaussian Splatting","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"important","disposition":"included","reason":"高维特征渲染的并行方式可能影响语言高斯和语义场工作流。","sources":["https://arxiv.org/abs/2611.15153"],"eventId":"arxiv:2611.15153"},
+    {"id":"radiancefields-atlas-duplicate","title":"World Labs Atlas 开放入口","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"standard","disposition":"excluded","reason":"同一 URL、发布时间和核心结论已在 2026-11-13 阅读版归档。","sources":["https://radiancefields.com/world-labs-opens-atlas-world-model-to-everyone","https://www.worldlabs.ai/atlas"],"exclusionEvidence":"docs/reading/2026-11-13.md 已包含 event id radiancefields.com/world-labs-opens-atlas-world-model-to-everyone。"},
+    {"id":"radiancefields-frankensplat-duplicate","title":"Frankensplat 浏览器本地训练","eventDate":"2026-11-13","reportDate":"2026-11-14","importance":"standard","disposition":"excluded","reason":"同一 URL、发布时间和核心结论已在 2026-11-13 阅读版归档。","sources":["https://radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser","https://offlinetools.io/fsp-product"],"exclusionEvidence":"docs/reading/2026-11-13.md 已包含 event id radiancefields.com/offlinetools-frankensplat-trains-splats-in-the-browser。"},
+    {"id":"reddit-storysplat-2-5-duplicate","title":"StorySplat 2.5 社区帖","eventDate":"2026-10-20","reportDate":"2026-11-14","importance":"standard","disposition":"excluded","reason":"社区页面重新浮现旧帖，事件已于 2026-10-20 归档。","sources":["https://www.reddit.com/r/GaussianSplatting/"],"exclusionEvidence":"仓库 2026-10-20 正文已包含 StorySplat 2.5。"},
+    {"id":"reddit-colmap-wasm-duplicate","title":"colmap-wasm 社区帖","eventDate":"2026-10-20","reportDate":"2026-11-14","importance":"standard","disposition":"excluded","reason":"社区页面重新浮现旧帖，事件已于 2026-10-20 归档。","sources":["https://www.reddit.com/r/GaussianSplatting/"],"exclusionEvidence":"仓库 2026-10-20 正文已包含 colmap-wasm。"}
+  ]
+}

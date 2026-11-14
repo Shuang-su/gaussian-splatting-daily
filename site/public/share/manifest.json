@@ -18,8 +18,8 @@
   },
   "default": {
     "url": "/share/default.png",
-    "date": "2026-11-13",
-    "sha256": "a81c9a3029806d5384bd24353af094d7372c2efcb9b9c4273aba45e93bbb8c77"
+    "date": "2026-11-14",
+    "sha256": "12049888ffa3a9b8bbd04c62090df2694fa282c83bf904f20706cf8051336d96"
   },
   "reports": {
     "2026-09-18": {
@@ -874,6 +874,15 @@
         "sha256": "6690e5efcd4b317f2a09a23739812271bec878d958eb07f8df483cbfb9207f06",
         "kind": "editorial-illustration"
       }
+    },
+    "2026-11-14": {
+      "date": "2026-11-14",
+      "url": "/share/2026-11-14.png",
+      "title": "SuperSplat 开始编排动态高斯，LichtFeld 把裁剪与文字选区带入主干",
+      "contentHash": "fb7f7a6899f56bd6cb79b8a09d801b0243b9651885a71a3436820e960407ba0b",
+      "inputHash": "d5ab95b82101eb40f7983545e90781f7a47abbe788d6d45b122ed6c6a0c20daf",
+      "sha256": "12049888ffa3a9b8bbd04c62090df2694fa282c83bf904f20706cf8051336d96",
+      "bytes": 32990
     }
   }
 }
